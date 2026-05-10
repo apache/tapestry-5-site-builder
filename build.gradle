@@ -5,6 +5,7 @@ plugins {
 antora {
     packages = [
         // '@antora/collector-extension': 'latest'
+        '@antora/lunr-extension': 'latest',
         'asciidoctor-kroki' : 'latest'
     ]
 }
