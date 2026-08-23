@@ -1,24 +1,33 @@
 site:
   title: Apache Tapestry
   start_page: main::about.adoc
+
 content:
   sources:
   - url: https://gitbox.apache.org/repos/asf/tapestry-5-site.git
     branches: [main, 5.*]
+
+# Pin output directory for CI
+output:
+  dir: ./build/site
+
 urls:
   # Make the latest version appear as 'current' in URLs (instead of the version number).
   # That way, Redirects (configured in the .htaccess file) don't have to be updated for each new version.
   latest_version_segment: current
 asciidoc:
+
   extensions:
   - asciidoctor-kroki
   - ./lib/issue-processor
   - ./lib/javadoc-processor
+
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
     snapshot: true
   supplemental_files: ./supplemental-ui
+
 antora:
   extensions:
   - require: '@antora/lunr-extension'
