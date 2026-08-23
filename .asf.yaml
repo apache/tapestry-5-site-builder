@@ -1,4 +1,25 @@
 github:
+  description: "Site configuration and Antora build logic for the Apache Tapestry website."
+  homepage: "https://tapestry.apache.org"
+  labels:
+    - apache
+    - antora
+    - documentation
+
+  features:
+    wiki: false
+    issues: true
+    projects: false
+
+  autolink_jira:
+    - TAP5
+
+  pull_requests:
+    del_branch_on_merge: true
+
+  dependabot_alerts: true
+  dependabot_updates: false
+
   rulesets:
     - name: "Default Branch Protection"
       type: branch
