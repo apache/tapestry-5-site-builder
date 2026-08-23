@@ -10,6 +10,7 @@ content:
 # Pin output directory for CI
 output:
   dir: ./build/site
+  clean: true
 
 urls:
   # Make the latest version appear as 'current' in URLs (instead of the version number).

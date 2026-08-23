@@ -33,7 +33,7 @@ pipeline {
                     ).trim()
                 }
 
-                sh './gradlew --no-daemon clean antora'
+                sh './gradlew --no-daemon antora'
 
                 // Cheap sanity check to preventhalf-built site.
                 //  - index.html: done by antora
