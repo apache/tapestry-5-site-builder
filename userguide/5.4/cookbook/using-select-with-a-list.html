@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Using Select With a List :: Apache Tapestry</title>
+    <meta name="generator" content="Antora 3.1.15">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="stylesheet" href="../../../_/css/tapestry.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../.."><img alt="Apache Tapestry Logo" src="../../../_/img/apache-tapestry-icon-dark.svg" width="60" />Apache Tapestry</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Documentation</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../../../main/getting-started.html">Getting Started</a>
+            <a class="navbar-item" href="../../../main/tutorial/">Tutorial</a>
+            <a class="navbar-item" href="../../../userguide/5.8/">User Guide</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="../../../main/community.html">Community</a>
+        <a class="navbar-item" href="../../../main/support.html">Support</a>
+        <a class="navbar-item" href="../../../main/developers.html">Developers</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Apache</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+            <a class="navbar-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
+            <a class="navbar-item" href="https://www.apache.org/licenses/">License</a>
+            <a class="navbar-item" href="https://www.apache.org/security/">Security</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="../../../main/download.html">Download</a>
+          </span>
+        </div>
+        <div class="navbar-brand">
+          <a href="https://www.apache.org/">
+          <img alt="The Apache Software Foundation" src="../../../_/img/asf_logo.svg" width="200" height="63" style="padding-top: 5px; padding-bottom: 5px; background-color: white">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="body">
+<div class="nav-container" data-component="userguide" data-version="5.4">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">User Guide</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Introduction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry Core</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basics</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../project-layout.html">Project Layout</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../runtime-exceptions.html">Runtime Exceptions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../class-reloading.html">Class Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../component-reference.html">Component Reference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../annotations.html">Annotations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Pages and Components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../component-classes.html">Component Classes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../component-templates.html">Component Templates</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../property-expressions.html">Property Expressions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../component-parameters.html">Component Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../parameter-type-coercion.html">Parameter Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../layout-component.html">Layout Component</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../component-mixins.html">Component Mixins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../page-navigation.html">Page Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../localization.html">Localization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Request/Response Rendering</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../page-life-cycle.html">Page Life Cycle</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../request-processing.html">Request Processing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../component-rendering.html">Component Rendering</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../component-events.html">Component Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../url-rewriting.html">URL Rewriting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../dom.html">Document Object Model (DOM)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../response-compression.html">Response Compression</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../security.html">Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../https.html">HTTPS / SSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../content-type-and-markup.html">Content Type and Markup</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Data Persistence</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../persistent-page-data.html">Persistent Page Data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../session-storage.html">Session Storage</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Interacting with components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../injection.html">Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../environmental-services.html">Environmental Services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript, AJAX, CSS &amp; Binary Data</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../client-side-javascript.html">Client-Side JavaScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../javascript-modules.html">Javascript Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../coffeescript.html">Coffeescript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ajax-and-zones.html">AJAX and Zones</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../css.html">Cascading Style Sheets (CSS)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../assets.html">Assets</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Working with Forms</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../forms-and-validation.html">Forms and Validation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../beaneditform-guide.html">BeanEditForm Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../uploading-files.html">Uploading Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../bean-validation.html">Bean Validation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Logging, Debugging &amp; Testing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../logging.html">Logging</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../unit-testing.html">Unit testing pages or components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../integration-testing.html">Integration Testing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../development-dashboard.html">Development Dashboard</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry IOC</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../ioc-overview.html">IoC Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../symbols.html">Symbols</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../type-coercion.html">Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../case-insensitivity.html">Case Insensitivity</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../autoloading-modules.html">Autoloading Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../chainbuilder-service.html">ChainBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipelinebuilder-service.html">PipelineBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../shadowbuilder-service.html">ShadowBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../strategybuilder-service.html">StrategyBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../defining-tapestry-ioc-services.html">Defining Tapestry IOC Services</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../ioc-modules.html">IoC Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../ioc-configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../object-providers.html">Object Providers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../service-serialization.html">Service Serialization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../starting-the-ioc-registry.html">Starting the IoC Registry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../aliases.html">Aliases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../injection-in-detail.html">Injection in Detail</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../ordering-by-constraints.html">Ordering by Constraints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../registry-startup.html">Registry Startup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../parallel-execution.html">Parallel Execution</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../logging-in-tapestry.html">Logging in Tapestry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../service-implementation-reloading.html">Service Implementation Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../service-advisors.html">Service Advisors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../service-decorators.html">Service Decorators</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jsr-330-standard-annotations.html">Using JSR 330 standard annotations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../operation-tracker.html">Operation Tracker</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Add-ons and Integrations</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Built-in</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../hibernate.html">Hibernate Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../jpa.html">JPA Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../integrating-with-spring-framework.html">Spring</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../third-party-modules.html">Third Party Modules</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Release Notes</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes-5.4.html">Tapestry 5.4</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes-5.3.html">Tapestry 5.3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes-5.2.html">Tapestry 5.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes-5.1.html">Tapestry 5.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes-5.0.html">Tapestry 5.0</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cookbook</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="default-parameter.html">Default Parameter</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="overriding-exception-reporting.html">Overriding Exception Reporting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="error-page-recipe.html">Error Page Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="supporting-informal-parameters.html">Supporting Informal Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="component-libraries.html">Component Libraries</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="switching-cases.html">Switching Cases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="enum-parameter-recipe.html">Enum Parameter Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="extending-the-if-component.html">Extending The If Component</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="meta-programming-page-content.html">Meta-Programming Page Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="ioc-cookbook.html">IoC Cookbook</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ioc-cookbook-basic-services-and-injection.html">IoC Cookbook - Basic Services and Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ioc-cookbook-overriding-ioc-services.html">IoC Cookbook - Overriding IoC Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ioc-cookbook-patterns.html">IoC Cookbook - Patterns</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ioc-cookbook-service-configurations.html">IoC Cookbook - Service Configurations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="using-select-with-a-list.html">Using Select With a List</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="performance-and-clustering.html">Performance and Clustering</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="google-app-engine.html">Google App Engine (GAE)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frequently Asked Questions (FAQ)</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../faq/general.html">General Questions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../faq/templating-and-markup.html">Templating and Markup FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../faq/ajax.html">AJAX FAQ</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">User Guide</span>
+    <span class="version">5.4</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../../main/about.html">Home</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../../current/index.html">User Guide</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../current/index.html">5.8</a>
+        </li>
+        <li class="version">
+          <a href="../../5.7/index.html">5.7</a>
+        </li>
+        <li class="version">
+          <a href="../../5.6/index.html">5.6</a>
+        </li>
+        <li class="version">
+          <a href="../../5.5/index.html">5.5</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">5.4</a>
+        </li>
+        <li class="version">
+          <a href="../../5.3/index.html">5.3</a>
+        </li>
+        <li class="version">
+          <a href="../../5.2/index.html">5.2</a>
+        </li>
+        <li class="version">
+          <a href="../../5.1/index.html">5.1</a>
+        </li>
+        <li class="version">
+          <a href="../../5/index.html">5.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../main/about.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">User Guide</a></li>
+    <li>Cookbook</li>
+    <li><a href="using-select-with-a-list.html">Using Select With a List</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">5.4</button>
+  <div class="version-menu">
+    <a class="version" href="../../current/cookbook/using-select-with-a-list.html">5.8</a>
+    <a class="version" href="../../5.7/cookbook/using-select-with-a-list.html">5.7</a>
+    <a class="version" href="../../5.6/cookbook/using-select-with-a-list.html">5.6</a>
+    <a class="version" href="../../5.5/cookbook/using-select-with-a-list.html">5.5</a>
+    <a class="version is-current" href="using-select-with-a-list.html">5.4</a>
+    <a class="version" href="../../5.3/cookbook/using-select-with-a-list.html">5.3</a>
+    <a class="version is-missing" href="../../5.2/index.html">5.2</a>
+    <a class="version is-missing" href="../../5.1/index.html">5.1</a>
+    <a class="version is-missing" href="../../5/index.html">5.0</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Using Select With a List</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The documentation for the <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/corelib/components/Select.html">Select</a></code> component and the Tapestry Tutorial provide simplistic examples of populating a drop-down menu (as the (X)HTML Select element) using comma-delimited strings and enums.
+However, most real-world Tapestry applications need to populate such menus using values from a database, commonly in the form of <code>java.util.List</code> objects.
+Doing so generally requires a <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SelectModel.html">SelectModel</a></code> and a <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/ValueEncoder.html">ValueEncoder</a></code> bound to the <code>Select</code> component with its <code>model</code> and <code>encoder</code> parameters:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;t:select t:id="colorMenu" value="selectedColor" model="ColorSelectModel" encoder="colorEncoder" /&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the above example, <code>ColorSelectModel</code> must be of type <code>SelectModel</code>, or anything that Tapestry knows how to <a href="../parameter-type-coercion.html" class="xref page">coerce</a> into a <code>SelectModel</code>, such as a <code>java.util.List</code> or a <code>java.util.Map</code> or a <code>value=label,value=label,&#8230;&#8203;</code> delimited string, or anything Tapestry knows how to coerce into a <code>List</code> or <code>Map</code>, such as an <code>Array</code> or a comma-delimited String.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_selectmodel"><a class="anchor" href="#_selectmodel"></a><code>SelectModel</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SelectModel.html">SelectModel</a></code> is a collection of options (specifically <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/OptionModel.html">OptionModel</a></code> objects) for a drop-down menu.
+Basically, each option is a value (an object) and a label (presented to the user).</p>
+</div>
+<div class="imageblock sequence kroki-format-svg kroki">
+<div class="content">
+<img src="https://kroki.io/plantuml/svg/eNrjyswrSS1KS0xOVQhOzUlNLvHNT0nNUajmUgACn8ziEhv_gpLM_DywsJ1CemoJhF-soclVy8WF0I2kDKo7uKQoMy8dpMUnMSk1B6gBJOqflAW0BSQalphTmgoxBtlqLV1dZMO4AEAuNSU=" alt="SelectModel Class Diagram (partial)">
+</div>
+<div class="title">Figure 1. SelectModel Class Diagram (partial)</div>
+</div>
+<div class="paragraph">
+<p>If you provide a property of type <code>List</code> for the <code>model</code> parameter, Tapestry automatically builds a <code>SelectModel</code> that uses each object&#8217;s <code>toString()</code> for both the <code>OptionModel</code>'s <code>value</code> and its <code>label</code>.
+For database-derrived lists this is rarely useful, however, since after form submission you would then have to look up the selected object using that label.</p>
+</div>
+<div class="paragraph">
+<p>If you provide a <code>Map</code>, Tapestry builds a <code>SelectModel</code> that uses each item&#8217;s key as the encoded value and its value as the user-visible label.
+This is more useful, but if you are going to build a copy of the list as a map just for this purpose, you may as well let Tapestry do it for you, using <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/services/SelectModelFactory.html">SelectModelFactory</a></code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_selectmodelfactory"><a class="anchor" href="#_selectmodelfactory"></a><code>SelectModelFactory</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To have Tapestry create a <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SelectModel.html">SelectModel</a></code> for you, use the <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/services/SelectModelFactory.html">SelectModelFactory</a></code> service.
+It creates a <code>SelectModel</code> from a <code>List</code> of objects (of whatever type) and a <code>label</code> property name that you choose:</p>
+</div>
+<div class="listingblock">
+<div class="title">SelectWithListDemo.java (a page class)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Property
+private SelectModel colorSelectModel;
+
+@Inject
+SelectModelFactory selectModelFactory;
+
+void setupRender() {
+    // invoke my service to find all colors, e.g. in the database
+    List&lt;Color&gt; colors = colorService.findAll();
+
+    // create a SelectModel from my list of colors
+    colorSelectModel = selectModelFactory.create(colors, "name");
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The resulting <code>SelectModel</code> has a selectable option (specifically, an <code>OptionModel</code>) for every object in the original <code>List</code>.
+The <code>label</code> property name (the <code>name</code> property, in this example) determines the user-visible text of each menu option, and your <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/ValueEncoder.html">ValueEncoder</a></code>'s <code>toClient()</code> method provides the encoded value (most commonly a simple number).
+If you don&#8217;t provide a <code>ValueEncoder</code>, the result of the objects' <code>toString()</code> method (<code>Color.toString()</code> in this example) is used.
+Although not a recommended practice, you could set your <code>toString()</code> to return the object&#8217;s ID for this purpose:</p>
+</div>
+<div class="listingblock">
+<div class="title">Color.java (partial)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Override
+public String toString() {
+    return String.valueOf(this.getId());
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>But that is contorting the purpose of the <code>toString()</code> method, and if you go to that much trouble you&#8217;re already half way to the recommended practice: creating a <code>ValueEncoder</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_valueencoder"><a class="anchor" href="#_valueencoder"></a>ValueEncoder</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In addition to a <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SelectModel.html">SelectModel</a></code>, your Select menu is likely to need a <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/ValueEncoder.html">ValueEncoder</a></code>.
+While a <code>SelectModel</code> is concerned only with how to construct a Select menu, a <code>ValueEncoder</code> is used when constructing the Select menu and when interpreting the encoded value that is submitted back to the server.
+A <code>ValueEncoder</code> is a converter between the type of objects you want to represent as options in the menu and the client-side encoded values that uniquely identify them, and vice-versa.</p>
+</div>
+<div class="paragraph">
+<p>Most commonly, your <code>ValueEncoder</code>'s <code>toClient()</code> method will return a unique ID (e.g. a database primary key, or perhaps a UUID) of the given object, and its <code>toValue()</code> method will return the object matching the given ID by doing a database lookup (ideally using a service or DAO method).</p>
+</div>
+<div class="paragraph">
+<p>If you&#8217;re using one of the Object-Relational Mappring (ORM) integration modules (<a href="../hibernate.html" class="xref page">tapestry-hibernate</a>, <a href="../jpa.html" class="xref page">tapestry-jpa</a>, or tapestry-cayenne), the <code>ValueEncoder</code> is automatically provided for each of your mapped entity classes.
+The Hibernate module&#8217;s implementation is typical: the primary key field of the object (converted to a String) is used as the client-side value, and that same primary key is used to look up the selected object.</p>
+</div>
+<div class="paragraph">
+<p>That&#8217;s exactly what you should do in your own <code>ValueEncoder</code>s too:</p>
+</div>
+<div class="listingblock">
+<div class="title">ColorEncoder.java (perhaps in your com.example.myappname.encoders package)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class ColorEncoder implements ValueEncoder&lt;Color&gt;, ValueEncoderFactory&lt;Color&gt; {
+
+    @Inject
+    private ColorService colorService;
+
+    @Override
+    public String toClient(Color value) {
+        // return the given object's ID
+        return String.valueOf(value.getId());
+    }
+
+    @Override
+    public Color toValue(String id) {
+        // find the color object of the given ID in the database
+        return colorService.findById(Long.parseLong(id));
+    }
+
+    // let this ValueEncoder also serve as a ValueEncoderFactory
+    @Override
+    public ValueEncoder&lt;Color&gt; create(Class&lt;Color&gt; type) {
+        return this;
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Alternatively, if you don&#8217;t expect to need a particular <code>ValueEncoder</code> more than once in your app, you might want to just create it on demand, using an anonymous inner class, from the getter method in the component class where it is needed. For example:</p>
+</div>
+<div class="listingblock">
+<div class="title">SelectWithListDemo.java (a page class, partial)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// ...
+public ValueEncoder&lt;Color&gt; getColorEncoder() {
+
+    return new ValueEncoder&lt;Color&gt;() {
+
+        @Override
+        public String toClient(Color value) {
+            // return the given object's ID
+            return String.valueOf(value.getId());
+        }
+
+        @Override
+        public Color toValue(String id) {
+            // find the color object of the given ID in the database
+            return colorService.findById(Long.parseLong(id));
+        }
+    };
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Notice that the body of this anonymous inner class is the same as the body of the ColorEncoder top level class, except that we don&#8217;t need a <code>create</code> method.</p>
+</div>
+<div class="sect2">
+<h3 id="_applying_your_valueencoder_automatically"><a class="anchor" href="#_applying_your_valueencoder_automatically"></a>Applying your ValueEncoder Automatically</h3>
+<div class="paragraph">
+<p>If your <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/ValueEncoder.html">ValueEncoder</a></code> implements <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/services/ValueEncoderFactory.html">ValueEncoderFactory</a></code> (as the <code>ColorEncoder</code> top level class does, above), you can associate your custom <code>ValueEncoder</code> with your entity class so that Tapestry will automatically use it every time a <code>ValueEncoder</code> is needed for items of that type (such as with the <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/corelib/components/Select.html">Select</a></code>, <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/corelib/components/RadioGroup.html">RadioGroup</a></code>, <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/corelib/components/Grid.html">Grid</a></code>, <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/corelib/components/Hidden.html">Hidden</a></code> and <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/corelib/components/AjaxFormLoop.html">AjaxFormLoop</a></code> components).</p>
+</div>
+<div class="paragraph">
+<p>Just add lines like the following to your module class (usually <code>AppModule.java</code>):</p>
+</div>
+<div class="listingblock">
+<div class="title">AppModule.java (partial)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public static void contributeValueEncoderSource(MappedConfiguration&lt;Class&lt;Color&gt;,
+                        ValueEncoderFactory&lt;Color&gt;&gt; config) {
+    config.addInstance(Color.class, ColorEncoder.class);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you are contributing more than one ValueEncoder, you&#8217;ll have to use raw types, like this:</p>
+</div>
+<div class="listingblock">
+<div class="title">AppModule.java (partial)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public static void contributeValueEncoderSource(MappedConfiguration&lt;Class,
+                    ValueEncoderFactory&gt; config)
+{
+    config.addInstance(Color.class, ColorEncoder.class);
+    config.addInstance(SomeOtherType.class, SomeOtherTypeEncoder.class);
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_what_if_i_omit_the_valueencoder"><a class="anchor" href="#_what_if_i_omit_the_valueencoder"></a>What if I omit the <code>ValueEncoder</code>?</h3>
+<div class="paragraph">
+<p>The <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/corelib/components/Select.html">Select</a></code> component&#8217;s <code>encoder</code> parameter is optional.
+However, if the value parameter is bound to a complex object (not a simple <code>String</code>, <code>Integer</code>, etc.) and you don’t provide a <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/ValueEncoder.html">ValueEncoder</a></code> with the <code>encoder</code> parameter (and one isn’t provided automatically by, for instance, the <a href="../hibernate.html" class="xref page">Tapestry Hibernate integration</a>), you’ll encounter a "Could not find a coercion“ exception when submitting the form. This occurs because Tapestry attempts to convert the encoded value of the selected option back to the object in the Select’s <code>value</code> parameter.</p>
+</div>
+<div class="paragraph">
+<p>To fix this, you&#8217;ll either have to (1) provide a <code>ValueEncoder</code>, (2) <a href="../type-coercion.html#_contributing_new_coercions" class="xref page">provide a Coercion</a>, or (3) use a simple value (<code>String</code>, <code>Integer</code>, etc.) for your <code>Select</code>'s <code>value</code> parameter, and then you&#8217;ll have to add logic in the corresponding <code>onSuccess</code> event listener method:</p>
+</div>
+<div class="listingblock">
+<div class="title">SelectWithListDemo.tml (partial)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;t:select t:id="colorMenu" value="selectedColorId" model="ColorSelectModel" /&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">SelectWithListDemo.java (partial)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public void onSuccessFromMyForm() {
+    // look up the color object from the ID selected
+    selectedColor = colorService.findById(selectedColorId);
+    // ...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>But then again, you may as well create a <code>ValueEncoder</code> instead.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_why_is_this_so_hard"><a class="anchor" href="#_why_is_this_so_hard"></a>Why is this so hard?</h3>
+<div class="paragraph">
+<p>Actually, it&#8217;s really pretty easy if you follow the examples above.
+But why is Tapestry designed to use <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SelectModel.html">SelectModel</a></code>s and <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/ValueEncoder.html">ValueEncoder</a></code>s anyway?
+Well, in short, this design allows you to avoid storing (via <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/annotations/Persist.html">@Persist</a></code>, <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/annotations/SessionAttribute.html">@SessionAttribute</a></code> or <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/annotations/SessionState.html">@SessionState</a></code>) the entire (potentially large) list of objects in the session or rebuilding the whole list of objects again (though only one is needed) when the form is submitted.
+The chief benefits are reduced memory use and more scalable clustering due to having far less HTTP session data to replicate across the nodes of a cluster.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script src="../../../_/js/vendor/lunr.js"></script>
+<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
+<script async src="../../../search-index.js"></script>
+  </body>
+</html>

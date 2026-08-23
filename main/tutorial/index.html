@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Introduction :: Apache Tapestry</title>
+    <meta name="generator" content="Antora 3.1.15">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/tapestry.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../.."><img alt="Apache Tapestry Logo" src="../../_/img/apache-tapestry-icon-dark.svg" width="60" />Apache Tapestry</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Documentation</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../../main/getting-started.html">Getting Started</a>
+            <a class="navbar-item" href="../../main/tutorial/">Tutorial</a>
+            <a class="navbar-item" href="../../userguide/5.8/">User Guide</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="../../main/community.html">Community</a>
+        <a class="navbar-item" href="../../main/support.html">Support</a>
+        <a class="navbar-item" href="../../main/developers.html">Developers</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Apache</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+            <a class="navbar-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
+            <a class="navbar-item" href="https://www.apache.org/licenses/">License</a>
+            <a class="navbar-item" href="https://www.apache.org/security/">Security</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="../../main/download.html">Download</a>
+          </span>
+        </div>
+        <div class="navbar-brand">
+          <a href="https://www.apache.org/">
+          <img alt="The Apache Software Foundation" src="../../_/img/asf_logo.svg" width="200" height="63" style="padding-top: 5px; padding-bottom: 5px; background-color: white">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="body">
+<div class="nav-container" data-component="main" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../about.html">Home</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../about.html">About</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../principles.html">Principles</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Documentation</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tutorial</span>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="index.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="dependencies-tools-and-plugins.html">Dependencies, Tools and Plugins</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="creating-the-skeleton-application.html">Creating the Skeleton Application</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="exploring-the-project.html">Exploring the Project</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="implementing-the-hi-lo-guessing-game.html">Implementing the Hi-Lo Guessing Game</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="using-beaneditform-to-create-user-forms.html">Using BeanEditForm To Create User Forms</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="using-tapestry-with-hibernate.html">Using Tapestry With Hibernate</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../userguide.html">User Guide</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Home</span>
+    <span class="version"></span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../about.html">Home</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../userguide/current/index.html">User Guide</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../userguide/current/index.html">5.8</a>
+        </li>
+        <li class="version">
+          <a href="../../userguide/5.7/index.html">5.7</a>
+        </li>
+        <li class="version">
+          <a href="../../userguide/5.6/index.html">5.6</a>
+        </li>
+        <li class="version">
+          <a href="../../userguide/5.5/index.html">5.5</a>
+        </li>
+        <li class="version">
+          <a href="../../userguide/5.4/index.html">5.4</a>
+        </li>
+        <li class="version">
+          <a href="../../userguide/5.3/index.html">5.3</a>
+        </li>
+        <li class="version">
+          <a href="../../userguide/5.2/index.html">5.2</a>
+        </li>
+        <li class="version">
+          <a href="../../userguide/5.1/index.html">5.1</a>
+        </li>
+        <li class="version">
+          <a href="../../userguide/5/index.html">5.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../about.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../about.html">Home</a></li>
+    <li>Documentation</li>
+    <li>Tutorial</li>
+    <li><a href="index.html">Introduction</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Introduction</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Welcome to Tapestry!</p>
+</div>
+<div class="paragraph">
+<p>This is a tutorial for people who will be creating Tapestry web applications.
+It doesn&#8217;t matter whether you have experience with earlier versions of Tapestry or other web frameworks.
+In fact, in some ways, the less you know about web development in general, the better off you may be &#8230;&#8203; that much less to unlearn!</p>
+</div>
+<div class="paragraph">
+<p>You do need to have a reasonable understanding of HTML, a smattering of XML, and a good understanding of basic Java language features, including Annotations.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_challenges_of_web_application_development"><a class="anchor" href="#_the_challenges_of_web_application_development"></a>The Challenges of Web Application Development</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you&#8217;re used to developing web applications using servlets and JSPs, or with Struts, you are simply used to a lot of pain.
+These are environments with few safety net; Struts and the Servlet API have no idea how your application is structured, or how the different pieces fit together.
+Any URL can be an action and any action can forward to any view (usually a JSP) to provide an HTML response to the web browser.
+The pain is the unending series of small, yet important, decisions you have to make as a developer (and communicate to the rest of your team).
+What are the naming conventions for actions, for pages, for attributes stored in the <code>HttpSession</code> or <code>HttpServletRequest</code>?
+Where do cross-cutting concerns such as database transactions, caching and security get implemented (and do you have to cut-and-paste Java or XML to make it work?)
+How are your packages organized &#8230;&#8203; where to the user interface classes go, and where do the data and entity objects go?
+How do you share code from one part of your application to another?</p>
+</div>
+<div class="paragraph">
+<p>On top of all that, the traditional approaches thrust something most unwanted in your face: <em>multi-threaded coding</em>.
+Remember back to Object Oriented Programming 101 where an object was defined as a bundle of data and operations on that data?
+You have to unlearn that lesson as soon as you build a traditional web application, because web applications are multi-threaded.
+An application server could be handling dozens or hundreds of requests from individual users, each in their own thread, and each sharing the exact same objects.
+Suddenly, you can&#8217;t store data inside an object (a servlet or a Struts Action) because whatever data you store for one user will be instantly overwritten by some other user.</p>
+</div>
+<div class="paragraph">
+<p>Worse, your objects each have only one operation: <code>doGet()</code> or <code>doPost()</code>.</p>
+</div>
+<div class="paragraph">
+<p>Meanwhile, most of your day-to-day work involves deciding how to package up some data already inside a particular Java object and squeeze that data into a URL&#8217;s query parameters, so that you can write more code to convert it back if the user clicks that particular link.
+And don&#8217;t forget editing a bunch of XML files to keep the servlet container, or the Struts framework, aware of these decisions.</p>
+</div>
+<div class="paragraph">
+<p>Just for laughs, remember that you have to rebuild, redeploy and restart your application after virtually any change.
+Is any of this familiar?
+Then perhaps you&#8217;d appreciate something a little less familiar: Tapestry.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_tapestry_way"><a class="anchor" href="#_the_tapestry_way"></a>The Tapestry Way</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tapestry uses a very different model: a structured, organized world of pages, and components within pages.
+Everything has a very specific name (that you provide). Once you know the name of a page, you know the location of the Java class for that page, the location of the template for that page, and the total structure of the page.
+Tapestry knows all this as well, and can make things <strong>just work</strong>.</p>
+</div>
+<div class="paragraph">
+<p>As we&#8217;ll see in the following pages, Tapestry lets you code in terms of your objects.
+You&#8217;ll barely see any Tapestry classes, outside of a few Java annotations.
+If you have information to store, store it as fields of your classes, not inside the <code>HttpServletRequest</code> or <code>HttpSession</code>.
+If you need some code to execute, it&#8217;s just a simple annotation or method naming convention to get Tapestry to invoke that method, at the right time, with the right data.</p>
+</div>
+<div class="paragraph">
+<p>Tapestry also shields you from most of the multi-threaded aspects of web application development.
+Tapestry manages the life cycle of your page and components objects, and the fields of the pages and components, in a thread-safe way.
+Your page and component classes always look like simple, standard <a href="http://en.wikipedia.org/wiki/Plain_Old_Java_Object">POJOs</a>.</p>
+</div>
+<div class="paragraph">
+<p>Tapestry began in January 2000, and it now reflects over twenty years of experience of the entire Tapestry community.
+Tapestry brings to the table all that experience about the best ways to build scalable, maintainable, robust, internationalized, and Ajax-enabled applications.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_getting_the_tutorial_source"><a class="anchor" href="#_getting_the_tutorial_source"></a>Getting the Tutorial Source</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Although you won&#8217;t need it, the source code for this tutorial is available on <a href="https://github.com/hlship/tapestry5-tutorial">GitHub</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_begin"><a class="anchor" href="#_time_to_begin"></a>Time to Begin</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Okay, enough background. Now let&#8217;s dig in: <a href="dependencies-tools-and-plugins.html" class="xref page">Dependencies, Tools and Plugins</a></p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

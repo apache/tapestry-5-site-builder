@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Operation Tracker :: Apache Tapestry</title>
+    <meta name="generator" content="Antora 3.1.15">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/tapestry.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../.."><img alt="Apache Tapestry Logo" src="../../_/img/apache-tapestry-icon-dark.svg" width="60" />Apache Tapestry</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Documentation</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../../main/getting-started.html">Getting Started</a>
+            <a class="navbar-item" href="../../main/tutorial/">Tutorial</a>
+            <a class="navbar-item" href="../../userguide/5.8/">User Guide</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="../../main/community.html">Community</a>
+        <a class="navbar-item" href="../../main/support.html">Support</a>
+        <a class="navbar-item" href="../../main/developers.html">Developers</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Apache</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+            <a class="navbar-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
+            <a class="navbar-item" href="https://www.apache.org/licenses/">License</a>
+            <a class="navbar-item" href="https://www.apache.org/security/">Security</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="../../main/download.html">Download</a>
+          </span>
+        </div>
+        <div class="navbar-brand">
+          <a href="https://www.apache.org/">
+          <img alt="The Apache Software Foundation" src="../../_/img/asf_logo.svg" width="200" height="63" style="padding-top: 5px; padding-bottom: 5px; background-color: white">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="body">
+<div class="nav-container" data-component="userguide" data-version="5.3">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">User Guide</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Introduction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry Core</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basics</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="project-layout.html">Project Layout</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="runtime-exceptions.html">Runtime Exceptions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="class-reloading.html">Class Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-reference.html">Component Reference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="annotations.html">Annotations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Pages and Components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-classes.html">Component Classes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-templates.html">Component Templates</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="property-expressions.html">Property Expressions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-parameters.html">Component Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="parameter-type-coercion.html">Parameter Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="layout-component.html">Layout Component</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-mixins.html">Component Mixins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-navigation.html">Page Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="localization.html">Localization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Request/Response Rendering</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-life-cycle.html">Page Life Cycle</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="request-processing.html">Request Processing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-rendering.html">Component Rendering</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-events.html">Component Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="url-rewriting.html">URL Rewriting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dom.html">Document Object Model (DOM)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="response-compression.html">Response Compression</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="security.html">Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https.html">HTTPS / SSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="content-type-and-markup.html">Content Type and Markup</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Data Persistence</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="persistent-page-data.html">Persistent Page Data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="session-storage.html">Session Storage</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Interacting with components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="injection.html">Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="environmental-services.html">Environmental Services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript, AJAX, CSS &amp; Binary Data</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="client-side-javascript.html">Client-Side JavaScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ajax-and-zones.html">AJAX and Zones</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="css.html">Cascading Style Sheets (CSS)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="assets.html">Assets</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Working with Forms</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="forms-and-validation.html">Forms and Validation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="beaneditform-guide.html">BeanEditForm Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uploading-files.html">Uploading Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bean-validation.html">Bean Validation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Logging, Debugging &amp; Testing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="logging.html">Logging</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unit-testing.html">Unit testing pages or components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integration-testing.html">Integration Testing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="development-dashboard.html">Development Dashboard</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry IOC</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-overview.html">IoC Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="symbols.html">Symbols</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="type-coercion.html">Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="case-insensitivity.html">Case Insensitivity</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="autoloading-modules.html">Autoloading Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="chainbuilder-service.html">ChainBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pipelinebuilder-service.html">PipelineBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="shadowbuilder-service.html">ShadowBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="strategybuilder-service.html">StrategyBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="defining-tapestry-ioc-services.html">Defining Tapestry IOC Services</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-modules.html">IoC Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="object-providers.html">Object Providers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-serialization.html">Service Serialization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="starting-the-ioc-registry.html">Starting the IoC Registry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="aliases.html">Aliases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="injection-in-detail.html">Injection in Detail</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ordering-by-constraints.html">Ordering by Constraints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="registry-startup.html">Registry Startup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="parallel-execution.html">Parallel Execution</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="logging-in-tapestry.html">Logging in Tapestry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-implementation-reloading.html">Service Implementation Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-advisors.html">Service Advisors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-decorators.html">Service Decorators</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="using-jsr-330-standard-annotations.html">Using JSR 330 standard annotations</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="operation-tracker.html">Operation Tracker</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Add-ons and Integrations</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Built-in</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="hibernate.html">Hibernate Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="jpa.html">JPA Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integrating-with-spring-framework.html">Spring</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="third-party-modules.html">Third Party Modules</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Release Notes</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.3.html">Tapestry 5.3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.2.html">Tapestry 5.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.1.html">Tapestry 5.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.0.html">Tapestry 5.0</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cookbook</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/default-parameter.html">Default Parameter</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/overriding-exception-reporting.html">Overriding Exception Reporting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/error-page-recipe.html">Error Page Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/supporting-informal-parameters.html">Supporting Informal Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/switching-cases.html">Switching Cases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/enum-parameter-recipe.html">Enum Parameter Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/extending-the-if-component.html">Extending The If Component</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/meta-programming-page-content.html">Meta-Programming Page Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="cookbook/ioc-cookbook.html">IoC Cookbook</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-basic-services-and-injection.html">IoC Cookbook - Basic Services and Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-overriding-ioc-services.html">IoC Cookbook - Overriding IoC Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-patterns.html">IoC Cookbook - Patterns</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-service-configurations.html">IoC Cookbook - Service Configurations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/using-select-with-a-list.html">Using Select With a List</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/performance-and-clustering.html">Performance and Clustering</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/google-app-engine.html">Google App Engine (GAE)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frequently Asked Questions (FAQ)</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/general.html">General Questions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/templating-and-markup.html">Templating and Markup FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/ajax.html">AJAX FAQ</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">User Guide</span>
+    <span class="version">5.3</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../main/about.html">Home</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../current/index.html">User Guide</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../current/index.html">5.8</a>
+        </li>
+        <li class="version">
+          <a href="../5.7/index.html">5.7</a>
+        </li>
+        <li class="version">
+          <a href="../5.6/index.html">5.6</a>
+        </li>
+        <li class="version">
+          <a href="../5.5/index.html">5.5</a>
+        </li>
+        <li class="version">
+          <a href="../5.4/index.html">5.4</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">5.3</a>
+        </li>
+        <li class="version">
+          <a href="../5.2/index.html">5.2</a>
+        </li>
+        <li class="version">
+          <a href="../5.1/index.html">5.1</a>
+        </li>
+        <li class="version">
+          <a href="../5/index.html">5.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../main/about.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">User Guide</a></li>
+    <li>Tapestry IOC</li>
+    <li><a href="operation-tracker.html">Operation Tracker</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">5.3</button>
+  <div class="version-menu">
+    <a class="version" href="../current/operation-tracker.html">5.8</a>
+    <a class="version" href="../5.7/operation-tracker.html">5.7</a>
+    <a class="version" href="../5.6/operation-tracker.html">5.6</a>
+    <a class="version" href="../5.5/operation-tracker.html">5.5</a>
+    <a class="version" href="../5.4/operation-tracker.html">5.4</a>
+    <a class="version is-current" href="operation-tracker.html">5.3</a>
+    <a class="version" href="../5.2/operation-tracker.html">5.2</a>
+    <a class="version" href="../5.1/operation-tracker.html">5.1</a>
+    <a class="version is-missing" href="../5/index.html">5.0</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Operation Tracker</h1>
+<div class="paragraph">
+<p>Have you ever hit an error in some code and been faced with a giant stack trace, and no clue what that means?
+Us too.
+We wished there was a way for the exception to describe the path to the error not (just) in terms of which methods called which methods, but what <em>operations</em> triggered what other operations.
+That&#8217;s the <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/ioc/OperationTracker.html">OperationTracker</a></code>.</p>
+</div>
+<div class="paragraph">
+<p>The operation tracker is another aspect of Tapestry&#8217;s commitment to feedback.</p>
+</div>
+<div class="paragraph">
+<p>The <code>OperationTracker</code> is a resource; it&#8217;s actually a singleton, and is available for injection into any IoC service (or Tapestry component).</p>
+</div>
+<div class="paragraph">
+<p>Using the <code>OperationTracker</code> you may run a <code>Runnable</code>, or invoke an <code>Invokable</code> (returning a typed response).
+Associated with the operation is a description string.</p>
+</div>
+<div class="paragraph">
+<p>If there are no exceptions, then no problem.</p>
+</div>
+<div class="paragraph">
+<p>If there  are exceptions, then you&#8217;ll see the console output logged at the point of the exception:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>qtp644826761-13 [ERROR] Registry Operations trace:
+qtp644826761-13 [ERROR] Registry [ 1] Handling page render request for page DatumEditor
+qtp644826761-13 [ERROR] Registry [ 2] Constructing instance of page class org.apache.tapestry5.integration.app1.pages.DatumEditor
+qtp644826761-13 [ERROR] Registry [ 3] Assembling root component for page DatumEditor
+qtp644826761-13 [ERROR] Registry [ 4] Running component class transformations on org.apache.tapestry5.integration.app1.pages.Datum
+qtp644826761-13 [ERROR] RequestExceptionHandler Processing of request failed with uncaught exception: java.lang.RuntimeException: Exception assembling root component of page DatumEditor: Unable to instantiate instance of transformed class org.apache.tapestry5.integration.app1.pages.DatumEditor:
+java.lang.reflect.InvocationTargetExceptionjava.lang.RuntimeException: Exception assembling root component of page DatumEditor: Unable to instantiate instance of transformed class org.apache.tapestry5.integration.app1.pages.DatumEditor: java.lang.reflect.InvocationTargetException
+    at org.apache.tapestry5.internal.pageload.ComponentAssemblerImpl.performAssembleRootComponent(ComponentAssemblerImpl.java:129)
+    at org.apache.tapestry5.internal.pageload.ComponentAssemblerImpl.access$000(ComponentAssemblerImpl.java:37)
+    at org.apache.tapestry5.internal.pageload.ComponentAssemblerImpl$1.invoke(ComponentAssemblerImpl.java:81)
+    at org.apache.tapestry5.internal.pageload.ComponentAssemblerImpl$1.invoke(ComponentAssemblerImpl.java:78)
+    at org.apache.tapestry5.ioc.internal.OperationTrackerImpl.invoke(OperationTrackerImpl.java:82)
+    at org.apache.tapestry5.ioc.internal.PerThreadOperationTracker.invoke(PerThreadOperationTracker.java:72)
+    at org.apache.tapestry5.ioc.internal.RegistryImpl.invoke(RegistryImpl.java:1258)
+    at org.apache.tapestry5.internal.pageload.ComponentAssemblerImpl.assembleRootComponent(ComponentAssemblerImpl.java:76)
+    at org.apache.tapestry5.internal.pageload.PageLoaderImpl$3.invoke(PageLoaderImpl.java:197)
+    at org.apache.tapestry5.internal.pageload.PageLoaderImpl$3.invoke(PageLoaderImpl.java:190)
+    at org.apache.tapestry5.ioc.internal.OperationTrackerImpl.invoke(OperationTrackerImpl.java:82)
+    at org.apache.tapestry5.ioc.internal.PerThreadOperationTracker.invoke(PerThreadOperationTracker.java:72)
+    at org.apache.tapestry5.ioc.internal.RegistryImpl.invoke(RegistryImpl.java:1258)
+    at org.apache.tapestry5.internal.pageload.PageLoaderImpl.loadPage(PageLoaderImpl.java:189)
+    at $PageLoader_13a0346ec83c4e52.loadPage(Unknown Source)at org.apache.tapestry5.internal.services.PageSourceImpl.getPage(PageSourceImpl.java:104)
+    at $PageSource_13a0346ec83c4e51.getPage(Unknown Source)at $PageSource_13a0346ec83c4e50.getPage(Unknown Source)
+    at org.apache.tapestry5.internal.services.RequestPageCacheImpl.get(RequestPageCacheImpl.java:86)
+    at $RequestPageCache_13a0346ec83c4e4f.get(Unknown Source)
+    at $RequestPageCache_13a0346ec83c4e4e.get(Unknown Source)
+    at org.apache.tapestry5.internal.services.PageRenderRequestHandlerImpl.handle(PageRenderRequestHandlerImpl.java:56)
+    at org.apache.tapestry5.modules.TapestryModule$34.handle(TapestryModule.java:1978)
+    at $PageRenderRequestHandler_13a0346ec83c4f9c.handle(Unknown Source)
+    at $PageRenderRequestHandler_13a0346ec83c4f97.handle(Unknown Source)
+    at org.apache.tapestry5.internal.services.ComponentRequestHandlerTerminator.handlePageRender(ComponentRequestHandlerTerminator.java:48)
+    at org.apache.tapestry5.internal.services.DeferredResponseRenderer.handlePageRender(DeferredResponseRenderer.java:52)
+    at $ComponentRequestFilter_13a0346ec83c4f95.handlePageRender(Unknown Source)
+    at $ComponentRequestHandler_13a0346ec83c4f98.handlePageRender(Unknown Source)
+    at org.apache.tapestry5.services.InitializeActivePageName.handlePageRender(InitializeActivePageName.java:47)
+    at $ComponentRequestFilter_13a0346ec83c4f94.handlePageRender(Unknown Source)at $ComponentRequestHandler_13a0346ec83c4f98.handlePageRender(Unknown Source)
+    at org.apache.tapestry5.internal.services.ProductionModeUnknownComponentFilter.handlePageRender(ProductionModeUnknownComponentFilter.java:62)
+    at $ComponentRequestFilter_13a0346ec83c4f93.handlePageRender(Unknown Source)
+    at $ComponentRequestHandler_13a0346ec83c4f98.handlePageRender(Unknown Source)
+    at org.apache.tapestry5.internal.services.RequestOperationTracker$2.run(RequestOperationTracker.java:73)
+    at org.apache.tapestry5.ioc.internal.OperationTrackerImpl.run(OperationTrackerImpl.java:56)
+    at org.apache.tapestry5.ioc.internal.PerThreadOperationTracker.run(PerThreadOperationTracker.java:60)
+    at org.apache.tapestry5.ioc.internal.RegistryImpl.run(RegistryImpl.java:1252)
+    at org.apache.tapestry5.internal.services.RequestOperationTracker.handlePageRender(RequestOperationTracker.java:66)
+    at $ComponentRequestFilter_13a0346ec83c4f92.handlePageRender(Unknown Source)at $ComponentRequestHandler_13a0346ec83c4f98.handlePageRender(Unknown Source)
+    at $ComponentRequestHandler_13a0346ec83c4f81.handlePageRender(Unknown Source)
+    at org.apache.tapestry5.internal.services.PageRenderDispatcher.dispatch(PageRenderDispatcher.java:52)
+    at $Dispatcher_13a0346ec83c4f7f.dispatch(Unknown Source)
+    at $Dispatcher_13a0346ec83c4f80.dispatch(Unknown Source)
+    at $Dispatcher_13a0346ec83c4f74.dispatch(Unknown Source)
+    at org.apache.tapestry5.modules.TapestryModule$RequestHandlerTerminator.service(TapestryModule.java:304)
+    at org.apache.tapestry5.internal.services.RequestErrorFilter.service(RequestErrorFilter.java:26)
+    at $RequestFilter_13a0346ec83c4f73.service(Unknown Source)
+    at $RequestHandler_13a0346ec83c4f75.service(Unknown Source)
+    at org.apache.tapestry5.modules.TapestryModule$3.service(TapestryModule.java:854)
+    at $RequestHandler_13a0346ec83c4f75.service(Unknown Source)
+    at org.apache.tapestry5.modules.TapestryModule$2.service(TapestryModule.java:844)
+    at $RequestHandler_13a0346ec83c4f75.service(Unknown Source)
+    at org.apache.tapestry5.internal.services.StaticFilesFilter.service(StaticFilesFilter.java:89)
+    at $RequestHandler_13a0346ec83c4f75.service(Unknown Source)
+    at org.apache.tapestry5.integration.app1.services.AppModule$2.service(AppModule.java:111)
+    at $RequestFilter_13a0346ec83c4f71.service(Unknown Source)
+    at $RequestHandler_13a0346ec83c4f75.service(Unknown Source)
+    at $RequestHandler_13a0346ec83c4f6a.service(Unknown Source)
+    at org.apache.tapestry5.modules.TapestryModule$HttpServletRequestHandlerTerminator.service(TapestryModule.java:255)
+    at org.apache.tapestry5.internal.gzip.GZipFilter.service(GZipFilter.java:59)
+    at $HttpServletRequestHandler_13a0346ec83c4f6c.service(Unknown Source)
+    at org.apache.tapestry5.internal.services.IgnoredPathsFilter.service(IgnoredPathsFilter.java:62)
+    at $HttpServletRequestFilter_13a0346ec83c4f6d.service(Unknown Source)
+    at $HttpServletRequestFilter_13a0346ec83c4f68.service(Unknown Source)
+    at $HttpServletRequestHandler_13a0346ec83c4f6c.service(Unknown Source)
+    at org.apache.tapestry5.modules.TapestryModule$1.service(TapestryModule.java:804)
+    at $HttpServletRequestHandler_13a0346ec83c4f6c.service(Unknown Source)
+    at $HttpServletRequestHandler_13a0346ec83c4f67.service(Unknown Source)
+    at org.apache.tapestry5.TapestryFilter.doFilter(TapestryFilter.java:166)
+    at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1291)
+    at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:443)
+    at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+    at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:556)
+    at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:227)
+    at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1044)
+    at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:372)
+    at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:189)at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:978)
+    at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+    at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)at org.eclipse.jetty.server.Server.handle(Server.java:369)
+    at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:486)
+    at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:933)
+    at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:995)
+    at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:644)
+    at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+    at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+    at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:668)
+    at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+    at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+    at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+    at java.lang.Thread.run(Thread.java:724)
+Caused by: java.lang.RuntimeException: Unable to instantiate instance of transformed class org.apache.tapestry5.integration.app1.pages.DatumEditor: java.lang.reflect.InvocationTargetException
+    at org.apache.tapestry5.internal.plastic.ClassInstantiatorImpl.newInstance(ClassInstantiatorImpl.java:113)
+    at org.apache.tapestry5.internal.services.ComponentInstantiatorSourceImpl$2$1.newInstance(ComponentInstantiatorSourceImpl.java:235)
+    at org.apache.tapestry5.internal.structure.InternalComponentResourcesImpl.&lt;init&gt;(InternalComponentResourcesImpl.java:163)
+    at org.apache.tapestry5.internal.structure.ComponentPageElementImpl.&lt;init&gt;(ComponentPageElementImpl.java:555)
+    at org.apache.tapestry5.internal.structure.ComponentPageElementImpl.&lt;init&gt;(ComponentPageElementImpl.java:579)
+    at org.apache.tapestry5.internal.pageload.ComponentAssemblerImpl.performAssembleRootComponent(ComponentAssemblerImpl.java:97)... 94 more
+Caused by: java.lang.reflect.InvocationTargetExceptionat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+    at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+    at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+    at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+    at org.apache.tapestry5.internal.plastic.ClassInstantiatorImpl.newInstance(ClassInstantiatorImpl.java:109)... 99 more
+Caused by: org.apache.tapestry5.ioc.internal.OperationException: Field _value of class org.apache.tapestry5.integration.app1.pages.Datum must be instrumented, and may not be public.
+    at org.apache.tapestry5.ioc.internal.OperationTrackerImpl.logAndRethrow(OperationTrackerImpl.java:184)
+    at org.apache.tapestry5.ioc.internal.OperationTrackerImpl.run(OperationTrackerImpl.java:62)
+    at org.apache.tapestry5.ioc.internal.PerThreadOperationTracker.run(PerThreadOperationTracker.java:60)
+    at org.apache.tapestry5.ioc.internal.RegistryImpl.run(RegistryImpl.java:1252)
+    at org.apache.tapestry5.internal.services.ComponentInstantiatorSourceImpl.transform(ComponentInstantiatorSourceImpl.java:266)
+    at org.apache.tapestry5.internal.plastic.PlasticClassPool.loadAndTransformClass(PlasticClassPool.java:368)
+    at org.apache.tapestry5.internal.plastic.PlasticClassLoader.loadClass(PlasticClassLoader.java:38)
+    at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+    at org.apache.tapestry5.integration.app1.pages.DatumEditor.initializeInstance(DatumEditor.java:22)
+    at org.apache.tapestry5.integration.app1.pages.DatumEditor.&lt;init&gt;(DatumEditor.java)... 104 more
+Caused by: java.lang.IllegalArgumentException: Field _value of class org.apache.tapestry5.integration.app1.pages.Datum must be instrumented, and may not be public.
+    at org.apache.tapestry5.internal.plastic.PlasticFieldImpl.ensureNotPublic(PlasticFieldImpl.java:166)
+    at org.apache.tapestry5.internal.plastic.PlasticFieldImpl.replaceFieldReadAccess(PlasticFieldImpl.java:423)
+    at org.apache.tapestry5.internal.plastic.PlasticFieldImpl.setComputedConduit(PlasticFieldImpl.java:292)
+    at org.apache.tapestry5.internal.transform.UnclaimedFieldWorker.transformField(UnclaimedFieldWorker.java:99)
+    at org.apache.tapestry5.internal.transform.UnclaimedFieldWorker.transform(UnclaimedFieldWorker.java:88)
+    at $ComponentClassTransformWorker2_13a0346ec83c4e9a.transform(Unknown Source)
+    at $ComponentClassTransformWorker2_13a0346ec83c4e9c.transform(Unknown Source)
+    at $ComponentClassTransformWorker2_13a0346ec83c4e7f.transform(Unknown Source)
+    at org.apache.tapestry5.internal.services.ComponentInstantiatorSourceImpl$3.run(ComponentInstantiatorSourceImpl.java:316)
+    at org.apache.tapestry5.ioc.internal.OperationTrackerImpl.run(OperationTrackerImpl.java:56)... 112 more</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Notice how the operation trace at the top of the text succinctly explains how execution arrived at the point of failure and why, information that isn&#8217;t captured in a stack trace.</p>
+</div>
+<div class="paragraph">
+<p>This operation trace appears in the Tapestry web applications, as part of the <a href="runtime-exceptions.html" class="xref page">default exception report page</a>.</p>
+</div>
+<div class="paragraph">
+<p>There are times, especially when tracking down startup failures, where it is useful to see the operations log even without explicit exceptions.</p>
+</div>
+<div class="paragraph">
+<p>Enabling <code>debug</code> level logging for the <code>org.apache.tapestry5.ioc.Registry</code> logging category will provide huge volumes of output in the console:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>[DEBUG] Registry [ 1] --&gt; Creating non-proxied instance of service ServiceConfigurationListenerHub
+[DEBUG] Registry [ 2] --&gt; Creating plan to instantiate org.apache.tapestry5.ioc.services.ServiceConfigurationListenerHub via public org.apache.tapestry5.ioc.services.ServiceConfigurationListenerHub(java.util.List)
+[DEBUG] Registry [ 3] --&gt; Determining injection value for parameter #1 (java.util.List)
+[DEBUG] Registry [ 4] --&gt; Collecting ordered configuration for service ServiceConfigurationListenerHub
+[DEBUG] Registry [ 5] --&gt; Invoking org.apache.tapestry5.ioc.FredModule.configureServiceConfigurationListener(OrderedConfiguration, CatchAllServiceConfigurationListener) (at FredModule.java:141)
+[DEBUG] Registry [ 6] --&gt; Determining injection value for parameter #1 (org.apache.tapestry5.ioc.OrderedConfiguration)
+[DEBUG] Registry [ 6] &lt;-- Determining injection value for parameter #1 (org.apache.tapestry5.ioc.OrderedConfiguration) [0.17 ms]
+[DEBUG] Registry [ 6] --&gt; Determining injection value for parameter #2 (org.apache.tapestry5.ioc.CatchAllServiceConfigurationListener)
+[DEBUG] Registry [ 7] --&gt; Creating proxy for service MasterObjectProvider
+[DEBUG] Registry [ 7] &lt;-- Creating proxy for service MasterObjectProvider [2.82 ms]
+[DEBUG] Registry [ 7] --&gt; Realizing service MasterObjectProvider
+[DEBUG] Registry [ 8] --&gt; Instantiating service MasterObjectProvider implementation via org.apache.tapestry5.ioc.internal.services.MasterObjectProviderImpl(List, OperationTracker) (at MasterObjectProviderImpl.java:33) via org.apache.tapestry5.ioc.modules.TapestryIOCModule.bind(ServiceBinder) (at TapestryIOCModule.java:50)
+[DEBUG] Registry [ 9] --&gt; Creating plan to instantiate org.apache.tapestry5.ioc.internal.services.MasterObjectProviderImpl via public org.apache.tapestry5.ioc.internal.services.MasterObjectProviderImpl(java.util.List,org.apache.tapestry5.ioc.OperationTracker)
+[DEBUG] Registry [ 10] --&gt; Determining injection value for parameter #1 (java.util.List)
+[DEBUG] Registry [ 11] --&gt; Collecting ordered configuration for service MasterObjectProvider
+[DEBUG] Registry [ 12] --&gt; Invoking org.apache.tapestry5.ioc.modules.TapestryIOCModule.setupObjectProviders(OrderedConfiguration, ServiceOverride) (at TapestryIOCModule.java:136)
+[DEBUG] Registry [ 13] --&gt; Determining injection value for parameter #1 (org.apache.tapestry5.ioc.OrderedConfiguration)
+[DEBUG] Registry [ 13] &lt;-- Determining injection value for parameter #1 (org.apache.tapestry5.ioc.OrderedConfiguration) [0.17 ms]
+[DEBUG] Registry [ 13] --&gt; Determining injection value for parameter #2 (org.apache.tapestry5.ioc.services.ServiceOverride)
+[DEBUG] Registry [ 14] --&gt; Creating proxy for service ServiceOverride
+[DEBUG] Registry [ 14] &lt;-- Creating proxy for service ServiceOverride [2.15 ms]
+[DEBUG] Registry [ 13] &lt;-- Determining injection value for parameter #2 (org.apache.tapestry5.ioc.services.ServiceOverride) [2.62 ms]
+[DEBUG] Registry [ 13] --&gt; Creating proxy for service UpdateListenerHub
+[DEBUG] Registry [ 13] &lt;-- Creating proxy for service UpdateListenerHub [2.28 ms]
+...</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The output identifies operation depth (the number in square brackets), whether the operation is starting (<code>-–></code>) or finishing (<code><-–</code>), and even the execution time of the operation.</p>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

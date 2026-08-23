@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Assets :: Apache Tapestry</title>
+    <meta name="generator" content="Antora 3.1.15">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/tapestry.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../.."><img alt="Apache Tapestry Logo" src="../../_/img/apache-tapestry-icon-dark.svg" width="60" />Apache Tapestry</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Documentation</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../../main/getting-started.html">Getting Started</a>
+            <a class="navbar-item" href="../../main/tutorial/">Tutorial</a>
+            <a class="navbar-item" href="../../userguide/5.8/">User Guide</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="../../main/community.html">Community</a>
+        <a class="navbar-item" href="../../main/support.html">Support</a>
+        <a class="navbar-item" href="../../main/developers.html">Developers</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Apache</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+            <a class="navbar-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
+            <a class="navbar-item" href="https://www.apache.org/licenses/">License</a>
+            <a class="navbar-item" href="https://www.apache.org/security/">Security</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="../../main/download.html">Download</a>
+          </span>
+        </div>
+        <div class="navbar-brand">
+          <a href="https://www.apache.org/">
+          <img alt="The Apache Software Foundation" src="../../_/img/asf_logo.svg" width="200" height="63" style="padding-top: 5px; padding-bottom: 5px; background-color: white">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="body">
+<div class="nav-container" data-component="userguide" data-version="5.6">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">User Guide</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Introduction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry Core</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basics</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="project-layout.html">Project Layout</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="runtime-exceptions.html">Runtime Exceptions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="class-reloading.html">Class Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-reference.html">Component Reference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="annotations.html">Annotations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Pages and Components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-classes.html">Component Classes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-templates.html">Component Templates</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="property-expressions.html">Property Expressions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-parameters.html">Component Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="parameter-type-coercion.html">Parameter Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="layout-component.html">Layout Component</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-mixins.html">Component Mixins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-navigation.html">Page Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="localization.html">Localization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Request/Response Rendering</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-life-cycle.html">Page Life Cycle</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="request-processing.html">Request Processing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-rendering.html">Component Rendering</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-events.html">Component Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="url-rewriting.html">URL Rewriting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dom.html">Document Object Model (DOM)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="response-compression.html">Response Compression</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="security.html">Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https.html">HTTPS / SSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="content-type-and-markup.html">Content Type and Markup</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Data Persistence</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="persistent-page-data.html">Persistent Page Data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="session-storage.html">Session Storage</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Interacting with components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="injection.html">Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="environmental-services.html">Environmental Services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript, AJAX, CSS &amp; Binary Data</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="client-side-javascript.html">Client-Side JavaScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="javascript-modules.html">Javascript Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="coffeescript.html">Coffeescript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="typescript.html">TypeScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ajax-and-zones.html">AJAX and Zones</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="css.html">Cascading Style Sheets (CSS)</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="assets.html">Assets</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Working with Forms</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="forms-and-validation.html">Forms and Validation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="beaneditform-guide.html">BeanEditForm Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uploading-files.html">Uploading Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bean-validation.html">Bean Validation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Logging, Debugging &amp; Testing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="logging.html">Logging</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unit-testing.html">Unit testing pages or components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integration-testing.html">Integration Testing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="development-dashboard.html">Development Dashboard</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry IOC</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-overview.html">IoC Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="symbols.html">Symbols</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="type-coercion.html">Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="case-insensitivity.html">Case Insensitivity</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="autoloading-modules.html">Autoloading Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="chainbuilder-service.html">ChainBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pipelinebuilder-service.html">PipelineBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="shadowbuilder-service.html">ShadowBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="strategybuilder-service.html">StrategyBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="defining-tapestry-ioc-services.html">Defining Tapestry IOC Services</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-modules.html">IoC Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="object-providers.html">Object Providers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-serialization.html">Service Serialization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="starting-the-ioc-registry.html">Starting the IoC Registry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="aliases.html">Aliases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="injection-in-detail.html">Injection in Detail</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ordering-by-constraints.html">Ordering by Constraints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="registry-startup.html">Registry Startup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="parallel-execution.html">Parallel Execution</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="logging-in-tapestry.html">Logging in Tapestry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-implementation-reloading.html">Service Implementation Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-advisors.html">Service Advisors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-decorators.html">Service Decorators</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="using-jsr-330-standard-annotations.html">Using JSR 330 standard annotations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="operation-tracker.html">Operation Tracker</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Add-ons and Integrations</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Built-in</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="hibernate.html">Hibernate Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="jpa.html">JPA Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integrating-with-spring-framework.html">Spring</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="third-party-modules.html">Third Party Modules</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Release Notes</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.6.html">Tapestry 5.6</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.5.html">Tapestry 5.5</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.4.html">Tapestry 5.4</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.3.html">Tapestry 5.3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.2.html">Tapestry 5.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.1.html">Tapestry 5.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.0.html">Tapestry 5.0</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cookbook</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/default-parameter.html">Default Parameter</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/overriding-exception-reporting.html">Overriding Exception Reporting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/error-page-recipe.html">Error Page Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/supporting-informal-parameters.html">Supporting Informal Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/component-libraries.html">Component Libraries</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/switching-cases.html">Switching Cases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/enum-parameter-recipe.html">Enum Parameter Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/extending-the-if-component.html">Extending The If Component</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/meta-programming-page-content.html">Meta-Programming Page Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="cookbook/ioc-cookbook.html">IoC Cookbook</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-basic-services-and-injection.html">IoC Cookbook - Basic Services and Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-overriding-ioc-services.html">IoC Cookbook - Overriding IoC Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-patterns.html">IoC Cookbook - Patterns</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-service-configurations.html">IoC Cookbook - Service Configurations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/using-select-with-a-list.html">Using Select With a List</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/performance-and-clustering.html">Performance and Clustering</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/google-app-engine.html">Google App Engine (GAE)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frequently Asked Questions (FAQ)</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/general.html">General Questions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/templating-and-markup.html">Templating and Markup FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/ajax.html">AJAX FAQ</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">User Guide</span>
+    <span class="version">5.6</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../main/about.html">Home</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../current/index.html">User Guide</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../current/index.html">5.8</a>
+        </li>
+        <li class="version">
+          <a href="../5.7/index.html">5.7</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">5.6</a>
+        </li>
+        <li class="version">
+          <a href="../5.5/index.html">5.5</a>
+        </li>
+        <li class="version">
+          <a href="../5.4/index.html">5.4</a>
+        </li>
+        <li class="version">
+          <a href="../5.3/index.html">5.3</a>
+        </li>
+        <li class="version">
+          <a href="../5.2/index.html">5.2</a>
+        </li>
+        <li class="version">
+          <a href="../5.1/index.html">5.1</a>
+        </li>
+        <li class="version">
+          <a href="../5/index.html">5.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../main/about.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">User Guide</a></li>
+    <li>Tapestry Core</li>
+    <li>JavaScript, AJAX, CSS &amp; Binary Data</li>
+    <li><a href="assets.html">Assets</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">5.6</button>
+  <div class="version-menu">
+    <a class="version" href="../current/assets.html">5.8</a>
+    <a class="version" href="../5.7/assets.html">5.7</a>
+    <a class="version is-current" href="assets.html">5.6</a>
+    <a class="version" href="../5.5/assets.html">5.5</a>
+    <a class="version" href="../5.4/assets.html">5.4</a>
+    <a class="version" href="../5.3/assets.html">5.3</a>
+    <a class="version" href="../5.2/assets.html">5.2</a>
+    <a class="version" href="../5.1/assets.html">5.1</a>
+    <a class="version" href="../5/assets.html">5.0</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Assets</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>In Tapestry, Assets are any kind of <em>static</em> content (that is, not changing while the application is deployed) that may be downloaded to a client web browser, such as images, style sheets and JavaScript files.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_asset_locations"><a class="anchor" href="#_asset_locations"></a>Asset Locations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Assets are located within <em>domains</em>.
+Tapestry ships with two built-in domains:
+(1) the <strong>web application&#8217;s context folder</strong> and (2) the <strong>classpath</strong>.</p>
+</div>
+<div class="sect2">
+<h3 id="_context_assets"><a class="anchor" href="#_context_assets"></a>Context Assets</h3>
+<div class="paragraph">
+<p>Context Assets are files stored in the web application&#8217;s context folder in the usual JEE fashion.
+In a project following Maven&#8217;s directory layout conventions, this would be <code>src/main/webapp</code> or a subdirectory of it (with the exception of <code>WEB-INF</code> - because the servlet container will prevent client access to files in <code>WEB-INF</code> in accordance with the Java Servlet Specification).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_classpath_assets"><a class="anchor" href="#_classpath_assets"></a>Classpath Assets</h3>
+<div class="paragraph">
+<p>Classpath Assets go in the <strong><code>META-INF</code></strong> subdirectory or subdirectories thereof. This would be <code>src/main/resources/META-INF</code>, if following Maven directory conventions.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Storing classpath assets with your Java class files (that is, in a package-named subdirectory under <code>src/main/resources</code> instead of <code>META-INF</code>, is <strong>deprecated</strong> for security reasons.
+Doing so is still supported but causes an <strong>error-level log message</strong>.
+Support for classpath assets not under <code>META-INF</code> may be removed in future Tapestry releases.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>More specifically, <a href="javascript-modules.html" class="xref page">Javascript Modules</a> are under <code>META-INF/<strong>modules</strong></code> while other assets are under <code>META-INF/<strong>assets</strong></code>.
+This would be <code>src/main/resources/META-INF/modules</code> and <code>src/main/resources/META-INF/assets</code>, respectively, if following Maven directory conventions.</p>
+</div>
+<div class="paragraph">
+<p>Assets of your <em>application</em> can be stored directly in <code>META-INF/modules</code> or <code>META-INF/assets</code>, respectively.</p>
+</div>
+<div class="paragraph">
+<p>For assets part of a re-usable <em>library</em>, Tapestry uses the library&#8217;s name (from its <code><a href="https://tapestry.apache.org/5.6.3/apidocs/org/apache/tapestry5/services/LibraryMapping.html">LibraryMapping</a></code> - such as <code>core</code> for the Tapestry core library).
+The library name becomes a folder under <code>META-INF/assets</code>.
+For example, Tapestry stores its component-related assets under <code>META-INF/assets/core</code>.
+Likewise, assets of your <code>foo</code> library are in <code>META-INF/assets/foo</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_additional_asset_domains"><a class="anchor" href="#_additional_asset_domains"></a>Additional Asset Domains</h3>
+<div class="paragraph">
+<p>If you wish to create additional domains for assets, for example, to allow assets to be stored on the file system or in a database, you may define a new <code><a href="https://tapestry.apache.org/5.6.3/apidocs/org/apache/tapestry5/services/AssetFactory.html">AssetFactory</a></code> and contribute it to the <code><a href="https://tapestry.apache.org/5.6.3/apidocs/org/apache/tapestry5/services/AssetSource.html">AssetSource</a></code> service configuration.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_referencing_assets"><a class="anchor" href="#_referencing_assets"></a>Referencing Assets</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Assets can be referenced from templates as well as in component classes.</p>
+</div>
+<div class="paragraph">
+<p>Unlike elsewhere in Tapestry, <em>case matters</em>.
+This is because Tapestry is dependent on the Servlet API and the Java runtime to access the underlying files, and those APIs, unlike Tapestry, are case sensitive.
+Be aware that some <em>operating systems</em> (such as Windows) are case insensitive, which may mask errors that will be revealed at deployment (if the deployment operating system is case sensitive, such as Linux).</p>
+</div>
+<div class="sect2">
+<h3 id="_referencing_assets_in_component_classes"><a class="anchor" href="#_referencing_assets_in_component_classes"></a>Referencing Assets in Component Classes</h3>
+<div class="paragraph">
+<p>Assets are available to your code as instances of the <code><a href="https://tapestry.apache.org/5.6.3/apidocs/org/apache/tapestry5/Asset.html">Asset</a></code> interface.</p>
+</div>
+<div class="paragraph">
+<p>Components access assets via <a href="injection.html" class="xref page">Injection</a>, using the <code>@Inject</code> annotation, which allows <code>Assets</code> to be injected into components as read-only properties.
+The path to the resource is specified using the <code><a href="https://tapestry.apache.org/5.6.3/apidocs/org/apache/tapestry5/annotations/Path.html">@Path</a></code> annotation:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Inject
+@Path("context:images/tapestry_banner.gif")
+private Asset banner;</code></pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_relative_assets"><a class="anchor" href="#_relative_assets"></a>Relative Assets</h4>
+<div class="paragraph">
+<p>You can use relative paths with domains (if you omit the prefix):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Inject
+@Path("images/edit.png")
+private Asset icon;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This represents a relative path from the default location for the asset.
+This will resolve relative to the correct folder within <code>META-INF/assets</code>
+and will fall back relative to the component&#8217;s class file (even though deprecated since Tapestry 5.4, resulting in an error-level log message).</p>
+</div>
+<div class="paragraph">
+<p>You may use the standard <code>./</code> and <code>../</code> prefixes to refer to the current folder, and containing folder, respectively.</p>
+</div>
+<div class="paragraph">
+<p>Since you must omit the asset domain prefix in order to specify a relative path, this only makes sense for components packaged in a library for reuse.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_referencing_assets_from_templates"><a class="anchor" href="#_referencing_assets_from_templates"></a>Referencing Assets from Templates</h3>
+<div class="paragraph">
+<p>Two <a href="component-parameters.html#_binding_expressions" class="xref page">binding prefixes</a> exist for referencing assets from templates.</p>
+</div>
+<div class="paragraph">
+<p>The <strong><code>context:</code></strong> binding prefix matches assets in the web application&#8217;s context folder.
+In contrast, the <strong><code>asset:</code></strong> binding prefix matches assets from <code>META-INF</code> or the classpath.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;img src="${context:images/tapestry_banner.gif}" /&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+&lt;img src="${asset:images/tapestry_banner.gif}" /&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+&lt;img src="${asset:tapestry_banner.gif}" /&gt; <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Referencing src/main/<strong>webapp</strong>/images/tapestry_banner.gif</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Referencing src/main/<strong>resources/META-INF/assets/</strong>images/tapestry_banner.gif</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Referencing src/main/<strong>resources/META-INF/assets/</strong>tapestry_banner.gif <em>or</em> (falling back to deprecated) src/main/<strong>resources/com/example/myapp/pages/</strong>tapestry_banner.gif</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+In older code you may occasionally see <code>${asset:context:&#8230;&#8203;}</code>.
+That means the same thing as <code>${context:&#8230;&#8203;}</code>.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_symbols_for_assets"><a class="anchor" href="#_symbols_for_assets"></a>Symbols For Assets</h4>
+<div class="paragraph">
+<p><a href="symbols.html" class="xref page">Symbols</a> inside the annotation value are expanded.
+This allows you to define a symbol and reference it as part of the path.
+For example, you could contribute a symbol named <code>skin.root</code> as <code>context:skins/basic</code> and then reference an asset from within it:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Inject
+@Path("${skin.root}/style.css")
+private Asset style;</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The use of the <code>${&#8230;&#8203;}</code> syntax here is a symbol expansion (because it occurs in an annotation in Java code), rather than a template expansion (which occurs only in Tapestry template files).
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>An override of the <code>skin.root</code> symbol would affect all references to the named asset.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_localization_of_assets"><a class="anchor" href="#_localization_of_assets"></a>Localization of Assets</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Main Article: <a href="localization.html" class="xref page">Localization</a></p>
+</div>
+<div class="paragraph">
+<p>Assets are localized; Tapestry will search for a variation of the file appropriate to the effective locale for the request.
+In the previous example, a German user of the application may see a file named <code>edit_de.png</code> (if such a file exists).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_asset_fingerprinting"><a class="anchor" href="#_asset_fingerprinting"></a>Asset Fingerprinting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Asset URLs include a content fingerprint, a hash of the actual content of the asset.</p>
+</div>
+<div class="paragraph">
+<p>Assets get a far-future expires header.</p>
+</div>
+<div class="paragraph">
+<p>During development or production, if an asset is changed in any way, it will have a new content fingerprint and will appear, to the browser, to be an entirely new immutable resource.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_css_link_rewriting"><a class="anchor" href="#_css_link_rewriting"></a>CSS Link Rewriting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>It is frequently the case that CSS files will include links to other files, such as background images, using the <code>url()</code> value syntax.
+The URL for the CSS file and the targeted file would be broken, due to the inclusions of the CSS file&#8217;s content hash fingerprint. To fix this, Tapestry parses CSS files, locates the <code>url()</code> directives, and rewrites the URLs to be absolute (including the targeted file&#8217;s content hash fingerprint).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_performance_notes"><a class="anchor" href="#_performance_notes"></a>Performance Notes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Assets are expected to be entirely static (not changing while the application is deployed).
+This allows Tapestry to perform some important performance optimizations.</p>
+</div>
+<div class="paragraph">
+<p>Tapestry GZIP compresses the content of all assets – if the asset is compressible, the client supports it, and you don&#8217;t explicitly disable it.</p>
+</div>
+<div class="paragraph">
+<p>Further, the asset will get a far future expires header, which will encourage the client browser to cache the asset.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_minimizing_assets"><a class="anchor" href="#_minimizing_assets"></a>Minimizing Assets</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Since version 5.3, Tapestry provides a service, <code><a href="https://tapestry.apache.org/5.6.3/apidocs/org/apache/tapestry5/services/assets/ResourceMinimizer.html">ResourceMinimizer</a></code>, which will help to minimize all your static resources (principally CSS and JavaScript files).</p>
+</div>
+<div class="paragraph">
+<p>Minimization takes place before GZip compression.
+When aggregating JavaScript for a JavaScriptStack, the minimization is on the aggregated asset, not the individual assets being aggregated.</p>
+</div>
+<div class="paragraph">
+<p>By default, this service does nothing.
+You should include <code>tapestry-webresources</code>, which makes it possible to minimize CSS and JavaScript files.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependency&gt;
+    &lt;groupId&gt;org.apache.tapestry&lt;/groupId&gt;
+    &lt;artifactId&gt;tapestry-webresources&lt;/artifactId&gt;
+    &lt;version&gt;5.6.x&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>By adding this dependency, all your JavaScript and CSS files will be minimized when <a href="configuration.html" class="xref page">Production Mode</a> is true.
+You can force the minimization of these files, by changing the value of the constant <code><a href="https://tapestry.apache.org/5.6.3/apidocs/org/apache/tapestry5/SymbolConstants.html#MINIFICATION_ENABLED">SymbolConstants.MINIFICATION_ENABLED</a></code> in your module class (usually <code>AppModule.java</code>):</p>
+</div>
+<div class="listingblock">
+<div class="title">AppModule.java (partial)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Contribute(SymbolProvider.class)
+@ApplicationDefaults
+public static void contributeApplicationDefaults(MappedConfiguration&lt;String, String&gt; configuration)
+{
+    configuration.add(SymbolConstants.MINIFICATION_ENABLED, "true");
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you want to add your own minimizer for particular types of assets, you can contribute to the <code><a href="https://tapestry.apache.org/5.6.3/apidocs/org/apache/tapestry5/services/assets/ResourceMinimizer.html">ResourceMinimizer</a></code> service.
+The service configuration maps the MIME-TYPE of your resource to an implementation of the <code>ResourceMinimizer</code> interface.</p>
+</div>
+<div class="listingblock">
+<div class="title">AppModule.java (partial)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Contribute(ResourceMinimizer.class)
+@Primary
+public static void contributeMinimizers(MappedConfiguration&lt;String, ResourceMinimizer&gt; configuration)
+{
+    configuration.addInstance("text/coffeescript", CoffeeScriptMinimizer.class);
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Injection in Detail :: Apache Tapestry</title>
+    <meta name="generator" content="Antora 3.1.15">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/tapestry.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../.."><img alt="Apache Tapestry Logo" src="../../_/img/apache-tapestry-icon-dark.svg" width="60" />Apache Tapestry</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Documentation</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../../main/getting-started.html">Getting Started</a>
+            <a class="navbar-item" href="../../main/tutorial/">Tutorial</a>
+            <a class="navbar-item" href="../../userguide/5.8/">User Guide</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="../../main/community.html">Community</a>
+        <a class="navbar-item" href="../../main/support.html">Support</a>
+        <a class="navbar-item" href="../../main/developers.html">Developers</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Apache</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+            <a class="navbar-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
+            <a class="navbar-item" href="https://www.apache.org/licenses/">License</a>
+            <a class="navbar-item" href="https://www.apache.org/security/">Security</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="../../main/download.html">Download</a>
+          </span>
+        </div>
+        <div class="navbar-brand">
+          <a href="https://www.apache.org/">
+          <img alt="The Apache Software Foundation" src="../../_/img/asf_logo.svg" width="200" height="63" style="padding-top: 5px; padding-bottom: 5px; background-color: white">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="body">
+<div class="nav-container" data-component="userguide" data-version="5.7">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">User Guide</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Introduction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry Core</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basics</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="project-layout.html">Project Layout</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="runtime-exceptions.html">Runtime Exceptions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="class-reloading.html">Class Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-reference.html">Component Reference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="annotations.html">Annotations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Pages and Components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-classes.html">Component Classes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-templates.html">Component Templates</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="property-expressions.html">Property Expressions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-parameters.html">Component Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="parameter-type-coercion.html">Parameter Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="layout-component.html">Layout Component</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-mixins.html">Component Mixins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-navigation.html">Page Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="localization.html">Localization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Request/Response Rendering</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-life-cycle.html">Page Life Cycle</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="request-processing.html">Request Processing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-rendering.html">Component Rendering</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-events.html">Component Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="url-rewriting.html">URL Rewriting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dom.html">Document Object Model (DOM)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="response-compression.html">Response Compression</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="security.html">Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https.html">HTTPS / SSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="content-type-and-markup.html">Content Type and Markup</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Data Persistence</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="persistent-page-data.html">Persistent Page Data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="session-storage.html">Session Storage</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Interacting with components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="injection.html">Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="environmental-services.html">Environmental Services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript, AJAX, CSS &amp; Binary Data</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="client-side-javascript.html">Client-Side JavaScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="javascript-modules.html">Javascript Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="coffeescript.html">Coffeescript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="typescript.html">TypeScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ajax-and-zones.html">AJAX and Zones</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="css.html">Cascading Style Sheets (CSS)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="assets.html">Assets</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Working with Forms</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="forms-and-validation.html">Forms and Validation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="beaneditform-guide.html">BeanEditForm Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uploading-files.html">Uploading Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bean-validation.html">Bean Validation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Logging, Debugging &amp; Testing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="logging.html">Logging</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unit-testing.html">Unit testing pages or components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integration-testing.html">Integration Testing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="development-dashboard.html">Development Dashboard</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry IOC</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-overview.html">IoC Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="symbols.html">Symbols</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="type-coercion.html">Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="case-insensitivity.html">Case Insensitivity</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="autoloading-modules.html">Autoloading Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="chainbuilder-service.html">ChainBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pipelinebuilder-service.html">PipelineBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="shadowbuilder-service.html">ShadowBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="strategybuilder-service.html">StrategyBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="defining-tapestry-ioc-services.html">Defining Tapestry IOC Services</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-modules.html">IoC Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="object-providers.html">Object Providers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-serialization.html">Service Serialization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="starting-the-ioc-registry.html">Starting the IoC Registry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="aliases.html">Aliases</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="injection-in-detail.html">Injection in Detail</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ordering-by-constraints.html">Ordering by Constraints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="registry-startup.html">Registry Startup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="parallel-execution.html">Parallel Execution</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="logging-in-tapestry.html">Logging in Tapestry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-implementation-reloading.html">Service Implementation Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-advisors.html">Service Advisors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-decorators.html">Service Decorators</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="using-jsr-330-standard-annotations.html">Using JSR 330 standard annotations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="operation-tracker.html">Operation Tracker</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Add-ons and Integrations</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Built-in</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="hibernate.html">Hibernate Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="jpa.html">JPA Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integrating-with-spring-framework.html">Spring</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="third-party-modules.html">Third Party Modules</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Release Notes</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.7.html">Tapestry 5.7</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.6.html">Tapestry 5.6</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.5.html">Tapestry 5.5</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.4.html">Tapestry 5.4</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.3.html">Tapestry 5.3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.2.html">Tapestry 5.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.1.html">Tapestry 5.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.0.html">Tapestry 5.0</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cookbook</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/default-parameter.html">Default Parameter</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/overriding-exception-reporting.html">Overriding Exception Reporting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/error-page-recipe.html">Error Page Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/supporting-informal-parameters.html">Supporting Informal Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/component-libraries.html">Component Libraries</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/switching-cases.html">Switching Cases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/enum-parameter-recipe.html">Enum Parameter Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/extending-the-if-component.html">Extending The If Component</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/meta-programming-page-content.html">Meta-Programming Page Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="cookbook/ioc-cookbook.html">IoC Cookbook</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-basic-services-and-injection.html">IoC Cookbook - Basic Services and Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-overriding-ioc-services.html">IoC Cookbook - Overriding IoC Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-patterns.html">IoC Cookbook - Patterns</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-service-configurations.html">IoC Cookbook - Service Configurations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/using-select-with-a-list.html">Using Select With a List</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/performance-and-clustering.html">Performance and Clustering</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/google-app-engine.html">Google App Engine (GAE)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frequently Asked Questions (FAQ)</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/general.html">General Questions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/templating-and-markup.html">Templating and Markup FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/ajax.html">AJAX FAQ</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">User Guide</span>
+    <span class="version">5.7</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../main/about.html">Home</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../current/index.html">User Guide</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../current/index.html">5.8</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">5.7</a>
+        </li>
+        <li class="version">
+          <a href="../5.6/index.html">5.6</a>
+        </li>
+        <li class="version">
+          <a href="../5.5/index.html">5.5</a>
+        </li>
+        <li class="version">
+          <a href="../5.4/index.html">5.4</a>
+        </li>
+        <li class="version">
+          <a href="../5.3/index.html">5.3</a>
+        </li>
+        <li class="version">
+          <a href="../5.2/index.html">5.2</a>
+        </li>
+        <li class="version">
+          <a href="../5.1/index.html">5.1</a>
+        </li>
+        <li class="version">
+          <a href="../5/index.html">5.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../main/about.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">User Guide</a></li>
+    <li>Tapestry IOC</li>
+    <li><a href="injection-in-detail.html">Injection in Detail</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">5.7</button>
+  <div class="version-menu">
+    <a class="version" href="../current/injection-in-detail.html">5.8</a>
+    <a class="version is-current" href="injection-in-detail.html">5.7</a>
+    <a class="version" href="../5.6/injection-in-detail.html">5.6</a>
+    <a class="version" href="../5.5/injection-in-detail.html">5.5</a>
+    <a class="version" href="../5.4/injection-in-detail.html">5.4</a>
+    <a class="version" href="../5.3/injection-in-detail.html">5.3</a>
+    <a class="version" href="../5.2/injection-in-detail.html">5.2</a>
+    <a class="version" href="../5.1/injection-in-detail.html">5.1</a>
+    <a class="version" href="../5/injection-in-detail.html">5.0</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Injection in Detail</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Injection in Tapestry IoC can be a complicated subject for a number of reasons:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Injection can occur in many places: on fields, and on parameters to methods and constructors of certain objects.</p>
+</li>
+<li>
+<p>Parts of Injection are themselves defined in terms of Tapestry IoC services, many of which are extensible.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Despite this, injection generally <em>Just Works</em>: most of the time, you want Tapestry to inject a service, and only a single service implements the service interface.</p>
+</div>
+<div class="paragraph">
+<p>This document discusses what to do when you hit a case that doesn&#8217;t Just Work, or when you want to extend the injection logic in some way.</p>
+</div>
+<div class="paragraph">
+<p>Some aspects of this discussion reflect Tapestry IoC used within a Tapestry web application: the tapestry-core module makes some extensions to injection.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_injection_triggers"><a class="anchor" href="#_injection_triggers"></a>Injection Triggers</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Injection is triggered in a number of ways:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A field in a component class, autobuilt object, or service implementation class is annotated with <code>@Inject</code>.</p>
+</li>
+<li>
+<p>A method parameter to a service builder method, a decorator method, or a contribute method (in a Tapestry IoC module class).</p>
+</li>
+<li>
+<p>A constructor parameter to an autobuilt object, or a service implementation class.</p>
+</li>
+<li>
+<p>Any of the above with an <code>@InjectService</code> annotation.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>These define the <em>point of injection</em>.</p>
+</div>
+<div class="paragraph">
+<p>Injection also covers a related matter: providing special resources to a service or component (remember that pages are specialized components).
+For a service, the service&#8217;s id (as a string) or extensible configuration (as a <code>Collection</code>, <code>List</code> or <code>Map</code>) may be provided.
+For a component, the component&#8217;s id, locale, message catalog, or component resources may be provided.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_standard_injection_processing"><a class="anchor" href="#_standard_injection_processing"></a>Standard Injection Processing</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section describes standard injection, which applies at the IoC layer: autobuilt objects and service implementations.
+The steps for injection into Tapestry components are slightly different and are covered later.</p>
+</div>
+<div class="paragraph">
+<p>So a the point of injection, Tapestry has identified a field or parameter that should be injected.
+At this point, Tapestry knows the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The field name (if field injection). The parameter name is not available.</p>
+</li>
+<li>
+<p>The field or parameter type, as a Java class. In many cases, this will be enough to identify what object shall be injected.</p>
+</li>
+<li>
+<p>Any additional annotations on the field or parameter.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Tapestry proceeds with this information.</p>
+</div>
+<div class="sect2">
+<h3 id="_check_for_injectservice"><a class="anchor" href="#_check_for_injectservice"></a>Check for <code>@InjectService</code></h3>
+<div class="paragraph">
+<p>Tapestry checks first for the <code>@InjectService</code> annotation.
+The value of this annotation is the service id to inject.
+When <code>@InjectService</code> is present at the point of injection, the search is complete, though the injection can fail (throwing an exception) if the service id indicated does not exist, or if the service&#8217;s interface is not compatible with the field&#8217;s type.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_check_for_service_resources"><a class="anchor" href="#_check_for_service_resources"></a>Check for service resources</h3>
+<div class="paragraph">
+<p>This step applies only to IoC layer injection (not to injection into components).</p>
+</div>
+<div class="paragraph">
+<p>When the <code>@Inject</code> annotation is <em>not present</em> at the point of injection, Tapestry checks to see if a resource can be injected.
+Services are global values, but resources are specific to the service under construction.</p>
+</div>
+<div class="paragraph">
+<p>When the <code>@Inject</code> annotation is present, this step is skipped (this is necessary when the object to be injected has a type that conflicts with a resource type, such as List or Class).</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>org.slf4j.Logger</code> – The Logger of the service being constructed (or the logger of the Module class being instantiated).</p>
+</li>
+<li>
+<p><code><a href="https://tapestry.apache.org/5.7.3/apidocs/org/apache/tapestry5/commons/ObjectLocator.html">ObjectLocator</a></code> – For contribute methods, used to locate additional objects.</p>
+</li>
+<li>
+<p><code><a href="https://tapestry.apache.org/5.7.3/apidocs/org/apache/tapestry5/ioc/ServiceResources.html">ServiceResources</a></code> – For service builder methods, an extended version of ObjectLocator.</p>
+</li>
+<li>
+<p><code>Class</code> – The service interface type.</p>
+</li>
+<li>
+<p><code><a href="https://tapestry.apache.org/5.7.3/apidocs/org/apache/tapestry5/ioc/OperationTracker.html">OperationTracker</a></code> – Used to track deeply nested operations so that errors can be reported sensibly.</p>
+</li>
+<li>
+<p><code>Object</code>, or service interface type – Passed to decorator methods.</p>
+</li>
+<li>
+<p><code>Collection</code>, <code>List</code>, <code>Map</code> – Assembled service configurations passed to service builder methods (or service class constructors).</p>
+</li>
+<li>
+<p><code><a href="https://tapestry.apache.org/5.7.3/apidocs/org/apache/tapestry5/commons/Configuration.html">Configuration</a></code>, <code><a href="https://tapestry.apache.org/5.7.3/apidocs/org/apache/tapestry5/commons/OrderedConfiguration.html">OrderedConfiguration</a></code>, <code><a href="https://tapestry.apache.org/5.7.3/apidocs/org/apache/tapestry5/commons/MappedConfiguration.html">MappedConfiguration</a></code> – Configuration passed to contribute methods, to build service configurations.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If field type does not match any of the available resource types, or the Inject annotation is present, logic continues to the next step.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Injection of resources into fields is triggered by the presence of the <code>@InjectResource</code> annotation, whereas injection of resources into parameters occurs when the <code>@Inject</code> or <code>@InjectService</code> annotation is <em>not</em> present.
+These rules are slightly tricky, which reflects a desire to avoid any annotations except when needed, and the fact that field injection came much later than parameter injection.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_service_lookup_by_type_and_annotations"><a class="anchor" href="#_service_lookup_by_type_and_annotations"></a>Service Lookup by Type and Annotations</h3>
+<div class="paragraph">
+<p>Tapestry attempts to find a matching service.</p>
+</div>
+<div class="paragraph">
+<p>First, it generates a set of services whose service interface is compatible with the injection type. This is based on assignability.</p>
+</div>
+<div class="paragraph">
+<p>If the <code><a href="https://tapestry.apache.org/5.7.3/apidocs/org/apache/tapestry5/ioc/annotations/Local.html">@Local</a></code> annotation is present, then services not from the module containing the service being constructed will be eliminated.</p>
+</div>
+<div class="paragraph">
+<p>Tapestry then works through the known marker annotations. For each marker annotation that is present at the point of injection, Tapestry eliminates services which <em>do not</em> have the marker.
+Thus, if multiple marker annotations are present, the final service must have <em>all of them</em>.</p>
+</div>
+<div class="paragraph">
+<p>At the end, of this, Tapestry determines how many services match.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If there is a single matching service, then the service to inject as been identified.</p>
+</li>
+<li>
+<p>If there are no matches, and there were no marker annotations at the point of injection, then the Tapestry continues to the next step.</p>
+</li>
+<li>
+<p>Otherwise there were either no matches, or too many matches: Tapestry will throw a <code>RuntimeException</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_masterobjectprovider_lookup"><a class="anchor" href="#_masterobjectprovider_lookup"></a>MasterObjectProvider Lookup</h3>
+<div class="paragraph">
+<p>This is the point at which Tapestry&#8217;s extensibility comes into play. <code><a href="https://tapestry.apache.org/5.7.3/apidocs/org/apache/tapestry5/ioc/services/MasterObjectProvider.html">MasterObjectProvider</a></code> is a service, with a configuration of <code><a href="https://tapestry.apache.org/5.7.3/apidocs/org/apache/tapestry5/commons/ObjectProvider.html">ObjectProvider</a></code>s.</p>
+</div>
+<div class="paragraph">
+<p>The <code>MasterObjectProvider</code> is also the point at which Tapestry&#8217;s IoC layer injection, and Tapestry&#8217;s component injection, unite.</p>
+</div>
+<div class="paragraph">
+<p>As a chain-of-command, each of the following ObjectProviders will be considered and will attempt to identify the object to be injected.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>A common problem when extending injection is that contributions into the <code><a href="https://tapestry.apache.org/5.7.3/apidocs/org/apache/tapestry5/ioc/services/MasterObjectProvider.html">MasterObjectProvider</a></code> configuration have to be handled carefully.
+Any dependencies of the contributed objects should be resolvable using only the early stages of the injection process, otherwise <code>MasterObjectProvider</code> will have to be instantiated in order to handle its own injection:
+Tapestry will detect this impossibility and throw an exception.
+In addition, the <code><a href="https://tapestry.apache.org/5.7.3/apidocs/org/apache/tapestry5/commons/services/TypeCoercer.html">TypeCoercer</a></code> service is used by several <code>ObjectProvider</code> implementations, so the same restrictions apply to <code>TypeCoercer</code> service contributions.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_value_objectprovider"><a class="anchor" href="#_value_objectprovider"></a>Value ObjectProvider</h4>
+<div class="paragraph">
+<p>Checks for the presence of the <code><a href="https://tapestry.apache.org/5.7.3/apidocs/org/apache/tapestry5/ioc/annotations/Value.html">@Value</a></code> annotation.
+If present, then the annotation&#8217;s value is evaluated (to expand any symbol references), and the <code><a href="https://tapestry.apache.org/5.7.3/apidocs/org/apache/tapestry5/commons/services/TypeCoercer.html">TypeCoercer</a></code> service is used to convert the resulting String to the injection type (the field or parameter type).</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_symbol_objectprovider"><a class="anchor" href="#_symbol_objectprovider"></a>Symbol ObjectProvider</h4>
+<div class="paragraph">
+<p>Similar to the Value ObjectProvider: the <code><a href="https://tapestry.apache.org/5.7.3/apidocs/org/apache/tapestry5/ioc/annotations/Symbol.html">@Symbol</a></code> annotation&#8217;s value (if present) is looked up using the <code><a href="https://tapestry.apache.org/5.7.3/apidocs/org/apache/tapestry5/ioc/services/SymbolSource.html">SymbolSource</a></code> service, and converted to the injection type via the <code><a href="https://tapestry.apache.org/5.7.3/apidocs/org/apache/tapestry5/commons/services/TypeCoercer.html">TypeCoercer</a></code> service.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_autobuild_objectprovider"><a class="anchor" href="#_autobuild_objectprovider"></a>Autobuild ObjectProvider</h4>
+<div class="paragraph">
+<p>Checks to see if the <code><a href="https://tapestry.apache.org/5.7.3/apidocs/org/apache/tapestry5/ioc/annotations/Autobuild.html">Autobuild</a></code> annotation is present and, if so, autobuilds the value for the parameter. Of course, the object being built will itself be configured via injection.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_serviceoverride_objectprovider"><a class="anchor" href="#_serviceoverride_objectprovider"></a>ServiceOverride ObjectProvider</h4>
+<div class="paragraph">
+<p>Checks any contributions to the <code><a href="https://tapestry.apache.org/5.7.3/apidocs/org/apache/tapestry5/ioc/services/ServiceOverride.html">ServiceOverride</a></code> service.
+Contributions map a type to an object of that type.
+Thus, ServiceOverrides will override injections of services that are not qualified with a marker annotation.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_asset_objectprovider_tapestry_core"><a class="anchor" href="#_asset_objectprovider_tapestry_core"></a>Asset ObjectProvider (tapestry-core)</h4>
+<div class="paragraph">
+<p>Checks for the <code><a href="https://tapestry.apache.org/5.7.3/apidocs/org/apache/tapestry5/annotations/Path.html">@Path</a></code> annotation.</p>
+</div>
+<div class="paragraph">
+<p>If present, the annotation&#8217;s value has embedded symbols expanded, and is converted into an <code><a href="https://tapestry.apache.org/5.7.3/apidocs/org/apache/tapestry5/Asset.html">Asset</a></code> (which must exist).</p>
+</div>
+<div class="paragraph">
+<p>The <code><a href="https://tapestry.apache.org/5.7.3/apidocs/org/apache/tapestry5/commons/services/TypeCoercer.html">TypeCoercer</a></code> can then convert the <code>Asset</code> to the injection type, for example, as <code><a href="https://tapestry.apache.org/5.7.3/apidocs/org/apache/tapestry5/commons/Resource.html">Resource</a></code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_service_objectprovider_tapestry_core"><a class="anchor" href="#_service_objectprovider_tapestry_core"></a>Service ObjectProvider (tapestry-core)</h4>
+<div class="paragraph">
+<p>Looks for the <code><a href="https://tapestry.apache.org/5.7.3/apidocs/org/apache/tapestry5/annotations/Service.html">@Service</a></code> annotation;
+if present, the annotation&#8217;s value is the exact service id to inject.
+This is necessary because injections into <em>component</em> fields are always triggered by the <code>@Inject</code> annotation.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+This is supported but no longer necessary, as the <code><a href="https://tapestry.apache.org/5.7.3/apidocs/org/apache/tapestry5/ioc/annotations/InjectService.html">@InjectService</a></code> annotation is now also supported for component fields.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_springbean_objectprovider_tapestry_spring"><a class="anchor" href="#_springbean_objectprovider_tapestry_spring"></a>SpringBean ObjectProvider (tapestry-spring)</h4>
+<div class="paragraph">
+<p>Attempts to resolve a Spring bean purely by object type (Spring qualifiers are not supported).
+If no beans are assignable to the type, then processing continues.
+If exactly one is assignable, it is used as the injection value.
+If more than one bean is assignable, it is an error (and a list of matching beans names will be part of the thrown exception).</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_service_lookup"><a class="anchor" href="#_service_lookup"></a>Service Lookup</h3>
+<div class="paragraph">
+<p>If none of the ObjectProviders can identify the value to inject, a last step occurs: lookup by service type.
+If exactly <em>one</em> service matches the injection type, then that service is injected.</p>
+</div>
+<div class="paragraph">
+<p>Otherwise, the lookup fails because either no services match, or more than one matches.
+An exception will be thrown with the details, including a list of matching services (if there is more than one match).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_post_injection_methods"><a class="anchor" href="#_post_injection_methods"></a>Post-Injection Methods</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Autobuilt objects (services and the like, but not components) may have post-injection methods.</p>
+</div>
+<div class="paragraph">
+<p>Any public method may have the <code><a href="https://tapestry.apache.org/5.7.3/apidocs/org/apache/tapestry5/ioc/annotations/PostInjection.html">@PostInjection</a></code> annotation.</p>
+</div>
+<div class="paragraph">
+<p>Such methods are invoked after constructor and/or field injection.
+Only <strong>public methods</strong> will be invoked.
+Any return value is ignored.</p>
+</div>
+<div class="paragraph">
+<p>The method often takes no parameters; however if the method has parameters, these parameters are new points of injection.</p>
+</div>
+<div class="paragraph">
+<p>Often this is used to perform additional setup, such as registerring a service as a listener of events produced by another service:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class MyServiceImpl implements MyService, UpdateListener
+{
+  @PostInjection
+  public void registerAsListener(UpdateListenerHub hub)
+  {
+    hub.addUpdateListener(this);
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_component_injection"><a class="anchor" href="#_component_injection"></a>Component Injection</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Inside Tapestry components, injection occurs exclusively on <em>fields</em> and is always triggered by the <code>@Inject</code> (or <code>@InjectService</code>) annotation.</p>
+</div>
+<div class="paragraph">
+<p>Component field injection is very similar to IoC layer, but with a different set of injectable resources.</p>
+</div>
+<div class="paragraph">
+<p>Injection is the responsibility of the <code><a href="https://tapestry.apache.org/5.7.3/apidocs/org/apache/tapestry5/services/transform/InjectionProvider2.html">InjectionProvider2</a></code> service, which is a chain-of-command across a number of implementations.</p>
+</div>
+<div class="sect2">
+<h3 id="_block_injectionprovider"><a class="anchor" href="#_block_injectionprovider"></a>Block InjectionProvider</h3>
+<div class="paragraph">
+<p>Checks if the field type is <code><a href="https://tapestry.apache.org/5.7.3/apidocs/org/apache/tapestry5/Block.html">Block</a></code>.
+If so, determines the block id to inject (either from the field name, or from an <code><a href="https://tapestry.apache.org/5.7.3/apidocs/org/apache/tapestry5/annotations/Id.html">@Id</a></code> annotation, if present).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_default_injectionprovider"><a class="anchor" href="#_default_injectionprovider"></a>Default InjectionProvider</h3>
+<div class="paragraph">
+<p>Uses the <code><a href="https://tapestry.apache.org/5.7.3/apidocs/org/apache/tapestry5/ioc/services/MasterObjectProvider.html">MasterObjectProvider</a></code> service to provide the injectable value.
+The Service Lookup stage is skipped.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_componentresources_injectionprovider"><a class="anchor" href="#_componentresources_injectionprovider"></a>ComponentResources InjectionProvider</h3>
+<div class="paragraph">
+<p>Injects fields of type ComponentResources.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_commonresources_injectionprovider"><a class="anchor" href="#_commonresources_injectionprovider"></a>CommonResources InjectionProvider</h3>
+<div class="paragraph">
+<p>Injects fields with common resources:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>String</code>: the components' complete id</p>
+</li>
+<li>
+<p><code>org.slf4j.Logger</code>: Logger for the component (based on component class name)</p>
+</li>
+<li>
+<p><code>Locale</code>: locale for the containing page (page locale is immutable)</p>
+</li>
+<li>
+<p><code><a href="https://tapestry.apache.org/5.7.3/apidocs/org/apache/tapestry5/commons/Messages.html">Messages</a></code>: Component&#8217;s message catalog</p>
+</li>
+<li>
+<p><code><a href="https://tapestry.apache.org/5.7.3/apidocs/org/apache/tapestry5/services/pageload/ComponentResourceSelector.html">ComponentResourceSelector</a></code>: selector for the containing page (selector is immutable). <code>ComponentResourceSelector</code> is new as of release 5.3. It encapsulates a locale plus additional application-specific data used for skinning and/or themeing.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_asset_injectionprovider"><a class="anchor" href="#_asset_injectionprovider"></a>Asset InjectionProvider</h3>
+<div class="paragraph">
+<p>Triggered by the <code><a href="https://tapestry.apache.org/5.7.3/apidocs/org/apache/tapestry5/annotations/Path.html">@Path</a></code> annotation: the Path value has symbols expanded, and is then converted to an Asset.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_service_injectionprovider"><a class="anchor" href="#_service_injectionprovider"></a>Service InjectionProvider</h3>
+<div class="paragraph">
+<p>Equivalent to the Service Lookup phase in an IoC layer injection.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_injectservice_in_components"><a class="anchor" href="#_injectservice_in_components"></a>@InjectService in Components</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You may use the <code><a href="https://tapestry.apache.org/5.7.3/apidocs/org/apache/tapestry5/ioc/annotations/InjectService.html">@InjectService</a></code> annotation on component fields.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

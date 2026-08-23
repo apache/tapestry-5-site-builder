@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Exploring the Project :: Apache Tapestry</title>
+    <meta name="generator" content="Antora 3.1.15">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/tapestry.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../.."><img alt="Apache Tapestry Logo" src="../../_/img/apache-tapestry-icon-dark.svg" width="60" />Apache Tapestry</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Documentation</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../../main/getting-started.html">Getting Started</a>
+            <a class="navbar-item" href="../../main/tutorial/">Tutorial</a>
+            <a class="navbar-item" href="../../userguide/5.8/">User Guide</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="../../main/community.html">Community</a>
+        <a class="navbar-item" href="../../main/support.html">Support</a>
+        <a class="navbar-item" href="../../main/developers.html">Developers</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Apache</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+            <a class="navbar-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
+            <a class="navbar-item" href="https://www.apache.org/licenses/">License</a>
+            <a class="navbar-item" href="https://www.apache.org/security/">Security</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="../../main/download.html">Download</a>
+          </span>
+        </div>
+        <div class="navbar-brand">
+          <a href="https://www.apache.org/">
+          <img alt="The Apache Software Foundation" src="../../_/img/asf_logo.svg" width="200" height="63" style="padding-top: 5px; padding-bottom: 5px; background-color: white">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="body">
+<div class="nav-container" data-component="main" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../about.html">Home</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../about.html">About</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../principles.html">Principles</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Documentation</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tutorial</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="index.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="dependencies-tools-and-plugins.html">Dependencies, Tools and Plugins</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="creating-the-skeleton-application.html">Creating the Skeleton Application</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="exploring-the-project.html">Exploring the Project</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="implementing-the-hi-lo-guessing-game.html">Implementing the Hi-Lo Guessing Game</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="using-beaneditform-to-create-user-forms.html">Using BeanEditForm To Create User Forms</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="using-tapestry-with-hibernate.html">Using Tapestry With Hibernate</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../userguide.html">User Guide</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Home</span>
+    <span class="version"></span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../about.html">Home</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../userguide/current/index.html">User Guide</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../userguide/current/index.html">5.8</a>
+        </li>
+        <li class="version">
+          <a href="../../userguide/5.7/index.html">5.7</a>
+        </li>
+        <li class="version">
+          <a href="../../userguide/5.6/index.html">5.6</a>
+        </li>
+        <li class="version">
+          <a href="../../userguide/5.5/index.html">5.5</a>
+        </li>
+        <li class="version">
+          <a href="../../userguide/5.4/index.html">5.4</a>
+        </li>
+        <li class="version">
+          <a href="../../userguide/5.3/index.html">5.3</a>
+        </li>
+        <li class="version">
+          <a href="../../userguide/5.2/index.html">5.2</a>
+        </li>
+        <li class="version">
+          <a href="../../userguide/5.1/index.html">5.1</a>
+        </li>
+        <li class="version">
+          <a href="../../userguide/5/index.html">5.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../about.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../about.html">Home</a></li>
+    <li>Documentation</li>
+    <li>Tutorial</li>
+    <li><a href="exploring-the-project.html">Exploring the Project</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Exploring the Project</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The layout of the project follows the sensible standards promoted by Maven:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Java source files under <code>src/main/java</code></p>
+</li>
+<li>
+<p>Web application files under <code>src/main/webapp</code> (including <code>src/main/webapp/WEB-INF</code>)</p>
+</li>
+<li>
+<p>Java test sources under <code>src/test/java</code></p>
+</li>
+<li>
+<p>Non-code resources (including Tapestry page and component templates) under <code>src/main/resources</code> and <code>src/test/resources</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s look at what Maven has created from the archetype, starting with the web.xml configuration file:</p>
+</div>
+<div class="listingblock">
+<div class="title">src/main/webapp/WEB-INF/web.xml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE web-app
+        PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd"&gt;
+&lt;web-app&gt;
+    &lt;display-name&gt;tutorial1 Tapestry 5 Application&lt;/display-name&gt;
+    &lt;context-param&gt;
+        &lt;!-- The only significant configuration for Tapestry 5, this informs Tapestry
+of where to look for pages, components and mixins. --&gt;
+        &lt;param-name&gt;tapestry.app-package&lt;/param-name&gt;
+        &lt;param-value&gt;com.example.tutorial1&lt;/param-value&gt;
+    &lt;/context-param&gt;
+    &lt;!--
+    Specify some additional Modules for two different execution
+    modes: development and qa.
+    Remember that the default execution mode is production
+    --&gt;
+    &lt;context-param&gt;
+        &lt;param-name&gt;tapestry.development-modules&lt;/param-name&gt;
+        &lt;param-value&gt;
+            com.example.tutorial1.services.DevelopmentModule
+        &lt;/param-value&gt;
+    &lt;/context-param&gt;
+    &lt;context-param&gt;
+        &lt;param-name&gt;tapestry.qa-modules&lt;/param-name&gt;
+        &lt;param-value&gt;
+            com.example.tutorial1.services.QaModule
+        &lt;/param-value&gt;
+    &lt;/context-param&gt;
+    &lt;filter&gt;
+        &lt;filter-name&gt;app&lt;/filter-name&gt;
+        &lt;filter-class&gt;org.apache.tapestry5.TapestryFilter&lt;/filter-class&gt;
+    &lt;/filter&gt;
+    &lt;filter-mapping&gt;
+        &lt;filter-name&gt;app&lt;/filter-name&gt;
+        &lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+    &lt;/filter-mapping&gt;
+&lt;/web-app&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This is short and sweet: you can see that the package name you provided earlier shows up as the <code>tapestry.app-package</code> context parameter; the TapestryFilter instance will use this information to locate the Java classes for pages and components.</p>
+</div>
+<div class="paragraph">
+<p>Tapestry operates as a <em>servlet filter</em> rather than as a traditional servlet.
+In this way, Tapestry has a chance to intercept all incoming requests, to determine which ones apply to Tapestry pages (or other resources).
+The net effect is that you don&#8217;t have to maintain any additional configuration for Tapestry to operate, regardless of how many pages or components you add to your application.</p>
+</div>
+<div class="paragraph">
+<p>Much of the rest of web.xml is configuration to match Tapestry execution modes against module classes.
+An execution mode defines how the application is being run: the default execution mode is "production", but the <code>web.xml</code> defines two additional modes: "development" and "qa" (for "Quality Assurance").
+The module classes indicated will be loaded for those execution modes, and can change the configuration of the application is various ways.
+We&#8217;ll come back to execution modes and module classes later in the tutorial.</p>
+</div>
+<div class="paragraph">
+<p>Tapestry pages minimally consist of an ordinary Java class plus a component template file.</p>
+</div>
+<div class="paragraph">
+<p>In the root of your web application, a page named "Index" will be used for any request that specifies no additional path after the context name.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_index_java_class"><a class="anchor" href="#_index_java_class"></a>Index Java Class</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tapestry has very specific rules for where page classes go.
+Tapestry adds a sub-package, <code>pages</code>, to the root application package (<code>com.example.tutorial1</code>); the Java classes for pages goes there.
+Thus the full Java class name is <code>com.example.tutorial1.pages.Index</code>.</p>
+</div>
+<div class="listingblock">
+<div class="title">src/main/java/com/example/tutorial/pages/Index.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package com.example.tutorial1.pages;
+
+import org.apache.tapestry5.Block;
+import org.apache.tapestry5.EventContext;
+import org.apache.tapestry5.SymbolConstants;
+import org.apache.tapestry5.annotations.InjectPage;
+import org.apache.tapestry5.annotations.Log;
+import org.apache.tapestry5.annotations.Property;
+import org.apache.tapestry5.ioc.annotations.Inject;
+import org.apache.tapestry5.ioc.annotations.Symbol;
+import org.apache.tapestry5.services.HttpError;
+import org.apache.tapestry5.services.ajax.AjaxResponseRenderer;
+import org.slf4j.Logger;
+
+import java.util.Date;
+
+/**
+ * Start page of application tutorial1.
+ */
+public class Index
+{
+    @Inject
+    private Logger logger;
+
+    @Inject
+    private AjaxResponseRenderer ajaxResponseRenderer;
+
+    @Property
+    @Inject
+    @Symbol(SymbolConstants.TAPESTRY_VERSION)
+    private String tapestryVersion;
+
+    @InjectPage
+    private About about;
+
+    @Inject
+    private Block block;
+
+    // Handle call with an unwanted context
+    Object onActivate(EventContext eventContext)
+    {
+        return eventContext.getCount() &gt; 0 ? new HttpError(404, "Resource not found") : null;
+    }
+
+    Object onActionFromLearnMore()
+    {
+        about.setLearn("LearnMore");
+
+        return about;
+    }
+
+    @Log
+    void onComplete()
+    {
+        logger.info("Complete call on Index page");
+    }
+
+    @Log
+    void onAjax()
+    {
+        logger.info("Ajax call on Index page");
+
+        ajaxResponseRenderer.addRender("middlezone", block);
+    }
+
+    public Date getCurrentTime()
+    {
+        return new Date();
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>There&#8217;s a bit going on in this listing, as the Index page attempts to demonstrate a bunch of different ideas in Tapestry.
+Even so, the class is essentially pretty simple:
+Tapestry pages and components have no base classes to extend, no interfaces to implement, and are just a very pure POJO (Plain Old Java Object) &#8230;&#8203; with some special naming conventions and annotations for fields and methods.</p>
+</div>
+<div class="paragraph">
+<p>You do have to meet the Tapestry framework partway:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You need to put the Java class in the expected package, here <code>com.example.tutorial1.pages</code>.</p>
+</li>
+<li>
+<p>The class must be public.</p>
+</li>
+<li>
+<p>You need to make sure there&#8217;s a public, no-arguments constructor (here, the Java compiler has silently provided one for us).</p>
+</li>
+<li>
+<p>All non-static fields must be <strong>private</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>As we saw when running the application, the page displays the current date and time, as well as a couple of extra links.
+The <code>currentTime</code> property is where that value comes from; shortly we&#8217;ll see how that value is referenced in the template, so it can be extracted from the page and output.</p>
+</div>
+<div class="paragraph">
+<p>Tapestry always matches a page class to a template; neither is functional without the other.
+In fact, components within a page are treated the same way (except that components do not always have templates).</p>
+</div>
+<div class="paragraph">
+<p>You will often hear about the <a href="http://en.wikipedia.org/wiki/Model_view_controller">Model-View-Controller pattern (MVC)</a>.
+In Tapestry, the page class acts as both the Model (the source of data) and the controller (the logic that responds to user interaction).
+The template is the View in MVC.
+As a model, the page exposes JavaBeans properties that can be referenced in the template.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s look at how the component template builds on the Java class to provide the full user interface.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_component_template"><a class="anchor" href="#_component_template"></a>Component Template</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tapestry pages are the combination of a <a href="https://en.wikipedia.org/wiki/Plain_old_Java_object">POJO</a> Java class with a Tapestry component template.
+The template has the same name as the Java class, but has the extension <code>.tml</code>.
+Since the Java class here is <code>com.example.tutorial.pages.Index</code>, the template file will be located at <code>src/main/resources/com/example/tutorial/pages/Index.tml</code>.
+Ultimately, both the Java class and the component template file will be stored in the same folder within the deployed WAR file.</p>
+</div>
+<div class="paragraph">
+<p>Tapestry component templates are well-formed XML documents.
+This means that you can use any available XML editor.
+Templates may even have a DOCTYPE or an XML schema to validate the structure of the template page.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Tapestry parses component templates using a non-validating parser; it only checks for well-formedness: proper syntax, balanced elements, attribute values are quoted, and so forth.
+It is reasonable for your build process to perform some kind of template validation, but Tapestry accepts the template as-is, as long as it parses cleanly.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>For the most part, a Tapestry component template looks like ordinary XHTML:</p>
+</div>
+<div class="listingblock">
+<div class="title">src/main/resources/com/example/tutorial1/pages/Index.tml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;html t:type="layout" title="tutorial1 Index"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"
+      xmlns:p="tapestry:parameter"&gt;
+
+    &lt;div class="hero-unit"&gt;
+        &lt;p&gt;
+            &lt;img src="${asset:context:images/tapestry.png}"
+                 alt="${message:greeting}" title="${message:greeting}"/&gt;
+        &lt;/p&gt;
+        &lt;h3&gt;${message:greeting}&lt;/h3&gt;
+        &lt;p&gt;The current time is: &lt;strong&gt;${currentTime}&lt;/strong&gt;&lt;/p&gt;
+        &lt;p&gt;
+            This is a template for a simple marketing or informational website. It includes a large callout called
+            the hero unit and three supporting pieces of content. Use it as a starting point to create something
+            more unique.
+        &lt;/p&gt;
+        &lt;p&gt;&lt;t:actionlink t:id="learnmore" class="btn btn-primary btn-large"&gt;Learn more &amp;raquo;&lt;/t:actionlink&gt;&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class="row"&gt;
+        &lt;div class="span4"&gt;
+            &lt;h2&gt;Normal link&lt;/h2&gt;
+            &lt;p&gt;Clink the bottom link and the page refresh with event &lt;code&gt;complete&lt;/code&gt;&lt;/p&gt;
+            &lt;p&gt;&lt;t:eventlink event="complete" class="btn btn-default"&gt;Complete&amp;raquo;&lt;/t:eventlink&gt;&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;t:zone t:id="middlezone" class="span4"&gt;
+
+        &lt;/t:zone&gt;
+        &lt;div class="span4"&gt;
+            &lt;h2&gt;Ajax link&lt;/h2&gt;
+            &lt;p&gt;Click the bottom link to update just the middle column with Ajax call with event &lt;code&gt;ajax&lt;/code&gt;&lt;/p&gt;
+            &lt;p&gt;&lt;t:eventlink event="ajax" zone="middlezone" class="btn btn-default"&gt;Ajax&amp;raquo;&lt;/t:eventlink&gt;&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;t:block t:id="block"&gt;
+        &lt;h2&gt;Ajax updated&lt;/h2&gt;
+        &lt;p&gt;I'v been updated through AJAX call&lt;/p&gt;
+        &lt;p&gt;The current time is: &lt;strong&gt;${currentTime}&lt;/strong&gt;&lt;/p&gt;
+    &lt;/t:block&gt;
+
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You do have to name your component template file, Index.tml, with the exact same case as the component class name, Index.
+If you get the case wrong, it may work on some operating systems (such as Mac OS X, Windows) and not on others (Linux, and most others).
+This can be really vexing, as it is common to develop on Windows and deploy on Linux or Solaris, so be careful about case in this one area.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The goal in Tapestry is for component templates, such as <code>Index.tml</code>, to look as much as possible like ordinary, static HTML files.
+(By static, we mean unchanging, as opposed to a dynamically generated Tapestry page.)</p>
+</div>
+<div class="paragraph">
+<p>In fact, the expectation is that in many cases, the templates will start as static HTML files, created by a web developer, and then be instrumented to act as live Tapestry pages.</p>
+</div>
+<div class="paragraph">
+<p>Tapestry hides non-standard elements and attributes inside XML namespaces. By convention, the prefix <code>t:</code> is used for the primary namespace, but that is not a requirement, any prefix you want to use is fine.</p>
+</div>
+<div class="paragraph">
+<p>This short template demonstrates quite a few features of Tapestry.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Part of the concept of the quickstart archetype is to demonstrate a bunch of different features, approaches, and common patterns used in Tapestry.
+So yes, we&#8217;re hitting you with a lot all at once.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_namespaces"><a class="anchor" href="#_namespaces"></a>Namespaces</h3>
+<div class="paragraph">
+<p>First of all, there are two XML namespaces commonly defined:</p>
+</div>
+<div class="listingblock">
+<div class="title">src/main/resources/com/example/tutorial1/pages/Index.tml (partial)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;html t:type="layout" title="tutorial1 Index"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd" <i class="conum" data-value="1"></i><b>(1)</b>
+      xmlns:p="tapestry:parameter"&gt; <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>:t namespace: used to identify Tapestry-specific elements and attributes. Although there is an XSD (that is, a XML schema definition), it is incomplete (for reasons explained shortly)</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>:p namespace: A way of marking a chunk of the template as a parameter passed into another component. We&#8217;ll expand on that shortly.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>A Tapestry component template consists mostly of standard XHTML that will pass down to the client web browser unchanged.
+The dynamic aspects of the template are represented by <em>components</em> and <em>expansions</em>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_expansions_in_templates"><a class="anchor" href="#_expansions_in_templates"></a>Expansions in Templates</h3>
+<div class="paragraph">
+<p>Let&#8217;s start with expansions.
+Expansions are an easy way of including some dynamic output when rendering the page.
+By default, an expansion refers to a JavaBeans property of the page:</p>
+</div>
+<div class="listingblock xml">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">&lt;p&gt;The current time is: ${currentTime}&lt;/p&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The value inside the curly braces is a <em>property expression</em>.
+Tapestry uses its own property expression language that is expressive, fast, and type-safe.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Tapestry does NOT use reflection to implement property expressions.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>More advanced property expressions can traverse multiple properties (for example, <code>user.address.city</code>), or even invoke public methods.
+Here the expansion simply reads the <code>currentTime</code> property of the page.</p>
+</div>
+<div class="paragraph">
+<p>Tapestry follows the rules defined by Sun&#8217;s JavaBeans specification: a property name of currentTime maps to two methods: <code>getCurrentTime()</code> and <code>setCurrentTime()</code>.
+If you omit one or the other of these methods, the property is either read only (as here), or write only.
+(Keep in mind that as far as JavaBeans properties go, it&#8217;s the methods that count; the names of the instance variables, or even whether they exist, is immaterial.)</p>
+</div>
+<div class="paragraph">
+<p>Tapestry does go one step further: it ignores case when matching properties inside the expansion to properties of the page.
+In the template we could say <code>${currenttime}</code> or <code>${CurrentTime}</code> or any variation, and Tapestry will still invoke the <code>getCurrentTime()</code> method.</p>
+</div>
+<div class="paragraph">
+<p>Note that in Tapestry it is not necessary to configure what object holds the <code>currentTime</code> property.
+A template and a page are always used in combination with each other; expressions are always rooted in the page instance, in this case, an instance of the <code>Index</code> class.</p>
+</div>
+<div class="paragraph">
+<p>The <code>Index.tml</code> template includes a second expansion:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;p&gt;${message:greeting}&lt;/p&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here <code>greeting</code> is not a property of the page; its actually a localized message key.
+Every Tapestry page and component is allowed to have its own message catalog.
+(There&#8217;s also a global message catalog, which we&#8217;ll describe later.)</p>
+</div>
+<div class="listingblock">
+<div class="title">src/main/resources/com/example/tutorial/pages/Index.properties</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">greeting=Welcome to Tapestry 5!  We hope that this project template will get you going in style.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Message catalogs are useful for storing repeating strings outside of code or templates, though their primary purpose is related to localization of the application (which will be described in more detail in a later chapter).
+Messages that may be used across multiple pages can be stored in the application&#8217;s global message catalog, <code>src/main/webapp/WEB-INF/app.properties</code>, instead.</p>
+</div>
+<div class="paragraph">
+<p>This <code>message:</code> prefix is not some special case; there are actually quite a few of these binding prefixes built into Tapestry, each having a specific purpose.
+In fact, omitting a binding prefix in an expansion is exactly the same as using the <code>prop:</code> binding prefix, which means to treat the binding as a property expression.</p>
+</div>
+<div class="paragraph">
+<p>Expansions are useful for extracting a piece of information and rendering it out to the client as a string, but the real heavy lifting of Tapestry occurs inside components.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_components_inside_templates"><a class="anchor" href="#_components_inside_templates"></a>Components Inside Templates</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Components can be represented inside a component template in two ways:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>As an ordinary element, but with a t:type attribute to define the type of component.</p>
+</li>
+<li>
+<p>As an element in the Tapestry namespace, in which case the element name determines the type.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Here we&#8217;ve used an <code>&lt;html&gt;</code> element to represent the application&#8217;s <code>Layout</code> component.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;html t:type="layout" ...&gt;
+  ...
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>But for the <code>EventLink</code> component, we&#8217;ve used an element in the Tapestry namespace:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;t:eventlink page="Index"&gt;refresh page&lt;/t:eventlink&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Which form you select is a matter of choice. In the vast majority of cases, they are exactly equivalent.</p>
+</div>
+<div class="paragraph">
+<p>As elsewhere, case is ignored.
+Here the types ("layout" and "eventlink") were in all lower case; the actual class names are <code>Layout</code> and <code>EventLink</code>.
+Further, Tapestry "blends" the core library components in with the components defined by this application; thus type "layout" is mapped to application component class <code>com.example.tutorial.components.Layout</code>, but "eventlink" is mapped to Tapestry&#8217;s built-in <code>org.apache.tapestry5.corelib.components.EventLink</code> class.</p>
+</div>
+<div class="paragraph">
+<p>Tapestry components are configured using parameters.
+For each component, there is a set of parameters, each with a specific type and purpose.
+Some parameters are required, others are optional.
+Attributes of the element are used to bind parameters to specific literal values, or to page properties.
+Tapestry is flexible here as well; you can always place an attribute in the Tapestry namespace (using the <code>t:</code> prefix), but in most cases, this is unnecessary.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;html t:type="layout" title="tutorial1 Index"
+      p:sidebarTitle="Framework Version" ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This binds two parameters, <code>title</code> and <code>sidebarTitle</code>, of the <code>Layout</code> component to the literal strings "tutorial1 Index" and "Framework Version", respectively.</p>
+</div>
+<div class="paragraph">
+<p>The Layout component will actually provide the bulk of the HTML ultimately sent to the browser; we&#8217;ll look at its template in a later chapter.
+The point is, the page&#8217;s template is integrated into the Layout component&#8217;s template.
+The following diagram shows how parameters passed to the Layout component end up rendered in the final page:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/templates_and_parameters.png" alt="templates and parameters"></span></p>
+</div>
+<div class="paragraph">
+<p>The interesting point here (and this is an advanced concept in Tapestry, one we&#8217;ll return to later) is that we can pass a chunk of the <code>Index.tml</code> template to the <code>Layout</code> component as the <code>sidebar</code> parameter.
+That&#8217;s what the <code>tapestry:parameter</code> namespace (the <code>p:</code> prefix) is for; the element name is matched against a parameter of the component and the entire block of the template is passed into the <code>Layout</code> component &#8230;&#8203; which decides where, inside its template, that block gets rendered.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;t:eventlink event="complete" class="btn btn-default"&gt;Complete&amp;raquo;&lt;/t:eventlink&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This time, it&#8217;s the <code>page</code> parameter of the <code>PageLink</code> component that is bound, to the literal value "Index" (which is the name of this page).
+This gets rendered as a URL that re-renders the page, which is how the current time gets updated.
+You can also create links to other pages in the application and, as we&#8217;ll see in later chapters, attach additional information to the URL beyond just the page name.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_a_magic_trick"><a class="anchor" href="#_a_magic_trick"></a>A Magic Trick</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Now it&#8217;s time for a magic trick.
+Edit <code>Index.java</code> and change the <code>getCurrentTime()</code> method to:</p>
+</div>
+<div class="listingblock">
+<div class="title">Index.java (partial)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public String getCurrentTime()
+{
+  return "A great day to learn Tapestry";
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Make sure you save changes; then click the refresh link in the web browser:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/app-live-reload.png" alt="app live reload"></span></p>
+</div>
+<div class="paragraph">
+<p>This is one of Tapestry&#8217;s early wow factor features: changes to your component classes are picked up immediately (a feature we call Live Class Reloading).
+No restart.
+No re-deploy.
+Make the changes and see them now.
+Nothing should slow you down or get in the way of you getting your job done.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If Live Class Reloading isn&#8217;t working for you, check <a href="../../userguide/current/class-reloading.html#_troubleshooting_live_class_reloading" class="xref page">Troubleshooting Live Class Reloading</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>But&#8230;&#8203; what if you make a mistake?
+What if you got the name in the template wrong.
+Give it a try; in the template, change ${currentTime} to, say, ${currenTime}, and see what you get:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/app-error-1.png" alt="app error 1"></span></p>
+</div>
+<div class="paragraph">
+<p>This is Tapestry&#8217;s exception report page.
+It&#8217;s quite detailed.
+It clearly identifies what Tapestry was doing, and relates the problem to a specific line in the template, which is shown in context.
+Tapestry always expands out the entire stack of exceptions, because it is so common for exceptions to be thrown, caught, and re-thrown inside other exceptions.
+In fact, if we scroll down just a little bit, we see more detail about this exception, plus a little bit of help:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/app-error-2.png" alt="app error 2"></span></p>
+</div>
+<div class="paragraph">
+<p>This is part of Tapestry&#8217;s way: it not only spells out exactly what it was doing and what went wrong, but it even helps you find a solution; here it tells you the names of properties you could have used.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This level of detail reflects that the application has been configured to run in <em>development mode</em> instead of <em>production mode</em>.
+In production mode, the exception report would simply be the top level exception message.
+However, most production applications go further and customize how Tapestry handles and reports exceptions.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Tapestry displays the stack trace of the deepest exception, along with lots of details about the run-time environment: details about the current request, the <code>HttpSession</code> (if one exists), and even a detailed list of all JVM system properties.
+Scroll down to see all this information.</p>
+</div>
+<div class="paragraph">
+<p>Next: <a href="implementing-the-hi-lo-guessing-game.html" class="xref page">Implementing the Hi-Lo Guessing Game</a></p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Forms and Validation :: Apache Tapestry</title>
+    <meta name="generator" content="Antora 3.1.15">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/tapestry.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../.."><img alt="Apache Tapestry Logo" src="../../_/img/apache-tapestry-icon-dark.svg" width="60" />Apache Tapestry</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Documentation</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../../main/getting-started.html">Getting Started</a>
+            <a class="navbar-item" href="../../main/tutorial/">Tutorial</a>
+            <a class="navbar-item" href="../../userguide/5.8/">User Guide</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="../../main/community.html">Community</a>
+        <a class="navbar-item" href="../../main/support.html">Support</a>
+        <a class="navbar-item" href="../../main/developers.html">Developers</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Apache</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+            <a class="navbar-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
+            <a class="navbar-item" href="https://www.apache.org/licenses/">License</a>
+            <a class="navbar-item" href="https://www.apache.org/security/">Security</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="../../main/download.html">Download</a>
+          </span>
+        </div>
+        <div class="navbar-brand">
+          <a href="https://www.apache.org/">
+          <img alt="The Apache Software Foundation" src="../../_/img/asf_logo.svg" width="200" height="63" style="padding-top: 5px; padding-bottom: 5px; background-color: white">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="body">
+<div class="nav-container" data-component="userguide" data-version="5.4">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">User Guide</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Introduction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry Core</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basics</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="project-layout.html">Project Layout</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="runtime-exceptions.html">Runtime Exceptions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="class-reloading.html">Class Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-reference.html">Component Reference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="annotations.html">Annotations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Pages and Components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-classes.html">Component Classes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-templates.html">Component Templates</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="property-expressions.html">Property Expressions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-parameters.html">Component Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="parameter-type-coercion.html">Parameter Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="layout-component.html">Layout Component</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-mixins.html">Component Mixins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-navigation.html">Page Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="localization.html">Localization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Request/Response Rendering</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-life-cycle.html">Page Life Cycle</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="request-processing.html">Request Processing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-rendering.html">Component Rendering</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-events.html">Component Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="url-rewriting.html">URL Rewriting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dom.html">Document Object Model (DOM)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="response-compression.html">Response Compression</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="security.html">Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https.html">HTTPS / SSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="content-type-and-markup.html">Content Type and Markup</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Data Persistence</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="persistent-page-data.html">Persistent Page Data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="session-storage.html">Session Storage</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Interacting with components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="injection.html">Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="environmental-services.html">Environmental Services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript, AJAX, CSS &amp; Binary Data</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="client-side-javascript.html">Client-Side JavaScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="javascript-modules.html">Javascript Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="coffeescript.html">Coffeescript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ajax-and-zones.html">AJAX and Zones</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="css.html">Cascading Style Sheets (CSS)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="assets.html">Assets</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Working with Forms</span>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="forms-and-validation.html">Forms and Validation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="beaneditform-guide.html">BeanEditForm Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uploading-files.html">Uploading Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bean-validation.html">Bean Validation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Logging, Debugging &amp; Testing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="logging.html">Logging</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unit-testing.html">Unit testing pages or components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integration-testing.html">Integration Testing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="development-dashboard.html">Development Dashboard</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry IOC</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-overview.html">IoC Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="symbols.html">Symbols</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="type-coercion.html">Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="case-insensitivity.html">Case Insensitivity</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="autoloading-modules.html">Autoloading Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="chainbuilder-service.html">ChainBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pipelinebuilder-service.html">PipelineBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="shadowbuilder-service.html">ShadowBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="strategybuilder-service.html">StrategyBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="defining-tapestry-ioc-services.html">Defining Tapestry IOC Services</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-modules.html">IoC Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="object-providers.html">Object Providers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-serialization.html">Service Serialization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="starting-the-ioc-registry.html">Starting the IoC Registry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="aliases.html">Aliases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="injection-in-detail.html">Injection in Detail</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ordering-by-constraints.html">Ordering by Constraints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="registry-startup.html">Registry Startup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="parallel-execution.html">Parallel Execution</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="logging-in-tapestry.html">Logging in Tapestry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-implementation-reloading.html">Service Implementation Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-advisors.html">Service Advisors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-decorators.html">Service Decorators</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="using-jsr-330-standard-annotations.html">Using JSR 330 standard annotations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="operation-tracker.html">Operation Tracker</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Add-ons and Integrations</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Built-in</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="hibernate.html">Hibernate Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="jpa.html">JPA Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integrating-with-spring-framework.html">Spring</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="third-party-modules.html">Third Party Modules</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Release Notes</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.4.html">Tapestry 5.4</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.3.html">Tapestry 5.3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.2.html">Tapestry 5.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.1.html">Tapestry 5.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.0.html">Tapestry 5.0</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cookbook</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/default-parameter.html">Default Parameter</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/overriding-exception-reporting.html">Overriding Exception Reporting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/error-page-recipe.html">Error Page Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/supporting-informal-parameters.html">Supporting Informal Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/component-libraries.html">Component Libraries</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/switching-cases.html">Switching Cases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/enum-parameter-recipe.html">Enum Parameter Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/extending-the-if-component.html">Extending The If Component</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/meta-programming-page-content.html">Meta-Programming Page Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="cookbook/ioc-cookbook.html">IoC Cookbook</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-basic-services-and-injection.html">IoC Cookbook - Basic Services and Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-overriding-ioc-services.html">IoC Cookbook - Overriding IoC Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-patterns.html">IoC Cookbook - Patterns</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-service-configurations.html">IoC Cookbook - Service Configurations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/using-select-with-a-list.html">Using Select With a List</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/performance-and-clustering.html">Performance and Clustering</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/google-app-engine.html">Google App Engine (GAE)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frequently Asked Questions (FAQ)</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/general.html">General Questions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/templating-and-markup.html">Templating and Markup FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/ajax.html">AJAX FAQ</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">User Guide</span>
+    <span class="version">5.4</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../main/about.html">Home</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../current/index.html">User Guide</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../current/index.html">5.8</a>
+        </li>
+        <li class="version">
+          <a href="../5.7/index.html">5.7</a>
+        </li>
+        <li class="version">
+          <a href="../5.6/index.html">5.6</a>
+        </li>
+        <li class="version">
+          <a href="../5.5/index.html">5.5</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">5.4</a>
+        </li>
+        <li class="version">
+          <a href="../5.3/index.html">5.3</a>
+        </li>
+        <li class="version">
+          <a href="../5.2/index.html">5.2</a>
+        </li>
+        <li class="version">
+          <a href="../5.1/index.html">5.1</a>
+        </li>
+        <li class="version">
+          <a href="../5/index.html">5.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../main/about.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">User Guide</a></li>
+    <li>Tapestry Core</li>
+    <li>Working with Forms</li>
+    <li><a href="forms-and-validation.html">Forms and Validation</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">5.4</button>
+  <div class="version-menu">
+    <a class="version" href="../current/forms-and-validation.html">5.8</a>
+    <a class="version" href="../5.7/forms-and-validation.html">5.7</a>
+    <a class="version" href="../5.6/forms-and-validation.html">5.6</a>
+    <a class="version" href="../5.5/forms-and-validation.html">5.5</a>
+    <a class="version is-current" href="forms-and-validation.html">5.4</a>
+    <a class="version" href="../5.3/forms-and-validation.html">5.3</a>
+    <a class="version" href="../5.2/forms-and-validation.html">5.2</a>
+    <a class="version" href="../5.1/forms-and-validation.html">5.1</a>
+    <a class="version" href="../5/forms-and-validation.html">5.0</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Forms and Validation</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Forms are the traditional way for most web applications to gather significant information from the user.
+Whether it&#8217;s a search form, a login screen or a multi-page registration wizard, Tapestry uses standard HTML forms, with HTTP POST actions by default.
+In addition, AJAX-based form submission is supported using <a href="ajax-and-zones.html" class="xref page">Zones</a>.</p>
+</div>
+<div class="paragraph">
+<p>Tapestry provides support for creating and rendering forms, populating their fields, and validating user input.
+For simple cases, input validation is declarative, meaning you simply tell Tapestry what validations to apply to a given field, and it takes care of it on the server and (optionally) on the client as well.
+In addition, you can provide event handler methods in your page or component classes to handle more complex validation scenarios.</p>
+</div>
+<div class="paragraph">
+<p>Finally, Tapestry not only makes it easy to present errors messages to the user, but it can also automatically highlight form fields when validation fails.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_form_component"><a class="anchor" href="#_the_form_component"></a>The Form Component</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The core of Tapestry&#8217;s form support is the <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/corelib/components/Form.html">Form</a></code> component.
+The <code>Form</code> component encloses (wraps around) all the other <em>field components</em> such as <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/corelib/components/TextField.html">TextField</a></code>, <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/corelib/components/TextArea.html">TextArea</a></code>, <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/corelib/components/Checkbox.html">Checkbox</a></code>, etc.</p>
+</div>
+<div class="sect2">
+<h3 id="_form_events"><a class="anchor" href="#_form_events"></a>Form Events</h3>
+<div class="paragraph">
+<p>The <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/corelib/components/Form.html">Form</a></code> component emits a number of <a href="component-events.html" class="xref page">Component Events</a>.
+You&#8217;ll want to provide event handler methods for some of these.</p>
+</div>
+<div class="paragraph">
+<p>When rendering, the <code>Form</code> component emits two events: first, <code>prepareForRender</code>, then <code>prepare</code>.
+These allow the <code>Form</code>'s container to set up any fields or properties that will be referenced in the form.
+For example, this is a good place to create a temporary entity object to be rendered, or to load an entity from a database to be edited.</p>
+</div>
+<div class="paragraph">
+<p>When user submits the form on the client, a series of steps occur on the server.</p>
+</div>
+<div class="paragraph">
+<p>First, the <code>Form</code> emits a <code>prepareForSubmit</code> event, then a <code>prepare</code> event.
+These allow the container to ensure that objects are set up and ready to receive information from the form submission.</p>
+</div>
+<div class="paragraph">
+<p>Next, all the fields inside the form are <em>activated</em> to pull values out of the incoming request, validate them and (if valid) store the changes.</p>
+</div>
+<div class="paragraph">
+<p>After the fields have done their processing, the Form emits a <code>validate</code> event.
+This is your chance to perform any cross-form validation that can&#8217;t be described declaratively.</p>
+</div>
+<div class="paragraph">
+<p>Next, the <code>Form</code> determines if there have been any validation errors.
+If there have been, then the submission is considered a failure, and a <code>failure</code> event is emitted.
+If there have been no validation errors, then a <code>success</code> event is emitted.</p>
+</div>
+<div class="paragraph">
+<p>Finally, the <code>Form</code> emits a <code>submit</code> event, for logic that doesn&#8217;t care about success or failure.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Form Event (in order)</th>
+<th class="tableblock halign-left valign-top">Phase</th>
+<th class="tableblock halign-left valign-top">When emitted (and typical use)</th>
+<th class="tableblock halign-left valign-top">Method Name</th>
+<th class="tableblock halign-left valign-top">@OnEvent Constant</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>prepareForRender</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Render</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Before rendering the form (e.g. load an entity from a database to be edited)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onPrepareForRender()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/EventConstants.html#PREPARE_FOR_RENDER">EventConstants.PREPARE_FOR_RENDER</a></code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>prepare</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Render</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Before rendering the form, but after <code>prepareForRender</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onPrepare()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/EventConstants.html#PREPARE">EventConstants.PREPARE</a></code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>prepareForSubmit</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Submit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Before the submitted form is processed.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onPrepareForSubmit()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/EventConstants.html#PREPARE_FOR_SUBMIT">EventConstants.PREPARE_FOR_SUBMIT</a></code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>prepare</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Submit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Before the submitted form is processed, but after <code>prepareForSubmit</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onPrepare()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/EventConstants.html#PREPARE">EventConstants.PREPARE</a></code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>validate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Submit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">After fields have been populated from submitted values and validated (e.g. perform cross-field validation).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onValidate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/EventConstants.html#VALIDATE">EventConstants.VALIDATE</a></code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>validateForm</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Submit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">same as validate (deprecated – do not use)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onValidateForm</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>failure</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Submit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">After one or more validation errors have occurred</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onFailure</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/EventConstants.html#FAILURE">EventConstants.FAILURE</a></code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>success</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Submit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">When validation has completed without any errors (e.g. save changes to the database).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onSuccess</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/EventConstants.html#SUCCESS">EventConstants.SUCCESS</a></code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>submit</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Submit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">After all validation (success or failure) has finished.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onSubmit()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/EventConstants.html#SUBMIT">EventConstants.SUBMIT</a></code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>canceled</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Submit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whenever a <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/corelib/components/Submit.html">Submit</a></code> or <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/corelib/components/LinkSubmit.html">LinkSubmit</a></code> component containing <code>mode="cancel"</code> or <code>mode="unconditional"</code> is clicked.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>onCanceled()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/EventConstants.html#CANCELED">EventConstants.CANCELED</a></code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Note that the <code>prepare</code> event is emitted during both form rendering and form submission.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_handling_events"><a class="anchor" href="#_handling_events"></a>Handling Events</h3>
+<div class="paragraph">
+<p>Main article: <a href="component-events.html" class="xref page">Component Events</a></p>
+</div>
+<div class="paragraph">
+<p>You handle events by providing methods in your page or component class, either following the <code>on<strong>Event</strong>From<strong>Component</strong>()</code> naming convention or using the <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/annotations/OnEvent.html">@OnEvent</a></code> annotation.
+For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">void onValidateFromPassword() { ... }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>or the equivalent using <code>@OnEvent</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@OnEvent(value=EventConstants.VALIDATE, component="password")
+void verifyThePassword() { ... }</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tracking_validation_errors"><a class="anchor" href="#_tracking_validation_errors"></a>Tracking Validation Errors</h3>
+<div class="paragraph">
+<p>Associated with the <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/corelib/components/Form.html">Form</a></code> is a <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/ValidationTracker.html">ValidationTracker</a></code> that tracks all the provided user input and validation errors for every field in the form.
+The tracker can be provided to the <code>Form</code> via the <code>Form</code>'s tracker parameter, but this is rarely necessary.</p>
+</div>
+<div class="paragraph">
+<p>The <code>Form</code> includes methods <code>isValid()</code> and <code>getHasErrors()</code>, which are used to see if the <code>Form</code>'s validation tracker contains any errors.</p>
+</div>
+<div class="paragraph">
+<p>In your own logic, it is possible to record your own errors.
+<code>Form</code> includes two different versions of method <code>recordError()</code>, one of which specifies a <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/Field.html">Field</a></code> (an interface implemented by all form element components), and one of which is for "global" errors, not associated with any particular field.
+If the error concerns only a single field, you should use the first version so that the field will be highlighted.</p>
+</div>
+<div class="paragraph">
+<p>For example, a Login page class, which collects a user name and a password, might look like:</p>
+</div>
+<div class="listingblock">
+<div class="title">Login.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package com.example.newapp.pages;
+
+
+import com.example.newapp.services.UserAuthenticator;
+import org.apache.tapestry5.annotations.*;
+import org.apache.tapestry5.corelib.components.Form;
+import org.apache.tapestry5.corelib.components.PasswordField;
+import org.apache.tapestry5.ioc.annotations.Inject;
+
+
+public class Login {
+    @Property
+    private String userName;
+
+    @Property
+    private String password;
+
+    @Inject
+    private UserAuthenticator authenticator;
+
+    @InjectComponent("password")
+    private PasswordField passwordField;
+
+    @Component
+    private Form loginForm;
+
+    /**
+     * Do the cross-field validation
+     */
+    void onValidateFromLoginForm() {
+        if (!authenticator.isValid(userName, password)) {
+            // record an error, and thereby prevent Tapestry from emitting a "success" event
+            loginForm.recordError(passwordField, "Invalid user name or password.");
+        }
+    }
+
+    /**
+     * Validation passed, so we'll go to the "PostLogin" page
+     */
+    Object onSuccess() {
+        return PostLogin.class;
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>Form</code> only emits a <code>success</code> event if the there are no prior validation errors.
+This means it is not necessary to write <code>if (form.getHasErrors()) return;</code> as the first line of the method.</p>
+</div>
+<div class="paragraph">
+<p>Finally, notice how business logic fits into validation.
+The <code>UserAuthenticator</code> service is responsible for ensuring that the <code>userName</code> and (plaintext) <code>password</code> are valid.
+When it returns <code>false</code>, we ask the <code>Form</code> component to record an error.
+We provide the <code>PasswordField</code> instance as the first parameter; this ensures that the password field, and its label, are decorated when the <code>Form</code> is re-rendered, to present the errors to the user.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Note that the <code>onValidateFromLoginForm()</code> and <code>onSuccess()</code> methods are not <code>public</code>; event handler methods can have any visibility, even <code>private</code>.
+Package private (that is, no modifier) is the typical use, as it allows the component to be tested, from a test case class in the same package.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_configuring_fields_and_labels"><a class="anchor" href="#_configuring_fields_and_labels"></a>Configuring Fields and Labels</h3>
+<div class="paragraph">
+<p>The Login page template below contains a minimal amount of Tapestry instrumentation and references some of the <a href="https://getbootstrap.com/">Bootstrap CSS</a> classes (Bootstrap is automatically integrated into each page by default, starting with Tapestry 5.4).</p>
+</div>
+<div class="listingblock">
+<div class="title">Login.tml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;html t:type="layout" title="newapp com.example"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"&gt;
+
+  &lt;div class="row"&gt;
+    &lt;div class="span4 offset3"&gt;
+      &lt;t:form t:id="loginForm"&gt;
+        &lt;h2&gt;Please sign in&lt;/h2&gt;
+        &lt;t:textfield t:id="userName" t:mixins="formgroup"/&gt;
+        &lt;t:passwordfield t:id="password" value="password" t:mixins="formgroup"/&gt;
+        &lt;t:submit class="btn btn-large btn-primary" value="Sign in"/&gt;
+      &lt;/t:form&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Rendering the page gives a reasonably pleasing first pass:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/newapp_com_example.png" alt="newapp com example"></span></p>
+</div>
+<div class="paragraph">
+<p>The Tapestry <code>Form</code> component is responsible for creating the necessary URL for the form submission (this is Tapestry&#8217;s responsibility, not yours).</p>
+</div>
+<div class="paragraph">
+<p>For the <code>TextField</code>, we provide a component <code>id</code>, <code>userName</code>.
+We could specify the <code>value</code> parameter, but the default is to match the <code>TextField</code>'s <code>id</code> against a property of the container, the <code>Login</code> page, if such a property exists.</p>
+</div>
+<div class="paragraph">
+<p>As a rule of thumb, you should always give your fields a specific <code>id</code> (this id will be used to generate the name and id attributes of the rendered tag).
+Being allowed to omit the <code>value</code> parameter helps to keep the template from getting too cluttered.</p>
+</div>
+<div class="paragraph">
+<p>The <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/corelib/mixins/FormGroup.html">FormGroup</a></code> mixin decorates the field with some additional markup, including a <code>&lt;label&gt;</code> element; this leverages more of Bootstrap.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div class="form-group"&gt;
+  &lt;label for="userName" class="control-label"&gt;User Name&lt;/label&gt;
+  &lt;input id="userName" class="form-control" name="userName" type="text"&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_form_validation"><a class="anchor" href="#_form_validation"></a>Form Validation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The above example is a very basic form which allows the fields to be empty.
+However, with a little more effort we can add client-side validation to prevent the user from submitting the form with either field empty.</p>
+</div>
+<div class="paragraph">
+<p>Validation in Tapestry involves associating one or more <em>validators</em> with a form element component, such as <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/corelib/components/TextField.html">TextField</a></code> or <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/corelib/components/PasswordField.html">PasswordField</a></code>.
+This is done using the <code>validate</code> parameter:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;t:textfield t:id="userName" validate="required" t:mixins="formgroup"/&gt;
+&lt;t:passwordfield t:id="password" value="password" validate="required" t:mixins="formgroup"/&gt;</code></pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_available_validators"><a class="anchor" href="#_available_validators"></a>Available Validators</h3>
+<div class="paragraph">
+<p>Tapestry provides the following built-in validators:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 28.5714%;">
+<col style="width: 28.5714%;">
+<col style="width: 28.5715%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Validator</th>
+<th class="tableblock halign-left valign-top">Constraint Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">email</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ensures that the given input looks like a valid e-mail address</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;t:textfield value="userEmail" validate="email" /&gt;</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">max</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">long</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enforces a maximum integer value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;t:textfield value="age" validate="max=120,min=0" /&gt;</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">maxLength</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Makes sure that a string value has a maximum length</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;t:textfield value="zip" validate="maxlength=7" /&gt;</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">min</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">long</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enforces a minimum integer value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;t:textfield value="age" validate="max=120,min=0" /&gt;</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">minLength</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Makes sure that a string value has a minimum length</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;t:textfield value="somefield" validate="minlength=1" /&gt;</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Does nothing (used to override a <code>@Validate</code> annotation)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;t:textfield value="somefield" validate="none" /&gt;</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">regexp</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pattern</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Makes sure that a string value conforms to a given pattern</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;t:textfield value="letterfield" validate="regexp=^[A-Za-z]+$" /&gt;</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">required</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Makes sure that a string value is not null and not the empty string</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;t:textfield value="name" validate="required" /&gt;</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">checked (Since 5.4.5)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Makes sure that the boolean is true (checkbox is checked)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;t:Checkbox value="value" validate="checked" /&gt;</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">unchecked (Since 5.4.5)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Makes sure that the boolean is false (checkbox is unchecked)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;t:Checkbox value="value" validate="unchecked" /&gt;</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_centralizing_validation_with_validate"><a class="anchor" href="#_centralizing_validation_with_validate"></a>Centralizing Validation with <code>@Validate</code></h3>
+<div class="paragraph">
+<p>The <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/beaneditor/Validate.html">@Validate</a></code> annotation can take the place of the validate parameter of <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/corelib/components/TextField.html">TextField</a></code>, <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/corelib/components/PasswordField.html">PasswordField</a></code>, <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/corelib/components/TextArea.html">TextArea</a></code> and other components.
+When the validate parameter is not bound in the template file, the component will check for the <code>@Validate</code> annotation and use its value as the validation definition.</p>
+</div>
+<div class="paragraph">
+<p>The annotation may be placed on the getter or setter method, or on the field itself.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s update the two fields of the Login page:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Persist
+@Property
+@Validate("required")
+private String userName;
+
+@Property
+@Validate("required")
+rivate String password;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now, we&#8217;ll rebuild the app, refresh the browser, and just hit enter:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/newapp_com_example.png" alt="newapp com example"></span></p>
+</div>
+<div class="paragraph">
+<p>The form has updated, in place, to present the errors.
+You will not be able to submit the form until some value is provided for each field.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_html5_client_side_validation"><a class="anchor" href="#_html5_client_side_validation"></a>HTML5 Client-side Validation</h3>
+<div class="paragraph">
+<p>When the <code>tapestry.enable-html5-support</code> <a href="configuration.html" class="xref page">configuration symbol</a> is set to <code>true</code> (it is <code>false</code> by default), the Tapestry&#8217;s built-in validators will automatically enable the HTML5-specific <code>type</code> and validation attributes to the rendered HTML of Tapestry&#8217;s form components, triggering the HTML5 client-side validation behavior built into most modern browsers.
+For example, if you use the <code>email</code> and <code>required</code> validators, like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;t:textfield validate="email,required" .../&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>then the output HTML will look like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;input type="email" required ...&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>which causes modern browsers to present a validation error message whenever text is entered that doesn&#8217;t look like an email address, or if the field is left blank.</p>
+</div>
+<div class="paragraph">
+<p>The browser&#8217;s built-in validation is performed <em>before</em> Tapestry&#8217;s own client-side validation.
+This is so that older browsers will still perform client-side validation as expected.</p>
+</div>
+<div class="paragraph">
+<p>The following behaviors are included:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>required</code> validator adds the <code>required</code> attribute to the rendered HTML</p>
+</li>
+<li>
+<p>The <code>checked</code> validator adds the <code>required</code> attribute to the rendered HTML  (Since 5.4.5)</p>
+</li>
+<li>
+<p>The <code>regexp</code> validator adds the <code>pattern</code> attribute to the rendered HTML</p>
+</li>
+<li>
+<p>The <code>email</code> validator sets the type attribute to <code>email</code> in the rendered HTML</p>
+</li>
+<li>
+<p>The <code>min</code> validator sets the type attribute to <code>number</code> and adds the <code>min</code> attribute in the rendered HTML</p>
+</li>
+<li>
+<p>The <code>max</code> validator sets the type attribute to <code>number</code> and adds the <code>max</code> attribute in the rendered HTML</p>
+</li>
+<li>
+<p>When bound to a number type, the TextField component sets the type attribute to <code>number</code> in the rendered HTML</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_server_side_validation"><a class="anchor" href="#_server_side_validation"></a>Server Side Validation</h3>
+<div class="paragraph">
+<p>Some validation can&#8217;t, or shouldn&#8217;t, be done on the client side.
+How do we know if the password is correct?
+Short of downloading all users and passwords to the client, we really need to do the validation on the server.</p>
+</div>
+<div class="paragraph">
+<p>In fact, all client-side validation (via the validate parameter, or <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/beaneditor/Validate.html">@Validate</a></code> annotation) is performed again on the server.</p>
+</div>
+<div class="paragraph">
+<p>It is also possible to perform extra validation there.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">/**
+  * Do the cross-field validation
+  */
+void onValidateFromLoginForm() {
+    if (!authenticator.isValid(userName, password)) {
+        // record an error, and thereby prevent Tapestry from emitting a "success" event
+        loginForm.recordError(passwordField, "Invalid user name or password.");
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This is the <code>validate</code> event handler from the <code>loginForm</code> component.
+It is invoked once all the components have had a chance to read values out of the request, do their own validations, and update the properties they are bound to.</p>
+</div>
+<div class="paragraph">
+<p>In this case, the authenticator is used to decide if the <code>userName</code> and <code>password</code> is valid.
+In a real application, this would be where a database or other external service was consulted.</p>
+</div>
+<div class="paragraph">
+<p>If the combination is not valid, then the password field is marked as in error.
+The form is used to record an error, about a component (the <code>passwordField</code>) with an error message.</p>
+</div>
+<div class="paragraph">
+<p>Entering any two values into the form and submitting will cause a round trip; the form will re-render to present the error to the user:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/newapp_com_example.png" alt="newapp com example"></span></p>
+</div>
+<div class="paragraph">
+<p>Notice that the cursor is placed directly into the password field.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+In versions of Tapestry prior to 5.4, a form with validation errors would result in a redirect response to the client; often, temporary server-side data (such as the userName field) would be lost. Starting in 5.4, submitting a form with validation errors results in the new page being rendered in the same request as the form submission.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_customizing_validation_messages"><a class="anchor" href="#_customizing_validation_messages"></a>Customizing Validation Messages</h3>
+<div class="paragraph">
+<p>Each validator (such as <code>required</code> or <code>minlength</code>) has a default message used (on the client side and the server side) when the constraint is violated; that is, when the user input is not valid.</p>
+</div>
+<div class="paragraph">
+<p>The message can be customized by adding an entry to the page&#8217;s message catalog (or the containing component&#8217;s message catalog).
+As with any localized property, this can also go into the <a href="localization.html#_application_wide_message_catalog" class="xref page">application&#8217;s message catalog</a>.</p>
+</div>
+<div class="paragraph">
+<p>The first key checked is <code>formId-fieldId-validatorName-message</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>formId</code>: the local component id of the Form component</p>
+</li>
+<li>
+<p><code>fieldId</code>: the local component id of the field (TextField, etc.)</p>
+</li>
+<li>
+<p><code>validatorName</code>: the name of the validator, i.e., "required" or "minlength"</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If there is no message for that key, a second check is made, for <code>fieldId-validatorName-message</code>.
+If that does not match a message, then the built-in default validation message is used.</p>
+</div>
+<div class="paragraph">
+<p>For example, if the <code>formId</code> is <code>loginForm</code>, the <code>fieldId</code> is <code>userName</code>, and the <code>validatorName</code> is <code>required</code> then Tapestry will first look for a <code>loginForm-userName-required-message</code> key in the message catalog, and then for a <code>userName-required-message</code> key.</p>
+</div>
+<div class="paragraph">
+<p>The validation message in the message catalog may contain <a href="https://docs.oracle.com/javase/7/docs/api/java/util/Formatter.html">printf-style format strings</a> (such as <code>%s</code>) to indicate where the validate parameter&#8217;s value will be inserted.
+For example, if the validate parameter in the template is <code>minLength=3</code> and the validation message is <code>User name must be at least %s characters</code> then the corresponding error message would be <code>User name must be at least 5 characters</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_customizing_validation_messages_for_beaneditform"><a class="anchor" href="#_customizing_validation_messages_for_beaneditform"></a>Customizing Validation Messages for BeanEditForm</h3>
+<div class="paragraph">
+<p>The <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/corelib/components/BeanEditForm.html">BeanEditForm</a></code> component also supports validation message customizing.
+The search for messages is similar; the formId is the component id of the <code>BeanEditForm</code> component (not the <code>Form</code> component it contains).
+The <code>fieldId</code> is the property name.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_configuring_validator_contraints_in_the_message_catalog"><a class="anchor" href="#_configuring_validator_contraints_in_the_message_catalog"></a>Configuring Validator Contraints in the Message Catalog</h3>
+<div class="paragraph">
+<p>It is possible to omit the validation constraint from the validate parameter (or <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/beaneditor/Validate.html">@Validate</a></code> annotation), in which case it is expected to be stored in the message catalog.</p>
+</div>
+<div class="paragraph">
+<p>This is useful when the validation constraint is awkward to enter inline, such as a regular expression for use with the regexp validator.</p>
+</div>
+<div class="paragraph">
+<p>The key here is similar to customizing the validation message: <code>formId-fieldId-validatorName</code> or just <code>fieldId-validatorName</code>.</p>
+</div>
+<div class="paragraph">
+<p>For example, your template may have the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;t:textfield t:id="ssn" validate="required,regexp"/&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And your message catalog can contain:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">ssn-regexp=\d{3}-\d{2}-\d{4}
+ssn-regexp-message=Social security numbers are in the format 12-34-5678.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This technique also works with the <code>BeanEditForm</code>; as with validation messages, the <code>formId</code> is the <code>BeanEditForm</code> component&#8217;s id, and the <code>fieldId</code> is the name of the property being edited.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_validation_macros"><a class="anchor" href="#_validation_macros"></a>Validation Macros</h3>
+<div class="paragraph">
+<p>Lists of validators can be combined into validation macros. This mechanism is convenient for ensuring consistent validation rules across an application.
+To create a validation macro, just contribute to the <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/validator/ValidatorMacro.html">ValidatorMacro</a></code> service in your module class (normally <code>AppModule.java</code>), by adding a new entry to the configuration object, as shown below.
+The first parameter is the name of your macro, the second is a comma-separated list of validators:</p>
+</div>
+<div class="listingblock">
+<div class="title">AppModule.java (partial)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Contribute(ValidatorMacro.class)
+public static void combinePasswordValidators(
+  MappedConfiguration&lt;String, String&gt; configuration)
+{
+  configuration.add("passwordValidator","required,minlength=5,maxlength=15");
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then, you can use this new macro in component templates and classes:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;input t:type="textField" t:id="password" t:validate="passwordValidator" /&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Validate("password")
+private String password;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_overriding_the_translator_with_events"><a class="anchor" href="#_overriding_the_translator_with_events"></a>Overriding the Translator with Events</h3>
+<div class="paragraph">
+<p>The <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/corelib/components/TextField.html">TextField</a></code>, <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/corelib/components/PasswordField.html">PasswordField</a></code> and <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/corelib/components/TextArea.html">TextArea</a></code> components all have a <code>translate</code> parameter, a <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/FieldTranslator.html">FieldTranslator</a></code> object that is used to convert values on the server side to strings on the client side.</p>
+</div>
+<div class="paragraph">
+<p>In most cases, the <code>translate</code> parameter is not set explicitly.
+Tapestry derives an appropriate value based on the type of property being editted by the field.</p>
+</div>
+<div class="paragraph">
+<p>In certain cases, you may want to override the translator.
+This can be accomplished using two events triggered on the component, <code>toclient</code> and <code>parseclient</code>.</p>
+</div>
+<div class="paragraph">
+<p>The <code>toclient</code> event is passed the current object value and returns a string, which will be the default value for the field.
+When there is no event handler, or when the event handler returns <code>null</code>, the default Translator is used to convert the server side value to a string.</p>
+</div>
+<div class="paragraph">
+<p>For example, you may have a quantity field that you wish to display as blank, rather than zero, initially:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;t:textfield t:id="quantity" size="10"/&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">private int quantity;
+
+String onToClientFromQuantity()
+{
+  if (quantity == 0) return "";
+
+  return null;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This is good so far, but if the field is optional and the user submits the form, you&#8217;ll get a validation error, because the empty string is not valid as an integer.</p>
+</div>
+<div class="paragraph">
+<p>That&#8217;s where the <code>parseclient</code> event comes in:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Object onParseClientFromQuantity(String input)
+{
+  if ("".equals(input)) return 0;
+
+  return null;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The event handler method has precedence over the translator. Here it checks for the empty string (and note that the input may be null!) and evaluates that as zero.</p>
+</div>
+<div class="paragraph">
+<p>Again, returning null lets the normal translator do its work.</p>
+</div>
+<div class="paragraph">
+<p>The event handler may also throw a <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/ValidationException.html">ValidationException</a></code> to indicate a value that can&#8217;t be parsed.</p>
+</div>
+<div class="paragraph">
+<p>Now, what if you want to perform your own custom validation?
+That&#8217;s another event: <code>validate</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">void onValidateFromCount(Integer value) throws ValidationException
+{
+  if (value.equals(13))
+    throw new ValidationException("Thirteen is an unlucky number.");
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This event gets fired after the normal validators.
+It is passed the parsed value (not the string from the client, but the object value from the translator, or from the <code>parseclient</code> event handler).</p>
+</div>
+<div class="paragraph">
+<p>The method may not return a value, but may throw a <code>ValidationException</code> to indicate a problem with the value.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+These events are exclusively on the <em>server side</em>.
+This means that, in certain circumstances, an input value will be rejected on the client side even though it is valid on the server side.
+You may need to disable client-side validation in order to use this feature.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>-</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

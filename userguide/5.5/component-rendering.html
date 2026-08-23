@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Component Rendering :: Apache Tapestry</title>
+    <meta name="generator" content="Antora 3.1.15">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/tapestry.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../.."><img alt="Apache Tapestry Logo" src="../../_/img/apache-tapestry-icon-dark.svg" width="60" />Apache Tapestry</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Documentation</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../../main/getting-started.html">Getting Started</a>
+            <a class="navbar-item" href="../../main/tutorial/">Tutorial</a>
+            <a class="navbar-item" href="../../userguide/5.8/">User Guide</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="../../main/community.html">Community</a>
+        <a class="navbar-item" href="../../main/support.html">Support</a>
+        <a class="navbar-item" href="../../main/developers.html">Developers</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Apache</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+            <a class="navbar-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
+            <a class="navbar-item" href="https://www.apache.org/licenses/">License</a>
+            <a class="navbar-item" href="https://www.apache.org/security/">Security</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="../../main/download.html">Download</a>
+          </span>
+        </div>
+        <div class="navbar-brand">
+          <a href="https://www.apache.org/">
+          <img alt="The Apache Software Foundation" src="../../_/img/asf_logo.svg" width="200" height="63" style="padding-top: 5px; padding-bottom: 5px; background-color: white">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="body">
+<div class="nav-container" data-component="userguide" data-version="5.5">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">User Guide</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Introduction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry Core</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basics</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="project-layout.html">Project Layout</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="runtime-exceptions.html">Runtime Exceptions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="class-reloading.html">Class Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-reference.html">Component Reference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="annotations.html">Annotations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Pages and Components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-classes.html">Component Classes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-templates.html">Component Templates</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="property-expressions.html">Property Expressions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-parameters.html">Component Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="parameter-type-coercion.html">Parameter Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="layout-component.html">Layout Component</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-mixins.html">Component Mixins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-navigation.html">Page Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="localization.html">Localization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Request/Response Rendering</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-life-cycle.html">Page Life Cycle</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="request-processing.html">Request Processing</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="component-rendering.html">Component Rendering</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-events.html">Component Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="url-rewriting.html">URL Rewriting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dom.html">Document Object Model (DOM)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="response-compression.html">Response Compression</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="security.html">Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https.html">HTTPS / SSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="content-type-and-markup.html">Content Type and Markup</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Data Persistence</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="persistent-page-data.html">Persistent Page Data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="session-storage.html">Session Storage</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Interacting with components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="injection.html">Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="environmental-services.html">Environmental Services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript, AJAX, CSS &amp; Binary Data</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="client-side-javascript.html">Client-Side JavaScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="javascript-modules.html">Javascript Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="coffeescript.html">Coffeescript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="typescript.html">TypeScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ajax-and-zones.html">AJAX and Zones</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="css.html">Cascading Style Sheets (CSS)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="assets.html">Assets</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Working with Forms</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="forms-and-validation.html">Forms and Validation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="beaneditform-guide.html">BeanEditForm Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uploading-files.html">Uploading Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bean-validation.html">Bean Validation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Logging, Debugging &amp; Testing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="logging.html">Logging</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unit-testing.html">Unit testing pages or components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integration-testing.html">Integration Testing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="development-dashboard.html">Development Dashboard</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry IOC</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-overview.html">IoC Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="symbols.html">Symbols</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="type-coercion.html">Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="case-insensitivity.html">Case Insensitivity</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="autoloading-modules.html">Autoloading Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="chainbuilder-service.html">ChainBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pipelinebuilder-service.html">PipelineBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="shadowbuilder-service.html">ShadowBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="strategybuilder-service.html">StrategyBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="defining-tapestry-ioc-services.html">Defining Tapestry IOC Services</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-modules.html">IoC Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="object-providers.html">Object Providers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-serialization.html">Service Serialization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="starting-the-ioc-registry.html">Starting the IoC Registry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="aliases.html">Aliases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="injection-in-detail.html">Injection in Detail</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ordering-by-constraints.html">Ordering by Constraints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="registry-startup.html">Registry Startup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="parallel-execution.html">Parallel Execution</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="logging-in-tapestry.html">Logging in Tapestry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-implementation-reloading.html">Service Implementation Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-advisors.html">Service Advisors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-decorators.html">Service Decorators</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="using-jsr-330-standard-annotations.html">Using JSR 330 standard annotations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="operation-tracker.html">Operation Tracker</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Add-ons and Integrations</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Built-in</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="hibernate.html">Hibernate Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="jpa.html">JPA Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integrating-with-spring-framework.html">Spring</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="third-party-modules.html">Third Party Modules</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Release Notes</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.5.html">Tapestry 5.5</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.4.html">Tapestry 5.4</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.3.html">Tapestry 5.3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.2.html">Tapestry 5.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.1.html">Tapestry 5.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.0.html">Tapestry 5.0</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cookbook</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/default-parameter.html">Default Parameter</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/overriding-exception-reporting.html">Overriding Exception Reporting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/error-page-recipe.html">Error Page Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/supporting-informal-parameters.html">Supporting Informal Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/component-libraries.html">Component Libraries</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/switching-cases.html">Switching Cases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/enum-parameter-recipe.html">Enum Parameter Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/extending-the-if-component.html">Extending The If Component</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/meta-programming-page-content.html">Meta-Programming Page Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="cookbook/ioc-cookbook.html">IoC Cookbook</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-basic-services-and-injection.html">IoC Cookbook - Basic Services and Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-overriding-ioc-services.html">IoC Cookbook - Overriding IoC Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-patterns.html">IoC Cookbook - Patterns</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-service-configurations.html">IoC Cookbook - Service Configurations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/using-select-with-a-list.html">Using Select With a List</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/performance-and-clustering.html">Performance and Clustering</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/google-app-engine.html">Google App Engine (GAE)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frequently Asked Questions (FAQ)</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/general.html">General Questions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/templating-and-markup.html">Templating and Markup FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/ajax.html">AJAX FAQ</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">User Guide</span>
+    <span class="version">5.5</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../main/about.html">Home</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../current/index.html">User Guide</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../current/index.html">5.8</a>
+        </li>
+        <li class="version">
+          <a href="../5.7/index.html">5.7</a>
+        </li>
+        <li class="version">
+          <a href="../5.6/index.html">5.6</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">5.5</a>
+        </li>
+        <li class="version">
+          <a href="../5.4/index.html">5.4</a>
+        </li>
+        <li class="version">
+          <a href="../5.3/index.html">5.3</a>
+        </li>
+        <li class="version">
+          <a href="../5.2/index.html">5.2</a>
+        </li>
+        <li class="version">
+          <a href="../5.1/index.html">5.1</a>
+        </li>
+        <li class="version">
+          <a href="../5/index.html">5.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../main/about.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">User Guide</a></li>
+    <li>Tapestry Core</li>
+    <li>Request/Response Rendering</li>
+    <li><a href="component-rendering.html">Component Rendering</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">5.5</button>
+  <div class="version-menu">
+    <a class="version" href="../current/component-rendering.html">5.8</a>
+    <a class="version" href="../5.7/component-rendering.html">5.7</a>
+    <a class="version" href="../5.6/component-rendering.html">5.6</a>
+    <a class="version is-current" href="component-rendering.html">5.5</a>
+    <a class="version" href="../5.4/component-rendering.html">5.4</a>
+    <a class="version" href="../5.3/component-rendering.html">5.3</a>
+    <a class="version" href="../5.2/component-rendering.html">5.2</a>
+    <a class="version" href="../5.1/component-rendering.html">5.1</a>
+    <a class="version" href="../5/component-rendering.html">5.0</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Component Rendering</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Rendering of components in Tapestry 5 is based on a state machine and a queue (instead of the tail recursion used in Tapestry 4).
+This breaks the rendering process up into tiny pieces that can easily be implemented or overridden.
+Don&#8217;t worry, in practice, writing components requires a breathtakingly small amount of code.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_rendering_phases"><a class="anchor" href="#_rendering_phases"></a>Rendering Phases</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The rendering of each component is divided into a number of phases, illustrated below.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/tapestry_render_phases.png" alt="Tapestry Render Phases">
+</div>
+</div>
+<div class="paragraph">
+<p>Each of the orange phases (SetupRender, BeginRender, BeforeRenderBody, etc.) corresponds to an annotation you may place on one or more methods of your class.
+The annotation directs Tapestry to invoke your method as part of that phase.</p>
+</div>
+<div class="paragraph">
+<p>Methods marked with these annotations are called <strong>render phase methods</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Your methods may be void, or return a boolean value.
+Returning a value can force phases to be skipped, or even be re-visited.
+In the diagram, solid lines show the normal processing path.
+Dashed lines are alternate flows that are triggered when your render phase methods return <code>false</code> instead of <code>true</code> (or <code>void</code>).</p>
+</div>
+<div class="paragraph">
+<p>Render phase methods may take no parameters, or may take a parameter of type MarkupWriter.
+The methods can have any visibility you like &#8230;&#8203; typically, package private is used, as this visibility makes it possible to unit test your code (from within the same Java package) without making the methods part of the component&#8217;s public API.</p>
+</div>
+<div class="paragraph">
+<p>All Render phase methods are <em>optional</em>; a default behavior is associated with each phase.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Annotation</th>
+<th class="tableblock halign-left valign-top">Method Name</th>
+<th class="tableblock halign-left valign-top">When Called</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@SetupRender</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>setupRender()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">When initial setup actions, if any, are needed</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@BeginRender</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>beginRender()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">When Tapestry is ready for the component&#8217;s start tag, if any, to be rendered</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@BeforeRenderTemplate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>beforeRenderTemplate()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Before Tapestry renders the component&#8217;s template, if any</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@BeforeRenderBody</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>beforeRenderBody()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Before Tapestry renders the body of the component, if any</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@AfterRenderBody</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>afterRenderBody()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">After Tapestry renders the body of the component, if any, but before the rest of the component&#8217;s template is rendered</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@AfterRenderTemplate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>afterRenderTemplate()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">After Tapestry finishes rendering the component&#8217;s template, if any</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@AfterRender</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>afterRender()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">After Tapestry has finished rendering both the template and body of the component</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@CleanupRender</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cleanupRender()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">When final cleanup actions, if any, are needed</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The large number of phases reflects the need for precise control of components from <a href="component-mixins.html" class="xref page">Component Mixins</a>.
+Several of the phases exist almost exclusively for mixins.</p>
+</div>
+<div class="paragraph">
+<p>Generally, your code will use the SetupRender, BeginRender, AfterRender and CleanupRender phases &#8230;&#8203; often just one or two of those.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_an_example"><a class="anchor" href="#_an_example"></a>An Example</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Here&#8217;s the source for a looping component that counts up or down between two values, renders its body a number of times, and stores the current index value in a parameter:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package org.example.app.components;
+
+import org.apache.tapestry5.annotations.Parameter;
+import org.apache.tapestry5.annotations.AfterRender;
+import org.apache.tapestry5.annotations.SetupRender;
+
+public class Count
+{
+    @Parameter
+    private int start = 1;
+
+    @Parameter(required = true)
+    private int end;
+
+    @Parameter
+    private int value;
+
+    private boolean increment;
+
+    @SetupRender
+    void initializeValue()
+    {
+        value = start;
+
+        increment = start &lt; end;
+    }
+
+    @AfterRender
+    boolean next()
+    {
+        if (increment)
+        {
+            int newValue = value + 1;
+
+            if (newValue &lt;= end)
+            {
+                value = newValue;
+                return false; <i class="conum" data-value="1"></i><b>(1)</b>
+            }
+        }
+        else
+        {
+            int newValue = value - 1;
+
+            if (newValue &gt;= end)
+            {
+                value = newValue;
+                return false;
+            }
+        }
+
+        return true; <i class="conum" data-value="2"></i><b>(2)</b>
+    }
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Returning false from next() causes Tapestry to re-run the BeginRender phase, and from there, re-render the component&#8217;s body (this component does not have a template).</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Returning true transitions to the CleanupRender phase.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Notice how Tapestry adapts to your methods, as marked with the annotations.
+It also adapts in terms of parameters; the two annotated methods here did not perform any output, so they did not need a MarkupWriter.</p>
+</div>
+<div class="paragraph">
+<p>What&#8217;s really mind blowing is that the template and body of a component will often contain &#8230;&#8203; more components!
+That means that many different components will be in different phases of their own state machine.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_render_phases_in_detail"><a class="anchor" href="#_render_phases_in_detail"></a>Render Phases in Detail</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">NOTE</dt>
+<dd>
+<p>The SetupRender phase, like all render phases, occurs once for each rendering of the component. If the component is inside a looping component (Loop, Grid, etc.), then the SetupRender method will be called once for each iteration of the loop.</p>
+</dd>
+</dl>
+</div>
+<div class="sect2">
+<h3 id="_setuprender"><a class="anchor" href="#_setuprender"></a>SetupRender</h3>
+<div class="paragraph">
+<p>The SetupRender phase (see @SetupRender) is where you can perform any one-time per-render setup for your component.
+This is a good place to read component parameters and use them to set temporary instance variables.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_beginrender"><a class="anchor" href="#_beginrender"></a>BeginRender</h3>
+<div class="paragraph">
+<p>The BeginRender phase (see @BeginRender) occurs at the start of the rendering of the component.
+For components that render a tag, the start tag should be rendered here (the close tag should be rendered inside the AfterRender phase).
+The component can also prevent the template and/or body from being rendered by returning false.</p>
+</div>
+<div class="paragraph">
+<p>Components may or may not have a template.
+If a component has a template, and the template includes a <code>&lt;body&gt;</code> element, then the BeforeRenderBody phase will be triggered (giving the component the option of rendering its body or not).</p>
+</div>
+<div class="paragraph">
+<p>If a component does not have a <code>&lt;body&gt;</code> element in its template, then the BeforeRenderBody phase is not triggered.</p>
+</div>
+<div class="paragraph">
+<p>If a component does not have a template, but does have a body, the BeforeRenderBody phase is still triggered.</p>
+</div>
+<div class="paragraph">
+<p>If no methods are annotated with BeginRender, then no special output occurs during this phase, but the template (if present) or body (if no template is present, but the component has a body) will be rendered.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_beforerendertemplate"><a class="anchor" href="#_beforerendertemplate"></a>BeforeRenderTemplate</h3>
+<div class="paragraph">
+<p>The BeforeRenderTemplate phase (see @BeforeRenderTemplate) exists to allow a component to decorate its template (creating markup around the template generated markup), or to allow a component to skip its template.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_beforerenderbody"><a class="anchor" href="#_beforerenderbody"></a>BeforeRenderBody</h3>
+<div class="paragraph">
+<p>The BeforeRenderBody phase (see @BeforeRenderBody) is associated with a component&#8217;s body (the portion of its container&#8217;s template that the component occupies). The BeforeRenderBody phase allows the component the ability to skip the body, while still rendering the rest of the component&#8217;s template (if any).</p>
+</div>
+<div class="paragraph">
+<p>If no methods are annotated with BeforeRenderBody, then the body will be rendered by default. Again, this occurs when the <code>&lt;body&gt;</code> element of the component&#8217;s template is reached, or automatically if the component has no template (but the component does have a body).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_afterrenderbody"><a class="anchor" href="#_afterrenderbody"></a>AfterRenderBody</h3>
+<div class="paragraph">
+<p>The AfterRenderBody phase (see @AfterRenderBody) is executed after the body is rendered; this only occurs for components with a body.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_afterrender"><a class="anchor" href="#_afterrender"></a>AfterRender</h3>
+<div class="paragraph">
+<p>The AfterRender phase (see @AfterRender) complements BeginRender, and is often used to render the close tag that matches the start tag rendered in the BeginRender phase. In any case, the AfterRender phase can continue on to CleanupRender, or revert back to BeginRender (as in our Count component example, above).</p>
+</div>
+<div class="paragraph">
+<p>If no methods are annotated with AfterRender, then no special output occurs, and the CleanupRender phase is triggered.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cleanuprender"><a class="anchor" href="#_cleanuprender"></a>CleanupRender</h3>
+<div class="paragraph">
+<p>The CleanupRender phase (see @CleanupRender) is the counterpart to SetupRender, allowing final cleanup to occur.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_using_method_names_instead_of_annotations"><a class="anchor" href="#_using_method_names_instead_of_annotations"></a>Using Method Names instead of Annotations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you prefer to avoid using annotations on your methods, you may do so by providing specific names for your methods.
+The required method name is the annotation name, with the first character decapitalized: <code>setupRender()</code>, <code>beginRender()</code>, etc.
+As with annotated render phase methods, Tapestry is flexible about visibility, return type and parameters.</p>
+</div>
+<div class="paragraph">
+<p>Using this mechanism, the earlier example can be rewritten as:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package org.example.app.components;
+
+import org.apache.tapestry5.annotations.Parameter;
+
+public class Count
+{
+    @Parameter
+    private int start = 1;
+
+    @Parameter(required = true)
+    private int end;
+
+    @Parameter
+    private int value;
+
+    private boolean increment;
+
+    void setupRender()
+    {
+        value = start;
+
+        increment = start &lt; end;
+    }
+
+    boolean afterRender()
+    {
+        if (increment)
+        {
+            int newValue = value + 1;
+
+            if (newValue &lt;= end)
+            {
+                value = newValue;
+                return false;
+            }
+        }
+        else
+        {
+            int newValue = value - 1;
+
+            if (newValue &gt;= end)
+            {
+                value = newValue;
+                return false;
+            }
+        }
+
+        return true;
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This style is a trade off: on the gain side, the code is even simpler and shorter, and the method names will, by design, be more consistent from one class to the next. The down side is that the names are very generic, and may in some cases, be less descriptive than using annotated methods (<code>initializeValue()</code> and <code>next()</code> are, to some eyes, more descriptive).</p>
+</div>
+<div class="paragraph">
+<p>You can, of course, mix and match, using specifically named render phase methods in some cases, and annotated render phase methods in other cases.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_rendering_components"><a class="anchor" href="#_rendering_components"></a>Rendering Components</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Instead of returning <code>true</code> or <code>false</code>, a render phase method may return a component.
+The component may have been injected via the <code>@Component</code> annotation, or may have been passed to the owning component as a parameter.</p>
+</div>
+<div class="paragraph">
+<p>In any case, returning a component will queue that component to be rendered <strong>before</strong> the active component continues rendering.</p>
+</div>
+<div class="paragraph">
+<p>The component to render may even be from a completely different page of the application.</p>
+</div>
+<div class="paragraph">
+<p>Recursive rendering of components is not allowed.</p>
+</div>
+<div class="paragraph">
+<p>This technique allows the rendering of Tapestry pages to be <em>highly</em> dynamic.</p>
+</div>
+<div class="paragraph">
+<p>Returning a component instance <strong>does not</strong> short circuit method invocation (as described below), the way returning a boolean would. It is possible that multiple methods may return components (this is not advised – insanity may ensue).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_additional_return_types"><a class="anchor" href="#_additional_return_types"></a>Additional Return Types</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Render phase methods may also return Blocks, Renderables or RenderCommands.</p>
+</div>
+<div class="paragraph">
+<p>The following component returns a Renderable in the BeginRender phase and skips the BeforeRenderTemplate phase:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class OutputValueComponent
+{
+    @Parameter
+    private String value;
+
+    Object beginRender()
+    {
+        return new Renderable()
+        {
+            public void render(MarkupWriter writer)
+            {
+                writer.write(value);
+            }
+        };
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_short_circuiting"><a class="anchor" href="#_short_circuiting"></a>Short Circuiting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If a method returns a <code>true</code> or <code>false</code> value, this will short circuit processing.
+Other methods within the phase that would ordinarily be invoked will not be invoked.</p>
+</div>
+<div class="paragraph">
+<p>Most render phase methods should return <code>void</code>, to avoid unintentionally short circuiting other methods for the same phase.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_method_conflicts_and_ordering"><a class="anchor" href="#_method_conflicts_and_ordering"></a>Method Conflicts and Ordering</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>It is possible to have multiple methods that are annotated with the same render phase annotation.
+This may include methods in the same class, or a mix of method defined in a class and inherited from other classes.</p>
+</div>
+<div class="sect2">
+<h3 id="_mixins_before_component"><a class="anchor" href="#_mixins_before_component"></a>Mixins Before Component</h3>
+<div class="paragraph">
+<p>When a component has mixins, then the mixins' render phase methods execute <em>before</em> the component&#8217;s render phase methods.
+If a mixin extends from a base class, the mixin&#8217;s parent class methods execute before the mixin subclass' render phase methods.</p>
+</div>
+<div class="paragraph">
+<p>Exception: Mixins whose class is annotated with @MixinAfter are ordered after the component, not before.</p>
+</div>
+<div class="paragraph">
+<p>The order in which the mixins of a given class (@MixinAfter or mixins before) execute is determined by the ordering constraints specified for the mixins.
+If no constraints are provided, the order is undefined. See Component Mixins for more details.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_parents_before_child"><a class="anchor" href="#_parents_before_child"></a>Parents before Child</h3>
+<div class="paragraph">
+<p>Ordering is always parent-first. Methods defined in the parent class are always invoked before methods defined in the child class.</p>
+</div>
+<div class="paragraph">
+<p>When a sub-class overrides an render phase method of a base class, the method is only invoked once, along with any other base class methods.
+The subclass can change the <em>implementation</em> of the base class method via an override, but can&#8217;t change the <em>timing</em> of when that method is invoked.
+See (<a href="https://issues.apache.org/jira/browse/TAPESTRY-2311)">TAPESTRY-2311</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_reverse_ordering_for_afterxxx_and_cleanuprender"><a class="anchor" href="#_reverse_ordering_for_afterxxx_and_cleanuprender"></a>Reverse Ordering for AfterXXX and CleanupRender</h3>
+<div class="paragraph">
+<p>The After_XXX_ phases exists to balance the Begin_XXX_ and Before_XXX_ phases.
+Often elements will be started inside an earlier phase and then the elements will be ended (closed) inside the corresponding After_XXX_ phase (with the body and template of the component rendering between).</p>
+</div>
+<div class="paragraph">
+<p>In order to ensure that operations occur in the correct, and natural order, the render phase methods for these two stages are invoked in <em>reverse order</em>:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Subclass methods</p>
+</li>
+<li>
+<p>Parent class methods</p>
+</li>
+<li>
+<p>Mixin subclass methods</p>
+</li>
+<li>
+<p>Mixin parent class methods</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_within_a_single_class"><a class="anchor" href="#_within_a_single_class"></a>Within a Single Class</h3>
+<div class="paragraph">
+<p>Currently, rendering methods having the same annotation within a single class are executed in alphabetical order by method name.
+Methods with the same name are ordered by number of parameters.
+Even so, annotating multiple methods with the same rendering phase is not a great idea.
+Instead, just define one method, and have it call the other methods in the order you desire.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_rendering_comments"><a class="anchor" href="#_rendering_comments"></a>Rendering Comments</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Starting with version 5.3, Tapestry can optionally emit rendering comments for all requests; these are comments such as <code>&lt;!--BEGIN Index:loop (context:Index.tml, line 15)-&#8594;</code> that can assist you in debugging markup output on the client-side.
+This will significantly increase the size of the rendered markup, but can be very helpful with complex layouts to determine which component was responsible for which portion of the rendered page.</p>
+</div>
+<div class="paragraph">
+<p>Rendering comments are only available when not running in <a href="configuration.html" class="xref page">production mode</a>.</p>
+</div>
+<div class="paragraph">
+<p>To turn on rendering comments for all requests, set the tapestry.component-render-tracing-enabled configuration symbol to <code>"true"</code>.</p>
+</div>
+<div class="paragraph">
+<p>To turn on rendering comments only for a particular request, add the query parameter <code>t:component-trace=true</code> to the URL:</p>
+</div>
+<div class="paragraph">
+<p><a href="http://www.example.com/myapp/mypage?t:component-trace=true" class="bare">http://www.example.com/myapp/mypage?t:component-trace=true</a></p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

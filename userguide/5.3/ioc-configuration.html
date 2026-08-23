@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>IoC Configuration :: Apache Tapestry</title>
+    <meta name="generator" content="Antora 3.1.15">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/tapestry.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../.."><img alt="Apache Tapestry Logo" src="../../_/img/apache-tapestry-icon-dark.svg" width="60" />Apache Tapestry</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Documentation</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../../main/getting-started.html">Getting Started</a>
+            <a class="navbar-item" href="../../main/tutorial/">Tutorial</a>
+            <a class="navbar-item" href="../../userguide/5.8/">User Guide</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="../../main/community.html">Community</a>
+        <a class="navbar-item" href="../../main/support.html">Support</a>
+        <a class="navbar-item" href="../../main/developers.html">Developers</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Apache</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+            <a class="navbar-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
+            <a class="navbar-item" href="https://www.apache.org/licenses/">License</a>
+            <a class="navbar-item" href="https://www.apache.org/security/">Security</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="../../main/download.html">Download</a>
+          </span>
+        </div>
+        <div class="navbar-brand">
+          <a href="https://www.apache.org/">
+          <img alt="The Apache Software Foundation" src="../../_/img/asf_logo.svg" width="200" height="63" style="padding-top: 5px; padding-bottom: 5px; background-color: white">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="body">
+<div class="nav-container" data-component="userguide" data-version="5.3">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">User Guide</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Introduction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry Core</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basics</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="project-layout.html">Project Layout</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="runtime-exceptions.html">Runtime Exceptions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="class-reloading.html">Class Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-reference.html">Component Reference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="annotations.html">Annotations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Pages and Components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-classes.html">Component Classes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-templates.html">Component Templates</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="property-expressions.html">Property Expressions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-parameters.html">Component Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="parameter-type-coercion.html">Parameter Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="layout-component.html">Layout Component</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-mixins.html">Component Mixins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-navigation.html">Page Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="localization.html">Localization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Request/Response Rendering</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-life-cycle.html">Page Life Cycle</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="request-processing.html">Request Processing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-rendering.html">Component Rendering</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-events.html">Component Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="url-rewriting.html">URL Rewriting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dom.html">Document Object Model (DOM)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="response-compression.html">Response Compression</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="security.html">Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https.html">HTTPS / SSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="content-type-and-markup.html">Content Type and Markup</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Data Persistence</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="persistent-page-data.html">Persistent Page Data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="session-storage.html">Session Storage</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Interacting with components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="injection.html">Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="environmental-services.html">Environmental Services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript, AJAX, CSS &amp; Binary Data</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="client-side-javascript.html">Client-Side JavaScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ajax-and-zones.html">AJAX and Zones</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="css.html">Cascading Style Sheets (CSS)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="assets.html">Assets</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Working with Forms</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="forms-and-validation.html">Forms and Validation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="beaneditform-guide.html">BeanEditForm Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uploading-files.html">Uploading Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bean-validation.html">Bean Validation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Logging, Debugging &amp; Testing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="logging.html">Logging</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unit-testing.html">Unit testing pages or components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integration-testing.html">Integration Testing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="development-dashboard.html">Development Dashboard</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry IOC</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-overview.html">IoC Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="symbols.html">Symbols</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="type-coercion.html">Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="case-insensitivity.html">Case Insensitivity</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="autoloading-modules.html">Autoloading Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="chainbuilder-service.html">ChainBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pipelinebuilder-service.html">PipelineBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="shadowbuilder-service.html">ShadowBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="strategybuilder-service.html">StrategyBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="defining-tapestry-ioc-services.html">Defining Tapestry IOC Services</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-modules.html">IoC Modules</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="ioc-configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="object-providers.html">Object Providers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-serialization.html">Service Serialization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="starting-the-ioc-registry.html">Starting the IoC Registry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="aliases.html">Aliases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="injection-in-detail.html">Injection in Detail</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ordering-by-constraints.html">Ordering by Constraints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="registry-startup.html">Registry Startup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="parallel-execution.html">Parallel Execution</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="logging-in-tapestry.html">Logging in Tapestry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-implementation-reloading.html">Service Implementation Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-advisors.html">Service Advisors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-decorators.html">Service Decorators</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="using-jsr-330-standard-annotations.html">Using JSR 330 standard annotations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="operation-tracker.html">Operation Tracker</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Add-ons and Integrations</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Built-in</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="hibernate.html">Hibernate Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="jpa.html">JPA Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integrating-with-spring-framework.html">Spring</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="third-party-modules.html">Third Party Modules</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Release Notes</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.3.html">Tapestry 5.3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.2.html">Tapestry 5.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.1.html">Tapestry 5.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.0.html">Tapestry 5.0</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cookbook</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/default-parameter.html">Default Parameter</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/overriding-exception-reporting.html">Overriding Exception Reporting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/error-page-recipe.html">Error Page Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/supporting-informal-parameters.html">Supporting Informal Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/switching-cases.html">Switching Cases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/enum-parameter-recipe.html">Enum Parameter Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/extending-the-if-component.html">Extending The If Component</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/meta-programming-page-content.html">Meta-Programming Page Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="cookbook/ioc-cookbook.html">IoC Cookbook</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-basic-services-and-injection.html">IoC Cookbook - Basic Services and Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-overriding-ioc-services.html">IoC Cookbook - Overriding IoC Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-patterns.html">IoC Cookbook - Patterns</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-service-configurations.html">IoC Cookbook - Service Configurations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/using-select-with-a-list.html">Using Select With a List</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/performance-and-clustering.html">Performance and Clustering</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/google-app-engine.html">Google App Engine (GAE)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frequently Asked Questions (FAQ)</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/general.html">General Questions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/templating-and-markup.html">Templating and Markup FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/ajax.html">AJAX FAQ</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">User Guide</span>
+    <span class="version">5.3</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../main/about.html">Home</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../current/index.html">User Guide</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../current/index.html">5.8</a>
+        </li>
+        <li class="version">
+          <a href="../5.7/index.html">5.7</a>
+        </li>
+        <li class="version">
+          <a href="../5.6/index.html">5.6</a>
+        </li>
+        <li class="version">
+          <a href="../5.5/index.html">5.5</a>
+        </li>
+        <li class="version">
+          <a href="../5.4/index.html">5.4</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">5.3</a>
+        </li>
+        <li class="version">
+          <a href="../5.2/index.html">5.2</a>
+        </li>
+        <li class="version">
+          <a href="../5.1/index.html">5.1</a>
+        </li>
+        <li class="version">
+          <a href="../5/index.html">5.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../main/about.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">User Guide</a></li>
+    <li>Tapestry IOC</li>
+    <li><a href="ioc-configuration.html">Configuration</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">5.3</button>
+  <div class="version-menu">
+    <a class="version" href="../current/ioc-configuration.html">5.8</a>
+    <a class="version" href="../5.7/ioc-configuration.html">5.7</a>
+    <a class="version" href="../5.6/ioc-configuration.html">5.6</a>
+    <a class="version" href="../5.5/ioc-configuration.html">5.5</a>
+    <a class="version" href="../5.4/ioc-configuration.html">5.4</a>
+    <a class="version is-current" href="ioc-configuration.html">5.3</a>
+    <a class="version" href="../5.2/ioc-configuration.html">5.2</a>
+    <a class="version" href="../5.1/ioc-configuration.html">5.1</a>
+    <a class="version" href="../5/ioc-configuration.html">5.0</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">IoC Configuration</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>IOC Configuration is the configuration of both the IOC services provided by Tapestry and those you write yourself.
+Both are configured in the same way: using Java, not XML.</p>
+</div>
+<div class="paragraph">
+<p>One of the key concepts in Tapestry IoC is <em>distributed configuration</em>.
+The distributed part refers to the fact that <em>any module</em> may configure a service.
+Distributed configuration is the key feature of Tapestry IoC that supports extensibility and modularity.</p>
+</div>
+<div class="paragraph">
+<p>Modules configure a service by <em>contributing</em> to service configurations.
+This may seem esoteric but is really pretty simple.
+We&#8217;ll explain with an example.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s say you&#8217;ve written a bunch of different services, each of which does something specific for a particular type of file (identified by the file&#8217;s extension), and each implements the same interface, which we&#8217;ll call <code>FileServicer</code>.
+And now let&#8217;s say you need a central service that selects the one of your FileServicer implementations based on a given file extension.
+You start by providing a <a href="defining-tapestry-ioc-services.html" class="xref page">service builder method</a>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public static FileServiceDispatcher buildFileServicerDispatcher(
+  Map&lt;String,FileServicer&gt; contributions)
+{
+  return new FileServiceDispatcherImpl(contributions);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In order to provide a value for the contribution parameter, Tapestry will <em>collect</em> contributions from service contribution methods.
+It will ensure that the keys and values match the generic types shown (<code>String</code> for the key, <code>FileServicer</code> for the value).
+The map will be assembled and passed into the service builder method, and from there, into the <code>FileServiceDispatcherImpl</code> constructor.</p>
+</div>
+<div class="paragraph">
+<p>So where do the values come from? Your service contributor methods, methods whose names start with "contribute":</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public static void contributeFileServicerDispatcher(
+  MappedConfiguration&lt;String,FileServicer&gt; configuration)
+{
+  configuration.add("txt", new TextFileServicer());
+  configuration.add("pdf", new PDFFileServicer());
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Or, instead of instantiating those services ourselves, we could inject them:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public static void contributeFileServicerDispatcher(
+  MappedConfiguration&lt;String,FileServicer&gt; configuration,
+  @InjectService("TextFileServicer") FileServicer textFileServicer,
+  @InjectService("PDFFileServicer") FileServicer pdfFileServicer)
+{
+  configuration.add("txt", textFileServicer);
+  configuration.add("pdf", pdfFileServicer);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The extensibility comes from the fact that multiple modules may all contribute to the same service configuration:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public static void contributeFileServicerDispatcher(
+  MappedConfiguration&lt;String,FileServicer&gt; configuration)
+{
+  configuration.add("doc", new WordFileServicer());
+  configuration.add("ppt", new PowerPointFileServicer());
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now the <code>FileServicerDispatcher</code> builder method gets a <code>Map</code> with at least four entries in it.</p>
+</div>
+<div class="paragraph">
+<p>Because Tapestry IoC is highly dynamic (it scans the visible JAR manifest files to identify module classes), the <code>FileServicerDispatcher</code> service may be in one module, and the other contributing modules (such as the one that contributes the Office file services) may be written at a much later date.
+With no change to the <code>FileServicerDispatcher</code> service or its module class, the new services "plug into" the overall solution, simply by having their JAR&#8217;s on the runtime classpath.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_naming_conventions_vs_annotations"><a class="anchor" href="#_naming_conventions_vs_annotations"></a>Naming conventions vs. Annotations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you prefer annotations over naming conventions you can use the <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/ioc/annotations/Contribute.html">@Contribute</a></code> annotation.
+As of version 5.2 this annotation that may be placed on a contributor method of a module instead of starting the methods name with "contribute".
+The value of the annotation is the type of the service to contribute into.
+The primary reasons to use <code>@Contribute</code> and marker annotations is twofold:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>There is no longer a linkage between the contribution method name and the service id, which is much more refactoring safe:
+if you change the service interface name, or the ID of the service, your method will still be invoked when using <code>@Contribute</code>.</p>
+</li>
+<li>
+<p>It makes it much easier for an override of the service to get the configuration intended for the original service.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following example is an annotation-based alternative for the contribution method above.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Contribute(FileServiceDispatcher.class)
+public static void arbitraryMethodName(
+  MappedConfiguration&lt;String,FileServicer&gt; configuration)
+{
+    configuration.add("doc", new WordFileServicer());
+    configuration.add("ppt", new PowerPointFileServicer());
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you have several implementations of a service interface, you have to disambiguate the services.
+For this purpose the marker annotations should be placed on the contributor method.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Contribute(FileServiceDispatcher.class)
+@Red @Blue
+public static void arbitraryMethodName(MappedConfiguration&lt;String,FileServicer&gt; configuration)
+{
+    configuration.add("doc", new WordFileServicer());
+    configuration.add("ppt", new PowerPointFileServicer());
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In this example, the method will only be invoked when constructing a service configuration where the service itself has both the <code>@Red</code> and <code>@Blue</code> marker annotations.
+Tapestry knows which annotations are marker annotations, and which marker annotations apply to the service, via the <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/ioc/annotations/Marker.html">@Marker</a></code> annotation on the service implementation.</p>
+</div>
+<div class="paragraph">
+<p>If the special <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/ioc/annotations/Local.html">@Local</a></code> annotation is present, then the contribution is made only to the configuration of a service being constructed in the same module.</p>
+</div>
+<div class="paragraph">
+<p>Note that it <em>is</em> possible for the same contribution method to be invoked to contribute to the configuration of multiple different services.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Contribute(FileServiceDispatcher.class)
+@Local
+public static void arbitraryMethodName(
+  MappedConfiguration&lt;String,FileServicer&gt; configuration)
+{
+  configuration.add("doc", new WordFileServicer());
+  configuration.add("ppt", new PowerPointFileServicer());
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configuration_types"><a class="anchor" href="#_configuration_types"></a>Configuration Types</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>There are three different styles of configurations (with matching contributions):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#_unordered_collection">Unordered Collection</a> – Contributions are simply added in and order is not important.</p>
+</li>
+<li>
+<p><a href="#_ordered_list">Ordered List</a> – Contributions are provided as an ordered list. Contributions must establish the order by giving each contributed object a unique id, by establishing forward and backward dependencies between the values.</p>
+</li>
+<li>
+<p><a href="#_map">Map</a> – Contributions provide unique keys and corresponding values.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_unordered_collection"><a class="anchor" href="#_unordered_collection"></a>Unordered Collection</h3>
+<div class="paragraph">
+<p>A service builder method can collect an unordered list of values by defining a parameter of type <code>java.util.Collection</code>.
+Further, you should parameterize the type of collection.
+Tapestry will identify the parameterized type and ensure that all contributions match.</p>
+</div>
+<div class="paragraph">
+<p>One thing to remember is that the order in which contributions occur is unspecified.
+There will be a possibly large number of modules, each having zero or more methods that contribute into the service.
+The order in which these methods are invoked is unknown.</p>
+</div>
+<div class="paragraph">
+<p>For example, here&#8217;s a kind of Startup service that needs some <code>Runnable</code> objects.
+It doesn&#8217;t care what order the <code>Runnable</code> objects are executed in.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public static Runnable buildStartup(
+  final Collection&lt;Runnable&gt; configuration)
+{
+  return new Runnable()
+  {
+    public void run()
+    {
+      for (Runnable contribution : configuration)
+        contribution.run();
+    }
+  };
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here we don&#8217;t even need a separate class for the implementation, we use an inner class for the implementation.
+The point is, the configuration is provided to the builder method, which passes it along to the implementation of the service.</p>
+</div>
+<div class="paragraph">
+<p>On the contribution side, a service contribution method sees a <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/ioc/Configuration.html">Configuration</a></code> object:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public static void contributeStartup(
+  Configuration&lt;Runnable&gt; configuration)
+{
+  configuration.add(new JMSStartup());
+  configuration.add(new FileSystemStartup());
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>Configuration</code> interface defines just a single method: <code>add()</code>.
+This is very intentional: the only thing you can do is add new items.
+If we passed in a <code>Collection</code>, you might be tempted to check it for values, or remove them &#8230;&#8203; but that flies in the face of the fact that the order of execution of these service contribution methods is entirely unknown.</p>
+</div>
+<div class="paragraph">
+<p>For readability, we&#8217;ve parameterized the configuration parameter of the method, constraining it to instances of <code>java.lang.Runnable</code>, so as to match the corresponding parameter.
+This is optional, but often very helpful.
+In any case, attempting to contribute an object that doesn&#8217;t extend or implement the type (<code>Runnable</code>) will result in a runtime warning (and the value will be ignored).</p>
+</div>
+<div class="paragraph">
+<p>Tapestry supports only this simple form of parameterized types.
+Java generics supports a wider form, "wildcards", that Tapestry doesn&#8217;t understand.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ordered_list"><a class="anchor" href="#_ordered_list"></a>Ordered List</h3>
+<div class="paragraph">
+<p>Ordered lists are much more common.
+With an ordered list, the contributions are sorted into a proper order before being provided to the service builder method.</p>
+</div>
+<div class="paragraph">
+<p>Again, the order in which service contribution methods are invoked is unknown.
+Therefore, the order in which objects are added to the configuration is not known.
+Instead, we enforce an order on the items after all the contributions have been added.
+As with <a href="service-decorators.html" class="xref page">service decorators</a>, we set the order by giving each contributed object a unique id, and identifying (by id) which items must preceded it in the list, and which must follow.</p>
+</div>
+<div class="paragraph">
+<p>So, if we changed our <code>Startup</code> service to require a specific order for startup:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public static Runnable buildStartup(final List&lt;Runnable&gt; configuration)
+{
+  return new Runnable()
+  {
+    public void run()
+    {
+      for (Runnable contribution : configuration)
+        contribution.run();
+    }
+  };
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Notice that the service builder method is shielded from the details of how the items are ordered.
+It doesn&#8217;t have to know about IDs and pre- and post-requisites.
+By using a parameter type of List, we&#8217;ve triggered Tapestry to collect all the ordering information.</p>
+</div>
+<div class="paragraph">
+<p>For our service contribution methods, we must provide a parameter of type <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/ioc/OrderedConfiguration.html">OrderedConfiguration</a></code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public static void contributeStartup(OrderedConfiguration&lt;Runnable&gt; configuration)
+{
+  configuration.add("JMS", new JMSStartup());
+  configuration.add("FileSystem", new FileSystemStartup(), "after:CacheSetup");
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Often, you don&#8217;t care about ordering; the first form of the add method is used then.
+The ordering algorithm will find a spot for the object (here the <code>JMSStartup</code> instance) based on the constraints of other contributed objects.</p>
+</div>
+<div class="paragraph">
+<p>For the "FileSystem" contribution, a constraint has been specified, indicating that "FileSystem" should be ordered after some other contribution named "CacheSetup".
+Any number of such ordering constraints may be specified (the <code>add()</code> method accepts a variable number of arguments).</p>
+</div>
+<div class="paragraph">
+<p>The object passed in may be null; this is valid, and is considered a "join point": points of reference in the list that don&#8217;t actually have any meaning of their own, but can be used when ordering other elements. <em>TODO: Show example for chain of command, once that&#8217;s put together.</em></p>
+</div>
+<div class="paragraph">
+<p>Null values, once ordered, are edited out (the <code>List</code> passed to the service builder method does not include any `null`s).
+Again, they are allowed as placeholders, for the actual contributed objects to organize themselves around.</p>
+</div>
+<div class="paragraph">
+<p>When using <code>add()</code> without any specific constraints, a default constraint is added: after the previously added element.
+These default constraints are only within a single contribution method, but makes it much easier to set the order of several related contributions.
+Note that the contributions will be ordered relative to each other and it&#8217;s possible that contributions by some other module or method may be interspersed between them.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_map"><a class="anchor" href="#_map"></a>Map</h3>
+<div class="paragraph">
+<p>As discussed in the earlier examples, mapped configurations are also supported.
+The keys passed in must be unique.
+When conflicts occur, Tapestry will log warnings (identifying the source of the conflict, in terms of invoked methods), and ignore the conflicting value.</p>
+</div>
+<div class="paragraph">
+<p>Neither the key nor the value may be <code>null</code>.</p>
+</div>
+<div class="paragraph">
+<p>For mapped configurations where the key type is <code>String</code>, a <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/ioc/util/CaseInsensitiveMap.html">CaseInsensitiveMap</a></code> will be automatically used (and passed to the service builder method), to help ensure that <a href="case-insensitivity.html" class="xref page">case insensitivity</a> is automatic and pervasive.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_injecting_classes"><a class="anchor" href="#_injecting_classes"></a>Injecting Classes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>All three configuration interfaces have a second method, <code>addInstance()</code>.
+This method takes a class, not an instance.
+The class is instantiated and contributed.
+If the constructor for the class takes dependencies, those are injected as well.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_injecting_resources"><a class="anchor" href="#_injecting_resources"></a>Injecting Resources</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In addition to injecting services into a contributor method (via the <code>@InjectService</code> and <code>@Inject</code> annotations), Tapestry will key off of the parameter type to allow other things to be injected.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/ioc/ObjectLocator.html">ObjectLocator</a></code>: access to other services visible to the contributing module</p>
+</li>
+<li>
+<p><code>org.slf4j.Logger</code>: the Logger for the service being contributed to</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>No annotation is needed for these cases.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configuration_overrides"><a class="anchor" href="#_configuration_overrides"></a>Configuration Overrides</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Added in 5.1<br>
+The <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/ioc/OrderedConfiguration.html">OrderedConfiguration</a></code> and <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/ioc/MappedConfiguration.html">MappedConfiguration</a></code> interfaces now support overrides.
+An override is a replacement for a normally contributed object.
+An override must match a contributed object, and each contributed object may be overridden at most once.
+The new object replaces the original object; alternately, you may override the original object with <code>null</code>.</p>
+</div>
+<div class="paragraph">
+<p>This allows you to fine tune configuration values that are contributed from modules that you are using, rather than just those that you write yourself.
+It is powerful and a bit dangerous.</p>
+</div>
+<div class="paragraph">
+<p>In Tapestry 5.0, services that wanted to support this kind of override behavior had to implement it on an ad-hoc basis, such as <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/ioc/services/ApplicationDefaults.html">ApplicationDefaults</a></code> overriding <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/ioc/services/FactoryDefaults.html">FactoryDefaults</a></code>.
+In many cases, that is still useful.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

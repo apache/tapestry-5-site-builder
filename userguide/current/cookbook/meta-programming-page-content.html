@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Meta-Programming Page Content :: Apache Tapestry</title>
+    <meta name="generator" content="Antora 3.1.15">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="stylesheet" href="../../../_/css/tapestry.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../.."><img alt="Apache Tapestry Logo" src="../../../_/img/apache-tapestry-icon-dark.svg" width="60" />Apache Tapestry</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Documentation</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../../../main/getting-started.html">Getting Started</a>
+            <a class="navbar-item" href="../../../main/tutorial/">Tutorial</a>
+            <a class="navbar-item" href="../../../userguide/5.8/">User Guide</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="../../../main/community.html">Community</a>
+        <a class="navbar-item" href="../../../main/support.html">Support</a>
+        <a class="navbar-item" href="../../../main/developers.html">Developers</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Apache</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+            <a class="navbar-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
+            <a class="navbar-item" href="https://www.apache.org/licenses/">License</a>
+            <a class="navbar-item" href="https://www.apache.org/security/">Security</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="../../../main/download.html">Download</a>
+          </span>
+        </div>
+        <div class="navbar-brand">
+          <a href="https://www.apache.org/">
+          <img alt="The Apache Software Foundation" src="../../../_/img/asf_logo.svg" width="200" height="63" style="padding-top: 5px; padding-bottom: 5px; background-color: white">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="body">
+<div class="nav-container" data-component="userguide" data-version="5.8">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">User Guide</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Introduction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry Core</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basics</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../project-layout.html">Project Layout</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../runtime-exceptions.html">Runtime Exceptions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../class-reloading.html">Class Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../component-reference.html">Component Reference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../annotations.html">Annotations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Pages and Components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../component-classes.html">Component Classes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../component-templates.html">Component Templates</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../property-expressions.html">Property Expressions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../component-parameters.html">Component Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../parameter-type-coercion.html">Parameter Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../layout-component.html">Layout Component</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../component-mixins.html">Component Mixins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../page-navigation.html">Page Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../localization.html">Localization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Request/Response Rendering</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../page-life-cycle.html">Page Life Cycle</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../request-processing.html">Request Processing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../component-rendering.html">Component Rendering</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../component-events.html">Component Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../url-rewriting.html">URL Rewriting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../dom.html">Document Object Model (DOM)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../response-compression.html">Response Compression</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../security.html">Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../https.html">HTTPS / SSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../content-type-and-markup.html">Content Type and Markup</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Data Persistence</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../persistent-page-data.html">Persistent Page Data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../session-storage.html">Session Storage</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Interacting with components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../injection.html">Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../environmental-services.html">Environmental Services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript, AJAX, CSS &amp; Binary Data</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../client-side-javascript.html">Client-Side JavaScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../javascript-modules.html">Javascript Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../coffeescript.html">Coffeescript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../typescript.html">TypeScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ajax-and-zones.html">AJAX and Zones</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../css.html">Cascading Style Sheets (CSS)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../assets.html">Assets</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cors.html">CORS (Cross-Origin Resource Sharing) Support</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Working with Forms</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../forms-and-validation.html">Forms and Validation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../beaneditform-guide.html">BeanEditForm Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../uploading-files.html">Uploading Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../bean-validation.html">Bean Validation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Logging, Debugging &amp; Testing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../logging.html">Logging</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../unit-testing.html">Unit testing pages or components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../integration-testing.html">Integration Testing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../development-dashboard.html">Development Dashboard</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry IOC</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../ioc-overview.html">IoC Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../symbols.html">Symbols</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../type-coercion.html">Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../case-insensitivity.html">Case Insensitivity</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../autoloading-modules.html">Autoloading Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../chainbuilder-service.html">ChainBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipelinebuilder-service.html">PipelineBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../shadowbuilder-service.html">ShadowBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../strategybuilder-service.html">StrategyBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../defining-tapestry-ioc-services.html">Defining Tapestry IOC Services</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../ioc-modules.html">IoC Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../ioc-configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../object-providers.html">Object Providers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../service-serialization.html">Service Serialization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../starting-the-ioc-registry.html">Starting the IoC Registry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../aliases.html">Aliases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../injection-in-detail.html">Injection in Detail</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../ordering-by-constraints.html">Ordering by Constraints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../registry-startup.html">Registry Startup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../parallel-execution.html">Parallel Execution</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../logging-in-tapestry.html">Logging in Tapestry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../service-implementation-reloading.html">Service Implementation Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../service-advisors.html">Service Advisors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../service-decorators.html">Service Decorators</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jsr-330-standard-annotations.html">Using JSR 330 standard annotations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../operation-tracker.html">Operation Tracker</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Add-ons and Integrations</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Built-in</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../hibernate.html">Hibernate Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../jpa.html">JPA Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../integrating-with-spring-framework.html">Spring</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../third-party-modules.html">Third Party Modules</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Release Notes</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes-5.8.html">Tapestry 5.8</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes-5.7.html">Tapestry 5.7</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes-5.6.html">Tapestry 5.6</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes-5.5.html">Tapestry 5.5</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes-5.4.html">Tapestry 5.4</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes-5.3.html">Tapestry 5.3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes-5.2.html">Tapestry 5.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes-5.1.html">Tapestry 5.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes-5.0.html">Tapestry 5.0</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cookbook</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="default-parameter.html">Default Parameter</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="overriding-exception-reporting.html">Overriding Exception Reporting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="error-page-recipe.html">Error Page Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="supporting-informal-parameters.html">Supporting Informal Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="component-libraries.html">Component Libraries</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="switching-cases.html">Switching Cases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="enum-parameter-recipe.html">Enum Parameter Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="extending-the-if-component.html">Extending The If Component</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="meta-programming-page-content.html">Meta-Programming Page Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="ioc-cookbook.html">IoC Cookbook</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ioc-cookbook-basic-services-and-injection.html">IoC Cookbook - Basic Services and Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ioc-cookbook-overriding-ioc-services.html">IoC Cookbook - Overriding IoC Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ioc-cookbook-patterns.html">IoC Cookbook - Patterns</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ioc-cookbook-service-configurations.html">IoC Cookbook - Service Configurations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="using-select-with-a-list.html">Using Select With a List</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="performance-and-clustering.html">Performance and Clustering</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="google-app-engine.html">Google App Engine (GAE)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frequently Asked Questions (FAQ)</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../faq/general.html">General Questions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../faq/templating-and-markup.html">Templating and Markup FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../faq/ajax.html">AJAX FAQ</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">User Guide</span>
+    <span class="version">5.8</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../../main/about.html">Home</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">User Guide</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">5.8</a>
+        </li>
+        <li class="version">
+          <a href="../../5.7/index.html">5.7</a>
+        </li>
+        <li class="version">
+          <a href="../../5.6/index.html">5.6</a>
+        </li>
+        <li class="version">
+          <a href="../../5.5/index.html">5.5</a>
+        </li>
+        <li class="version">
+          <a href="../../5.4/index.html">5.4</a>
+        </li>
+        <li class="version">
+          <a href="../../5.3/index.html">5.3</a>
+        </li>
+        <li class="version">
+          <a href="../../5.2/index.html">5.2</a>
+        </li>
+        <li class="version">
+          <a href="../../5.1/index.html">5.1</a>
+        </li>
+        <li class="version">
+          <a href="../../5/index.html">5.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../main/about.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">User Guide</a></li>
+    <li>Cookbook</li>
+    <li><a href="meta-programming-page-content.html">Meta-Programming Page Content</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">5.8</button>
+  <div class="version-menu">
+    <a class="version is-current" href="meta-programming-page-content.html">5.8</a>
+    <a class="version" href="../../5.7/cookbook/meta-programming-page-content.html">5.7</a>
+    <a class="version" href="../../5.6/cookbook/meta-programming-page-content.html">5.6</a>
+    <a class="version" href="../../5.5/cookbook/meta-programming-page-content.html">5.5</a>
+    <a class="version" href="../../5.4/cookbook/meta-programming-page-content.html">5.4</a>
+    <a class="version" href="../../5.3/cookbook/meta-programming-page-content.html">5.3</a>
+    <a class="version" href="../../5.2/cookbook/meta-programming-page-content.html">5.2</a>
+    <a class="version is-missing" href="../../5.1/index.html">5.1</a>
+    <a class="version is-missing" href="../../5/index.html">5.0</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Meta-Programming Page Content</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>It is likely that you have some cross-cutting concerns across your pages, specific features you would like to "mix in" to your pages without getting tied into knots by inheritance.
+This is one of those areas where Tapestry shines.</p>
+</div>
+<div class="paragraph">
+<p>This specific example is adapted from a real client requirement: the client was concerned about other sites wrapping his content in a frameset and making the site content appear to be theirs.
+Not all pages (in some cases, that would be an advantage) but specific pages in the application.
+For those pages, the following behaviors were required:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Set the <code>X-Frame-Options</code> response header to <code>DENY</code></p>
+</li>
+<li>
+<p>Include JavaScript to "pop" the page out of a frame, if in one</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Again, this <em>could</em> be done by having a specific base-class that included a <code>beginRender()</code> method, but the meta-programming approach is nearly as easy and much more flexible.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_component_meta_data"><a class="anchor" href="#_component_meta_data"></a>Component Meta-Data</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In Tapestry, every component (and remember, pages are components) has <em>meta data</em>: an extra set of key/value pairs stored in the component&#8217;s <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/ComponentResources.html">ComponentResources</a></code>.</p>
+</div>
+<div class="paragraph">
+<p>By hooking into the component class transformation pipeline, we can change an annotation into meta-data that can be accessed by a filter.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_defining_the_annotation"><a class="anchor" href="#_defining_the_annotation"></a>Defining the Annotation</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="title">ForbidFraming.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package com.fnord.annotations;
+
+import java.lang.annotation.Documented;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Inherited;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+/**
+ * Marker annotation for pages that should not allow framing.
+ */
+@Target({ ElementType.TYPE })
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+@Inherited
+public @interface ForbidFraming {
+
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This annotation presence is all that&#8217;s needed; there aren&#8217;t any additional attributes to configure it.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_converting_the_annotation_into_meta_data"><a class="anchor" href="#_converting_the_annotation_into_meta_data"></a>Converting the Annotation into Meta-Data</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This is in three parts:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Define the meta-data key, and define a constant for that key</p>
+</li>
+<li>
+<p>Set a default meta-data value for the key</p>
+</li>
+<li>
+<p>Set a different value for the key when the annotation is present</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Our key is just <code>forbid-framing</code>, with values <code>true</code> and <code>false</code>.
+The default is <code>false</code>.</p>
+</div>
+<div class="sect2">
+<h3 id="_defining_the_constant"><a class="anchor" href="#_defining_the_constant"></a>Defining the Constant</h3>
+<div class="listingblock">
+<div class="title">FnordSymbols.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package com.fnord;
+
+import org.apache.tapestry5.http.services.BaseURLSource;
+
+import com.fnord.annotations.ForbidFraming;
+
+public class FnordSymbols {
+
+  /**
+   * Meta-data key; when true, MarkupRendererFilter will inject some extra
+   * content into the response to enforce that the content may not be framed
+   * (i.e., "stolen").
+   *
+   * @see ForbidFraming
+   */
+  public static final String FORBID_FRAMING = "forbid-framing";
+
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_setting_the_meta_data_default"><a class="anchor" href="#_setting_the_meta_data_default"></a>Setting the Meta-Data Default</h3>
+<div class="paragraph">
+<p>Next, we&#8217;ll create a module just for the logic directly related to framing.
+In the module, we&#8217;ll define the default value for the meta-data.</p>
+</div>
+<div class="listingblock">
+<div class="title">ForbidFramingModule.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package com.fnord.services.forbidframing;
+
+import org.apache.tapestry5.commons.MappedConfiguration;
+import org.apache.tapestry5.ioc.annotations.Contribute;
+import org.apache.tapestry5.ioc.services.FactoryDefaults;
+import org.apache.tapestry5.ioc.services.SymbolProvider;
+
+import com.fnord.FnordSymbols;
+
+public class ForbidFramingModule {
+
+  @Contribute(SymbolProvider.class)
+  @FactoryDefaults
+  public static void setupForbidFramingDefault(
+      MappedConfiguration&lt;String, String&gt; configuration) {
+    configuration.add(FnordSymbols.FORBID_FRAMING, "false");
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mapping_the_annotation"><a class="anchor" href="#_mapping_the_annotation"></a>Mapping the Annotation</h3>
+<div class="paragraph">
+<p>Most of the work has already been done for us: we just have to make a contribution to the <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/services/meta/MetaWorker.html">MetaWorker</a></code> service, which is already plugged into the component class transformation pipeline.
+<code>MetaWorker</code> spots the annotations we define and uses a second object, a <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/services/meta/MetaDataExtractor.html">MetaDataExtractor</a></code>, to convert the annotation into a meta-data value.</p>
+</div>
+<div class="listingblock">
+<div class="title">ForbidFramingModule.java (partial)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">  @Contribute(MetaWorker.class)
+  public static void mapAnnotationsToMetaDataValue(
+      MappedConfiguration&lt;Class, MetaDataExtractor&gt; configuration) {
+    configuration
+        .add(ForbidFraming.class, new FixedExtractor&lt;ForbidFraming&gt;(
+            FnordSymbols.FORBID_FRAMING));
+  }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If the <code>ForbidFraming</code> annotation had attributes, we would have provided an implementation of <code>MetaDataExtractor</code> that examined those attributes to set the meta-data value.
+Since it has no attributes, the <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/services/meta/FixedExtractor.html">FixedExtractor</a></code> class can be used.
+The argument is the meta-data key, and the default value is <code>true</code>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugging_into_page_rendering"><a class="anchor" href="#_plugging_into_page_rendering"></a>Plugging Into Page Rendering</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The work we ultimately want to do occurs when rendering a page.
+Tapestry defines a pipeline for that overall process.
+The point of a pipeline is that we can add filters to it.
+We&#8217;ll add a filter that checks for the meta-data key and adds the response header and JavaScript.</p>
+</div>
+<div class="paragraph">
+<p>The service is <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/services/MarkupRenderer.html">MarkupRenderer</a></code>, which (being a pipeline service), takes a configuration of filters (in this case, <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/services/MarkupRendererFilter.html">MarkupRendererFilter</a></code>).</p>
+</div>
+<div class="paragraph">
+<p>We contribute into the pipeline; the order is important: since the filter will need to write JavaScript, it must be added <em>after</em> the built-in filter that provides the <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/services/javascript/JavaScriptSupport.html">JavaScriptSupport</a></code> environmental object.</p>
+</div>
+<div class="listingblock">
+<div class="title">ForbidFramingModule.java (partial)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">  @Contribute(MarkupRenderer.class)
+  public static void addFilter(
+      OrderedConfiguration&lt;MarkupRendererFilter&gt; configuration) {
+    configuration.addInstance("ForbidFraming", ForbidFramingFilter.class,
+        "after:JavascriptSupport");
+  }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>How do you know what filters are built-in and where to add your own?
+The right starting point is the JavaDoc for the method of <code>TapestryModule</code> that contributes the base set: <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/modules/TapestryModule.html">contributeMarkupRenderer()</a></code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_implementing_the_filter"><a class="anchor" href="#_implementing_the_filter"></a>Implementing the Filter</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Everything comes together in the filter:</p>
+</div>
+<div class="listingblock">
+<div class="title">ForbidFramingFilter.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package com.fnord.services.forbidframing;
+
+import org.apache.tapestry5.MarkupWriter;
+import org.apache.tapestry5.ioc.annotations.Inject;
+import org.apache.tapestry5.services.MarkupRenderer;
+import org.apache.tapestry5.services.MarkupRendererFilter;
+import org.apache.tapestry5.services.MetaDataLocator;
+import org.apache.tapestry5.services.RequestGlobals;
+import org.apache.tapestry5.services.Response;
+import org.apache.tapestry5.services.javascript.InitializationPriority;
+import org.apache.tapestry5.services.javascript.JavaScriptSupport;
+
+import com.fnord.FnordSymbols;
+
+public class ForbidFramingFilter implements MarkupRendererFilter {
+
+  @Inject
+  private RequestGlobals requestGlobals;
+
+  @Inject
+  private MetaDataLocator metaDataLocator;
+
+  @Inject
+  private Response response;
+
+  @Inject
+  private JavaScriptSupport jsSupport;
+
+  public void renderMarkup(MarkupWriter writer, MarkupRenderer renderer) {
+    String pageName = requestGlobals.getActivePageName();
+
+    boolean forbidFraming = metaDataLocator.findMeta(
+        FnordSymbols.FORBID_FRAMING, pageName, boolean.class);
+
+    if (forbidFraming) {
+      response.setHeader("X-Frame-Options", "DENY");
+
+      jsSupport.addScript(InitializationPriority.IMMEDIATE,
+          "Fnord.popOutOfFrame();");
+    }
+
+    renderer.renderMarkup(writer);
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>There&#8217;s a bit going on in this short piece of code.
+The heart of the code is the <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/services/MetaDataLocator.html">MetaDataLocator</a></code> service; given a meta-data key and a page name, it can not only extract the value, but then coerce it to a desired type, all in one go.</p>
+</div>
+<div class="paragraph">
+<p>How do we know which page is being rendered?
+Before Tapestry 5.2 that was a small challenge, but 5.2 adds a method to <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/http/services/RequestGlobals.html">RequestGlobals.getActivePageName()</a></code> for this exact purpose.</p>
+</div>
+<div class="paragraph">
+<p>Both <code>Request</code> and <code>JavaScriptSupport</code> are per-thread/per-request services.
+You don&#8217;t see that here, because that&#8217;s part of the service definition, and invisible to the consumer code, as here.</p>
+</div>
+<div class="paragraph">
+<p>Of course, it is vitally important that the filter re-invoke <code>renderMarkup()</code> on the next renderer in the pipeline (you can see that as the last line of the method).</p>
+</div>
+<div class="paragraph">
+<p>This code makes one assumption: that the fnord application&#8217;s Layout component added <code>fnord.js</code> to every page.
+That&#8217;s necessary for the JavaScript that&#8217;s added:</p>
+</div>
+<div class="listingblock">
+<div class="title">fnord.js (partial)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">Fnord = {
+  popOutOfFrame : function() {
+    if (top != self)
+      top.location.replace(location);
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_conclusion"><a class="anchor" href="#_conclusion"></a>Conclusion</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>That&#8217;s it: with the above code, simply adding the <code>@ForbidFraming</code> annotation to a page will add the response header and associated JavaScript; no inheritance hassles.
+This basic pattern can be applied to a wide range of cross-cutting concerns, such as security, transaction management, logging, or virtually any other kind of situation that would normally be solved with inheritance or ugly boilerplate code.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script src="../../../_/js/vendor/lunr.js"></script>
+<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
+<script async src="../../../search-index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Supported Environments and Versions :: Apache Tapestry</title>
+    <meta name="generator" content="Antora 3.1.15">
+    <link rel="stylesheet" href="../_/css/site.css">
+    <link rel="stylesheet" href="../_/css/tapestry.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href=".."><img alt="Apache Tapestry Logo" src="../_/img/apache-tapestry-icon-dark.svg" width="60" />Apache Tapestry</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Documentation</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../main/getting-started.html">Getting Started</a>
+            <a class="navbar-item" href="../main/tutorial/">Tutorial</a>
+            <a class="navbar-item" href="../userguide/5.8/">User Guide</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="../main/community.html">Community</a>
+        <a class="navbar-item" href="../main/support.html">Support</a>
+        <a class="navbar-item" href="../main/developers.html">Developers</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Apache</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+            <a class="navbar-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
+            <a class="navbar-item" href="https://www.apache.org/licenses/">License</a>
+            <a class="navbar-item" href="https://www.apache.org/security/">Security</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="../main/download.html">Download</a>
+          </span>
+        </div>
+        <div class="navbar-brand">
+          <a href="https://www.apache.org/">
+          <img alt="The Apache Software Foundation" src="../_/img/asf_logo.svg" width="200" height="63" style="padding-top: 5px; padding-bottom: 5px; background-color: white">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="body">
+<div class="nav-container" data-component="main" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="about.html">Home</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="about.html">About</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="principles.html">Principles</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Documentation</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="getting-started.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tutorial</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tutorial/index.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tutorial/dependencies-tools-and-plugins.html">Dependencies, Tools and Plugins</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tutorial/creating-the-skeleton-application.html">Creating the Skeleton Application</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tutorial/exploring-the-project.html">Exploring the Project</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tutorial/implementing-the-hi-lo-guessing-game.html">Implementing the Hi-Lo Guessing Game</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tutorial/using-beaneditform-to-create-user-forms.html">Using BeanEditForm To Create User Forms</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tutorial/using-tapestry-with-hibernate.html">Using Tapestry With Hibernate</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="userguide.html">User Guide</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Home</span>
+    <span class="version"></span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="about.html">Home</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../userguide/current/index.html">User Guide</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../userguide/current/index.html">5.8</a>
+        </li>
+        <li class="version">
+          <a href="../userguide/5.7/index.html">5.7</a>
+        </li>
+        <li class="version">
+          <a href="../userguide/5.6/index.html">5.6</a>
+        </li>
+        <li class="version">
+          <a href="../userguide/5.5/index.html">5.5</a>
+        </li>
+        <li class="version">
+          <a href="../userguide/5.4/index.html">5.4</a>
+        </li>
+        <li class="version">
+          <a href="../userguide/5.3/index.html">5.3</a>
+        </li>
+        <li class="version">
+          <a href="../userguide/5.2/index.html">5.2</a>
+        </li>
+        <li class="version">
+          <a href="../userguide/5.1/index.html">5.1</a>
+        </li>
+        <li class="version">
+          <a href="../userguide/5/index.html">5.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="about.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="about.html">Home</a></li>
+    <li><a href="supported-environments-and-versions.html">Supported Environments and Versions</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Supported Environments and Versions</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tapestry is compatible with a wide range of app servers, Java versions, and open source libraries. Not all combinations are known to work, however.</p>
+</div>
+<div class="paragraph">
+<p>Note: blanks in the support matrix tables below do NOT indicate incompatibility. They are just documentation gaps.</p>
+</div>
+<div class="paragraph">
+<p>If you know of any other known compatibilities or incompatibilities, please add a comment on the <a href="http://mail-archives.apache.org/mod_mbox/tapestry-users/">Tapestry Users mailing list</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_java_servlet_api_version"><a class="anchor" href="#_java_servlet_api_version"></a>Java &amp; Servlet API Version</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Tapestry</th>
+<th class="tableblock halign-left valign-top">5.8.4+</th>
+<th class="tableblock halign-left valign-top">5.8.1 - 5.8-3</th>
+<th class="tableblock halign-left valign-top">5.7</th>
+<th class="tableblock halign-left valign-top">5.6</th>
+<th class="tableblock halign-left valign-top">5.5</th>
+<th class="tableblock halign-left valign-top">5.4</th>
+<th class="tableblock halign-left valign-top">5.3.8</th>
+<th class="tableblock halign-left valign-top">5.3.0 - 5.3.7</th>
+<th class="tableblock halign-left valign-top">5.0 - 5.2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Java JRE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8-21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8-17</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8-14</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8-14</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8-12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7,8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6-8 <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6,7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5,6</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Servlet API</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.0+</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.0+</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.0+</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.0+</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.0+</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.5+</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.5+</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.5+</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.4+</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_app_servers"><a class="anchor" href="#_app_servers"></a>App Servers</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Tapestry</th>
+<th class="tableblock halign-left valign-top">5.5+</th>
+<th class="tableblock halign-left valign-top">5.4</th>
+<th class="tableblock halign-left valign-top">5.3.8</th>
+<th class="tableblock halign-left valign-top">5.3.0 - 5.3.7</th>
+<th class="tableblock halign-left valign-top">5.2</th>
+<th class="tableblock halign-left valign-top">5.1</th>
+<th class="tableblock halign-left valign-top">5.0.10</th>
+<th class="tableblock halign-left valign-top">5.0.8</th>
+<th class="tableblock halign-left valign-top">5.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Apache Tomcat</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6+</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6+</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jetty</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7-9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6-9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6-8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6-8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6-8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6-8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6-8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6-8</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Glassfish</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.1</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JBoss EAP</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.2.3</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4+</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_libraries"><a class="anchor" href="#_libraries"></a>Libraries</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>These are the library versions known to work (and, in some cases, bundled with Tapestry). Unless otherwise noted, adjacent versions will often work fine as well.</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Tapestry</th>
+<th class="tableblock halign-left valign-top">5.7.3+</th>
+<th class="tableblock halign-left valign-top">5.5+</th>
+<th class="tableblock halign-left valign-top">5.4.1</th>
+<th class="tableblock halign-left valign-top">5.4</th>
+<th class="tableblock halign-left valign-top">5.3.8</th>
+<th class="tableblock halign-left valign-top">5.3.7</th>
+<th class="tableblock halign-left valign-top">5.3.3-5.3.6</th>
+<th class="tableblock halign-left valign-top">5.3.2</th>
+<th class="tableblock halign-left valign-top">5.3 - 5.3.1</th>
+<th class="tableblock halign-left valign-top">5.2.1 - 5.2.0</th>
+<th class="tableblock halign-left valign-top">5.1</th>
+<th class="tableblock halign-left valign-top">5.0.16</th>
+<th class="tableblock halign-left valign-top">5.0.10</th>
+<th class="tableblock halign-left valign-top">5.0.8</th>
+<th class="tableblock halign-left valign-top">5.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hibernate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.4.32.Final</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.1.0.Final</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">? - 4.3.6</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.5.4 - 3.6.0</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.3.0+</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Spring</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1.0</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">jQuery.js</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.12.1</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prototype.js</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.7.1</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.6.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.6.0.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.6.0.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.6.0.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.6</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Scriptaculous</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.8.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.8.2</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.8.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bootstrap CSS</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.3.1, 3.3.6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.3.6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.0.2</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Moment.js</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.12.0</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Less4J</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.2.1 - 1.9</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Underscore.js</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.3.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1.7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1.7</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><strong>Java 9+ Dependency Deprecations.</strong>
+With the introduction of the <a href="http://openjdk.java.net/projects/jigsaw/">Java module system</a> in version 9, various Java EE dependencies were declared deprecated, and removed entirely in version 11.
+This might lead to <code>java.lang.NoClassDefFoundError</code> exceptions for  <code>javax</code>-package classes, like missing <code>javax.xml.bind.JAXBException</code> for <code>tapstry-hibernate</code>.
+Until all related libraries and frameworks add the now missing dependencies explicitly, you might have to re-add them yourself, if no other dependency is pulling them into your project.
+See <a href="https://stackoverflow.com/questions/43574426/how-to-resolve-java-lang-noclassdeffounderror-javax-xml-bind-jaxbexception" class="bare">https://stackoverflow.com/questions/43574426/how-to-resolve-java-lang-noclassdeffounderror-javax-xml-bind-jaxbexception</a> and <a href="https://crunchify.com/java-11-and-javax-xml-bind-jaxbcontext/" class="bare">https://crunchify.com/java-11-and-javax-xml-bind-jaxbcontext/</a> for more information about the deprecation and removal of the Java EE dependencies, and how to remedy.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. For using Tapestry 5.3.8 with Java 8 see <a href="../userguide/current/release-notes-5.3.html#_release_notes_5_3_8" class="xref page">Release Notes 5.3.8</a>.
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+<script src="../_/js/vendor/lunr.js"></script>
+<script src="../_/js/search-ui.js" id="search-ui-script" data-site-root-path=".." data-snippet-length="100" data-stylesheet="../_/css/search.css"></script>
+<script async src="../search-index.js"></script>
+  </body>
+</html>

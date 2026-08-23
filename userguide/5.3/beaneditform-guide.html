@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>BeanEditForm Guide :: Apache Tapestry</title>
+    <meta name="generator" content="Antora 3.1.15">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/tapestry.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../.."><img alt="Apache Tapestry Logo" src="../../_/img/apache-tapestry-icon-dark.svg" width="60" />Apache Tapestry</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Documentation</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../../main/getting-started.html">Getting Started</a>
+            <a class="navbar-item" href="../../main/tutorial/">Tutorial</a>
+            <a class="navbar-item" href="../../userguide/5.8/">User Guide</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="../../main/community.html">Community</a>
+        <a class="navbar-item" href="../../main/support.html">Support</a>
+        <a class="navbar-item" href="../../main/developers.html">Developers</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Apache</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+            <a class="navbar-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
+            <a class="navbar-item" href="https://www.apache.org/licenses/">License</a>
+            <a class="navbar-item" href="https://www.apache.org/security/">Security</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="../../main/download.html">Download</a>
+          </span>
+        </div>
+        <div class="navbar-brand">
+          <a href="https://www.apache.org/">
+          <img alt="The Apache Software Foundation" src="../../_/img/asf_logo.svg" width="200" height="63" style="padding-top: 5px; padding-bottom: 5px; background-color: white">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="body">
+<div class="nav-container" data-component="userguide" data-version="5.3">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">User Guide</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Introduction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry Core</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basics</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="project-layout.html">Project Layout</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="runtime-exceptions.html">Runtime Exceptions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="class-reloading.html">Class Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-reference.html">Component Reference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="annotations.html">Annotations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Pages and Components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-classes.html">Component Classes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-templates.html">Component Templates</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="property-expressions.html">Property Expressions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-parameters.html">Component Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="parameter-type-coercion.html">Parameter Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="layout-component.html">Layout Component</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-mixins.html">Component Mixins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-navigation.html">Page Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="localization.html">Localization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Request/Response Rendering</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-life-cycle.html">Page Life Cycle</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="request-processing.html">Request Processing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-rendering.html">Component Rendering</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-events.html">Component Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="url-rewriting.html">URL Rewriting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dom.html">Document Object Model (DOM)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="response-compression.html">Response Compression</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="security.html">Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https.html">HTTPS / SSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="content-type-and-markup.html">Content Type and Markup</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Data Persistence</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="persistent-page-data.html">Persistent Page Data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="session-storage.html">Session Storage</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Interacting with components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="injection.html">Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="environmental-services.html">Environmental Services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript, AJAX, CSS &amp; Binary Data</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="client-side-javascript.html">Client-Side JavaScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ajax-and-zones.html">AJAX and Zones</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="css.html">Cascading Style Sheets (CSS)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="assets.html">Assets</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Working with Forms</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="forms-and-validation.html">Forms and Validation</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="beaneditform-guide.html">BeanEditForm Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uploading-files.html">Uploading Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bean-validation.html">Bean Validation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Logging, Debugging &amp; Testing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="logging.html">Logging</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unit-testing.html">Unit testing pages or components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integration-testing.html">Integration Testing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="development-dashboard.html">Development Dashboard</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry IOC</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-overview.html">IoC Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="symbols.html">Symbols</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="type-coercion.html">Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="case-insensitivity.html">Case Insensitivity</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="autoloading-modules.html">Autoloading Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="chainbuilder-service.html">ChainBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pipelinebuilder-service.html">PipelineBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="shadowbuilder-service.html">ShadowBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="strategybuilder-service.html">StrategyBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="defining-tapestry-ioc-services.html">Defining Tapestry IOC Services</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-modules.html">IoC Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="object-providers.html">Object Providers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-serialization.html">Service Serialization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="starting-the-ioc-registry.html">Starting the IoC Registry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="aliases.html">Aliases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="injection-in-detail.html">Injection in Detail</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ordering-by-constraints.html">Ordering by Constraints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="registry-startup.html">Registry Startup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="parallel-execution.html">Parallel Execution</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="logging-in-tapestry.html">Logging in Tapestry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-implementation-reloading.html">Service Implementation Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-advisors.html">Service Advisors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-decorators.html">Service Decorators</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="using-jsr-330-standard-annotations.html">Using JSR 330 standard annotations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="operation-tracker.html">Operation Tracker</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Add-ons and Integrations</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Built-in</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="hibernate.html">Hibernate Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="jpa.html">JPA Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integrating-with-spring-framework.html">Spring</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="third-party-modules.html">Third Party Modules</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Release Notes</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.3.html">Tapestry 5.3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.2.html">Tapestry 5.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.1.html">Tapestry 5.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.0.html">Tapestry 5.0</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cookbook</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/default-parameter.html">Default Parameter</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/overriding-exception-reporting.html">Overriding Exception Reporting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/error-page-recipe.html">Error Page Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/supporting-informal-parameters.html">Supporting Informal Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/switching-cases.html">Switching Cases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/enum-parameter-recipe.html">Enum Parameter Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/extending-the-if-component.html">Extending The If Component</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/meta-programming-page-content.html">Meta-Programming Page Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="cookbook/ioc-cookbook.html">IoC Cookbook</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-basic-services-and-injection.html">IoC Cookbook - Basic Services and Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-overriding-ioc-services.html">IoC Cookbook - Overriding IoC Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-patterns.html">IoC Cookbook - Patterns</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-service-configurations.html">IoC Cookbook - Service Configurations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/using-select-with-a-list.html">Using Select With a List</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/performance-and-clustering.html">Performance and Clustering</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/google-app-engine.html">Google App Engine (GAE)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frequently Asked Questions (FAQ)</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/general.html">General Questions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/templating-and-markup.html">Templating and Markup FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/ajax.html">AJAX FAQ</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">User Guide</span>
+    <span class="version">5.3</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../main/about.html">Home</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../current/index.html">User Guide</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../current/index.html">5.8</a>
+        </li>
+        <li class="version">
+          <a href="../5.7/index.html">5.7</a>
+        </li>
+        <li class="version">
+          <a href="../5.6/index.html">5.6</a>
+        </li>
+        <li class="version">
+          <a href="../5.5/index.html">5.5</a>
+        </li>
+        <li class="version">
+          <a href="../5.4/index.html">5.4</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">5.3</a>
+        </li>
+        <li class="version">
+          <a href="../5.2/index.html">5.2</a>
+        </li>
+        <li class="version">
+          <a href="../5.1/index.html">5.1</a>
+        </li>
+        <li class="version">
+          <a href="../5/index.html">5.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../main/about.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">User Guide</a></li>
+    <li>Tapestry Core</li>
+    <li>Working with Forms</li>
+    <li><a href="beaneditform-guide.html">BeanEditForm Guide</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">5.3</button>
+  <div class="version-menu">
+    <a class="version" href="../current/beaneditform-guide.html">5.8</a>
+    <a class="version" href="../5.7/beaneditform-guide.html">5.7</a>
+    <a class="version" href="../5.6/beaneditform-guide.html">5.6</a>
+    <a class="version" href="../5.5/beaneditform-guide.html">5.5</a>
+    <a class="version" href="../5.4/beaneditform-guide.html">5.4</a>
+    <a class="version is-current" href="beaneditform-guide.html">5.3</a>
+    <a class="version" href="../5.2/beaneditform-guide.html">5.2</a>
+    <a class="version" href="../5.1/beaneditform-guide.html">5.1</a>
+    <a class="version" href="../5/beaneditform-guide.html">5.0</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">BeanEditForm Guide</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/BeanEditForm.html">BeanEditForm</a></code> is a powerful Tapestry component capable of generating a complete create/edit user interface for a typical JavaBean.</p>
+</div>
+<div class="paragraph">
+<p><code>BeanEditForm</code> analyzes the the properties of the bean, locating just those properties that are readable and writeable.
+It filters down to properties whose type is mapped to a known editor (this is described in more detail below).</p>
+</div>
+<div class="paragraph">
+<p>The default ordering for properties is in the order in which the <em>getter methods</em> for the properties are defined.
+When a super-class defines editable properties, those are ordered before sub-class properties.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_supported_types"><a class="anchor" href="#_supported_types"></a>Supported Types</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The default set of property types supported by <code>BeanEditForm</code>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>String</code>: as a text field</p>
+</li>
+<li>
+<p><code>Number</code>: as a text field</p>
+</li>
+<li>
+<p><code>Enum</code>: as a drop-down list</p>
+</li>
+<li>
+<p><code>Boolean</code>: as a checkbox</p>
+</li>
+<li>
+<p><code>Date</code>: as a JavaScript calendar</p>
+</li>
+<li>
+<p><code>Calendar</code>: as a JavaScript calendar</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Resolving a property type to an editor type involves a search up the inheritance hierarchy: thus the super-type of <code>Integer</code>, <code>Long</code>, <code>BigDecimal</code>, etc. is <code>Number</code>, which uses a text field for data entry.</p>
+</div>
+<div class="paragraph">
+<p>The list of supported property types is extensible (this is documented below).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_automatic_object_creation"><a class="anchor" href="#_automatic_object_creation"></a>Automatic Object Creation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When a page is rendered, the <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/BeanEditForm.html">BeanEditForm</a></code> component will read its object parameter as the JavaBean to edit (with the current properties of the JavaBean becoming the defaults for the various fields).
+Likewise, when the form is submitted by the user, the object parameter is read and its properties populated from the request.</p>
+</div>
+<div class="paragraph">
+<p>If the object does not exist, it will be created as needed.
+The type is determined from the property type, which should be a specific type in order for automatic creation to operate properly.</p>
+</div>
+<div class="paragraph">
+<p>The <code>BeanEditForm</code> component will attempt to instantiate a value for the property as necessary, when the form is submitted.
+This can be a problem when the property type is an interface, rather than an instantiable class.</p>
+</div>
+<div class="paragraph">
+<p>One option is to provide an event handler for the <code>prepare</code> or <code>prepareForSubmit</code> events to instantiate an instance to receive the submitted information.</p>
+</div>
+<div class="paragraph">
+<p>For a class, Tapestry will select the public constructor with the <em>most</em> parameters.
+If this is not desirable (for example, if you get an exception), then place the <code>@Inject</code> annotation on the constructor Tapestry should use.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_implicit_object_binding"><a class="anchor" href="#_implicit_object_binding"></a>Implicit Object Binding</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If the object parameter is not bound, then an implicit binding to a property of the containing component is made.
+The bound property will be the <code>BeanEditForm</code> component&#8217;s id, if such a property exists.
+Thus you may typically give the <code>BeanEditForm</code> component an id (that matches a property) and not have to bind the object parameter.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_non_visual_properties"><a class="anchor" href="#_non_visual_properties"></a>Non-Visual Properties</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In some cases, a property may be updatable and of a supported type for editing, but should not be presented to the user for editing:
+for example, a property that holds the primary key of a database entity.
+In such a case, the <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/beaneditor/NonVisual.html">@NonVisual</a></code> annotation may be applied to the property (either the getter or the setter method).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_default_validation"><a class="anchor" href="#_default_validation"></a>Default Validation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Default validation for fields is primary determined by property type.</p>
+</div>
+<div class="paragraph">
+<p>If desired, additional validation may be specified using the <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/beaneditor/Validate.html">@Validate</a></code> annotation. See <a href="forms-and-validation.html" class="xref page">Forms and Validation</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_property_ordering"><a class="anchor" href="#_property_ordering"></a>Property Ordering</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>By default, the order in which properties are presented is as defined above (order of the getter method).
+This can be overridden using the <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/beaneditor/ReorderProperties.html">@ReorderProperties</a></code> class annotation.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_default_label"><a class="anchor" href="#_default_label"></a>Default Label</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tapestry will attempt to provide a reasonable default label for each field, based on the property name being emitted.
+The property name is capitalized, and spaces are added before case changes, thus property <code>name</code> becomes label "Name" and property <code>streetAddress</code> becomes label "Street Address".</p>
+</div>
+<div class="paragraph">
+<p><code>BeanEditForm</code> also searches for a label for the field in the containing component&#8217;s message catalog.
+The message key is the property name suffixed with <code>-label</code>.
+If such a label is found, it takes precedence.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_property_editor_overrides"><a class="anchor" href="#_property_editor_overrides"></a>Property Editor Overrides</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You may override the editor for any particular property, using the a block parameter to the <code>BeanEditForm</code> component.</p>
+</div>
+<div class="paragraph">
+<p>An editor normally consists of a <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/Label.html">Label</a></code> component and some form of field component (such as <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/TextField.html">TextField</a></code> or <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/TextArea.html">TextArea</a></code>).</p>
+</div>
+<div class="paragraph">
+<p>For example, you may want to selectively use a <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/PasswordField.html">PasswordField</a></code> component:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;t:beaneditform object="loginCredentials"&gt;
+  &lt;p:password&gt;
+    &lt;t:label for="password"/&gt;
+    &lt;t:passwordfield t:id="password" value="loginCredentials.password"/&gt;
+  &lt;/p:password&gt;
+&lt;/t:beaneditform&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The other fields will render normally (using the built-in editors).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_providing_the_beanmodel"><a class="anchor" href="#_providing_the_beanmodel"></a>Providing the BeanModel</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>BeanEditForm</code> component operates in terms of a <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/beaneditor/BeanModel.html">BeanModel</a></code>, which describes the properties, their presentation order, labels and so forth.</p>
+</div>
+<div class="paragraph">
+<p>Normally, the <code>BeanEditForm</code> automatically creates the <code>BeanModel</code> as needed, based on the type of object bound to its object parameter.</p>
+</div>
+<div class="paragraph">
+<p>Alternately, the <code>BeanModel</code> can be supplied as the model parameter.
+This can be useful in situations where the <code>exclude</code> and <code>reorder</code> parameters are insufficient.
+For example, if the the type of the property being edited is an interface type, it may be useful to provide an explicit <code>BeanModel</code> around an underlying implementation class.</p>
+</div>
+<div class="paragraph">
+<p>The model can be created when the page is first instantiated:</p>
+</div>
+<div class="listingblock">
+<div class="title">Component Class</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class MyPage
+{
+  @Inject
+  private BeanModelSource beanModelSource;
+
+  @Inject
+  private ComponentResources resources;
+
+  @Property(write=false)
+  @Retain
+  private BeanModel model;
+
+  @Property
+  private MyBean bean;
+
+  {
+     model = beanModelSource.create(MyBean.class, true, resources);
+
+     // Make other changes to model here.
+  }
+
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And, in the component template, the built model can be passed to the BeanEditForm component explicitly:</p>
+</div>
+<div class="listingblock">
+<div class="title">Component Template</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;t:beaneditform object="bean" model="model"/&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_customizing_the_beanmodel"><a class="anchor" href="#_customizing_the_beanmodel"></a>Customizing the BeanModel</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You may want to customize the <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/beaneditor/BeanModel.html">BeanModel</a></code> further, to remove from the form properties that should not be editable by the user, and to change the order in which properties are presented within the form.</p>
+</div>
+<div class="paragraph">
+<p>The <code>BeanEditForm</code> component has several parameters for this purpose:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>add</code>: A comma separated list of property names to add to the model.</p>
+</li>
+<li>
+<p><code>include</code>: A comma separated list of property names to keep with the model (others are excluded).</p>
+</li>
+<li>
+<p><code>exclude</code>: A comma separated list of property names to exclude from the model.</p>
+</li>
+<li>
+<p><code>reorder</code>: A comma separated list of property names indicating the desired order. If a model has more properties that are listed in the reorder parameter, then the additional properties will be ordered at the end of the form.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Note that these parameters <em>modify</em> the BeanModel.
+If you supply your own <code>BeanModel</code> (via the <code>model</code> parameter) you should not use the <code>add</code>, <code>include</code>, <code>exclude</code> or <code>reorder</code> parameters.</p>
+</div>
+<div class="paragraph">
+<p>Added properties must not conflict with normal properties.
+Cells for added properties will render blank unless an override is provided.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_adding_new_property_editors"><a class="anchor" href="#_adding_new_property_editors"></a>Adding New Property Editors</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Adding a new property editor is a three step process.</p>
+</div>
+<div class="paragraph">
+<p>First, decide on a logical name for the data type. For example, you may decide that the <code>BigDecimal</code> type will represent currency in your application, so name the data type <code>currency</code>.</p>
+</div>
+<div class="paragraph">
+<p>Next, you must make contributions to the <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/services/DataTypeAnalyzer.html">DataTypeAnalyzer</a></code> or <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/internal/services/DefaultDataTypeAnalyzer.html">DefaultDataTypeAnalyzer</a></code> services to match properties to your new name.</p>
+</div>
+<div class="paragraph">
+<p><code>DataTypeAnalyzer</code> is a chain of command that can match properties to data types based on property type or annotations on the property.
+In general, <code>DefaultDataTypeAnalyzer</code> is used, as that only needs to consider property type.
+<code>DefaultDataTypeAnalyzer</code> matches property types to data types, based on a search up the inheritance path.</p>
+</div>
+<div class="listingblock">
+<div class="title">AppModule.java (partial)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public static void contributeDefaultDataTypeAnalyzer(MappedConfiguration&lt;Class, String&gt; configuration)
+{
+  configuration.add(BigDecimal.class, "currency");
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You must provide an editor for the <code>currency</code> data type.
+An editor is a block of a page of the application; this page is not normally rendered itself, but acts as a container for one or more blocks.</p>
+</div>
+<div class="listingblock">
+<div class="title">AppPropertyEditBlocks.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class AppPropertyEditBlocks
+{
+    @Property
+    @Environmental
+    private PropertyEditContext context;
+
+    @Component(parameters =
+    { "value=context.propertyValue", "label=prop:context.label",
+            "translate=prop:currencyTranslator", "validate=prop:currencyValidator",
+            "clientId=prop:context.propertyId", "annotationProvider=context" })
+    private TextField currency;
+
+    @Inject
+    private ComponentResources resources;
+
+    public FieldValidator getCurrencyValidator()
+    {
+      return context.getValidator(currency);
+    }
+
+    public FieldTranslator getCurrencyTranslator()
+    {
+      return context.getTranslator(current);
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The hard part is the translator; this is a piece of code that understands how to format and how to parse a currency value. It must be wrapped to create a FieldTranslator.</p>
+</div>
+<div class="paragraph">
+<p>The editor is a block inside the component template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;t:block id="currency"&gt;
+  &lt;t:label for="currency"/&gt;
+  &lt;t:textfield t:id="currency" size="10"/&gt;
+&lt;/t:block&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Finally, we tell the <code>BeanEditForm</code> component about the editor via a contribution to the <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/services/BeanBlockSource.html">BeanBlockSource</a></code> service:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public static void contributeBeanBlockSource(Configuration&lt;BeanBlockContribution&gt; configuration)
+{
+  configuration.add(new BeanBlockContribution("currency", "AppPropertyEditBlocks", "currency", true));
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now, when the <code>BeanEditForm</code> sees a property of type <code>BigDecimal</code>, it will map that to datatype <code>currency</code> and from there to the currency block of the <code>AppPropertyEditBlocks</code> page of the application.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

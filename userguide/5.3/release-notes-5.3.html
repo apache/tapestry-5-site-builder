@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Tapestry 5.3 :: Apache Tapestry</title>
+    <meta name="generator" content="Antora 3.1.15">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/tapestry.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../.."><img alt="Apache Tapestry Logo" src="../../_/img/apache-tapestry-icon-dark.svg" width="60" />Apache Tapestry</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Documentation</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../../main/getting-started.html">Getting Started</a>
+            <a class="navbar-item" href="../../main/tutorial/">Tutorial</a>
+            <a class="navbar-item" href="../../userguide/5.8/">User Guide</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="../../main/community.html">Community</a>
+        <a class="navbar-item" href="../../main/support.html">Support</a>
+        <a class="navbar-item" href="../../main/developers.html">Developers</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Apache</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+            <a class="navbar-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
+            <a class="navbar-item" href="https://www.apache.org/licenses/">License</a>
+            <a class="navbar-item" href="https://www.apache.org/security/">Security</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="../../main/download.html">Download</a>
+          </span>
+        </div>
+        <div class="navbar-brand">
+          <a href="https://www.apache.org/">
+          <img alt="The Apache Software Foundation" src="../../_/img/asf_logo.svg" width="200" height="63" style="padding-top: 5px; padding-bottom: 5px; background-color: white">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="body">
+<div class="nav-container" data-component="userguide" data-version="5.3">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">User Guide</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Introduction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry Core</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basics</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="project-layout.html">Project Layout</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="runtime-exceptions.html">Runtime Exceptions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="class-reloading.html">Class Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-reference.html">Component Reference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="annotations.html">Annotations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Pages and Components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-classes.html">Component Classes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-templates.html">Component Templates</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="property-expressions.html">Property Expressions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-parameters.html">Component Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="parameter-type-coercion.html">Parameter Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="layout-component.html">Layout Component</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-mixins.html">Component Mixins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-navigation.html">Page Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="localization.html">Localization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Request/Response Rendering</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-life-cycle.html">Page Life Cycle</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="request-processing.html">Request Processing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-rendering.html">Component Rendering</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-events.html">Component Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="url-rewriting.html">URL Rewriting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dom.html">Document Object Model (DOM)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="response-compression.html">Response Compression</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="security.html">Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https.html">HTTPS / SSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="content-type-and-markup.html">Content Type and Markup</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Data Persistence</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="persistent-page-data.html">Persistent Page Data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="session-storage.html">Session Storage</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Interacting with components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="injection.html">Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="environmental-services.html">Environmental Services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript, AJAX, CSS &amp; Binary Data</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="client-side-javascript.html">Client-Side JavaScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ajax-and-zones.html">AJAX and Zones</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="css.html">Cascading Style Sheets (CSS)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="assets.html">Assets</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Working with Forms</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="forms-and-validation.html">Forms and Validation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="beaneditform-guide.html">BeanEditForm Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uploading-files.html">Uploading Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bean-validation.html">Bean Validation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Logging, Debugging &amp; Testing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="logging.html">Logging</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unit-testing.html">Unit testing pages or components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integration-testing.html">Integration Testing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="development-dashboard.html">Development Dashboard</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry IOC</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-overview.html">IoC Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="symbols.html">Symbols</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="type-coercion.html">Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="case-insensitivity.html">Case Insensitivity</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="autoloading-modules.html">Autoloading Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="chainbuilder-service.html">ChainBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pipelinebuilder-service.html">PipelineBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="shadowbuilder-service.html">ShadowBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="strategybuilder-service.html">StrategyBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="defining-tapestry-ioc-services.html">Defining Tapestry IOC Services</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-modules.html">IoC Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="object-providers.html">Object Providers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-serialization.html">Service Serialization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="starting-the-ioc-registry.html">Starting the IoC Registry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="aliases.html">Aliases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="injection-in-detail.html">Injection in Detail</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ordering-by-constraints.html">Ordering by Constraints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="registry-startup.html">Registry Startup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="parallel-execution.html">Parallel Execution</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="logging-in-tapestry.html">Logging in Tapestry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-implementation-reloading.html">Service Implementation Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-advisors.html">Service Advisors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-decorators.html">Service Decorators</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="using-jsr-330-standard-annotations.html">Using JSR 330 standard annotations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="operation-tracker.html">Operation Tracker</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Add-ons and Integrations</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Built-in</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="hibernate.html">Hibernate Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="jpa.html">JPA Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integrating-with-spring-framework.html">Spring</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="third-party-modules.html">Third Party Modules</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Release Notes</span>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="release-notes-5.3.html">Tapestry 5.3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.2.html">Tapestry 5.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.1.html">Tapestry 5.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.0.html">Tapestry 5.0</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cookbook</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/default-parameter.html">Default Parameter</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/overriding-exception-reporting.html">Overriding Exception Reporting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/error-page-recipe.html">Error Page Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/supporting-informal-parameters.html">Supporting Informal Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/switching-cases.html">Switching Cases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/enum-parameter-recipe.html">Enum Parameter Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/extending-the-if-component.html">Extending The If Component</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/meta-programming-page-content.html">Meta-Programming Page Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="cookbook/ioc-cookbook.html">IoC Cookbook</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-basic-services-and-injection.html">IoC Cookbook - Basic Services and Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-overriding-ioc-services.html">IoC Cookbook - Overriding IoC Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-patterns.html">IoC Cookbook - Patterns</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-service-configurations.html">IoC Cookbook - Service Configurations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/using-select-with-a-list.html">Using Select With a List</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/performance-and-clustering.html">Performance and Clustering</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/google-app-engine.html">Google App Engine (GAE)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frequently Asked Questions (FAQ)</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/general.html">General Questions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/templating-and-markup.html">Templating and Markup FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/ajax.html">AJAX FAQ</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">User Guide</span>
+    <span class="version">5.3</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../main/about.html">Home</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../current/index.html">User Guide</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../current/index.html">5.8</a>
+        </li>
+        <li class="version">
+          <a href="../5.7/index.html">5.7</a>
+        </li>
+        <li class="version">
+          <a href="../5.6/index.html">5.6</a>
+        </li>
+        <li class="version">
+          <a href="../5.5/index.html">5.5</a>
+        </li>
+        <li class="version">
+          <a href="../5.4/index.html">5.4</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">5.3</a>
+        </li>
+        <li class="version">
+          <a href="../5.2/index.html">5.2</a>
+        </li>
+        <li class="version">
+          <a href="../5.1/index.html">5.1</a>
+        </li>
+        <li class="version">
+          <a href="../5/index.html">5.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../main/about.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">User Guide</a></li>
+    <li>Release Notes</li>
+    <li><a href="release-notes-5.3.html">Tapestry 5.3</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">5.3</button>
+  <div class="version-menu">
+    <a class="version" href="../current/release-notes-5.3.html">5.8</a>
+    <a class="version" href="../5.7/release-notes-5.3.html">5.7</a>
+    <a class="version" href="../5.6/release-notes-5.3.html">5.6</a>
+    <a class="version" href="../5.5/release-notes-5.3.html">5.5</a>
+    <a class="version" href="../5.4/release-notes-5.3.html">5.4</a>
+    <a class="version is-current" href="release-notes-5.3.html">5.3</a>
+    <a class="version is-missing" href="../5.2/index.html">5.2</a>
+    <a class="version is-missing" href="../5.1/index.html">5.1</a>
+    <a class="version is-missing" href="../5/index.html">5.0</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Tapestry 5.3</h1>
+<div class="sect1">
+<h2 id="_tapestry_5_3_8"><a class="anchor" href="#_tapestry_5_3_8"></a>Tapestry 5.3.8</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This is a bug fix release, mainly meant to address compatibility with Java 8.
+The ASM library is updated to a Java 8 compatible version (5.0), however, if you wish to run this release on JRE 8, you still need to manually specify a Java 8 compatible version of javassist (such as 3.18.2-GA). With Maven you&#8217;d include:</p>
+</div>
+<div class="listingblock">
+<div class="title">pom.xml (partial)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependency&gt;
+  &lt;groupId&gt;org.javassist&lt;/groupId&gt;
+  &lt;artifactId&gt;javassist&lt;/artifactId&gt;
+  &lt;version&gt;3.18.2-GA&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Javassist has changed their group coordinates (from javassist to org.javassist), which further complicates the situation. You&#8217;ll also have to manually exclude javassist:javassist dependency (if your dependencies are resolved automatically). With Maven, you&#8217;d add:</p>
+</div>
+<div class="listingblock">
+<div class="title">pom.xml (partial)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;exclusions&gt;
+  &lt;exclusion&gt;
+    &lt;artifactId&gt;javassist&lt;/artifactId&gt;
+    &lt;groupId&gt;javassist&lt;/groupId&gt;
+  &lt;/exclusion&gt;
+&lt;/exclusions&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where needed.</p>
+</div>
+<div class="sect2">
+<h3 id="_bugs_fixed"><a class="anchor" href="#_bugs_fixed"></a>Bugs fixed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-311">TAP5-311</a> - NPE in BeanDisplay if used in a form with a default model</p>
+</li>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-983">TAP5-983</a> - CLONE -NPE in BeanDisplay if used in a form with a default model</p>
+</li>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-1865">TAP5-1865</a> - Chinese valication message issue</p>
+</li>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-2270">TAP5-2270</a> - BeanDisplay exception when used inside a Form</p>
+</li>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-2298">TAP5-2298</a> - "Any" component lacks any useful documentation</p>
+</li>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-2321">TAP5-2321</a> - Tapestry 5.3.7 does not run with Java 8</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_dependency_upgrade"><a class="anchor" href="#_dependency_upgrade"></a>Dependency upgrade</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-2295">TAP5-2295</a> - Vulnerability in Tapestry-upload module due to commons-file-upload</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_improvements_made"><a class="anchor" href="#_improvements_made"></a>Improvements made</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-1718">TAP5-1718</a> - Tapestry-beanvalidator isn&#8217;t validating nested DTO objects / Doesn&#8217;t mark the invalid fields in the UI</p>
+</li>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-2157">TAP5-2157</a> - Czech translations</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_new_features_added"><a class="anchor" href="#_new_features_added"></a>New Features added</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-2305">TAP5-2305</a> - Create a <code>@Sortable</code> annotation for properties</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tapestry_5_3_7"><a class="anchor" href="#_tapestry_5_3_7"></a>Tapestry 5.3.7</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This is a bug fix release, mainly focused on three aspects:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>make Tapestry work better under Tomcat</p>
+</li>
+<li>
+<p>minimize the possibility of clash for generated ids</p>
+</li>
+<li>
+<p>let the BeanEditor be more JSR-303 friendly</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Some work has been made on the form component too.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tapestry_5_3_6"><a class="anchor" href="#_tapestry_5_3_6"></a>Tapestry 5.3.6</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This is a very modest bug fix release. Importantly, the bundled version of <a href="http://prototypejs.org/">Prototype</a> has been downgraded back to version 1.7, as the new version was causing a number of issues, especially under Internet Explorer.</p>
+</div>
+<div class="paragraph">
+<p>The main improvement is security related; Tapestry will now integrate a <a href="http://en.wikipedia.org/wiki/HMAC">hash-based message authentication (HMAC)</a> code into serialized Java object data stored on the client (generally, this means the <code>t:formdata</code> hidden field used by the Form component).</p>
+</div>
+<div class="paragraph">
+<p>When you first run your application under 5.3.6, you will see an alert and a console error concerning the HMAC configuration.
+You should update your application&#8217;s configuration to set a unique, private value for the <code>tapestry.hmac-passphrase</code> <a href="configuration.html" class="xref page">configuration symbol</a>.</p>
+</div>
+<div class="paragraph">
+<p>And, as with any Tapestry upgrade, be sure to change your application&#8217;s version number by <a href="configuration.html" class="xref page">configuring</a> the <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/SymbolConstants.html#APPLICATION_VERSION">SymbolConstants.APPLICATION_VERSION</a></code> symbol.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tapestry_5_3_5"><a class="anchor" href="#_tapestry_5_3_5"></a>Tapestry 5.3.5</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This is a very modest bug fix release, including a number of minor performance improvements.
+Importantly, the bundled version of <a href="http://prototypejs.org/">Prototype</a> is now 1.7.1, which includes some significant improvements and bug fixes that target Internet Explorer.
+However, the prototype change may affect the functionality of the Tapestry DateField component under some versions of Internet Explorer (this issue was discovered late in the voting process).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tapestry_5_3_4"><a class="anchor" href="#_tapestry_5_3_4"></a>Tapestry 5.3.4</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This is a very modest bug fix release, including a number of minor performance improvements.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tapestry_5_3_3"><a class="anchor" href="#_tapestry_5_3_3"></a>Tapestry 5.3.3</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This is a very modest bug fix release, but it does straighten out a significant problem with Java component classes containing non-private fields.</p>
+</div>
+<div class="paragraph">
+<p>For those developers not using Maven or Gradle, you&#8217;ll be pleased to know that this release now includes the option of a binary download containing Tapestry&#8217;s modules and main dependencies. More details are on the <a href="../../main/download.html" class="xref page">Download</a> page.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tapestry_5_3_2"><a class="anchor" href="#_tapestry_5_3_2"></a>Tapestry 5.3.2</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_new_features"><a class="anchor" href="#_new_features"></a>New Features</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Component field visibility</dt>
+<dd>
+<p>In prior versions of Tapestry, all instance fields of components had to be visibility private.
+Starting with version 5.3.2, this has been relaxed.
+Component fields may be protected, or package private (that is, no visibility modifier).
+Fields that are final, or annotated with <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/annotations/Retain.html">@Retain</a></code> may even be public.
+In any case, this makes it easier for pages to work with other pages in the same package, and for subclasses to more easily access the fields (including parameter fields, or injections) provided by base classes.
+This feature should be used with care, as it can lead to designs that are more difficult to maintain.</p>
+</dd>
+<dt class="hdlist1">Spring 3.1 upgrade</dt>
+<dd>
+<p>The Spring integration module has updated the Spring dependencies to 3.1.0.RELEASE</p>
+</dd>
+<dt class="hdlist1">TextField component support for HTML5 values</dt>
+<dd>
+<p>The TextField components now support HTML5 any HTML5 type attribute.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tapestry_5_3_0_tapestry_5_3_1"><a class="anchor" href="#_tapestry_5_3_0_tapestry_5_3_1"></a>Tapestry 5.3.0 / Tapestry 5.3.1</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_breaking_changes"><a class="anchor" href="#_breaking_changes"></a>Breaking Changes</h3>
+<div class="paragraph">
+<p>Tapestry now depends on Servlet API version <strong>2.5</strong> (prior releases worked with 2.4).</p>
+</div>
+<div class="paragraph">
+<p>Tapestry no longer supports the ability to inject the component id into a String field. This was rarely (if ever) used functionality that caused unwanted conflicts elsewhere.
+When a component needs to know its component id, it may inject the <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/ComponentResources.html">ComponentResources</a></code> object, and invoke <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/ComponentResourcesCommon.html#getCompleteId">ComponentResourcesCommon.getCompleteId</a></code>.</p>
+</div>
+<div class="paragraph">
+<p>Tapestry templates without a <code>&lt;!DOCTYPE&gt;</code> are treated a bit differently in Tapestry 5.3; they are treated as if they have the HTML5 doctype (<code>&lt;!DOCTYPE html&gt;</code>).
+See further notes about component templates.</p>
+</div>
+<div class="paragraph">
+<p>Many classes and interfaces that were deprecated in prior releases of Tapestry have been removed in Tapestry 5.3. See the full list.
+As always, you should use your IDE to find and replace all deprecated items before you upgrade. The following are the most significant of these:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>@IncludeJavaScriptLibrary</code> and <code>@IncludeStylesheet</code> annotations (replaced by <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/annotations/Import.html">@Import</a></code>)</p>
+</li>
+<li>
+<p><code>@ApplicationState</code> annotation (replaced with <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/annotations/SessionState.html">@SessionState</a></code>)</p>
+</li>
+<li>
+<p><code>validateForm</code> event triggered by Form component (replaced with <code>validate</code> event)</p>
+</li>
+<li>
+<p>Code and constants related to page pooling</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In addition, some of the abstract base classes used with the <code>tapestry-func</code> library have changed into interfaces; you will want to recompile, but may also need to adjust your code, depending on your compiler settings and use of the standard Java <code>@Override</code> annotation.</p>
+</div>
+<div class="paragraph">
+<p>Because of the upgrade to Prototype 1.7, existing JavaScript that uses <code>value.toJSON()</code> may break; replace with <code>Object.toJSON(value)</code>.</p>
+</div>
+<div class="paragraph">
+<p>Some number of interfaces and APIs in Tapestry 5.3 will be removed in Tapestry 5.4 or later. These include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/RenderSupport.html">RenderSupport</a></code> environmental (replaced with the <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/services/javascript/JavaScriptSupport.html">JavaScriptSupport</a></code> environmental)</p>
+</li>
+<li>
+<p>The <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/ajax/MultiZoneUpdate.html">MultiZoneUpdate</a></code> object, replaced with <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/services/ajax/AjaxResponseRenderer.html">AjaxResponseRenderer</a></code></p>
+</li>
+<li>
+<p>ClassFactory service and ClassFab interface (replaced with the <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/ioc/services/PlasticProxyFactory.html">PlasticProxyFactory</a></code> service and <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/plastic/PlasticClass.html">PlasticClass</a></code> interface)</p>
+</li>
+<li>
+<p>The "suppress redirects" functionality, which allows component event requests to respond directly with HTML, as in Tapestry 4.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_new_features_2"><a class="anchor" href="#_new_features_2"></a>New Features</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Underscore.js</dt>
+<dd>
+<p>Tapestry now bundles <a href="http://underscorejs.org/">Underscore.js</a>, a useful library for expressive functional programming in the browser.
+It is used in no conflict mode, made available as the <code>T5._</code> object.</p>
+</dd>
+<dt class="hdlist1">User Alerts</dt>
+<dd>
+<p>Tapestry now has a central mechanism for handling user alerts; this includes the AlertManager service and the Alerts component.
+Just add an Alerts component to your application&#8217;s standard layout component and Tapestry takes care of the rest.
+Alerts can be added during both traditional and Ajax requests, and may be transient (displayed for a few seconds), normal, or sticky (persist until the user expressly dismisses them).
+Alerts support three severities: info, warn(ing) and error; the look and feel can be customized by overriding Tapestry&#8217;s default CSS rules.</p>
+</dd>
+<dt class="hdlist1">Rendering comments</dt>
+<dd>
+<p>It is now possible to have Tapestry emit rendering comments; these are comments (such as <code>&lt;!--BEGIN Index:loop (context:Index.tml, line 15)-&#8594;</code>) that can assist you in debugging markup output on the client-side.
+This is enabled for all requests using the configuration symbol <code>tapestry.component-render-tracing-enabled</code>, and can be added to any request by adding the query parameter <code>t:component-trace=true</code> to the URL.
+This will significantly increase the size of the rendered markup, but can be very helpful with complex layouts to determine which component was responsible for which portion of the rendered page.</p>
+</dd>
+<dt class="hdlist1">Adaptable service contributions</dt>
+<dd>
+<p>When making contributions to a service, you are no longer restricted to contributing a value that is assignable to the type associated with the configuration; objects of any type may be contributed, and the TypeCoercer service is used to coerce the value to the configuration&#8217;s type.</p>
+</dd>
+<dt class="hdlist1">Component debugging improvements</dt>
+<dd>
+<p>Because of how Tapestry instruments your pages and components, using a debugger has been difficult with Tapestry page and component classes; any mutable field shows its default value in the debugger, regardless of what has been written to the field or read out of it.
+In Tapestry 5.3, when in <em>development mode</em>, Tapestry now shadows values read from or written to such fields into the fields themselves (this has also been fixed in the 5.2.5 maintenance release).
+This shadowing does not occur in production, to avoid potential memory leaks.</p>
+</dd>
+<dt class="hdlist1">Reloading disabled in production</dt>
+<dd>
+<p>Tapestry no longer checks for changes to Tapestry component class files, templates, or message catalogs in production mode.
+It is assumed that Tapestry applications are packaged as WAR files in production, and that changing the WAR file causes the servlet container to redeploy the entire application.
+This change is to improve throughput and reduce memory consumption in production applications.</p>
+</dd>
+<dt class="hdlist1">String-to-Enum coercions</dt>
+<dd>
+<p>The TypeCoercer service now automatically generates String-to-Enum coercions without requiring a specific contribution.
+This coercion is case insensitive. A contribution is still allowed, and will take priority over the default coercion, but is only necessary to support "aliases" for enum values outside those defined by the enum type itself.</p>
+</dd>
+<dt class="hdlist1">JavaScript and CSS minimization</dt>
+<dd>
+<p>A new optional library, <code>tapestry-yuicompressor</code>, has been added. This library adds support for compressing JavaScript libraries and CSS files using the <a href="http://developer.yahoo.com/yui/compressor/">YUICompressor library</a>.</p>
+</dd>
+<dt class="hdlist1">ComponentClassTransformWorker Service</dt>
+<dd>
+<p>The type of this service has changed from <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/services/ComponentClassTransformWorker.html">ComponentClassTransformWorker</a></code> to <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/services/transform/ComponentClassTransformWorker2.html">ComponentClassTransformWorker2</a></code>.
+Contributions of type ComponentClassTransformWorker will automatically be coerced to the new ComponentClassTransformWorker2 interface.
+However, if you use the <code>@Contribute</code> annotation to mark the method that makes contributions, you will need to update the annotation to indicate the new service interface.
+If you followed the naming convention, and named your method <code>contributeComponentClassTransformWorker()</code>, you don&#8217;t need to change anything.</p>
+</dd>
+<dt class="hdlist1">AjaxResponseRenderer</dt>
+<dd>
+<p>The <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/services/ajax/AjaxResponseRenderer.html">AjaxResponseRenderer</a></code> service makes it easier to customize the partial page response generated when updating a <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/Zone.html">Zone</a></code> component, replacing the <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/ajax/MultiZoneUpdate.html">MultiZoneUpdate</a></code> object as an event handler method return value.</p>
+</dd>
+<dt class="hdlist1">Tapestry JavaDoc</dt>
+<dd>
+<p>Tapestry now includes a new library, <code>tapestry-javadoc</code>, that replaces the old Maven-based component report. Simply by placing a <code>@tapestrydoc</code> annotation into your component&#8217;s JavaDoc, Tapestry will generate complete documentation as part of JavaDoc &#8230;&#8203; no more switching back and forth between JavaDoc and the Maven-generated component report, and no more reliance on Maven for component documentation.</p>
+</dd>
+<dt class="hdlist1">Skinning / Theming Support</dt>
+<dd>
+<p>Tapestry now adds the ability to skin and/or theme your pages and components. Its an extension of how Tapestry manages pages per locale, but adds new application-defined axes along with rules to find the resources. See <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/services/pageload/ComponentResourceSelector.html">ComponentResourceSelector</a></code> and <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/services/pageload/ComponentRequestSelectorAnalyzer.html">ComponentRequestSelectorAnalyzer</a></code>.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>There&#8217;s also a new <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/Dynamic.html">Dynamic</a></code> component, which uses an external template, not a Tapestry template, which can be selected at runtime.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Tree Component</dt>
+<dd>
+<p>Tapestry finally has a proper <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/Tree.html">Tree</a></code> component for navigating hierarchical data.
+It&#8217;s efficient and Ajax-enabled, and fully customizable.</p>
+</dd>
+<dt class="hdlist1">Form Cancelled Event</dt>
+<dd>
+<p>Form components now recognize when the client-side form was cancelled.
+A new "cancelled" event is triggered early in the submission process, which allows the page to bypass all property updates and input validations, when desired.</p>
+</dd>
+<dt class="hdlist1">Implicit OrderedConfiguration Constraints</dt>
+<dd>
+<p>When using <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/ioc/OrderedConfiguration.html">OrderedConfiguration.add()</a></code> with no constraints, Tapestry will now implicitly order the added element after the previously added element, within the same method.
+In prior releases, such elements were added with no constraints.
+This makes it easier to contribute a group of related items with an implicit ordering.</p>
+</dd>
+<dt class="hdlist1">New Component Class Validations</dt>
+<dd>
+<p>Tapestry includes new validations of component classes to help cut down on many common errors; Tapestry now checks that component ids referenced by an event handler method (the From<em>component_id</em> part of the method name) actually matches a component defined in the template &#8230;&#8203; this quickly identifies typos in method names.
+This check can be disabled with a configuration symbol, as existing 5.2 apps may have such errors and still operate (that is, they may have dead event handler methods that will never be invoked).</p>
+</dd>
+<dt class="hdlist1">Application Folder</dt>
+<dd>
+<p>Tapestry can now be configured to execute inside a folder, which can be useful when running Tapestry inside a web application that contains other servlets or filters, as a way to prevent conflicts.</p>
+</dd>
+<dt class="hdlist1">Improved Quickstart Archetype</dt>
+<dd>
+<p>The Maven quickstart archetype has been brought up to date, and now demonstrates several new bits of common useful functionality. It also generates support for <a href="http://gradle.org/">Gradle</a> as the build tool.</p>
+</dd>
+<dt class="hdlist1">Whitelisted Pages</dt>
+<dd>
+<p>The new <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/annotations/WhitelistAccessOnly.html">@WhitelistAccessOnly</a></code> annotation marks a page as accessible only from white-listed clients; the rules for the whitelist are <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/services/security/ClientWhitelist.html">extensible</a></code>.
+The default rule is that only access from localhost is on the white-list.
+Use this annotation on pages that may expose sensitive data, such as built-in application dashboards and the like.</p>
+</dd>
+<dt class="hdlist1">Page Catalog</dt>
+<dd>
+<p>Tapestry applications now include a built-in <code>PageCatalog</code> page, which lists all the loaded pages of the application, with details about construction time and number of components.
+The page requires whitelist access (see above comment), and some functionality is only available in development mode.
+PageCatalog can be used to load all pages of your application, which is useful to quickly spot problems in your pages &#8230;&#8203; especially useful when upgrading from a prior release of Tapestry.</p>
+</dd>
+<dt class="hdlist1">Client-Side JavaScript Logging</dt>
+<dd>
+<p>The integrated Blackbird client-side console has been removed.
+In its place are the floating console messages combined with logging to the Firebug or WebKit console.
+Tapestry no longer captures JavaScript initialization exceptions, so that they may be properly reported to the native console.
+These changes should make debugging client-side JavaScript much easier.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>In addition, Tapestry will now display a pop-up window containing the full exception report for a server-side error that occurs during an Ajax request, which makes debugging server-side problems that occur as part of an Ajax request <em>significantly</em> easier.
+Note that this logic is tied to performing a <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/Zone.html">Zone</a></code> update.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

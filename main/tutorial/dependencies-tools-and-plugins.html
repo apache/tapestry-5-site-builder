@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Dependencies, Tools and Plugins :: Apache Tapestry</title>
+    <meta name="generator" content="Antora 3.1.15">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/tapestry.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../.."><img alt="Apache Tapestry Logo" src="../../_/img/apache-tapestry-icon-dark.svg" width="60" />Apache Tapestry</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Documentation</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../../main/getting-started.html">Getting Started</a>
+            <a class="navbar-item" href="../../main/tutorial/">Tutorial</a>
+            <a class="navbar-item" href="../../userguide/5.8/">User Guide</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="../../main/community.html">Community</a>
+        <a class="navbar-item" href="../../main/support.html">Support</a>
+        <a class="navbar-item" href="../../main/developers.html">Developers</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Apache</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+            <a class="navbar-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
+            <a class="navbar-item" href="https://www.apache.org/licenses/">License</a>
+            <a class="navbar-item" href="https://www.apache.org/security/">Security</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="../../main/download.html">Download</a>
+          </span>
+        </div>
+        <div class="navbar-brand">
+          <a href="https://www.apache.org/">
+          <img alt="The Apache Software Foundation" src="../../_/img/asf_logo.svg" width="200" height="63" style="padding-top: 5px; padding-bottom: 5px; background-color: white">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="body">
+<div class="nav-container" data-component="main" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../about.html">Home</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../about.html">About</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../principles.html">Principles</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Documentation</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tutorial</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="index.html">Introduction</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="dependencies-tools-and-plugins.html">Dependencies, Tools and Plugins</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="creating-the-skeleton-application.html">Creating the Skeleton Application</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="exploring-the-project.html">Exploring the Project</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="implementing-the-hi-lo-guessing-game.html">Implementing the Hi-Lo Guessing Game</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="using-beaneditform-to-create-user-forms.html">Using BeanEditForm To Create User Forms</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="using-tapestry-with-hibernate.html">Using Tapestry With Hibernate</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../userguide.html">User Guide</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Home</span>
+    <span class="version"></span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../about.html">Home</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../userguide/current/index.html">User Guide</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../userguide/current/index.html">5.8</a>
+        </li>
+        <li class="version">
+          <a href="../../userguide/5.7/index.html">5.7</a>
+        </li>
+        <li class="version">
+          <a href="../../userguide/5.6/index.html">5.6</a>
+        </li>
+        <li class="version">
+          <a href="../../userguide/5.5/index.html">5.5</a>
+        </li>
+        <li class="version">
+          <a href="../../userguide/5.4/index.html">5.4</a>
+        </li>
+        <li class="version">
+          <a href="../../userguide/5.3/index.html">5.3</a>
+        </li>
+        <li class="version">
+          <a href="../../userguide/5.2/index.html">5.2</a>
+        </li>
+        <li class="version">
+          <a href="../../userguide/5.1/index.html">5.1</a>
+        </li>
+        <li class="version">
+          <a href="../../userguide/5/index.html">5.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../about.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../about.html">Home</a></li>
+    <li>Documentation</li>
+    <li>Tutorial</li>
+    <li><a href="dependencies-tools-and-plugins.html">Dependencies, Tools and Plugins</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Dependencies, Tools and Plugins</h1>
+<div class="sect1">
+<h2 id="_jdk_1_8_or_newer"><a class="anchor" href="#_jdk_1_8_or_newer"></a>JDK 1.8 or Newer</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This tutorial uses the latest released version of Tapestry, which requires Java Development Kit (JDK) version 1.8 or newer.
+(But see <a href="../supported-environments-and-versions.html" class="xref page">Supported Environments and Versions</a> if you want to use an older version of JDK or Tapestry.)</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_eclipse_ide"><a class="anchor" href="#_eclipse_ide"></a>Eclipse IDE</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For this tutorial we&#8217;ll assume you&#8217;re using Eclipse as your Integrated Development Environment (IDE).
+Eclipse is a popular IDE, but feel free to adapt these instructions to IntelliJ, NetBeans, or any other.</p>
+</div>
+<div class="paragraph">
+<p>Eclipse comes in various flavors, and includes a reasonable XML editor built-in.
+It can be downloaded from the eclipse.org web site.
+We recommend the latest version of Eclipse IDE for Java Developers (but anything from version 3.7 onward should work fine).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_apache_maven_3"><a class="anchor" href="#_apache_maven_3"></a>Apache Maven 3</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Maven is a software build tool with the ability to automatically download project dependencies (such as the Tapestry JAR files, and the JAR files that Tapestry itself depends on) from one of several central repositories.</p>
+</div>
+<div class="paragraph">
+<p>Maven is not essential for using Tapestry, but is especially helpful when performing the initial set-up of a Tapestry application.
+Feel free to substitute Gradle or Ivy if you prefer.</p>
+</div>
+<div class="paragraph">
+<p>Eclipse comes with a Maven plugin, M2Eclipse (also known as m2e) with an embedded version of Maven.
+We&#8217;ll use that here for simplicity&#8217;s sake.
+Alternatively, you could install Maven from <a href="http://maven.apache.org/download.html" class="bare">http://maven.apache.org/download.html</a> and use it from the command line (<code>mvn</code>).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_jetty"><a class="anchor" href="#_jetty"></a>Jetty</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For simplicity, this tutorial uses Jetty, a lightweight open source web server and servlet container available from the Eclipse Foundation. Of course, you could use pretty much any other Java servlet container (Tomcat, Glassfish, JBoss, etc), but the instructions that follow assume Jetty.</p>
+</div>
+<div class="paragraph">
+<p>We will use Maven to download and run Jetty automatically, so you will NOT have to download it for this tutorial. (Alternatively, you could download and install the RunJettyRun Eclipse plugin from the Eclipse Marketplace.)</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tapestry"><a class="anchor" href="#_tapestry"></a>Tapestry</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tapestry is available as a set of JAR files, but you will not have to download them yourself.
+As with Jetty, Maven will take care of downloading Tapestry and its dependencies.</p>
+</div>
+<div class="paragraph">
+<p>Next: <a href="creating-the-skeleton-application.html" class="xref page">Creating the Skeleton Application</a></p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

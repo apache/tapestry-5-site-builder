@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Configuration :: Apache Tapestry</title>
+    <meta name="generator" content="Antora 3.1.15">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/tapestry.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../.."><img alt="Apache Tapestry Logo" src="../../_/img/apache-tapestry-icon-dark.svg" width="60" />Apache Tapestry</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Documentation</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../../main/getting-started.html">Getting Started</a>
+            <a class="navbar-item" href="../../main/tutorial/">Tutorial</a>
+            <a class="navbar-item" href="../../userguide/5.8/">User Guide</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="../../main/community.html">Community</a>
+        <a class="navbar-item" href="../../main/support.html">Support</a>
+        <a class="navbar-item" href="../../main/developers.html">Developers</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Apache</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+            <a class="navbar-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
+            <a class="navbar-item" href="https://www.apache.org/licenses/">License</a>
+            <a class="navbar-item" href="https://www.apache.org/security/">Security</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="../../main/download.html">Download</a>
+          </span>
+        </div>
+        <div class="navbar-brand">
+          <a href="https://www.apache.org/">
+          <img alt="The Apache Software Foundation" src="../../_/img/asf_logo.svg" width="200" height="63" style="padding-top: 5px; padding-bottom: 5px; background-color: white">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="body">
+<div class="nav-container" data-component="userguide" data-version="5.4">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">User Guide</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Introduction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry Core</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basics</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="project-layout.html">Project Layout</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="runtime-exceptions.html">Runtime Exceptions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="class-reloading.html">Class Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-reference.html">Component Reference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="annotations.html">Annotations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Pages and Components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-classes.html">Component Classes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-templates.html">Component Templates</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="property-expressions.html">Property Expressions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-parameters.html">Component Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="parameter-type-coercion.html">Parameter Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="layout-component.html">Layout Component</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-mixins.html">Component Mixins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-navigation.html">Page Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="localization.html">Localization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Request/Response Rendering</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-life-cycle.html">Page Life Cycle</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="request-processing.html">Request Processing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-rendering.html">Component Rendering</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-events.html">Component Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="url-rewriting.html">URL Rewriting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dom.html">Document Object Model (DOM)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="response-compression.html">Response Compression</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="security.html">Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https.html">HTTPS / SSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="content-type-and-markup.html">Content Type and Markup</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Data Persistence</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="persistent-page-data.html">Persistent Page Data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="session-storage.html">Session Storage</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Interacting with components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="injection.html">Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="environmental-services.html">Environmental Services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript, AJAX, CSS &amp; Binary Data</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="client-side-javascript.html">Client-Side JavaScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="javascript-modules.html">Javascript Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="coffeescript.html">Coffeescript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ajax-and-zones.html">AJAX and Zones</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="css.html">Cascading Style Sheets (CSS)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="assets.html">Assets</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Working with Forms</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="forms-and-validation.html">Forms and Validation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="beaneditform-guide.html">BeanEditForm Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uploading-files.html">Uploading Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bean-validation.html">Bean Validation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Logging, Debugging &amp; Testing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="logging.html">Logging</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unit-testing.html">Unit testing pages or components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integration-testing.html">Integration Testing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="development-dashboard.html">Development Dashboard</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry IOC</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-overview.html">IoC Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="symbols.html">Symbols</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="type-coercion.html">Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="case-insensitivity.html">Case Insensitivity</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="autoloading-modules.html">Autoloading Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="chainbuilder-service.html">ChainBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pipelinebuilder-service.html">PipelineBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="shadowbuilder-service.html">ShadowBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="strategybuilder-service.html">StrategyBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="defining-tapestry-ioc-services.html">Defining Tapestry IOC Services</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-modules.html">IoC Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="object-providers.html">Object Providers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-serialization.html">Service Serialization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="starting-the-ioc-registry.html">Starting the IoC Registry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="aliases.html">Aliases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="injection-in-detail.html">Injection in Detail</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ordering-by-constraints.html">Ordering by Constraints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="registry-startup.html">Registry Startup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="parallel-execution.html">Parallel Execution</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="logging-in-tapestry.html">Logging in Tapestry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-implementation-reloading.html">Service Implementation Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-advisors.html">Service Advisors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-decorators.html">Service Decorators</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="using-jsr-330-standard-annotations.html">Using JSR 330 standard annotations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="operation-tracker.html">Operation Tracker</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Add-ons and Integrations</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Built-in</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="hibernate.html">Hibernate Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="jpa.html">JPA Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integrating-with-spring-framework.html">Spring</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="third-party-modules.html">Third Party Modules</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Release Notes</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.4.html">Tapestry 5.4</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.3.html">Tapestry 5.3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.2.html">Tapestry 5.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.1.html">Tapestry 5.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.0.html">Tapestry 5.0</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cookbook</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/default-parameter.html">Default Parameter</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/overriding-exception-reporting.html">Overriding Exception Reporting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/error-page-recipe.html">Error Page Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/supporting-informal-parameters.html">Supporting Informal Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/component-libraries.html">Component Libraries</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/switching-cases.html">Switching Cases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/enum-parameter-recipe.html">Enum Parameter Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/extending-the-if-component.html">Extending The If Component</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/meta-programming-page-content.html">Meta-Programming Page Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="cookbook/ioc-cookbook.html">IoC Cookbook</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-basic-services-and-injection.html">IoC Cookbook - Basic Services and Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-overriding-ioc-services.html">IoC Cookbook - Overriding IoC Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-patterns.html">IoC Cookbook - Patterns</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-service-configurations.html">IoC Cookbook - Service Configurations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/using-select-with-a-list.html">Using Select With a List</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/performance-and-clustering.html">Performance and Clustering</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/google-app-engine.html">Google App Engine (GAE)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frequently Asked Questions (FAQ)</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/general.html">General Questions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/templating-and-markup.html">Templating and Markup FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/ajax.html">AJAX FAQ</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">User Guide</span>
+    <span class="version">5.4</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../main/about.html">Home</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../current/index.html">User Guide</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../current/index.html">5.8</a>
+        </li>
+        <li class="version">
+          <a href="../5.7/index.html">5.7</a>
+        </li>
+        <li class="version">
+          <a href="../5.6/index.html">5.6</a>
+        </li>
+        <li class="version">
+          <a href="../5.5/index.html">5.5</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">5.4</a>
+        </li>
+        <li class="version">
+          <a href="../5.3/index.html">5.3</a>
+        </li>
+        <li class="version">
+          <a href="../5.2/index.html">5.2</a>
+        </li>
+        <li class="version">
+          <a href="../5.1/index.html">5.1</a>
+        </li>
+        <li class="version">
+          <a href="../5/index.html">5.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../main/about.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">User Guide</a></li>
+    <li>Tapestry Core</li>
+    <li>Basics</li>
+    <li><a href="configuration.html">Configuration</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">5.4</button>
+  <div class="version-menu">
+    <a class="version" href="../current/configuration.html">5.8</a>
+    <a class="version" href="../5.7/configuration.html">5.7</a>
+    <a class="version" href="../5.6/configuration.html">5.6</a>
+    <a class="version" href="../5.5/configuration.html">5.5</a>
+    <a class="version is-current" href="configuration.html">5.4</a>
+    <a class="version" href="../5.3/configuration.html">5.3</a>
+    <a class="version" href="../5.2/configuration.html">5.2</a>
+    <a class="version" href="../5.1/configuration.html">5.1</a>
+    <a class="version" href="../5/configuration.html">5.0</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Configuration</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This page discusses all the ways in which Tapestry can be configured. Tapestry applications are configured almost entirely using Java, with very little XML at all.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_xml_configuration_web_xml"><a class="anchor" href="#_xml_configuration_web_xml"></a>XML configuration (web.xml)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tapestry runs on top of the standard Java Servlet API. To the servlet container, such as Tomcat, Tapestry appears as a <em>servlet filter</em>.
+This gives Tapestry great flexibility in matching URLs without requiring lots of XML configuration.</p>
+</div>
+<div class="paragraph">
+<p>Although most configuration is done with Java, a small but necessary amount of configuration occurs inside the servlet deployment descriptor, <code>WEB-INF/web.xml</code>.
+Most of the configuration is boilerplate, nearly the same for all applications.</p>
+</div>
+<div class="listingblock">
+<div class="title">web.xml (partial)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!DOCTYPE web-app
+      PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+      "http://java.sun.com/dtd/web-app_2_3.dtd"&gt;
+&lt;web-app&gt;
+    &lt;display-name&gt;My Tapestry Application&lt;/display-name&gt;
+    &lt;context-param&gt;
+        &lt;param-name&gt;tapestry.app-package&lt;/param-name&gt;
+        &lt;param-value&gt;org.example.myapp&lt;/param-value&gt;
+    &lt;/context-param&gt;
+    &lt;filter&gt;
+        &lt;filter-name&gt;app&lt;/filter-name&gt;
+        &lt;filter-class&gt;org.apache.tapestry5.TapestryFilter&lt;/filter-class&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+    &lt;/filter&gt;
+    &lt;filter-mapping&gt;
+        &lt;filter-name&gt;app&lt;/filter-name&gt;
+        &lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+    &lt;/filter-mapping&gt;
+&lt;/web-app&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Or org.apache.tapestry5.<strong>http</strong>.TapestryFilter if you&#8217;re using tapestry-http without tapestry-core</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The application-specific part, the <code>tapestry.app-package</code> context parameter, provides your application&#8217;s root package name.
+Tapestry uses this to locate your page and component classes.
+It expects page classes in the pages sub-package and components in the components sub-package.
+In the example above, page classes will be stored in the <code>org.example.myapp.pages</code> package (or in sub-packages below).
+Likewise, component classes will be stored in the <code>org.example.myapp.components</code> package.</p>
+</div>
+<div class="paragraph">
+<p>By convention, the filter name (<code>filter-name</code>) is almost always <code>app</code>, but you can use any name you want.
+Tapestry uses this to determine what <em>module class</em> name to look for (see below).</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Tapestry Requests vs. Container Requests</div>
+<div class="paragraph">
+<p>The Tapestry filter matches all the requests that apply to Tapestry, and passes the rest off to the servlet container.
+In situations where there would be a naming conflict, actual files inside the web application take precedence over Tapestry pages.</p>
+</div>
+<div class="paragraph">
+<p>Tapestry recognizes the root URL, where the servlet path is simply "/", and renders the application page "Index", if it exists.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_your_applications_module_class"><a class="anchor" href="#_your_applications_module_class"></a>Your Application&#8217;s Module Class</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Main Article: xref:tapestry-ioc-configuration.adoc</p>
+</div>
+<div class="paragraph">
+<p>Most other configuration occurs inside your application&#8217;s module class.
+The application module class will often define new services, provide overrides of services, or make contributions to service configurations.</p>
+</div>
+<div class="paragraph">
+<p>Tapestry looks for your application module class in the services package (under the root package) of your application.
+It capitalizes the <code>&lt;filter-name&gt;</code> and appends <code>Module</code>.
+In the previous example, because the filter name was <code>app</code> and the application&#8217;s root package name is <code>org.example.myapp</code>, the module class would be <code>org.example.myapp.services.AppModule</code>.</p>
+</div>
+<div class="paragraph">
+<p>If such a class exists, it is added to the IoC Registry.
+It is not an error for your application to not have a module class, though any non-trivial application will have one.</p>
+</div>
+<div class="paragraph">
+<p>Your application module class (usually <code>AppModule.java</code>) will typically override some of Tapestry&#8217;s default, or "factory", symbols, by contributing overrides to the ApplicationDefaults service configuration. For example:</p>
+</div>
+<div class="listingblock">
+<div class="title">AppModule.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class AppModule
+{
+  public static void contributeApplicationDefaults(MappedConfiguration&lt;String,String&gt; configuration)
+  {
+    configuration.add(SymbolConstants.SUPPORTED_LOCALES, "en,fr,de");
+    configuration.add(SymbolConstants.FILE_CHECK_INTERVAL, "10 m");
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configuration_symbol_names"><a class="anchor" href="#_configuration_symbol_names"></a>Configuration Symbol Names</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Main Article: <a href="symbols.html" class="xref page">Symbols</a></p>
+</div>
+<div class="paragraph">
+<p>Many of Tapestry&#8217;s built-in services (some of which are not even public) are configured via symbols.
+These symbols can be overridden by contributing to the ApplicationDefaults service configuration, or by placing a <code>&lt;context-param&gt;</code> element into the application&#8217;s <code>web.xml</code>, or on the command line by defining JVM System Properties with the <code>-D</code> command line option.</p>
+</div>
+<div class="paragraph">
+<p>These symbols are always defined in terms of strings, and those strings are coerced to the appropriate type (a number, a boolean, etc.).
+Of special note are <em>time intervals</em>, which are specified in a particular format (see <code><a href="https://tapestry.apache.org/5.4.5/apidocs/.html"></a></code>).</p>
+</div>
+<div class="paragraph">
+<p>Most of these symbols have a constant defined in the <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html">SymbolConstants</a></code> class, while others are in the <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/ioc/IOCSymbols.html">IOCSymbols</a></code> class (since 5.2.2).
+Use the symbol name (<code>tapestry.*</code>) for JVM System Properties with the <code>-D</code> option, and use the constant (in bold below) from within your Java classes (e.g. <code>AppModule.java</code>).</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">tapestry.app-catalog | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#APPLICATION_CATALOG">SymbolConstants.APPLICATION_CATALOG</a></code></dt>
+<dd>
+<p>Since 5.0.14<br>
+The location of the global application message catalog, the default is <code>context:WEB-INF/app-name.properties</code>.</p>
+</dd>
+<dt class="hdlist1">tapestry.application-folder | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#APPLICATION_FOLDER">SymbolConstants.APPLICATION_FOLDER</a></code></dt>
+<dd>
+<p>Since 5.3.1<br>
+The folder, of the context, in which the Tapestry application executes.
+By default this is blank, meaning the Tapestry application executes in the root of the web application context.
+Setting this value allows the Tapestry application to be segregated into a folder, which can be useful when Tapestry is executed inside a web application with other servlets or filters.</p>
+</dd>
+<dt class="hdlist1">tapestry.application-version | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#APPLICATION_VERSION">SymbolConstants.APPLICATION_VERSION</a></code></dt>
+<dd>
+<p>Since 5.1.0.0<br>
+The version of the application, which is incorporated into URLs for context and classpath assets.
+<a href="assets.html" class="xref page">Assets</a> may be <a href="response-compression.html" class="xref page">compressed</a>, and will have far-future expiration headers; they will be aggressively cached by the client web browser.
+You should change the application version on each new deployment of the application (that is, any time assets in the context change), to force clients to re-download changed versions of files.
+If you do not specify an application version, a <em>random</em> one will be assigned on every deployment (which is good for development but very bad for production).</p>
+</dd>
+<dt class="hdlist1">tapestry.asset-path-prefix | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#ASSET_PATH_PREFIX">SymbolConstants.ASSET_PATH_PREFIX</a></code></dt>
+<dd>
+<p>Since 5.3.1<br>
+The prefix to be used for all asset paths. This should start and end with a slash ("/").
+By default this is <code>/assets/</code>.</p>
+</dd>
+<dt class="hdlist1">tapestry.asset-url-fully-qualified | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#ASSET_URL_FULL_QUALIFIED">SymbolConstants.ASSET_URL_FULL_QUALIFIED</a></code></dt>
+<dd>
+<p>Since 5.3.1<br>
+A boolean value to indicate whether asset URLs should be fully qualified in the rendered page.
+This defaults to <code>false</code> (not fully qualified).</p>
+</dd>
+<dt class="hdlist1">tapestry.bootstrap-root | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#BOOTSTRAP_ROOT">SymbolConstants.BOOTSTRAP_ROOT</a></code></dt>
+<dd>
+<p>Since 5.4.0<br>
+The root asset path for Twitter Bootstrap; if your application uses a modified version of Bootstrap, you can override this symbol to have Tapestry automatically use your version.
+The value should be a path to a folder (under <code>classpath:</code> or <code>context:</code>) and should not include a trailing slash.</p>
+</dd>
+<dt class="hdlist1">tapestry.charset | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#CHARSET">SymbolConstants.CHARSET</a></code></dt>
+<dd>
+<p>Since 5.0.14<br>
+The character encoding used when generating output (or parsing input).
+The default is "UTF-8".
+See <a href="content-type-and-markup.html" class="xref page">Content Type and Markup</a> for more details.</p>
+</dd>
+<dt class="hdlist1">tapestry.clustered-sessions | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#CLUSTERED_SESSIONS">SymbolConstants.CLUSTERED_SESSIONS</a></code></dt>
+<dd>
+<p>Since 5.3.1<br>
+If <code>true</code> then at the end of each request the <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/services/SessionPersistedObjectAnalyzer.html">SessionPersistedObjectAnalyzer</a></code> will be called on each session persisted object that was accessed during the request.
+The default is "true", to preserve 5.2 behavior.
+For non-clustered applications (the majority), this value should be overridden to <code>false</code>.</p>
+</dd>
+<dt class="hdlist1">tapestry.combine-scripts | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#COMBINE_SCRIPTS">SymbolConstants.COMBINE_SCRIPTS</a></code></dt>
+<dd>
+<p>Since 5.1.0.2<br>
+If <code>true</code>, then Tapestry will combine (or "aggregate") the individual JavaScript libraries within a JavaScript stack; this reduces the number of requests from the client to the server, as the client can cache the combined JavaScript files locally (and will not need to re-download them on subsequent pages).
+The implementation of this changed significantly between Tapestry 5.1 and 5.2.
+Defaults to <code>true</code> in production mode.</p>
+</dd>
+<dt class="hdlist1">tapestry.compact-json | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#COMPACT_JSON">SymbolConstants.COMPACT_JSON</a></code></dt>
+<dd>
+<p>Since in 5.2.0<br>
+If <code>true</code>, then JSON page initialization content is compressed; if <code>false</code> then extra white space is added (pretty printing).
+Defaults to <code>true</code> in production mode.</p>
+</dd>
+<dt class="hdlist1">tapestry.component-render-tracing-enabled | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#COMPONENT_RENDER_TRACING_ENABLED">SymbolConstants.COMPONENT_RENDER_TRACING_ENABLED</a></code></dt>
+<dd>
+<p>Since 5.3.0<br>
+If <code>true</code> then Tapestry will emit rendering comments for all requests; these are comments (such as <code>&lt;!--BEGIN Index:loop (context:Index.tml, line 15)-&#8594;</code>) that can assist you in debugging markup output on the client-side.
+This will significantly increase the size of the rendered markup, but can be very helpful with complex layouts to determine which component was responsible for which portion of the rendered page.
+(To turn on rendering comments only for a particular request, add the query parameter <code>t:component-trace=true</code> to the URL.)</p>
+</dd>
+<dt class="hdlist1">tapestry.compress-whitespace | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#COMPRESS_WHITESPACE">SymbolConstants.COMPRESS_WHITESPACE</a></code></dt>
+<dd>
+<p>Since 5.0<br>
+A flag (<code>true</code> or <code>false</code>). When <code>true</code> (the default) whitespace in component templates is compressed by default (this can be fine-tuned using the standard <code>xml:space</code> attribute on an element in the template).
+When this flag is false, then whitespace is retained by default (but can still be overridden).
+See <a href="component-templates.html" class="xref page">Component Templates</a> for details.</p>
+</dd>
+<dt class="hdlist1">tapestry.context-path | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#CONTEXT_PATH">SymbolConstants.CONTEXT_PATH</a></code></dt>
+<dd>
+<p>Since 5.4.0<br>
+Identifies the context path of the application, as determined from <code>ServletContext.getContextPath()</code> method.
+This is either a blank string or a string that starts with a slash but does not end with one.</p>
+</dd>
+<dt class="hdlist1">tapestry.datepicker | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#DATEPICKER">SymbolConstants.DATEPICKER</a></code></dt>
+<dd>
+<p>Since 5.2.0<br>
+The path to the assets of the embedded DatePicker component.</p>
+</dd>
+<dt class="hdlist1">tapestry.default-cookie-max-age | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#COOKIE_MAX_AGE">SymbolConstants.COOKIE_MAX_AGE</a></code></dt>
+<dd>
+<p>Since 5.2.0<br>
+The default time interval that cookies created by Tapestry will be kept in the client web browser.
+Primarily, this is used with a cookie that exists to track the preferred user locale.
+The default value is "7 d" (7 days; see <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/ioc/util/TimeInterval.html">TimeInterval</a></code> formats).</p>
+</dd>
+<dt class="hdlist1">tapestry.default-stylesheet | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#DEFAULT_STYLESHEET">SymbolConstants.DEFAULT_STYLESHEET</a></code></dt>
+<dd>
+<p>Since 5.2.0<br>
+The default stylesheet automatically injected into every rendered HTML page.
+Many Tapestry components assume that this stylesheet is available.
+All the classes defined in the stylesheet are prefixed with <code>t-</code>.
+The exact contents of the stylesheet are subject to change at any time (they are considered internal), so replacing the stylesheet, rather than overriding selected rules within it, entails some risk.
+The default is <code>org/apache/tapestry5/default.css</code>, stored on the classpath.</p>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Deprecated in 5.4 with no replacement. The stylesheet is now associated with the core JavaScriptStack.
+</td>
+</tr>
+</table>
+</div>
+</dd>
+<dt class="hdlist1">tapestry.enable-html5-support | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#ENABLE_HTML5_SUPPORT">SymbolConstants.ENABLE_HTML5_SUPPORT</a></code></dt>
+<dd>
+<p>Since 5.4.0<br>
+If <code>true</code>, then certain HTML5 features are invoked by built-in Tapestry components.
+Mostly this controls whether the <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapesty5/corelib/components/TextField.html">TextField</a></code> component will emit HTML5 <code>type</code> attributes automatically when certain validators are used.
+See <a href="forms-and-validation.html" class="xref page">Forms and Validation</a> for details.
+The default is <code>false</code>.</p>
+</dd>
+<dt class="hdlist1">tapestry.enable-minification | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#MINIFICATION_ENABLED">SymbolConstants.MINIFICATION_ENABLED</a></code></dt>
+<dd>
+<p>Since 5.3.0<br>
+If <code>true</code>, then resources (individually or when aggregated into stacks) will be minimized via the javadoc:org.apache.tapestry5.services.assets.ResourceMinimizer service.
+If <code>false</code>, then minification is disabled.
+The default is <code>true</code> in production mode, <code>false</code> otherwise.<br></p>
+<div class="paragraph">
+<p>Note that Tapestry&#8217;s default implementation of ResourceMinimizer does nothing; minification is provided by add-on libraries.
+See <a href="assets.html" class="xref page">Assets</a> for details.</p>
+</div>
+</dd>
+<dt class="hdlist1">tapestry.enable-pageloading-mask | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#ENABLE_PAGELOADING_MASK">SymbolConstants.ENABLE_PAGELOADING_MASK</a></code></dt>
+<dd>
+<p>Since 5.4.0<br>
+If <code>true</code>, then when a page includes any JavaScript, a <code>&lt;script&gt;</code> block is added to insert a pageloader mask into the page to ensure that the user can&#8217;t interact with the page until the page is fully initialized.
+The default is <code>true</code>.</p>
+</dd>
+<dt class="hdlist1">tapestry.encode-locale-into-path | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#ENCODE_LOCALE_INTO_PATH">SymbolConstants.ENCODE_LOCALE_INTO_PATH</a></code></dt>
+<dd>
+<p>Since 5.1.0.1<br>
+If <code>true</code> (the default), then the <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/services/PersistentLocale.html">PersistentLocale</a></code> will be encoded into URLs by the <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/services/ComponentEventLinkEncoder.html">ComponentEventLinkEncoder</a></code> service.
+If overridden to <code>false</code> this does not occur, but you should provide a <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/services/LinkCreationListener2.html">LinkCreationListener2</a></code> (registered with the <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/services/LinkCreationHub.html">LinkCreationHub</a></code>) in order to add the locale as a query parameter (or provide some alternate means of persisting the locale between requests).
+See <a href="localization.html" class="xref page">Localization</a> for more details on localization.</p>
+</dd>
+<dt class="hdlist1">tapestry.execution-mode | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#EXECUTION_MODE">SymbolConstants.EXECUTION_MODE</a></code></dt>
+<dd>
+<p>Since 5.3.1<br>
+The execution mode. See <a href="#_setting_execution_modes">Setting Execution Modes</a> below.</p>
+</dd>
+<dt class="hdlist1">tapestry.exception-report-page | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#EXCEPTION_REPORT_PAGE">SymbolConstants.EXCEPTION_REPORT_PAGE</a></code></dt>
+<dd>
+<p>Since 5.0.15<br>
+The name of the page used to report exceptions.
+This defaults to "ExceptionReport", a page that Tapestry provides.
+See <a href="cookbook/overriding-exception-reporting.html" class="xref page">Overriding Exception Reporting</a> for details.</p>
+</dd>
+<dt class="hdlist1">tapestry.exception-reports-dir | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#EXCEPTION_REPORTS_DIR">SymbolConstants.EXCEPTION_REPORTS_DIR</a></code></dt>
+<dd>
+<p>Since 5.4.0<br>
+The directory to which exception report files should be written.
+The default is appropriate for development: <code>build/exceptions</code>, and should be changed for production.</p>
+</dd>
+<dt class="hdlist1">tapestry.file-check-interval | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#FILE_CHECK_INTERVAL">SymbolConstants.FILE_CHECK_INTERVAL</a></code></dt>
+<dd>
+<p>Since 5.0<br>
+Time interval between file system checks.
+During a file system check, only a single thread is active (all others are blocked) and any files loaded are checked for changes (this is part of Tapestry&#8217;s <a href="class-reloading.html" class="xref page">Class Reloading</a> mechanism).<br>
+The default is "1 s" (one second; see <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/ioc/util/TimeInterval.html">TimeInterval</a></code>), and is usually overridden with a higher value in production (say, between one and five minutes).</p>
+</dd>
+<dt class="hdlist1">tapestry.file-check-update-timeout | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#FILE_CHECK_UPDATE_TIMEOUT">SymbolConstants.FILE_CHECK_UPDATE_TIMEOUT</a></code></dt>
+<dd>
+<p>Since 5.0<br>
+Time interval that Tapestry will wait to obtain the exclusive lock needed for a file check.
+If the exclusive lock can&#8217;t be obtained in that amount of time, the request will proceed normally (without the check), but each successive request will attempt to get the lock and perform the check until successful.<br>
+The default is "50 ms" (50 milliseconds; see <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/ioc/util/TimeInterval.html">TimeInterval</a></code>).</p>
+</dd>
+<dt class="hdlist1">tapestry.force-absolute-uris | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#FORCE_ABSOLUTE_URIS">SymbolConstants.FORCE_ABSOLUTE_URIS</a></code></dt>
+<dd>
+<p>Since 5.0<br>
+When <code>false</code> (the default), Tapestry will attempt to optimize URIs that it generates, using relative URIs when such URIs are shorter than absolute URIs.
+When <code>true</code>, all URIs will be absolute URIs (including the context path, and the complete path for the request).</p>
+</dd>
+<dt class="hdlist1">tapestry.form-field-css-class | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#FORM_FIELD_CSS_CLASS">SymbolConstants.FORM_FIELD_CSS_CLASS</a></code></dt>
+<dd>
+<p>Since 5.4.0<br>
+Defines the CSS class that will be given to form field components which are <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/corelib/base/AbstractField.html">AbstractField</a></code> subclasses.
+The default value is <code>form-control</code>.</p>
+</dd>
+<dt class="hdlist1">tapestry.form-group-form-field-wrapper-element-css-class | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#FORM_GROUP_FORM_FIELD_WRAPPER_ELEMENT_CSS_CLASS">SymbolConstants.FORM_GROUP_FORM_FIELD_WRAPPER_ELEMENT_CSS_CLASS</a></code></dt>
+<dd>
+<p>Since 5.4.0<br>
+Defines the CSS class of the HTML element generated by the <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/corelib/mixins/FormGroup.html">FormGroup</a></code> mixin and the <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/corelib/components/BeanEditForm.html">BeanEditForm</a></code> and <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/corelib/components/BeanEditor.html">BeanEditor</a></code>.
+The default value is the empty string (no CSS class added).</p>
+</dd>
+<dt class="hdlist1">tapestry.form-group-form-field-wrapper-element-name | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#FORM_GROUP_FORM_FIELD_WRAPPER_ELEMENT_NAME">SymbolConstants.FORM_GROUP_FORM_FIELD_WRAPPER_ELEMENT_NAME</a></code></dt>
+<dd>
+<p>Since 5.4.0<br>
+Defines the name of the HTML element that will surround the HTML form field generated by the <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/corelib/mixins/FormGroup.html">FormGroup</a></code> mixin and the <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/corelib/components/BeanEditForm.html">BeanEditForm</a></code> and <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/corelib/components/BeanEditor.html">BeanEditor</a></code>.
+If this symbol is <code>null</code> or an empty string, no element will be generated surrouding the form field.
+The default value is the empty string (no wrapping).</p>
+</dd>
+<dt class="hdlist1">tapestry.form-group-label-css-class | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#FORM_GROUP_LABEL_CSS_CLASS">SymbolConstants.FORM_GROUP_LABEL_CSS_CLASS</a></code></dt>
+<dd>
+<p>Since 5.4.0<br>
+Defines the CSS class that will be given to <code>&lt;label&gt;</code> element generated by the <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/corelib/mixins/FormGroup.html">FormGroup</a></code> mixin and the <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/corelib/components/BeanEditForm.html">BeanEditForm</a></code> and <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/corelib/components/BeanEditor.html">BeanEditor</a></code> components.
+The default value is <code>control-label</code>.</p>
+</dd>
+<dt class="hdlist1">tapestry.form-group-wrapper-css-class | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#FORM_GROUP_WRAPPER_CSS_CLASS">SymbolConstants.FORM_GROUP_WRAPPER_CSS_CLASS</a></code></dt>
+<dd>
+<p>Since 5.4.0<br>
+Defines the CSS class that will be given to HTML element (usually a <code>&lt;div&gt;</code>) generated by the <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/corelib/mixins/FormGroup.html">FormGroup</a></code> mixin and the <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/corelib/components/BeanEditForm.html">BeanEditForm</a></code> and <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/corelib/components/BeanEditor.html">BeanEditor</a></code> components surrounding the label and the field.
+The default value is <code>form-group</code>.</p>
+</dd>
+<dt class="hdlist1">tapestry.gzip-compression-enabled | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#GZIP_COMPRESSION_ENABLED">SymbolConstants.GZIP_COMPRESSION_ENABLED</a></code></dt>
+<dd>
+<p>Since 5.1.0.0<br>
+Override to <code>false</code> to disable GZIP compression of dynamic Tapestry pages and static assets.</p>
+</dd>
+<dt class="hdlist1">tapestry.hmac-passphrase | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#HMAC_PASSPHRASE">SymbolConstants.HMAC_PASSPHRASE</a></code></dt>
+<dd>
+<p>Since 5.3.6<br>
+The plaintext phrase used to set the key for HMAC securing of serialized object data.
+The default is blank, which causes a runtime alert and console error.
+You should set this to a reasonably unique, private value, and ensure (in a cluster) that all servers use the same value – typically by making a contribution in your applications module class (normally AppModule.java).
+See <a href="security.html" class="xref page">Security</a> for details.</p>
+</dd>
+<dt class="hdlist1">tapestry.hostname | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#HOSTNAME">SymbolConstants.HOSTNAME</a></code></dt>
+<dd>
+<p>Since 5.3.0<br>
+The hostname that application should use when constructing an absolute URL.
+The default is "", i.e. an empty string, in which case system will use <code>request.getServerName()</code>.
+<em>Not</em> the same as environment variable <code>HOSTNAME</code> (but you could contribute <code>$HOSTNAME</code> as the value to make it the same).</p>
+</dd>
+<dt class="hdlist1">tapestry.hostport | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#HOSTPORT">SymbolConstants.HOSTPORT</a></code></dt>
+<dd>
+<p>Since 5.3.0<br>
+The port that application should use when constructing an absolute URL.
+The default is "0", which means to use the port value from the request.</p>
+</dd>
+<dt class="hdlist1">tapestry.hostport-secure | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#HOSTPORT_SECURE">SymbolConstants.HOSTPORT_SECURE</a></code></dt>
+<dd>
+<p>Since 5.3.0<br>
+The secure (https) port that application should use when constructing an absolute URL.
+The default is "0", i.e. use the value from the request.</p>
+</dd>
+<dt class="hdlist1">tapestry.include-core-stack | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#INCLUDE_CORE_STACK">SymbolConstants.INCLUDE_CORE_STACK</a></code></dt>
+<dd>
+<p>Since 5.4.0<br>
+Whether to include Tapestry&#8217;s "core" stack of JavaScript libraries. The default is <code>true</code>.</p>
+</dd>
+<dt class="hdlist1">tapestry.javascript-infrastructure-provider | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#JAVASCRIPT_INFRASTRUCTURE_PROVIDER">SymbolConstants.JAVASCRIPT_INFRASTRUCTURE_PROVIDER</a></code></dt>
+<dd>
+<p>Since 5.4.0<br>
+Tapestry relies on an underlying client-side JavaScript infrastructure framework to handle DOM manipulation, event handling, and Ajax requests.
+Prior to Tapestry 5.4, the foundation was <a href="http://http//prototypejs.org/">Prototype</a>.
+In 5.4 and later, support for <a href="http://jquery.org/">jQuery</a> has been added, and it is possible to add others.
+This symbol defines a value that is used to select a resource that is provided to the <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/services/javascript/ModuleManager.html">ModuleManager</a></code> service as a <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/services/javascript/JavaScriptModuleConfiguration.html">JavaScriptModuleConfiguration</a></code> to provide a specific implementation of the <code>t5/core/dom</code> module.
+Tapestry 5.4 directly supports <code>prototype</code> or <code>jquery</code>.
+To support other foundation frameworks, override this symbol value and supply your own module configuration.</p>
+<div class="paragraph">
+<p>In Tapestry 5.4, this defaults to <code>prototype</code> for compatibility with 5.3.
+This will likely change in 5.5 to default to <code>jquery</code>.
+At some point in the future, Prototype support may no longer be present.</p>
+</div>
+</dd>
+<dt class="hdlist1">tapestry.lenient-date-format | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#LENIENT_DATE_FORMAT">SymbolConstants.LENIENT_DATE_FORMAT</a></code></dt>
+<dd>
+<p>Since 5.4.0<br>
+Defines whether <code>java.text.DateFormat</code> instances created by Tapestry should be lenient or not by default.
+The default value is <code>false</code>.</p>
+</dd>
+<dt class="hdlist1">tapestry.min-gzip-size | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#MIN_GZIP_SIZE">SymbolConstants.MIN_GZIP_SIZE</a></code></dt>
+<dd>
+<p>Since 5.1.0.0<br>
+The minimum stream size necessary for Tapestry to use GZIP compression on the response stream. See <a href="response-compression.html" class="xref page">Response Compression</a> for more details.</p>
+</dd>
+<dt class="hdlist1">tapestry.module-path-prefix | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#MODULE_PATH_PREFIX">SymbolConstants.MODULE_PATH_PREFIX</a></code></dt>
+<dd>
+<p>Since 5.4.0<br>
+Prefix used for all module resources.
+This may contain slashes, but should not begin or end with one.
+Tapestry will create two Dispatchers from this: one for normal modules, the other for GZip compressed modules (by appending <code>.gz</code> to this value).
+The default is <code>modules</code>.</p>
+</dd>
+<dt class="hdlist1">tapestry.omit-expiration-cache-control-header | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#OMIT_EXPIRATION_CACHE_CONTROL_HEADER">SymbolConstants.OMIT_EXPIRATION_CACHE_CONTROL_HEADER</a></code></dt>
+<dd>
+<p>Since 5.4.0<br>
+When an asset (typically, a JavaScript module) is streamed without an explicit expiration header, then this value is sent as the <code>Cache-Control</code> header;
+the default is <code>max-age=60, must-revalidate</code>.
+Setting max-age to a value above zero significantly reduces the number of client requests for module content, as client browsers will then cache previously downloaded versions.
+For normal assets, which are immutable, and fingerprinted with a content hash, there is no need to set max age, and instead, a far-future expiration date is provided.</p>
+</dd>
+<dt class="hdlist1">tapestry.omit-generator-meta | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#OMIT_GENERATOR_META">SymbolConstants.OMIT_GENERATOR_META</a></code></dt>
+<dd>
+<p>Since 5.1.0.0<br>
+If <code>true</code>, then the <code>&lt;meta&gt;</code> tag that Tapestry normally writes into the <code>&lt;head&gt;</code>, identifying the Tapestry version, will be omitted.
+Use this when you do not wish to advertise your application&#8217;s use of Tapestry.</p>
+</dd>
+<dt class="hdlist1">tapestry.page-preload-mode | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#PRELOADER_MODE">SymbolConstants.PRELOADER_MODE</a></code></dt>
+<dd>
+<p>Since 5.4.0<br>
+Controls in what environment page preloading should occur.
+By default, preloading only occurs in production.
+Possible values are <code>ALWAYS</code>, <code>DEVELOPMENT</code>, <code>NEVER</code>, or <code>PRODUCTION</code> (the default is <code>PRODUCTION</code> when in production mode, or <code>DEVELOPMENT</code> otherwise).
+See <code><a href="https://tapestry.apache.org/5.5.0/apidocs/org/apache/tapestry5/services/pageload/PreloaderMode.html">PreloaderMode</a></code>.</p>
+</dd>
+<dt class="hdlist1">tapestry.persistence-strategy | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#PERSISTENCE_STRATEGY">SymbolConstants.PERSISTENCE_STRATEGY</a></code></dt>
+<dd>
+<p>Since 5.1.0.0<br>
+Identifies the default persistence strategy for all pages that do not provide an override.
+The default is <code>session</code> (<code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/PersistenceConstants.html#SESSION">PersistenceConstants.SESSION</a></code>).</p>
+</dd>
+<dt class="hdlist1">tapestry.production-mode | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#PRODUCTION_MODE">SymbolConstants.PRODUCTION_MODE</a></code></dt>
+<dd>
+<p>Since 5.0<br>
+A flag (<code>true</code> or <code>false</code>) indicating whether the application is running in production or in development.
+The default is <code>true</code>, which means that runtime exceptions are not reported with full detail (only the root exception message is displayed, not the entire stack of exceptions, properties and other information shown in development mode).</p>
+</dd>
+<dt class="hdlist1">tapestry.restrictive-environment | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#RESTRICTIVE_ENVIRONMENT">SymbolConstants.RESTRICTIVE_ENVIRONMENT</a></code></dt>
+<dd>
+<p>Since 5.4.0<br>
+A flag (<code>true</code> or <code>false</code>) that, if <code>true</code>, changes some default Tapestry behavior to make it work better in restrictive environments such as <a href="cookbook/google-app-engine.html" class="xref page">Google App Engine (GAE)</a>.
+Specifically, if <code>true</code>, then <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/ioc/OperationTracker.html">OperationTracker</a></code> writes its exception report files into a single folder (specified by the <code>tapestry.exception-reports-dir</code> symbol, above) rather than creating dated sub-folders under that path, and <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/internal/webresources/ResourceTransformerFactory.html">ResourceTransformerFactory</a></code> avoids creating a cache folder for resources.</p>
+</dd>
+<dt class="hdlist1">tapestry.scriptaculous | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#SCRIPTACULOUS">SymbolConstants.SCRIPTACULOUS</a></code></dt>
+<dd>
+<p>The path to the embedded copy of <a href="http://script.aculo.us/">script.aculo.us</a> packaged with Tapestry.
+This value may be overridden to use a different version of the script.aculo.us library.
+See <a href="client-side-javascript.html" class="xref page">Client-Side JavaScript</a> for the default version.</p>
+</dd>
+<dt class="hdlist1">tapestry.secure-enabled | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#SECURE_ENABLED">SymbolConstants.SECURE_ENABLED</a></code></dt>
+<dd>
+<p>Since 5.1.0.1<br>
+If <code>true</code>, then <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/annotations/Secure.html">@Secure</a></code> annotations are honored; if <code>false</code>, no security checks or redirects take place.
+This defaults to <code>tapestry.production-mode</code>, meaning that in development mode it will (by default) be disabled.
+However, sites that are intended to be served only under HTTPS should set this to <code>false</code>. See <a href="https.html" class="xref page">HTTPS / SSL</a> for details.</p>
+</dd>
+<dt class="hdlist1">tapestry.session-locking-enabled | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#SESSION_LOCKING_ENABLED">SymbolConstants.SESSION_LOCKING_ENABLED</a></code></dt>
+<dd>
+<p>Since 5.4.0<br>
+If true (the default), then Tapestry will use a lock when reading/updating HttpSession attributes, to avoid simultaneous access by multiple threads when using AJAX.
+See <a href="https://issues.apache.org/jira/browse/TAP5-2049">TAP5-2049</a>.
+Set to <code>false</code> to deactivate the session locking logic.</p>
+<div class="paragraph">
+<p>Prior to version 5.4 session locking was not performed.</p>
+</div>
+</dd>
+<dt class="hdlist1">tapestry.start-page-name | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#START_PAGE_NAME">SymbolConstants.START_PAGE_NAME</a></code></dt>
+<dd>
+<p>Since 5.2.0<br>
+The logical name of the start page, the page that is rendered for the <em>root URL</em>.
+This is normally "start".
+This functionality is vestigial: it has been superseded by the use of Index pages.</p>
+</dd>
+<dt class="hdlist1">tapestry.strict-css-url-rewriting | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#STRICT_CSS_URL_REWRITING">SymbolConstants.STRICT_CSS_URL_REWRITING</a></code></dt>
+<dd>
+<p>Since 5.4.0<br>
+Controls whether to throw an exception (<code>true</code>) or log a warning (<code>false</code>) when Tapestry encounters a URL reference to a non-existing file within a CSS file.
+The default is <code>false</code>.</p>
+</dd>
+<dt class="hdlist1">tapestry.supported-locales | <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/SymbolConstants.html#SUPPORTED_LOCALES">SymbolConstants.SUPPORTED_LOCALES</a></code></dt>
+<dd>
+<p>Since 5.0<br>
+A comma-separated list of supported locales.
+Incoming requests as "narrowed" to one of these locales, based on closest match.
+If no match can be found, the first locale in the list is treated as the default.<br>
+The default is (currently) "en,it,es,zh_CN,pt_PT,de,ru,hr,fi_FI,sv_SE,fr_FR,da,pt_BR,ja,el".
+As the community contributes new localizations of the necessary messages files, this list will expand.
+Note that the Tapestry quickstart archetype overrides the factory default, forcing the application to be localized only for <code>en</code>.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_setting_component_parameter_defaults"><a class="anchor" href="#_setting_component_parameter_defaults"></a>Setting Component Parameter Defaults</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Added in 5.3
+Some components, notably Grid, Pallete and Zone, have default parameter values specified in terms of symbols.
+This means you can use these symbols to modify the defaults for all instances of such components in your application.
+For example, you can set the default rows per page for all Grid instances by adding this to the contributeApplicationDefaults method in your application&#8217;s module class (typically AppModule.java): <code>configuration.add(ComponentParameterConstants.GRID_ROWS_PER_PAGE, "15");</code>
+See the complete list of such constants at ComponentParameterConstants.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configuring_ignored_paths"><a class="anchor" href="#_configuring_ignored_paths"></a>Configuring Ignored Paths</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You may sometimes need to use Tapestry in concert with other servlets.
+This can cause problems, since Tapestry (being a servlet filter) may see URLs intended for another servlet and attempt to process them.</p>
+</div>
+<div class="paragraph">
+<p>The Servlet API does not provide Tapestry with any clues about what other servlets are available in the web application.
+Instead, you must configure Tapestry to ignore paths intended for other servlets.</p>
+</div>
+<div class="paragraph">
+<p>The <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/internal/services/IgnoredPathsFilter.html">IgnoredPathsFilter</a></code> service is the method for this kind of configuration.
+Its configuration is an unordered collection of regular expression patterns.
+A request whose path matches any of these patterns is <strong>not</strong> processed by Tapestry.</p>
+</div>
+<div class="paragraph">
+<p>For example, say you are using <a href="http://getahead.org/dwr/">Direct Web Remoting</a>.
+You&#8217;ll likely have the servlet path <code>/dwr</code> mapped to the Direct Web Remoting servlet.</p>
+</div>
+<div class="paragraph">
+<p>You contribution would look like:</p>
+</div>
+<div class="listingblock">
+<div class="title">AppModule.java (partial)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public static void contributeIgnoredPathsFilter(Configuration&lt;String&gt; configuration)
+{
+    configuration.add("/dwr/.*");
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The regular expression matches any path that begins with <code>/dwr/</code>.</p>
+</div>
+<div class="paragraph">
+<p>The regular expressions provided in the configuration are always compiled with case insensitivity enabled.</p>
+</div>
+<div class="paragraph">
+<p>Also note that actual files in your web application (images, stylesheets, etc.) are always ignored by Tapestry.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configuring_content_type_mapping"><a class="anchor" href="#_configuring_content_type_mapping"></a>Configuring Content Type Mapping</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The mapping from file type (by extension) to content type is typically done as part of your servlet-containers configuration.
+Alternately, you may contribute to the <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/internal/services/ResourceStreamer.html">ResourceStreamer</a></code> service&#8217;s configuration.
+This is a mapped configuration; it maps file extensions (such as "css" or "js") to content types (<code>text/css</code> or <code>text/javascript</code>) respectively.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_setting_execution_modes"><a class="anchor" href="#_setting_execution_modes"></a>Setting Execution Modes</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_segregating_applications_into_folders"><a class="anchor" href="#_segregating_applications_into_folders"></a>Segregating Applications Into Folders</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In many cases where Tapestry is being adopted into an existing web application (possibly written in Tapestry 4 or some other framework), it is nice to segregate the Tapestry application into its own folder, to avoid conflicts with the existing application or servlets.</p>
+</div>
+<div class="paragraph">
+<p>Setting this up is in two parts:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Modifying the configuration of the <code>&lt;url-pattern&gt;</code> for the Tapestry filter to match the specified folder.</p>
+</li>
+<li>
+<p>Identifying the folder name using a Tapestry symbol value contribution.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>So, if you wanted to run the Tapestry application inside folder <code>t5app</code>, you would modify your <code>web.xml</code> indicate the use of the folder:</p>
+</div>
+<div class="listingblock">
+<div class="title">web.xml (partial)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;filter-mapping&gt;
+  &lt;filter-name&gt;app&lt;/filter-name&gt;
+  &lt;url-pattern&gt;/t5app/*&lt;/url-pattern&gt;
+&lt;/filter-mapping&gt;</code></pre>
+</div>
+</div>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>and in your AppModule, you would inform Tapestry about the mapping change:</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="title">AppModule.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class AppModule
+{
+    @Contribute(SymbolProvider.class)
+    @ApplicationDefaults
+    public static void applicationDefaults(MappedConfiguration&lt;String, String&gt; configuration)
+    {
+        configuration.add(SymbolConstants.APPLICATION_FOLDER, "t5app")
+    }
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This extra mapping is unfortunately necessary, because the Servlet API does not provide a way for a servlet filter, such as the one used by Tapestry, to know about its mapping.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>This changes the servlet container to only forward requests inside the <code>t5app</code> folder to Tapestry.
+Requests for other folders (or the root folder) will not be passed to Tapestry at all.
+The symbol contribution informs Tapestry to change the URLs it generates to include the necessary folder name.
+It also affects the logic in Tapestry that recognizes and handles requests.</p>
+</div>
+<div class="paragraph">
+<p>In addition, if you choose to place page template files in the context, rather than on the classpath (as with component templates), then you will place those template files inside the <code>t5app</code> folder.</p>
+</div>
+<div class="paragraph">
+<p>At this time, it is still not possible to run multiple Tapestry 5 applications within the same web application.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

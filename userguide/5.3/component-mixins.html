@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Component Mixins :: Apache Tapestry</title>
+    <meta name="generator" content="Antora 3.1.15">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/tapestry.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../.."><img alt="Apache Tapestry Logo" src="../../_/img/apache-tapestry-icon-dark.svg" width="60" />Apache Tapestry</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Documentation</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../../main/getting-started.html">Getting Started</a>
+            <a class="navbar-item" href="../../main/tutorial/">Tutorial</a>
+            <a class="navbar-item" href="../../userguide/5.8/">User Guide</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="../../main/community.html">Community</a>
+        <a class="navbar-item" href="../../main/support.html">Support</a>
+        <a class="navbar-item" href="../../main/developers.html">Developers</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Apache</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+            <a class="navbar-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
+            <a class="navbar-item" href="https://www.apache.org/licenses/">License</a>
+            <a class="navbar-item" href="https://www.apache.org/security/">Security</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="../../main/download.html">Download</a>
+          </span>
+        </div>
+        <div class="navbar-brand">
+          <a href="https://www.apache.org/">
+          <img alt="The Apache Software Foundation" src="../../_/img/asf_logo.svg" width="200" height="63" style="padding-top: 5px; padding-bottom: 5px; background-color: white">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="body">
+<div class="nav-container" data-component="userguide" data-version="5.3">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">User Guide</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Introduction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry Core</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basics</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="project-layout.html">Project Layout</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="runtime-exceptions.html">Runtime Exceptions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="class-reloading.html">Class Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-reference.html">Component Reference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="annotations.html">Annotations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Pages and Components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-classes.html">Component Classes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-templates.html">Component Templates</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="property-expressions.html">Property Expressions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-parameters.html">Component Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="parameter-type-coercion.html">Parameter Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="layout-component.html">Layout Component</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="component-mixins.html">Component Mixins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-navigation.html">Page Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="localization.html">Localization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Request/Response Rendering</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-life-cycle.html">Page Life Cycle</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="request-processing.html">Request Processing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-rendering.html">Component Rendering</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-events.html">Component Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="url-rewriting.html">URL Rewriting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dom.html">Document Object Model (DOM)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="response-compression.html">Response Compression</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="security.html">Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https.html">HTTPS / SSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="content-type-and-markup.html">Content Type and Markup</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Data Persistence</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="persistent-page-data.html">Persistent Page Data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="session-storage.html">Session Storage</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Interacting with components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="injection.html">Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="environmental-services.html">Environmental Services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript, AJAX, CSS &amp; Binary Data</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="client-side-javascript.html">Client-Side JavaScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ajax-and-zones.html">AJAX and Zones</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="css.html">Cascading Style Sheets (CSS)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="assets.html">Assets</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Working with Forms</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="forms-and-validation.html">Forms and Validation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="beaneditform-guide.html">BeanEditForm Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uploading-files.html">Uploading Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bean-validation.html">Bean Validation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Logging, Debugging &amp; Testing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="logging.html">Logging</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unit-testing.html">Unit testing pages or components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integration-testing.html">Integration Testing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="development-dashboard.html">Development Dashboard</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry IOC</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-overview.html">IoC Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="symbols.html">Symbols</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="type-coercion.html">Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="case-insensitivity.html">Case Insensitivity</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="autoloading-modules.html">Autoloading Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="chainbuilder-service.html">ChainBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pipelinebuilder-service.html">PipelineBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="shadowbuilder-service.html">ShadowBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="strategybuilder-service.html">StrategyBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="defining-tapestry-ioc-services.html">Defining Tapestry IOC Services</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-modules.html">IoC Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="object-providers.html">Object Providers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-serialization.html">Service Serialization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="starting-the-ioc-registry.html">Starting the IoC Registry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="aliases.html">Aliases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="injection-in-detail.html">Injection in Detail</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ordering-by-constraints.html">Ordering by Constraints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="registry-startup.html">Registry Startup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="parallel-execution.html">Parallel Execution</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="logging-in-tapestry.html">Logging in Tapestry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-implementation-reloading.html">Service Implementation Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-advisors.html">Service Advisors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-decorators.html">Service Decorators</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="using-jsr-330-standard-annotations.html">Using JSR 330 standard annotations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="operation-tracker.html">Operation Tracker</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Add-ons and Integrations</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Built-in</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="hibernate.html">Hibernate Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="jpa.html">JPA Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integrating-with-spring-framework.html">Spring</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="third-party-modules.html">Third Party Modules</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Release Notes</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.3.html">Tapestry 5.3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.2.html">Tapestry 5.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.1.html">Tapestry 5.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.0.html">Tapestry 5.0</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cookbook</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/default-parameter.html">Default Parameter</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/overriding-exception-reporting.html">Overriding Exception Reporting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/error-page-recipe.html">Error Page Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/supporting-informal-parameters.html">Supporting Informal Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/switching-cases.html">Switching Cases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/enum-parameter-recipe.html">Enum Parameter Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/extending-the-if-component.html">Extending The If Component</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/meta-programming-page-content.html">Meta-Programming Page Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="cookbook/ioc-cookbook.html">IoC Cookbook</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-basic-services-and-injection.html">IoC Cookbook - Basic Services and Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-overriding-ioc-services.html">IoC Cookbook - Overriding IoC Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-patterns.html">IoC Cookbook - Patterns</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-service-configurations.html">IoC Cookbook - Service Configurations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/using-select-with-a-list.html">Using Select With a List</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/performance-and-clustering.html">Performance and Clustering</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/google-app-engine.html">Google App Engine (GAE)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frequently Asked Questions (FAQ)</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/general.html">General Questions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/templating-and-markup.html">Templating and Markup FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/ajax.html">AJAX FAQ</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">User Guide</span>
+    <span class="version">5.3</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../main/about.html">Home</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../current/index.html">User Guide</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../current/index.html">5.8</a>
+        </li>
+        <li class="version">
+          <a href="../5.7/index.html">5.7</a>
+        </li>
+        <li class="version">
+          <a href="../5.6/index.html">5.6</a>
+        </li>
+        <li class="version">
+          <a href="../5.5/index.html">5.5</a>
+        </li>
+        <li class="version">
+          <a href="../5.4/index.html">5.4</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">5.3</a>
+        </li>
+        <li class="version">
+          <a href="../5.2/index.html">5.2</a>
+        </li>
+        <li class="version">
+          <a href="../5.1/index.html">5.1</a>
+        </li>
+        <li class="version">
+          <a href="../5/index.html">5.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../main/about.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">User Guide</a></li>
+    <li>Tapestry Core</li>
+    <li>Pages and Components</li>
+    <li><a href="component-mixins.html">Component Mixins</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">5.3</button>
+  <div class="version-menu">
+    <a class="version" href="../current/component-mixins.html">5.8</a>
+    <a class="version" href="../5.7/component-mixins.html">5.7</a>
+    <a class="version" href="../5.6/component-mixins.html">5.6</a>
+    <a class="version" href="../5.5/component-mixins.html">5.5</a>
+    <a class="version" href="../5.4/component-mixins.html">5.4</a>
+    <a class="version is-current" href="component-mixins.html">5.3</a>
+    <a class="version" href="../5.2/component-mixins.html">5.2</a>
+    <a class="version" href="../5.1/component-mixins.html">5.1</a>
+    <a class="version" href="../5/component-mixins.html">5.0</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Component Mixins</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>A Component Mixin is a way to supplement an existing Tapestry component with additional behavior.</p>
+</div>
+<div class="paragraph">
+<p>You can think of a mixin as a kind of mashup for a component.
+It combines the new behavior of the mixin with the existing behavior of the component, and bundles it all in one place.
+Mixins may be used to add specialized validation to user input fields, dynamically modify the HTML output of a component, or to add Ajax effects and behaviors of all sorts to components.</p>
+</div>
+<div class="paragraph">
+<p>Tapestry comes with several mixins, such as the <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/mixins/Autocomplete.html">Autocomplete</a></code> mixin which adds autocomplete behavior to an ordinary <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/TextField.html">TextField</a></code> component.
+In addition, you can easily create your own.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mixin_classes"><a class="anchor" href="#_mixin_classes"></a>Mixin Classes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Mixin classes are stored in the <code>mixins</code> sub-package of your application, below the application (or library) root package.
+This parallels where your component and page classes are stored.</p>
+</div>
+<div class="paragraph">
+<p>Other than that, mixin classes are the same as any other component class.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mixin_limitations"><a class="anchor" href="#_mixin_limitations"></a>Mixin Limitations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Currently, mixins are allowed to do anything a component can do, including having parameters and render phase methods.</p>
+</div>
+<div class="paragraph">
+<p>Mixins may not have a template.
+They integrate with the component strictly in terms of invoking render phase methods.</p>
+</div>
+<div class="paragraph">
+<p>Mixins may have persistent fields, but currently, this is not implemented perfectly (there is a potential for a name clash between a mixin and the component or another mixin).
+Use persistent fields with mixins with care.
+Or better yet, delegate persistence to the container using parameters.</p>
+</div>
+<div class="paragraph">
+<p>Mixins may not, themselves, have mixins.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_using_mixins"><a class="anchor" href="#_using_mixins"></a>Using Mixins</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Mixins are used in two different scenarios: <a href="#_instance_mixins">Instance Mixins</a> and <a href="#_implementation_mixins">Implementation Mixins</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="_instance_mixins"><a class="anchor" href="#_instance_mixins"></a>Instance Mixins</h3>
+<div class="paragraph">
+<p>An instance mixin is a mixin applied to a specific instance of a component.
+This can be done in the <a href="component-templates.html" class="xref page">Component Templates</a> with the <code>mixins</code> attribute of the component tag.
+This is a comma-separated list of mixin names.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;t:textfield t:id="accountName" t:mixins="Autocomplete,DefaultFromCookie" /&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Alternately, when the <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/annotations/Component.html">@Component</a></code> annotation is used to define the component type, you may specify the mixins in two ways:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/annotations/Mixins.html">@Mixins</a></code> annotation allows a list of mixin names to be specified.</p>
+</li>
+<li>
+<p>The <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestyr5/annotations/MixinClasses.html">@MixinClasses</a></code> annotation allows a set of mixin classes to be specified directly.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The former is often less verbose, and allows core mixins to be overridden with application-specific mixins.
+The later format is more specific and more refactor-safe (renaming a mixin class will rename the entry in the MixinClasses annotation as well).</p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Component(parameters=...)
+@Mixins({"Autocomplete", "DefaultFromCookie"})
+private TextField userId;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This example defines a component of type <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/TextField.html">TextField</a></code> and mixes in the <em>hypothetical</em> <code>Autocomplete</code> and <code>DefaultFromCookie</code> mixins.</p>
+</div>
+<div class="sect3">
+<h4 id="_ordering_the_mixins"><a class="anchor" href="#_ordering_the_mixins"></a>Ordering the Mixins</h4>
+<div class="paragraph">
+<p>With <code>@Mixins</code> and <code>@MixinClasses</code> annotations, we can order the list of mixins, by adding a constraint.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>@Component(parameters=...) @Mixins({"Autocomplete", "DefaultFromCookie::before:Autocomplete"})
+private TextField userId;</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>@Component(parameters=. . .)
+@MixinClasses(value={Autocomplete.class, DefaultFromCookie.class}, order={"","before:AutoComplete"})
+private TextField userId;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can specify many contraints for a mixin. You just need to separate them with a <code>;</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_implementation_mixins"><a class="anchor" href="#_implementation_mixins"></a>Implementation Mixins</h3>
+<div class="paragraph">
+<p>Implementation mixins, mixins which apply to all instances of a component, are added using the @Mixin annotation.
+This annotation defines a field that will contain the mixin instance.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class AutocompleteField extends TextField
+{
+  @Mixin
+  private Autocomplete autocompleteMixin;
+
+  // ...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Often, the type of the field is the exact mixin class to be instantiated.</p>
+</div>
+<div class="paragraph">
+<p>In other cases, such as when the field&#8217;s type is an interface or a base class, the value attribute of the annotation will be used to determine the mixin class name:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class AutocompleteField extends TextField
+{
+  @Mixin("Autocomplete")
+  private Object autocompleteMixin;
+
+  // ...
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mixin_parameters"><a class="anchor" href="#_mixin_parameters"></a>Mixin Parameters</h3>
+<div class="paragraph">
+<p>Mixins are allowed to have parameters, just like components.</p>
+</div>
+<div class="paragraph">
+<p>Here we provide a value of <code>.5</code> seconds for the Autocomplete mixin&#8217;s <code>frequency</code> parameter:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;t:container xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"&gt;
+...
+&lt;t:textfield t:id="accountName" t:mixins="Autocomplete" t:Autocomplete.frequency=".5" /&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The parameter name should be prefixed with the name of the mixin class (<code>Autocomplete.</code> above).</p>
+</div>
+<div class="paragraph">
+<p>You can do the same thing with the <code>@Component</code> annotation:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Component(parameters={"Autocomplete.frequency=.5", ... })
+@Mixins("Autocomplete", "DefaultFromCookie"})
+private TextField userId;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When using the Tapestry 5.3 and earlier <a href="component-templates.html#_the_tapestry_namespace" class="xref page">XSDs</a>, you may omit the class name prefix (e.g. <code>t:frequency=".5"</code> instead of <code>t:Autocomplete.frequency=".5"</code>), but then Tapestry has to resolve conflicts.
+If a component and a mixin both define a parameter with the same name, the component wins; the component&#8217;s parameter will be bound, and the mixin&#8217;s parameter will be unbound.</p>
+</div>
+<div class="paragraph">
+<p>If the component and a mixin both supports informal parameters, the mixin will receive the all the unqualified informal parameters.
+If more than one Mixin supports informal parameters the results are undefined.</p>
+</div>
+<div class="paragraph">
+<p>Note that when you define an implementation mixin, and the mixin has parameters, there&#8217;s no way to bind those parameters as part of the <em>implementation</em>.
+They simply become available when the composite component (including the mixin) is introduced into a page.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_binding_the_parameter_of_the_core_component"><a class="anchor" href="#_binding_the_parameter_of_the_core_component"></a>Binding the parameter of the core component</h3>
+<div class="paragraph">
+<p>It is sometimes desirable to access the current value of a parameter defined in the component associated with the mixin.
+For example: normally, when the textfield component is marked disabled, it renders a text field with a disabled attribute, but you want it to output the (plaintext) value when disabled.
+A mixin for this purpose would need access to at least the <code>disabled</code>, and <code>value</code> parameters, and possibly the <code>translate</code> parameter (for a client-side representation).
+You can access the <code>disabled</code> parameter via <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/annotations/InjectContainer.html">@InjectContainer</a></code> and checking <code>isDisabled</code> on the field, but textfield currently provides no access to <code>value</code> or <code>translate</code>.
+In this case, you can bind the core-component parameter using the <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/annotations/BindParameter.html">@BindParameter</a></code> annotation:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class MyMixin
+{
+  @BindParameter
+  private boolean disabled;
+
+  @BindParameter
+  private FieldTranslator translate;
+
+  @BindParameter
+  private Object value;
+
+  Boolean beginRender(MarkupWriter writer)
+  {
+      // ...
+      if (disabled)
+      {
+         // ...
+         String stringValue = translate.toClient(value));
+         // ...
+      }
+      // ...
+  }
+  // ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Tapestry will "link" the <code>disabled</code>, <code>translate</code>, and <code>value</code> fields above to parameters of the same name on the associated component.
+The fields are not parameters to the mixin, but local copies of the component parameter.
+They are cached only if the associated component parameter is cached.
+They are read-write, and Tapestry handles synchronizing the value between mixins and the associated component such that even with a cached parameter, components and mixins will share the same value for a given parameter/bound-parameter during render.
+Only declared parameters of the associated components may be bound.</p>
+</div>
+<div class="paragraph">
+<p>By default, Tapestry will bind the parameter with the same name as the field.
+You can explicitly declare the parameter to bind via the value attribute:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@BindParameter("translate")
+private FieldTranslator translator;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In some cases, a mixin will be used on different components using different names for a similar parameter type.
+For instance, <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapesytr5/corelib/components/BeanEditor.html">BeanEditor</a></code> has an <code>object</code> parameter; most form fields have a <code>value</code> parameter, and <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/Grid.html">Grid</a></code> has a <code>source</code> parameter.
+These parameters have different names, but each is the <code>principle</code> parameter on which the components are acting.
+A mixin useable by all three components can specify multiple potential parameter values to bind.
+The first value that matches a declared parameter of the associated component will be used:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class MyMixin
+{
+  // ...
+  @BindParameter({"value","object","source"})
+  private Object principalObject;
+  // ...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>MyMixin</code> can be used on a textfield (<code>principalObject</code> is bound to <code>value</code>), on <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapesytr5/corelib/components/BeanEditor.html">BeanEditor</a></code> or <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapesytr5/corelib/components/BeanDisplay.html">BeanDisplay</a></code> (<code>principalObject</code> is bound to <code>object</code>), or on <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapesytr5/corelib/components/Grid.html">Grid</a></code> or <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapesytr5/corelib/components/Loop.html">Loop</a></code> (<code>principalObject</code> is bound to <code>source</code>).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_render_phase_ordering"><a class="anchor" href="#_render_phase_ordering"></a>Render Phase Ordering</h3>
+<div class="paragraph">
+<p>All mixins for a component execute their <a href="component-rendering.html" class="xref page">render phase methods</a> before the component&#8217;s render phase methods for most phases.
+However, in the later phases (<code>AfterRender</code>, <code>CleanupRender</code>) the order of executing is reversed.</p>
+</div>
+<div class="paragraph">
+<p>Exception: A mixins whose class is annotated with <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/annotations/MixinAfter.html">@MixinAfter</a></code> is ordered <em>after</em> the component, not before.</p>
+</div>
+<div class="paragraph">
+<p>Withing a given phase and class (<code>@MixinAfter</code> vs. <code>mixin</code> before), mixin ordering is determined by the ordering constraints specified in the mixin definitions.
+The constraint definitions follow the same conventions as <a href="ordering-by-constraints.html" class="xref page">ordered service configurations</a>.
+How you specify the constraints depends on how the mixin is specified.</p>
+</div>
+<div class="listingblock">
+<div class="title">As an Implementation Mixin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Mixin("Autocomplete", order={"before:DiscardBody", "after:RenderDisabled"}
+private TextField userId;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">As a Template-specifed Instance Mixin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;input t:id="myfield"
+    t:mixins="autocomplete::before:discardbody;after:renderdisabled, defaultfromcookie::before:autocomplete"/&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">As a @Mixins-specified Instance Mixin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Component(...)
+@Mixins(
+  "Autocomplete::before:discardbody;after:renderdisabled",
+  "DefaultFromCookie::before:autocomplete")
+)
+private TextField userId;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">As a @MixinClasses-specified Instance Mixins</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Component(...)
+@MixinClasses(
+  value={Autocomplete.class,DefaultFromCookie.class},
+  order={"before:discardbody;after:renderdisabled","before:autocomplete"
+)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The ordering is always specified in terms of the order of the "forward" rendering process (<code>setupRender</code>, <code>beginRender</code>, etc.).
+When the "reverse" rendering phases (<code>afterRender</code>, etc.) occur, the mixin order is exactly reversed.
+Mixins which have no associated ordering constraints will be ordered in a manner which is consistent with the specified constraints for all other mixins, but is otherwise unspecified.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_available_mixins"><a class="anchor" href="#_available_mixins"></a>Available Mixins</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tapestry includes the following mixins out-of-the-box.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/mixins/Autocomplete.html">Autocomplete</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Modifies a text field to provide for auto-completion of text using values retrieved from the server as the user types. <a href="ajax-and-zones.html#_autocomplete_mixin" class="xref page">See instructions</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/mixins/DiscardBody.html">DiscardBody</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Discards a component&#8217;s body. Returns false from the <code>BeforeRenderBody</code> phase, which prevents the rendering of the body.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/mixins/FormFieldFocus.html">FormFieldFocus</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Instruments the outer Form on which component the focus should be activated.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/mixins/FormGroup.html">FormGroup</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Attaches to a field to render an enclosing <code>&lt;div&gt;</code> element and label for proper Bootstrap markup of text fields, <code>select</code>s, and <code>textareas`</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/mixins/NotEmpty.html">NotEmpty</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Attaches to any component that renders an element. At the end of the render, if the element is empty, then a non-breaking space (<code>&amp;nbsp;</code>) is injected into the element.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/mixins/RenderClientId.html">RenderClientId</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forces a client element to render its client id by ensuring that <code>getClientId()</code> is called.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/mixins/RenderDisabled.html">RenderDisabled</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Renders a "disabled" attribute if the containing component is disabled.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/mixins/RenderInformals.html">RenderInformals</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Renders out all informal parameters, at the end of the <code>BeginRender</code> phase. This mixin can be used with components that render a single tag inside the <code>BeginRender</code> phase.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/mixins/RenderNotification.html">RenderNotification</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Triggers component event notifications when the attached component enters its <code>BeginRender</code> and <code>AfterRender</code> render phases.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/mixins/TriggerFragment.html">TriggerFragment</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">When applied to a <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/Checkbox.html">Checkbox</a></code> or <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/Radio.html">Radio</a></code> component, links the input field and a <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/FormFragment.html">FormFragment</a></code>, making the field control the client-side visibility of the <code>FormFragment</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/mixins/ZoneRefresh.html">ZoneRefresh</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Periodically refreshes a <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/Zone.html">Zone</a></code> by triggering an event on the server using ajax requests.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>In addition, the following mixins are available from other sources:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://tapestry-jumpstart.org/jumpstart/examples/javascript/creatingmixins1">ClickOnce</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ensures a submit button cannot be double-clicked.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://tapestry-jumpstart.org/jumpstart/examples/ajax/onevent">ZoneUpdater</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Updates a zone when a client-side event occurs</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_additional_tools"><a class="anchor" href="#_additional_tools"></a>Additional Tools</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="http://tapestryxpath.sourceforge.net/">Tapestry-Xpath</a> is a third-part Tapestry module that allows XPath traversal of the Tapestry (server-side) DOM, which can be extremely useful in certain mixins.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Getting Started :: Apache Tapestry</title>
+    <meta name="generator" content="Antora 3.1.15">
+    <link rel="stylesheet" href="../_/css/site.css">
+    <link rel="stylesheet" href="../_/css/tapestry.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href=".."><img alt="Apache Tapestry Logo" src="../_/img/apache-tapestry-icon-dark.svg" width="60" />Apache Tapestry</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Documentation</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../main/getting-started.html">Getting Started</a>
+            <a class="navbar-item" href="../main/tutorial/">Tutorial</a>
+            <a class="navbar-item" href="../userguide/5.8/">User Guide</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="../main/community.html">Community</a>
+        <a class="navbar-item" href="../main/support.html">Support</a>
+        <a class="navbar-item" href="../main/developers.html">Developers</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Apache</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+            <a class="navbar-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
+            <a class="navbar-item" href="https://www.apache.org/licenses/">License</a>
+            <a class="navbar-item" href="https://www.apache.org/security/">Security</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="../main/download.html">Download</a>
+          </span>
+        </div>
+        <div class="navbar-brand">
+          <a href="https://www.apache.org/">
+          <img alt="The Apache Software Foundation" src="../_/img/asf_logo.svg" width="200" height="63" style="padding-top: 5px; padding-bottom: 5px; background-color: white">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="body">
+<div class="nav-container" data-component="main" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="about.html">Home</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="about.html">About</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="principles.html">Principles</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Documentation</span>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="getting-started.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tutorial</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tutorial/index.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tutorial/dependencies-tools-and-plugins.html">Dependencies, Tools and Plugins</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tutorial/creating-the-skeleton-application.html">Creating the Skeleton Application</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tutorial/exploring-the-project.html">Exploring the Project</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tutorial/implementing-the-hi-lo-guessing-game.html">Implementing the Hi-Lo Guessing Game</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tutorial/using-beaneditform-to-create-user-forms.html">Using BeanEditForm To Create User Forms</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tutorial/using-tapestry-with-hibernate.html">Using Tapestry With Hibernate</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="userguide.html">User Guide</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Home</span>
+    <span class="version"></span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="about.html">Home</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../userguide/current/index.html">User Guide</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../userguide/current/index.html">5.8</a>
+        </li>
+        <li class="version">
+          <a href="../userguide/5.7/index.html">5.7</a>
+        </li>
+        <li class="version">
+          <a href="../userguide/5.6/index.html">5.6</a>
+        </li>
+        <li class="version">
+          <a href="../userguide/5.5/index.html">5.5</a>
+        </li>
+        <li class="version">
+          <a href="../userguide/5.4/index.html">5.4</a>
+        </li>
+        <li class="version">
+          <a href="../userguide/5.3/index.html">5.3</a>
+        </li>
+        <li class="version">
+          <a href="../userguide/5.2/index.html">5.2</a>
+        </li>
+        <li class="version">
+          <a href="../userguide/5.1/index.html">5.1</a>
+        </li>
+        <li class="version">
+          <a href="../userguide/5/index.html">5.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="about.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="about.html">Home</a></li>
+    <li>Documentation</li>
+    <li><a href="getting-started.html">Getting Started</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Getting Started</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Getting started with Tapestry is easy, and you have lots of ways to begin: watch a video, browse the source code of a working demo app, create a skeleton app using Maven, or step through the tutorial.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_watch_a_short_video"><a class="anchor" href="#_watch_a_short_video"></a>Watch a short video</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For a fast-paced introduction, watch Mark W. Shead&#8217;s <a href="http://blog.markshead.com/900/tapestry-5-10-minute-demo/">10 Minute Demo</a>.
+This video shows how to set up a simple Tapestry application, complete with form validation, Hibernate-based persistence, and Ajax.
+The video provides a preview of the development speed and productivity that experienced Tapestry users enjoy.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_play_with_a_working_demo_app"><a class="anchor" href="#_play_with_a_working_demo_app"></a>Play with a working demo app</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can also play with Tapestry via our live demonstration applications.
+To start, have a look at the <a href="https://tapestry-app.apache.org/hotels/">Hotel Booking Demo</a>.
+The <a href="http://github.com/bobharner/tapestry5-hotel-booking-5.4/">source code</a> is provided so you can download and play with it.
+Also check out the <a href="https://tapestry-jumpstart.org/jumpstart/">Jumpstart demonstration site</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_create_your_first_tapestry_project"><a class="anchor" href="#_create_your_first_tapestry_project"></a>Create your first Tapestry project</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The easiest way to start a new app is to use <a href="https://maven.apache.org/">Apache Maven</a> to create your initial project;
+Maven can use an archetype (a kind of project template) to create a bare-bones Tapestry application for you.</p>
+</div>
+<div class="paragraph">
+<p>Once you have Maven installed, execute the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>mvn archetype:generate -Dfilter=org.apache.tapestry:quickstart</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>(Alternatively, if you want to get an archetype for a not-yet-released version of Tapestry – most users don&#8217;t – you can use the staging URI, <a href="https://repository.apache.org/content/repositories/staging" class="bare">https://repository.apache.org/content/repositories/staging</a> ).</p>
+</div>
+<div class="paragraph">
+<p>Maven will prompt you for the archetype to create ("Tapestry 5 Quickstart Project") and the exact version number (e.g., "5.8.7").
+It also asks you for a group id, an artifact id, and a version number. You can see this in the following transcript:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ mvn archetype:generate -DarchetypeCatalog=http://tapestry.apache.org
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Maven Stub Project (No POM) 1
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] &gt;&gt;&gt; maven-archetype-plugin:2.2:generate (default-cli) @ standalone-pom &gt;&gt;&gt;
+[INFO]
+[INFO] &lt;&lt;&lt; maven-archetype-plugin:2.2:generate (default-cli) @ standalone-pom &lt;&lt;&lt;
+[INFO]
+[INFO] --- maven-archetype-plugin:2.2:generate (default-cli) @ standalone-pom ---
+[INFO] Generating project in Interactive mode
+[INFO] No archetype defined. Using maven-archetype-quickstart (org.apache.maven.archetypes:maven-archetype-quickstart:1.0)
+Choose archetype:
+1: http://tapestry.apache.org -&gt; org.apache.tapestry:quickstart (Tapestry 5 Quickstart Project)
+2: http://tapestry.apache.org -&gt; org.apache.tapestry:tapestry-archetype (Tapestry 5.4.5 Archetype)
+Choose a number or apply filter (format: [groupId:]artifactId, case sensitive contains): : 1
+Choose org.apache.tapestry:quickstart version:
+1: 5.0.19
+2: 5.1.0.5
+3: 5.2.6
+4: 5.3.7
+5: 5.4.5
+6: 5.5.0
+7: 5.6.4
+8: 5.7.3
+9: 5.8.7
+Choose a number: 9: 9
+Define value for property 'groupId': : com.example
+Define value for property 'artifactId': : newapp
+Define value for property 'version':  1.0-SNAPSHOT: :
+Define value for property 'package':  com.example: : com.example.newapp
+Confirm properties configuration:
+groupId: com.example
+artifactId: newapp
+version: 1.0-SNAPSHOT
+package: com.example.newapp
+ Y: : Y
+[INFO] ----------------------------------------------------------------------------
+[INFO] Using following parameters for creating project from Archetype: quickstart:5.8.6
+[INFO] ----------------------------------------------------------------------------
+[INFO] Parameter: groupId, Value: com.example
+[INFO] Parameter: artifactId, Value: newapp
+[INFO] Parameter: version, Value: 1.0-SNAPSHOT
+[INFO] Parameter: package, Value: com.example.newapp
+[INFO] Parameter: packageInPathFormat, Value: com/example/newapp
+[INFO] Parameter: package, Value: com.example.newapp
+[INFO] Parameter: version, Value: 1.0-SNAPSHOT
+[INFO] Parameter: groupId, Value: com.example
+[INFO] Parameter: artifactId, Value: newapp
+
+[INFO] project created from Archetype in dir: /home/joeuser/junk/junk2/newapp
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 40.020s
+[INFO] Finished at: Sun Apr 09 16:55:01 EDT 2020
+[INFO] Final Memory: 16M/303M
+[INFO] ------------------------------------------------------------------------</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Maven will (after performing a number of one-time downloads) create a skeleton project ready to run.
+Because we specified an artifactId of "newapp", the project is created in the <code>newapp</code> directory.
+(Note: if you get "Unable to get resource" warnings at this stage, you may be behind a firewall which blocks outbound HTTP requests to Maven repositories.)</p>
+</div>
+<div class="paragraph">
+<p>To run the skeleton application, change to the <code>newapp</code> directory and execute the <code>mvn jetty:run</code> command to start the Jetty app server:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ cd newapp
+$ mvn jetty:run
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building newapp Tapestry 5 Application 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+
+...
+
+Application 'app' (version 1.0-SNAPSHOT-DEV) startup time: 329 ms to build IoC Registry, 919 ms overall.
+ ______                  __             ____
+/_  __/__ ____  ___ ___ / /_______ __  / __/
+ / / / _ `/ _ \/ -_|_-&lt;/ __/ __/ // / /__ \
+/_/  \_,_/ .__/\__/___/\__/_/  \_, / /____/
+        /_/                   /___/  5.8.7 (development mode)
+
+[INFO] Started SelectChannelConnector@0.0.0.0:8080
+[INFO] Started Jetty Server</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>After some more one-time downloads you can open your browser to <code><a href="http://localhost:8080/newapp" class="bare">http://localhost:8080/newapp</a></code> to see the application running:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/newapp_Index.png" alt="Newapp Index page">
+</div>
+</div>
+<div class="paragraph">
+<p>The application consists of three pages sharing a common look and feel.
+The initial page, <code>Index</code>, allows you to perform some basic operations.</p>
+</div>
+<div class="paragraph">
+<p>You can also load the newly-created project it into any IDE and start coding.
+See the next section on where to find the different components of the application.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_exploring_the_generated_project"><a class="anchor" href="#_exploring_the_generated_project"></a>Exploring the generated project</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The archetype creates the following files:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>newapp/
+├── build.gradle
+├── gradle
+│   └── wrapper
+│       ├── gradle-wrapper.jar
+│       └── gradle-wrapper.properties
+├── gradlew
+├── gradlew.bat
+├── pom.xml
+└── src
+    ├── main
+    │   ├── java
+    │   │   └── com
+    │   │       └── example
+    │   │           └── newapp
+    │   │               ├── components
+    │   │               │   └── Layout.java
+    │   │               ├── pages
+    │   │               │   ├── About.java
+    │   │               │   ├── Contact.java
+    │   │               │   ├── Error404.java
+    │   │               │   ├── Index.java
+    │   │               │   └── Login.java
+    │   │               └── services
+    │   │                   ├── AppModule.java
+    │   │                   ├── DevelopmentModule.java
+    │   │                   └── QaModule.java
+    │   ├── resources
+    │   │   ├── com
+    │   │   │   └── example
+    │   │   │       └── newapp
+    │   │   │           ├── components
+    │   │   │           │   └── Layout.tml
+    │   │   │           ├── logback.xml
+    │   │   │           └── pages
+    │   │   │               ├── About.tml
+    │   │   │               ├── Contact.tml
+    │   │   │               ├── Error404.tml
+    │   │   │               ├── Index.properties
+    │   │   │               ├── Index.tml
+    │   │   │               └── Login.tml
+    │   │   └── log4j.properties
+    │   └── webapp
+    │       ├── WEB-INF
+    │       │   ├── app.properties
+    │       │   └── web.xml
+    │       ├── favicon.ico
+    │       ├── images
+    │       │   └── tapestry.png
+    │       └── mybootstrap
+    │           ├── css
+    │           │   ├── bootstrap-responsive.css
+    │           │   └── bootstrap.css
+    │           ├── img
+    │           │   ├── glyphicons-halflings-white.png
+    │           │   └── glyphicons-halflings.png
+    │           └── js
+    │               └── bootstrap.js
+    ├── site
+    │   ├── apt
+    │   │   └── index.apt
+    │   └── site.xml
+    └── test
+        ├── conf
+        │   ├── testng.xml
+        │   └── webdefault.xml
+        ├── java
+        │   └── PLACEHOLDER
+        └── resources
+            └── PLACEHOLDER
+30 directories, 39 files</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A Tapestry application is composed of pages, each page consisting of one template file and one Java class.</p>
+</div>
+<div class="paragraph">
+<p>Tapestry page templates have the <code>.tml</code> extension and are found within <code>src/main/<strong>resources</strong>/</code> under the app&#8217;s <code>pages</code> package (<code>src/main/resources/com/example/newapp/<strong>pages</strong></code>, in this example).
+Templates are essentially HTML with some special markup to reference properties in the corresponding Java class and to reference ready-made or custom components.</p>
+</div>
+<div class="paragraph">
+<p>Similarly, Tapestry page classes are found in within the <code>src/main/<strong>java</strong></code> under the app&#8217;s <code>pages</code> package (<code>src/main/java/com/example/newapp/<strong>pages</strong></code>, in this example) and their name matches their template name (<code>Index.tml</code> &#8594; <code>Index.java</code>).</p>
+</div>
+<div class="paragraph">
+<p>In the skeleton project, most of the HTML is not found on the pages themselves but in a Layout component which acts as a global template for the whole site.
+Java classes for components live in <code>src/main/<strong>java</strong>/com/example/newapp/<strong>components</strong></code> and component templates go in <code>src/main/<strong>resources</strong>/com/example/newapp/<strong>components</strong></code>.</p>
+</div>
+<div class="paragraph">
+<p>The archetype includes a few optional extras:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The bundled version of the Bootstrap CSS library has a per-project override.
+You can see the files in <code>src/webapp/context/mybootstrap</code>, and the overrides to enable that in <code>AppModule.java</code>.</p>
+</li>
+<li>
+<p>By default, Tapestry uses <a href="http://prototypejs.org/">Prototype</a> as its client-side library, but the archetype overrides this to <a href="https://jquery.org/">jQuery</a>, which is preferred for new projects.</p>
+</li>
+<li>
+<p>The archetype adds a simple filter that shows the timing of each request.</p>
+</li>
+<li>
+<p>The archetype sets up not just for builds with Maven, but also via <a href="http://gradle.org/">Gradle</a>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_whats_next"><a class="anchor" href="#_whats_next"></a>What&#8217;s next?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To deepen your understanding, step through the <a href="tutorial/index.html" class="xref page">Tapestry Tutorial</a>, which goes into much more detail about setting up your project as well as loading it into Eclipse&#8230;&#8203; then continues on to teach you more about Tapestry.</p>
+</div>
+<div class="paragraph">
+<p>Be sure to read about the core <a href="principles.html" class="xref page">Tapestry Principles</a>, and browse the <a href="../userguide/current/index.html" class="xref page">User Guide</a>.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+<script src="../_/js/vendor/lunr.js"></script>
+<script src="../_/js/search-ui.js" id="search-ui-script" data-site-root-path=".." data-snippet-length="100" data-stylesheet="../_/css/search.css"></script>
+<script async src="../search-index.js"></script>
+  </body>
+</html>

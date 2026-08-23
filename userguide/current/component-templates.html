@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Component Templates :: Apache Tapestry</title>
+    <meta name="generator" content="Antora 3.1.15">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/tapestry.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../.."><img alt="Apache Tapestry Logo" src="../../_/img/apache-tapestry-icon-dark.svg" width="60" />Apache Tapestry</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Documentation</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../../main/getting-started.html">Getting Started</a>
+            <a class="navbar-item" href="../../main/tutorial/">Tutorial</a>
+            <a class="navbar-item" href="../../userguide/5.8/">User Guide</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="../../main/community.html">Community</a>
+        <a class="navbar-item" href="../../main/support.html">Support</a>
+        <a class="navbar-item" href="../../main/developers.html">Developers</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Apache</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+            <a class="navbar-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
+            <a class="navbar-item" href="https://www.apache.org/licenses/">License</a>
+            <a class="navbar-item" href="https://www.apache.org/security/">Security</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="../../main/download.html">Download</a>
+          </span>
+        </div>
+        <div class="navbar-brand">
+          <a href="https://www.apache.org/">
+          <img alt="The Apache Software Foundation" src="../../_/img/asf_logo.svg" width="200" height="63" style="padding-top: 5px; padding-bottom: 5px; background-color: white">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="body">
+<div class="nav-container" data-component="userguide" data-version="5.8">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">User Guide</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Introduction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry Core</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basics</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="project-layout.html">Project Layout</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="runtime-exceptions.html">Runtime Exceptions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="class-reloading.html">Class Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-reference.html">Component Reference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="annotations.html">Annotations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Pages and Components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-classes.html">Component Classes</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="component-templates.html">Component Templates</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="property-expressions.html">Property Expressions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-parameters.html">Component Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="parameter-type-coercion.html">Parameter Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="layout-component.html">Layout Component</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-mixins.html">Component Mixins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-navigation.html">Page Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="localization.html">Localization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Request/Response Rendering</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-life-cycle.html">Page Life Cycle</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="request-processing.html">Request Processing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-rendering.html">Component Rendering</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-events.html">Component Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="url-rewriting.html">URL Rewriting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dom.html">Document Object Model (DOM)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="response-compression.html">Response Compression</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="security.html">Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https.html">HTTPS / SSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="content-type-and-markup.html">Content Type and Markup</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Data Persistence</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="persistent-page-data.html">Persistent Page Data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="session-storage.html">Session Storage</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Interacting with components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="injection.html">Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="environmental-services.html">Environmental Services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript, AJAX, CSS &amp; Binary Data</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="client-side-javascript.html">Client-Side JavaScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="javascript-modules.html">Javascript Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="coffeescript.html">Coffeescript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="typescript.html">TypeScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ajax-and-zones.html">AJAX and Zones</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="css.html">Cascading Style Sheets (CSS)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="assets.html">Assets</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cors.html">CORS (Cross-Origin Resource Sharing) Support</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Working with Forms</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="forms-and-validation.html">Forms and Validation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="beaneditform-guide.html">BeanEditForm Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uploading-files.html">Uploading Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bean-validation.html">Bean Validation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Logging, Debugging &amp; Testing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="logging.html">Logging</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unit-testing.html">Unit testing pages or components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integration-testing.html">Integration Testing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="development-dashboard.html">Development Dashboard</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry IOC</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-overview.html">IoC Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="symbols.html">Symbols</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="type-coercion.html">Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="case-insensitivity.html">Case Insensitivity</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="autoloading-modules.html">Autoloading Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="chainbuilder-service.html">ChainBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pipelinebuilder-service.html">PipelineBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="shadowbuilder-service.html">ShadowBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="strategybuilder-service.html">StrategyBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="defining-tapestry-ioc-services.html">Defining Tapestry IOC Services</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-modules.html">IoC Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="object-providers.html">Object Providers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-serialization.html">Service Serialization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="starting-the-ioc-registry.html">Starting the IoC Registry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="aliases.html">Aliases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="injection-in-detail.html">Injection in Detail</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ordering-by-constraints.html">Ordering by Constraints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="registry-startup.html">Registry Startup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="parallel-execution.html">Parallel Execution</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="logging-in-tapestry.html">Logging in Tapestry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-implementation-reloading.html">Service Implementation Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-advisors.html">Service Advisors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-decorators.html">Service Decorators</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="using-jsr-330-standard-annotations.html">Using JSR 330 standard annotations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="operation-tracker.html">Operation Tracker</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Add-ons and Integrations</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Built-in</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="hibernate.html">Hibernate Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="jpa.html">JPA Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integrating-with-spring-framework.html">Spring</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="third-party-modules.html">Third Party Modules</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Release Notes</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.8.html">Tapestry 5.8</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.7.html">Tapestry 5.7</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.6.html">Tapestry 5.6</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.5.html">Tapestry 5.5</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.4.html">Tapestry 5.4</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.3.html">Tapestry 5.3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.2.html">Tapestry 5.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.1.html">Tapestry 5.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.0.html">Tapestry 5.0</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cookbook</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/default-parameter.html">Default Parameter</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/overriding-exception-reporting.html">Overriding Exception Reporting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/error-page-recipe.html">Error Page Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/supporting-informal-parameters.html">Supporting Informal Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/component-libraries.html">Component Libraries</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/switching-cases.html">Switching Cases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/enum-parameter-recipe.html">Enum Parameter Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/extending-the-if-component.html">Extending The If Component</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/meta-programming-page-content.html">Meta-Programming Page Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="cookbook/ioc-cookbook.html">IoC Cookbook</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-basic-services-and-injection.html">IoC Cookbook - Basic Services and Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-overriding-ioc-services.html">IoC Cookbook - Overriding IoC Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-patterns.html">IoC Cookbook - Patterns</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-service-configurations.html">IoC Cookbook - Service Configurations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/using-select-with-a-list.html">Using Select With a List</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/performance-and-clustering.html">Performance and Clustering</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/google-app-engine.html">Google App Engine (GAE)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frequently Asked Questions (FAQ)</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/general.html">General Questions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/templating-and-markup.html">Templating and Markup FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/ajax.html">AJAX FAQ</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">User Guide</span>
+    <span class="version">5.8</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../main/about.html">Home</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="index.html">User Guide</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">5.8</a>
+        </li>
+        <li class="version">
+          <a href="../5.7/index.html">5.7</a>
+        </li>
+        <li class="version">
+          <a href="../5.6/index.html">5.6</a>
+        </li>
+        <li class="version">
+          <a href="../5.5/index.html">5.5</a>
+        </li>
+        <li class="version">
+          <a href="../5.4/index.html">5.4</a>
+        </li>
+        <li class="version">
+          <a href="../5.3/index.html">5.3</a>
+        </li>
+        <li class="version">
+          <a href="../5.2/index.html">5.2</a>
+        </li>
+        <li class="version">
+          <a href="../5.1/index.html">5.1</a>
+        </li>
+        <li class="version">
+          <a href="../5/index.html">5.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../main/about.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">User Guide</a></li>
+    <li>Tapestry Core</li>
+    <li>Pages and Components</li>
+    <li><a href="component-templates.html">Component Templates</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">5.8</button>
+  <div class="version-menu">
+    <a class="version is-current" href="component-templates.html">5.8</a>
+    <a class="version" href="../5.7/component-templates.html">5.7</a>
+    <a class="version" href="../5.6/component-templates.html">5.6</a>
+    <a class="version" href="../5.5/component-templates.html">5.5</a>
+    <a class="version" href="../5.4/component-templates.html">5.4</a>
+    <a class="version" href="../5.3/component-templates.html">5.3</a>
+    <a class="version" href="../5.2/component-templates.html">5.2</a>
+    <a class="version" href="../5.1/component-templates.html">5.1</a>
+    <a class="version" href="../5/component-templates.html">5.0</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Component Templates</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Under Tapestry, a component template is a file that contains the markup for a component.</p>
+</div>
+<div class="paragraph">
+<p>Component templates are <code>well formed XML documents</code>.
+That means that every open tag must have a matching close tag, every attribute must be quoted, and so forth.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+At runtime, Tapestry parses the documents and only checks for wellformedness. Even when the document has a DTD or schema, there are no validity checks.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>For the most part, these templates are standard HTML/XHTML; Tapestry extensions to ordinary markup are provided in the form of a Tapestry XML namespace (xmlns):</p>
+</div>
+<div class="listingblock">
+<div class="title">A page template</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;html t:type="layout" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"&gt;
+    &lt;h1&gt;Bonjour from HelloWorld component.&lt;/h1&gt;
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We&#8217;ll cover the specific content of templates shortly, but first a few details about connecting a component to its template.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_template_location"><a class="anchor" href="#_template_location"></a>Template Location</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A component template shares the same name as its corresponding class file, but with a <code>.tml</code> ending (i.e., <strong>T</strong>apestry <strong>M</strong>arkup <strong>L</strong>anguage), and is stored in the same package as the corresponding component class.</p>
+</div>
+<div class="paragraph">
+<p>Under a typical Maven directory structure, the location for the Java classes and template files for a component and a page, respectively, would be:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>.
+└── src
+    └── main
+        ├── java
+        │   └── org
+        │       └── example
+        │           └── myapp
+        │               ├── components
+        │               │   └── MyComponent.java <i class="conum" data-value="1"></i><b>(1)</b>
+        │               └── pages
+        │                   └── MyPage.java <i class="conum" data-value="2"></i><b>(2)</b>
+        └── resources
+            └── org
+                └── example
+                    └── myapp
+                        ├── components
+                        │   └── MyComponent.tml <i class="conum" data-value="3"></i><b>(3)</b>
+                        └── pages
+                            └── MyPage.tml <i class="conum" data-value="4"></i><b>(4)</b></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Component class</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Page class</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Component template</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Page template</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The template and the compiled class will be packaged together in the <code>WEB-INF/classes</code> folder of the application WAR.</p>
+</div>
+<div class="paragraph">
+<p>For <em>pages</em> (but not other components), a second location will be searched: in the web application context.
+The location is based on the logical name of the page, in the previous example, the template would be <code>MyPage.tml</code> in the root folder of the web application.</p>
+</div>
+<div class="paragraph">
+<p>A template on the classpath takes precedence over a file in the web application context.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Allowing pages to store their template in the web context is a feature that may go away at some point.
+It was included as a way for HTML designers to edit template directly and live preview the template directly, without executing the Tapestry application.
+This comes with a large number of limitations and leads to a false sense of security that a template that previews correctly will render properly (this is not always the case).
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_template_localization"><a class="anchor" href="#_template_localization"></a>Template Localization</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Main Article: <a href="localization.html" class="xref page">Localization</a></p>
+</div>
+<div class="paragraph">
+<p>Templates are handled in much the same way as individual files of a component&#8217;s message catalog: the effective locale is inserted into the name of the file.
+Thus a German users will see the content generated from <code>MyPage_de.tml</code> and French users will see content generated from <code>MyPage_fr.tml</code>.
+When no specific localization is available, the default location (<code>MyPage.tml</code>) is used.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+It is necessary to <a href="configuration.html" class="xref page">enable support for a locale</a> before Tapestry will attempt to localize to that locale.
+This requires configuration in your application module (usually <code>AppModule.java</code>); if you are using the Tapestry Quickstart archetype, only locale "en" will be enabled by default.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_template_doctypes"><a class="anchor" href="#_template_doctypes"></a>Template Doctypes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>As mentioned above, component templates are well-formed XML documents.
+This means that if you want to use any Named HTML entities (such as <code>&amp;amp;</code>, <code>&amp;lt;</code>, <code>&amp;gt;</code>, <code>&amp;copy;</code>), you must use an HTML or XHTML doctype in your template (starting in 5.3, this is more-or-less automatic, see notes below).
+If you choose to use (X)HTML doctypes in your templates, they will be passed on to the client in the resultant (X)HTML.
+Note that if your pages are composed of multiple components, each with a template, and each template contains a doctype declaration, only the first doctype encountered by the template parser will be passed on to the client.</p>
+</div>
+<div class="paragraph">
+<p>It should also be noted that even though XHTML DTDs are valid XML DTDs, HTML DTDs aren&#8217;t.
+This means that HTML doctypes cannot be used by XML parsers.
+Tapestry works around this limitation internally by using XHTML DTDs to parse templates that use HTML DTDs.
+This internal mapping is possible because XHTML 1.0 is nothing more than "a reformulation of the three HTML 4 document types as applications of XML 1.0," as per the W3C.
+Don&#8217;t worry though – the original HTML 4 doctype will still be emitted to the client!</p>
+</div>
+<div class="paragraph">
+<p>The following are the most common (X)HTML doctypes:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;!DOCTYPE html&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd"&gt;
+
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd"&gt;</pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>for <a href="http://en.wikipedia.org/wiki/HTML5">HTML5</a>. Tapestry doesn&#8217;t support the HTML5 doctype directly (but see the comments at <a href="https://issues.apache.org/jira/browse/TAP5-1040">TAP5-1040</a> for a work-around).</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_tapestry_namespace"><a class="anchor" href="#_the_tapestry_namespace"></a>The Tapestry Namespace</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Component templates should include the Tapestry namespace, defining it in the root element of the template.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+    &lt;head&gt;
+        &lt;title&gt;Hello World Page&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Hello World&lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>This defines the namespace using the standard prefix, <code>t:</code>. The examples on this page all assume the use of the standard prefix.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tapestry_elements"><a class="anchor" href="#_tapestry_elements"></a>Tapestry Elements</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tapestry elements are elements defined using the Tapestry namespace prefix (usually <code>t:</code>).</p>
+</div>
+<div class="paragraph">
+<p>All other elements in your templates should be in the default namespace, with no prefix (with the possible exception of any <a href="#_library_namespaces">Library Namespaces</a>).</p>
+</div>
+<div class="paragraph">
+<p>There are a certain number of Tapestry elements, listed below, that act as template directives; beyond that, any element in the Tapestry namespace will be a Tapestry component.</p>
+</div>
+<div class="sect2">
+<h3 id="_the_tbody_element"><a class="anchor" href="#_the_tbody_element"></a>The <code>&lt;t:body&gt;</code> Element</h3>
+<div class="paragraph">
+<p>In many cases, a component is designed to have its template integrate with, or "wrap around", the containing component.</p>
+</div>
+<div class="paragraph">
+<p>The <code>&lt;t:body&gt;</code> element is used to identify where, within a component&#8217;s template, its body (from the container&#8217;s template) is to be rendered.</p>
+</div>
+<div class="paragraph">
+<p>Components have control over if, and even how often, their body is rendered.</p>
+</div>
+<div class="paragraph">
+<p>The following example is a <a href="layout-component.html" class="xref page">Layout component</a>, which adds basic HTML elements around the page-specific content:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"&gt;
+    &lt;head&gt;
+        &lt;title&gt;My Tapestry Application&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;t:body/&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>That <code>&lt;t:body/&gt;</code> element marks where the containing page&#8217;s content will be inserted.
+A page would then use this component as follow:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;html t:type="layout" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"
+
+  My Page Specific Content
+
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When the page renders, the page&#8217;s template and the Layout component&#8217;s template are merged together:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My Tapestry Application&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    My Page Specific Content
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Tapestry 4 users will recognize the &lt;t:body&gt; element as a replacement for the RenderBody component.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_the_tcontainer_element"><a class="anchor" href="#_the_tcontainer_element"></a>The <code>&lt;t:container&gt;</code> Element</h3>
+<div class="paragraph">
+<p>A <code>&lt;t:container&gt;</code> element contains markup without being considered part of the template.
+This is useful for components that render several top level tags, for example, a component that renders several columns within a table row:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;t:container xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"&gt;
+  &lt;td&gt;${label}&lt;/td&gt;
+  &lt;td&gt;${value}&lt;/td&gt;
+&lt;/t:container&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This component only makes sense when used inside a <code>&lt;tr&gt;</code> element of its container&#8217;s template.</p>
+</div>
+<div class="paragraph">
+<p>Without the <code>&lt;t:container&gt;</code> element, there would be no way to create a valid XML document as the template, because XML documents must always have a single root element.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_the_tblock_element"><a class="anchor" href="#_the_tblock_element"></a>The <code>&lt;t:block&gt;</code> Element</h3>
+<div class="paragraph">
+<p>A <code>&lt;t:block&gt;</code> is a container of a portion of the component template.
+A block does not normally render; any component or contents you put inside a block will not ordinarily be rendered.
+However, by injecting the block you have precise control over when and if the content renders.</p>
+</div>
+<div class="paragraph">
+<p>A block may be anonymous, or it may have an id (specified with the id attribute).
+Only blocks with an id may be injected into the component.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+A <code>&lt;t:block&gt;</code> must be in the Tapestry namespace, but the <code>id</code> attribute should not be.
+This is different from components in the template, where the <code>t:id</code> attribute that defines the component id must be in the Tapestry namespace.
+Ids must be valid Java identifiers: start with a letter, and contain only letters, numbers and underscores.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_the_tparameter_element"><a class="anchor" href="#_the_tparameter_element"></a>The <code>&lt;t:parameter&gt;</code> Element</h3>
+<div class="paragraph">
+<p>A <code>&lt;t:parameter&gt;</code> element is a special kind of block.
+It is placed inside the body of an embedded component.
+The block defined by the <code>&lt;t:parameter&gt;</code> is passed to the component.
+<code>&lt;t:parameter&gt;</code> includes a mandatory name attribute to identify which parameter of the component to bind.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_expansions"><a class="anchor" href="#_expansions"></a>Expansions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Another option when rendering output is the use of expansions.
+Expansions are special strings that may be embedded in template bodies, and borrow some syntax from the <a href="https://ant.apache.org/">Ant</a> build tool.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Welcome, ${userId}!</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here, <code>${userId}</code> is the expansion.
+In this example, the <code>userId</code> property of the component is extracted, converted to a string, and streamed into the output.</p>
+</div>
+<div class="paragraph">
+<p>Expansions are allowed inside text, and inside attributes of ordinary elements, and component elements. For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;img src="${request.contextPath}/images/catalog/product_${productId}.png"/&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In this hypothetical example, the component class is providing a request property and a productId property, and these are being used inside the template to assemble the src attribute of the &lt;img&gt; element.
+This is component-like behavior without actual components.</p>
+</div>
+<div class="paragraph">
+<p>Under the covers, expansions are the same as <a href="component-parameters.html" class="xref page">parameter bindings</a>.
+The default binding prefix for expansions is <code>prop:</code> (that is, the name of a property or a <a href="property-expressions.html" class="xref page">property expression</a>), but other binding prefixes are useful, especially <code>message:</code> (to access a localized message from the component&#8217;s message catalog).</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Do not use expansions in component parameters if the parameter&#8217;s default or explicit binding prefix is <code>prop:</code> or <code>var:</code>.
+Expansions convert the value to an immutable string, resulting in a runtime exception if the component tries to update the value.
+Even for read-only parameters, expansions are not as desirable, since they always convert to a string, and from there to the parameter&#8217;s declared type.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Tapestry 4 users will note that expansions are a concise, easy replacement for the Insert component, and for the <code>&lt;span key="&#8230;&#8203;"&gt;</code> directive.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Note that expansions escape any HTML reserved characters. Specifically, any less-than (<code>&lt;</code>), greater than (<code>&gt;</code>) and ampersand (<code>&amp;</code>) are replaced with <code>&amp;lt;</code>, <code>&amp;gt;</code> and <code>&amp;amp;</code> respectively.
+That is usually what you want.
+However, if your property contains HTML that you want rendered as raw markup, you can use the OutputRaw component instead, like this: <code>&lt;t:OutputRaw value="someContent"/&gt;</code> where <code>someContent</code> is a property containing HTML markup.</p>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+If the content comes from an untrusted source (like a public user), be sure to filter it before providing it to OutputRaw. Otherwise you&#8217;ve got a potential cross-site scripting vulnerability.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_embedded_components"><a class="anchor" href="#_embedded_components"></a>Embedded Components</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>An embedded component is identified within the template as an element in the <code>t:</code> namespace. Example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>You have ${cartItems.size()} items in your cart.
+&lt;t:actionlink t:id="clear"&gt;Remove All&lt;/t:actionlink&gt;.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The element name, <code>actionlink</code> is used to select the type of component, ActionLink.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+As elsewhere, Tapestry is insensitive to case when mapping from a component type to a component class.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Embedded components may have two Tapestry-specific <a href="component-parameters.html" class="xref page">parameters</a>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>id: A unique id for the component (within its container).</p>
+</li>
+<li>
+<p>mixins: An optional comma separated list of mixins for the the component.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>These attributes are specified inside the <code>t:</code> namespace (i.e., <code>t:id="clear"</code>).</p>
+</div>
+<div class="paragraph">
+<p>If the <code>id</code> attribute is omitted, Tapestry will assign a unique id for the element.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Non-trivial components should always be assigned a specific id, rather than letting Tapestry do it.
+You&#8217;ll end up with shorter, more readable URLs and code that&#8217;s easier to debug, because it will be more obvious how the request URL maps to your pages and components.
+This is even more strongly encouraged for form control components, where the component id will usually be the same as the query parameter that stores the value provided by the end user.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Ids must be valid Java identifiers: start with a letter, and contain only letters, numbers and underscores.</p>
+</div>
+<div class="paragraph">
+<p>Any other attributes are used to <a href="component-parameters.html" class="xref page">bind parameters of the component</a>.
+These may be formal parameters or informal parameters.
+Formal parameters will have a default binding prefix (usually <code>prop:</code>).
+Informal parameters will be assumed to be literals (i.e., the <code>literal:</code> binding prefix).</p>
+</div>
+<div class="paragraph">
+<p>Use of the <code>t:</code> prefix is optional for all other attributes.
+Some users implement a build process where the Tapestry template files are validated &#8230;&#8203; in that case, any Tapestry-specific attributes, not defined by the underlying DTD or schema, should be in the Tapestry namespace, to avoid validation errors.</p>
+</div>
+<div class="paragraph">
+<p>The open and close tags of a Tapestry component element define the <strong>body</strong> of the component. It is quite common for additional components to be <strong>enclosed</strong> in the body of another component:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;t:form&gt;
+  &lt;t:errors/&gt;
+  &lt;t:label for="userId"/&gt;
+  &lt;t:textfield t:id="userId"/&gt;
+  &lt;br/&gt;
+  &lt;t:label for="password"/&gt;
+  &lt;t:passwordfield t:id="password"/&gt;
+  &lt;br/&gt;
+  &lt;input type="submit" value="Login"/&gt;
+&lt;/t:form&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In this example, the <code>&lt;t:form&gt;</code> component&#8217;s body contains the other components.
+Structurally, all of these components (the Form, Errors, Label, etc.) are peers: children of the page.
+They are all embedded within the page.
+The Errors, Label, TextField and so forth are enclosed within the Form&#8217;s body &#8230;&#8203; meaning that the Form controls if, when, and under what circumstances those components will render.</p>
+</div>
+<div class="paragraph">
+<p>In some cases, components require some kind of enclosure; for example, all of the field control components (such as TextField) will throw a runtime exception if not enclosed by a Form component.</p>
+</div>
+<div class="paragraph">
+<p>It is possible to place Tapestry components in sub-packages.
+For example, your application may have a package <code>org.example.myapp.components.ajax.Dialog</code>.
+This component&#8217;s normal type name is <code>ajax/dialog</code> (because it is in the <code>ajax</code> sub-folder).
+This name is problematic, as it is not valid to define an XML element with an element name <code>&lt;t:ajax/dialog&gt;</code>.
+Instead, just replace the slashes with periods: <code>&lt;t:ajax.dialog&gt;</code>.
+<a href="#_library_namespaces">Library namespaces</a> are a preferred way of handling components in sub-folders.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+When using a component library, the library will map its components to a <em>virtual sub-folder</em> of the application.
+The same naming mechanism works whether its is a real sub-folder or a component library sub-folder.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_library_namespaces"><a class="anchor" href="#_library_namespaces"></a>Library Namespaces</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you are using many components from a common Tapestry component library, you can use a special namespace to simplify references to those components.</p>
+</div>
+<div class="paragraph">
+<p>The special namespace URI <code>tapestry-library:path</code> can be defined; the path is a prefix used in conjunction with component element names.</p>
+</div>
+<div class="paragraph">
+<p>Borrowing from the above example, all of the following are equivalent:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd" xmlns:a="tapestry-library:ajax"&gt;
+
+  &lt;t:ajax.dialog/&gt;
+
+  &lt;span t:type="ajax/dialog"/&gt;
+
+  &lt;a:dialog/&gt;
+
+  ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In other words, the virtual folder, <code>ajax</code>, defined in the namespace URI takes the place of the path prefixes <code>ajax.</code> seen in the first element, or <code>ajax/</code> seen in the second.
+As far as Tapestry is concerned, they are all equivalent.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_invisible_instrumentation"><a class="anchor" href="#_invisible_instrumentation"></a>Invisible Instrumentation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A favorite feature of Tapestry is <em>invisible instrumentation</em>, the ability to mark ordinary HTML elements as components. Invisible instrumentation leads to more concise templates that are also more readable.</p>
+</div>
+<div class="paragraph">
+<p>Invisible instrumentation involves using <em>namespaced</em> id or type attributes to mark an ordinary (X)HTML element as a component. For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"&gt;
+&lt;p&gt;
+    Merry Christmas:
+    &lt;span t:type="Count" end="3"&gt;
+        Ho!
+    &lt;/span&gt;
+&lt;/p&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>t:type</code> attribute above marks the span element as a component of type <code>Count</code>. When rendered, the span element will be <em>replaced</em> by the output of the <code>Count</code> component.</p>
+</div>
+<div class="paragraph">
+<p>The <code>id</code>, <code>type</code> and <code>mixins</code> attributes must be placed in the Tapestry namespace (almost always as <code>t:id</code>, <code>t:type</code>, and <code>t:mixins</code>).
+Any additional attributes may be in either the Tapestry namespace or the default namespace.
+Placing an attribute in the Tapestry namespace is useful when the attribute is not defined for the element being instrumented.</p>
+</div>
+<div class="paragraph">
+<p>An invisibly-instrumented component must still have a type, identified in one of two ways:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>via the <code>t:type</code> attribute in the containing template, as in the above example, or</p>
+</li>
+<li>
+<p>within the containing component&#8217;s Java class using the <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/Component.html">@Component</a></code> annotation (and using the <code>t:id</code> attribute on the element in the template). The Component annotation is attached to a field; the type of the component is determined by either the type of the field or the type attribute of the Component annotation.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In <em>most</em> cases, it is merely an aesthetic choice whether to use invisible instrumentation in your templates.
+However, in a very few cases the behavior of the component is influenced by your choice.
+For example, when your template includes the Loop component using the invisible instrumentation approach, the original tag (and its informal parameters) will render repeatedly around the body of the component.
+Thus, for example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;table&gt;
+  &lt;tr t:type="loop" source="items" value="item" class="prop:rowClass"&gt;
+    &lt;td&gt;${item.id}&lt;/td&gt;
+    &lt;td&gt;${item.name}&lt;/td&gt;
+    &lt;td&gt;${item.quantity}&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here, the loop component "merges into" the <code>&lt;tr&gt;</code> element.
+It will render out a <code>&lt;tr&gt;</code> for each <code>item</code> in the <code>items</code> list, with each <code>&lt;tr&gt;</code> including three <code>&lt;td&gt;</code> elements.
+It will also write a dynamic "class" attribute into each <code>&lt;tr&gt;</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_whitespace_in_templates"><a class="anchor" href="#_whitespace_in_templates"></a>Whitespace in Templates</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tapestry strips out unnecessary whitespace from templates as they are parsed.
+Inside any block of text, repeated whitespace is reduced to a single space character.
+Blocks of text that are entirely whitespace, such a line break and whitespace between two tags, is eliminated entirely.</p>
+</div>
+<div class="paragraph">
+<p>If you do a view source on the rendered output, you&#8217;ll see that the bulk of the rendered page is one long unbroken line.</p>
+</div>
+<div class="paragraph">
+<p>This approach has certain efficiency advantages on both the server (less processing to render the page) and on the client (fewer characters to parse).
+Tools such as <a href="https://developer.mozilla.org/en-US/docs/Tools">Firefox Developer Tools</a> and <a href="http://code.google.com/chrome/devtools/">Chrome Developer Tools</a> are useful for allowing you to view the rendered HTML on the client properly.</p>
+</div>
+<div class="paragraph">
+<p>In rare cases, the whitespace in a template <em>is</em> significant.
+Perhaps you are creating a <code>&lt;pre&gt;</code> (preformatted) block of text, or the whitespace interacts with your stylesheet to some desired effect.</p>
+</div>
+<div class="paragraph">
+<p>You may use the standard XML attribute <code>xml:space</code> to indicate to Tapestry whether whitespace should be compressed (<code>xml:space="default"</code>) or preserved (<code>xml:space="preserve"</code>).
+Such attributes are stripped out by the template parser; they do not appear in the rendered output.</p>
+</div>
+<div class="paragraph">
+<p>The xml: namespace prefix is built into all XML documents, there is no special configuration (as there is with the Tapestry namespace).</p>
+</div>
+<div class="paragraph">
+<p>For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;ul class="navmenu" xml:space="preserve"&gt;
+  &lt;li t:type="loop" t:source="pages" t:value="var:page"&gt;
+    &lt;t:pagelink page="var:page"&gt;${var:page}&lt;/t:pagelink&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This will preserve the whitespace between the <code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code> elements, and between the (rendered) <code>&lt;li&gt;</code> elements and the nested <code>&lt;a&gt;</code> elements. For example, the output may look something like:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;ul&gt;
+  &lt;li&gt;
+    &lt;a href="showcart"&gt;ShowCart&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="viewaccount"&gt;ViewAccount&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>With normal whitespace compression, you would see the following rendered output:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;ul&gt;&lt;li&gt;&lt;a href="showcart"&gt;ShowCart&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="viewaccount"&gt;ViewAccount&lt;/li&gt;&lt;/ul&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can even put further xml:space attributes inside nested elements to fine-tune the control over what whitespace is preserved and what is compressed.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

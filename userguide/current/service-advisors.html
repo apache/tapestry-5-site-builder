@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Service Advisors :: Apache Tapestry</title>
+    <meta name="generator" content="Antora 3.1.15">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/tapestry.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../.."><img alt="Apache Tapestry Logo" src="../../_/img/apache-tapestry-icon-dark.svg" width="60" />Apache Tapestry</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Documentation</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../../main/getting-started.html">Getting Started</a>
+            <a class="navbar-item" href="../../main/tutorial/">Tutorial</a>
+            <a class="navbar-item" href="../../userguide/5.8/">User Guide</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="../../main/community.html">Community</a>
+        <a class="navbar-item" href="../../main/support.html">Support</a>
+        <a class="navbar-item" href="../../main/developers.html">Developers</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Apache</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+            <a class="navbar-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
+            <a class="navbar-item" href="https://www.apache.org/licenses/">License</a>
+            <a class="navbar-item" href="https://www.apache.org/security/">Security</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="../../main/download.html">Download</a>
+          </span>
+        </div>
+        <div class="navbar-brand">
+          <a href="https://www.apache.org/">
+          <img alt="The Apache Software Foundation" src="../../_/img/asf_logo.svg" width="200" height="63" style="padding-top: 5px; padding-bottom: 5px; background-color: white">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="body">
+<div class="nav-container" data-component="userguide" data-version="5.8">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">User Guide</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Introduction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry Core</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basics</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="project-layout.html">Project Layout</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="runtime-exceptions.html">Runtime Exceptions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="class-reloading.html">Class Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-reference.html">Component Reference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="annotations.html">Annotations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Pages and Components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-classes.html">Component Classes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-templates.html">Component Templates</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="property-expressions.html">Property Expressions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-parameters.html">Component Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="parameter-type-coercion.html">Parameter Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="layout-component.html">Layout Component</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-mixins.html">Component Mixins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-navigation.html">Page Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="localization.html">Localization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Request/Response Rendering</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-life-cycle.html">Page Life Cycle</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="request-processing.html">Request Processing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-rendering.html">Component Rendering</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-events.html">Component Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="url-rewriting.html">URL Rewriting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dom.html">Document Object Model (DOM)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="response-compression.html">Response Compression</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="security.html">Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https.html">HTTPS / SSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="content-type-and-markup.html">Content Type and Markup</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Data Persistence</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="persistent-page-data.html">Persistent Page Data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="session-storage.html">Session Storage</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Interacting with components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="injection.html">Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="environmental-services.html">Environmental Services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript, AJAX, CSS &amp; Binary Data</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="client-side-javascript.html">Client-Side JavaScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="javascript-modules.html">Javascript Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="coffeescript.html">Coffeescript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="typescript.html">TypeScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ajax-and-zones.html">AJAX and Zones</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="css.html">Cascading Style Sheets (CSS)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="assets.html">Assets</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cors.html">CORS (Cross-Origin Resource Sharing) Support</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Working with Forms</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="forms-and-validation.html">Forms and Validation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="beaneditform-guide.html">BeanEditForm Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uploading-files.html">Uploading Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bean-validation.html">Bean Validation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Logging, Debugging &amp; Testing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="logging.html">Logging</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unit-testing.html">Unit testing pages or components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integration-testing.html">Integration Testing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="development-dashboard.html">Development Dashboard</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry IOC</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-overview.html">IoC Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="symbols.html">Symbols</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="type-coercion.html">Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="case-insensitivity.html">Case Insensitivity</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="autoloading-modules.html">Autoloading Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="chainbuilder-service.html">ChainBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pipelinebuilder-service.html">PipelineBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="shadowbuilder-service.html">ShadowBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="strategybuilder-service.html">StrategyBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="defining-tapestry-ioc-services.html">Defining Tapestry IOC Services</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-modules.html">IoC Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="object-providers.html">Object Providers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-serialization.html">Service Serialization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="starting-the-ioc-registry.html">Starting the IoC Registry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="aliases.html">Aliases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="injection-in-detail.html">Injection in Detail</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ordering-by-constraints.html">Ordering by Constraints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="registry-startup.html">Registry Startup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="parallel-execution.html">Parallel Execution</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="logging-in-tapestry.html">Logging in Tapestry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-implementation-reloading.html">Service Implementation Reloading</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="service-advisors.html">Service Advisors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-decorators.html">Service Decorators</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="using-jsr-330-standard-annotations.html">Using JSR 330 standard annotations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="operation-tracker.html">Operation Tracker</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Add-ons and Integrations</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Built-in</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="hibernate.html">Hibernate Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="jpa.html">JPA Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integrating-with-spring-framework.html">Spring</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="third-party-modules.html">Third Party Modules</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Release Notes</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.8.html">Tapestry 5.8</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.7.html">Tapestry 5.7</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.6.html">Tapestry 5.6</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.5.html">Tapestry 5.5</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.4.html">Tapestry 5.4</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.3.html">Tapestry 5.3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.2.html">Tapestry 5.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.1.html">Tapestry 5.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.0.html">Tapestry 5.0</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cookbook</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/default-parameter.html">Default Parameter</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/overriding-exception-reporting.html">Overriding Exception Reporting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/error-page-recipe.html">Error Page Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/supporting-informal-parameters.html">Supporting Informal Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/component-libraries.html">Component Libraries</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/switching-cases.html">Switching Cases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/enum-parameter-recipe.html">Enum Parameter Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/extending-the-if-component.html">Extending The If Component</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/meta-programming-page-content.html">Meta-Programming Page Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="cookbook/ioc-cookbook.html">IoC Cookbook</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-basic-services-and-injection.html">IoC Cookbook - Basic Services and Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-overriding-ioc-services.html">IoC Cookbook - Overriding IoC Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-patterns.html">IoC Cookbook - Patterns</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-service-configurations.html">IoC Cookbook - Service Configurations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/using-select-with-a-list.html">Using Select With a List</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/performance-and-clustering.html">Performance and Clustering</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/google-app-engine.html">Google App Engine (GAE)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frequently Asked Questions (FAQ)</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/general.html">General Questions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/templating-and-markup.html">Templating and Markup FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/ajax.html">AJAX FAQ</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">User Guide</span>
+    <span class="version">5.8</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../main/about.html">Home</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="index.html">User Guide</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">5.8</a>
+        </li>
+        <li class="version">
+          <a href="../5.7/index.html">5.7</a>
+        </li>
+        <li class="version">
+          <a href="../5.6/index.html">5.6</a>
+        </li>
+        <li class="version">
+          <a href="../5.5/index.html">5.5</a>
+        </li>
+        <li class="version">
+          <a href="../5.4/index.html">5.4</a>
+        </li>
+        <li class="version">
+          <a href="../5.3/index.html">5.3</a>
+        </li>
+        <li class="version">
+          <a href="../5.2/index.html">5.2</a>
+        </li>
+        <li class="version">
+          <a href="../5.1/index.html">5.1</a>
+        </li>
+        <li class="version">
+          <a href="../5/index.html">5.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../main/about.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">User Guide</a></li>
+    <li>Tapestry IOC</li>
+    <li><a href="service-advisors.html">Service Advisors</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">5.8</button>
+  <div class="version-menu">
+    <a class="version is-current" href="service-advisors.html">5.8</a>
+    <a class="version" href="../5.7/service-advisors.html">5.7</a>
+    <a class="version" href="../5.6/service-advisors.html">5.6</a>
+    <a class="version" href="../5.5/service-advisors.html">5.5</a>
+    <a class="version" href="../5.4/service-advisors.html">5.4</a>
+    <a class="version" href="../5.3/service-advisors.html">5.3</a>
+    <a class="version" href="../5.2/service-advisors.html">5.2</a>
+    <a class="version" href="../5.1/service-advisors.html">5.1</a>
+    <a class="version" href="../5/service-advisors.html">5.0</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Service Advisors</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Service advice represents a powerful meta-programming facility available to services. In fact, it is a kind of limited Aspect Oriented Programming.</p>
+</div>
+<div class="paragraph">
+<p>Service advice allows you to intercept method invocations on your services; you have the ability to see what methods get invoked, what the parameters are. You can let the normal code do it work, and then inspect or even adjust the return value, or any thrown exceptions. And you can do this all in normal Java code.</p>
+</div>
+<div class="paragraph">
+<p>A common example of method-level service advice is to log method entry and exit, complete with parameter values, return values, and thrown exceptions. Other approaches include security checks, transaction management, and other broadly spanning concerns.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s start with a (contrived) example. Let&#8217;s say you have an existing set of services that have methods that sometimes return null, and you want them to return an empty string instead because you are getting some NullPointerExceptions elsewhere in your application.</p>
+</div>
+<div class="paragraph">
+<p>You could track down the implementation of each service and fix the logic that provides a return value &#8230;&#8203; or you could advise the methods:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">  @Match("*")
+  public static void adviseNonNull(MethodAdviceReceiver receiver)
+  {
+    MethodAdvice advice = new MethodAdvice()
+    {
+      void advise(Invocation invocation)
+      {
+        invocation.proceed();
+
+        if (invocation.getResultType().equals(String.class) &amp;&amp; invocation.getResult() == null)
+          invocation.overrideResult("");
+      }
+    };
+
+    receiver.adviseAllMethods(advice);
+  };</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This is a method that is placed in a module class. Note the terminology: <em>advise</em> is the verb ("to advise a method") and <em>advice</em> is the noun ("with this advice").
+The <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/ioc/MethodAdviceReceiver.html">MethodAdviceReceiver</a></code> is a wrapper around the service being advised: you can add advice to some or all methods of the service, and also obtain the interface of the service. It is automatically passed into service advisor methods.</p>
+</div>
+<div class="paragraph">
+<p>See <a href="injection-in-detail.html" class="xref page">Injection in Detail</a> for what can be injected into a service advisor method.</p>
+</div>
+<div class="paragraph">
+<p>Service advisor methods must have a parameter of type <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/ioc/MethodAdviceReceiver.html">MethodAdviceReceiver</a></code>.</p>
+</div>
+<div class="paragraph">
+<p>A service will often be advised multiple times; any method may have any number of advice objects applied to it.
+Some methods may not get any advice.
+All of this is acceptable.</p>
+</div>
+<div class="paragraph">
+<p>Service advisor methods are always void methods (this is different from service decorator methods).</p>
+</div>
+<div class="paragraph">
+<p>The <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/ioc/annotations/Match.html">@Match("*")</a></code> annotation indicates that this advice applies to all services (both your own, and those defined by Tapestry).
+You will want to narrow down which services are actually targeted in most cases.</p>
+</div>
+<div class="paragraph">
+<p>Note that some services, especially those built into Tapestry IoC, are marked as not subject to decoration, this applies to service advice as well as service decoration.</p>
+</div>
+<div class="paragraph">
+<p>The <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/plastic/MethodAdvice.html">MethodAdvice</a></code> interface is very simple; it receives an <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/plastic/MethodInvocation.html">MethodInvocation</a></code> representing a method call. <code>MethodInvocation</code> has methods for inspecting the type and value of the parameters, and for overriding the values of the parameters.</p>
+</div>
+<div class="paragraph">
+<p>The call to <code>proceed()</code> allows the invocation to continue; that is, the original method is invoked.
+If the method has been advised multiple times, the call to <code>proceed()</code> may chain into the next <code>MethodAdvice</code> object.
+In any case, after invoking <code>proceed()</code>, you may inspect and override the result (the return value).</p>
+</div>
+<div class="paragraph">
+<p>Advice is pretty efficient, but it is still better to apply it only to methods that make sense.
+We can improve the service advisor method in our example to only advise methods that return String:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">  @Match("*")
+  public static void adviseNonNull(MethodAdviceReceiver receiver)
+  {
+    MethodAdvice advice = new MethodAdvice()
+    {
+      void advise(MethodInvocation invocation)
+      {
+        invocation.proceed();
+
+        if (invocation.getResult().equals(null))
+          invocation.overrideResult("");
+      }
+    };
+
+    for (Method m : receiver.getServiceInterface().getMethods())
+    {
+      if (m.getReturnType().equals(String.class))
+        receiver.adviseMethod(m, advice);
+    }
+  };</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_built_in_advice"><a class="anchor" href="#_built_in_advice"></a>Built-in Advice</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tapestry includes two built-in advisor services.</p>
+</div>
+<div class="sect2">
+<h3 id="_logging_advice"><a class="anchor" href="#_logging_advice"></a>Logging Advice</h3>
+<div class="paragraph">
+<p>Logging advice is built into Tapestry. You can apply logging advice to your services very easily:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">  @Match("*")
+  public static void adviseLogging(LoggingAdvisor loggingAdvisor, Logger logger, MethodAdviceReceiver receiver)
+  {
+    loggingAdvisor.addLoggingAdvice(logger, receiver);
+  }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/ioc/services/LoggingAdvisor.html">LoggingAdvisor</a></code> is a built-in Tapestry IoC service.
+This demonstrates how services can be injected into service advisor methods.
+The Logger parameter is the logger for the service being advised.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_lazy_advice"><a class="anchor" href="#_lazy_advice"></a>Lazy Advice</h3>
+<div class="paragraph">
+<p><code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/ioc/services/LazyAdvisor.html">LazyAdvisor</a></code> makes method invocations lazy: methods that return an interface (rather than a value) will not execute immediately; instead, the method invocation is postponed until a method of the return value is invoked.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_matching_and_ordering"><a class="anchor" href="#_matching_and_ordering"></a>Matching And Ordering</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Each service advice method gets a unique id, obtained by stripping the "advise" prefix from the method name. Advice ids must be unique across all modules.</p>
+</div>
+<div class="paragraph">
+<p>If the <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/ioc/annotations/Match.html">@Match</a></code> annotation is omitted, the advice will match against a service with the same id.</p>
+</div>
+<div class="paragraph">
+<p>In many cases, the order in which the advice is given is very important; for example, you may want logging first, then transaction management, then security checks.
+The <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/ioc/annotations/Order.html">@Order</a></code> annotation allows you to explicitly set the order.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_annotation_driven_advisors"><a class="anchor" href="#_annotation_driven_advisors"></a>Annotation driven advisors</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Added in 5.2<br>
+Starting from version 5.2, Tapestry supports annotation-driven advise methods.
+If the <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/annotations/Advise.html">@Advise</a></code> annotation is present, the advise method can be arbitrary named, as shown in the following example.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">  @Advise
+  @Match("*DAO")
+  public static void byServiceId(MethodAdviceReceiver receiver)
+  {
+    ...
+  }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The advice above is applied to any service whose id matches the <code>*DAO</code> pattern.</p>
+</div>
+<div class="paragraph">
+<p>Alternatively, marker annotations can be placed on the advise method to match a specific service.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">  @Advise
+  @Blue
+  public static void byMarkerAnnotation(MethodAdviceReceiver receiver)
+  {
+    ...
+  }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The advice above is applied to any service that is marked by the <code>@Blue</code> annotation.</p>
+</div>
+<div class="paragraph">
+<p>By default, <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/ioc/annotations/Advise.html">@Advise</a></code> annotation applies the advice to any service matched by the <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/ioc/annotations/Match.html">@Match</a></code> or marker annotations.
+You can limit the matching to a single service interface, as shown in the following example.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">  @Advise(serviceInterface=MyService.class)
+  @Match("*DAO")
+  public static void byMatchAnnotation(MethodAdviceReceiver receiver)
+  {
+    ...
+  }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the example above, the advice is applied to any implementation of <code>MyService</code> interfaces whose id matches the <code>*DAO</code> pattern.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">  @Advise(serviceInterface=MyService.class)
+  @Blue
+  public static void byMarkerAnnotation(MethodAdviceReceiver receiver)
+  {
+    ...
+  }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The advice above is applied to any implementation of the MyService interface that is marked by the <code>@Blue</code> annotation.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_decorators_and_advice"><a class="anchor" href="#_decorators_and_advice"></a>Decorators and Advice</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="service-decorators.html" class="xref page">Service Decorators</a> are another way to achieve the same thing; service advisors are a more recent addition, added in Tapestry 5.1.</p>
+</div>
+<div class="paragraph">
+<p>It is not recommended that you mix advice and decoration.
+If you do, decoration take precedence;
+all decorators will be in effect before any advice (internally, they are two separate steps, with advice being processed and the result of that used by the decorators).</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Principles :: Apache Tapestry</title>
+    <meta name="generator" content="Antora 3.1.15">
+    <link rel="stylesheet" href="../_/css/site.css">
+    <link rel="stylesheet" href="../_/css/tapestry.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href=".."><img alt="Apache Tapestry Logo" src="../_/img/apache-tapestry-icon-dark.svg" width="60" />Apache Tapestry</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Documentation</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../main/getting-started.html">Getting Started</a>
+            <a class="navbar-item" href="../main/tutorial/">Tutorial</a>
+            <a class="navbar-item" href="../userguide/5.8/">User Guide</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="../main/community.html">Community</a>
+        <a class="navbar-item" href="../main/support.html">Support</a>
+        <a class="navbar-item" href="../main/developers.html">Developers</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Apache</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+            <a class="navbar-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
+            <a class="navbar-item" href="https://www.apache.org/licenses/">License</a>
+            <a class="navbar-item" href="https://www.apache.org/security/">Security</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="../main/download.html">Download</a>
+          </span>
+        </div>
+        <div class="navbar-brand">
+          <a href="https://www.apache.org/">
+          <img alt="The Apache Software Foundation" src="../_/img/asf_logo.svg" width="200" height="63" style="padding-top: 5px; padding-bottom: 5px; background-color: white">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="body">
+<div class="nav-container" data-component="main" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="about.html">Home</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="about.html">About</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="principles.html">Principles</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Documentation</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="getting-started.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tutorial</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tutorial/index.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tutorial/dependencies-tools-and-plugins.html">Dependencies, Tools and Plugins</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tutorial/creating-the-skeleton-application.html">Creating the Skeleton Application</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tutorial/exploring-the-project.html">Exploring the Project</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tutorial/implementing-the-hi-lo-guessing-game.html">Implementing the Hi-Lo Guessing Game</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tutorial/using-beaneditform-to-create-user-forms.html">Using BeanEditForm To Create User Forms</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tutorial/using-tapestry-with-hibernate.html">Using Tapestry With Hibernate</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="userguide.html">User Guide</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Home</span>
+    <span class="version"></span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="about.html">Home</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../userguide/current/index.html">User Guide</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../userguide/current/index.html">5.8</a>
+        </li>
+        <li class="version">
+          <a href="../userguide/5.7/index.html">5.7</a>
+        </li>
+        <li class="version">
+          <a href="../userguide/5.6/index.html">5.6</a>
+        </li>
+        <li class="version">
+          <a href="../userguide/5.5/index.html">5.5</a>
+        </li>
+        <li class="version">
+          <a href="../userguide/5.4/index.html">5.4</a>
+        </li>
+        <li class="version">
+          <a href="../userguide/5.3/index.html">5.3</a>
+        </li>
+        <li class="version">
+          <a href="../userguide/5.2/index.html">5.2</a>
+        </li>
+        <li class="version">
+          <a href="../userguide/5.1/index.html">5.1</a>
+        </li>
+        <li class="version">
+          <a href="../userguide/5/index.html">5.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="about.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="about.html">Home</a></li>
+    <li><a href="principles.html">Principles</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Principles</h1>
+<div class="sect1">
+<h2 id="_principle_1_static_structure_dynamic_behavior"><a class="anchor" href="#_principle_1_static_structure_dynamic_behavior"></a>Principle 1 – Static Structure, Dynamic Behavior</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The concept of "Dynamic Behavior" should be pretty obvious when you are building a web application; things should look different for different users/situations.
+But what does it mean that Tapestry has "Static Structure?"
+Static structure implies that when you build a page in Tapestry you are going to define all of the types of components that are used within that page.
+Under no circumstance during the rendering or event processing of the page will you be able to dynamically create a new type of component and place that into the component tree.</p>
+</div>
+<div class="paragraph">
+<p>At first glance, this seems quite limiting &#8230;&#8203; other frameworks allow new elements to be created on the fly; it&#8217;s also a common feature of desktop GUIs such as Swing.
+But static structure turns out to be not so limiting after all.
+You <em>can</em> create new elements (you&#8217;re actually re-rendering existing components with different properties).
+And you have plenty of options for getting dynamic behavior out of your static structure;
+from the simple conditional and looping components to the more advanced implementations of Tapestry&#8217;s BeanEditor or Grid components, Tapestry gives you control over what renders and when, and even where it appears on the page.
+And starting in Tapestry 5.3 you can even use the Dynamic component, which renders whatever is in an external template file.</p>
+</div>
+<div class="paragraph">
+<p>Why did Tapestry choose static structure as a core principle? It&#8217;s really a matter of meeting the requirements of agility and scalability.</p>
+</div>
+<div class="sect2">
+<h3 id="_agility"><a class="anchor" href="#_agility"></a>Agility</h3>
+<div class="paragraph">
+<p>Tapestry is designed to be an agile working environment; "code less, deliver more".
+To support you writing less code Tapestry does a lot of work on your POJO pages and components when first loading them.
+It also uses shared instances of page and component classes (shared across multiple threads and requests).
+Having dynamically modifiable structure would imply that each request has its own instance and, further, that the entire structure would need to be serialized between requests so that it can be restored to handle later requests.</p>
+</div>
+<div class="paragraph">
+<p>Tapestry also makes you more agile by speeding up the development cycle with <a href="../userguide/current/class-reloading.html" class="xref page">Live Class Reloading</a>.
+Tapestry monitors the file system for changes to Java page classes, component classes, service implementation classes, HTML templates and component property files, and it hot-swaps the changes into the running application without requiring a restart or <em>losing session data</em>.
+This provides a very short code-save-view cycle that no other framework can touch.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_scalability"><a class="anchor" href="#_scalability"></a>Scalability</h3>
+<div class="paragraph">
+<p>When building large scale systems it is important to consider how your resources are going to be used on each deployed server, and how that information is going to be shared between servers.
+Static structure means that page instances do not need to be stored inside the HttpSession and simple browsing users do not require extra system resources.
+This lean use of the HttpSession is key to Tapestry&#8217;s very high scalability, especially in a clustered configuration.
+Again, linking an instance of a page to a particular client would require vastly more server-side resources than having a single shared page instance.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_principle_2_adaptive_api"><a class="anchor" href="#_principle_2_adaptive_api"></a>Principle 2 – Adaptive API</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A key feature of Tapestry 5 is its adaptive API.</p>
+</div>
+<div class="paragraph">
+<p>In traditional Java frameworks (including Struts, JSF and even the now-ancient Tapestry 4) user code is expected to conform to the framework.
+You create classes that extend from framework-provided base classes, or implement framework-provided interfaces.</p>
+</div>
+<div class="paragraph">
+<p>This works well until you upgrade to the next release of the framework: with the new features of the upgrade, you will more often than not experience breaks in backwards compatibility.
+Interfaces or base classes will have changed and your existing code will need to be changed to match.</p>
+</div>
+<div class="paragraph">
+<p>In Tapestry 5, the framework adapts to your code. You have control over the names of the methods, the parameters they take, and the value that is returned.
+This is driven by annotations, which tell Tapestry under what circumstances your methods are to be invoked.</p>
+</div>
+<div class="paragraph">
+<p>For example, you may have a login form and have a method that gets invoked when the form is submitted:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class Login
+{
+  @Persist
+  @Property
+  private String userId;
+
+  @Property
+  private String password;
+
+  @Component
+  private Form form;
+
+  @Inject
+  private LoginAuthenticator authenticator;
+
+  void onValidateFromForm()
+  {
+    if (! authenticator.isValidLogin(userId, password))
+    {
+      form.recordError("Invalid user name or password.");
+    }
+  }
+
+  Object onSuccessFromForm()
+  {
+    return PostLogin.class;
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This short snippet demonstrates a bit about how Tapestry operates.
+Pages and services within the application are injected with the <code>@Inject</code> annotation.
+The method names, <code>onValidateFromForm()</code> and <code>onSuccessFromForm()</code>, inform Tapestry about when each method is to be invoked.
+This naming convention identifies the event that is handled, ("validate" and "success") and the id of the component from which the event is triggered (the "form" component).</p>
+</div>
+<div class="paragraph">
+<p>The "validate" event is triggered to perform cross-field validations, and the "success" event is only triggered when there are no validation errors.
+The <code>onSuccessFromForm()</code> method&#8217;s return value directs Tapestry on what to do next: jump to another page within the application (here identified as the class for the page, but many other options exist).
+When there are exceptions, the page will be redisplayed to the user.</p>
+</div>
+<div class="paragraph">
+<p>By contrast, in Tapestry 4 the Form component&#8217;s listener parameter would be bound to the method to invoke, by name.
+Further, the listener method had to be public.
+The Tapestry 5 approach not only supports multiple listeners, but also provides an improved separation of view concerns (inside the page&#8217;s HTML template) and logic concerns, inside the Java class.</p>
+</div>
+<div class="paragraph">
+<p>In many cases, additional information about the event is available and can be passed into the method simply by adding parameters to the method.
+Again, Tapestry will adapt to your parameters, in whatever order you supply them.</p>
+</div>
+<div class="paragraph">
+<p>Tapestry also saves you needless effort: the <code>@Property</code> annotation marks a field as readable and writable; Tapestry will provide the accessor methods automatically.</p>
+</div>
+<div class="paragraph">
+<p>Finally, Tapestry 5 explicitly separates actions (requests that change things) and rendering (requests that render pages) into two separate requests.
+Performing an action, such as clicking an action link or submitting a form, results in a client-side redirect to the new page.
+This is the <a href="http://en.wikipedia.org/wiki/Post/Redirect/Get">Post/Redirect/Get</a> pattern (alternatively "Post-Then-Redirect", or "Redirect After Post").
+This helps ensure that URLs in the browser are book-markable &#8230;&#8203; but also requires that a bit more information be stored in the session between requests (using the <code>@Persist</code> annotation).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_principle_3_differentiate_public_vs_internal_apis"><a class="anchor" href="#_principle_3_differentiate_public_vs_internal_apis"></a>Principle 3 – Differentiate Public vs. Internal APIs</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>An issue plaguing much ancient versions of Tapestry (4 and earlier) was the lack of a clear delineation between private, internal APIs and public, external APIs. The fact that your code would extend from base objects but that many of the methods on those base objects were "off limits" further confused the issue. This has been identified as a key factor in the "steep learning curve of Tapestry" meme.</p>
+</div>
+<div class="paragraph">
+<p>Designed from a clean slate, Tapestry 5 is much more ruthless about what is internal vs. external.</p>
+</div>
+<div class="paragraph">
+<p>First of all, anything inside the org.apache.tapestry5.internal package is internal. It is part of the implementation of Tapestry. It is the man behind the curtain. You should not ever need to directly use this code. It is a bad idea to do so, because internal code may change from one release to the next without concern for backwards compatibility.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If you ever find yourself forced to make use of internal APIs, please bring it up on the developer mailing list; this is how we know which services should be exposed as public, and fall under the backwards compatibility umbrella.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_principle_4_ensure_backwards_compatibility"><a class="anchor" href="#_principle_4_ensure_backwards_compatibility"></a>Principle 4 – Ensure Backwards Compatibility</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Older versions of Tapestry were plagued by backwards compatibility problems with every major release.
+Tapestry 5 did not even attempt to be backwards compatible to Tapestry 4.
+Instead, it laid the ground work for true backwards compatibility going forwards.</p>
+</div>
+<div class="paragraph">
+<p>Tapestry 5&#8217;s API is based largely on naming conventions and annotations.
+Your components are just ordinary Java classes; you annotate fields to allow Tapestry to maintain their state or to allow Tapestry to inject resources, and you name (or annotate) methods to tell Tapestry under what circumstances a method should be invoked.</p>
+</div>
+<div class="paragraph">
+<p>Tapestry will adapt to your classes. It will call your methods, passing in values via method parameters.
+Instead of the rigidness of a fixed interface to implement, Tapestry will simply adapt to your classes, using the hints provided by annotations and simple naming conventions.</p>
+</div>
+<div class="paragraph">
+<p>Because of this, Tapestry 5 can change internally to a great degree without it affecting any of the application code you write.
+This has finally cracked the backwards compatibility nut, allowing you to have great assurance that you can upgrade to future releases of Tapestry without breaking your existing applications.</p>
+</div>
+<div class="paragraph">
+<p>This is already evident in Tapestry 5.1, 5.2 and 5.3 where major new features and improvements have occurred, while remaining 100% backwards compatible to Tapestry 5.0 – as long as you&#8217;ve avoided the temptation to use internal APIs.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+<script src="../_/js/vendor/lunr.js"></script>
+<script src="../_/js/search-ui.js" id="search-ui-script" data-site-root-path=".." data-snippet-length="100" data-stylesheet="../_/css/search.css"></script>
+<script async src="../search-index.js"></script>
+  </body>
+</html>

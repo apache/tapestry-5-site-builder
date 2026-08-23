@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Localization :: Apache Tapestry</title>
+    <meta name="generator" content="Antora 3.1.15">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/tapestry.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../.."><img alt="Apache Tapestry Logo" src="../../_/img/apache-tapestry-icon-dark.svg" width="60" />Apache Tapestry</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Documentation</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../../main/getting-started.html">Getting Started</a>
+            <a class="navbar-item" href="../../main/tutorial/">Tutorial</a>
+            <a class="navbar-item" href="../../userguide/5.8/">User Guide</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="../../main/community.html">Community</a>
+        <a class="navbar-item" href="../../main/support.html">Support</a>
+        <a class="navbar-item" href="../../main/developers.html">Developers</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Apache</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+            <a class="navbar-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
+            <a class="navbar-item" href="https://www.apache.org/licenses/">License</a>
+            <a class="navbar-item" href="https://www.apache.org/security/">Security</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="../../main/download.html">Download</a>
+          </span>
+        </div>
+        <div class="navbar-brand">
+          <a href="https://www.apache.org/">
+          <img alt="The Apache Software Foundation" src="../../_/img/asf_logo.svg" width="200" height="63" style="padding-top: 5px; padding-bottom: 5px; background-color: white">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="body">
+<div class="nav-container" data-component="userguide" data-version="5.2">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">User Guide</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Introduction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry Core</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basics</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="project-layout.html">Project Layout</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="runtime-exceptions.html">Runtime Exceptions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="class-reloading.html">Class Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-reference.html">Component Reference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="annotations.html">Annotations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Pages and Components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-classes.html">Component Classes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-templates.html">Component Templates</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="property-expressions.html">Property Expressions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-parameters.html">Component Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="parameter-type-coercion.html">Parameter Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="layout-component.html">Layout Component</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-mixins.html">Component Mixins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-navigation.html">Page Navigation</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="localization.html">Localization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Request/Response Rendering</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-life-cycle.html">Page Life Cycle</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="request-processing.html">Request Processing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-rendering.html">Component Rendering</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-events.html">Component Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="url-rewriting.html">URL Rewriting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dom.html">Document Object Model (DOM)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="response-compression.html">Response Compression</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="security.html">Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https.html">HTTPS / SSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="content-type-and-markup.html">Content Type and Markup</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Data Persistence</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="persistent-page-data.html">Persistent Page Data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="session-storage.html">Session Storage</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Interacting with components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="injection.html">Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="environmental-services.html">Environmental Services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript, AJAX, CSS &amp; Binary Data</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="client-side-javascript.html">Client-Side JavaScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ajax-and-zones.html">AJAX and Zones</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="css.html">Cascading Style Sheets (CSS)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="assets.html">Assets</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Working with Forms</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="forms-and-validation.html">Forms and Validation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="beaneditform-guide.html">BeanEditForm Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uploading-files.html">Uploading Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bean-validation.html">Bean Validation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Logging, Debugging &amp; Testing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="logging.html">Logging</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unit-testing.html">Unit testing pages or components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integration-testing.html">Integration Testing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="development-dashboard.html">Development Dashboard</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry IOC</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-overview.html">IoC Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="symbols.html">Symbols</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="type-coercion.html">Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="case-insensitivity.html">Case Insensitivity</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="autoloading-modules.html">Autoloading Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="chainbuilder-service.html">ChainBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pipelinebuilder-service.html">PipelineBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="shadowbuilder-service.html">ShadowBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="strategybuilder-service.html">StrategyBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="defining-tapestry-ioc-services.html">Defining Tapestry IOC Services</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-modules.html">IoC Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="object-providers.html">Object Providers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-serialization.html">Service Serialization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="starting-the-ioc-registry.html">Starting the IoC Registry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="aliases.html">Aliases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="injection-in-detail.html">Injection in Detail</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ordering-by-constraints.html">Ordering by Constraints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="registry-startup.html">Registry Startup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="parallel-execution.html">Parallel Execution</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="logging-in-tapestry.html">Logging in Tapestry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-implementation-reloading.html">Service Implementation Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-advisors.html">Service Advisors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-decorators.html">Service Decorators</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="operation-tracker.html">Operation Tracker</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Add-ons and Integrations</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Built-in</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="hibernate.html">Hibernate Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-report.html">Component Report</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integrating-with-spring-framework.html">Spring</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="third-party-modules.html">Third Party Modules</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Release Notes</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.2.html">Tapestry 5.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.1.html">Tapestry 5.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.0.html">Tapestry 5.0</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cookbook</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/default-parameter.html">Default Parameter</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/overriding-exception-reporting.html">Overriding Exception Reporting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/error-page-recipe.html">Error Page Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/supporting-informal-parameters.html">Supporting Informal Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/switching-cases.html">Switching Cases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/enum-parameter-recipe.html">Enum Parameter Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/extending-the-if-component.html">Extending The If Component</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/meta-programming-page-content.html">Meta-Programming Page Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="cookbook/ioc-cookbook.html">IoC Cookbook</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-basic-services-and-injection.html">IoC Cookbook - Basic Services and Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-overriding-ioc-services.html">IoC Cookbook - Overriding IoC Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-patterns.html">IoC Cookbook - Patterns</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-service-configurations.html">IoC Cookbook - Service Configurations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/performance-and-clustering.html">Performance and Clustering</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frequently Asked Questions (FAQ)</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/general.html">General Questions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/ajax.html">AJAX FAQ</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">User Guide</span>
+    <span class="version">5.2</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../main/about.html">Home</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../current/index.html">User Guide</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../current/index.html">5.8</a>
+        </li>
+        <li class="version">
+          <a href="../5.7/index.html">5.7</a>
+        </li>
+        <li class="version">
+          <a href="../5.6/index.html">5.6</a>
+        </li>
+        <li class="version">
+          <a href="../5.5/index.html">5.5</a>
+        </li>
+        <li class="version">
+          <a href="../5.4/index.html">5.4</a>
+        </li>
+        <li class="version">
+          <a href="../5.3/index.html">5.3</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">5.2</a>
+        </li>
+        <li class="version">
+          <a href="../5.1/index.html">5.1</a>
+        </li>
+        <li class="version">
+          <a href="../5/index.html">5.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../main/about.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">User Guide</a></li>
+    <li>Tapestry Core</li>
+    <li>Pages and Components</li>
+    <li><a href="localization.html">Localization</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">5.2</button>
+  <div class="version-menu">
+    <a class="version" href="../current/localization.html">5.8</a>
+    <a class="version" href="../5.7/localization.html">5.7</a>
+    <a class="version" href="../5.6/localization.html">5.6</a>
+    <a class="version" href="../5.5/localization.html">5.5</a>
+    <a class="version" href="../5.4/localization.html">5.4</a>
+    <a class="version" href="../5.3/localization.html">5.3</a>
+    <a class="version is-current" href="localization.html">5.2</a>
+    <a class="version" href="../5.1/localization.html">5.1</a>
+    <a class="version" href="../5/localization.html">5.0</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Localization</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Localization (often abbreviated as "L10n") is all about getting the right text to the user, in the right language.</p>
+</div>
+<div class="paragraph">
+<p>Localization support is well integrated into Tapestry.
+Tapestry allows you to easily separate the text you present to your users from the rest of your application &#8230;&#8203; pull it out of your Java code and even out of your component templates.
+You can then translate your messages into other languages and let Tapestry put everything together.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_component_message_catalogs"><a class="anchor" href="#_component_message_catalogs"></a>Component Message Catalogs</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Each component class may have a component message catalog.
+A component message catalog is a set of files with the extension <code>.properties</code>.
+These property files are the same format used by <code>java.util.ResourceBundle</code>, just lines of <code>key=value</code>.
+These files are stored on the classpath, in the same package folder as the page or component&#8217;s compiled Java class.</p>
+</div>
+<div class="paragraph">
+<p>So for a class named <code>org.example.myapp.pages.MyPage</code>, you would have a main properties file as <code>org/example/myapp/pages/MyPage.properties</code>.</p>
+</div>
+<div class="paragraph">
+<p>If you have a translations of these values, you provide additional properties file, adding an <a href="http://www.loc.gov/standards/iso639-2/englangn.html">ISO language code before</a> the extension.
+Thus, if you have a French translation, you could create a file <code>MyPage_fr.properties</code>.</p>
+</div>
+<div class="paragraph">
+<p>Any values in the more language specific file will override values from the main properties file.
+If you had an even more specific localization for just French as spoken in France, you could create <code>MyPage_fr_FR.properties</code> (that&#8217;s a language code plus a country code, and you can even go further and add variants &#8230;&#8203; but its unlikely that you&#8217;ll ever need to go beyond just language codes in practice).</p>
+</div>
+<div class="paragraph">
+<p>The messages in the catalog are accessed by keys.
+Tapestry ignores the case of the keys when accessing messages in the catalog.</p>
+</div>
+<div class="sect2">
+<h3 id="_component_message_catalog_inheritance"><a class="anchor" href="#_component_message_catalog_inheritance"></a>Component Message Catalog Inheritance</h3>
+<div class="paragraph">
+<p>If a component class is a subclass of another component class, then it inherits that base class' message catalog.
+Its own message catalog extends and overrides the values inherited from the base class.</p>
+</div>
+<div class="paragraph">
+<p>In this way, you could have a base component class that contained common messages, and extend or override those messages in subclasses (just as you would extend or override the methods of the base component class).
+This, of course, works for as many levels of inheritance as you care to support.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_application_wide_message_catalog"><a class="anchor" href="#_application_wide_message_catalog"></a>Application-wide Message Catalog</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If the file <code>WEB-INF/<em>AppName</em>.properties</code> exists in the context, it will be used as an application-wide message catalog.
+The AppName is derived from the name of the filter inside the <code>web.xml</code> file; this is most often just <code>app</code>, thus <code>WEB-INF/app.properties</code>.
+The search for the file is case sensitive.
+The properties files may be localized.</p>
+</div>
+<div class="paragraph">
+<p>Individual pages and components can override the values defined in the message catalog.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Avoid BOMs
+Make sure that your properties files don&#8217;t contain <a href="http://en.wikipedia.org/wiki/Byte_order_mark">byte order marks (BOM)</a>, because Java – and thus Tapestry – doesn&#8217;t support BOM in properties files (see <a href="http://bugs.sun.com/view_bug.do?bug_id=4508058" class="bare">http://bugs.sun.com/view_bug.do?bug_id=4508058</a>).
+Some editors write them out when saving a file in UTF-8, so watch out.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_properties_file_charset"><a class="anchor" href="#_properties_file_charset"></a>Properties File Charset</h3>
+<div class="paragraph">
+<p>Tapestry uses the UTF-8 character set (charset) when reading the properties files in a message catalog.
+This means that you don&#8217;t have to use the Java `native2ascii tool.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_localized_component_templates"><a class="anchor" href="#_localized_component_templates"></a>Localized Component Templates</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The same lookup mechanism applies to component templates.
+Tapestry will search for a localized version of each component template and use the closest match.
+Thus you could have <code>MyPage_fr.html</code> for French users, and <code>MyPage.html</code> for all other users.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_accessing_localized_messages"><a class="anchor" href="#_accessing_localized_messages"></a>Accessing Localized Messages</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The above discusses what files to create and where to store them, but doesn&#8217;t address how to make use of that information.</p>
+</div>
+<div class="paragraph">
+<p>Messages can be accessed in one of two ways:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Using the <code>message:</code> binding expression in a component template</p>
+</li>
+<li>
+<p>By injecting the component&#8217;s <code>Messages</code> object.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>In the first case, you may use the <code>message:</code> binding prefix with component parameters, or with template expansions:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;t:layout title="message:page-title"&gt;
+
+  ${message:greeting}, ${user.name}!
+  . . .
+&lt;/t:layout&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here, the <code>page-title</code> message is extracted from the catalog and passed to the <code>Layout</code> component&#8217;s <code>title</code> parameter.</p>
+</div>
+<div class="paragraph">
+<p>In addition, the <code>greeting</code> message is extracted and written into the response as part of the template.</p>
+</div>
+<div class="paragraph">
+<p>As usual, <code>prop:</code> is the default binding prefix, thus <code>user.name</code> is a property path, not a message key.</p>
+</div>
+<div class="paragraph">
+<p>You would extend this with a set of properties files:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">page-title=Your Account
+greeting=Welcome back</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Or, perhaps, a French version:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">page-title=Votre Compte
+greeting=Bienvenue en arriere</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Programatically, you may inject your component message catalog into your class, as an instance of the Messages interface:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Inject
+private Messages messages;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You could then <code>get()</code> messages, or <code>format()</code> them:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public String getCartSummary()
+{
+  if (items.isEmpty())
+    return messages.get("no-items");
+
+  return messages.format("item-summary", _items.size());
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>format()</code> option works using a <code>java.util.Formatter</code>, with all the printf-style loveliness you&#8217;ve come to expect:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">no-items=Your shopping cart is empty.
+item-summary=You have %d items in your cart.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As easy as conditionals are to use inside a Tapestry template, sometimes it&#8217;s even easier to do it in Java code.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_missing_keys"><a class="anchor" href="#_missing_keys"></a>Missing Keys</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you reference a key that is not in the message catalog, Tapestry does not throw an exception (because that would make initially developing an application very frustrating).
+When a key can not be located, a "placeholder" message is generated, such as "[[missing key: key-not-found]]".</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_reloading"><a class="anchor" href="#_reloading"></a>Reloading</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you change a property file in a message catalog, you&#8217;ll see the change immediately, just as with component classes and component templates (provided you&#8217;re not running in <a href="configuration.html" class="xref page">production mode</a>).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_asset_localization"><a class="anchor" href="#_asset_localization"></a>Asset Localization</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When injecting <a href="assets.html" class="xref page">Assets</a>, the injected asset will be localized as well.
+A search for the closest match for the active locale is made, and the final Asset will reflect that.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_locale_selection"><a class="anchor" href="#_locale_selection"></a>Locale Selection</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The locale for each request is determined from the HTTP request headers.
+The request locale reflects the environment of the web browser and possibly even the keyboard selection of the user on the client.
+It can be highly specific, for example, identifying British English (as <code>en_GB</code>) vs. American English (<code>en</code>).</p>
+</div>
+<div class="paragraph">
+<p>Tapestry "narrows" the raw request locale, as specified in the request, to a known quantity.
+It uses the <a href="configuration.html#_configuration_symbol_names" class="xref page"><code>tapestry.supported-locales</code> configuration symbol</a> to choose the effective locale for each request.
+This value is a comma-separated list of locale names.
+Tapestry searches the list for the best match for the request locale; for example, a request locale of <code>fr_FR</code> would match <code>fr</code> but not <code>de</code>.
+If no match is found, then the first locale name in the list is used as the effective locale (that is, the first locale is used as the default for non-matching requests).
+Thus a site that primarily caters to French speakers would want to list <code>fr</code> as the first locale in the list.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_changing_the_locale"><a class="anchor" href="#_changing_the_locale"></a>Changing the Locale</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/services/PersistentLocale.html">PersistentLocale</a></code> service can be used to programmatically override the locale.
+Note: You should be careful to only set the persistent locale to a supported locale.</p>
+</div>
+<div class="listingblock">
+<div class="title">Toggle between English and German</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Inject
+private PersistentLocale persistentLocale;
+
+void onActionFromLocaleToggle() {
+    if ("en".equalsIgnoreCase(persistentLocale.get().getLanguage())) {
+        persistentLocale.set(new Locale("de"));
+    } else {
+        persistentLocale.set(new Locale("en"));
+    }
+    return this;
+}
+public String getDisplayLanguage() {
+    return persistentLocale.get().getDisplayLanguage();
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Once a persistent locale is set, you will see the locale name as the first virtual folder in page render and component event requests URLs.
+In this way, a persistent locale will, in fact, persist from request to request, or in a user&#8217;s bookmarks.</p>
+</div>
+<div class="paragraph">
+<p>You will see the new locale take effect on the next request.
+If it is changed in a component event request (which is typical), the new locale will be used in the subsequent page render request.</p>
+</div>
+<div class="paragraph">
+<p>Note that the locale for a page is fixed (it can&#8217;t change once the page instance is created).
+In addition, a page may only be attached to a request once.
+In other words, if code in your page changes the persistent locale, you won&#8217;t see a change to the page&#8217;s locale (or localized messages) <em>in that request</em>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_built_in_locales"><a class="anchor" href="#_built_in_locales"></a>Built-in Locales</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>While your application can support any locale (and thus any language) that you want, Tapestry provides only a limited set of translations for its own built-in messages.</p>
+</div>
+<div class="paragraph">
+<p>The locales listed below are built-in to Tapestry 5.2:</p>
+</div>
+<div class="paragraph">
+<p>en (English), it (Italian), es (Spanish), zh_CN (Chinese), pt_PT (Portuguese), de (German), ru (Russian), hr (Croatian), fi_FI (Finnish), sv_SE (Swedish), fr_FR (French), da (Danish), pt_BR (Brazilian Portuguese), ja (Japanese), el (Greek), bg (Bulgarian), no_NB (Norwegian).</p>
+</div>
+<div class="sect2">
+<h3 id="_providing_translations_for_tapestry_built_in_messages"><a class="anchor" href="#_providing_translations_for_tapestry_built_in_messages"></a>Providing translations for Tapestry built-in messages</h3>
+<div class="paragraph">
+<p>Fortunately, Tapestry uses all the same mechanisms for its own locale support as it provides for your application.
+So, to support other locales, just translate the built-in message catalog (property) files yourself:</p>
+</div>
+<div class="paragraph">
+<p>To have Tapestry use these new files, just put them in the corresponding package-named directory within your own app (for example, <code>src/main/resources/org/apache/tapestry5/core.properties</code>).</p>
+</div>
+<div class="paragraph">
+<p>Finally, please open a new GitHub Pull Request for the translated files so that they can be included in the next release of Tapestry.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

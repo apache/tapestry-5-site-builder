@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Client-Side JavaScript :: Apache Tapestry</title>
+    <meta name="generator" content="Antora 3.1.15">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/tapestry.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../.."><img alt="Apache Tapestry Logo" src="../../_/img/apache-tapestry-icon-dark.svg" width="60" />Apache Tapestry</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Documentation</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../../main/getting-started.html">Getting Started</a>
+            <a class="navbar-item" href="../../main/tutorial/">Tutorial</a>
+            <a class="navbar-item" href="../../userguide/5.8/">User Guide</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="../../main/community.html">Community</a>
+        <a class="navbar-item" href="../../main/support.html">Support</a>
+        <a class="navbar-item" href="../../main/developers.html">Developers</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Apache</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+            <a class="navbar-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
+            <a class="navbar-item" href="https://www.apache.org/licenses/">License</a>
+            <a class="navbar-item" href="https://www.apache.org/security/">Security</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="../../main/download.html">Download</a>
+          </span>
+        </div>
+        <div class="navbar-brand">
+          <a href="https://www.apache.org/">
+          <img alt="The Apache Software Foundation" src="../../_/img/asf_logo.svg" width="200" height="63" style="padding-top: 5px; padding-bottom: 5px; background-color: white">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="body">
+<div class="nav-container" data-component="userguide" data-version="5.3">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">User Guide</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Introduction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry Core</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basics</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="project-layout.html">Project Layout</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="runtime-exceptions.html">Runtime Exceptions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="class-reloading.html">Class Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-reference.html">Component Reference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="annotations.html">Annotations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Pages and Components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-classes.html">Component Classes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-templates.html">Component Templates</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="property-expressions.html">Property Expressions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-parameters.html">Component Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="parameter-type-coercion.html">Parameter Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="layout-component.html">Layout Component</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-mixins.html">Component Mixins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-navigation.html">Page Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="localization.html">Localization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Request/Response Rendering</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-life-cycle.html">Page Life Cycle</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="request-processing.html">Request Processing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-rendering.html">Component Rendering</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-events.html">Component Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="url-rewriting.html">URL Rewriting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dom.html">Document Object Model (DOM)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="response-compression.html">Response Compression</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="security.html">Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https.html">HTTPS / SSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="content-type-and-markup.html">Content Type and Markup</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Data Persistence</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="persistent-page-data.html">Persistent Page Data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="session-storage.html">Session Storage</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Interacting with components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="injection.html">Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="environmental-services.html">Environmental Services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript, AJAX, CSS &amp; Binary Data</span>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="client-side-javascript.html">Client-Side JavaScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ajax-and-zones.html">AJAX and Zones</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="css.html">Cascading Style Sheets (CSS)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="assets.html">Assets</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Working with Forms</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="forms-and-validation.html">Forms and Validation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="beaneditform-guide.html">BeanEditForm Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uploading-files.html">Uploading Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bean-validation.html">Bean Validation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Logging, Debugging &amp; Testing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="logging.html">Logging</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unit-testing.html">Unit testing pages or components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integration-testing.html">Integration Testing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="development-dashboard.html">Development Dashboard</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry IOC</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-overview.html">IoC Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="symbols.html">Symbols</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="type-coercion.html">Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="case-insensitivity.html">Case Insensitivity</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="autoloading-modules.html">Autoloading Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="chainbuilder-service.html">ChainBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pipelinebuilder-service.html">PipelineBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="shadowbuilder-service.html">ShadowBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="strategybuilder-service.html">StrategyBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="defining-tapestry-ioc-services.html">Defining Tapestry IOC Services</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-modules.html">IoC Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="object-providers.html">Object Providers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-serialization.html">Service Serialization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="starting-the-ioc-registry.html">Starting the IoC Registry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="aliases.html">Aliases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="injection-in-detail.html">Injection in Detail</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ordering-by-constraints.html">Ordering by Constraints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="registry-startup.html">Registry Startup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="parallel-execution.html">Parallel Execution</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="logging-in-tapestry.html">Logging in Tapestry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-implementation-reloading.html">Service Implementation Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-advisors.html">Service Advisors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-decorators.html">Service Decorators</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="using-jsr-330-standard-annotations.html">Using JSR 330 standard annotations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="operation-tracker.html">Operation Tracker</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Add-ons and Integrations</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Built-in</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="hibernate.html">Hibernate Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="jpa.html">JPA Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integrating-with-spring-framework.html">Spring</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="third-party-modules.html">Third Party Modules</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Release Notes</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.3.html">Tapestry 5.3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.2.html">Tapestry 5.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.1.html">Tapestry 5.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.0.html">Tapestry 5.0</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cookbook</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/default-parameter.html">Default Parameter</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/overriding-exception-reporting.html">Overriding Exception Reporting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/error-page-recipe.html">Error Page Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/supporting-informal-parameters.html">Supporting Informal Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/switching-cases.html">Switching Cases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/enum-parameter-recipe.html">Enum Parameter Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/extending-the-if-component.html">Extending The If Component</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/meta-programming-page-content.html">Meta-Programming Page Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="cookbook/ioc-cookbook.html">IoC Cookbook</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-basic-services-and-injection.html">IoC Cookbook - Basic Services and Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-overriding-ioc-services.html">IoC Cookbook - Overriding IoC Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-patterns.html">IoC Cookbook - Patterns</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-service-configurations.html">IoC Cookbook - Service Configurations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/using-select-with-a-list.html">Using Select With a List</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/performance-and-clustering.html">Performance and Clustering</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/google-app-engine.html">Google App Engine (GAE)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frequently Asked Questions (FAQ)</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/general.html">General Questions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/templating-and-markup.html">Templating and Markup FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/ajax.html">AJAX FAQ</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">User Guide</span>
+    <span class="version">5.3</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../main/about.html">Home</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../current/index.html">User Guide</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../current/index.html">5.8</a>
+        </li>
+        <li class="version">
+          <a href="../5.7/index.html">5.7</a>
+        </li>
+        <li class="version">
+          <a href="../5.6/index.html">5.6</a>
+        </li>
+        <li class="version">
+          <a href="../5.5/index.html">5.5</a>
+        </li>
+        <li class="version">
+          <a href="../5.4/index.html">5.4</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">5.3</a>
+        </li>
+        <li class="version">
+          <a href="../5.2/index.html">5.2</a>
+        </li>
+        <li class="version">
+          <a href="../5.1/index.html">5.1</a>
+        </li>
+        <li class="version">
+          <a href="../5/index.html">5.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../main/about.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">User Guide</a></li>
+    <li>Tapestry Core</li>
+    <li>JavaScript, AJAX, CSS &amp; Binary Data</li>
+    <li><a href="client-side-javascript.html">Client-Side JavaScript</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">5.3</button>
+  <div class="version-menu">
+    <a class="version" href="../current/client-side-javascript.html">5.8</a>
+    <a class="version" href="../5.7/client-side-javascript.html">5.7</a>
+    <a class="version" href="../5.6/client-side-javascript.html">5.6</a>
+    <a class="version" href="../5.5/client-side-javascript.html">5.5</a>
+    <a class="version" href="../5.4/client-side-javascript.html">5.4</a>
+    <a class="version is-current" href="client-side-javascript.html">5.3</a>
+    <a class="version" href="../5.2/client-side-javascript.html">5.2</a>
+    <a class="version" href="../5.1/client-side-javascript.html">5.1</a>
+    <a class="version" href="../5/client-side-javascript.html">5.0</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Client-Side JavaScript</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>JavaScript is a first-class concept in Tapestry, and sophisticated JavaScript support is provided right out of the box, including rich Ajax and Zones, download optimization, client-side logging, and localization.</p>
+</div>
+<div class="paragraph">
+<p>In production mode, by default, Tapestry will merge JavaScript libraries, add version numbering, and set a far-future expires header to encourage aggressive browser caching.
+Starting with version 5.3, Tapestry can also automatically minify (compress) JavaScript libraries when in production mode.</p>
+</div>
+<div class="paragraph">
+<p>In addition, as will be described in detail below, Tapestry comes with the Prototype and Scriptaculous libraries, or you can easily swap in JQuery using a 3rd-party module.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_adding_custom_javascript"><a class="anchor" href="#_adding_custom_javascript"></a>Adding Custom JavaScript</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When adding your own custom JavaScript or third-party libraries, just follow the strategies below to take advantage of Tapestry&#8217;s JavaScript support mechanisms.</p>
+</div>
+<div class="paragraph">
+<p>The recommended practice in Tapestry is to package up any significant amount of JavaScript as a static JavaScript library, a .js file that can be downloaded to the client.
+Keep your in-page JavaScript code to a minimum, just the few statements needed to initialize objects and reference methods in the JavaScript libraries.</p>
+</div>
+<div class="sect2">
+<h3 id="_linking_to_your_javascript_libraries"><a class="anchor" href="#_linking_to_your_javascript_libraries"></a>Linking to your JavaScript libraries</h3>
+<div class="paragraph">
+<p>Tapestry provides several ways to add a link to a JavaScript library within your page or component.
+Although you can use direct <code>&lt;script type="text/javascript" src="xxx.js"&gt;&lt;/script&gt;</code> approach, you should only use it for JavaScript that resides outside of your application.
+For JavaScript within your app, Tapestry provides much better ways to do the same thing.
+Most users choose the simplest, the <code>@IncludeJavaScriptLibrary</code>  annotation approach.</p>
+</div>
+<div class="sect3">
+<h4 id="_approach_1_import"><a class="anchor" href="#_approach_1_import"></a>Approach 1: <code>@Import</code></h4>
+<div class="paragraph">
+<p>Use the <code>@Import</code> annotation to include links to JavaScript (and CSS) files in your page or component.
+Tapestry ensures that each such file is only referenced once in your page.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Import(library = {
+    "context:js/jquery.js", "context:js/myeffects.js"
+})
+public class MyComponent
+{
+  …
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>@Import</code> may also be applied to individual methods, in which case the import operation only occurs when the method is invoked.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+When specifying a file to import, you&#8217;ll often use the context: binding prefix to indicate that the file is stored in the web application context, and not on the classpath.
+Relative paths will be on the classpath, relative to the Java class.
+See Component Parameters for other binding prefix options.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Adding the same JavaScript library multiple times does not create duplicate links.
+The subsequent ones are simply ignored.
+In this way, each component can add the libraries it needs, without worrying about conflicts with other components.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_approach_2_javascriptsupport"><a class="anchor" href="#_approach_2_javascriptsupport"></a>Approach 2: JavaScriptSupport</h4>
+<div class="paragraph">
+<p>Alternatively, you can use JavaScriptSupport to include a JavaScript library in your page or component.
+JavaScriptSupport is an environmental service that includes a number of methods that will be used by components, or by services that are called from components. For example:</p>
+</div>
+<div class="sect4">
+<h5 id="_the_importjavascriptlibrary_method"><a class="anchor" href="#_the_importjavascriptlibrary_method"></a>The importJavaScriptLibrary method</h5>
+<div class="paragraph">
+<p>The importJavaScriptLibrary method adds a link to a JavaScript library.
+A component can inject such a script and pass one or more of assets to this method:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Inject @Path("context:/js/myeffects.js")
+private Asset myEffects;
+
+@Environmental
+private JavaScriptSupport javaScriptSupport;
+
+void setupRender()
+{
+  javaScriptSupport.importJavaScriptLibrary(myEffects);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Tapestry will ensure that the necessary <code>&lt;link&gt;</code> elements are inserted at the bottom of the <code>&lt;head&gt;</code> element).</p>
+</div>
+<div class="paragraph">
+<p>As with the annotation approach, adding the same asset multiple times does not create duplicate links.</p>
+</div>
+<div class="paragraph">
+<p>The setupRender method (the name is specifically linked to a render phase) is the correct place to inform the JavaScriptSupport service that the library is needed.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_the_addscript_method"><a class="anchor" href="#_the_addscript_method"></a>The <code>addScript</code> method</h5>
+<div class="paragraph">
+<p>The addScript method is used when you need to add some JavaScript code directly to the page.
+This will be inserted at the bottom of the document, and will only be executed when the document has finished loading on the client (i.e., from the window.onload event handler).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">void afterRender()
+{
+    javaScriptSupport.addScript(
+        "$('%s').observe('click', hideMe());",
+        container.getClientId());
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When calling the method, the format string can include standard substitutions (such as <code>%s</code>) for arguments. This saves you the trouble of calling <code>String.format()</code> yourself.
+The formatted JavaScript is added to the script block in the rendered output.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_injecting_rendersupport"><a class="anchor" href="#_injecting_rendersupport"></a>Injecting RenderSupport</h5>
+<div class="paragraph">
+<p><code>RenderSupport</code> is an environmental object, so you will normally inject it via the <code>@Environmental</code> annotation:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Environmental
+private JavaScriptSupport javaScriptSupport;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>@Environmental</code> annotation only works inside components, but occasionally you may want to inject <code>JavaScriptSupport</code> into a service.
+Fortunately, a proxy has been set up to allow the use of <code>@Inject</code> instead:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Inject
+private JavaScriptSupport javaScriptSupport;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>…or, in a service implementation constructor:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public MyServiceImpl(JavaScriptSupport support)
+{
+  …
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Inside a component, you should use <code>@Environmental</code>, to highlight the fact that JavaScriptSupport (like most environmental objects) is only available during rendering, not during action requests.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_combining_javascript_libraries"><a class="anchor" href="#_combining_javascript_libraries"></a>Combining JavaScript libraries</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In production mode, Tapestry automatically <em>combines</em> JavaScript libraries if they are part of a <a href="#_javascript_stacks">JavaScript Stack</a>.
+A single request (for a <em>virtual asset</em>) will retrieve the combined content of all referenced JavaScript library files.</p>
+</div>
+<div class="paragraph">
+<p>This is a very useful feature, as it reduces the number of requests needed to present a page to the user.
+It can be disabled, however, by setting the <code>SymbolConstants.COMBINE_SCRIPTS</code> configuration symbol to false in your application&#8217;s module class (normally AppModule.java).
+By default it is enabled when in production mode and disabled otherwise.</p>
+</div>
+<div class="paragraph">
+<p>As elsewhere, if the client browser supports gzip compression, the combined JavaScript will be compressed.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_minifying_javascript_libraries"><a class="anchor" href="#_minifying_javascript_libraries"></a>Minifying JavaScript libraries</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In production mode, Tapestry can automatically minify (intelligently compresses) JavaScript libraries (and CSS) when the application starts up.
+This can significantly decrease the size of static content that the browser needs to download.</p>
+</div>
+<div class="paragraph">
+<p>Minification is accomplished using the ResourceMinimizer service.
+A YUI Compressor-based implementation is available, but this can be overridden.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+The <code>tapestry-core</code> module only provides the empty infrastructure for supporting minification; the actual logic is supplied in the <code>tapestry-yuicompressor</code> module.
+To use it, you&#8217;ll need to update your dependencies to include this module.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Minification can be disabled by setting the <code>tapestry.enable-minification</code> configuration symbol to <code>false</code> in your application&#8217;s module class (usually <code>AppModule.java</code>).
+By default it is enabled when in production mode and disabled otherwise.</p>
+</div>
+<div class="paragraph">
+<p>Please test your applications well: the YUI Compressor code can be somewhat finicky about the application server and JDK version.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_client_side_logging"><a class="anchor" href="#_client_side_logging"></a>Client-Side Logging</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In versions prior to 5.3, Tapestry used a modified version of the Blackbird JavaScript console.
+In Tapestry 5.3 the Blackbird console was removed; just use the standard console logging features (e.g. <code>console.log()</code>) built into modern browsers.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_handling_slow_page_loads"><a class="anchor" href="#_handling_slow_page_loads"></a>Handling Slow Page Loads</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If your page loads slowly (typically, because of scripts loaded from external sites), you may see a race condition where the user can click on a link before an event handler for that link has been wired up.</p>
+</div>
+<div class="paragraph">
+<p>The client-side function <code>Tapestry.waitForPage()</code> can be used in an element&#8217;s onclick handler to force a wait for the page to fully load.
+In this race condition, the screen will dim and a message will appear advising the user to wait a moment; once the page is fully loaded, this modal dialog will be removed.</p>
+</div>
+<div class="paragraph">
+<p>The correct usage is:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">  &lt;a href="..." onclick="javascript:Tapestry.waitForPage(event);"&gt; ... &lt;/a&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The constant <code>MarkupConstants.WAIT_FOR_PAGE</code> contains the part of this snippet inside the quotes.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_standard_tapestry_library"><a class="anchor" href="#_the_standard_tapestry_library"></a>The Standard Tapestry Library</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tapestry&#8217;s client-side support, the standard Tapestry library, consists of tapestry.js, which has dependencies on Prototype and on Scriptaculous Effects.
+tapestry.js, along with its dependencies.
+The tapestry.js library is automatically added to the page when your code adds any other JavaScript or JavaScript library.</p>
+</div>
+<div class="sect2">
+<h3 id="_tapestry_namespace"><a class="anchor" href="#_tapestry_namespace"></a>Tapestry Namespace</h3>
+<div class="paragraph">
+<p>Tapestry defines a number of object and classes inside the Tapestry namespace.</p>
+</div>
+<div class="paragraph">
+<p>It also adds a handful of methods to the Form class, and to Form elements. These are mostly related to input validation and determining element visibility.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_the_tapestry_object_t"><a class="anchor" href="#_the_tapestry_object_t"></a>The Tapestry Object $T()</h3>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Deprecated since 5.2 (no replacement)
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The standard library adds a new function, <code>$T()</code>.
+This function is used much like Prototype&#8217;s <code>$()</code>, except that instead of returning a DOM object, it returns a hash (an initially empty JavaScript object) that is associated with the DOM object.
+This hash is known as <em>the Tapestry object</em>.</p>
+</div>
+<div class="paragraph">
+<p>You may pass in an object id (as a string) or an object reference.
+The Tapestry Object is created on first invocation.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+you&#8217;ll see it as a property name <code>_tapestry</code> on the DOM object (which may be useful when debugging).
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>When Tapestry adds information to a DOM object, it does so in the Tapestry object.
+This helps avoid name conflicts, and groups all Tapestry-added properties into one place which is much easier to debug.</p>
+</div>
+<div class="paragraph">
+<p>For example, you might store a value for an element in one place:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">  $T(myid).fadeDuration = .5;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then use it somewhere else:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">  new Effect.Fade($(myId), { duration: $T(myid).fadeDuration });</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ajax_components_and_mixins"><a class="anchor" href="#_ajax_components_and_mixins"></a>Ajax Components and Mixins</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tapestry provides easy-to-use support for Ajax, the technique of using JavaScript to dynamically updating parts of a web page with content from the server without redrawing the whole page.
+See Ajax and Zones for details.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_built_in_libraries"><a class="anchor" href="#_built_in_libraries"></a>Built-in Libraries</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tapestry comes with the Prototype and Scriptaculous libraries — no extra download is required.
+Tapestry will automatically link into your pages the prototype.js, scriptaculous.js, and effects.js libraries, as well as the Tapestry library, tapestry.js (which largely consists of support for form input validation).
+Starting with Tapestry 5.3, Underscore is also included.</p>
+</div>
+<div class="sect2">
+<h3 id="_prototype_and_scriptaculous_versions"><a class="anchor" href="#_prototype_and_scriptaculous_versions"></a>Prototype and Scriptaculous Versions</h3>
+<div class="paragraph">
+<p>Tapestry uses a modified version of the main Scriptaculous library, scriptaculous.js, with the library&#8217;s default autoloading behavior turned off.
+This lets Tapestry and Tapestry components control which Scriptaculus scripts are loaded, rather than having all of them loaded unnecessarily.</p>
+</div>
+<div class="paragraph">
+<p>If you need access to other Scriptaculous libraries, you can provide them as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Inject @Path("${tapestry.scriptaculous}/dragdrop.js")
+private Asset dragDropLibrary;
+
+@Environmental
+private JavaScriptSupport javaScriptSupport;
+
+void setupRender()
+{
+  javaScriptSupport.addScriptLink(dragDropLibrary);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The Asset is injected, using the <code>tapestry.scriptaculous</code> configuration symbol to reference the location of the Scriptaculous library.</p>
+</div>
+<div class="paragraph">
+<p>Even though the dragdrop.js library is stored inside a JAR file, Tapestry ensures that it can be accessed from the client web browser.
+A Tapestry URL within the virtual folder "/assets" is created; the file will be given a version number (the application version number if not specified more specifically) and will be sent to the browser with a far-future expires header (to encourage the browser to cache the file aggressively).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_javascript_stacks"><a class="anchor" href="#_javascript_stacks"></a>JavaScript Stacks</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tapestry allows you to define groups of related JavaScript libraries and stylesheets as "stacks".
+The built-in "core" stack is used to define the core JavaScript libraries needed by Tapestry (currently, this includes Prototype and Scriptaculous, as well as Tapestry-specific libraries).
+Other component libraries may define additional stacks for related sets of resources, for example, to bundle together some portion of the ExtJS or YUI libraries.</p>
+</div>
+<div class="paragraph">
+<p>A JavaScriptStack can be thought of as a generalization of Tapestry 5.1&#8217;s ClientInfrastructure, which exists now to define the "core" JavaScript stack.</p>
+</div>
+<div class="paragraph">
+<p>JavaScript assets of a stack may (when enabled) be exposed to the client as a single URL (identifying the stack by name).
+The individual assets are combined into a single virtual asset, which is then streamed to the client.</p>
+</div>
+<div class="paragraph">
+<p>To group several static resources together in a single stack, you must create a new implementation of the JavaScriptStack interface.</p>
+</div>
+<div class="paragraph">
+<p>This interface has four methods:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>getStylesheets()</code> : This method will return a list of stylesheet files (StylesheetLink-type object) associated to this stack</p>
+</li>
+<li>
+<p><code>getJavaScriptLibraries()</code> : This method will return a list of javascript files (Asset-type object) associated to this stack</p>
+</li>
+<li>
+<p><code>getStacks()</code> : It is also possible to make a stack dependant of other stacks. All the stacks defined in this method will be loaded before the current stack.</p>
+</li>
+<li>
+<p><code>getInitialization()</code> : this method makes it possible to call a JavaScript initialization for the stack. Tapestry will automatically add this initialization to the page that imports the stacks.</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="title">MyStack.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class MyStack implements JavaScriptStack {
+
+    private final AssetSource assetSource;
+
+    public myStack (final AssetSource assetSource)
+    {
+        this.assetSource = assetSource;
+    }
+
+    public String getInitialization()
+    {
+    	return null;
+    }
+
+    public List&lt;Asset&gt; getJavaScriptLibraries()
+    {
+        List&lt;Asset&gt; ret = new ArrayList&lt;Asset&gt;();
+
+        ret.add(assetSource.getContextAsset("static/js/jquery.js", null));
+
+        ret.add(assetSource.getContextAsset("static/js/jquery.ui.core.js", null));
+
+        return ret;
+    }
+
+    public List&lt;StylesheetLink&gt; getStylesheets()
+    {
+    	List&lt;StylesheetLink&gt; ret = new ArrayList&lt;StylesheetLink&gt;();
+
+    	ret.add(new StylesheetLink(assetSource.getContextAsset("static/css/style.css", null)));
+
+        return ret;
+    }
+
+    public List&lt;String&gt; getStacks()
+    {
+        return Collections.emptyList();
+    }
+
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When your new Stack is created, you have to define it in your AppModule.</p>
+</div>
+<div class="listingblock">
+<div class="title">AppModule.java (partial)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Contribute(JavaScriptStackSource.class)
+public static void addMyStack(MappedConfiguration&lt;String, JavaScriptStack&gt; config)
+{
+    config.addInstance("MyNewStack", MyStack.class);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can now use it in your pages and components, by using the @Import annotation or the JavaScriptSupport service:</p>
+</div>
+<div class="listingblock">
+<div class="title">With @Import</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Import(stack="MyNewStack")
+public class myPage {
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">With JavaScriptSupport</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Contribute(JavaScriptStackSource.class)
+public static void addMyStack(MappedConfiguration&lt;String, JavaScriptStack&gt; config)
+{
+    config.addInstance("MyNewStack", MyStack.class);
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>IoC Modules :: Apache Tapestry</title>
+    <meta name="generator" content="Antora 3.1.15">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/tapestry.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../.."><img alt="Apache Tapestry Logo" src="../../_/img/apache-tapestry-icon-dark.svg" width="60" />Apache Tapestry</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Documentation</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../../main/getting-started.html">Getting Started</a>
+            <a class="navbar-item" href="../../main/tutorial/">Tutorial</a>
+            <a class="navbar-item" href="../../userguide/5.8/">User Guide</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="../../main/community.html">Community</a>
+        <a class="navbar-item" href="../../main/support.html">Support</a>
+        <a class="navbar-item" href="../../main/developers.html">Developers</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Apache</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+            <a class="navbar-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
+            <a class="navbar-item" href="https://www.apache.org/licenses/">License</a>
+            <a class="navbar-item" href="https://www.apache.org/security/">Security</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="../../main/download.html">Download</a>
+          </span>
+        </div>
+        <div class="navbar-brand">
+          <a href="https://www.apache.org/">
+          <img alt="The Apache Software Foundation" src="../../_/img/asf_logo.svg" width="200" height="63" style="padding-top: 5px; padding-bottom: 5px; background-color: white">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="body">
+<div class="nav-container" data-component="userguide" data-version="5.4">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">User Guide</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Introduction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry Core</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basics</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="project-layout.html">Project Layout</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="runtime-exceptions.html">Runtime Exceptions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="class-reloading.html">Class Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-reference.html">Component Reference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="annotations.html">Annotations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Pages and Components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-classes.html">Component Classes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-templates.html">Component Templates</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="property-expressions.html">Property Expressions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-parameters.html">Component Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="parameter-type-coercion.html">Parameter Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="layout-component.html">Layout Component</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-mixins.html">Component Mixins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-navigation.html">Page Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="localization.html">Localization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Request/Response Rendering</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-life-cycle.html">Page Life Cycle</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="request-processing.html">Request Processing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-rendering.html">Component Rendering</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-events.html">Component Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="url-rewriting.html">URL Rewriting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dom.html">Document Object Model (DOM)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="response-compression.html">Response Compression</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="security.html">Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https.html">HTTPS / SSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="content-type-and-markup.html">Content Type and Markup</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Data Persistence</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="persistent-page-data.html">Persistent Page Data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="session-storage.html">Session Storage</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Interacting with components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="injection.html">Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="environmental-services.html">Environmental Services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript, AJAX, CSS &amp; Binary Data</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="client-side-javascript.html">Client-Side JavaScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="javascript-modules.html">Javascript Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="coffeescript.html">Coffeescript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ajax-and-zones.html">AJAX and Zones</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="css.html">Cascading Style Sheets (CSS)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="assets.html">Assets</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Working with Forms</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="forms-and-validation.html">Forms and Validation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="beaneditform-guide.html">BeanEditForm Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uploading-files.html">Uploading Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bean-validation.html">Bean Validation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Logging, Debugging &amp; Testing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="logging.html">Logging</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unit-testing.html">Unit testing pages or components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integration-testing.html">Integration Testing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="development-dashboard.html">Development Dashboard</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry IOC</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-overview.html">IoC Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="symbols.html">Symbols</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="type-coercion.html">Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="case-insensitivity.html">Case Insensitivity</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="autoloading-modules.html">Autoloading Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="chainbuilder-service.html">ChainBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pipelinebuilder-service.html">PipelineBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="shadowbuilder-service.html">ShadowBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="strategybuilder-service.html">StrategyBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="defining-tapestry-ioc-services.html">Defining Tapestry IOC Services</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="ioc-modules.html">IoC Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="object-providers.html">Object Providers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-serialization.html">Service Serialization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="starting-the-ioc-registry.html">Starting the IoC Registry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="aliases.html">Aliases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="injection-in-detail.html">Injection in Detail</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ordering-by-constraints.html">Ordering by Constraints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="registry-startup.html">Registry Startup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="parallel-execution.html">Parallel Execution</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="logging-in-tapestry.html">Logging in Tapestry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-implementation-reloading.html">Service Implementation Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-advisors.html">Service Advisors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-decorators.html">Service Decorators</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="using-jsr-330-standard-annotations.html">Using JSR 330 standard annotations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="operation-tracker.html">Operation Tracker</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Add-ons and Integrations</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Built-in</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="hibernate.html">Hibernate Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="jpa.html">JPA Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integrating-with-spring-framework.html">Spring</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="third-party-modules.html">Third Party Modules</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Release Notes</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.4.html">Tapestry 5.4</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.3.html">Tapestry 5.3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.2.html">Tapestry 5.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.1.html">Tapestry 5.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.0.html">Tapestry 5.0</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cookbook</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/default-parameter.html">Default Parameter</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/overriding-exception-reporting.html">Overriding Exception Reporting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/error-page-recipe.html">Error Page Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/supporting-informal-parameters.html">Supporting Informal Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/component-libraries.html">Component Libraries</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/switching-cases.html">Switching Cases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/enum-parameter-recipe.html">Enum Parameter Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/extending-the-if-component.html">Extending The If Component</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/meta-programming-page-content.html">Meta-Programming Page Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="cookbook/ioc-cookbook.html">IoC Cookbook</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-basic-services-and-injection.html">IoC Cookbook - Basic Services and Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-overriding-ioc-services.html">IoC Cookbook - Overriding IoC Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-patterns.html">IoC Cookbook - Patterns</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-service-configurations.html">IoC Cookbook - Service Configurations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/using-select-with-a-list.html">Using Select With a List</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/performance-and-clustering.html">Performance and Clustering</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/google-app-engine.html">Google App Engine (GAE)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frequently Asked Questions (FAQ)</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/general.html">General Questions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/templating-and-markup.html">Templating and Markup FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/ajax.html">AJAX FAQ</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">User Guide</span>
+    <span class="version">5.4</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../main/about.html">Home</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../current/index.html">User Guide</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../current/index.html">5.8</a>
+        </li>
+        <li class="version">
+          <a href="../5.7/index.html">5.7</a>
+        </li>
+        <li class="version">
+          <a href="../5.6/index.html">5.6</a>
+        </li>
+        <li class="version">
+          <a href="../5.5/index.html">5.5</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">5.4</a>
+        </li>
+        <li class="version">
+          <a href="../5.3/index.html">5.3</a>
+        </li>
+        <li class="version">
+          <a href="../5.2/index.html">5.2</a>
+        </li>
+        <li class="version">
+          <a href="../5.1/index.html">5.1</a>
+        </li>
+        <li class="version">
+          <a href="../5/index.html">5.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../main/about.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">User Guide</a></li>
+    <li>Tapestry IOC</li>
+    <li><a href="ioc-modules.html">IoC Modules</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">5.4</button>
+  <div class="version-menu">
+    <a class="version" href="../current/ioc-modules.html">5.8</a>
+    <a class="version" href="../5.7/ioc-modules.html">5.7</a>
+    <a class="version" href="../5.6/ioc-modules.html">5.6</a>
+    <a class="version" href="../5.5/ioc-modules.html">5.5</a>
+    <a class="version is-current" href="ioc-modules.html">5.4</a>
+    <a class="version" href="../5.3/ioc-modules.html">5.3</a>
+    <a class="version" href="../5.2/ioc-modules.html">5.2</a>
+    <a class="version" href="../5.1/ioc-modules.html">5.1</a>
+    <a class="version" href="../5/ioc-modules.html">5.0</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">IoC Modules</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>You inform Tapestry about your services and contributions by providing a <strong>module</strong> class.</p>
+</div>
+<div class="paragraph">
+<p>The module class is a plain Java class that you create to inform Tapestry about your services and contributions.</p>
+</div>
+<div class="paragraph">
+<p>A system of annotations and naming conventions allow Tapestry to determine what services are provided by the module.</p>
+</div>
+<div class="paragraph">
+<p>A module class exists for the following reasons:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>To <em>bind</em> service interfaces to service implementations</p>
+</li>
+<li>
+<p>To contribute configuration data <em>into</em> services</p>
+</li>
+<li>
+<p>To <em>decorate</em> services by providing <em>interceptors</em> around them</p>
+</li>
+<li>
+<p>To provide explicit code for building a service</p>
+</li>
+<li>
+<p>To set a default <em>marker</em> for all services defined in the module</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>All public methods of a module class must be meaningful to Tapestry (be one of the categories above).
+Any extra public methods result in startup exceptions (because the method may contain a typo).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_service_builder_methods"><a class="anchor" href="#_service_builder_methods"></a>Service Builder Methods</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Service builder methods were the original way to define a service and provide the logic to construct it; although this is now more commonly (and succinctly) accomplished using the bind() method, there are still many cases where service builder methods are useful.</p>
+</div>
+<div class="paragraph">
+<p>Service builder methods are public methods. They are often static. Here&#8217;s a trivial example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package org.example.myapp.services;
+
+public class MyAppModule
+{
+  public static Indexer build()
+  {
+    return new IndexerImpl();
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Any public method (static or instance) whose name starts with "build" is a service builder method, implicitly defining a service within the module.</p>
+</div>
+<div class="paragraph">
+<p>Here we&#8217;re defining a service around the Indexer service interface (presumably also in the <code>org.example.myapp.services package</code>).</p>
+</div>
+<div class="paragraph">
+<p>Every service has a unique id, used to identify it throughout the Registry of services (the Registry is the combined sum of all services from all modules).
+If you don&#8217;t provide an explicit service id, as in this example, the service id is drawn from the return type; this service has an id of "Indexer".</p>
+</div>
+<div class="paragraph">
+<p>You can give a service an explicit id by adding it to the method name: <code>buildIndexer()</code>.
+This is useful when you do not want the service id to match the service interface name (for example, when you have different services that implement the same interface), or when you need to avoid name collisions on the method name.
+(Java allows only a single method with a given name and set of parameters, even if the return types are different, so if you have two different service builder methods that take the same parameters, you should give them explicit service ids in the method name).</p>
+</div>
+<div class="paragraph">
+<p>Tapestry IoC is <a href="case-insensitivity.html" class="xref page">case insensitive</a>; later we can refer to this service as "indexer" or "INDEXER" or any variation thereof, and connect to this service.</p>
+</div>
+<div class="paragraph">
+<p>Service ids must be unique; if another module contributes a service with the id "Indexer" (or any case variation thereof) a runtime exception will occur when the Registry is created.</p>
+</div>
+<div class="paragraph">
+<p>We could extend this example by adding additional service builder methods, or by showing how to inject dependencies.
+See <a href="defining-tapestry-ioc-services.html" class="xref page">the service documentation</a> for more details.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_autobuilding_services"><a class="anchor" href="#_autobuilding_services"></a>Autobuilding Services</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Main article: <a href="defining-tapestry-ioc-services.html" class="xref page">Defining Tapestry IOC Services</a></p>
+</div>
+<div class="paragraph">
+<p>An alternate, and usually preferred, way to define a service is via a module&#8217;s <code>bind()</code> method.
+The previous example can be rewritten as:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package org.example.myapp.services;
+
+import org.apache.tapestry5.ioc.ServiceBinder;
+
+public class MyAppModule
+{
+  public static void bind(ServiceBinder binder)
+  {
+     binder.bind(Indexer.class, IndexerImpl.class);
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For more details, see see <a href="defining-tapestry-ioc-services.html" class="xref page">Defining Tapestry IOC Services</a>.
+In most cases, autobuilding is the <em>preferred</em> approach.</p>
+</div>
+<div class="paragraph">
+<p>Generally speaking, you should always bind and autobuild your services.
+The only exceptions are when:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You wish to do more than just instantiate a class; for example, to register the class as an event listener with some other service.</p>
+</li>
+<li>
+<p>There is no implementation class; in some cases, you can create your implementation on the fly using JDK dynamic proxies or bytecode generation.
+The <code>bind()</code> method must be static; an exception is thrown if the <code>bind()</code> method exists but is an instance method.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_caching_services"><a class="anchor" href="#_caching_services"></a>Caching Services</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You will occasionally find yourself in the position of injecting the same services into your service builder or service decorator methods repeatedly (this occurs much less often since the introduction of service autobuilding).
+This can result in quite a bit of redundant typing.
+Less code is better code, so as an alternative, you may define a <em>constructor</em> for your module that accepts annotated parameters (as with <a href="defining-tapestry-ioc-services.html" class="xref page">service builder injection</a>).</p>
+</div>
+<div class="paragraph">
+<p>This gives you a chance to store common services in instance variables for later use inside service builder methods.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class MyModule
+{
+  private final JobScheduler scheduler;
+  private final FileSystem fileSystem;
+
+  public MyModule(JobScheduler scheduler, FileSystem fileSystem)
+  {
+    this.scheduler = scheduler;
+    this.fileSystem = fileSystem;
+  }
+
+  public Indexer build()
+  {
+    IndexerImpl indexer = new IndexerImpl(fileSystem);
+
+    scheduler.scheduleDailyJob(indexer);
+
+    return indexer;
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Notice that we&#8217;ve switched from <em>static</em> methods to <em>instance</em> methods.
+Since the builder methods are not static, the <code>MyModule</code> class will be instantiated so that the methods may be invoked.
+The constructor receives two common dependencies, which are stored into instance fields that may later be used inside service builder methods such as `buildIndexer().</p>
+</div>
+<div class="paragraph">
+<p>This approach is far from required; all the builder methods of your module can be static if you wish.
+It is used when you have many common dependencies and wish to avoid defining those dependencies as parameters to multiple methods.</p>
+</div>
+<div class="paragraph">
+<p>Tapestry IoC automatically resolves the parameter type (<code>JobScheduler</code> and <code>FileSystem</code>, in the example) to the corresponding services that implement that type.
+When there&#8217;s more than one service that implements the service interface, you&#8217;ll get an error (but additional annotations and configuration can be used to ensure the correct service injected).</p>
+</div>
+<div class="paragraph">
+<p>For modules, there are two additional parameter types that are used to refer to resources that can be provided to the module instance (rather than services which may be injected).</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>org.slf4j.Logger</code>: logger for the module (derived from the module&#8217;s class name)</p>
+</li>
+<li>
+<p><code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/ioc/ObjectLocator.html">ObjectLocator</a></code>: access to other services</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Note that the fields are <code>final</code>: this is important.
+Tapestry IoC is thread-safe and you largely never have to think about concurrency issues.
+But in a busy application, different services may be built by different threads simultaneously.
+Each module class is a singleton, instantiated at most once, and making these fields final ensures that the values are available across multiple threads.
+Refer to Brian Goetz&#8217;s <a href="http://www.javaconcurrencyinpractice.com/">Java Concurrency in Practice</a> for a more complete explanation of the relationship between final fields, constructors, and threads &#8230;&#8203; or just trust us!</p>
+</div>
+<div class="paragraph">
+<p>Care should be taken with this approach: in some circumstances, you may force a situation in which the module constructor is dependent on itself.
+For example, if you invoke a method on any injected services defined within the same module from the module class' constructor, then the service implementation will be needed.
+Creating service implementations requires the module builder instance &#8230;&#8203; that&#8217;s a recursive reference.</p>
+</div>
+<div class="paragraph">
+<p>Tapestry detects these scenarios and throws a runtime exception to prevent an endless loop.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_module_class_implementation_notes"><a class="anchor" href="#_module_class_implementation_notes"></a>Module Class Implementation Notes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Module classes are designed to be very, very simple to implement.</p>
+</div>
+<div class="paragraph">
+<p>Again, keep the methods very simple.
+Use <a href="defining-tapestry-ioc-services.html" class="xref page">parameter injection</a> to gain access to the dependencies you need.</p>
+</div>
+<div class="paragraph">
+<p>Be careful about inheritance.
+Tapestry will see all <em>public</em> methods, even those inherited from base classes.
+Tapestry <em>only</em> sees public methods.</p>
+</div>
+<div class="paragraph">
+<p>By convention, module class names end in Module and are final classes.</p>
+</div>
+<div class="paragraph">
+<p>You don&#8217;t <em>have</em> to define your methods as static.
+The use of static methods is only absolutely necessary in a few cases, where the constructor for a module is dependent on contributions from the same module (this creates a chicken-and-the-egg situation that is resolved through static methods).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_default_marker"><a class="anchor" href="#_default_marker"></a>Default Marker</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Services are often referenced by a particular marker interface on the method or constructor parameter.
+Tapestry will use the intersection of services with that exact marker and assignable by type to find a unique service to inject.</p>
+</div>
+<div class="paragraph">
+<p>Often, all services in a module should share a marker, this can be specified with a <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/ioc/annotations/Marker.html">@Marker</a></code> annotation on the module class.
+For example, the <code>TapestryIOCModule</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Marker(Builtin.class)
+public final class TapestryIOCModule
+{
+  ...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This references a particular annotation class, <code>Builtin</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Target(
+{ PARAMETER, FIELD })
+@Retention(RUNTIME)
+@Documented
+public @interface Builtin
+{
+
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The annotation can be applied to method and constructor parameters, for use within the IoC container.
+It can also be applied to fields, though this is specific to the Tapestry web framework.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_field_injection"><a class="anchor" href="#_field_injection"></a>Field Injection</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>@Inject</code> and <code>@InjectService</code> annotations may be used on instance fields of a module class, as an alternative to passing dependencies of the module in via the constructor.</p>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+Injection via fields uses reflection to make the fields accessible.
+In addition, it may not be as thread-safe as using the constructor to assign to final fields.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Using this style, the previous example of a module class may be rewritten:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class MyModule
+{
+  @Inject
+  private JobScheduler scheduler;
+
+  @Inject
+  private FileSystem fileSystem;
+
+  public Indexer build()
+  {
+    IndexerImpl indexer = new IndexerImpl(fileSystem);
+
+    scheduler.scheduleDailyJob(indexer);
+
+    return indexer;
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

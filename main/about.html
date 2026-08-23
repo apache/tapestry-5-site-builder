@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Java Web Applications with Scripting Ease :: Apache Tapestry</title>
+    <meta name="generator" content="Antora 3.1.15">
+    <link rel="stylesheet" href="../_/css/site.css">
+    <link rel="stylesheet" href="../_/css/tapestry.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href=".."><img alt="Apache Tapestry Logo" src="../_/img/apache-tapestry-icon-dark.svg" width="60" />Apache Tapestry</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs" autofocus>
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Documentation</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../main/getting-started.html">Getting Started</a>
+            <a class="navbar-item" href="../main/tutorial/">Tutorial</a>
+            <a class="navbar-item" href="../userguide/5.8/">User Guide</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="../main/community.html">Community</a>
+        <a class="navbar-item" href="../main/support.html">Support</a>
+        <a class="navbar-item" href="../main/developers.html">Developers</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Apache</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+            <a class="navbar-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
+            <a class="navbar-item" href="https://www.apache.org/licenses/">License</a>
+            <a class="navbar-item" href="https://www.apache.org/security/">Security</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="../main/download.html">Download</a>
+          </span>
+        </div>
+        <div class="navbar-brand">
+          <a href="https://www.apache.org/">
+          <img alt="The Apache Software Foundation" src="../_/img/asf_logo.svg" width="200" height="63" style="padding-top: 5px; padding-bottom: 5px; background-color: white">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="body">
+<div class="nav-container" data-component="main" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="about.html">Home</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="about.html">About</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="principles.html">Principles</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Documentation</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="getting-started.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tutorial</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tutorial/index.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tutorial/dependencies-tools-and-plugins.html">Dependencies, Tools and Plugins</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tutorial/creating-the-skeleton-application.html">Creating the Skeleton Application</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tutorial/exploring-the-project.html">Exploring the Project</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tutorial/implementing-the-hi-lo-guessing-game.html">Implementing the Hi-Lo Guessing Game</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tutorial/using-beaneditform-to-create-user-forms.html">Using BeanEditForm To Create User Forms</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tutorial/using-tapestry-with-hibernate.html">Using Tapestry With Hibernate</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="userguide.html">User Guide</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Home</span>
+    <span class="version"></span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="about.html">Home</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../userguide/current/index.html">User Guide</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../userguide/current/index.html">5.8</a>
+        </li>
+        <li class="version">
+          <a href="../userguide/5.7/index.html">5.7</a>
+        </li>
+        <li class="version">
+          <a href="../userguide/5.6/index.html">5.6</a>
+        </li>
+        <li class="version">
+          <a href="../userguide/5.5/index.html">5.5</a>
+        </li>
+        <li class="version">
+          <a href="../userguide/5.4/index.html">5.4</a>
+        </li>
+        <li class="version">
+          <a href="../userguide/5.3/index.html">5.3</a>
+        </li>
+        <li class="version">
+          <a href="../userguide/5.2/index.html">5.2</a>
+        </li>
+        <li class="version">
+          <a href="../userguide/5.1/index.html">5.1</a>
+        </li>
+        <li class="version">
+          <a href="../userguide/5/index.html">5.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="about.html" class="home-link is-current"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="about.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Java Web Applications with Scripting Ease</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="_images/apache-tapestry-icontext-600.png" alt="apache tapestry icontext 600">
+</div>
+</div>
+<div class="paragraph">
+<p>Apache Tapestry is an open-source component-oriented framework for creating dynamic, robust, highly scalable web appplications in Java.</p>
+</div>
+<table class="tableblock frame-none grid-none stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><h2 id="_java_power" class="discrete">Java Power</h2>
+<div class="paragraph">
+<p>Tapestry pages and components are simple Java POJOs, with easy access to all Java language features and the vast Java ecosystem. Thanks to Java&#8217;s advanced concurrency API, Tapestry handles requests fast without sacrificing security or stability.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><h2 id="_scripting_ease" class="discrete">Scripting Ease</h2>
+<div class="paragraph">
+<p>Tapestry features live class reloading: change your Java code, refresh the browser and see the changes&#8230;&#8203; instantly! Have your cake and eat it too: the speed and depth of Java, the agile development style of Ruby or Python.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><h2 id="_super_productivity" class="discrete">Super Productivity</h2>
+<div class="paragraph">
+<p>Simple POJO classes, streamlined templates, live class reloading, state-of-the-art exception reporting, first-class Ajax support, and a big library of built-in components: Tapestry is designed from the ground up to give you great productivity.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="sidebarblock">
+<div class="content">
+We think you will love Tapestry! Give us 20 minutes and follow our <a href="getting-started.html" class="xref page">quickstart guide</a>.
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_what_is_tapestry"><a class="anchor" href="#_what_is_tapestry"></a>What is Tapestry?</h2>
+<div class="sectionbody">
+<table class="tableblock frame-none grid-none stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><h2 id="_pure_java_and_polyglot" class="discrete">Pure Java and Polyglot</h2>
+<div class="paragraph">
+<p>Written in pure Java: code your pages and components in Java, Groovy or Scala.</p>
+</div>
+<h2 id="_highly_productive" class="discrete">Highly Productive</h2>
+<div class="paragraph">
+<p>Live class reloading means that the time between seeing an error and providing the fix is seconds, not minutes.</p>
+</div>
+<h2 id="_advanced_exception_reporting" class="discrete">Advanced Exception Reporting</h2>
+<div class="paragraph">
+<p>Gives you all the tools you need to fix your problem: not just a stack trace, but details about what Tapestry was doing and why, what went wrong, and how to fix it.</p>
+</div>
+<h2 id="_fast" class="discrete">Fast</h2>
+<div class="paragraph">
+<p>Pure Java; no reflection, not even for property expressions.
+Built to cleanly support large numbers of concurrent threads without contention.
+Integrated GZip content compression, JavaScript aggregation and compression, and client-side caching.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><h2 id="_convention_over_configuration" class="discrete">Convention over Configuration</h2>
+<div class="paragraph">
+<p>Dependency injection and meta-programming through annotations and naming conventions.</p>
+</div>
+<h2 id="_scalable" class="discrete">Scalable</h2>
+<div class="paragraph">
+<p>Scales up big on a single server, and works great in a cluster. Keeps session state minimal by design.</p>
+</div>
+<h2 id="_testable" class="discrete">Testable</h2>
+<div class="paragraph">
+<p>Committed to testability throughout design; built-in utilities to enhance TDD. Support for Selenium for integration testing.</p>
+</div>
+<h2 id="_adaptable_and_modular" class="discrete">Adaptable and Modular</h2>
+<div class="paragraph">
+<p>Architecture is open and extensible.
+There&#8217;s a clean way to add your own extensions, or override built-in logic.
+Provides integration with Hibernate, JPA and Spring.
+Third-party integrations with other tools, such as Quartz and Lucene.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+<script src="../_/js/vendor/lunr.js"></script>
+<script src="../_/js/search-ui.js" id="search-ui-script" data-site-root-path=".." data-snippet-length="100" data-stylesheet="../_/css/search.css"></script>
+<script async src="../search-index.js"></script>
+  </body>
+</html>

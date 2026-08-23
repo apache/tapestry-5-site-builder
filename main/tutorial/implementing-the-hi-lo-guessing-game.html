@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Implementing the Hi-Lo Guessing Game :: Apache Tapestry</title>
+    <meta name="generator" content="Antora 3.1.15">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/tapestry.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../.."><img alt="Apache Tapestry Logo" src="../../_/img/apache-tapestry-icon-dark.svg" width="60" />Apache Tapestry</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Documentation</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../../main/getting-started.html">Getting Started</a>
+            <a class="navbar-item" href="../../main/tutorial/">Tutorial</a>
+            <a class="navbar-item" href="../../userguide/5.8/">User Guide</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="../../main/community.html">Community</a>
+        <a class="navbar-item" href="../../main/support.html">Support</a>
+        <a class="navbar-item" href="../../main/developers.html">Developers</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Apache</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+            <a class="navbar-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
+            <a class="navbar-item" href="https://www.apache.org/licenses/">License</a>
+            <a class="navbar-item" href="https://www.apache.org/security/">Security</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="../../main/download.html">Download</a>
+          </span>
+        </div>
+        <div class="navbar-brand">
+          <a href="https://www.apache.org/">
+          <img alt="The Apache Software Foundation" src="../../_/img/asf_logo.svg" width="200" height="63" style="padding-top: 5px; padding-bottom: 5px; background-color: white">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="body">
+<div class="nav-container" data-component="main" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../about.html">Home</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../about.html">About</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../principles.html">Principles</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Documentation</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tutorial</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="index.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="dependencies-tools-and-plugins.html">Dependencies, Tools and Plugins</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="creating-the-skeleton-application.html">Creating the Skeleton Application</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="exploring-the-project.html">Exploring the Project</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="implementing-the-hi-lo-guessing-game.html">Implementing the Hi-Lo Guessing Game</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="using-beaneditform-to-create-user-forms.html">Using BeanEditForm To Create User Forms</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="using-tapestry-with-hibernate.html">Using Tapestry With Hibernate</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../userguide.html">User Guide</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Home</span>
+    <span class="version"></span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../about.html">Home</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../userguide/current/index.html">User Guide</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../userguide/current/index.html">5.8</a>
+        </li>
+        <li class="version">
+          <a href="../../userguide/5.7/index.html">5.7</a>
+        </li>
+        <li class="version">
+          <a href="../../userguide/5.6/index.html">5.6</a>
+        </li>
+        <li class="version">
+          <a href="../../userguide/5.5/index.html">5.5</a>
+        </li>
+        <li class="version">
+          <a href="../../userguide/5.4/index.html">5.4</a>
+        </li>
+        <li class="version">
+          <a href="../../userguide/5.3/index.html">5.3</a>
+        </li>
+        <li class="version">
+          <a href="../../userguide/5.2/index.html">5.2</a>
+        </li>
+        <li class="version">
+          <a href="../../userguide/5.1/index.html">5.1</a>
+        </li>
+        <li class="version">
+          <a href="../../userguide/5/index.html">5.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../about.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../about.html">Home</a></li>
+    <li>Documentation</li>
+    <li>Tutorial</li>
+    <li><a href="implementing-the-hi-lo-guessing-game.html">Implementing the Hi-Lo Guessing Game</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Implementing the Hi-Lo Guessing Game</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Let&#8217;s start building a basic Hi-Lo Guessing game.</p>
+</div>
+<div class="paragraph">
+<p>In the game, the computer selects a number between 1 and 10. You try and guess the number, clicking links. At the end, the computer tells you how many guesses you required to identify the target number. Even a simple example like this will demonstrate several important concepts in Tapestry:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Breaking an application into individual pages</p>
+</li>
+<li>
+<p>Transferring information from one page to another</p>
+</li>
+<li>
+<p>Responding to user interactions</p>
+</li>
+<li>
+<p>Storing client information in the server-side session</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>We&#8217;ll build this little application in small pieces, using the kind of iterative development that Tapestry makes so easy.</p>
+</div>
+<div class="imageblock flow kroki-format-svg kroki">
+<div class="content">
+<img src="https://kroki.io/plantuml/svg/eNrLyExJVUjNLSipVEhJLU4uyiwoyczP4-KK1opV0C3KTM8o0bVT8MxLSa3gApMIQffS1OJiLjCpgM4F8RNzU_3LUou4YAyETqDZXACR4SdV" alt="Flow Diagram">
+</div>
+<div class="title">Figure 1. Flow Diagram</div>
+</div>
+<div class="paragraph">
+<p>Our page flow is very simple, consisting of three pages: Index (the starting page), Guess and GameOver.
+The Index page introduces the application and includes a link to start guessing.
+The Guess page presents the user with ten links, plus feedback such as "too low" or "too high".
+The GameOver page tells the user how many guesses they took before finding the target number.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_index_page"><a class="anchor" href="#_index_page"></a>Index Page</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Let&#8217;s get to work on the Index page and template. Make Index.tml look like this:</p>
+</div>
+<div class="listingblock">
+<div class="title">src/main/resources/com/example/tutorial1/pages/Index.tml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;html t:type="layout" title="Hi/Lo Guess"
+    xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"&gt;
+
+    &lt;p&gt;
+        I'm thinking of a number between one and ten ...
+    &lt;/p&gt;
+    &lt;p&gt;
+        &lt;a href="#"&gt;start guessing&lt;/a&gt;
+    &lt;/p&gt;
+
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And edit the corresponding Java class, Index.java, removing its body (but you can leave the imports in place for now):</p>
+</div>
+<div class="listingblock">
+<div class="title">src/main/java/com/example/tutorial1/pages/Index.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package com.example.tutorial1.pages;
+
+public class Index
+{
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Running the application gives us our start:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/hilo-1.png" alt="hilo 1"></span></p>
+</div>
+<div class="paragraph">
+<p>However, clicking the link doesn&#8217;t do anything yet, as its just a placeholder &lt;a&gt; tag, not an actual Tapestry component.
+Let&#8217;s think about what should happen when the user clicks that link:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A random target number between 1 and 10 should be selected.</p>
+</li>
+<li>
+<p>The number of guesses taken should be reset to 0.</p>
+</li>
+<li>
+<p>The user should be sent to the Guess page to make a guess.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Our first step is to find out when the user clicks that "start guessing" link.
+In a typical web application framework, we might start thinking about URLs and handlers and maybe some sort of XML configuration file.
+But this is Tapestry, so we&#8217;re going to work with components and methods on our classes.</p>
+</div>
+<div class="paragraph">
+<p>First, the component.
+We want to perform an action (selecting the number) before continuing on to the Guess page.
+The ActionLink component is just what we need; it creates a link with a URL that will trigger an action event in our code &#8230;&#8203; but that&#8217;s getting ahead of ourselves.
+First up, convert the <code>&lt;a&gt;</code> tag to an <code>ActionLink</code> component:</p>
+</div>
+<div class="listingblock xml">
+<div class="title">Index.tml (partial)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">&lt;p&gt;
+    &lt;t:actionlink t:id="start"&gt;start guessing&lt;/t:actionlink&gt;
+&lt;/p&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you refresh the browser and hover your mouse over the "start guessing" link, you&#8217;ll see that its URL is now <code>/tutorial1/index.start</code>, which identifies the name of the page ("index") and the id of the component ("start").</p>
+</div>
+<div class="paragraph">
+<p>If you click the link now, you&#8217;ll get an error:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/hilo-index-missing-action-error.png" alt="hilo index missing action error"></span></p>
+</div>
+<div class="paragraph">
+<p>Tapestry is telling us that we need to provide some kind of event handler for that event.
+What does that look like?</p>
+</div>
+<div class="paragraph">
+<p>An event handler is a method of the Java class with a special name.
+The name is on<em>Eventname</em>From<em>Component-id</em> &#8230;&#8203; here we want a method named <code>onActionFromStart()</code>.
+How do we know that "action" is the right event name?
+Because that&#8217;s what <code>ActionLink</code> does, that&#8217;s why its named <code>ActionLink</code>.</p>
+</div>
+<div class="paragraph">
+<p>Once again, Tapestry gives us options; if you don&#8217;t like naming conventions, there&#8217;s an <code>@OnEvent</code> annotation you can place on the method instead, which restores the freedom to name the method as you like.
+Details about this approach are in the Tapestry Users' Guide.
+We&#8217;ll be sticking with the naming convention approach for the tutorial.</p>
+</div>
+<div class="paragraph">
+<p>When handling a component event request (the kind of request triggered by the <code>ActionLink</code> component&#8217;s URL), Tapestry will find the component and trigger a component event on it. This is the callback our server-side code needs to figure out what the user is doing on the client side.
+Let&#8217;s start with an empty event handler:</p>
+</div>
+<div class="listingblock">
+<div class="title">Index.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package com.example.tutorial1.pages;
+
+public class Index
+{
+    void onActionFromStart()
+    {
+
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the browser, we can re-try the failed component event request by hitting the refresh button &#8230;&#8203; or we can restart the application.
+In either case, we get the default behavior, which is simply to re-render the page.</p>
+</div>
+<div class="paragraph">
+<p>Note that the event handler method does not have to be public; it can be protected, private, or package private (as in this example).
+By convention, such methods are package private, if for no other reason than it is the minimal amount of characters to type.</p>
+</div>
+<div class="paragraph">
+<p>Hmm&#8230;&#8203; right now you have to trust us that the method got invoked.
+That&#8217;s no good &#8230;&#8203; what&#8217;s a quick way to tell for sure?
+One way would be have the method throw an exception, but that&#8217;s a bit ugly.</p>
+</div>
+<div class="paragraph">
+<p>How about this: add the <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/annotations/Log.html">@Log</a></code> annotation to the method:</p>
+</div>
+<div class="listingblock">
+<div class="title">Index.java (partial)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.apache.tapestry5.annotations.Log;
+
+...
+
+    @Log
+    void onActionFromStart()
+    {
+
+    }
+...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When you next click the link you should see the following in the Eclipse console:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>[DEBUG] pages.Index [ENTER] onActionFromStart()
+[DEBUG] pages.Index [ EXIT] onActionFromStart
+[INFO] AppModule.TimingFilter Request time: 3 ms
+[INFO] AppModule.TimingFilter Request time: 5 ms</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>@Log</code> annotation directs Tapestry to log method entry and exit.
+You&#8217;ll get to see any parameters passed into the method, and any return value from the method &#8230;&#8203; as well as any exception thrown from within the method.
+It&#8217;s a powerful debugging tool.
+This is an example of Tapestry&#8217;s meta-programming power, something we&#8217;ll use quite a bit of in the tutorial.</p>
+</div>
+<div class="paragraph">
+<p>Why do we see two requests for one click?
+Tapestry uses an approach based on the Post/Redirect/Get pattern.
+In fact, Tapestry generally performs a redirect after each component event.
+So the first request was to process the action, and the second request was to re-render the Index page.
+You can see this in the browser, because the URL is still "/tutorial1" (the URL for rendering the Index page).
+We&#8217;ll return to this in a bit.</p>
+</div>
+<div class="paragraph">
+<p>We&#8217;re ready for the next step, which involves tying together the Index and Guess pages.
+Index will select a target number for the user to Guess, then "pass the baton" to the Guess page.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_guess_page"><a class="anchor" href="#_guess_page"></a>Guess Page</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Let&#8217;s start by thinking about the Guess page.
+It needs a variable to store the target value in, and it needs a method that the Index page can invoke, to set up that target value.</p>
+</div>
+<div class="listingblock">
+<div class="title">Guess.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package com.example.tutorial1.pages;
+
+public class Guess
+{
+    private int target;
+
+    void setup(int target)
+    {
+        this.target = target;
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Create that Guess.java file in the same folder as Index.java. Next, we can modify Index to invoke the setup() method of our new Guess page class:</p>
+</div>
+<div class="listingblock">
+<div class="title">Index.java (revised)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package com.example.tutorial1.pages;
+
+import java.util.Random;
+
+import org.apache.tapestry5.annotations.InjectPage;
+import org.apache.tapestry5.annotations.Log;
+
+public class Index
+{
+    private final Random random = new Random(System.nanoTime());
+
+    @InjectPage
+    private Guess guess;
+
+    @Log
+    Object onActionFromStart()
+    {
+        int target = random.nextInt(10) + 1;
+
+        guess.setup(target);
+        return guess;
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The new event handler method now chooses the target number, and tells the Guess page about it.
+Because Tapestry is a managed environment, we don&#8217;t just create an instance of Guess &#8230;&#8203; it is Tapestry&#8217;s responsibility to manage the life cycle of the Guess page.
+Instead, we ask Tapestry for the Guess page, using the <code>@InjectPage</code> annotation.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+All fields in a Tapestry page or component class must be non-public.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Once we have that Guess page instance, we can invoke methods on it normally.</p>
+</div>
+<div class="paragraph">
+<p>Returning a page instance from an event handler method directs Tapestry to send a client-side redirect to the returned page, rather than sending a redirect for the active page.
+Thus once the user clicks the "start guessing" link, they&#8217;ll see the Guess page.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+When creating your own applications, make sure that the objects stored in final variables are thread safe. It seems counter-intuitive, but final variables are shared across many threads. Ordinary instance variables are not. Fortunately, the implementation of Random is, in fact, thread safe.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>So &#8230;&#8203; let&#8217;s click the link and see what we get:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/guess-template-missing.png" alt="guess template missing"></span></p>
+</div>
+<div class="paragraph">
+<p>Ah! We didn&#8217;t create a Guess page template. Tapestry was really expecting us to create one, so we better do so.</p>
+</div>
+<div class="listingblock">
+<div class="title">src/main/resources/com/example/tutorial/pages/Guess.tml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">&lt;html t:type="layout" title="Guess The Number"
+    xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"&gt;
+
+    &lt;p&gt;
+        The secret number is: ${target}.
+    &lt;/p&gt;
+
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Hit the browser&#8217;s back button, then click the "start guessing" link again. We&#8217;re getting closer:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/guess-no-target-prop.png" alt="guess no target prop"></span></p>
+</div>
+<div class="paragraph">
+<p>If you scroll down, you&#8217;ll see the line of the Guess.tml template that has the error. We have a field named target, but it is private and there&#8217;s no corresponding property, so Tapestry was unable to access it.</p>
+</div>
+<div class="paragraph">
+<p>We just need to write the missing JavaBeans accessor methods <code>getTarget()</code> (and <code>setTarget()</code> for good measure). Or we could let Tapestry write those methods instead:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Property
+private int target;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>@Property</code> annotation very simply directs Tapestry to write the getter and setter method for you.
+You only need to do this if you are going to reference the field from the template.</p>
+</div>
+<div class="paragraph">
+<p>We are getting very close but there&#8217;s one last big oddity to handle.
+Once you refresh the page you&#8217;ll see that target is 0!</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/guess-target-zero.png" alt="guess target zero"></span></p>
+</div>
+<div class="paragraph">
+<p>What gives? We know it was set to at least 1 &#8230;&#8203; where did the value go?</p>
+</div>
+<div class="paragraph">
+<p>As noted above, Tapestry sends a redirect to the client after handling the event request.
+That means that the rendering of the page happens in an entirely new request.
+Meanwhile, at the end of each request, Tapestry wipes out the value in each instance variable.
+So that means that target was a non-zero number during the component event request &#8230;&#8203; but by the time the new page render request comes up from the web browser to render the Guess page, the value of the target field has reverted back to its default, zero.</p>
+</div>
+<div class="paragraph">
+<p>The solution here is to mark which fields have values that should persist from one request to the next (and next, and next &#8230;&#8203;). That&#8217;s what the <code>@Persist</code> annotation is for:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Property
+@Persist
+private int target;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This doesn&#8217;t have anything to do with database persistence (that&#8217;s coming up in a later chapter).
+It means that the value is stored in the <code>HttpSession</code> between requests.</p>
+</div>
+<div class="paragraph">
+<p>Go back to the Index page and click the link again. Finally, we have a target number:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/guess-target.png" alt="guess target"></span></p>
+</div>
+<div class="paragraph">
+<p>That&#8217;s enough for us to get started. Let&#8217;s build out the Guess page, and get ready to let the user make guesses.
+We&#8217;ll show the count of guesses, and increment that count when they make them.
+We&#8217;ll worry about high and low and actually selecting the correct value later.</p>
+</div>
+<div class="paragraph">
+<p>When building Tapestry pages, you sometimes start with the Java code and build the template to match, and sometime start with the template and build the Java code to match.
+Both approaches are valid.
+Here, lets start with the markup in the template, then figure out what we need in the Java code to make it work.</p>
+</div>
+<div class="listingblock">
+<div class="title">Guess.tml (revised)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">&lt;html t:type="layout" title="Guess The Number"
+    xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+    xmlns:p="tapestry:parameter"&gt;
+
+    &lt;p&gt;
+        The secret number is: ${target}.
+    &lt;/p&gt;
+
+    &lt;strong&gt;Guess number ${guessCount}&lt;/strong&gt;
+
+    &lt;p&gt;Make a guess from the options below:&lt;/p&gt;
+
+    &lt;ul class="list-inline"&gt;
+        &lt;t:loop source="1..10" value="current"&gt;
+            &lt;li&gt;
+            &lt;t:actionlink t:id="makeGuess" context="current"&gt;${current}
+            &lt;/t:actionlink&gt;
+            &lt;/li&gt;
+        &lt;/t:loop&gt;
+    &lt;/ul&gt;
+
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>So it looks like we need a <code>guessCount</code> property that starts at 1.</p>
+</div>
+<div class="paragraph">
+<p>We&#8217;re also seeing one new component, the Loop component.
+A Loop component iterates over the values passed to it in its <code>source</code> parameter, and renders it body once for each value.
+It updates the property bound to its <code>value</code> parameter before rendering its body.</p>
+</div>
+<div class="paragraph">
+<p>That special property expression, <code>1..10</code>, generates a series of numbers from 1 to 10, inclusive.
+Usually, when you use the Loop component, you are iterating over a List or Collection of values, such as the results of a database query.</p>
+</div>
+<div class="paragraph">
+<p>So, the Loop component is going to set the <code>current</code> property to 1, and render its body (the <code>&lt;li&gt;</code> tag, and the ActionLink component).
+Then its going to set the <code>current</code> property to 2 and render its body again &#8230;&#8203; all the way up to 10.</p>
+</div>
+<div class="paragraph">
+<p>And notice what we&#8217;re doing with the ActionLink component; its no longer enough to know the user clicked on the ActionLink &#8230;&#8203; we need to know <em>which iteration</em> the user clicked on.
+The <code>context</code> parameter allows a value to be added to the ActionLink&#8217;s URL, and we can get it back in the event handler method.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+The URL for the ActionLink will be <code>/tutorial1/guess.makeguess/3</code>. That&#8217;s the page name, "Guess", the component id, "makeGuess", and the context value, "3".
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="title">Guess.java (revised)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package com.example.tutorial1.pages;
+
+import org.apache.tapestry5.annotations.Persist;
+import org.apache.tapestry5.annotations.Property;
+
+public class Guess
+{
+    @Property
+    @Persist
+    private int target, guessCount;
+
+    @Property
+    private int current;
+
+    void setup(int target)
+    {
+        this.target = target;
+        guessCount = 1;
+    }
+
+    void onActionFromMakeGuess(int value)
+    {
+        guessCount++;
+    }
+
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The revised version of Guess includes two new properties: <code>current</code> and <code>guessCount</code>.
+There&#8217;s also a handler for the action event from the <code>makeGuess</code> ActionLink component; currently it just increments the count.</p>
+</div>
+<div class="paragraph">
+<p>Notice that the <code>onActionFromMakeGuess()</code> method now has a parameter: the context value that was encoded into the URL by the ActionLink.
+When then user clicks the link, Tapestry will automatically extract the string from the URL, convert it to an int and pass that int value into the event handler method.
+More boilerplate code you don&#8217;t have to write.</p>
+</div>
+<div class="paragraph">
+<p>At this point, the page is partially operational:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/guess-1.png" alt="guess 1"></span></p>
+</div>
+<div class="paragraph">
+<p>Our next step is to actually check the value provided by the user against the target and provide feedback: either they guessed too high, or too low, or just right.
+If they get it just right, we&#8217;ll switch to the <code>GameOver</code> page with a message such as "You guessed the number 5 in 2 guesses".</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s start with the Guess page; it now needs a new property to store the message to be displayed to the user, and needs a field for the injected GameOver page:</p>
+</div>
+<div class="listingblock">
+<div class="title">Guess.java (partial)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Property
+@Persist(PersistenceConstants.FLASH)
+private String message;
+
+@InjectPage
+private GameOver gameOver;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>First off, we&#8217;re seeing a variation of the <code>@Persist</code> annotation, where a persistence <em>strategy</em> is provided by name.
+<code>FLASH</code> is a built-in strategy that stores the value in the session, but only for one request &#8230;&#8203; it&#8217;s designed specifically for these kind of feedback messages.
+If you hit F5 in the browser, to refresh, the page will render but the message will disappear.</p>
+</div>
+<div class="paragraph">
+<p>Next, we need some more logic in the <code>onActionFromMakeGuess()</code> event handler method:</p>
+</div>
+<div class="listingblock">
+<div class="title">Guess.java (partial)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Object onActionFromMakeGuess(int value)
+{
+    if (value == target)
+    {
+         gameOver.setup(target, guessCount);
+         return gameOver;
+    }
+
+    guessCount++;
+
+    message = String.format("Your guess of %d is too %s.", value,
+         value &lt; target ? "low" : "high");
+
+    return null;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Again, very straight-forward.
+If the value is correct, then we configure the GameOver page and return it, causing a redirect to that page.
+Otherwise, we increment the number of guesses, and format the message to display to the user.</p>
+</div>
+<div class="paragraph">
+<p>In the template, we just need to add some markup to display the message:</p>
+</div>
+<div class="listingblock">
+<div class="title">Guess.tml (partial)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;strong&gt;Guess number ${guessCount}&lt;/strong&gt;
+
+&lt;t:if test="message"&gt;
+    &lt;p&gt;
+        &lt;strong&gt;${message}&lt;/strong&gt;
+    &lt;/p&gt;
+&lt;/t:if&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This snippet uses Tapestry&#8217;s <code>If</code> component.
+The <code>If</code> component evaluates its test parameter and, if the value evaluates to true, renders its body.
+The property bound to test doesn&#8217;t have to be a boolean; Tapestry treats <code>null</code> as false, it treats zero as false and non-zero as true, it treats an empty <code>Collection</code> as <code>false</code> &#8230;&#8203; and for Strings (such as <code>message</code>) it treats a blank string (one that is null, or consists only of white space) as false, and a non-blank string is true.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gameover_page"><a class="anchor" href="#_gameover_page"></a>GameOver Page</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>GameOver.java</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package com.example.tutorial1.pages;
+
+import org.apache.tapestry5.annotations.Persist;
+import org.apache.tapestry5.annotations.Property;
+
+public class GameOver
+{
+    @Property
+    @Persist
+    private int target, guessCount;
+
+    void setup(int target, int guessCount)
+    {
+        this.target = target;
+        this.guessCount = guessCount;
+    }
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">GameOver.tml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;html t:type="layout" title="Game Over"
+    xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+    xmlns:p="tapestry:parameter"&gt;
+
+    &lt;p&gt;
+        You guessed the number
+        &lt;strong&gt;${target}&lt;/strong&gt;
+        in
+        &lt;strong&gt;${guessCount}&lt;/strong&gt;
+        guesses.
+    &lt;/p&gt;
+
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The result, when you guess correctly, should be this:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/gameover.png" alt="gameover"></span></p>
+</div>
+<div class="paragraph">
+<p>That wraps up the basics of Tapestry; we&#8217;ve demonstrated the basics of linking pages together and passing information from page to page in code as well as incorporating data inside URLs.</p>
+</div>
+<div class="paragraph">
+<p>There&#8217;s still more room to refactor this toy application; for example, making it possible to start a new game from the GameOver page (and doing it in a way that doesn&#8217;t duplicate code). In addition, later we&#8217;ll see other ways of sharing information between pages that are less cumbersome than the setup-and-persist approach shown here.</p>
+</div>
+<div class="paragraph">
+<p>Next up: let&#8217;s find out how Tapestry handles HTML forms and user input.</p>
+</div>
+<div class="paragraph">
+<p>Next: <a href="using-beaneditform-to-create-user-forms.html" class="xref page">Using BeanEditForm To Create User Forms</a></p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>IoC Overview :: Apache Tapestry</title>
+    <meta name="generator" content="Antora 3.1.15">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/tapestry.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../.."><img alt="Apache Tapestry Logo" src="../../_/img/apache-tapestry-icon-dark.svg" width="60" />Apache Tapestry</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Documentation</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../../main/getting-started.html">Getting Started</a>
+            <a class="navbar-item" href="../../main/tutorial/">Tutorial</a>
+            <a class="navbar-item" href="../../userguide/5.8/">User Guide</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="../../main/community.html">Community</a>
+        <a class="navbar-item" href="../../main/support.html">Support</a>
+        <a class="navbar-item" href="../../main/developers.html">Developers</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Apache</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+            <a class="navbar-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
+            <a class="navbar-item" href="https://www.apache.org/licenses/">License</a>
+            <a class="navbar-item" href="https://www.apache.org/security/">Security</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="../../main/download.html">Download</a>
+          </span>
+        </div>
+        <div class="navbar-brand">
+          <a href="https://www.apache.org/">
+          <img alt="The Apache Software Foundation" src="../../_/img/asf_logo.svg" width="200" height="63" style="padding-top: 5px; padding-bottom: 5px; background-color: white">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="body">
+<div class="nav-container" data-component="userguide" data-version="5.8">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">User Guide</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Introduction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry Core</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basics</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="project-layout.html">Project Layout</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="runtime-exceptions.html">Runtime Exceptions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="class-reloading.html">Class Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-reference.html">Component Reference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="annotations.html">Annotations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Pages and Components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-classes.html">Component Classes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-templates.html">Component Templates</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="property-expressions.html">Property Expressions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-parameters.html">Component Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="parameter-type-coercion.html">Parameter Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="layout-component.html">Layout Component</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-mixins.html">Component Mixins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-navigation.html">Page Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="localization.html">Localization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Request/Response Rendering</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-life-cycle.html">Page Life Cycle</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="request-processing.html">Request Processing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-rendering.html">Component Rendering</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-events.html">Component Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="url-rewriting.html">URL Rewriting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dom.html">Document Object Model (DOM)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="response-compression.html">Response Compression</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="security.html">Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https.html">HTTPS / SSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="content-type-and-markup.html">Content Type and Markup</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Data Persistence</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="persistent-page-data.html">Persistent Page Data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="session-storage.html">Session Storage</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Interacting with components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="injection.html">Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="environmental-services.html">Environmental Services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript, AJAX, CSS &amp; Binary Data</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="client-side-javascript.html">Client-Side JavaScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="javascript-modules.html">Javascript Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="coffeescript.html">Coffeescript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="typescript.html">TypeScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ajax-and-zones.html">AJAX and Zones</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="css.html">Cascading Style Sheets (CSS)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="assets.html">Assets</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cors.html">CORS (Cross-Origin Resource Sharing) Support</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Working with Forms</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="forms-and-validation.html">Forms and Validation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="beaneditform-guide.html">BeanEditForm Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uploading-files.html">Uploading Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bean-validation.html">Bean Validation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Logging, Debugging &amp; Testing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="logging.html">Logging</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unit-testing.html">Unit testing pages or components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integration-testing.html">Integration Testing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="development-dashboard.html">Development Dashboard</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry IOC</span>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="ioc-overview.html">IoC Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="symbols.html">Symbols</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="type-coercion.html">Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="case-insensitivity.html">Case Insensitivity</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="autoloading-modules.html">Autoloading Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="chainbuilder-service.html">ChainBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pipelinebuilder-service.html">PipelineBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="shadowbuilder-service.html">ShadowBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="strategybuilder-service.html">StrategyBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="defining-tapestry-ioc-services.html">Defining Tapestry IOC Services</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-modules.html">IoC Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="object-providers.html">Object Providers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-serialization.html">Service Serialization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="starting-the-ioc-registry.html">Starting the IoC Registry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="aliases.html">Aliases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="injection-in-detail.html">Injection in Detail</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ordering-by-constraints.html">Ordering by Constraints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="registry-startup.html">Registry Startup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="parallel-execution.html">Parallel Execution</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="logging-in-tapestry.html">Logging in Tapestry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-implementation-reloading.html">Service Implementation Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-advisors.html">Service Advisors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-decorators.html">Service Decorators</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="using-jsr-330-standard-annotations.html">Using JSR 330 standard annotations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="operation-tracker.html">Operation Tracker</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Add-ons and Integrations</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Built-in</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="hibernate.html">Hibernate Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="jpa.html">JPA Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integrating-with-spring-framework.html">Spring</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="third-party-modules.html">Third Party Modules</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Release Notes</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.8.html">Tapestry 5.8</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.7.html">Tapestry 5.7</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.6.html">Tapestry 5.6</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.5.html">Tapestry 5.5</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.4.html">Tapestry 5.4</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.3.html">Tapestry 5.3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.2.html">Tapestry 5.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.1.html">Tapestry 5.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.0.html">Tapestry 5.0</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cookbook</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/default-parameter.html">Default Parameter</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/overriding-exception-reporting.html">Overriding Exception Reporting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/error-page-recipe.html">Error Page Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/supporting-informal-parameters.html">Supporting Informal Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/component-libraries.html">Component Libraries</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/switching-cases.html">Switching Cases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/enum-parameter-recipe.html">Enum Parameter Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/extending-the-if-component.html">Extending The If Component</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/meta-programming-page-content.html">Meta-Programming Page Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="cookbook/ioc-cookbook.html">IoC Cookbook</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-basic-services-and-injection.html">IoC Cookbook - Basic Services and Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-overriding-ioc-services.html">IoC Cookbook - Overriding IoC Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-patterns.html">IoC Cookbook - Patterns</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-service-configurations.html">IoC Cookbook - Service Configurations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/using-select-with-a-list.html">Using Select With a List</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/performance-and-clustering.html">Performance and Clustering</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/google-app-engine.html">Google App Engine (GAE)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frequently Asked Questions (FAQ)</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/general.html">General Questions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/templating-and-markup.html">Templating and Markup FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/ajax.html">AJAX FAQ</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">User Guide</span>
+    <span class="version">5.8</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../main/about.html">Home</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="index.html">User Guide</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">5.8</a>
+        </li>
+        <li class="version">
+          <a href="../5.7/index.html">5.7</a>
+        </li>
+        <li class="version">
+          <a href="../5.6/index.html">5.6</a>
+        </li>
+        <li class="version">
+          <a href="../5.5/index.html">5.5</a>
+        </li>
+        <li class="version">
+          <a href="../5.4/index.html">5.4</a>
+        </li>
+        <li class="version">
+          <a href="../5.3/index.html">5.3</a>
+        </li>
+        <li class="version">
+          <a href="../5.2/index.html">5.2</a>
+        </li>
+        <li class="version">
+          <a href="../5.1/index.html">5.1</a>
+        </li>
+        <li class="version">
+          <a href="../5/index.html">5.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../main/about.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">User Guide</a></li>
+    <li>Tapestry IOC</li>
+    <li><a href="ioc-overview.html">IoC Overview</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">5.8</button>
+  <div class="version-menu">
+    <a class="version is-current" href="ioc-overview.html">5.8</a>
+    <a class="version" href="../5.7/ioc-overview.html">5.7</a>
+    <a class="version" href="../5.6/ioc-overview.html">5.6</a>
+    <a class="version" href="../5.5/ioc-overview.html">5.5</a>
+    <a class="version" href="../5.4/ioc-overview.html">5.4</a>
+    <a class="version" href="../5.3/ioc-overview.html">5.3</a>
+    <a class="version" href="../5.2/ioc-overview.html">5.2</a>
+    <a class="version" href="../5.1/ioc-overview.html">5.1</a>
+    <a class="version" href="../5/ioc-overview.html">5.0</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">IoC Overview</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Even today, with the overwhelming success of <a href="http://www.springframework.org/">Spring</a> and the rise of smaller, simpler approaches to building applications (in contrast to the heavyweight EJB 2.0 approach), many people still have trouble wrapping their heads around <em>Inversion of Control (IoC)</em>.</p>
+</div>
+<div class="paragraph">
+<p>Really understanding IoC is a new step for many developers.
+If you can remember back to when you made the transition from procedural programming (in C, or BASIC) to object oriented programming, you might remember the point where you "got it".
+The point where it made sense to have methods on objects, and data inside objects.</p>
+</div>
+<div class="paragraph">
+<p>Inversion of Control builds upon those ideas.
+The goal is to make code more robust (that is, with fewer errors), more reusable and much easier to test.</p>
+</div>
+<div class="paragraph">
+<p>Prior to IoC approaches, most developers were used to a more <em>monolithic</em> design, with a few core objects and a <code>main()</code> method somewhere that starts the ball rolling.
+<code>main()</code> instantiates the first couple of classes, and those classes end up instantiating and using all the other classes in the system.</p>
+</div>
+<div class="paragraph">
+<p>That&#8217;s an unmanaged system.
+Most desktop applications are unmanaged, so it&#8217;s a very familiar pattern, and easy to get your head around.</p>
+</div>
+<div class="paragraph">
+<p>By contrast, web applications are a <em>managed</em> environment.
+You don&#8217;t write a <code>main()</code>, you don&#8217;t control startup.
+You <em>configure</em> the Servlet API to tell it about your servlet classes to be instantiated, and their life cycle is totally controlled by the servlet container.</p>
+</div>
+<div class="paragraph">
+<p>Inversion of Control is just a more general application of this approach.
+The container is ultimately responsible for instantiating and configuring the objects you tell it about, and running their entire life cycle of those objects.</p>
+</div>
+<div class="paragraph">
+<p>Web applications are more complicated to write than monolithic applications, largely because of <em>multithreading</em>.
+Your code will be servicing many different users simultaneously across many different threads.
+This tends to complicate the code you write, since some fundamental aspects of object oriented development get called into question:
+in particular, the use of <em>internal state</em> (values stored inside instance variables), since in a multithreaded environment, that&#8217;s no longer the safe place it is in traditional development.
+Shared objects plus internal state plus multiple threads equals an broken, unpredictable application.</p>
+</div>
+<div class="paragraph">
+<p>Frameworks such as Tapestry – both the IoC container, and the web framework itself – exist to help.</p>
+</div>
+<div class="paragraph">
+<p>When thinking in terms of IoC, <strong>small is beautiful</strong>.
+What does that mean?
+It means small classes and small methods are easier to code than large ones.
+At one extreme, we have servlets circa 1997 (and Visual Basic before that) with methods a thousand lines long, and no distinction between business logic and view logic.
+Everything mixed together into an untestable jumble.</p>
+</div>
+<div class="paragraph">
+<p>At the other extreme is IoC: small objects, each with a specific purpose, collaborating with other small objects.</p>
+</div>
+<div class="paragraph">
+<p>Using unit tests, in collaboration with tools such as <a href="http://easymock.org/">EasyMock</a>, you can have a code base that is easy to maintain, easy to extend, and easy to test.
+And by factoring out a lot of <em>plumbing</em> code, your code base will not only be easier to work with, it will be smaller.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_living_on_the_frontier"><a class="anchor" href="#_living_on_the_frontier"></a>Living on the Frontier</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Coding applications the traditional way is like being a homesteader on the American frontier in the 1800&#8217;s.
+You&#8217;re responsible for every aspect of your house: every board, every nail, every stick of furniture is something you personally created.
+There is a great comfort in total self reliance.
+Even if your house is small, the windows are a bit drafty or the floorboards creak a little, you know exactly why things are not-quite perfect.</p>
+</div>
+<div class="paragraph">
+<p>Flash forward to modern cities or modern suburbia and it&#8217;s a whole different story.
+Houses are built to specification from design plans, made from common materials, by many specializing tradespeople.
+Construction codes dictate how plumbing, wiring and framing should be performed.
+A home-owner may not even know how to drive a nail, but can still take comfort in draft-free windows, solid floors and working plumbing.</p>
+</div>
+<div class="paragraph">
+<p>To extend the metaphor, a house in a town is not alone and self-reliant the way a frontier house is.
+The town house is situated on a street, in a neighborhood, within a town.
+The town provides services (utilities, police, fire control, streets and sewers) to houses in a uniform way.
+Each house just needs to connect up to those services.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_world_of_the_container"><a class="anchor" href="#_the_world_of_the_container"></a>The World of the Container</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>So the IoC container is the "town" and in the world of the IoC container.
+Everything has a name, a place, and a relationship to everything else in the container.
+Tapestry calls this world "The Registry".</p>
+</div>
+<div class="imageblock sequence kroki-format-svg kroki">
+<div class="content">
+<img src="https://kroki.io/plantuml/svg/eNqdkkFuwjAQRfc-hUVv0a5QpFZZoCLSC0ycUbBqMq49FkSIu9dJqsolQA3JxjP2f55vfaEMhUYuSlJyg6327PqFBP9byKMQMn4OFUPXGpSFAe9fQTHF3XgyrcudNfKpNgFfGA_8vN9qxnPA2pFFx_1SKfR-QPztZEGW1hqtgDV1b4ZqMCNo3p1gDpsbrA1-BfQ82R6XOaqC6FPjeO3PMkeVTFgxMK6ggxbd2fDpVg71o7dYEDo1kZIy6zGrfleTqShExaBP6yuAkxBMLfI23ngUySRgcchN-V6sqAmxcztAd4blv-PpQ9zl-qLDua1rni7EMTN0mSl7MFYz2Sn-3-7IYmg=" alt="The World of the Container">
+</div>
+<div class="title">Figure 1. The World of the Container</div>
+</div>
+<div class="paragraph">
+<p>Here we&#8217;re seeing a few services from the built-in Tapestry IoC module, and a few of the services from the Tapestry web framework module.
+In fact, there are over 100 services, all interrelated, in the Registry - and that&#8217;s before you add your own to the mix.
+The IoC Registry treats all the services uniformly, regardless of whether they are part of Tapestry, or part of your application, or part of an add-on library.</p>
+</div>
+<div class="paragraph">
+<p>Tapestry IoC&#8217;s job is to make all of these services available to each other, and to the outside world.
+The outside world could be a standalone application, or it could be an application built on top of the Tapestry web framework.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_service_life_cycle"><a class="anchor" href="#_service_life_cycle"></a>Service Life Cycle</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tapestry services are <em>lazy</em>, which means they are not fully instantiated until they are absolutely needed.
+Often, what looks like a service is really a proxy object &#8230;&#8203; the first time any method of the proxy is invoked, the actual service is instantiated and initialized (Tapestry uses the term <em>realized</em> for this process).
+Of course, this is all absolutely thread-safe.</p>
+</div>
+<div class="paragraph">
+<p>Initially a service is defined, meaning some module has defined the service.
+Later, the service will be <em>virtual</em>, meaning a proxy has been created.
+This occurs most often because some other service depends on it, but hasn&#8217;t gotten around to invoking methods on it.
+Finally, a service that is ready to use is <em>realized</em>. What&#8217;s nice is that your code neither knows nor cares about the life cycle of the service, because of the magic of the proxy.</p>
+</div>
+<div class="paragraph">
+<p>In fact, when a Tapestry web application starts up, before it services its first request, only about 20% of the services have been realized; the remainder are <em>defined</em> or <em>virtual</em>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_class_vs_service"><a class="anchor" href="#_class_vs_service"></a>Class vs. Service</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A Tapestry service is more than just a class.
+First of all, it is a combination of an <em>interface</em> that defines the operations of the service, and an <em>implementation</em> class that implements the interface.</p>
+</div>
+<div class="paragraph">
+<p>Why this extra division?
+Having a service interface is what lets Tapestry create proxies and perform other operations.
+It&#8217;s also a very good practice to code to an interface, rather than a specific implementation.
+You&#8217;ll often be surprised at the kinds of things you can accomplish by substituting one implementation for another.</p>
+</div>
+<div class="paragraph">
+<p>Tapestry is also very aware that a service will have dependencies on other services.
+It may also have other needs &#8230;&#8203; for example, in Tapestry IoC, the container provides services with access to Loggers.</p>
+</div>
+<div class="paragraph">
+<p>Tapestry IoC also has support for other configuration that may be provided to services when they are realized.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_dependency_injection"><a class="anchor" href="#_dependency_injection"></a>Dependency Injection</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Main Article: <a href="injection.html" class="xref page">Injection</a></p>
+</div>
+<div class="paragraph">
+<p>Inversion of Control refers to the fact that the container, here Tapestry IoC&#8217;s Registry, instantiates your classes. It decides on when the classes get instantiated.</p>
+</div>
+<div class="paragraph">
+<p>Dependency Injection is a key part of <em>realization</em>: this is how a service is provided with the other services it needs to operate.
+For example, a Data Access Object service may be injected with a <code>ConnectionPool</code> service.</p>
+</div>
+<div class="paragraph">
+<p>In Tapestry, injection occurs through constructors, through parameters to service builder methods, or through direct injection into fields.
+Tapestry prefers constructor injection, as this emphasizes that dependencies should be stored in <code>final</code> variables.
+This is the best approach towards ensuring thread safety.</p>
+</div>
+<div class="paragraph">
+<p>In any case, injection "just happens".
+Tapestry finds the constructor of your class and analyzes the parameters to determine what to pass in.
+In some cases, it uses just the parameter type to find a match, in other cases, annotations on the parameters may also be used.
+It also scans through the fields of your service implementation class to identify which should have injected values written into them.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_why_cant_i_just_use_new"><a class="anchor" href="#_why_cant_i_just_use_new"></a>Why can&#8217;t I just use <code>new</code>?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>That&#8217;s a common question.
+All these concepts seem alien at first.
+What&#8217;s wrong with <code>new</code>?</p>
+</div>
+<div class="paragraph">
+<p>The problem with new is that it rigidly connects one implementation to another implementation.
+Let&#8217;s follow a progression that reflects how a lot of projects get written.
+It will show that in the real world, <code>new</code> is not as simple as it first seems.</p>
+</div>
+<div class="paragraph">
+<p>This example is built around some real-world work that involves a Java Messaging Service queue, part of an application performance monitoring subsystem for a large application.
+Code inside each server collects performance data of various types and sends it, via a shared JMS queue, to a central server for collection and reporting.</p>
+</div>
+<div class="paragraph">
+<p>This code is for a metric that periodically counts the number of rows in a key database table.
+Other implementations of <code>MetricProducer</code> will be responsible for measuring CPU utilization, available disk space, number of requests per second, and so forth.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class TableMetricProducer implements MetricProducer
+{
+  // ...
+
+  public void execute()
+  {
+    int rowCount = . . .;
+    Metric metric = new Metric("app/clients", System.currentTimeMillis(), rowCount);
+    new QueueWriter().sendMetric(metric);
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We&#8217;ve omitted some of the details (this code will need a database URL or a connection pool to operate), so as to focus on the one method and it&#8217;s relationship to the <code>QueueWriter</code> class.</p>
+</div>
+<div class="paragraph">
+<p>Obviously, this code has a problem.
+We&#8217;re creating a new <code>QueueWriter</code> for each metric we write into the queue, and the <code>QueueWriter</code> presumably is going to open the JMS queue fresh each time, an expensive operation.
+Thus:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class TableMetricProducer implements MetricProducer
+{
+  // ...
+
+  private final QueueWriter queueWriter = new QueueWriter();
+
+  public void execute()
+  {
+    int rowCount = . . .;
+    Metric metric = new Metric("app/clients", System.currentTimeMillis(), rowCount);
+    queueWriter.sendMetric(metric);
+  }
+
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>That&#8217;s better. It&#8217;s not perfect &#8230;&#8203; a proper system might know when the application was being shutdown and would shut down the JMS Connection inside the <code>QueueWriter</code> as well.</p>
+</div>
+<div class="paragraph">
+<p>Here&#8217;s a more immediate problem: JMS connections are really meant to be shared, and we&#8217;ll have lots of little classes collecting different metrics.
+So we need to make the <code>QueueWriter</code> shareable:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">private final QueueWriter queueWriter = QueueWriter.getInstance();</code></pre>
+</div>
+</div>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>and inside class <code>QueueWriter</code>:</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class QueueWriter
+{
+  private static QueueWriter instance;
+
+  private QueueWriter()
+  {
+    ...
+  }
+
+  public static getInstance()
+  {
+    if (instance == null)
+    {
+      instance = new QueueWriter();
+    }
+    return instance;
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Much better! Now all the metric producers running inside all the threads can share a single <code>QueueWriter</code>. Oh wait &#8230;&#8203;</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public synchronized static getInstance()
+{
+  if (instance == null)
+  {
+    instance = new QueueWriter();
+  }
+  return instance;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Is that necessary? Yes. Will the code work without it? Yes – <strong>99.9% of the time</strong>.
+In fact, this is a very common error in systems that manually code a lot of these construction patterns: forgetting to properly synchronize access.
+These things often work in development and testing, but fail (with infuriating infrequency) in production, as it takes two or more threads running simultaneously to reveal the coding error.</p>
+</div>
+<div class="paragraph">
+<p>Wow, we&#8217;re a long way from a simple <code>new</code> already, and we&#8217;re talking about just one service.
+But let&#8217;s detour into <em>testing</em>.</p>
+</div>
+<div class="paragraph">
+<p>How would you test <code>TableMetricProducer</code>?
+One way would be to let it run and try to find the message or messages it writes in the queue, but that seems fraught with difficulties.
+It&#8217;s more of an integration test, and is certainly something that you&#8217;d want to execute at some stage of your development, but not as part of a quick-running unit test suite.</p>
+</div>
+<div class="paragraph">
+<p>Instead, let&#8217;s split <code>QueueWriter</code> in two: a <code>QueueWriter</code> interface, and a <code>QueueWriterImpl</code> implementation class.
+This will allow us to run <code>TableMetricProducer</code> against a <em>mock implementation</em> of <code>QueueWriter</code>, rather than the real thing.
+This is one of the immediate benefits of <em>coding to an interface</em> rather than coding to an implementation.</p>
+</div>
+<div class="paragraph">
+<p>We&#8217;ll need to change <code>TableMetricProducer</code> to take the <code>QueueWriter</code> as a constructor parameter.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class TableMetricProducer implements MetricProducer
+{
+  private final QueueWriter queueWriter;
+
+  /**
+   * The normal constructor.
+   *
+   */
+  public TableMetricProducer(. . .)
+  {
+    this(QueueWriterImpl.getInstance(), . . .);
+  }
+
+  /**
+   * Constructor used for testing.
+   *
+   */
+  TableMetricProducer(QueueWriter queueWriter, . . .)
+  {
+    queueWriter = queueWriter;
+    . . .
+  }
+
+  public void execute()
+  {
+    int rowCount = . . .;
+    Metric metric = new Metric("app/clients", System.currentTimeMillis(), rowCount);
+
+   queueWriter.sendMetric(metric);
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This still isn&#8217;t ideal, as we still have an explicit linkage between <code>TableMetricProducer</code> and <code>QueueWriterImpl</code>.</p>
+</div>
+<div class="paragraph">
+<p>What we&#8217;re seeing here is that there are multple concerns inside the little bit of code in this example.
+<code>TableMetricProducer</code> has an unwanted construction concern about which implementation of <code>QueueWriter</code> to instantiate (this shows up as two constructors, rather than just one).
+<code>QueueWriterImpl</code> has an additional life cycle concern, in terms of managing the singleton.</p>
+</div>
+<div class="paragraph">
+<p>These extra concerns, combined with the use of static variables and methods, are a bad design smell.
+It&#8217;s not yet very stinky, because this example is so small, but these problems tend to multiply as an application grows larger and more complex, especially as services start to truly collaborate in earnest.</p>
+</div>
+<div class="paragraph">
+<p>For comparison, lets see what the Tapestry IoC implementation would look like:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class MonitorModule
+{
+  public static void bind(ServiceBinder binder)
+  {
+    binder.bind(QueueWriter.class, QueueWriterImpl.class);
+    binder.bind(MetricScheduler.class, MetricSchedulerImpl.class);
+  }
+
+  public void contributeMetricScheduler(Configuration&lt;MetricProducer&gt; configuration, QueueWriter queueWriter, . . .)
+  {
+    configuration.add(new TableMetricProducer(queueWriter, . . .))
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Again, we&#8217;ve omitted a few details related to the database the <code>TableMetricProducer</code> will point at (in fact, Tapestry IoC provides a lot of support for configuration of this type as well, which is yet another concern).</p>
+</div>
+<div class="paragraph">
+<p>The <code>MonitorModule</code> class is a Tapestry IoC module: a class that defines and configures services.</p>
+</div>
+<div class="paragraph">
+<p>The <code>bind()</code> method is the principle way that services are made known to the Registry: here we&#8217;re binding a service interface to a service implementation.
+<code>QueueWriter</code> we&#8217;ve discussed already, and <code>MetricScheduler</code> is a service that is responsible for determining when <code>MetricProducer</code> instances run.</p>
+</div>
+<div class="paragraph">
+<p>The <code>contributeMetricScheduler()</code> method allows the module to <em>contribute</em> into the <code>MetricProducer</code> service&#8217;s <em>configuration</em>.
+More testability: the <code>MetricProducer</code> isn&#8217;t tied to a pre-set list of producers, instead it will have a <code>Collection&lt;MetricProducer&gt;</code> injected into its constructor.
+Thus, when we&#8217;re coding the <code>MetricProducerImpl</code> class, we can test it against mock implementations of <code>MetricProducer</code>.</p>
+</div>
+<div class="paragraph">
+<p>The <code>QueueWriter</code> service is injected into the <code>contributeMetricScheduler()</code> method.
+Since there&#8217;s only one <code>QueueWriter</code> service, Tapestry IoC is able to "find" the correct service based entirely on type.
+If, eventually, there&#8217;s more than one <code>QueueWriter</code> service (perhaps pointing at different JMS queues), you would use an annotation on the parameter to help Tapestry connect the parameter to the appropriate service.</p>
+</div>
+<div class="paragraph">
+<p>Presumably, there would be a couple of other parameters to the <code>contributeMetricScheduler()</code> method, to inject in a database URL or connection pool (that would, in turn, be passed to <code>TableMetricProducer</code>).</p>
+</div>
+<div class="paragraph">
+<p>A new <code>TableMetricProducer</code> instance is created and contributed in.
+We could contribute as many producers as we like here.
+Other modules could also define a <code>contributeMetricScheduler()</code> method and contribute their own <code>MetricProducer</code> instances.</p>
+</div>
+<div class="paragraph">
+<p>Meanwhile, the <code>QueueWriterImpl</code> class no longer needs the <code>instance</code> variable or <code>getInstance()</code> method, and the <code>TableMetricProducer</code> only needs a single constructor.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_advantages_of_ioc_summary"><a class="anchor" href="#_advantages_of_ioc_summary"></a>Advantages of IoC: Summary</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>It would be ludicrous for us to claim that applications built without an IoC container are doomed to failure.
+There is overwhelming evidence that applications have been built without containers and have been perfectly successful.</p>
+</div>
+<div class="paragraph">
+<p>What we are saying is that IoC techniques and discipline will lead to applications that are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>More testable</strong> – smaller, simpler classes; coding to interfaces allows use of mock implementations</p>
+</li>
+<li>
+<p><strong>More robust</strong> – smaller, simpler classes; use of final variables; thread safety baked in</p>
+</li>
+<li>
+<p><strong>More scalable</strong> – thread safety baked in</p>
+</li>
+<li>
+<p><strong>Easier to maintain</strong> – less code, simpler classes</p>
+</li>
+<li>
+<p><strong>Easier to extend</strong> – new features are often additions (new services, new contributions) rather than changes to existing classes</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>What we&#8217;re saying is that an IoC container allows you to work faster and smarter.</p>
+</div>
+<div class="paragraph">
+<p>Many of these traits work together; for example, a more testable application is inherently more robust.
+Having a test suite makes it easier to maintain and extend your code, because its much easier to see if new features break existing ones.
+Simpler code plus tests also lowers the cost of entry for new developers coming on board, which allows for more developers to work efficiently on the same code base.
+The clean separation between interface and implementation also allows multiple developers to work on different aspects of the same code base with a lowered risk of interference and conflict.</p>
+</div>
+<div class="paragraph">
+<p>By contrast, traditional applications, which we term <em>monolithic</em> applications, are often very difficult to test, because there are fewer classes, and each class has multiple concerns.
+A lack of tests makes it more difficult to add new features without breaking existing features.
+Further, the monolithic approach more often leads to implementations being linked to other implementations, yet another hurdle standing in the way of testing.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s end with a metaphor.</p>
+</div>
+<div class="paragraph">
+<p>Over a decade ago, when Java first came on the scene, it was the first mainstream language to support garbage collection.
+This was very controversial: the garbage collector was seen as unnecessary, and a waste of resources.
+Among C and C++ developers, the attitude was "Why do I need a garbage collector? If I call <code>malloc()</code> I can call <code>free()</code>."</p>
+</div>
+<div class="paragraph">
+<p>But now, most developers would never want to go back to a non-garbage collected environment.
+Having the GC around makes it much easier to code in a way we find natural: many small related objects working together.
+It turns out that knowing when to call <code>free()</code> is more difficult than it sounds.
+The Objective-C language tried to solve this with retain counts on objects and that still lead to memory leaks when it was applied to object <em>graphs</em> rather than object <em>trees</em>.</p>
+</div>
+<div class="paragraph">
+<p>Roll the clock forward a decade and the common consensus has shifted considerably.
+Objective-C 2.0 features true garbage collection and GC libraries are available for C and C++.
+All scripting languages, including Ruby and Python, feature garbage collection as well.
+A new language <em>without</em> garbage collection is now considered an anomaly.</p>
+</div>
+<div class="paragraph">
+<p>The point is, the life cycle of objects turns out to be far more complicated than it looks at first glance.
+We&#8217;ve come to accept that our own applications lack the ability to police their objects as they are no longer needed - they literally lack the ability to determine <em>when</em> an object is no longer needed - and the garbage collector, a kind of higher authority, takes over that job very effectively.
+The end result? Less code and fewer bugs.
+And a careful study shows that the Java memory allocator and garbage collector (the two are quite intimately tied together) is actually <strong>more efficient</strong> than <code>malloc()</code> and <code>free()</code>.</p>
+</div>
+<div class="paragraph">
+<p>So we&#8217;ve come to accept that the <em>death concern</em> is better handled outside of our own code.
+The use of Inversion of Control is simply the flip side of that: the <em>life cycle and construction concerns</em> are also better handled by an outside authority as well: the IoC container.
+These concerns govern when a service is <em>realized</em> and how its dependencies and configuration are injected.
+As with the garbage collector, ceding these chores to the container results in less code and fewer bugs, and lets you concentrate on the things that should matter to you: your business logic, your application – and not a whole bunch of boilerplate plumbing!</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

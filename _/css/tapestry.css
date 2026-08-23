@@ -1,0 +1,18 @@
+
+.doc a {
+  color: #559d2f;
+}
+
+.doc a:hover {
+  color: #559d2f;
+  text-underline-offset: 5px;
+}
+
+.toc .toc-menu a {
+  color: #559d2f;
+}
+
+.toc .toc-menu a:hover {
+  color: #2a4e17;
+}
+

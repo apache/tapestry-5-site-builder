@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Security :: Apache Tapestry</title>
+    <meta name="generator" content="Antora 3.1.15">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/tapestry.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../.."><img alt="Apache Tapestry Logo" src="../../_/img/apache-tapestry-icon-dark.svg" width="60" />Apache Tapestry</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Documentation</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../../main/getting-started.html">Getting Started</a>
+            <a class="navbar-item" href="../../main/tutorial/">Tutorial</a>
+            <a class="navbar-item" href="../../userguide/5.8/">User Guide</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="../../main/community.html">Community</a>
+        <a class="navbar-item" href="../../main/support.html">Support</a>
+        <a class="navbar-item" href="../../main/developers.html">Developers</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Apache</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+            <a class="navbar-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
+            <a class="navbar-item" href="https://www.apache.org/licenses/">License</a>
+            <a class="navbar-item" href="https://www.apache.org/security/">Security</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="../../main/download.html">Download</a>
+          </span>
+        </div>
+        <div class="navbar-brand">
+          <a href="https://www.apache.org/">
+          <img alt="The Apache Software Foundation" src="../../_/img/asf_logo.svg" width="200" height="63" style="padding-top: 5px; padding-bottom: 5px; background-color: white">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="body">
+<div class="nav-container" data-component="userguide" data-version="5.5">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">User Guide</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Introduction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry Core</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basics</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="project-layout.html">Project Layout</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="runtime-exceptions.html">Runtime Exceptions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="class-reloading.html">Class Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-reference.html">Component Reference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="annotations.html">Annotations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Pages and Components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-classes.html">Component Classes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-templates.html">Component Templates</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="property-expressions.html">Property Expressions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-parameters.html">Component Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="parameter-type-coercion.html">Parameter Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="layout-component.html">Layout Component</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-mixins.html">Component Mixins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-navigation.html">Page Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="localization.html">Localization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Request/Response Rendering</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-life-cycle.html">Page Life Cycle</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="request-processing.html">Request Processing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-rendering.html">Component Rendering</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-events.html">Component Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="url-rewriting.html">URL Rewriting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dom.html">Document Object Model (DOM)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="response-compression.html">Response Compression</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="security.html">Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https.html">HTTPS / SSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="content-type-and-markup.html">Content Type and Markup</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Data Persistence</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="persistent-page-data.html">Persistent Page Data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="session-storage.html">Session Storage</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Interacting with components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="injection.html">Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="environmental-services.html">Environmental Services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript, AJAX, CSS &amp; Binary Data</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="client-side-javascript.html">Client-Side JavaScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="javascript-modules.html">Javascript Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="coffeescript.html">Coffeescript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="typescript.html">TypeScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ajax-and-zones.html">AJAX and Zones</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="css.html">Cascading Style Sheets (CSS)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="assets.html">Assets</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Working with Forms</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="forms-and-validation.html">Forms and Validation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="beaneditform-guide.html">BeanEditForm Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uploading-files.html">Uploading Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bean-validation.html">Bean Validation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Logging, Debugging &amp; Testing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="logging.html">Logging</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unit-testing.html">Unit testing pages or components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integration-testing.html">Integration Testing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="development-dashboard.html">Development Dashboard</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry IOC</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-overview.html">IoC Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="symbols.html">Symbols</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="type-coercion.html">Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="case-insensitivity.html">Case Insensitivity</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="autoloading-modules.html">Autoloading Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="chainbuilder-service.html">ChainBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pipelinebuilder-service.html">PipelineBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="shadowbuilder-service.html">ShadowBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="strategybuilder-service.html">StrategyBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="defining-tapestry-ioc-services.html">Defining Tapestry IOC Services</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-modules.html">IoC Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="object-providers.html">Object Providers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-serialization.html">Service Serialization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="starting-the-ioc-registry.html">Starting the IoC Registry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="aliases.html">Aliases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="injection-in-detail.html">Injection in Detail</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ordering-by-constraints.html">Ordering by Constraints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="registry-startup.html">Registry Startup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="parallel-execution.html">Parallel Execution</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="logging-in-tapestry.html">Logging in Tapestry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-implementation-reloading.html">Service Implementation Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-advisors.html">Service Advisors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-decorators.html">Service Decorators</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="using-jsr-330-standard-annotations.html">Using JSR 330 standard annotations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="operation-tracker.html">Operation Tracker</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Add-ons and Integrations</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Built-in</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="hibernate.html">Hibernate Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="jpa.html">JPA Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integrating-with-spring-framework.html">Spring</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="third-party-modules.html">Third Party Modules</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Release Notes</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.5.html">Tapestry 5.5</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.4.html">Tapestry 5.4</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.3.html">Tapestry 5.3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.2.html">Tapestry 5.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.1.html">Tapestry 5.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.0.html">Tapestry 5.0</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cookbook</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/default-parameter.html">Default Parameter</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/overriding-exception-reporting.html">Overriding Exception Reporting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/error-page-recipe.html">Error Page Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/supporting-informal-parameters.html">Supporting Informal Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/component-libraries.html">Component Libraries</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/switching-cases.html">Switching Cases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/enum-parameter-recipe.html">Enum Parameter Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/extending-the-if-component.html">Extending The If Component</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/meta-programming-page-content.html">Meta-Programming Page Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="cookbook/ioc-cookbook.html">IoC Cookbook</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-basic-services-and-injection.html">IoC Cookbook - Basic Services and Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-overriding-ioc-services.html">IoC Cookbook - Overriding IoC Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-patterns.html">IoC Cookbook - Patterns</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-service-configurations.html">IoC Cookbook - Service Configurations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/using-select-with-a-list.html">Using Select With a List</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/performance-and-clustering.html">Performance and Clustering</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/google-app-engine.html">Google App Engine (GAE)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frequently Asked Questions (FAQ)</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/general.html">General Questions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/templating-and-markup.html">Templating and Markup FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/ajax.html">AJAX FAQ</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">User Guide</span>
+    <span class="version">5.5</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../main/about.html">Home</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../current/index.html">User Guide</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../current/index.html">5.8</a>
+        </li>
+        <li class="version">
+          <a href="../5.7/index.html">5.7</a>
+        </li>
+        <li class="version">
+          <a href="../5.6/index.html">5.6</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">5.5</a>
+        </li>
+        <li class="version">
+          <a href="../5.4/index.html">5.4</a>
+        </li>
+        <li class="version">
+          <a href="../5.3/index.html">5.3</a>
+        </li>
+        <li class="version">
+          <a href="../5.2/index.html">5.2</a>
+        </li>
+        <li class="version">
+          <a href="../5.1/index.html">5.1</a>
+        </li>
+        <li class="version">
+          <a href="../5/index.html">5.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../main/about.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">User Guide</a></li>
+    <li>Tapestry Core</li>
+    <li>Request/Response Rendering</li>
+    <li><a href="security.html">Security</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">5.5</button>
+  <div class="version-menu">
+    <a class="version" href="../current/security.html">5.8</a>
+    <a class="version" href="../5.7/security.html">5.7</a>
+    <a class="version" href="../5.6/security.html">5.6</a>
+    <a class="version is-current" href="security.html">5.5</a>
+    <a class="version" href="../5.4/security.html">5.4</a>
+    <a class="version" href="../5.3/security.html">5.3</a>
+    <a class="version" href="../5.2/security.html">5.2</a>
+    <a class="version" href="../5.1/security.html">5.1</a>
+    <a class="version" href="../5/security.html">5.0</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Security</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tapestry has a number of security features designed to harden your application against unwanted intrusion and denial of service.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_https_only_pages"><a class="anchor" href="#_https_only_pages"></a>HTTPS-only Pages</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Main Article: <a href="https.html" class="xref page">HTTPS / SSL</a></p>
+</div>
+<div class="paragraph">
+<p>Tapestry provides several annotations and configuration settings that you can use to ensure that all access to certain pages (or all pages) occurs only via the encrypted HTTPS protocol.
+See <a href="https.html" class="xref page">HTTPS / SSL</a> for details.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_controlling_page_access"><a class="anchor" href="#_controlling_page_access"></a>Controlling Page Access</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For simple access control needs, you can contribute a <code><a href="https://tapestry.apache.org/5.5.0/apidocs/org/apache/tapestry5/services/ComponentRequestFilter.html">ComponentRequestFilter</a></code> with your custom logic that decides which pages should be accessed by which users.
+The Tapestry Hotel Booking app demonstrates this approach with an <code>@AnonymousAccess</code> annotation along with a <code>ComponentRequestFilter</code> named <code>AuthenticationFilter.java</code>.
+The filter enforces security by intercepting all requests to pages that don&#8217;t have that annotation, and it redirects those requests to the login page.
+<a href="https://tapestry-jumpstart.org/jumpstart/examples/infrastructure/protectingpages">JumpStart</a> has a similar demo.</p>
+</div>
+<div class="paragraph">
+<p>For more advanced needs see the Security Framework Integration section below.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_white_listed_pages"><a class="anchor" href="#_white_listed_pages"></a>White-listed Pages</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Pages whose component classes are annotated with <code><a href="https://tapestry.apache.org/5.5.0/apidocs/org/apache/tapestry5/annotations/WhitelistAccessOnly.html">@WhitelistAccessOnly</a></code> will only be displayed to users (clients) that are on the <em>whitelist</em>.
+By default, the whitelist consists only of clients whose fully-qualified domain name is "localhost" (or the IP address equivalent, 127.0.0.1 or 0:0:0:0:0:0:0:1), but you can customize this by contributing to the <code><a href="https://tapestry.apache.org/5.5.0/apidocs/org/apache/tapestry5/services/security/ClientWhitelist.html">ClientWhitelist</a></code> service in your application&#8217;s module class (usually <code>AppModule.java</code>):</p>
+</div>
+<div class="listingblock">
+<div class="title">AppModule.java (partial) – simple inline example</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Contribute(ClientWhitelist.class)
+public static void provideWhitelistAnalyzer(OrderedConfiguration&lt;WhitelistAnalyzer&gt; configuration)
+{
+    configuration.add("MyCustomAnalyzer", new WhitelistAnalyzer()
+    {
+        public boolean isRequestOnWhitelist(Request request)
+        {
+            // add your custom logic here and return true or false
+            return true;
+        }
+    }, "before:*");
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Sometimes, in production, a firewall or proxy may make it look like the client web browser originates from localhost, with the consequence that whitelisted pages may be visible to all users.
+See the Security FAQ for how to deal with this.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_asset_security"><a class="anchor" href="#_asset_security"></a>Asset Security</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tapestry serves assets (static content such as CSS files, images, and JavaScript, many of which are on the classpath alongside your compiled class files) to the client.
+Because of this, great care has gone into ensuring that certain file types cannot be served to the client.
+By default, file ending with <code>.class</code>, <code>.tml</code> and <code>.properties</code> can be served to the client only if the request includes the file&#8217;s MD5 checksum.
+As you would expect, that blacklist can be extended.
+See <a href="assets.html" class="xref page">Assets</a> for more information.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_protecting_serialized_object_data_on_the_client"><a class="anchor" href="#_protecting_serialized_object_data_on_the_client"></a>Protecting Serialized Object Data on the Client</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>As of version 5.3.6, Tapestry integrates a <a href="http://en.wikipedia.org/wiki/HMAC">hash-based message authentication code (HMAC)</a> into serialized Java object data that it sends to the client (generally, this means the <code>t:formdata</code> hidden field used by the <code><a href="https://tapestry.apache.org/5.5.0/apidocs/org/apache/tapestry5/corelib/components/Form.html">Form</a></code> component).
+This ensures that the hidden binary object data is guaranteed to be unaltered when it returns to the server upon form (or AJAX) submission.
+The HMAC pass phrase is set using the <code>tapestry.hmac-passphrase</code> <a href="configuration.html" class="xref page">Configuration</a> symbol.
+If you don&#8217;t set that value, you&#8217;ll see a warning message in the browser, like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>The symbol 'tapestry.hmac-passphrase' has not been configured. This is used to configure hash-based message authentication of Tapestry data stored in forms, or in the URL. You application is less secure, and more vulnerable to denial-of-service attacks, when this symbol is not configured.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The solution is to set the <code>tapestry.hmac-passphrase</code> to some value (any fixed, private string, such as 30 to 40 random-looking characters, will do) in your application&#8217;s module class (usually <code>AppModule.java</code>).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_cross_site_request_forgery_csrf"><a class="anchor" href="#_cross_site_request_forgery_csrf"></a>Cross Site Request Forgery (CSRF)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cross Site Request Forgery is a type of security vulnerability in which legitimate, authorized users may be made to unwittingly submit malicious requests to your web application.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/porscheinformatik/tapestry-csrf-protection">Tapestry-csrf-protection</a> is a 3rd party module that has several features for preventing CSRF attacks.
+It protects all component event handlers (event links, forms, etc.) by adding a CSRF token to event links and adds a CSRF token as a hidden field to all forms.
+Tokens are generated on a per-session basis.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_security_framework_integration"><a class="anchor" href="#_security_framework_integration"></a>Security Framework Integration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tapestry does not lock you into a specific authentication/authorization implementation.
+There are integration modules available for the more popular open source Java security frameworks.
+A popular choice among Tapestry users is <a href="http://www.tynamo.org/tapestry-security+guide/">tapestry-security (based on Apache Shiro) from Tynamo.org</a>.
+It is always kept up-to-date with the latest Tapestry versions and offers several supporting security modules (e.g. <a href="http://www.tynamo.org/tapestry-security-jpa+guide/">tapestry-security-jpa</a>, <a href="http://www.tynamo.org/tynamo-federatedaccounts+guide/">tynamo-federatedaccounts</a>).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_vulnerability_disclosures"><a class="anchor" href="#_vulnerability_disclosures"></a>Vulnerability Disclosures</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_cve_2019_0195_file_reading_leads_to_java_deserialization_vulnerability"><a class="anchor" href="#_cve_2019_0195_file_reading_leads_to_java_deserialization_vulnerability"></a>CVE-2019-0195: File reading Leads to Java Deserialization Vulnerability.</h3>
+<div class="paragraph">
+<p>Disclosure date: <a href="https://lists.apache.org/thread.html/5173c4eed06e2fca6fd5576ed723ff6bb1711738ec515cb51a04ab24@%3Cusers.tapestry.apache.org%3E">September 13th, 2019</a></p>
+</div>
+<div class="paragraph">
+<p>Versions affected: all Apache Tapestry versions from 5.4.0 (including its betas) through 5.4.3</p>
+</div>
+<div class="paragraph">
+<p>Description: Manipulating classpath asset file URLs, an attacker could guess the path to a known file in the classpath and have it downloaded. If the attacker found the file with the value of the tapestry.hmac-passphrase configuration symbol, most probably the webapp&#8217;s AppModule class, the value of this symbol could be used to craft a Java deserialization attack, thus running malicious injected Java code. The vector would be the t:formdata parameter from the Form component.</p>
+</div>
+<div class="paragraph">
+<p>Mitigation: Upgrade to Tapestry 5.4.5, which is a drop-in replacement for any 5.4.x version.</p>
+</div>
+<div class="paragraph">
+<p>Credit: Ricter Zheng</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cve_2019_0207_apache_tapestry_5_4_2_path_traversal_vulnerability"><a class="anchor" href="#_cve_2019_0207_apache_tapestry_5_4_2_path_traversal_vulnerability"></a>CVE-2019-0207: Apache Tapestry 5.4.2 Path Traversal vulnerability</h3>
+<div class="paragraph">
+<p>Disclosure date: <a href="https://lists.apache.org/thread.html/765be3606d865de513f6df9288842c3cf58b09a987c617a535f2b99d@%3Cusers.tapestry.apache.org%3E">September 13th, 2019</a></p>
+</div>
+<div class="paragraph">
+<p>Versions affected: all Apache Tapestry versions from 5.4.0 (including its betas) through 5.4.4.</p>
+</div>
+<div class="paragraph">
+<p>Description: Tapestry processes assets <code>/assets/ctx</code> using classes chain <code>StaticFilesFilter &#8594; AssetDispatcher &#8594; ContextResource</code>, which doesn&#8217;t filter the character <code>\</code>, so attacker can perform a path traversal attack to read any files on Windows platform.</p>
+</div>
+<div class="paragraph">
+<p>Mitigation: Upgrade to Tapestry 5.4.5, which is a drop-in replacement for any 5.4.x version.</p>
+</div>
+<div class="paragraph">
+<p>Credit: Ricter Zheng</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cve_2019_10071_new_issue_in_fix_for_cve_2014_1972"><a class="anchor" href="#_cve_2019_10071_new_issue_in_fix_for_cve_2014_1972"></a>CVE-2019-10071: New Issue in Fix for CVE-2014-1972</h3>
+<div class="paragraph">
+<p>Disclosure date: September 13th, 2019</p>
+</div>
+<div class="paragraph">
+<p>Versions affected: all Apache Tapestry versions from 5.4.0 (including its betas) through 5.4.3</p>
+</div>
+<div class="paragraph">
+<p>Description: The code which checks HMAC in form submissions usedString.equals() for comparisons, which results in a timing side channel vulnerability inthe comparison of the HMAC signatures. This could lead to remote codeexecution if an attacker is able to determine the correct signature fortheir payload. The comparison should have been done with a constant time algorithm instead.</p>
+</div>
+<div class="paragraph">
+<p>Mitigation: Upgrade to Tapestry 5.4.5, which is a drop-in replacement for any 5.4.xversion.</p>
+</div>
+<div class="paragraph">
+<p>Credit: David Tomaschik of the Google Security Team</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cve_2019_10071_bypass_of_the_fix_for_cve_2019_0195"><a class="anchor" href="#_cve_2019_10071_bypass_of_the_fix_for_cve_2019_0195"></a>CVE-2019-10071: Bypass of the fix for CVE-2019-0195</h3>
+<div class="paragraph">
+<p>Disclosure date: March 14th, 2021</p>
+</div>
+<div class="paragraph">
+<p>Versions affected: all Apache Tapestry versions from 5.4.0 (including its betas) through 5.6.1, plus 5.7.0.</p>
+</div>
+<div class="paragraph">
+<p>Description:
+A critical unauthenticated remote code execution vulnerability was found all recent versions of Apache Tapestry.
+The affected versions include 5.4.5, 5.5.0, 5.6.2 and 5.7.0.</p>
+</div>
+<div class="paragraph">
+<p>The vulnerability I have found is a bypass of the fix for CVE-2019-0195.</p>
+</div>
+<div class="paragraph">
+<p>Recap:</p>
+</div>
+<div class="paragraph">
+<p>Before the fix of CVE-2019-0195 it was possible to download arbitrary class files from the classpath by providing a crafted asset file URL.
+An attacker was able to download the file <code>AppModule.class</code> by requesting the URL <code><a href="http://localhost:8080/assets/something/services/AppModule.class" class="bare">http://localhost:8080/assets/something/services/AppModule.class</a></code> which contains a HMAC secret key. The fix for that bug was a blacklist filter that checks if the URL ends with <code>.class</code>, <code>.properties</code> or <code>.xml</code>.</p>
+</div>
+<div class="paragraph">
+<p>Bypass:</p>
+</div>
+<div class="paragraph">
+<p>Unfortunately, the blacklist solution can simply be bypassed by appending a <code>/</code> at the end of the URL: <code><a href="http://localhost:8080/assets/something/services/AppModule.class/" class="bare">http://localhost:8080/assets/something/services/AppModule.class/</a></code></p>
+</div>
+<div class="paragraph">
+<p>The slash is stripped after the blacklist check and the file <code>AppModule.class</code> is loaded into the response.
+This class usually contains the HMAC secret key which is used to sign serialized Java objects.
+With the knowledge of that key an attacker can sign a Java gadget chain that leads to RCE (e.g. CommonsBeanUtils1 from ysoserial).</p>
+</div>
+<div class="paragraph">
+<p>Solution for this vulnerability:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>For Apache Tapestry 5.4.0 to 5.6.1, upgrade to 5.6.2 or later.</p>
+</li>
+<li>
+<p>For Apache Tapestry 5.7.0, upgrade to 5.7.1 or later.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This issue is being tracked as <a href="https://issues.apache.org/jira/browse/TAP5-2663">TAP5-2663</a></p>
+</div>
+<div class="paragraph">
+<p>Credit: Apache Tapestry would like to thank Johannes Moritz for finding and notifying this vulnerability</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cve_2022_31781_regular_expression_denial_of_service_redos_in_contenttype_java_ghsl_2022_022"><a class="anchor" href="#_cve_2022_31781_regular_expression_denial_of_service_redos_in_contenttype_java_ghsl_2022_022"></a>CVE-2022-31781: Regular Expression Denial of Service (ReDoS) in ContentType.java. (GHSL-2022-022)</h3>
+<div class="paragraph">
+<p>Disclosure date: July 12th, 2022</p>
+</div>
+<div class="paragraph">
+<p>Versions affected:</p>
+</div>
+<div class="paragraph">
+<p>This issue affects Apache Tapestry 5.8.1 and earlier.</p>
+</div>
+<div class="paragraph">
+<p>Severity: low</p>
+</div>
+<div class="paragraph">
+<p>Description:</p>
+</div>
+<div class="paragraph">
+<p>Apache Tapestry up to version 5.8.1 is vulnerable to Regular Expression Denial of Service (ReDoS) in the way it handles Content Types. Specially crafted Content Types may cause catastrophic backtracking, taking exponential time to complete.</p>
+</div>
+<div class="paragraph">
+<p>Specifically, this is about the regular expression used on the parameter of the org.apache.tapestry5.http.ContentType class.</p>
+</div>
+<div class="paragraph">
+<p>Apache Tapestry 5.8.2 has a fix for this vulnerability.</p>
+</div>
+<div class="paragraph">
+<p>Notice the vulnerability cannot be triggered by web requests in Tapestry code alone.
+It would only happen if there&#8217;s some non-Tapestry codepath passing some outside input to the ContentType class constructor.</p>
+</div>
+<div class="paragraph">
+<p>Acknowledgements: CodeQL team members [@atorralba (Tony Torralba)](<a href="https://github.com/atorralba" class="bare">https://github.com/atorralba</a>) and [@joefarebrother (Joseph Farebrother)](<a href="https://github.com/joefarebrother" class="bare">https://github.com/joefarebrother</a>).</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

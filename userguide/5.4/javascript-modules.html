@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Javascript Modules :: Apache Tapestry</title>
+    <meta name="generator" content="Antora 3.1.15">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/tapestry.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../.."><img alt="Apache Tapestry Logo" src="../../_/img/apache-tapestry-icon-dark.svg" width="60" />Apache Tapestry</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Documentation</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../../main/getting-started.html">Getting Started</a>
+            <a class="navbar-item" href="../../main/tutorial/">Tutorial</a>
+            <a class="navbar-item" href="../../userguide/5.8/">User Guide</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="../../main/community.html">Community</a>
+        <a class="navbar-item" href="../../main/support.html">Support</a>
+        <a class="navbar-item" href="../../main/developers.html">Developers</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Apache</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+            <a class="navbar-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
+            <a class="navbar-item" href="https://www.apache.org/licenses/">License</a>
+            <a class="navbar-item" href="https://www.apache.org/security/">Security</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="../../main/download.html">Download</a>
+          </span>
+        </div>
+        <div class="navbar-brand">
+          <a href="https://www.apache.org/">
+          <img alt="The Apache Software Foundation" src="../../_/img/asf_logo.svg" width="200" height="63" style="padding-top: 5px; padding-bottom: 5px; background-color: white">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="body">
+<div class="nav-container" data-component="userguide" data-version="5.4">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">User Guide</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Introduction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry Core</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basics</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="project-layout.html">Project Layout</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="runtime-exceptions.html">Runtime Exceptions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="class-reloading.html">Class Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-reference.html">Component Reference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="annotations.html">Annotations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Pages and Components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-classes.html">Component Classes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-templates.html">Component Templates</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="property-expressions.html">Property Expressions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-parameters.html">Component Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="parameter-type-coercion.html">Parameter Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="layout-component.html">Layout Component</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-mixins.html">Component Mixins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-navigation.html">Page Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="localization.html">Localization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Request/Response Rendering</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-life-cycle.html">Page Life Cycle</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="request-processing.html">Request Processing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-rendering.html">Component Rendering</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-events.html">Component Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="url-rewriting.html">URL Rewriting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dom.html">Document Object Model (DOM)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="response-compression.html">Response Compression</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="security.html">Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https.html">HTTPS / SSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="content-type-and-markup.html">Content Type and Markup</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Data Persistence</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="persistent-page-data.html">Persistent Page Data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="session-storage.html">Session Storage</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Interacting with components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="injection.html">Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="environmental-services.html">Environmental Services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript, AJAX, CSS &amp; Binary Data</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="client-side-javascript.html">Client-Side JavaScript</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="javascript-modules.html">Javascript Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="coffeescript.html">Coffeescript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ajax-and-zones.html">AJAX and Zones</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="css.html">Cascading Style Sheets (CSS)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="assets.html">Assets</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Working with Forms</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="forms-and-validation.html">Forms and Validation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="beaneditform-guide.html">BeanEditForm Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uploading-files.html">Uploading Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bean-validation.html">Bean Validation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Logging, Debugging &amp; Testing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="logging.html">Logging</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unit-testing.html">Unit testing pages or components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integration-testing.html">Integration Testing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="development-dashboard.html">Development Dashboard</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry IOC</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-overview.html">IoC Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="symbols.html">Symbols</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="type-coercion.html">Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="case-insensitivity.html">Case Insensitivity</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="autoloading-modules.html">Autoloading Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="chainbuilder-service.html">ChainBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pipelinebuilder-service.html">PipelineBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="shadowbuilder-service.html">ShadowBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="strategybuilder-service.html">StrategyBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="defining-tapestry-ioc-services.html">Defining Tapestry IOC Services</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-modules.html">IoC Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="object-providers.html">Object Providers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-serialization.html">Service Serialization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="starting-the-ioc-registry.html">Starting the IoC Registry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="aliases.html">Aliases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="injection-in-detail.html">Injection in Detail</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ordering-by-constraints.html">Ordering by Constraints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="registry-startup.html">Registry Startup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="parallel-execution.html">Parallel Execution</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="logging-in-tapestry.html">Logging in Tapestry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-implementation-reloading.html">Service Implementation Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-advisors.html">Service Advisors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-decorators.html">Service Decorators</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="using-jsr-330-standard-annotations.html">Using JSR 330 standard annotations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="operation-tracker.html">Operation Tracker</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Add-ons and Integrations</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Built-in</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="hibernate.html">Hibernate Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="jpa.html">JPA Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integrating-with-spring-framework.html">Spring</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="third-party-modules.html">Third Party Modules</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Release Notes</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.4.html">Tapestry 5.4</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.3.html">Tapestry 5.3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.2.html">Tapestry 5.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.1.html">Tapestry 5.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.0.html">Tapestry 5.0</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cookbook</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/default-parameter.html">Default Parameter</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/overriding-exception-reporting.html">Overriding Exception Reporting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/error-page-recipe.html">Error Page Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/supporting-informal-parameters.html">Supporting Informal Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/component-libraries.html">Component Libraries</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/switching-cases.html">Switching Cases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/enum-parameter-recipe.html">Enum Parameter Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/extending-the-if-component.html">Extending The If Component</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/meta-programming-page-content.html">Meta-Programming Page Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="cookbook/ioc-cookbook.html">IoC Cookbook</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-basic-services-and-injection.html">IoC Cookbook - Basic Services and Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-overriding-ioc-services.html">IoC Cookbook - Overriding IoC Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-patterns.html">IoC Cookbook - Patterns</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-service-configurations.html">IoC Cookbook - Service Configurations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/using-select-with-a-list.html">Using Select With a List</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/performance-and-clustering.html">Performance and Clustering</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/google-app-engine.html">Google App Engine (GAE)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frequently Asked Questions (FAQ)</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/general.html">General Questions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/templating-and-markup.html">Templating and Markup FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/ajax.html">AJAX FAQ</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">User Guide</span>
+    <span class="version">5.4</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../main/about.html">Home</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../current/index.html">User Guide</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../current/index.html">5.8</a>
+        </li>
+        <li class="version">
+          <a href="../5.7/index.html">5.7</a>
+        </li>
+        <li class="version">
+          <a href="../5.6/index.html">5.6</a>
+        </li>
+        <li class="version">
+          <a href="../5.5/index.html">5.5</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">5.4</a>
+        </li>
+        <li class="version">
+          <a href="../5.3/index.html">5.3</a>
+        </li>
+        <li class="version">
+          <a href="../5.2/index.html">5.2</a>
+        </li>
+        <li class="version">
+          <a href="../5.1/index.html">5.1</a>
+        </li>
+        <li class="version">
+          <a href="../5/index.html">5.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../main/about.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">User Guide</a></li>
+    <li>Tapestry Core</li>
+    <li>JavaScript, AJAX, CSS &amp; Binary Data</li>
+    <li><a href="javascript-modules.html">Javascript Modules</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">5.4</button>
+  <div class="version-menu">
+    <a class="version" href="../current/javascript-modules.html">5.8</a>
+    <a class="version" href="../5.7/javascript-modules.html">5.7</a>
+    <a class="version" href="../5.6/javascript-modules.html">5.6</a>
+    <a class="version" href="../5.5/javascript-modules.html">5.5</a>
+    <a class="version is-current" href="javascript-modules.html">5.4</a>
+    <a class="version is-missing" href="../5.3/index.html">5.3</a>
+    <a class="version is-missing" href="../5.2/index.html">5.2</a>
+    <a class="version is-missing" href="../5.1/index.html">5.1</a>
+    <a class="version is-missing" href="../5/index.html">5.0</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Javascript Modules</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>JavaScript Modules are a mechanism for bringing modern concepts of variable scope and dependency management to JavaScript.
+Starting with version 5.4, Tapestry uses <a href="http://requirejs.org/">RequireJS</a>  modules internally, and provides support for using RequireJS modules in your own Tapestry application.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_need_for_modules"><a class="anchor" href="#_the_need_for_modules"></a>The Need for Modules</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>As web applications have evolved, the use of JavaScript in the client has expanded almost exponentially.
+This has caused all kinds of growing pains, since the original design of the web browser, and the initial design of JavaScript, was never intended for this level of complexity.
+Unlike Java, JavaScript has no native concept of a "package" or "namespace" and has the undesirable tendency to make everything a global.</p>
+</div>
+<div class="paragraph">
+<p>In the earliest days, client-side JavaScript was constructed as libraries that would define simple functions and variables:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">function onclickHelp(event) {
+  if (helpModal === undefined) {
+    helpModal = ...
+  }
+  document.getElementById("modalContainer") ...
+}
+$("#helpButton").click(onClickHelp);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>What&#8217;s not apparent here is that function <code>onclickHelp()</code> is actually attached to the global window object.
+Further, the variable <code>helpModal</code> is also not local, it too gets defined on the window object.
+If you start to mix and match JavaScript from multiple sources, perhaps various kinds of third-party UI widgets, you start to run the risk of name collisions.</p>
+</div>
+<div class="paragraph">
+<p>One approach to solving these kinds of problems is a <em>hygienic function wrapper</em>.
+The concept here is to define a function and immediately execute it.
+The functions and variables defined inside the function are private to that function.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">(function() {
+  var helpModal = null;
+
+  function onClickHelp(event) { ... }
+
+  $("#helpButton").click(onClickHelp);
+})();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This is an improvement in so far as it assists with name collisions.
+The variables and functions can only be referenced by name from inside the wrapper.</p>
+</div>
+<div class="paragraph">
+<p>However, if you are building a library of code to reuse across your application (or building a library to share between applications) then something is still missing: a way to expose just the function you want from inside you wrapper to the outside world.</p>
+</div>
+<div class="paragraph">
+<p>The old-school route is to choose a hopefully unique prefix, building a cumbersome name (perhaps <code>myapp_onClickHelp</code>), and attach that to the global window object.
+But that just makes your code that much uglier, and leaves you open to problems if not all members of your development team understand the rules and prefixes.</p>
+</div>
+<div class="paragraph">
+<p>Enter the <a href="https://github.com/amdjs/amdjs-api/blob/master/AMD.md">Asynchronous Module Definition (AMD)</a>.
+The AMD is pragmatic way to avoid globals, and adds a number of bells and whistles that can themselves be quite important.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Tapestry uses the <a href="http://requirejs.org/">RequireJS</a> library as the client-side implementation of AMD.
+It supplements this on the server-side with Tapestry services for even more flexibility.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Under AMD, JavaScript is broken up into modules.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Modules have a unique name, such as t5/core/dom or app/tree-viewer.</p>
+</li>
+<li>
+<p>A module has a constructor function that exports a value.</p>
+</li>
+<li>
+<p>A module defines dependencies on any number of other modules.</p>
+</li>
+<li>
+<p>The export of each dependency is provided as a parameter to the constructor function.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Here&#8217;s an example from Tapestry itself:</p>
+</div>
+<div class="listingblock">
+<div class="title">Module t5/core/confirm-click</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">(function() {
+  define(["jquery", "./events", "./dom", "bootstrap/modal"], function($, events, dom) {
+    var runDialog;
+    runDialog = function(options) {
+      ...
+    };
+    $("body").on("click", "[data-confirm-message]:not(.disabled)", function() {
+      ...
+    });
+    dom.onDocument("click", "a[data-confirm-message]:not(.disabled)", function() {
+      ...
+    });
+    return {
+      runDialog: runDialog
+    };
+  });
+}).call(this);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>confirm-click</code> module is used to raise a modal confirmation dialog when certain buttons are clicked; it is loaded by the <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/corelib/mixins/Confirm.html">Confirm</a></code> mixin.</p>
+</div>
+<div class="paragraph">
+<p>This module depends on several other modules: <code>jquery</code>, <code>t5/core/events</code>, <code>t5/core/dom</code>, and <code>bootstrap/modal</code>.
+These other modules will have been loaded, and their constructor functions executed, before the <code>confirm-click</code> constructor function is executed.
+The export of each module is provided as a parameter in the order in which the dependencies are defined.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+With AMD, the JavaScript libraries may be loaded in parallel by the browser (that&#8217;s the asynchronous part of AMD);
+RequireJS manages the dependency graph and invokes each function just once, as soon as its dependencies are ready, as libraries are loaded.
+In some cases, a module may be loaded just for its side effects; such modules will be listed last in the dependency array, and will not have a corresponding parameter in the dependent module&#8217;s constructor function.
+In <code>confirm-click</code>, the <code>bootstrap/modal</code> module is loaded for side-effects.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><code>confirm-click</code> defines a local function, <code>runDialog</code>.
+It performs some side-effects, attaching event handlers to the body and the document.
+The module&#8217;s export is a JavaScript object containing a function that allows other modules to raise the modal dialog.</p>
+</div>
+<div class="paragraph">
+<p>If a module truly exports only a single function and is unlikely to change, then it is acceptable to just return the function itself, not an object containing the function.
+However, returning an object makes it easier to expand the responsibilities of <code>confirm-click</code> in the future; perhaps to add a <code>dismissDialog</code> function.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_location_of_modules"><a class="anchor" href="#_location_of_modules"></a>Location of Modules</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Modules are stored as a special kind of Tapestry <code>asset</code>.
+On the server, modules are stored on the class path under <code>META-INF/modules</code>.
+In a typical environment, that means the sources will be in <code>src/main/resources/META-INF/modules</code>.</p>
+</div>
+<div class="paragraph">
+<p>Typically, your application will place it&#8217;s modules directly in this folder.
+If you are writing a reusable library, you will put modules for that library into a subfolder to prevent naming conflicts.
+Tapestry&#8217;s own modules are prefixed with <code>t5/core</code>.</p>
+</div>
+<div class="paragraph">
+<p>If you are using the optional tapestry-web-resources module (that&#8217;s a server-side module, not an AMD module), then you can write your modules as CoffeeScript files
+; Tapestry will take care of compiling them to JavaScript as necessary.</p>
+</div>
+<div class="paragraph">
+<p>The <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/services/javascript/ModuleManager.html">ModuleManager</a></code> service is the central piece of server-side support for modules.
+It supports <em>overriding</em> of existing modules by contributing overriding module definitions.
+This can be useful to <a href="http://en.wikipedia.org/wiki/Monkey_patch">monkey patch</a> an existing module supplied with Tapestry, or as part of a third-party library.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_loading_modules_from_tapestry_code"><a class="anchor" href="#_loading_modules_from_tapestry_code"></a>Loading Modules from Tapestry Code</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Often, you will have a Tapestry page or component that defines client-side behavior; such a component will need to load a module.</p>
+</div>
+<div class="paragraph">
+<p>The simplest approach is to use the <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/annotations/Import.html">@Import</a></code> annotation:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Import(module = "t5/core/confirm-click")
+public class Confirm
+{
+  ...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>module</code> attribute may either a single module name, or a list of module names.</p>
+</div>
+<div class="paragraph">
+<p>In many cases, you not only want to require the module, but invoke a function exported by the module.
+To do so you must use the <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/services/javascript/JavaScriptSupport.html">JavaScriptSupport</a></code> environmental.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Environmental
+JavaScriptSupport javaScriptSupport;
+
+...
+
+javaScriptSupport.require("example1-module")
+    .with(clientId, actionUrl); <i class="conum" data-value="1"></i><b>(1)</b>
+
+...
+
+javaScriptSupport.require("example2-module").invoke("setup")
+    .with(clientId, actionUrl); <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><code>example1-module</code> exports a single function with two parameters</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td><code>example2-module</code> exports an object and the <code>setup</code> argument is the name of the function that is invoked.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_development_mode"><a class="anchor" href="#_development_mode"></a>Development Mode</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In development mode, Tapestry will write details into the client-side console.</p>
+</div>
+<div class="listingblock">
+<div class="title">Console Output</div>
+<div class="content">
+<pre>Loading 0 libraries
+Executing 4 inits
+Loaded module app/test-support
+Loaded module bootstrap/collapse
+Loaded module bootstrap/dropdown
+Loaded module t5/core/zone
+All inits executed</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This lists modules <em>explicitly</em> loaded (for initialization), but does not include modules loaded only as dependencies.
+You can see more details about what was actually loaded using <em>view source</em>;
+RequireJS adds <code>&lt;script&gt;</code> tags to the document to load libraries and modules.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_libraries_versus_modules"><a class="anchor" href="#_libraries_versus_modules"></a>Libraries versus Modules</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tapestry still supports JavaScript libraries. When the page is loading, all libraries are loaded before any modules.</p>
+</div>
+<div class="paragraph">
+<p>Libraries are loaded sequentially, so if you can avoid using libraries, so much the better in terms of page load time.</p>
+</div>
+<div class="paragraph">
+<p>Libraries work in both normal page rendering, and Ajax partial page updates.
+Even in partial page updates, the libraries will be loaded sequentially before modules are loaded or exported functions invoked.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_aggregating_modules"><a class="anchor" href="#_aggregating_modules"></a>Aggregating Modules</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>An important part of performance for production applications is JavaScript aggregation.</p>
+</div>
+<div class="paragraph">
+<p>In development mode, you want your modules and other assets to load individually.
+For both CSS and JavaScript, smaller files that align with corresponding server-side files makes it much easier to debug problems.</p>
+</div>
+<div class="paragraph">
+<p>Unlike assets, modules can&#8217;t be fingerprinted, so on each page load, the client browser must ask the server for the module&#8217;s contents frequently (typically getting a 304 Not Modified response).</p>
+</div>
+<div class="paragraph">
+<p>This is acceptable in development mode, but quite undesirable in production.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+By default, Tapestry sets a max age of 60 (seconds) on modules, so you won&#8217;t see module requests on every page load.
+This is configurable and you may want a much higher value in production. If you are rapidly iterating on the source of a module, you may need to force the browser to reload after clearing local cache.
+Chrome has an option to disable the client-side cache when its developer tools are open.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>With JavaScript aggregation, the module can be included in the single virtual JavaScript library that represents a <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/services/javascript/JavaScript.html">JavaScript</a></code> stack.
+This significantly cuts down on both the number of requests from the client to the server, and the overall number of bytes transferred.</p>
+</div>
+<div class="paragraph">
+<p>Adding a module to the stack is not the same as <code>require</code>-ing it. In fact, you must still use <code>JavaScriptSupport.require()</code> regardless.</p>
+</div>
+<div class="paragraph">
+<p>What adding a module to a stack accomplishes is that the module&#8217;s code is downloaded in the first, initial JavaScript download; the download of the stack&#8217;s virtual library.
+When (and if) the module is required as a dependency, the code will already be present in the browser and ready to execute.</p>
+</div>
+<div class="paragraph">
+<p>Tapestry <strong>does not</strong> attempt to do dependency analysis; that is left as a manual exercise.
+Typically, if you aggregate a module, your should look at its dependencies, and aggregate those as well.
+Failure to do so will cause unwanted requests back to the Tapestry server for the dependency modules, even though the aggregated module&#8217;s code is present.</p>
+</div>
+<div class="paragraph">
+<p>Because Tapestry is open, it is possible to contribute modules even into the core JavaScript stack.
+This is done using your application&#8217;s module:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Contribute(JavaScriptStack.class) <i class="conum" data-value="1"></i><b>(1)</b>
+@Core <i class="conum" data-value="2"></i><b>(2)</b>
+public static void addAppModules(OrderedConfiguration&lt;StackExtension&gt; configuration)
+{
+    configuration.add("tree-viewer", <i class="conum" data-value="3"></i><b>(3)</b>
+        StackExtension.module("tree-viewer")); <i class="conum" data-value="4"></i><b>(4)</b>
+
+    configuration.add("app-utils", <i class="conum" data-value="3"></i><b>(3)</b>
+        StackExtension.module("app-utils")); <i class="conum" data-value="4"></i><b>(4)</b>
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Indicates we are contributing to a <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/services/javascript/JavaScriptStack.html">JavaScriptStack</a></code> service.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Since there are (or at least, could be) multiple services that implement JavaScriptStack, we provide the <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/services/Core.html">@Core</a></code> annotation to indicate which one we are contributing to (this is a marker annotation, which exists for this exact purpose).</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Each contribution has a unique id.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>It is possible to contribute, as <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/services/javascript/StackExtension.html">StackExtension</a></code> values, libraries, CSS files, other stacks, and modules; here we are contributing modules.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The core stack includes several libraries and modules; the exact configuration is subject to a number of factors (such as whether Prototype or jQuery is being used as the underlying framework).
+That being said, this is the <em>current</em> list of modules aggregated into the core stack:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>jquery</p>
+</li>
+<li>
+<p>underscore</p>
+</li>
+<li>
+<p>t5/core/</p>
+<div class="ulist">
+<ul>
+<li>
+<p>alert</p>
+</li>
+<li>
+<p>ajax</p>
+</li>
+<li>
+<p>bootstrap</p>
+</li>
+<li>
+<p>console</p>
+</li>
+<li>
+<p>dom</p>
+</li>
+<li>
+<p>events</p>
+</li>
+<li>
+<p>exception-frame</p>
+</li>
+<li>
+<p>fields</p>
+</li>
+<li>
+<p>pageinit</p>
+</li>
+<li>
+<p>messages</p>
+</li>
+<li>
+<p>util</p>
+</li>
+<li>
+<p>validation</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The optimum configuration is always a balancing act between including too little and including too much.
+Generally speaking, including too much is less costly than including too little.
+It is up to you to analyze the requests coming into your application and determine what modules should be aggregated.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

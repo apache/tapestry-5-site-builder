@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Performance and Clustering :: Apache Tapestry</title>
+    <meta name="generator" content="Antora 3.1.15">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="stylesheet" href="../../../_/css/tapestry.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../.."><img alt="Apache Tapestry Logo" src="../../../_/img/apache-tapestry-icon-dark.svg" width="60" />Apache Tapestry</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Documentation</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../../../main/getting-started.html">Getting Started</a>
+            <a class="navbar-item" href="../../../main/tutorial/">Tutorial</a>
+            <a class="navbar-item" href="../../../userguide/5.8/">User Guide</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="../../../main/community.html">Community</a>
+        <a class="navbar-item" href="../../../main/support.html">Support</a>
+        <a class="navbar-item" href="../../../main/developers.html">Developers</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Apache</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+            <a class="navbar-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
+            <a class="navbar-item" href="https://www.apache.org/licenses/">License</a>
+            <a class="navbar-item" href="https://www.apache.org/security/">Security</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="../../../main/download.html">Download</a>
+          </span>
+        </div>
+        <div class="navbar-brand">
+          <a href="https://www.apache.org/">
+          <img alt="The Apache Software Foundation" src="../../../_/img/asf_logo.svg" width="200" height="63" style="padding-top: 5px; padding-bottom: 5px; background-color: white">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="body">
+<div class="nav-container" data-component="userguide" data-version="5.4">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">User Guide</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Introduction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry Core</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basics</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../project-layout.html">Project Layout</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../runtime-exceptions.html">Runtime Exceptions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../class-reloading.html">Class Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../component-reference.html">Component Reference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../annotations.html">Annotations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Pages and Components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../component-classes.html">Component Classes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../component-templates.html">Component Templates</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../property-expressions.html">Property Expressions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../component-parameters.html">Component Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../parameter-type-coercion.html">Parameter Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../layout-component.html">Layout Component</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../component-mixins.html">Component Mixins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../page-navigation.html">Page Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../localization.html">Localization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Request/Response Rendering</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../page-life-cycle.html">Page Life Cycle</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../request-processing.html">Request Processing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../component-rendering.html">Component Rendering</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../component-events.html">Component Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../url-rewriting.html">URL Rewriting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../dom.html">Document Object Model (DOM)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../response-compression.html">Response Compression</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../security.html">Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../https.html">HTTPS / SSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../content-type-and-markup.html">Content Type and Markup</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Data Persistence</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../persistent-page-data.html">Persistent Page Data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../session-storage.html">Session Storage</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Interacting with components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../injection.html">Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../environmental-services.html">Environmental Services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript, AJAX, CSS &amp; Binary Data</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../client-side-javascript.html">Client-Side JavaScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../javascript-modules.html">Javascript Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../coffeescript.html">Coffeescript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ajax-and-zones.html">AJAX and Zones</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../css.html">Cascading Style Sheets (CSS)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../assets.html">Assets</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Working with Forms</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../forms-and-validation.html">Forms and Validation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../beaneditform-guide.html">BeanEditForm Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../uploading-files.html">Uploading Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../bean-validation.html">Bean Validation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Logging, Debugging &amp; Testing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../logging.html">Logging</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../unit-testing.html">Unit testing pages or components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../integration-testing.html">Integration Testing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../development-dashboard.html">Development Dashboard</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry IOC</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../ioc-overview.html">IoC Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../symbols.html">Symbols</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../type-coercion.html">Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../case-insensitivity.html">Case Insensitivity</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../autoloading-modules.html">Autoloading Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../chainbuilder-service.html">ChainBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipelinebuilder-service.html">PipelineBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../shadowbuilder-service.html">ShadowBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../strategybuilder-service.html">StrategyBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../defining-tapestry-ioc-services.html">Defining Tapestry IOC Services</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../ioc-modules.html">IoC Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../ioc-configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../object-providers.html">Object Providers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../service-serialization.html">Service Serialization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../starting-the-ioc-registry.html">Starting the IoC Registry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../aliases.html">Aliases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../injection-in-detail.html">Injection in Detail</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../ordering-by-constraints.html">Ordering by Constraints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../registry-startup.html">Registry Startup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../parallel-execution.html">Parallel Execution</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../logging-in-tapestry.html">Logging in Tapestry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../service-implementation-reloading.html">Service Implementation Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../service-advisors.html">Service Advisors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../service-decorators.html">Service Decorators</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jsr-330-standard-annotations.html">Using JSR 330 standard annotations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../operation-tracker.html">Operation Tracker</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Add-ons and Integrations</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Built-in</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../hibernate.html">Hibernate Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../jpa.html">JPA Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../integrating-with-spring-framework.html">Spring</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../third-party-modules.html">Third Party Modules</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Release Notes</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes-5.4.html">Tapestry 5.4</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes-5.3.html">Tapestry 5.3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes-5.2.html">Tapestry 5.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes-5.1.html">Tapestry 5.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes-5.0.html">Tapestry 5.0</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cookbook</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="default-parameter.html">Default Parameter</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="overriding-exception-reporting.html">Overriding Exception Reporting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="error-page-recipe.html">Error Page Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="supporting-informal-parameters.html">Supporting Informal Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="component-libraries.html">Component Libraries</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="switching-cases.html">Switching Cases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="enum-parameter-recipe.html">Enum Parameter Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="extending-the-if-component.html">Extending The If Component</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="meta-programming-page-content.html">Meta-Programming Page Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="ioc-cookbook.html">IoC Cookbook</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ioc-cookbook-basic-services-and-injection.html">IoC Cookbook - Basic Services and Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ioc-cookbook-overriding-ioc-services.html">IoC Cookbook - Overriding IoC Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ioc-cookbook-patterns.html">IoC Cookbook - Patterns</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ioc-cookbook-service-configurations.html">IoC Cookbook - Service Configurations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="using-select-with-a-list.html">Using Select With a List</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="performance-and-clustering.html">Performance and Clustering</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="google-app-engine.html">Google App Engine (GAE)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frequently Asked Questions (FAQ)</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../faq/general.html">General Questions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../faq/templating-and-markup.html">Templating and Markup FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../faq/ajax.html">AJAX FAQ</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">User Guide</span>
+    <span class="version">5.4</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../../main/about.html">Home</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../../current/index.html">User Guide</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../current/index.html">5.8</a>
+        </li>
+        <li class="version">
+          <a href="../../5.7/index.html">5.7</a>
+        </li>
+        <li class="version">
+          <a href="../../5.6/index.html">5.6</a>
+        </li>
+        <li class="version">
+          <a href="../../5.5/index.html">5.5</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">5.4</a>
+        </li>
+        <li class="version">
+          <a href="../../5.3/index.html">5.3</a>
+        </li>
+        <li class="version">
+          <a href="../../5.2/index.html">5.2</a>
+        </li>
+        <li class="version">
+          <a href="../../5.1/index.html">5.1</a>
+        </li>
+        <li class="version">
+          <a href="../../5/index.html">5.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../main/about.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">User Guide</a></li>
+    <li>Cookbook</li>
+    <li><a href="performance-and-clustering.html">Performance and Clustering</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">5.4</button>
+  <div class="version-menu">
+    <a class="version" href="../../current/cookbook/performance-and-clustering.html">5.8</a>
+    <a class="version" href="../../5.7/cookbook/performance-and-clustering.html">5.7</a>
+    <a class="version" href="../../5.6/cookbook/performance-and-clustering.html">5.6</a>
+    <a class="version" href="../../5.5/cookbook/performance-and-clustering.html">5.5</a>
+    <a class="version is-current" href="performance-and-clustering.html">5.4</a>
+    <a class="version" href="../../5.3/cookbook/performance-and-clustering.html">5.3</a>
+    <a class="version" href="../../5.2/cookbook/performance-and-clustering.html">5.2</a>
+    <a class="version" href="../../5.1/cookbook/performance-and-clustering.html">5.1</a>
+    <a class="version" href="../../5/cookbook/performance-and-clustering.html">5.0</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Performance and Clustering</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tapestry has a great <strong>performance</strong> story to tell.
+It&#8217;s designed to take advantage of the speed of the modern JVM: no reflection, built to support a high level of concurrency without contention, and clean, lightweight code paths.
+In addition, there is built-in integrated GZIP content compression, far-future expires headers on static resources, JavaScript aggregation and minification, and an intentionally lightweight use of the HTTPSession.
+The result is a blistering fast framework.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_performance_tips"><a class="anchor" href="#_performance_tips"></a>Performance Tips</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>But even with all of Tapestry&#8217;s built-in speediness, to really get top performance you&#8217;ll need to be sure you&#8217;re not hamstringing Tapestry.
+As a start, use the following checklist:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Ensure (be absolutely sure) that <a href="../configuration.html" class="xref page">Production Mode</a> is turned on in production.</p>
+</li>
+<li>
+<p>Minimize the use of the HTTPSession (see below), especially if you&#8217;re using clustering.</p>
+</li>
+<li>
+<p>Set <a href="../configuration.html" class="xref page">tapestry.clustered-sessions</a> to <code>false</code> if you aren&#8217;t using clustering.</p>
+</li>
+<li>
+<p>Organize your JavaScript files into <a href="../client-side-javascript.html" class="xref page">JavaScriptStacks</a>.</p>
+</li>
+<li>
+<p>Ensure that your static resources (images, CSS, JavaScript) are being cached by the browser.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Use <code>asset:</code> or <code>context:</code> <a href="../component-parameters.html" class="xref page">binding prefixes</a> for all links to static resources (images, CSS, JavaScript).</p>
+</li>
+<li>
+<p>Make sure that your firewall, proxy server, load balancer, front-end web servers, and app servers all allow caching of static resources.</p>
+</li>
+<li>
+<p>Ensure <code>cache-control</code> and <code>vary</code> HTTP headers are set correctly for your static resources.</p>
+</li>
+<li>
+<p>Use a client-based tool (like Firebug) to examine the requests that your browser makes as you navigate through the site. You should not see repeated requests for static resources.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Consider using a <a href="http://en.wikipedia.org/wiki/Content_delivery_network">Content Delivery Network</a> for static parts of your site.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>After all of the above issues are addressed, if you still have performance problems, they probably aren&#8217;t related to Tapestry.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_clustering_versus_sticky_sessions"><a class="anchor" href="#_clustering_versus_sticky_sessions"></a>Clustering versus Sticky Sessions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For web applications, <strong>clustering</strong> is a load-balancing technique in which multiple application servers are set up to behave as one big server.
+Generally this requires replicating HttpSession data across the servers, to ensure that a user&#8217;s web interactions will continue without interruption regardless of which server handles the next request.
+Session replication achieves very high reliability, but it incurs an extra performance cost (due to the serializing and deserializing of session data and the extra network traffic required).</p>
+</div>
+<div class="paragraph">
+<p>In contrast, <a href="https://en.wikipedia.org/wiki/Load_balancing_(computing)#Persistence">Sticky Sessions</a> (also called <em>session persistence</em> or <em>sticky persistence</em>) is a load balancing technique in which each session is assigned to a particular server for the duration of the session.
+This approach doesn&#8217;t require copying HTTPSession data between servers, so it&#8217;s very scalable.
+But if a server goes down, all of its sessions are lost.</p>
+</div>
+<div class="paragraph">
+<p>In general, the sticky sessions approach is the way to go when possible (that is, when performance is more important than session survival).
+It represents a much more efficient use of resources &#8230;&#8203; you are scaling <em>out</em> not <em>up</em>, which is always cheaper.
+It also means that you don&#8217;t have to be as careful about what goes into the HTTPSession.</p>
+</div>
+<div class="paragraph">
+<p><em>For details on setting up clustering and sticky sessions, see the documentation of whatever load balancer you are using</em>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_clustering"><a class="anchor" href="#_clustering"></a>Clustering</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tapestry is designed to be "a good citizen" of an application server that supports clustering.
+It is careful about what it writes into the HttpSession.
+The framework understands that the server that receives a request may not be the same one that rendered the page initially; this knowledge affects many code paths, and it guides the approach Tapestry takes to caching page and component properties.</p>
+</div>
+<div class="paragraph">
+<p>Your part is to properly manage the objects put into the HttpSession (via <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/annotations/SessionAttribute.html">@SessionAttribute</a></code>, <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/annotations/SessionState.html">@SessionState</a></code> or <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/annotations/Persist.html">@Persist</a></code>; see <a href="../page-navigation.html" class="xref page">Page Activation</a> and <a href="using-select-with-a-list.html" class="xref page">Using Select With a List</a>):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Don&#8217;t store anything in the session that you don&#8217;t have to. Principally this means minimizing the use of <code>@Persist</code>, storing only IDs in the session rather than whole entities.</p>
+</li>
+<li>
+<p>Where possible, persist only objects that are immutable (i.e., <code>String</code>, or a primitive or wrapper type).</p>
+</li>
+<li>
+<p>Only put <em>serializable</em> objects into the session.</p>
+</li>
+<li>
+<p>Make use of the <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/annotations/ImmutableSessionPersistedObject.html">@ImmutableSessionPersistedObject</a></code> annotation and javadoc:org.apache.tapestry5.OptimizedSessionPersistedObject interface (both described below).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Again, Tapestry is a good citizen, but from the application server&#8217;s point of view, it&#8217;s just another servlet application.
+The heavy lifting here is application server specific.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_clustering_issues"><a class="anchor" href="#_clustering_issues"></a>Clustering Issues</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Servlet API was designed with the intention that there would be only a modest amount of server-side state, and that the stored values would be individual numbers and strings, and thus, immutable.</p>
+</div>
+<div class="paragraph">
+<p>However, many web applications do not use the HttpSession this way, instead storing large, mutable objects in the session.
+This is not a problem for single servers, but in a cluster, anything stored in the session must be serialized to a bytestream and distributed to other servers within the cluster, and restored there.</p>
+</div>
+<div class="paragraph">
+<p>Most application servers perform that serialization and distribution whenever <code>HttpSession.setAttribute()</code> is called.
+This creates a data consistency problem for mutable objects, because if you read a mutable session object, change its state, but don&#8217;t invoke <code>setAttribute()</code>, the changes will be isolated to just a single server in the cluster.</p>
+</div>
+<div class="paragraph">
+<p>Tapestry attempts to solve this: any session-persisted object that is read during a request will be re-stored back into the HttpSession at the end of the request.
+This ensures that changed internal state of those mutable objects is properly replicated around the cluster.</p>
+</div>
+<div class="paragraph">
+<p>But while this solution solves the data consistency problem, it does so at the expense of performance, since all of those calls to <code>setAttribute()</code> result in extra session data being replicated needlessly if the internal state of the mutable object hasn&#8217;t changed.</p>
+</div>
+<div class="paragraph">
+<p>Tapestry has solutions to this, too:</p>
+</div>
+<div class="sect2">
+<h3 id="_immutablesessionpersistedobject_annotation"><a class="anchor" href="#_immutablesessionpersistedobject_annotation"></a>@ImmutableSessionPersistedObject Annotation</h3>
+<div class="paragraph">
+<p>Tapestry knows that Java&#8217;s <code>String</code>, <code>Number</code> and <code>Boolean</code> classes are immutable.
+Immutable objects do not require a re-store into the session.</p>
+</div>
+<div class="paragraph">
+<p>You can mark your own session objects as immutable (and thus not requiring session replication) using the <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/annotations/ImmutableSessionPersistedObject.html">@ImmutableSessionPersistedObject</a></code>  annotation.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_optimizedsessionpersistedobject_interface"><a class="anchor" href="#_optimizedsessionpersistedobject_interface"></a>OptimizedSessionPersistedObject Interface</h3>
+<div class="paragraph">
+<p>The <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/OptimizedSessionPersistedObject.html">OptimizedSessionPersistedObject</a></code> interface allows an object to control this behavior.
+An object with this interface can track when its mutable state changes.
+Typically, you should extend from the <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/BaseOptimizedSessionPersistedObject.html">BaseOptimizedSessionPersistedObject</a></code> base class.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sessionpersistedobjectanalyzer_service"><a class="anchor" href="#_sessionpersistedobjectanalyzer_service"></a>SessionPersistedObjectAnalyzer Service</h3>
+<div class="paragraph">
+<p>The <code><a href="https://tapestry.apache.org/5.4.5/apidocs/org/apache/tapestry5/services/SessionPersistedObjectAnalyzer.html">SessionPersistedObjectAnalyzer</a></code> service is ultimately responsible for determining whether a session persisted object is dirty or not (dirty meaning in need of a restore into the session).
+This is an extensible service where new strategies, for new classes, can be introduced.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_related_articles"><a class="anchor" href="#_related_articles"></a>Related Articles</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="../persistent-page-data.html" class="xref page">Persistent Page Data</a></p>
+</li>
+<li>
+<p><a href="../session-storage.html" class="xref page">Session Storage</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script src="../../../_/js/vendor/lunr.js"></script>
+<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
+<script async src="../../../search-index.js"></script>
+  </body>
+</html>

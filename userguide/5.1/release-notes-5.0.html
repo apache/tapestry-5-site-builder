@@ -1,0 +1,3138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Tapestry 5.0 :: Apache Tapestry</title>
+    <meta name="generator" content="Antora 3.1.15">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/tapestry.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../.."><img alt="Apache Tapestry Logo" src="../../_/img/apache-tapestry-icon-dark.svg" width="60" />Apache Tapestry</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Documentation</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../../main/getting-started.html">Getting Started</a>
+            <a class="navbar-item" href="../../main/tutorial/">Tutorial</a>
+            <a class="navbar-item" href="../../userguide/5.8/">User Guide</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="../../main/community.html">Community</a>
+        <a class="navbar-item" href="../../main/support.html">Support</a>
+        <a class="navbar-item" href="../../main/developers.html">Developers</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Apache</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+            <a class="navbar-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
+            <a class="navbar-item" href="https://www.apache.org/licenses/">License</a>
+            <a class="navbar-item" href="https://www.apache.org/security/">Security</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="../../main/download.html">Download</a>
+          </span>
+        </div>
+        <div class="navbar-brand">
+          <a href="https://www.apache.org/">
+          <img alt="The Apache Software Foundation" src="../../_/img/asf_logo.svg" width="200" height="63" style="padding-top: 5px; padding-bottom: 5px; background-color: white">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="body">
+<div class="nav-container" data-component="userguide" data-version="5.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">User Guide</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Introduction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry Core</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basics</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="project-layout.html">Project Layout</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="runtime-exceptions.html">Runtime Exceptions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="class-reloading.html">Class Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-reference.html">Component Reference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="annotations.html">Annotations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Pages and Components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-classes.html">Component Classes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-templates.html">Component Templates</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="property-expressions.html">Property Expressions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-parameters.html">Component Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="parameter-type-coercion.html">Parameter Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="layout-component.html">Layout Component</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-mixins.html">Component Mixins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-navigation.html">Page Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="localization.html">Localization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Request/Response Rendering</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-life-cycle.html">Page Life Cycle</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="request-processing.html">Request Processing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-rendering.html">Component Rendering</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-events.html">Component Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="url-rewriting.html">URL Rewriting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dom.html">Document Object Model (DOM)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="response-compression.html">Response Compression</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="security.html">Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https.html">HTTPS / SSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="content-type-and-markup.html">Content Type and Markup</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Data Persistence</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="persistent-page-data.html">Persistent Page Data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="session-storage.html">Session Storage</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Interacting with components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="injection.html">Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="environmental-services.html">Environmental Services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript, AJAX, CSS &amp; Binary Data</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="client-side-javascript.html">Client-Side JavaScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ajax-and-zones.html">AJAX and Zones</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="css.html">Cascading Style Sheets (CSS)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="assets.html">Assets</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Working with Forms</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="forms-and-validation.html">Forms and Validation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="beaneditform-guide.html">BeanEditForm Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uploading-files.html">Uploading Files</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Logging, Debugging &amp; Testing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="logging.html">Logging</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unit-testing.html">Unit testing pages or components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integration-testing.html">Integration Testing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="development-dashboard.html">Development Dashboard</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry IOC</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-overview.html">IoC Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="symbols.html">Symbols</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="type-coercion.html">Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="case-insensitivity.html">Case Insensitivity</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="autoloading-modules.html">Autoloading Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="chainbuilder-service.html">ChainBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pipelinebuilder-service.html">PipelineBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="shadowbuilder-service.html">ShadowBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="strategybuilder-service.html">StrategyBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="defining-tapestry-ioc-services.html">Defining Tapestry IOC Services</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-modules.html">IoC Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="object-providers.html">Object Providers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-serialization.html">Service Serialization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="starting-the-ioc-registry.html">Starting the IoC Registry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="aliases.html">Aliases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="injection-in-detail.html">Injection in Detail</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ordering-by-constraints.html">Ordering by Constraints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="registry-startup.html">Registry Startup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="parallel-execution.html">Parallel Execution</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="logging-in-tapestry.html">Logging in Tapestry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-advisors.html">Service Advisors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-decorators.html">Service Decorators</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="operation-tracker.html">Operation Tracker</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Add-ons and Integrations</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Built-in</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="hibernate.html">Hibernate Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-report.html">Component Report</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integrating-with-spring-framework.html">Spring</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="third-party-modules.html">Third Party Modules</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Release Notes</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.1.html">Tapestry 5.1</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="release-notes-5.0.html">Tapestry 5.0</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cookbook</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/default-parameter.html">Default Parameter</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/overriding-exception-reporting.html">Overriding Exception Reporting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/error-page-recipe.html">Error Page Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/supporting-informal-parameters.html">Supporting Informal Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/switching-cases.html">Switching Cases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/enum-parameter-recipe.html">Enum Parameter Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/extending-the-if-component.html">Extending The If Component</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="cookbook/ioc-cookbook.html">IoC Cookbook</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-basic-services-and-injection.html">IoC Cookbook - Basic Services and Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-overriding-ioc-services.html">IoC Cookbook - Overriding IoC Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-patterns.html">IoC Cookbook - Patterns</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-service-configurations.html">IoC Cookbook - Service Configurations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/performance-and-clustering.html">Performance and Clustering</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frequently Asked Questions (FAQ)</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/general.html">General Questions</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">User Guide</span>
+    <span class="version">5.1</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../main/about.html">Home</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../current/index.html">User Guide</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../current/index.html">5.8</a>
+        </li>
+        <li class="version">
+          <a href="../5.7/index.html">5.7</a>
+        </li>
+        <li class="version">
+          <a href="../5.6/index.html">5.6</a>
+        </li>
+        <li class="version">
+          <a href="../5.5/index.html">5.5</a>
+        </li>
+        <li class="version">
+          <a href="../5.4/index.html">5.4</a>
+        </li>
+        <li class="version">
+          <a href="../5.3/index.html">5.3</a>
+        </li>
+        <li class="version">
+          <a href="../5.2/index.html">5.2</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">5.1</a>
+        </li>
+        <li class="version">
+          <a href="../5/index.html">5.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../main/about.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">User Guide</a></li>
+    <li>Release Notes</li>
+    <li><a href="release-notes-5.0.html">Tapestry 5.0</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">5.1</button>
+  <div class="version-menu">
+    <a class="version" href="../current/release-notes-5.0.html">5.8</a>
+    <a class="version" href="../5.7/release-notes-5.0.html">5.7</a>
+    <a class="version" href="../5.6/release-notes-5.0.html">5.6</a>
+    <a class="version" href="../5.5/release-notes-5.0.html">5.5</a>
+    <a class="version" href="../5.4/release-notes-5.0.html">5.4</a>
+    <a class="version" href="../5.3/release-notes-5.0.html">5.3</a>
+    <a class="version" href="../5.2/release-notes-5.0.html">5.2</a>
+    <a class="version is-current" href="release-notes-5.0.html">5.1</a>
+    <a class="version" href="../5/release-notes-5.0.html">5.0</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Tapestry 5.0</h1>
+<div class="sect1">
+<h2 id="_tapestry_version_5_0_19"><a class="anchor" href="#_tapestry_version_5_0_19"></a>Tapestry Version 5.0.19</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_bugs_fixed"><a class="anchor" href="#_bugs_fixed"></a>Bugs Fixed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAP5-419 – Logging of component class transformations has typo in prefix</p>
+</li>
+<li>
+<p>TAP5-449 – @CleanupRender Render phase methods not always invoked</p>
+</li>
+<li>
+<p>TAP5-815 – Asset dispatcher allows any file inside the webapp visible and downloadable</p>
+</li>
+<li>
+<p>TAP5-894 – Fix PartialMarkupDocumentLinkerTest.stylesheet_link()</p>
+</li>
+<li>
+<p>TAP5-936 – Tapestry wiki link links to nothing for locales other then en</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_improvements_made"><a class="anchor" href="#_improvements_made"></a>Improvements Made</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAP5-417 – Tapestry Performance Improvements</p>
+</li>
+<li>
+<p>TAP5-762 – Upgrade Selenium dependencies to version 1.0.1</p>
+</li>
+<li>
+<p>TAP5-934 – Update javassist version + improve error reporting in OneShotLock</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tasks_completed"><a class="anchor" href="#_tasks_completed"></a>Tasks Completed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAP5-819 – remove ide-specific files from all sub-modules and add them to svn:ignore</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tapestry_version_5_0_18"><a class="anchor" href="#_tapestry_version_5_0_18"></a>Tapestry Version 5.0.18</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_bugs_fixed_2"><a class="anchor" href="#_bugs_fixed_2"></a>Bugs Fixed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAP5-399 – Modified application state objects are not persisted back to the session at the end of the request</p>
+</li>
+<li>
+<p>TAP5-401 – When rendering HTML content (not XML) Tapestry should always render open and close tags for most elements, even if the content is empty</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tapestry_version_5_0_17"><a class="anchor" href="#_tapestry_version_5_0_17"></a>Tapestry Version 5.0.17</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_bugs_fixed_3"><a class="anchor" href="#_bugs_fixed_3"></a>Bugs Fixed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAP5-354 – BeanEditForm guide references parameter "remove" which is now called "exclude"</p>
+</li>
+<li>
+<p>TAP5-356 – Link to the Node JavaDoc from the "New And Of Note" section of the project page is broken</p>
+</li>
+<li>
+<p>TAP5-357 – Tapestry documentation should clearly/boldly identify the release number</p>
+</li>
+<li>
+<p>TAP5-362 – Linking to an index page can result in an empty href attribute on a PageLink, which is treated by the browser as staying on the same page</p>
+</li>
+<li>
+<p>TAP5-370 – Error from DocumentLinker about missing &lt;html&gt; tag, even for XML document w/o JavaScript</p>
+</li>
+<li>
+<p>TAP5-373 – When JavaScript libraries are moved to the "top" of the document, they should be added to the &lt;head&gt;, not the &lt;body&gt;</p>
+</li>
+<li>
+<p>TAP5-377 – Broken links inside on project site to pipeline description and to JIRA</p>
+</li>
+<li>
+<p>TAP5-378 – Missing i18n files for Brazilian Portuguese</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_improvements_made_2"><a class="anchor" href="#_improvements_made_2"></a>Improvements Made</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAP5-365 – Localization support for Japanese</p>
+</li>
+<li>
+<p>TAP5-380 – Add localiztion support for Greek</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tasks_completed_2"><a class="anchor" href="#_tasks_completed_2"></a>Tasks Completed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAP5-379 – Add the Ars Machina Project to the list of Tapestry 5-related packages</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tapestry_version_5_0_16"><a class="anchor" href="#_tapestry_version_5_0_16"></a>Tapestry Version 5.0.16</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_bugs_fixed_4"><a class="anchor" href="#_bugs_fixed_4"></a>Bugs Fixed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAP5-1 – Clicking on a link that updates a zone before the page has fully loaded will result in a full page update and, often, a server-side exception</p>
+</li>
+<li>
+<p>TAP5-4 – Document the need to version classpath assets to prevent unwanted client browser caching</p>
+</li>
+<li>
+<p>TAP5-10 – An onActivate() event handler on a page can cause PageTester to fail with a NullPointerException</p>
+</li>
+<li>
+<p>TAP5-22 – Better client side reporting of problems with Zones and triggers is needed</p>
+</li>
+<li>
+<p>TAP5-23 – TextStreamResponse needs a charset</p>
+</li>
+<li>
+<p>TAP5-25 – Client-side validation is triggered onblur even when switching to a different form in the same page, or to a non-form element such as a link</p>
+</li>
+<li>
+<p>TAP5-28 – Image shows through autocomplete-menu</p>
+</li>
+<li>
+<p>TAP5-32 – It is not possible to include a null or blank field as part of an event or page activation context</p>
+</li>
+<li>
+<p>TAP5-34 – When using a Grid inside a Form, sorting the Grid may cause updates (when the form is submitted) to be applied to the wrong objects</p>
+</li>
+<li>
+<p>TAP5-47 – Cookie is not a secure cookie even though all connection are HTTPS connections</p>
+</li>
+<li>
+<p>TAP5-50 – Tabbing out of a form, including clicking a link, causes distracting client-side validations of the field just exitted</p>
+</li>
+<li>
+<p>TAP5-105 – Defining a component in the class that does not appear in the template should be an exception (not a logged, and ignored, warning)</p>
+</li>
+<li>
+<p>TAP5-119 – Tapestry should not use the page/component Logger for internal logging of class transformation and event dispatch logic</p>
+</li>
+<li>
+<p>TAP5-127 – Incorrect encoding on Danish messages files leads to UnknownFormatConversionException</p>
+</li>
+<li>
+<p>TAP5-128 – Render phase short circuiting fails to abort the event when mixins are present on the component, resulting in an IllegalStateException when trying to store a subsequent result value</p>
+</li>
+<li>
+<p>TAP5-131 – BeanEditForm guide example about creating the FieldTranslator is inaccurate and out of date</p>
+</li>
+<li>
+<p>TAP5-132 – ComponentSource#getPage(String) does not handle a blank page name correctly</p>
+</li>
+<li>
+<p>TAP5-135 – Attempting to set a default sort constraint on the Grid will cause an NullPointerException inside Grid.getSortConstraints()</p>
+</li>
+<li>
+<p>TAP5-136 – Although hibernate dependencies are not longer provided the documentation still says they are</p>
+</li>
+<li>
+<p>TAP5-157 – Add a LinkSubmit component, for submitting a Form via a clickable link</p>
+</li>
+<li>
+<p>TAP5-224 – DateField shows day abbreviation labels in wrong order for some non-english locales</p>
+</li>
+<li>
+<p>TAP5-225 – DateField shows empty selection after first date select</p>
+</li>
+<li>
+<p>TAP5-227 – Hibernate dependencies are incomplete</p>
+</li>
+<li>
+<p>TAP5-229 – Upgrade Prototype to version 1.6.0.3 to address positioning problems in IE6/7 that cause spurious client-side exceptions</p>
+</li>
+<li>
+<p>TAP5-230 – Defining a service that implements the HibernateConfigurer service causes injection exceptions (due to the ambiguity)</p>
+</li>
+<li>
+<p>TAP5-233 – Ajax requests that fail give no indication on the client side; instead, an error should be presented to the user as some form of popup</p>
+</li>
+<li>
+<p>TAP5-235 – The Tapestry Exception Report page should set a response status of SC_INTERNAL_SERVER_ERROR</p>
+</li>
+<li>
+<p>TAP5-238 – Component reference for Grid&#8217;s empty parameter is misleading; provide a good example</p>
+</li>
+<li>
+<p>TAP5-240 – Tapestry.Initializer.validate() references non-existent variable</p>
+</li>
+<li>
+<p>TAP5-241 – Doc out of date: Hibernate version</p>
+</li>
+<li>
+<p>TAP5-249 – Links from tapestry5-annotations page to tapestry-ioc and tapestry-core are broken</p>
+</li>
+<li>
+<p>TAP5-253 – Unable to effectively override default validation messages globally</p>
+</li>
+<li>
+<p>TAP5-256 – Page Pool Limit exhausted when exception occurs (during PageAttached lifecycle) on a link</p>
+</li>
+<li>
+<p>TAP5-257 – NPE in RequestFilter if ApplicationStateManager is used</p>
+</li>
+<li>
+<p>TAP5-258 – RequestPageCache should canonicalize page name</p>
+</li>
+<li>
+<p>TAP5-261 – Palette option reordering broken in IE</p>
+</li>
+<li>
+<p>TAP5-263 – Tapestry should produce XML-style output (not SGML) even for the text/html content type, for best compatibility with browsers</p>
+</li>
+<li>
+<p>TAP5-268 – UTF8 characters are not supported in the autocomplete mixin</p>
+</li>
+<li>
+<p>TAP5-272 – File uploads that exceed the upload limit throw an uncatchable exception; Tapestry should notify the page about the exception</p>
+</li>
+<li>
+<p>TAP5-276 – Add documentation about the use of @Inject to mark the correct constructor of a bean (i.e., when using BeanEditForm)</p>
+</li>
+<li>
+<p>TAP5-279 – Client-side validation is always enabled for injected AjaxFormLoop fields</p>
+</li>
+<li>
+<p>TAP5-281 – Form should detect when it is nested inside another Form and identify that as an error</p>
+</li>
+<li>
+<p>TAP5-283 – FormFragments are not ignored if the form has client validation disabled</p>
+</li>
+<li>
+<p>TAP5-284 – A component parameter default method that returns a primtive(instead of an object instance) results in an runtime exception</p>
+</li>
+<li>
+<p>TAP5-287 – Typo in default.css setting autoloader icon height</p>
+</li>
+<li>
+<p>TAP5-290 – Namespace error when partial-updating a zone with a block</p>
+</li>
+<li>
+<p>TAP5-302 – URL encoded strings that contain symbols such as %2f (encoded "/") are decoded incorrectly in some environments</p>
+</li>
+<li>
+<p>TAP5-304 – Tapestry outputs a warning when a component defined in the Java code (via @Component) does not have a corresponding element in the template; this should be escalated to an exception</p>
+</li>
+<li>
+<p>TAP5-305 – The JVM System Properties Symbol Source should always be ordered first (ahead of ApplicationDefaults, etc.)</p>
+</li>
+<li>
+<p>TAP5-308 – Injecting dependencies into contributeTypeCoercer method causes circular dependency error</p>
+</li>
+<li>
+<p>TAP5-314 – issue tracking link on tapestry5 page should refer to <a href="https://issues.apache.org/jira/browse/*" class="bare">https://issues.apache.org/jira/browse/*</a> TAP5</p>
+</li>
+<li>
+<p>TAP5-323 – Fields marked with @Persist should not allow default values</p>
+</li>
+<li>
+<p>TAP5-325 – Pop up error bubbles are broken in Safari</p>
+</li>
+<li>
+<p>TAP5-326 – Class org.apache.tapestry5.internal.structure.BlockImpl should implement toString()</p>
+</li>
+<li>
+<p>TAP5-328 – Exception when checking BeanEditor Field required in ValidationDecorator</p>
+</li>
+<li>
+<p>TAP5-332 – Service interfaces should identify the service name and the type of service configuration (if applicable)</p>
+</li>
+<li>
+<p>TAP5-333 – Tapestry 5 renders an XHTML label element incorrectly</p>
+</li>
+<li>
+<p>TAP5-337 – Rapidly refreshing a page, even the same page, can cause a deadlock related to class loading</p>
+</li>
+<li>
+<p>TAP5-342 – Form with a zone is getting an action of "#" on submit from IE 6</p>
+</li>
+<li>
+<p>TAP5-343 – The Grid component generates non-unique HTML DOM ids for sort columns</p>
+</li>
+<li>
+<p>TAP5-359 – Use of the email validator with client-side validation displays a pop-up error message about client-side validator "email" being missing</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_improvements_made_3"><a class="anchor" href="#_improvements_made_3"></a>Improvements Made</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAP5-12 – Need better docs for AjaxFormLoop; component should link to AddRowLink and RemoveRowLink, and need some examples</p>
+</li>
+<li>
+<p>TAP5-49 – Grid.defaultModel() should be a protected method so that subclasses can override the default BeanModel logic</p>
+</li>
+<li>
+<p>TAP5-87 – PasswordField should not update its value parameter when the submitted value is blank</p>
+</li>
+<li>
+<p>TAP5-184 – Improve error reporting when a javascript asset is intended to be included on page which has no &lt;html&gt; element</p>
+</li>
+<li>
+<p>TAP5-187 – Ajax event handler methods that return a page instance, page class or page name should cause the client to redirect to that page</p>
+</li>
+<li>
+<p>TAP5-188 – Document the need to use @Inject with @Value or @Symbol when the parameter/field type is String (to avoid injecting the service id)</p>
+</li>
+<li>
+<p>TAP5-190 – Grid component&#8217;s source parameter should autoconnect to the matching container property</p>
+</li>
+<li>
+<p>TAP5-197 – Improved error message when using a form control component outside of a Form component</p>
+</li>
+<li>
+<p>TAP5-200 – The Submit component doesn&#8217;t need validation decoration</p>
+</li>
+<li>
+<p>TAP5-205 – Add an empty parameter to the Loop component, to display a message when there are no items to loop over</p>
+</li>
+<li>
+<p>TAP5-206 – Document that you should not instantiate an @Persist field in its declaration</p>
+</li>
+<li>
+<p>TAP5-228 – When you have multiple forms on the same page that share (some of) the same properties, it is not possible to differentiate validation constraints and messages in the message catalog</p>
+</li>
+<li>
+<p>TAP5-254 – Translation for Spanish</p>
+</li>
+<li>
+<p>TAP5-282 – Add support for Brazilian Portuguese (pt_BR) locale</p>
+</li>
+<li>
+<p>TAP5-285 – Components such as ActionLink and EventLink should require that there be <strong>some</strong> event handler for their triggered events</p>
+</li>
+<li>
+<p>TAP5-297 – Provide access to the Autocompleter javascript instance</p>
+</li>
+<li>
+<p>TAP5-301 – When using the @Property annotation, Tapestry should throw an exception rather than overwrite an existing method</p>
+</li>
+<li>
+<p>TAP5-313 – Provide configuration to move links to JavaScript libraries to the top of the page</p>
+</li>
+<li>
+<p>TAP5-318 – Tapestry should identify where in the template undefined components (with id, but no type or matching embedded component) are located</p>
+</li>
+<li>
+<p>TAP5-339 – Make FileItemFactory a service so it can be overridden</p>
+</li>
+<li>
+<p>TAP5-344 – Quickstart archetype should include an empty app.properties message catalog in the WEB-INF folder</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_new_features_added"><a class="anchor" href="#_new_features_added"></a>New Features Added</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAP5-41 – Create a guide to creating and packaging component libraries</p>
+</li>
+<li>
+<p>TAP5-231 – Unify injection; allow @Inject annotation on fields of service implementations</p>
+</li>
+<li>
+<p>TAP5-275 – Add set() method to TestBase to allow private fields of objects to be set via reflection</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tasks_completed_3"><a class="anchor" href="#_tasks_completed_3"></a>Tasks Completed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAP5-164 – Remove link to TapIDEA project from Tapestry home page</p>
+</li>
+<li>
+<p>TAP5-322 – Update links to JumpStart because its site has moved</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tapestry_version_5_0_15"><a class="anchor" href="#_tapestry_version_5_0_15"></a>Tapestry Version 5.0.15</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_sub_tasks_completed"><a class="anchor" href="#_sub_tasks_completed"></a>Sub-tasks Completed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-2423 – Add Short Translator</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_bugs_fixed_5"><a class="anchor" href="#_bugs_fixed_5"></a>Bugs Fixed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-1796 – Not all writeCookieValue functions honor the tapestry.default-cookie-max-age symbol</p>
+</li>
+<li>
+<p>TAPESTRY-1856 – Add localization support to DateField</p>
+</li>
+<li>
+<p>TAPESTRY-2243 – Component report crashes when project have too many dependencies</p>
+</li>
+<li>
+<p>TAPESTRY-2324 – Wrong Submit 'selected' event fired when using a Form with a Zone parameter</p>
+</li>
+<li>
+<p>TAPESTRY-2352 – Client side validation does not enforce the format of input (i.e., that numeric fields contain numbers)</p>
+</li>
+<li>
+<p>TAPESTRY-2357 – Unlike Tapestry 4, Tapestry 5 does not automatically position the cursor into a form</p>
+</li>
+<li>
+<p>TAPESTRY-2438 – ValidationException thrown from onValidateForm() should be recorded for the Form, but instead is treated as an unexpected error</p>
+</li>
+<li>
+<p>TAPESTRY-2453 – Form enctype is not updated when an Upload component is injected via FormInjector / AjaxFormLoop</p>
+</li>
+<li>
+<p>TAPESTRY-2460 – Nested BeanEditors (where the block parameter for a property to one BeanEditor contains another BeanEditor) results in a StackOverflowException</p>
+</li>
+<li>
+<p>TAPESTRY-2517 – A failed service injection into a component field is visible in the browser as a spurious error about field _$resources</p>
+</li>
+<li>
+<p>TAPESTRY-2532 – Javadoc of inPlace field in Grid class is incomplete</p>
+</li>
+<li>
+<p>TAPESTRY-2536 – Add explicit message on module loading failure</p>
+</li>
+<li>
+<p>TAPESTRY-2546 – Any component always outputs the same id attribute, rather than a unique id attribute for each render</p>
+</li>
+<li>
+<p>TAPESTRY-2558 – The injection page of the user guide references commons-logging Log, not SLF4 Logger</p>
+</li>
+<li>
+<p>TAPESTRY-2559 – The "configuration" page of the Tapestry user guide (conf.apt) has an error, comes out blank</p>
+</li>
+<li>
+<p>TAPESTRY-2561 – Rapidly refreshing a page, even the same page, can cause a deadlock related to class loading</p>
+</li>
+<li>
+<p>TAPESTRY-2563 – Tapestry should reject form submissions that aren&#8217;t via POST or don&#8217;t contain t:formdata, as likely hack attempts</p>
+</li>
+<li>
+<p>TAPESTRY-2566 – Errors in code examples of "Securing your application with HTTPS"</p>
+</li>
+<li>
+<p>TAPESTRY-2567 – Tapestry doesn&#8217;t identify conflicting annotations on component fields</p>
+</li>
+<li>
+<p>TAPESTRY-2578 – BeanDisplay formatting is off for fields with empty values</p>
+</li>
+<li>
+<p>TAPESTRY-2585 – Email validator requires Void constraint type, should be null</p>
+</li>
+<li>
+<p>TAPESTRY-2591 – Email Validator Throws MissingFormatArgumentException</p>
+</li>
+<li>
+<p>TAPESTRY-2595 – Application State Objects are not persisted back to the session at the end of the request</p>
+</li>
+<li>
+<p>TAPESTRY-2601 – ComponentResources.createActionLink() is incorrectly named, should be createEventLink()</p>
+</li>
+<li>
+<p>TAPESTRY-2602 – Error bubbles are in some cases placed incorrectly</p>
+</li>
+<li>
+<p>TAPESTRY-2606 – File system warning for certain component event request, on windows only</p>
+</li>
+<li>
+<p>TAPESTRY-2617 – DateField component should localize the month names and day name abbreviations shown in the client web browser</p>
+</li>
+<li>
+<p>TAPESTRY-2619 – Event Handler adds a new JSONObject to my JSONObject return</p>
+</li>
+<li>
+<p>TAPESTRY-2626 – Dependencies on Selenium are incomplete</p>
+</li>
+<li>
+<p>TAPESTRY-2629 – Link to tapestry5-annotations page is broken, links to old page (out of date since May 2008)</p>
+</li>
+<li>
+<p>TAPESTRY-2636 – NoSuchElementException on submit when using a Grid with a non-default model inside a Form</p>
+</li>
+<li>
+<p>TAPESTRY-2641 – FormSupport.defer() javadoc says defered actions will be executed after validation, but it&#8217;s executed before</p>
+</li>
+<li>
+<p>TAPESTRY-2655 – Services defined with the bind() method may conflict with services from service builder methods without error</p>
+</li>
+<li>
+<p>TAPESTRY-2656 – GridSortModel.getSortContraints() - method name misspelled, should be getSortConstraints()</p>
+</li>
+<li>
+<p>TAPESTRY-2658 – HibernateGridDataSource.getAvailableRows should also call applyAdditionalConstraints() to prevent java.lang.IndexOutOfBoundsException</p>
+</li>
+<li>
+<p>TAPESTRY-2664 – RenderSupport.addScript(String) does not add the core JavaScript dependencies</p>
+</li>
+<li>
+<p>TAPESTRY-2668 – Setting volatile to true on Grid component in form results in NullPointerException</p>
+</li>
+<li>
+<p>TAPESTRY-2669 – Tapestry source distribution&#8217;s version of tapestry-test is actually the code for tapestry-spring</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_improvements_made_4"><a class="anchor" href="#_improvements_made_4"></a>Improvements Made</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-2137 – The common idiom of connecting a component&#8217;s id to a container property should be easier: an attribute of the @Parameter annotation</p>
+</li>
+<li>
+<p>TAPESTRY-2223 – Don&#8217;t require a hibernate.cfg.xml</p>
+</li>
+<li>
+<p>TAPESTRY-2236 – Strip trailing punctuation (_ and $) from member names, as is done with leading punctuation</p>
+</li>
+<li>
+<p>TAPESTRY-2277 – Removing Label body should be parameterizable</p>
+</li>
+<li>
+<p>TAPESTRY-2286 – Support JSONArray as a valid return type from AJAX event handlers</p>
+</li>
+<li>
+<p>TAPESTRY-2287 – Include tapestry-test in release download</p>
+</li>
+<li>
+<p>TAPESTRY-2363 – Overload method ComponentSource.getPage to accept a page class as parameter</p>
+</li>
+<li>
+<p>TAPESTRY-2458 – Refactor DefaultHibernateConfigurer as an IOC service for easier overriding</p>
+</li>
+<li>
+<p>TAPESTRY-2461 – Add translations for Finnish locale</p>
+</li>
+<li>
+<p>TAPESTRY-2474 – Define and use a standard set of SL4J Markers for logging, to make it easier to filter output</p>
+</li>
+<li>
+<p>TAPESTRY-2486 – Refactor the non-trivial BindingFactory implementations into services</p>
+</li>
+<li>
+<p>TAPESTRY-2489 – The ServiceStatus page should not reveal so much information in production mode, out of security concerns</p>
+</li>
+<li>
+<p>TAPESTRY-2554 – When decorating a service using a decorate method, the underlying service (or interceptor) should be available as a parameter of the service type, not just java.lang.Object</p>
+</li>
+<li>
+<p>TAPESTRY-2576 – The text field for a DateField component should be optional</p>
+</li>
+<li>
+<p>TAPESTRY-2577 – Add support for Russian locale</p>
+</li>
+<li>
+<p>TAPESTRY-2584 – AspectInterceptorBuilder should allow for multiple advice per method</p>
+</li>
+<li>
+<p>TAPESTRY-2586 – Some abstract base class methods should be overridable</p>
+</li>
+<li>
+<p>TAPESTRY-2588 – Add translations for Danish locale</p>
+</li>
+<li>
+<p>TAPESTRY-2589 – Add translations for Swedish locale</p>
+</li>
+<li>
+<p>TAPESTRY-2592 – BeanEditor should provide a "BeanEditContext" into the environment. (or PropertyEditContext should include the bean class).</p>
+</li>
+<li>
+<p>TAPESTRY-2596 – Add translations for French locale</p>
+</li>
+<li>
+<p>TAPESTRY-2597 – Upgrade tapestry-hibernate to Hibernate 3.3.0.SP1</p>
+</li>
+<li>
+<p>TAPESTRY-2603 – Improve @InjectContainer Javadoc</p>
+</li>
+<li>
+<p>TAPESTRY-2610 – Allow access to component&#8217;s informal parameters</p>
+</li>
+<li>
+<p>TAPESTRY-2611 – Add loom-t5 link to Tapestry 5 home page</p>
+</li>
+<li>
+<p>TAPESTRY-2615 – IOC autobuild conflict between org.hibernate.Session and the FullTextSession from the hibernate serach module</p>
+</li>
+<li>
+<p>TAPESTRY-2623 – Remove excessive Tapestry.debug() messages on zone response</p>
+</li>
+<li>
+<p>TAPESTRY-2624 – Remove unecessary comments from tapestry.js</p>
+</li>
+<li>
+<p>TAPESTRY-2627 – The else parameter of If should have a default binding prefix of literal</p>
+</li>
+<li>
+<p>TAPESTRY-2630 – EntityPersistentFieldStrategy converts entity PKs to strings and back unnecessarily</p>
+</li>
+<li>
+<p>TAPESTRY-2639 – tapestry.js does not use Protoype&#8217;s Class.create() properly</p>
+</li>
+<li>
+<p>TAPESTRY-2643 – RenderSupport should have options for including a JavaScript library or Stylesheet as a String URL, not just as an Asset</p>
+</li>
+<li>
+<p>TAPESTRY-2646 – There should be a global configuration that controls the default for Form&#8217;s clientValidation and autofocus parameters</p>
+</li>
+<li>
+<p>TAPESTRY-2654 – The Zone component should expose its body (as a Block) to make it easier to re-render the Zone&#8217;s body as an Ajax partial page render</p>
+</li>
+<li>
+<p>TAPESTRY-2662 – Upgrade Hibernate dependency to 3.3.1</p>
+</li>
+<li>
+<p>TAPESTRY-2670 – Major fixes needed for German (DE) localization</p>
+</li>
+<li>
+<p>TAPESTRY-2671 – TapestryFilter should display name of application, version of Tapestry at startup</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_new_features_added_2"><a class="anchor" href="#_new_features_added_2"></a>New Features Added</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-1310 – Provide access to the current row index and current column index in Grid</p>
+</li>
+<li>
+<p>TAPESTRY-1867 – Support a special marker interface @Local to select just services defined within the same module</p>
+</li>
+<li>
+<p>TAPESTRY-1923 – ComponentClassResolver can/should provide access to all known page names</p>
+</li>
+<li>
+<p>TAPESTRY-2300 – The RadioGroup component always generates its control name from its component id; a new parameter should give some override control over this</p>
+</li>
+<li>
+<p>TAPESTRY-2509 – Add type coercions from String to Renderable, Block</p>
+</li>
+<li>
+<p>TAPESTRY-2541 – Tapestry DOM needs basic methods to manipulate the DOM post-render</p>
+</li>
+<li>
+<p>TAPESTRY-2571 – Add configuration to turn off the automatic creation of ValueEncoders for Hibernate entities</p>
+</li>
+<li>
+<p>TAPESTRY-2594 – Add translations for Croatian (hr) locale</p>
+</li>
+<li>
+<p>TAPESTRY-2638 – The name of the event triggered by a Submit component should be configurable, to allow for multiple components that trigger the same event handler method</p>
+</li>
+<li>
+<p>TAPESTRY-2644 – Add a ComponentResources.createPageLink(&#8230;&#8203;) method that uses page class instead of page name</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_wish_list_items_completed"><a class="anchor" href="#_wish_list_items_completed"></a>Wish List Items Completed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-1964 – Constant not used from app-name in TapestryModule</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tapestry_version_5_0_14"><a class="anchor" href="#_tapestry_version_5_0_14"></a>Tapestry Version 5.0.14</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_bugs_fixed_6"><a class="anchor" href="#_bugs_fixed_6"></a>Bugs Fixed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-1588 – Validation error images are included in the markup for fields without errors, even when the form has client validation disabled</p>
+</li>
+<li>
+<p>TAPESTRY-1997 – PersistentLocale is lower-casing locales</p>
+</li>
+<li>
+<p>TAPESTRY-2181 – The Component Parameters Report should indicate if a component supports informal parameters</p>
+</li>
+<li>
+<p>TAPESTRY-2384 – OutOfMemoryError exception if a regular file with no extension exists in a known component package</p>
+</li>
+<li>
+<p>TAPESTRY-2386 – BeanDisplay component should generate more semantic output using &lt;DL&gt;, &lt;DT&gt;, &lt;DD&gt; instead of nested &lt;DIV&gt;s</p>
+</li>
+<li>
+<p>TAPESTRY-2390 – Components or mixins requiring external javascript files and rendered via AJAX do not work</p>
+</li>
+<li>
+<p>TAPESTRY-2408 – FormInjector doesn&#8217;t work properly if the content contains multiple form elements</p>
+</li>
+<li>
+<p>TAPESTRY-2429 – Script text added by RenderSupport.addScript() should be added raw (with XML elements not encoded as entities)</p>
+</li>
+<li>
+<p>TAPESTRY-2433 – UTF8 characters are not supported in the autocomplete mixin</p>
+</li>
+<li>
+<p>TAPESTRY-2447 – Clicking on a pop-up error bubble hides the bubble, then immediately fades it back in</p>
+</li>
+<li>
+<p>TAPESTRY-2448 – When a bean class inherits properties from a base class, field annotations of the base class properties are not visible</p>
+</li>
+<li>
+<p>TAPESTRY-2449 – Groovy can inject a base class into component classes that Tapestry rejects</p>
+</li>
+<li>
+<p>TAPESTRY-2450 – Unlike reflective access (via PropertyAdapter), PropertyConduit does not make field annotations visible</p>
+</li>
+<li>
+<p>TAPESTRY-2454 – tapestry-hibernate transaction management doesn&#8217;t work as expected when commiting more than once on the same request</p>
+</li>
+<li>
+<p>TAPESTRY-2459 – Submit components fires its event after "validateform" event, should be before (this is a change from prior releases)</p>
+</li>
+<li>
+<p>TAPESTRY-2460 – Nested BeanEditors (where the block parameter for a property to one BeanEditor contains another BeanEditor) results in a StackOverflowException</p>
+</li>
+<li>
+<p>TAPESTRY-2468 – A deadlock related to class loading (and creation) can occur</p>
+</li>
+<li>
+<p>TAPESTRY-2471 – Parameter fields that are updated during component event processing (such as a form submit) may not clear their values at the end of the request</p>
+</li>
+<li>
+<p>TAPESTRY-2473 – Application locks up, with all threads waiting for read lock inside ConcurrentBarrier</p>
+</li>
+<li>
+<p>TAPESTRY-2476 – Unhelpful exception messages when a null value is bound to a required parameter</p>
+</li>
+<li>
+<p>TAPESTRY-2478 – Non-private fields in Tapestry component classes should fail early, instead get confusing javassist.bytecode.DuplicateMemberException</p>
+</li>
+<li>
+<p>TAPESTRY-2481 – ClassTransformation acts as if all type-level annotations are inherited; it should filter out non-inherited annotations</p>
+</li>
+<li>
+<p>TAPESTRY-2483 – The '%' symbol passed to RenderSupport.addScript() is treated as a formatting directive, causing errors</p>
+</li>
+<li>
+<p>TAPESTRY-2484 – Some built-in Tapestry components are final and should be extensible</p>
+</li>
+<li>
+<p>TAPESTRY-2490 – Palette component forces an unwanted form submit under FireFox 3</p>
+</li>
+<li>
+<p>TAPESTRY-2498 – Add JDK 1.6 compatibility via Javassist 3.8.0.GA</p>
+</li>
+<li>
+<p>TAPESTRY-2500 – Using @PageActivationContext on an int field results in a java.lang.Verify error</p>
+</li>
+<li>
+<p>TAPESTRY-2501 – Form input not correctly decoded in case of non-english charsets</p>
+</li>
+<li>
+<p>TAPESTRY-2502 – When the GridDataSource reports more available rows than actual rows (due to race conditions with updates), the Grid will fail because of IndexOutOfRange exceptions</p>
+</li>
+<li>
+<p>TAPESTRY-2504 – Unspecified ajax stream response encoding</p>
+</li>
+<li>
+<p>TAPESTRY-2507 – Stylesheet (.css) files included by components are not added if the component is added to the page via an ajax update</p>
+</li>
+<li>
+<p>TAPESTRY-2508 – HibernateGridDataSource calls Query.setFetchSize() not Query.setMaxResults()</p>
+</li>
+<li>
+<p>TAPESTRY-2522 – RequestPathOptimizer will corrupt query parameters in the optimized URL if the parameters container slashes</p>
+</li>
+<li>
+<p>TAPESTRY-2528 – It should not be possible for component classes to be directly instantiated</p>
+</li>
+<li>
+<p>TAPESTRY-2538 – The default binding prefix for TextField.translate should be "translate" but is "prop"</p>
+</li>
+<li>
+<p>TAPESTRY-2543 – Simplify Tapestry to use UTF-8 (or another, configurable character set) across the entire application</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_improvements_made_5"><a class="anchor" href="#_improvements_made_5"></a>Improvements Made</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-2404 – PropertyConduitSource could build a shared method to "navigate" to the final property</p>
+</li>
+<li>
+<p>TAPESTRY-2410 – Service decorator method not invoked for @Match with "*" in middle</p>
+</li>
+<li>
+<p>TAPESTRY-2443 – Support de_DE (German) localization</p>
+</li>
+<li>
+<p>TAPESTRY-2452 – Introduce a new symbol for the path to the application message catalog</p>
+</li>
+<li>
+<p>TAPESTRY-2461 – Validation and Error messages for Finnish locale</p>
+</li>
+<li>
+<p>TAPESTRY-2467 – Method to remove or replace DOM nodes from the document</p>
+</li>
+<li>
+<p>TAPESTRY-2469 – Update Selenium dependency to the current version, 1.0-beta-1</p>
+</li>
+<li>
+<p>TAPESTRY-2479 – Upgrade to SLF4J version 1.5.2 (supports older versions of Log4J better)</p>
+</li>
+<li>
+<p>TAPESTRY-2480 – Migrate Tapestry "what&#8217;s new?" and upgrade information up to the project level</p>
+</li>
+<li>
+<p>TAPESTRY-2519 – Make ClassNameLocatorImpl resolve resources from URLs that use a client-defined protocol</p>
+</li>
+<li>
+<p>TAPESTRY-2525 – Properties files in a message catalog should be read using UTF-8 encoding, rather than default encoding</p>
+</li>
+<li>
+<p>TAPESTRY-2531 – Upgrade EasyMock dependency to latest version, 2.4</p>
+</li>
+<li>
+<p>TAPESTRY-2534 – An event context should be passed through the Ajax request when AjaxFormLoop adds a new row</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_new_features_added_3"><a class="anchor" href="#_new_features_added_3"></a>New Features Added</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-1810 – ServiceBinder.bind() with an interface should check to see if there&#8217;s an Impl class and bind to that.</p>
+</li>
+<li>
+<p>TAPESTRY-2143 – Framework should include an email validator</p>
+</li>
+<li>
+<p>TAPESTRY-2217 – Add ability to render a page as a Document</p>
+</li>
+<li>
+<p>TAPESTRY-2235 – Annotation for managing a property as the page activation context</p>
+</li>
+<li>
+<p>TAPESTRY-2475 – Add an implementation of GridDataSource that can be used to optimize Hibernate queries</p>
+</li>
+<li>
+<p>TAPESTRY-2540 – Tapestry should place the Registry into the ServletContext using a well-known attribute name, for use by non-Tapestry code</p>
+</li>
+<li>
+<p>TAPESTRY-2542 – Add new method hasBody() to ComponentResources, to reveal if component has a body or not</p>
+</li>
+<li>
+<p>TAPESTRY-2550 – Allow Tapestry to bind a service interface to a ServiceBuilder callback to create the service</p>
+</li>
+<li>
+<p>TAPESTRY-2552 – Provide easier overrides for Grid, BeanEditor property display &amp; edit blocks</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tapestry_version_5_0_13"><a class="anchor" href="#_tapestry_version_5_0_13"></a>Tapestry Version 5.0.13</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_bugs_fixed_7"><a class="anchor" href="#_bugs_fixed_7"></a>Bugs Fixed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-2096 – Confusing exception when autobuilding a class fails due to class visibility</p>
+</li>
+<li>
+<p>TAPESTRY-2311 – "Parents before Child" concept for Component Rendering does not allow different rendering in subclasses</p>
+</li>
+<li>
+<p>TAPESTRY-2341 – AJAX Zone updating doesn&#8217;t work correctly in IE</p>
+</li>
+<li>
+<p>TAPESTRY-2349 – FormFragment should be tied to the 'click' event of the associated checkbox</p>
+</li>
+<li>
+<p>TAPESTRY-2360 – Forms in zones in loops have wrong zone id after update</p>
+</li>
+<li>
+<p>TAPESTRY-2418 – Form onsubmit event handler for Zone component handling is ignored if any fields on the form have validation configured.</p>
+</li>
+<li>
+<p>TAPESTRY-2422 – The Exception report will itself throw an exception if the exception being reported contains a write-only property</p>
+</li>
+<li>
+<p>TAPESTRY-2436 – New FormInjectorDemo using AjaxFormLoop fails if a row is added and then removed without a form submission in between</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_improvements_made_6"><a class="anchor" href="#_improvements_made_6"></a>Improvements Made</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-2100 – Validation and Error messages for Portuguese locale</p>
+</li>
+<li>
+<p>TAPESTRY-2281 – Update tutorial1 to correctly indicate how and why to replace Jetty 5 log4j.jar</p>
+</li>
+<li>
+<p>TAPESTRY-2347 – Add a "resources" section to T5 home page</p>
+</li>
+<li>
+<p>TAPESTRY-2393 – The FormFragment component should isolate its action stream (t:formdata hidden field) such that the entire client-side element may be removed</p>
+</li>
+<li>
+<p>TAPESTRY-2428 – tapestry-hibernate should include as a dependency a default version of Hibernate with docs for how to override</p>
+</li>
+<li>
+<p>TAPESTRY-2439 – The PropertyAdapter interface should include a property to identify the containing class</p>
+</li>
+<li>
+<p>TAPESTRY-2440 – The quickstart archetype should enable debug logging (by default) for the new application</p>
+</li>
+<li>
+<p>TAPESTRY-2441 – Upgrade to Scriptaculous 1.8.1</p>
+</li>
+<li>
+<p>TAPESTRY-2442 – When Tapestry is operating inside FireFox with Firebug enabled, it should use the Firebug logging API</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tapestry_version_5_0_12"><a class="anchor" href="#_tapestry_version_5_0_12"></a>Tapestry Version 5.0.12</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_bugs_fixed_8"><a class="anchor" href="#_bugs_fixed_8"></a>Bugs Fixed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-1921 – Add documentation for Environmental annotation, environmental services</p>
+</li>
+<li>
+<p>TAPESTRY-2037 – NullPointerException caused by many rapid page refreshes</p>
+</li>
+<li>
+<p>TAPESTRY-2247 – Transactions should roll back, not commit, at the end of each request</p>
+</li>
+<li>
+<p>TAPESTRY-2258 – Error while autobuilding BeanEditForm&#8217;s bean</p>
+</li>
+<li>
+<p>TAPESTRY-2259 – Registry startup exceptions are not reported correctly</p>
+</li>
+<li>
+<p>TAPESTRY-2260 – Null relationships cause an NPE inside Hibernate when being value encoded by RadioGroup</p>
+</li>
+<li>
+<p>TAPESTRY-2261 – TriggerFragment mixin should work with Radio as well as Checkbox components</p>
+</li>
+<li>
+<p>TAPESTRY-2262 – TriggerFragment mixin will run the "show" animation even when the fragment is already visible</p>
+</li>
+<li>
+<p>TAPESTRY-2265 – Grid component documentation could be simplified</p>
+</li>
+<li>
+<p>TAPESTRY-2267 – Services that are dependencies of other EagerLoad services may not be eagerly loaded</p>
+</li>
+<li>
+<p>TAPESTRY-2268 – Docs: tapestry-core &#8594; user guide &#8594; Request Processing broken "Pipelines" link</p>
+</li>
+<li>
+<p>TAPESTRY-2271 – Expose the Grid&#8217;s rowsPerPage and row properties to Java code (instead of using @Property)</p>
+</li>
+<li>
+<p>TAPESTRY-2276 – Required validation fails when used with select and blankOption="ALWAYS"</p>
+</li>
+<li>
+<p>TAPESTRY-2284 – Exceptions may be incorrectly reported due to exception invoking initCause() when an exception already has a cause</p>
+</li>
+<li>
+<p>TAPESTRY-2293 – BeanDisplay formatting is off for fields with null values</p>
+</li>
+<li>
+<p>TAPESTRY-2305 – When Tapestry throws an exception due to an unrecognized embedded component id, it fails to list the available component ids</p>
+</li>
+<li>
+<p>TAPESTRY-2306 – Mismatch between client-side and server-side "required" validator</p>
+</li>
+<li>
+<p>TAPESTRY-2320 – Problems with validation popups on Internet Explorer</p>
+</li>
+<li>
+<p>TAPESTRY-2322 – FormInjector doesn&#8217;t work properly if the content contains multiple elements</p>
+</li>
+<li>
+<p>TAPESTRY-2323 – Select component does not generate client-side validation</p>
+</li>
+<li>
+<p>TAPESTRY-2333 – RequestPathOptimizer generates invalid URLs when a trailing slash is added to the request path</p>
+</li>
+<li>
+<p>TAPESTRY-2336 – default.css div.t-autocomplete-menu ul style shouldn&#8217;t have width, height &amp; margin-left</p>
+</li>
+<li>
+<p>TAPESTRY-2338 – Cached values for methods annotated with @Cached do not reset at end of Ajax request</p>
+</li>
+<li>
+<p>TAPESTRY-2339 – The automatic ValueEncoder for Hibernate entities will sometimes encode an entity as null (rather than its primary key)</p>
+</li>
+<li>
+<p>TAPESTRY-2340 – Documentation about informal parameters should reference the @SupportsInformalParameters annotation specifically</p>
+</li>
+<li>
+<p>TAPESTRY-2343 – The FormInjector should copy its class attribute to the new element (on the client side)</p>
+</li>
+<li>
+<p>TAPESTRY-2346 – Update the tapestry-core adaptive API example to match the current set of events triggered by the Form component</p>
+</li>
+<li>
+<p>TAPESTRY-2368 – The value for the Tapestry version number symbol is not initialized correctly and is always "UNKNOWN"</p>
+</li>
+<li>
+<p>TAPESTRY-2370 – When injecting a component into a field and the type is not a match the exception report is not sufficiently helpful</p>
+</li>
+<li>
+<p>TAPESTRY-2371 – The QuickStart Archetype should lock down the version of Jetty used (to 6.0, now that 7.0 snapshots are starting to turn up)</p>
+</li>
+<li>
+<p>TAPESTRY-2372 – The Tapestry tutorial should disable production mode (so that the full exception report can be seen)</p>
+</li>
+<li>
+<p>TAPESTRY-2381 – Linking a radio button as a FormFragment trigger does not work in Internet Explorer</p>
+</li>
+<li>
+<p>TAPESTRY-2397 – Mixins inside components should have an id that extends from from the containing component, but is still unique and URL safe</p>
+</li>
+<li>
+<p>TAPESTRY-2398 – ClassTransformation.addInjectedField() adds fields as protected which can cause exceptions due to visibility</p>
+</li>
+<li>
+<p>TAPESTRY-2399 – When an class loader exeption occurs while loading a base class, a new exception (int the subclass) overwrites the more useful exception from the base class</p>
+</li>
+<li>
+<p>TAPESTRY-2400 – Advising a method where the parameter type or return type is the class containing the advised method may throw a java.lang.VerifyError</p>
+</li>
+<li>
+<p>TAPESTRY-2401 – NullPointerExceptions inside component bindings need to do a better job of explaining what was null</p>
+</li>
+<li>
+<p>TAPESTRY-2407 – Update master POMs to point to the moved OpenQA repositories (from which Selenium is obtained)</p>
+</li>
+<li>
+<p>TAPESTRY-2409 – Service method advice fails when a parameter or return value type is an array</p>
+</li>
+<li>
+<p>TAPESTRY-2415 – StreamResponse does not work on WebLogic - response not flushed, and secondary exception raised</p>
+</li>
+<li>
+<p>TAPESTRY-2416 – When the HibernateValueEncoder is unable to convert a primary key into an entity, it should log an error</p>
+</li>
+<li>
+<p>TAPESTRY-2424 – Validation occasionally triggers Stack Overflow Javascript Error in IE</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_improvements_made_7"><a class="anchor" href="#_improvements_made_7"></a>Improvements Made</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-1924 – Allow for templates coming from stream</p>
+</li>
+<li>
+<p>TAPESTRY-2159 – YSlow Recommendation: Version bundled javascript and use far-future expires header</p>
+</li>
+<li>
+<p>TAPESTRY-2253 – A brain dead implementation of toString() on a custom data object can cause the Required validator to throw a NullPointerExcepton</p>
+</li>
+<li>
+<p>TAPESTRY-2263 – Add a reset() method to the Grid component to reset paging and sorting to initial defaults</p>
+</li>
+<li>
+<p>TAPESTRY-2280 – Add a zone parameter to the BeanEditForm component</p>
+</li>
+<li>
+<p>TAPESTRY-2285 – Tutorial #1 talks about "setup()" method instead of "initialize()"</p>
+</li>
+<li>
+<p>TAPESTRY-2294 – The various link components should only generate an id attribute if the id parameter is bound</p>
+</li>
+<li>
+<p>TAPESTRY-2297 – Element should expose namespace URL in which the element is defined</p>
+</li>
+<li>
+<p>TAPESTRY-2308 – Don&#8217;t create HttpSession when persisted property is null</p>
+</li>
+<li>
+<p>TAPESTRY-2315 – InjectContainerWorker should use this or other local variable name than "container"</p>
+</li>
+<li>
+<p>TAPESTRY-2327 – The Any and FormInjector components should have an element parameter, for overriding the element name</p>
+</li>
+<li>
+<p>TAPESTRY-2334 – Optimize JavaScript generation for FormInjector</p>
+</li>
+<li>
+<p>TAPESTRY-2342 – The InjectPageWorker should use the ComponentSource service, rather than the RequestPageCache</p>
+</li>
+<li>
+<p>TAPESTRY-2354 – Use "flash" persistence on Form&#8217;s ValidationTracker</p>
+</li>
+<li>
+<p>TAPESTRY-2364 – YSlow Recommendation: Write Scripts at bottom of page</p>
+</li>
+<li>
+<p>TAPESTRY-2388 – The Any component should implement the ClientElement interface, and allocate a unique client id as necesssary</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_new_features_added_4"><a class="anchor" href="#_new_features_added_4"></a>New Features Added</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-2231 – Make Tapestry release number visible as a symbol ("tapestry.version")</p>
+</li>
+<li>
+<p>TAPESTRY-2256 – Provide an annotation to support automatic committing of the transaction after a component or service method invocation</p>
+</li>
+<li>
+<p>TAPESTRY-2319 – Add support for client-side form-level validation</p>
+</li>
+<li>
+<p>TAPESTRY-2359 – Grid component should be able to update itself in place using an implicit Zone</p>
+</li>
+<li>
+<p>TAPESTRY-2365 – It should be possible to create decorators without directly writing Javassist code</p>
+</li>
+<li>
+<p>TAPESTRY-2378 – Add a listener interface for MarkupWriter, to allow code to be notified when elements are started and ended</p>
+</li>
+<li>
+<p>TAPESTRY-2379 – FormInjector and FormFragment should use the (new) MarkupWriterListener interface to place the hidden field(s) in an appropriate location</p>
+</li>
+<li>
+<p>TAPESTRY-2380 – Add AjaxFormLoop component</p>
+</li>
+<li>
+<p>TAPESTRY-2389 – Add support to ClassTransformation to allow ComponentClassTransformWorkers to provide advice to methods</p>
+</li>
+<li>
+<p>TAPESTRY-2405 – Add @Log annotation for component methods, that will log (at debug level) entry, exit and fail conditions</p>
+</li>
+<li>
+<p>TAPESTRY-2421 – Allow Tapestry4/Tapestry5 to be deployed in the same WAR</p>
+</li>
+<li>
+<p>TAPESTRY-2425 – Tapestry annotations such as @Validate, @DataType, etc. should be applicable to fields as well as accessor methods</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tapestry_version_5_0_11"><a class="anchor" href="#_tapestry_version_5_0_11"></a>Tapestry Version 5.0.11</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_bugs_fixed_9"><a class="anchor" href="#_bugs_fixed_9"></a>Bugs Fixed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-1475 – Tapestry is missing an API for clearing out persistent properties of a particular page</p>
+</li>
+<li>
+<p>TAPESTRY-1605 – The request encoding (for component action requests) occurs too late; after query parameters of the request have been accessed, which prevents the proper request encoding from being used</p>
+</li>
+<li>
+<p>TAPESTRY-1780 – T5 Form component NPE if no FORM_DATA found</p>
+</li>
+<li>
+<p>TAPESTRY-2103 – When referencing a method as part of a property expression, the method name must be case exact whereas the rest of the property expression is case insensitive</p>
+</li>
+<li>
+<p>TAPESTRY-2108 – Tapestry.onDOMLoaded not working in konqueror</p>
+</li>
+<li>
+<p>TAPESTRY-2117 – Circular @SubModule will crash the IOC container with OutOfMemoryException</p>
+</li>
+<li>
+<p>TAPESTRY-2141 – NullPointerExceptions under JDK 1.5 due to underlying ThreadLocal bug</p>
+</li>
+<li>
+<p>TAPESTRY-2145 – Documentation (including javadoc), refers to "ZoneEffects" instead of "ZoneEffect"</p>
+</li>
+<li>
+<p>TAPESTRY-2147 – Typo in Tapestry developer "bible"</p>
+</li>
+<li>
+<p>TAPESTRY-2149 – Tapestry should allow the pages and components to be referenced by their "unstripped" names as well</p>
+</li>
+<li>
+<p>TAPESTRY-2150 – Tapestry should recognize pages that are "nested" beneath other pages</p>
+</li>
+<li>
+<p>TAPESTRY-2151 – Date format used by DateField shows the year as two digits, not four</p>
+</li>
+<li>
+<p>TAPESTRY-2172 – DateField component shows up misplaced in major browsers</p>
+</li>
+<li>
+<p>TAPESTRY-2177 – Conversion of context parameters to server-side objects uses the TypeCoercer rather than the correct ValueEncoder</p>
+</li>
+<li>
+<p>TAPESTRY-2184 – Null pointer exception when creating an action link during a component event request</p>
+</li>
+<li>
+<p>TAPESTRY-2188 – GridModel and GridDataSource should be changed to support multiple sort columns</p>
+</li>
+<li>
+<p>TAPESTRY-2190 – JSONObjectEventResultProcessor sends the wrong content type value</p>
+</li>
+<li>
+<p>TAPESTRY-2192 – DateField.xdoc:65:11: The element type "p" must be terminated by the matching end-tag "&lt;/p&gt;"</p>
+</li>
+<li>
+<p>TAPESTRY-2206 – Tapestry should have a different data type for numbers than for strings</p>
+</li>
+<li>
+<p>TAPESTRY-2208 – The data type "checkbox" should be renamed to "boolean" to reflect what it is, rather than how it is rendered</p>
+</li>
+<li>
+<p>TAPESTRY-2209 – JSONObject response contains additional {}</p>
+</li>
+<li>
+<p>TAPESTRY-2212 – Index.tml generated by Quickstart Archetype is broken due to recent Index page change.</p>
+</li>
+<li>
+<p>TAPESTRY-2219 – Enum label overrides, as outlined in the Tapestry Tutorial, no longer work</p>
+</li>
+<li>
+<p>TAPESTRY-2220 – In some cases, component event requests are incorrectly interpretted as render requests (with a page activation context)</p>
+</li>
+<li>
+<p>TAPESTRY-2221 – Exception message when a context value is null or blank is confusing</p>
+</li>
+<li>
+<p>TAPESTRY-2226 – Requests for the root index page that include a page activation context fail with a 404 error</p>
+</li>
+<li>
+<p>TAPESTRY-2229 – BeanEditForm is including properties that are read only, causing errors when the form is submitted</p>
+</li>
+<li>
+<p>TAPESTRY-2238 – Returning a Block from an Ajax form submission fails with IllegalStateException</p>
+</li>
+<li>
+<p>TAPESTRY-2240 – Groovy classes can no longer be used as component classes because of the public metaClass field</p>
+</li>
+<li>
+<p>TAPESTRY-2245 – GridDataSource getAvailableRows() method called inefficiently</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_improvements_made_8"><a class="anchor" href="#_improvements_made_8"></a>Improvements Made</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-1336 – Refactor ApplicationGlobals&#8217;s store methods</p>
+</li>
+<li>
+<p>TAPESTRY-1612 – Allow access to the PageTester registry</p>
+</li>
+<li>
+<p>TAPESTRY-1835 – Need an API to see if a field is required or optional</p>
+</li>
+<li>
+<p>TAPESTRY-1890 – Allow Tapestry applications to NOT autoload modules from library</p>
+</li>
+<li>
+<p>TAPESTRY-1930 – Render missing parameter names in different font and/or text style.</p>
+</li>
+<li>
+<p>TAPESTRY-1932 – Extend PropertyModel to allow access to annotations associated with the property</p>
+</li>
+<li>
+<p>TAPESTRY-1954 – Move the ClassNameLocator service to the tapestry-ioc module</p>
+</li>
+<li>
+<p>TAPESTRY-1955 – Hibernate SessionFactory close on webapp destroy</p>
+</li>
+<li>
+<p>TAPESTRY-1978 – When supplying an empty parameter binding, indicate problem parameter in error message.</p>
+</li>
+<li>
+<p>TAPESTRY-1983 – Add parameter to Grid component that will add additional columns to the BeanModel</p>
+</li>
+<li>
+<p>TAPESTRY-1999 – Allow the context for an event to be specified as a List as well as an Object array</p>
+</li>
+<li>
+<p>TAPESTRY-2078 – More understandable error messages needed when incorrect classes found in component/page packages</p>
+</li>
+<li>
+<p>TAPESTRY-2087 – Add "else" parameter to Unless component.</p>
+</li>
+<li>
+<p>TAPESTRY-2164 – The Tapestry binary distribution should include appropriate third party dependencies</p>
+</li>
+<li>
+<p>TAPESTRY-2173 – When Tapestry must instantiate an Application State Object without an explicit ApplicationStateCreator, it should autobuild the object rather than just use the default constructor</p>
+</li>
+<li>
+<p>TAPESTRY-2180 – Add release notes about API changes</p>
+</li>
+<li>
+<p>TAPESTRY-2182 – NullPointerExceptions, due to reading nested properties that do not suppress null values, do not indicate problematic expression for AbstractPropertyOutput derivatives</p>
+</li>
+<li>
+<p>TAPESTRY-2200 – Need a mechanism via which display and/or edit BeanBlocks may be overridden</p>
+</li>
+<li>
+<p>TAPESTRY-2204 – Upgrade tapestry-test to use Selenium 0.9.2</p>
+</li>
+<li>
+<p>TAPESTRY-2205 – Upgrade to Javassist 3.7</p>
+</li>
+<li>
+<p>TAPESTRY-2218 – Grid component should render informal parameters</p>
+</li>
+<li>
+<p>TAPESTRY-2222 – The exception report should highlight the lines related to the application in the stack trace</p>
+</li>
+<li>
+<p>TAPESTRY-2227 – Typo in User Guide &#8594; Persistent Data &#8594; Persistence Strategy</p>
+</li>
+<li>
+<p>TAPESTRY-2237 – Grid should make its "currentPage" value available to containing components</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_new_features_added_5"><a class="anchor" href="#_new_features_added_5"></a>New Features Added</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-1653 – Provide automatic ValueEncoders for Hibernate entities</p>
+</li>
+<li>
+<p>TAPESTRY-1778 – Allow extending the PageTester with extra modules for better integration with tapestry-spring</p>
+</li>
+<li>
+<p>TAPESTRY-1919 – Let Tapestry control HTTP/HTTPS in links via page configuration</p>
+</li>
+<li>
+<p>TAPESTRY-2169 – Create an ExceptionAnalysisDisplay component</p>
+</li>
+<li>
+<p>TAPESTRY-2170 – Add annotation to inject a component defined in the template</p>
+</li>
+<li>
+<p>TAPESTRY-2197 – Support for "index" pages in packages</p>
+</li>
+<li>
+<p>TAPESTRY-2202 – When the BeanEditForm or BeanEditor components must create the bean to be editted, it should be autobuilt (supporting injection) rather than just instantiated via the default constructor</p>
+</li>
+<li>
+<p>TAPESTRY-2214 – Select component should provide control over a blank option for optional selects</p>
+</li>
+<li>
+<p>TAPESTRY-2216 – Add a @Property annotation for fields to create a getter and setter method</p>
+</li>
+<li>
+<p>TAPESTRY-2241 – Add new parameter "include" to BeanEditor, Grid, etc. to limit properties to a provided list, and rename existing "remove" parameter to "exclude"</p>
+</li>
+<li>
+<p>TAPESTRY-2244 – Add @Cached annotation for caching method values</p>
+</li>
+<li>
+<p>TAPESTRY-2246 – Add @Persist strategy for Hibernate entities</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tasks_completed_4"><a class="anchor" href="#_tasks_completed_4"></a>Tasks Completed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-1933 – Setup infrastructure for integration tests in tapestry-hibernate</p>
+</li>
+<li>
+<p>TAPESTRY-2162 – Update roadmap on site</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tapestry_version_5_0_10"><a class="anchor" href="#_tapestry_version_5_0_10"></a>Tapestry Version 5.0.10</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_bugs_fixed_10"><a class="anchor" href="#_bugs_fixed_10"></a>Bugs Fixed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-1518 – Add support for JDK 1.5 Generics when defining pages and accessing bean properties</p>
+</li>
+<li>
+<p>TAPESTRY-1594 – tapestry-upload processes requests with multipart content even if Tapestry doesn&#8217;t recognize the page</p>
+</li>
+<li>
+<p>TAPESTRY-1727 – Exception report page doesn&#8217;t display object arrays very nicely</p>
+</li>
+<li>
+<p>TAPESTRY-1850 – Hibernate Sessions are not being closed at the end of the request</p>
+</li>
+<li>
+<p>TAPESTRY-1853 – Create a guide to using the Grid component</p>
+</li>
+<li>
+<p>TAPESTRY-1901 – Grid component calls prepare() and getRowValue() with incorrect values after items are removed</p>
+</li>
+<li>
+<p>TAPESTRY-1969 – Error messages in Errors component are misaligned in Internet Explorer 7</p>
+</li>
+<li>
+<p>TAPESTRY-2027 – AbstractIntegrationTestSuite does not allow custom selenium browser selection</p>
+</li>
+<li>
+<p>TAPESTRY-2048 – Tapestry default.css includes a bad rule for the autocomplete mixin&#8217;s styles</p>
+</li>
+<li>
+<p>TAPESTRY-2052 – Disabled fields still perfom client side validation</p>
+</li>
+<li>
+<p>TAPESTRY-2054 – page activation context with spaces are incorrectly decoded when using forms</p>
+</li>
+<li>
+<p>TAPESTRY-2061 – tapestry-component-report reports only components with parameters</p>
+</li>
+<li>
+<p>TAPESTRY-2080 – PageRenderRequestFilter&#8217;s service() method should throw IOException as PageRenderRequestHandler does</p>
+</li>
+<li>
+<p>TAPESTRY-2083 – Using @Inject with a primitive field fails with a "cannot find constructor" transformation error</p>
+</li>
+<li>
+<p>TAPESTRY-2085 – When a user submit a form with a TextField and the value is missing or blank, the value null is passed through the component to the model property</p>
+</li>
+<li>
+<p>TAPESTRY-2088 – ClassNotFoundException when passing an int[] parameter to a component</p>
+</li>
+<li>
+<p>TAPESTRY-2089 – File upload does not ever invoke FileCleaner.exitWhenFinished()</p>
+</li>
+<li>
+<p>TAPESTRY-2094 – Exception when creating service MultipartDecoder prevents the use of the Upload component</p>
+</li>
+<li>
+<p>TAPESTRY-2095 – Incorrect optimization for requests that contain a colon but do not contain a slash</p>
+</li>
+<li>
+<p>TAPESTRY-2099 – Contribution to PartialMarkupRenderer should be named "Heartbeat" not "Heatbeat"</p>
+</li>
+<li>
+<p>TAPESTRY-2112 – Tapestry should use ValueEncoders, not simple type coercion, to convert between event context values, URL strings, and event method handler parameters</p>
+</li>
+<li>
+<p>TAPESTRY-2118 – ComponentReport.extractSubpackage throws ArrayOutOfBoundException</p>
+</li>
+<li>
+<p>TAPESTRY-2128 – If-Modified-Since always returns not modified for js and css in jar files</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_improvements_made_9"><a class="anchor" href="#_improvements_made_9"></a>Improvements Made</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-1416 – Add support for programatically adding new columns to a Grid</p>
+</li>
+<li>
+<p>TAPESTRY-1642 – When the Label component has a body, it should render that rather than using the field&#8217;s label</p>
+</li>
+<li>
+<p>TAPESTRY-1887 – Extend the AbstractLink class to provide access to the clientId and disabled flag, as well as to the URL</p>
+</li>
+<li>
+<p>TAPESTRY-2036 – Add a parameter to the Output component to add control over whether output is filtered or unfiltered</p>
+</li>
+<li>
+<p>TAPESTRY-2040 – Allow subclasses of the Autocomplete mixin greater control over the JSON and markup rendered to the client</p>
+</li>
+<li>
+<p>TAPESTRY-2081 – It should be possible to override a Grid column header as easily as overriding a Grid cell</p>
+</li>
+<li>
+<p>TAPESTRY-2097 – Render exceptions should identify the components that are actively rendering</p>
+</li>
+<li>
+<p>TAPESTRY-2101 – DateField icon should be configurable</p>
+</li>
+<li>
+<p>TAPESTRY-2134 – Add a link to InterLDAP project</p>
+</li>
+<li>
+<p>TAPESTRY-2142 – Document the Layout component pattern</p>
+</li>
+<li>
+<p>TAPESTRY-2144 – Upgrade to Prototype 1.6.0.2</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_new_features_added_6"><a class="anchor" href="#_new_features_added_6"></a>New Features Added</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-1843 – Tapestry should have a "production mode" (vs. development mode)</p>
+</li>
+<li>
+<p>TAPESTRY-2002 – Add annotations to easily set content type and response encoding</p>
+</li>
+<li>
+<p>TAPESTRY-2009 – Add examples to component reference</p>
+</li>
+<li>
+<p>TAPESTRY-2076 – Component report should break out as one class per page and include examples</p>
+</li>
+<li>
+<p>TAPESTRY-2084 – Add control over whether whitespace is stripped from templates by default</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tasks_completed_5"><a class="anchor" href="#_tasks_completed_5"></a>Tasks Completed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-1851 – Extend scripts and Ant build.xml to make rolling out a release easier</p>
+</li>
+<li>
+<p>TAPESTRY-2069 – Replace LGPL JavaScript calendar with a properly licensed one</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tapestry_version_5_0_9"><a class="anchor" href="#_tapestry_version_5_0_9"></a>Tapestry Version 5.0.9</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_bugs_fixed_11"><a class="anchor" href="#_bugs_fixed_11"></a>Bugs Fixed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-2074 – Tapestry fails with URISyntaxException when the project folder contains spaces</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_improvements_made_10"><a class="anchor" href="#_improvements_made_10"></a>Improvements Made</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-1647 – Need to be able to render elements before and after form labels</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_new_features_added_7"><a class="anchor" href="#_new_features_added_7"></a>New Features Added</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-1724 – Add ability for pages to be notified about errors within themselves so that they can override the default error handling behavior</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tapestry_version_5_0_8"><a class="anchor" href="#_tapestry_version_5_0_8"></a>Tapestry Version 5.0.8</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Release not made public due to TAPESTRY-2074</p>
+</div>
+<div class="sect2">
+<h3 id="_bugs_fixed_12"><a class="anchor" href="#_bugs_fixed_12"></a>Bugs Fixed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-1315 – Context expression without period results in StringIndexOutOfBoundsException</p>
+</li>
+<li>
+<p>TAPESTRY-1377 – NullPointerException invoking methods on the Request service</p>
+</li>
+<li>
+<p>TAPESTRY-1546 – Add inheritInformalParameters flag to the @Component annotation</p>
+</li>
+<li>
+<p>TAPESTRY-1595 – Add support for ignoring paths that belong to other servlets in the web application</p>
+</li>
+<li>
+<p>TAPESTRY-1598 – Tapestry should not require explicit value encoders (via the encoder parameter) where it can automatically coerce the value between string and the appropriate server-side type</p>
+</li>
+<li>
+<p>TAPESTRY-1600 – Cannot render XML from page templates: XML declaration and namespaces are removed</p>
+</li>
+<li>
+<p>TAPESTRY-1636 – Template reloading in Tomcat doesn&#8217;t work</p>
+</li>
+<li>
+<p>TAPESTRY-1713 – Tapestry doesn&#8217;t run correctly on Websphere 6.1 due to an incorrect implementation of HttpServletRequest.getServletPath()</p>
+</li>
+<li>
+<p>TAPESTRY-1823 – It is not possible to create a reasonable implementation of RequestExceptionHandler without importing internal interfaces and services</p>
+</li>
+<li>
+<p>TAPESTRY-1840 – Tapestry 5 does not compile with Java 6</p>
+</li>
+<li>
+<p>TAPESTRY-1849 – There are two virtually identical PersistentLocaleImpl classes, one unused (probably an incomplete refactoring)</p>
+</li>
+<li>
+<p>TAPESTRY-1880 – DateField component should support editting of time as well as date</p>
+</li>
+<li>
+<p>TAPESTRY-1926 – DateField disabling does not work</p>
+</li>
+<li>
+<p>TAPESTRY-1941 – ValidationTracker retaining field values inconsistently</p>
+</li>
+<li>
+<p>TAPESTRY-1948 – Null pointer exception when performing a partial page render</p>
+</li>
+<li>
+<p>TAPESTRY-1957 – EnumValueEncoder missing null check when converting to client value</p>
+</li>
+<li>
+<p>TAPESTRY-1984 – Error occurs with a multipart (file upload) request if the request encoding is null</p>
+</li>
+<li>
+<p>TAPESTRY-1988 – Page activation paremeter with escaped ( %2f ) slash ( " / " ) character not passed correctly</p>
+</li>
+<li>
+<p>TAPESTRY-2005 – Using component classes as component parameters fails (Could not find a coercion)</p>
+</li>
+<li>
+<p>TAPESTRY-2007 – PNG images related to validation render poorly in IE</p>
+</li>
+<li>
+<p>TAPESTRY-2013 – BeanEditor does not support informal parameters</p>
+</li>
+<li>
+<p>TAPESTRY-2017 – AssetDispatcher doesn&#8217;t stream asset when the 'If-Modified-Since' header can&#8217;t be converted to a date</p>
+</li>
+<li>
+<p>TAPESTRY-2019 – Autocompleter mixin now fails with a NullPointerException</p>
+</li>
+<li>
+<p>TAPESTRY-2028 – Mimimize whitespace in the output markup</p>
+</li>
+<li>
+<p>TAPESTRY-2033 – Optimized requests paths are broken for root paths within contexts</p>
+</li>
+<li>
+<p>TAPESTRY-2044 – Component action requests are not capable of handling the case where the active page and the page containing the component are different</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_improvements_made_11"><a class="anchor" href="#_improvements_made_11"></a>Improvements Made</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-1478 – Validation messages for zh_CN locale</p>
+</li>
+<li>
+<p>TAPESTRY-1502 – Generated URLs should be relative to request base URL</p>
+</li>
+<li>
+<p>TAPESTRY-1599 – Make it possible to differentiate between preparing for a Form render vs. preparing for a Form submission</p>
+</li>
+<li>
+<p>TAPESTRY-1639 – Components that generate hyperlinks (ActionLink, PageLink, EventLink) should have a getLink() method to retrieve the link as generated</p>
+</li>
+<li>
+<p>TAPESTRY-1671 – Need a way to redirect to external URLs</p>
+</li>
+<li>
+<p>TAPESTRY-1739 – Add byte, short and float Translators</p>
+</li>
+<li>
+<p>TAPESTRY-1802 – Add documentation for the intended project layout</p>
+</li>
+<li>
+<p>TAPESTRY-1818 – Template parser should handle CDATA blocks</p>
+</li>
+<li>
+<p>TAPESTRY-1830 – Add ability to store temporary data without having to define new properties</p>
+</li>
+<li>
+<p>TAPESTRY-1940 – Italian translation of messages for Error component, and validation</p>
+</li>
+<li>
+<p>TAPESTRY-1991 – It should be easier to access an Application State Object without forcing its creation</p>
+</li>
+<li>
+<p>TAPESTRY-2008 – Validation popup bubbles are somewhat distracting, should be simplified</p>
+</li>
+<li>
+<p>TAPESTRY-2012 – Add BeanEditor support for data types "password" and "longtext"</p>
+</li>
+<li>
+<p>TAPESTRY-2014 – ComponentResources should expose the page&#8217;s lifecycle to interested listeners</p>
+</li>
+<li>
+<p>TAPESTRY-2021 – It should be possible to turn off the generation of CSS classes for table headers and table cells inside a Grid</p>
+</li>
+<li>
+<p>TAPESTRY-2049 – Avoid reflection when instantiating component instances</p>
+</li>
+<li>
+<p>TAPESTRY-2056 – Add configurable null handling for text fields</p>
+</li>
+<li>
+<p>TAPESTRY-2057 – Add EventLink component that can create a link that triggers an arbitrarily named event in its container</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_new_features_added_8"><a class="anchor" href="#_new_features_added_8"></a>New Features Added</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-1526 – Strip the folder name used to identify libraries from logical page names, just as the subfolder is stripped</p>
+</li>
+<li>
+<p>TAPESTRY-1847 – Grid component should output additional CSS classes into TDs to identify first and last column, first and last row</p>
+</li>
+<li>
+<p>TAPESTRY-2006 – Replace naive page pool mechanism with a more realistic one that can handle larger sites</p>
+</li>
+<li>
+<p>TAPESTRY-2042 – Make it possible to merge action requests with rendering, as with Tapestry 4</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tapestry_version_5_0_7"><a class="anchor" href="#_tapestry_version_5_0_7"></a>Tapestry Version 5.0.7</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_bugs_fixed_13"><a class="anchor" href="#_bugs_fixed_13"></a>Bugs Fixed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-1541 – Can&#8217;t find page with same name as parent folder</p>
+</li>
+<li>
+<p>TAPESTRY-1608 – Some documentation pages link to the out-of-date PDF tutorial, rather than the current HTML tutorial</p>
+</li>
+<li>
+<p>TAPESTRY-1627 – Start page redirect requests can return an empty response.</p>
+</li>
+<li>
+<p>TAPESTRY-1723 – tapestry-upload does not use character encoding</p>
+</li>
+<li>
+<p>TAPESTRY-1745 – Palette javascript errors in Internet Explorer</p>
+</li>
+<li>
+<p>TAPESTRY-1748 – Field validators continue to generate client-side JavaScript even though the Form is configured to not do client-side validation</p>
+</li>
+<li>
+<p>TAPESTRY-1816 – Some tapestry-ioc tests fail on IBM JDK due to subtle differences in JDK implementations</p>
+</li>
+<li>
+<p>TAPESTRY-1834 – Fields not rewritten when modifying existing methods</p>
+</li>
+<li>
+<p>TAPESTRY-1838 – Palette javascript Error when an item contains a quote</p>
+</li>
+<li>
+<p>TAPESTRY-1863 – Tapestry should verify that marker annotations have retention type runtime</p>
+</li>
+<li>
+<p>TAPESTRY-1864 – Code sample in documentation on how to add a new property editor incorrect</p>
+</li>
+<li>
+<p>TAPESTRY-1871 – Null date displayed in a Grid raises error</p>
+</li>
+<li>
+<p>TAPESTRY-1879 – PageLink does not have an anchor parameter</p>
+</li>
+<li>
+<p>TAPESTRY-1882 – Formatted messages are not localized properly</p>
+</li>
+<li>
+<p>TAPESTRY-1922 – EJB3 Beans can not be referenced as properties inside JBoss 4.0</p>
+</li>
+<li>
+<p>TAPESTRY-1925 – Obscure exception when a Collection (not a List) is used as a GridDataSource</p>
+</li>
+<li>
+<p>TAPESTRY-1934 – Tapestry should enforce that component classes only extend from other (transformed) component classes, or java.lang.Object</p>
+</li>
+<li>
+<p>TAPESTRY-1936 – Non-null return value from form action event causes exception</p>
+</li>
+<li>
+<p>TAPESTRY-1937 – If a single module contains more than one integration test (subclass of AbstractIntegrationTestSuite), then the second one fails</p>
+</li>
+<li>
+<p>TAPESTRY-1943 – Site menu is the same on all pages</p>
+</li>
+<li>
+<p>TAPESTRY-1947 – Mangled URLs that should result in standard 404 error pages are instead resulting in a Tapestry exception report</p>
+</li>
+<li>
+<p>TAPESTRY-1949 – Component action requests where the action context contains a period are not parsed correctly leading to request failures</p>
+</li>
+<li>
+<p>TAPESTRY-1951 – "No ClassLoaders found for" exception</p>
+</li>
+<li>
+<p>TAPESTRY-1952 – The "match any event" feature for the OnEvent handler is not useful and should be removed</p>
+</li>
+<li>
+<p>TAPESTRY-1966 – Non-private/non-static fields in a page should be an exception, not a warning</p>
+</li>
+<li>
+<p>TAPESTRY-1975 – Template parser is insufficiently picky about component ids</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_improvements_made_12"><a class="anchor" href="#_improvements_made_12"></a>Improvements Made</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-1360 – Add a @Width annotation to set the width of input fields generated by BeanEditForm</p>
+</li>
+<li>
+<p>TAPESTRY-1576 – Getting access to the created configuration</p>
+</li>
+<li>
+<p>TAPESTRY-1862 – Change Tapestry to be compatible with Eclipse/Maven Plugin 0.0.11</p>
+</li>
+<li>
+<p>TAPESTRY-1897 – Upgrade to Javassist 3.6 for improved JDK 1.6 support</p>
+</li>
+<li>
+<p>TAPESTRY-1900 – Allow multiple markers annotations per service</p>
+</li>
+<li>
+<p>TAPESTRY-1903 – Upgrade to Prototype 1.6 / Scriptaculous 1.8</p>
+</li>
+<li>
+<p>TAPESTRY-1917 – Tapestry should list available pages, components and mixins at startup, and when classes change</p>
+</li>
+<li>
+<p>TAPESTRY-1918 – Tapestry&#8217;s reload logic should be able to see additions, not just deletions and changes</p>
+</li>
+<li>
+<p>TAPESTRY-1935 – Create an annotation to add a CSS stylesheet to the rendered page</p>
+</li>
+<li>
+<p>TAPESTRY-1942 – Client side validation should be triggered when the user moves out of a field</p>
+</li>
+<li>
+<p>TAPESTRY-1973 – Tapestry 5 Tutorial Improvements</p>
+</li>
+<li>
+<p>TAPESTRY-1990 – More flexibility for specifying timeouts and other time periods in minutes, seconds, etc. rather than milliseconds</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_new_features_added_9"><a class="anchor" href="#_new_features_added_9"></a>New Features Added</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-1476 – Component events for input translation and validation</p>
+</li>
+<li>
+<p>TAPESTRY-1509 – Create an annotation to add a static JavaScript library to the rendered page</p>
+</li>
+<li>
+<p>TAPESTRY-1829 – Allow @Marker annotation on module classes, to automatically mark all services of that module with the annotation</p>
+</li>
+<li>
+<p>TAPESTRY-1860 – Extend ObjectLocator to create a proxied, autobuilt service</p>
+</li>
+<li>
+<p>TAPESTRY-1891 – Tapestry IoC Service Proxies should be serializable</p>
+</li>
+<li>
+<p>TAPESTRY-1931 – Add an annotation to allow explicit setting of property types</p>
+</li>
+<li>
+<p>TAPESTRY-1994 – Allow easy override of the default Tapestry stylesheet</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tasks_completed_6"><a class="anchor" href="#_tasks_completed_6"></a>Tasks Completed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-1914 – Nightly build broken inside quickstart module</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tapestry_version_5_0_6"><a class="anchor" href="#_tapestry_version_5_0_6"></a>Tapestry Version 5.0.6</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_bugs_fixed_14"><a class="anchor" href="#_bugs_fixed_14"></a>Bugs Fixed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-1328 – Support for form elements inside a Grid</p>
+</li>
+<li>
+<p>TAPESTRY-1345 – Exception generated when a page does not have a template is confusing: "No root element has been defined."</p>
+</li>
+<li>
+<p>TAPESTRY-1389 – Coercion to numeric types does not check for null</p>
+</li>
+<li>
+<p>TAPESTRY-1417 – CSS classes on text input fields are discarded when field is in error</p>
+</li>
+<li>
+<p>TAPESTRY-1471 – Controlling the order of properties within a BeanModel is too complex and needs an improved API</p>
+</li>
+<li>
+<p>TAPESTRY-1506 – Add support for anchors when generating links</p>
+</li>
+<li>
+<p>TAPESTRY-1597 – When a List is converted to a SelectModel, the keys are converted unnecessarily to strings</p>
+</li>
+<li>
+<p>TAPESTRY-1604 – Attributes of elements do not have entity values quoted (including the " character itself) resulting in invalid markup</p>
+</li>
+<li>
+<p>TAPESTRY-1606 – Anchor-Links in "Component Index" web page for T5 doesn&#8217;t work with FireFox</p>
+</li>
+<li>
+<p>TAPESTRY-1625 – T5 Form Component Generates Script Tag With Deprecated Language Attribute</p>
+</li>
+<li>
+<p>TAPESTRY-1626 – T5 Form Component Generates contactForm:errors Div With Invalid Empty List</p>
+</li>
+<li>
+<p>TAPESTRY-1629 – Licenses are not distributed correctly</p>
+</li>
+<li>
+<p>TAPESTRY-1631 – tapestry-spring initializes lazy-init beans too soon</p>
+</li>
+<li>
+<p>TAPESTRY-1648 – Coercing from null to BigDecimal causes an NPE</p>
+</li>
+<li>
+<p>TAPESTRY-1667 – Parameters bound to expansions may be cached when they should not be</p>
+</li>
+<li>
+<p>TAPESTRY-1702 – Missing coercion from primitive arrays to List</p>
+</li>
+<li>
+<p>TAPESTRY-1709 – Radio component throws an exception when used with RadioGroup and Label</p>
+</li>
+<li>
+<p>TAPESTRY-1730 – Order of event handler method invocation should be greatest number of parameters to fewest</p>
+</li>
+<li>
+<p>TAPESTRY-1731 – @Inject @Symbol does not work inside a component</p>
+</li>
+<li>
+<p>TAPESTRY-1735 – PageLink doesn&#8217;t have a disabled parameter</p>
+</li>
+<li>
+<p>TAPESTRY-1746 – Input validation documentation includes an invalid template that results in a parser error</p>
+</li>
+<li>
+<p>TAPESTRY-1752 – Expansions used in bound parameters are never re-evaluated</p>
+</li>
+<li>
+<p>TAPESTRY-1769 – Bug when component name i same as component package</p>
+</li>
+<li>
+<p>TAPESTRY-1785 – Move non-component classes out of corelib.components</p>
+</li>
+<li>
+<p>TAPESTRY-1789 – Exception messages listing pages, components, etc, should strip out the "core/" prefix</p>
+</li>
+<li>
+<p>TAPESTRY-1790 – Component Report generates bad links to apidocs when the apidocs are generated at the project level</p>
+</li>
+<li>
+<p>TAPESTRY-1809 – archetype.xml doesn&#8217;t account for change to .tml (/WEB-INF/Start.html should be /Start.tml)</p>
+</li>
+<li>
+<p>TAPESTRY-1815 – The InjectComponent annotation is misnamed, should be InjectContainer</p>
+</li>
+<li>
+<p>TAPESTRY-1824 – Code example on Alias page of tapestry-core guide is wrong, has extra "new"</p>
+</li>
+<li>
+<p>TAPESTRY-1825 – Full Tapestry releases should have the artifacts deployed with the updateReleaseInfo flag set</p>
+</li>
+<li>
+<p>TAPESTRY-1831 – Builtin services (TypeCoercer, ClassFactory, etc.) are not marked with the @Builtin annotation</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_improvements_made_13"><a class="anchor" href="#_improvements_made_13"></a>Improvements Made</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-1372 – Allow contributions to the Hibernate Configuration</p>
+</li>
+<li>
+<p>TAPESTRY-1469 – Templates should support an outer t:container element for when a template consists of non-tree structured content</p>
+</li>
+<li>
+<p>TAPESTRY-1579 – Allow multiple BeanEditor components within a form</p>
+</li>
+<li>
+<p>TAPESTRY-1603 – BeanEditForm submit button cannot be uniquely identified for CSS purposes</p>
+</li>
+<li>
+<p>TAPESTRY-1607 – Tapestry modules should have a link to Tapestry&#8217;s JIRA instance</p>
+</li>
+<li>
+<p>TAPESTRY-1615 – ClassTransformation needs ability to rename a method and extend the beginning of a method</p>
+</li>
+<li>
+<p>TAPESTRY-1619 – Add coercion from type [C ( simple char ) to type java.lang.Character</p>
+</li>
+<li>
+<p>TAPESTRY-1633 – PropertyDisplayContext should expose the id/propertyName of the currently rendering property</p>
+</li>
+<li>
+<p>TAPESTRY-1697 – There is no link to the bug database on the Tapestry project site</p>
+</li>
+<li>
+<p>TAPESTRY-1737 – When a property name in a property expression is not valid, the exception message should list the available property names</p>
+</li>
+<li>
+<p>TAPESTRY-1738 – Render debugging output is incredibly verbose, and should only be output at the TRACE (i.e. more vebose than DEBUG) logging level</p>
+</li>
+<li>
+<p>TAPESTRY-1750 – Separate out Tapestry annotations for use in other tiers (without dragging in all of Tapestry)</p>
+</li>
+<li>
+<p>TAPESTRY-1777 – Allow HTML 4 doctypes to be used in component templates</p>
+</li>
+<li>
+<p>TAPESTRY-1781 – Tapestry templates should use the extension .tml (Tapestry Markup Language) since they may contain other than (X)HTML</p>
+</li>
+<li>
+<p>TAPESTRY-1800 – Having two different Inject annotations with virtually identical behavior is confusing, they should be consolidated</p>
+</li>
+<li>
+<p>TAPESTRY-1808 – Automatic coercion from String to File would be handy</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_new_features_added_10"><a class="anchor" href="#_new_features_added_10"></a>New Features Added</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-1358 – Create BeanDisplay component to display the content of a single bean</p>
+</li>
+<li>
+<p>TAPESTRY-1634 – Create a DateField component that uses client-side JavaScript</p>
+</li>
+<li>
+<p>TAPESTRY-1676 – Add component for editing a single bean property</p>
+</li>
+<li>
+<p>TAPESTRY-1722 – Startup service for Tapestry IoC to perform initialization when the Registry starts up</p>
+</li>
+<li>
+<p>TAPESTRY-1741 – TestBase/MockTester should give each Mock a name based on the type of mock, which assists with debugging</p>
+</li>
+<li>
+<p>TAPESTRY-1742 – Support removal and reordering of BeanModel properties inside Grid and BeanEditForm components</p>
+</li>
+<li>
+<p>TAPESTRY-1786 – Add JVM system property for adding modules to the IoC container</p>
+</li>
+<li>
+<p>TAPESTRY-1798 – Injection via Marker Annotations</p>
+</li>
+<li>
+<p>TAPESTRY-1841 – Extend PageRenderSupport to have equivalent support for CSS stylesheets</p>
+</li>
+<li>
+<p>TAPESTRY-1845 – Need a simple way to access a component&#8217;s messages for use in testing</p>
+</li>
+<li>
+<p>TAPESTRY-1848 – Make status of Tapestry IoC services available programattically and via a simple user interface</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>===Tasks Completed
+* TAPESTRY-1367 – Documentation error on Application State page: ApplicationStateConfiguration should be ApplicationStateContribution</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_wish_list_items_completed_2"><a class="anchor" href="#_wish_list_items_completed_2"></a>Wish List Items Completed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-1704 – Convert logging strategy from commons-logging to Simple Logging Facade for Java (SLF4J)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tapestry_5_0_5"><a class="anchor" href="#_tapestry_5_0_5"></a>Tapestry 5.0.5</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_bugs_fixed_15"><a class="anchor" href="#_bugs_fixed_15"></a>Bugs Fixed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-1294 – Tapestry does not set an output encoding which prevents Unicode content from being output correctly</p>
+</li>
+<li>
+<p>TAPESTRY-1423 – Tapestry IoC fails to get the correct class from javassist.CtClass when the instance is already a proxy</p>
+</li>
+<li>
+<p>TAPESTRY-1425 – Eager Loaded service (builder) cannot use object injection</p>
+</li>
+<li>
+<p>TAPESTRY-1434 – Service builder methods do not allow services to be defined in terms of non-interface class, even though ServiceBinder does</p>
+</li>
+<li>
+<p>TAPESTRY-1443 – org.apache.tapestry5.annotations.Service annotation is ignored</p>
+</li>
+<li>
+<p>TAPESTRY-1447 – Headers are not set appropiately to allow the browser to cache javascript resources.</p>
+</li>
+<li>
+<p>TAPESTRY-1451 – T5 website: Broken Link to script.aculo.us</p>
+</li>
+<li>
+<p>TAPESTRY-1464 – Cannot Subclass TapestryFilter to add custom init() and destroy() logic</p>
+</li>
+<li>
+<p>TAPESTRY-1465 – BeanEditForm and Grid are not extensible in terms of supported property types to be editted or viewed</p>
+</li>
+<li>
+<p>TAPESTRY-1480 – Implement Radio component</p>
+</li>
+<li>
+<p>TAPESTRY-1481 – ActionLink and PageLink render an id attribute, but don&#8217;t provide a clientId property, making it impossible to reference them in JavaScript</p>
+</li>
+<li>
+<p>TAPESTRY-1491 – No way to get the logical page name for a page instance</p>
+</li>
+<li>
+<p>TAPESTRY-1494 – Artifact snapshots are being deployed to the tapestry-repository, not the tapestry-snapshot-repository</p>
+</li>
+<li>
+<p>TAPESTRY-1497 – EagerLoad is too early for a normal Tapestry application</p>
+</li>
+<li>
+<p>TAPESTRY-1498 – nbsp in template causes exception in SAX Parser.</p>
+</li>
+<li>
+<p>TAPESTRY-1504 – When a Map is converted to a SelectModel, the keys are converted unnecessarily to strings</p>
+</li>
+<li>
+<p>TAPESTRY-1511 – VerifyError when using inner classes inside components</p>
+</li>
+<li>
+<p>TAPESTRY-1528 – No way to cleanup the thread without access to the Registry</p>
+</li>
+<li>
+<p>TAPESTRY-1537 – Release notes for 5.0.4 claim that TAPESTRY-1294 is fixed, which it isn&#8217;t</p>
+</li>
+<li>
+<p>TAPESTRY-1559 – application package initializer removed while merging svn</p>
+</li>
+<li>
+<p>TAPESTRY-1562 – Spurious warnings about missing component ids due to case-sensitive checking of template ids vs. declared components</p>
+</li>
+<li>
+<p>TAPESTRY-1571 – CheckForUpdatesFilter can cause deadlock</p>
+</li>
+<li>
+<p>TAPESTRY-1583 – The "block:" binding prefix may only reference blocks that appear before the reference in the template, an error occurs if the block is defined later in the template</p>
+</li>
+<li>
+<p>TAPESTRY-1585 – tapestry-upload has an incorrect manifest entry for the module class</p>
+</li>
+<li>
+<p>TAPESTRY-1590 – Page templates in WEB-INF located based on logical page name (which may not match the class name)</p>
+</li>
+<li>
+<p>TAPESTRY-1593 – Various typos in docs/comments</p>
+</li>
+<li>
+<p>TAPESTRY-1596 – Contributing a service to the Alias service configuration fails if the service uses a non-standard scope, such as perthread</p>
+</li>
+<li>
+<p>TAPESTRY-1614 – No "expires" header should be set in asset download requests, as that can confuse the browser, preventing changes versions of assets from being downloaded</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_improvements_made_14"><a class="anchor" href="#_improvements_made_14"></a>Improvements Made</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-1359 – The BeanEditForm component should attempt to create its object parameter if it is null</p>
+</li>
+<li>
+<p>TAPESTRY-1409 – Extend StreamResponse to support setting headers in the Response prior to streaming the contents from the InputStream</p>
+</li>
+<li>
+<p>TAPESTRY-1439 – Convert Tutorial from Pages/PDF to new module using APT format</p>
+</li>
+<li>
+<p>TAPESTRY-1457 – No way for PageLink to distinguish between an explicitly empty page activate context and normal delegation to the target page&#8217;s passivate event</p>
+</li>
+<li>
+<p>TAPESTRY-1479 – It would be nice to have a pipeline between the Dispatchers and the RequestHandlers (for component action requests and for page render requests)</p>
+</li>
+<li>
+<p>TAPESTRY-1493 – Grid component should display sort icon next to all sortable fields</p>
+</li>
+<li>
+<p>TAPESTRY-1505 – The quickstart archetype should include an empty bind() method</p>
+</li>
+<li>
+<p>TAPESTRY-1523 – Split mock-control managing logic in TestBase so that it can be used in a JUnit test suite</p>
+</li>
+<li>
+<p>TAPESTRY-1572 – AbstractIntegrationTestSuite should mark setup() and cleanup() as alwaysRun</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_new_features_added_11"><a class="anchor" href="#_new_features_added_11"></a>New Features Added</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-1354 – Implement a file upload component</p>
+</li>
+<li>
+<p>TAPESTRY-1356 – Implement client-side field persistence</p>
+</li>
+<li>
+<p>TAPESTRY-1369 – There should be a global application-level message catalog for messages common to all pages &amp; components</p>
+</li>
+<li>
+<p>TAPESTRY-1370 – Add a component event result processor for Class instances</p>
+</li>
+<li>
+<p>TAPESTRY-1373 – Recreate T4&#8217;s Palette component for T5</p>
+</li>
+<li>
+<p>TAPESTRY-1446 – @Symbol annotation for injecting a specific symbol</p>
+</li>
+<li>
+<p>TAPESTRY-1463 – Way to inherit binding from containing component</p>
+</li>
+<li>
+<p>TAPESTRY-1466 – Support expansions inside ordinary attributes</p>
+</li>
+<li>
+<p>TAPESTRY-1492 – The Session interface needs methods for getting and setting the session timeout</p>
+</li>
+<li>
+<p>TAPESTRY-1503 – BeanEditForm should default its object parameter to container property that matches its id</p>
+</li>
+<li>
+<p>TAPESTRY-1610 – Implement regular expression based input validation (client and server)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tasks_completed_7"><a class="anchor" href="#_tasks_completed_7"></a>Tasks Completed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-1485 – Remove the Any component --- not necessary because of expansions in attributes</p>
+</li>
+<li>
+<p>TAPESTRY-1501 – Remove Img component, not needed because expansions are allowed in attributes</p>
+</li>
+<li>
+<p>TAPESTRY-1566 – Hibernate configuration documentation is out of date / broken</p>
+</li>
+<li>
+<p>TAPESTRY-1570 – wrong link to RequestGlobals in the guide</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_wish_list_items_completed_3"><a class="anchor" href="#_wish_list_items_completed_3"></a>Wish List Items Completed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-1472 – The module and filter are coded against Spring&#8217;s WebApplicationContext, but doesn&#8217;t use any APIs not present in ApplicationContext</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tapestry_5_0_4"><a class="anchor" href="#_tapestry_5_0_4"></a>Tapestry 5.0.4</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_bugs_fixed_16"><a class="anchor" href="#_bugs_fixed_16"></a>Bugs Fixed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-1263 – Can&#8217;t use HTML entities in templates</p>
+</li>
+<li>
+<p>TAPESTRY-1264 – Can&#8217;t specify DOCTYPE in template</p>
+</li>
+<li>
+<p>TAPESTRY-1317 – Service contributors are not case insensitive with respect to the service id.</p>
+</li>
+<li>
+<p>TAPESTRY-1333 – Cannot bundle component classes &amp; templates in WEB-INF/classes when deploying to Tomcat (&amp; JBoss)</p>
+</li>
+<li>
+<p>TAPESTRY-1337 – PageTester can&#8217;t handle pages with context assets</p>
+</li>
+<li>
+<p>TAPESTRY-1338 – ApplicationStateObjects not properly instantiated when using PageTester</p>
+</li>
+<li>
+<p>TAPESTRY-1357 – Quickstart archetype still uses out-of-date @Id and @Contribute annotations</p>
+</li>
+<li>
+<p>TAPESTRY-1363 – Some of the Java comments in the generated AppModule class are out of date</p>
+</li>
+<li>
+<p>TAPESTRY-1371 – The Submit component should have a defer parameter, but just has a _defer private instance variable.</p>
+</li>
+<li>
+<p>TAPESTRY-1387 – @Inject should expose annotations on the field to the ObjectProvider</p>
+</li>
+<li>
+<p>TAPESTRY-1411 – PageLink component does not render informal parameters</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_improvements_made_15"><a class="anchor" href="#_improvements_made_15"></a>Improvements Made</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-1365 – RandomDataSource should allow any type of value for the oneOf() method, not just String</p>
+</li>
+<li>
+<p>TAPESTRY-1424 – @OnEvent annotation should be simplified to specify at most one event and at most one component id</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_new_features_added_12"><a class="anchor" href="#_new_features_added_12"></a>New Features Added</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-1330 – The @Scope annotaton should be allowed on service implementation classes (in addition to service builder methods inside a module class)</p>
+</li>
+<li>
+<p>TAPESTRY-1331 – Need an @InjectValue annotation for cases where a value to insert contains a colon</p>
+</li>
+<li>
+<p>TAPESTRY-1353 – Include copies of common DTDs in the JAR such that the template parser does not need to access the network to parse templates with specific doctypes</p>
+</li>
+<li>
+<p>TAPESTRY-1368 – The @ApplicationState annotation should be capable of enhancing a boolean field to indicate whether the state object already exists</p>
+</li>
+<li>
+<p>TAPESTRY-1382 – Strip out duplication of names in the class name &#8594; page name / component type conversion</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tapestry_5_0_3"><a class="anchor" href="#_tapestry_5_0_3"></a>Tapestry 5.0.3</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_bugs_fixed_17"><a class="anchor" href="#_bugs_fixed_17"></a>Bugs Fixed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-1270 – The StringTranslator should return null when an empty text field is submitted with a form, not the empty string</p>
+</li>
+<li>
+<p>TAPESTRY-1275 – Recursive Components cause heap space overflow</p>
+</li>
+<li>
+<p>TAPESTRY-1282 – Assets should be streamed with an appropriate content type, even when the container is unable to provide the content type</p>
+</li>
+<li>
+<p>TAPESTRY-1291 – Race condition in IoC service creation can create runtime failures</p>
+</li>
+<li>
+<p>TAPESTRY-1297 – incorrect context generated for URLs with final slash</p>
+</li>
+<li>
+<p>TAPESTRY-1300 – Unit tests require english locale to run succesfully</p>
+</li>
+<li>
+<p>TAPESTRY-1303 – Update licences and notice files for external dependencies (javassist, etc.)</p>
+</li>
+<li>
+<p>TAPESTRY-1314 – ExceptionAnalyzer throws NPE when an exception message is null</p>
+</li>
+<li>
+<p>TAPESTRY-1316 – Address class loader issues inside JBoss</p>
+</li>
+<li>
+<p>TAPESTRY-1321 – JBoss deployment error</p>
+</li>
+<li>
+<p>TAPESTRY-1322 – Spurious errors in log concerning page "favicon"</p>
+</li>
+<li>
+<p>TAPESTRY-1329 – The favicon.ico file is not generated into the project by the quickstart archetype</p>
+</li>
+<li>
+<p>TAPESTRY-1343 – Under Tomcat, a root path URL such as <a href="http://&#8230;&#8203;/context" class="bare">http://&#8230;&#8203;/context</a> (without a trailing slash) causes a StringIndexOutOfBoundsException inside PageRenderDispatcher</p>
+</li>
+<li>
+<p>TAPESTRY-1344 – Render phase methods should be allowed to return a Renderable object</p>
+</li>
+<li>
+<p>TAPESTRY-1346 – tapestry-hibernate module depends on missing ComponentClassLocator service</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_improvements_made_16"><a class="anchor" href="#_improvements_made_16"></a>Improvements Made</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-1025 – Add support for eager loading of services</p>
+</li>
+<li>
+<p>TAPESTRY-1295 – Event handling methods that have too many parameters for the event context should be silently skipped</p>
+</li>
+<li>
+<p>TAPESTRY-1298 – ExceptionReport can be too verbose and repetative</p>
+</li>
+<li>
+<p>TAPESTRY-1308 – Exceptions while building services are poorly reported</p>
+</li>
+<li>
+<p>TAPESTRY-1320 – Render phase BeginRender should respond to a "false" result by switching to phase AfterRender (rather than phase CleanupRender).</p>
+</li>
+<li>
+<p>TAPESTRY-1323 – Support caseless mapped service configurations</p>
+</li>
+<li>
+<p>TAPESTRY-1335 – The "infrastructure:" object provider prefix is too long and the name is confusing, rename to "alias:"</p>
+</li>
+<li>
+<p>TAPESTRY-1339 – Rework Tapestry IoC to remove the concept of module ids and qualified service ids</p>
+</li>
+<li>
+<p>TAPESTRY-1342 – When an exception is reported concerning a particular method, the string identifying the method should include the file name and line number (if available)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_new_features_added_13"><a class="anchor" href="#_new_features_added_13"></a>New Features Added</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TAPESTRY-1276 – If component should include an optional negate parameter</p>
+</li>
+<li>
+<p>TAPESTRY-1284 – Tapestry Spring integration module</p>
+</li>
+<li>
+<p>TAPESTRY-1292 – Allow lists to be used as select models</p>
+</li>
+<li>
+<p>TAPESTRY-1302 – JavaScript support</p>
+</li>
+<li>
+<p>TAPESTRY-1311 – Identify type of component via tag element name in templates</p>
+</li>
+<li>
+<p>TAPESTRY-1319 – tapestry.InfrastructureOverrides is not yet implemented</p>
+</li>
+<li>
+<p>TAPESTRY-1325 – Add an "asset:" object provider, to simplfy injecting assets into services</p>
+</li>
+<li>
+<p>TAPESTRY-1341 – Allow service builders named "build" and determine service id from the result type</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

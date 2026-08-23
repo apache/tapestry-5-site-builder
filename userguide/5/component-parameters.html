@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Component Parameters :: Apache Tapestry</title>
+    <meta name="generator" content="Antora 3.1.15">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/tapestry.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../.."><img alt="Apache Tapestry Logo" src="../../_/img/apache-tapestry-icon-dark.svg" width="60" />Apache Tapestry</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Documentation</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../../main/getting-started.html">Getting Started</a>
+            <a class="navbar-item" href="../../main/tutorial/">Tutorial</a>
+            <a class="navbar-item" href="../../userguide/5.8/">User Guide</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="../../main/community.html">Community</a>
+        <a class="navbar-item" href="../../main/support.html">Support</a>
+        <a class="navbar-item" href="../../main/developers.html">Developers</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Apache</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+            <a class="navbar-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
+            <a class="navbar-item" href="https://www.apache.org/licenses/">License</a>
+            <a class="navbar-item" href="https://www.apache.org/security/">Security</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="../../main/download.html">Download</a>
+          </span>
+        </div>
+        <div class="navbar-brand">
+          <a href="https://www.apache.org/">
+          <img alt="The Apache Software Foundation" src="../../_/img/asf_logo.svg" width="200" height="63" style="padding-top: 5px; padding-bottom: 5px; background-color: white">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="body">
+<div class="nav-container" data-component="userguide" data-version="5">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">User Guide</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Introduction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry Core</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basics</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="project-layout.html">Project Layout</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="runtime-exceptions.html">Runtime Exceptions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="class-reloading.html">Class Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-reference.html">Component Reference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="annotations.html">Annotations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Pages and Components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-classes.html">Component Classes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-templates.html">Component Templates</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="property-expressions.html">Property Expressions</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="component-parameters.html">Component Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="parameter-type-coercion.html">Parameter Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="layout-component.html">Layout Component</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-mixins.html">Component Mixins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-navigation.html">Page Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="localization.html">Localization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Request/Response Rendering</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-life-cycle.html">Page Life Cycle</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="request-processing.html">Request Processing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-rendering.html">Component Rendering</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-events.html">Component Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dom.html">Document Object Model (DOM)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="security.html">Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https.html">HTTPS / SSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="content-type-and-markup.html">Content Type and Markup</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Data Persistence</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="persistent-page-data.html">Persistent Page Data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="session-storage.html">Session Storage</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Interacting with components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="injection.html">Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="environmental-services.html">Environmental Services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript, AJAX, CSS &amp; Binary Data</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="client-side-javascript.html">Client-Side JavaScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ajax-and-zones.html">AJAX and Zones</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="css.html">Cascading Style Sheets (CSS)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="assets.html">Assets</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Working with Forms</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="forms-and-validation.html">Forms and Validation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="beaneditform-guide.html">BeanEditForm Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uploading-files.html">Uploading Files</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Logging, Debugging &amp; Testing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="logging.html">Logging</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unit-testing.html">Unit testing pages or components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integration-testing.html">Integration Testing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="development-dashboard.html">Development Dashboard</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry IOC</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-overview.html">IoC Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="symbols.html">Symbols</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="type-coercion.html">Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="case-insensitivity.html">Case Insensitivity</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="autoloading-modules.html">Autoloading Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="chainbuilder-service.html">ChainBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pipelinebuilder-service.html">PipelineBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="shadowbuilder-service.html">ShadowBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="strategybuilder-service.html">StrategyBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="defining-tapestry-ioc-services.html">Defining Tapestry IOC Services</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-modules.html">IoC Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="object-providers.html">Object Providers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-serialization.html">Service Serialization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="starting-the-ioc-registry.html">Starting the IoC Registry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="aliases.html">Aliases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="injection-in-detail.html">Injection in Detail</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ordering-by-constraints.html">Ordering by Constraints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="registry-startup.html">Registry Startup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="parallel-execution.html">Parallel Execution</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="logging-in-tapestry.html">Logging in Tapestry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-advisors.html">Service Advisors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-decorators.html">Service Decorators</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Add-ons and Integrations</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Built-in</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="hibernate.html">Hibernate Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-report.html">Component Report</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integrating-with-spring-framework.html">Spring</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="third-party-modules.html">Third Party Modules</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Release Notes</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.0.html">Tapestry 5.0</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cookbook</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/default-parameter.html">Default Parameter</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/overriding-exception-reporting.html">Overriding Exception Reporting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/error-page-recipe.html">Error Page Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/supporting-informal-parameters.html">Supporting Informal Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/switching-cases.html">Switching Cases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/enum-parameter-recipe.html">Enum Parameter Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/extending-the-if-component.html">Extending The If Component</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="cookbook/ioc-cookbook.html">IoC Cookbook</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-basic-services-and-injection.html">IoC Cookbook - Basic Services and Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-overriding-ioc-services.html">IoC Cookbook - Overriding IoC Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-patterns.html">IoC Cookbook - Patterns</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-service-configurations.html">IoC Cookbook - Service Configurations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/performance-and-clustering.html">Performance and Clustering</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">User Guide</span>
+    <span class="version">5.0</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../main/about.html">Home</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../current/index.html">User Guide</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../current/index.html">5.8</a>
+        </li>
+        <li class="version">
+          <a href="../5.7/index.html">5.7</a>
+        </li>
+        <li class="version">
+          <a href="../5.6/index.html">5.6</a>
+        </li>
+        <li class="version">
+          <a href="../5.5/index.html">5.5</a>
+        </li>
+        <li class="version">
+          <a href="../5.4/index.html">5.4</a>
+        </li>
+        <li class="version">
+          <a href="../5.3/index.html">5.3</a>
+        </li>
+        <li class="version">
+          <a href="../5.2/index.html">5.2</a>
+        </li>
+        <li class="version">
+          <a href="../5.1/index.html">5.1</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">5.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../main/about.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">User Guide</a></li>
+    <li>Tapestry Core</li>
+    <li>Pages and Components</li>
+    <li><a href="component-parameters.html">Component Parameters</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">5.0</button>
+  <div class="version-menu">
+    <a class="version" href="../current/component-parameters.html">5.8</a>
+    <a class="version" href="../5.7/component-parameters.html">5.7</a>
+    <a class="version" href="../5.6/component-parameters.html">5.6</a>
+    <a class="version" href="../5.5/component-parameters.html">5.5</a>
+    <a class="version" href="../5.4/component-parameters.html">5.4</a>
+    <a class="version" href="../5.3/component-parameters.html">5.3</a>
+    <a class="version" href="../5.2/component-parameters.html">5.2</a>
+    <a class="version" href="../5.1/component-parameters.html">5.1</a>
+    <a class="version is-current" href="component-parameters.html">5.0</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Component Parameters</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Component parameters are the primary means for a component instance and its container to communicate with each other.
+Parameters are used to <em>configure</em> component instances.</p>
+</div>
+<div class="paragraph">
+<p>In the following example, <code>page</code> is a parameter of the <code>pagelink</code> component.
+The page parameter tells the pagelink component which page to go to when the user clicks on the rendered hyperlink:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;html xmlns:t="http://tapestry.apache.org/schema/http://tapestry.apache.org/schema/tapestry_5_0_0.xsd"&gt;
+    &lt;t:pagelink page="Index"&gt;Go Home&lt;/t:pagelink&gt;
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A component may have any number of parameters.
+Each parameter has a specific name, a specific Java type (which may be a primitive value), and may be <em>optional</em> or <em>required</em>.</p>
+</div>
+<div class="paragraph">
+<p>Within a component class, parameters are declared by using the <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/annotations/Parameter.html">@Parameter</a></code> annotation on a private field, as we&#8217;ll see below.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_parameter_bindings"><a class="anchor" href="#_parameter_bindings"></a>Parameter Bindings</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In Tapestry, a parameter is not a slot into which data is pushed: it is a <em>connection</em> between a field of the component (marked with the <code>@Parameter</code> annotation) and a property or resource of the component&#8217;s container.
+(Components can be nested, so the container can be either the page or another component.)</p>
+</div>
+<div class="paragraph">
+<p>The connection between a component and a property (or resource) of its container is called a <em>binding</em>.
+The binding is two-way: the component can read the bound property by reading its parameter field.
+Likewise, a component that updates its parameter field will update the bound property.</p>
+</div>
+<div class="paragraph">
+<p>This is important in a lot of cases; for example a <code>TextField</code> component can read and <em>update</em> the property bound to its value parameter.
+It reads the value when rendering, but updates the value when the form is submitted.</p>
+</div>
+<div class="paragraph">
+<p>The component listed below is a looping component; it renders its body a number of times, defined by its <code>start</code> and <code>end</code> parameters (which set the boundaries of the loop).
+The component can update a <code>result</code> parameter bound to a property of its container; it will automatically count up or down depending on whether <code>start</code> or <code>end</code> is larger.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package org.example.app.components;
+
+import org.apache.tapestry5.annotations.AfterRender;
+import org.apache.tapestry5.annotations.Parameter;
+import org.apache.tapestry5.annotations.SetupRender;
+
+public class Count
+{
+    @Parameter (value="1")
+    private int start;
+
+    @Parameter(required = true)
+    private int end;
+
+    @Parameter
+    private int result;
+
+    private boolean increment;
+
+    @SetupRender
+    void initializeValues()
+    {
+        result = start;
+        increment = start &lt; end;
+    }
+
+    @AfterRender
+    boolean next()
+    {
+        if (increment)
+        {
+            int newResult = value + 1;
+
+            if (newResult &lt;= end)
+            {
+                result = newResult;
+                return false;
+            }
+        }
+        else
+        {
+            int newResult= value - 1;
+            if (newResult&gt;= end)
+            {
+                result = newResult;
+                return false;
+            }
+        }
+        return true;
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The name of the parameter is the same as field name (except with leading "_" and "$" characters, if any, removed). Here, the parameter names are "start", "end" and "result".</p>
+</div>
+<div class="paragraph">
+<p>The component above can be referenced in another component or <a href="component-templates.html" class="xref page">page template</a>, and its parameters <em>bound</em>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;html t:type="layout" xmlns:t="http://tapestry.apache.org/schema/http://tapestry.apache.org/schema/tapestry_5_0_0.xsd"&gt;
+    &lt;p&gt; Merry Christmas: &lt;t:count end="3"&gt; Ho! &lt;/t:count&gt;
+    &lt;/p&gt;
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>end attribute is used to <em>bind</em> the end parameter of the `Count</code> component.
+Here, it is being bound to the string value "3", which is automatically coerced by Tapestry into the int value, 3.</p>
+</div>
+<div class="paragraph">
+<p>Any number of parameters may be bound this way.</p>
+</div>
+<div class="paragraph">
+<p>Component parameters may also be bound using the <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/annotations/Component.html">@Component</a></code> annotation inside the component class.
+(Where conflicts occur, the parameters bound using the <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/annotations/Component.html">@Component</a></code> annotation will take precedence over parameter bindings in the template.)</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_binding_expressions"><a class="anchor" href="#_binding_expressions"></a>Binding Expressions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The value inside the template, "3" in the previous example, is a <em>binding expression</em>.</p>
+</div>
+<div class="paragraph">
+<p>By placing a prefix in front of the value, you can change how Tapestry interprets the remainder of the expression (the part after the colon):</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Prefix</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">asset:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The relative path to an asset file (which must exist)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">block:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The id of a block within the template</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">component:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The id of another component within the same template</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">context:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Context asset: path from context root</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">literal:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A literal string</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nullfieldstrategy:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Used to locate a pre-defined <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/NullFieldStrategy.html">NullFieldStrategy</a></code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">message:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Retrieves a string from the component&#8217;s <a href="localization.html" class="xref page">message catalog</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">prop:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A <a href="property-expressions.html" class="xref page">property expression</a> to read or update</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">symbol:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Used to read one of your <a href="symbols.html" class="xref page">Symbols</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">translate:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The name of a configured translator</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">validate:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A <em>validator specification</em> used to create some number of field validators</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">var:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Allows a render variable of the component to be read or updated</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Most of these binding prefixes allow parameters to be bound to read-only values; for instance a parameter bound to <code>message:some-key</code> will see the message for "some-key" from its container&#8217;s message catalog in the field.
+If the component tries to update the parameter (by setting the value of the field), a runtime exception will be thrown to indicate that the value is read-only.</p>
+</div>
+<div class="paragraph">
+<p>Only <code>prop:</code> and <code>var:</code> binding prefixes are updateable (but you must not use the <code>${&#8230;&#8203;}</code> syntax here; see the warning below).</p>
+</div>
+<div class="paragraph">
+<p>Each parameter has a default prefix, defined by the component, that is used when the prefix is not provided. The most common are <code>literal:</code> and <code>prop:</code>.</p>
+</div>
+<div class="paragraph">
+<p>A <em>special prefix</em>, <code>inherit:</code>, is used to support <a href="#_inherited_parameter_bindings">Inherited Parameter Bindings</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="_render_variables_bindings"><a class="anchor" href="#_render_variables_bindings"></a>Render Variables: Bindings</h3>
+<div class="paragraph">
+<p>Components can have any number of <em>render variables</em>.
+Render variables are named values with no specific type (they are ultimately stored in a Map).
+Render variables are useful for holding simple values, such as loop indices, that need to be passed from one component to another.</p>
+</div>
+<div class="paragraph">
+<p>For example, the following template code:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;ul&gt;
+    &lt;li t:type="loop" source="1..10" value="index"&gt;$\{index}&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and the following Java code:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Property
+private int index;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>... could be rewritten as just:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;ul&gt;
+    &lt;li t:type="loop" source="1..10" value="var:index"&gt;${var:index}&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In other words, you don&#8217;t have to define a property in the Java code.
+The disadvantage is that render variables don&#8217;t work with the property expression syntax, so you can pass around a render variable&#8217;s <em>value</em> but you can&#8217;t reference any of the value&#8217;s properties.</p>
+</div>
+<div class="paragraph">
+<p>Render variables are automatically cleared when a component finishes rendering.</p>
+</div>
+<div class="paragraph">
+<p>Render variable names are case insensitive.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_prop_property_bindings"><a class="anchor" href="#_prop_property_bindings"></a><code>prop:</code> (Property) Bindings</h3>
+<div class="paragraph">
+<p>Main Article: <a href="property-expressions.html" class="xref page">Property Expressions</a></p>
+</div>
+<div class="paragraph">
+<p>The <code>prop:</code> binding prefix indicates a property expression binding.</p>
+</div>
+<div class="paragraph">
+<p>Property expressions are used to link a parameter of a component to a property of its container.
+Property expressions can navigate a series of properties and/or invoke methods, as well as several other useful patterns.</p>
+</div>
+<div class="paragraph">
+<p>The default binding prefix in most cases is <code>prop:</code>, which is why it is usually omitted.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_validate_bindings"><a class="anchor" href="#_validate_bindings"></a><code>validate:</code> Bindings</h3>
+<div class="paragraph">
+<p>Main Article: <a href="forms-and-validation.html" class="xref page">Forms and Validation</a></p>
+</div>
+<div class="paragraph">
+<p>The <code>validate:</code> binding prefix is highly specialized.
+It allows a short string to be used to create and configure the objects that perform input validation for form control components, such as <code>TextField</code> and <code>Checkbox</code>.</p>
+</div>
+<div class="paragraph">
+<p>The string is a comma-separated list of <em>validator types</em>.
+These are short aliases for objects that perform the validation.
+In many cases, the validation is configurable in some way: for example, a validator that enforces a minimum string length needs to know what that minimum string length is.
+Such values are specified after an equals sign.</p>
+</div>
+<div class="paragraph">
+<p>For example: <code>validate:required,minLength=5</code> would presumably enforce that a field requires a value, and with at least five characters.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_translate_bindings"><a class="anchor" href="#_translate_bindings"></a><code>translate:</code> Bindings</h3>
+<div class="paragraph">
+<p>The <code>translate:</code> binding prefix is also related to input validation.
+It is the name of a configured <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/Translator.html">Translator</a></code>, responsible for converting between server-side and client-side representations of data (for instance, between client-side strings and server-side numeric values).</p>
+</div>
+<div class="paragraph">
+<p>The list of available translators is configured by the <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/TranslatorSource.html">TranslatorSource</a></code> service.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_asset_bindings"><a class="anchor" href="#_asset_bindings"></a><code>asset:</code> Bindings</h3>
+<div class="paragraph">
+<p>Main Article: <a href="assets.html" class="xref page">Assets</a></p>
+</div>
+<div class="paragraph">
+<p>Assets bindings are used to specify <a href="component-parameters.html" class="xref page">Component Parameters</a>, static content served by Tapestry.
+By default, assets are located relative to the component class in your packaged application or module.
+This can be overridden by prefixing the path with <code>context:</code>, in which case, the path is a context path from the root of the web application context.
+Because accessing context assets is relatively common, a separate <code>context:</code> binding prefix for that purpose exists (described below).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_context_bindings"><a class="anchor" href="#_context_bindings"></a><code>context:</code> Bindings</h3>
+<div class="paragraph">
+<p>Main Article: <a href="assets.html" class="xref page">Assets</a></p>
+</div>
+<div class="paragraph">
+<p>Context bindings are like asset bindings, but the path is always relative to the root of the web application context.
+This is intended for use inside templates, i.e.:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">  &lt;img src="${context:images/icon.png}"/&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Tapestry will adjust the URL of the image so that it is processed by Tapestry, not the servlet container.
+It will gain a URL that includes the application&#8217;s version number, it will have a far-future expires header, and (if the client supports it) its content will be compressed before being sent to the client.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_parameter_annotation"><a class="anchor" href="#_parameter_annotation"></a>@Parameter annotation</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_required_parameters"><a class="anchor" href="#_required_parameters"></a>Required Parameters</h3>
+<div class="paragraph">
+<p>Parameters that are required must be bound. A runtime exception occurs if a component has unbound required parameters.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class Component {
+
+    @Parameter(required = true)
+    private String parameter;
+
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Sometimes a parameter is marked as required, but may still be omitted if the underlying value is provided by some other means.
+This is the case, for example, with the Select component&#8217;s value parameter, which may have its underlying value set by contributing a ValueEncoderSource.
+Be sure to read the component&#8217;s parameter documentation carefully. Required simply enables checks that the parameter is bound, it does not mean that you must supply the binding in the template (or <code>@Component</code> annotation).
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_optional_parameters"><a class="anchor" href="#_optional_parameters"></a>Optional Parameters</h3>
+<div class="paragraph">
+<p>Parameters are optional unless they are marked as required.</p>
+</div>
+<div class="paragraph">
+<p>You may set a default value for optional parameters using the <code>value</code> element of the @Parameter annotation. In the Count component above, the start parameter has a default value of 1. That value is used unless the start parameter is bound, in which case, the bound value supersedes the default.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_parameter_binding_defaults"><a class="anchor" href="#_parameter_binding_defaults"></a>Parameter Binding Defaults</h3>
+<div class="paragraph">
+<p>The <code>@Parameter</code> annotation&#8217;s <code>value</code> element can be used to specify a <em>binding expression</em> that will be the default binding for the parameter if otherwise left unbound.
+Typically, this is the name of a property that that will compute the value on the fly.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Parameter(value="defaultMessage") // or, equivalently, @Parameter("defaultMessage")
+private String message;
+
+@Parameter(required=true)
+private int maxLength;
+
+public String getDefaultMessage(){
+	return String.format("Maximum field length is %d.", maxLength);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As elsewhere, you may use a prefix on the value. A common prefix to use is the <code>message:</code> prefix, to access a localized message.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_parameter_caching"><a class="anchor" href="#_parameter_caching"></a>Parameter Caching</h3>
+<div class="paragraph">
+<p>Reading a parameter value can be marginally expensive (because of type coercion).
+Therefore, it makes sense to cache the parameter value, at least while the component is actively rendering itself.</p>
+</div>
+<div class="paragraph">
+<p>In rare cases, it is desirable to defeat the caching; this can be done by setting the <code>cache()</code> attribute of the <code>@Parameter</code> annotation to false.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_dont_use_the_syntax"><a class="anchor" href="#_dont_use_the_syntax"></a>Don&#8217;t use the <code>${&#8230;&#8203;}</code> syntax!</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Main Article: <a href="component-templates.html#_expansions" class="xref page">Expansions</a></p>
+</div>
+<div class="paragraph">
+<p>You generally should <em>not</em> use the Template Expansion syntax, <code>${&#8230;&#8203;}</code>, within component parameter bindings.
+Doing so results in the property inside the braces being converted to an (immutable) string, and will therefore result in a runtime exception if your component needs to update the value (whenever the default or explicit binding prefix is <code>prop:</code> or <code>var:</code>, since such component parameters are two-way bindings).</p>
+</div>
+<div class="listingblock">
+<div class="title">This is right</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;t:textfield t:id="color" value="color"/&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">This is wrong</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;t:textfield t:id="color" value="${color}"/&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The general rule is, only use the <code>${&#8230;&#8203;}</code> syntax in non-Tapestry-controlled locations in your template, such as in attributes of ordinary HTML elements and in plain-text areas of your template.</p>
+</div>
+<div class="listingblock">
+<div class="title">This is right</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;img src="${context:images/banner.png}"/&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">This is wrong</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;img src="context:images/banner.png"/&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_informal_parameters"><a class="anchor" href="#_informal_parameters"></a>Informal Parameters</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Main Article: <a href="cookbook/supporting-informal-parameters.html" class="xref page">Supporting Informal Parameters</a></p>
+</div>
+<div class="paragraph">
+<p>Many components support informal parameters, additional parameters beyond the formally defined parameters.
+Informal parameters will be rendered into the output as additional attributes on the tag rendered by the component.
+Generally speaking, components that have a 1:1 relationship with a particular HTML tag (such as <code>&lt;TextField&gt;</code> and <code>&lt;input&gt;</code>) will support informal parameters.</p>
+</div>
+<div class="paragraph">
+<p>Only components whose class is annotated with <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/annotations/SupportsInformalParameters.html">@SupportsInformalParameters</a></code> will support informal parameters.
+Tapestry silently drops informal parameters that are specified for components that do not have this annotation.</p>
+</div>
+<div class="paragraph">
+<p>Informal parameters are often used to set the CSS class of an element, or to specify client-side event handlers.</p>
+</div>
+<div class="paragraph">
+<p>The default binding prefix for informal parameters depends on <em>where</em> the parameter binding is specified.
+If the parameter is bound inside a Java class, within the <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/annotations/Component.html">@Component</a></code> annotation, then the default binding prefix is <code>prop:</code>.
+If the parameter is bound inside the component template, then the default binding prefix is <code>literal:</code>.
+This reflects the fact that a parameter specified in the Java class, using the annotation, is most likely a computed value, whereas a value in the template should simply be copied, as is, into the result HTML stream.</p>
+</div>
+<div class="paragraph">
+<p>Informal parameters (if supported) are always rendered into the output <em>unless</em> they are bound to a property whose value is null.
+If the bound property is null then the parameter will <em>not</em> be present at all in the rendered output.</p>
+</div>
+<div class="paragraph">
+<p>If your component should render informal parameters, just inject the <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/ComponentResources.html">ComponentResources</a></code> for your component and invoke the <code>renderInformalParameters()</code> method.
+See <a href="cookbook/supporting-informal-parameters.html" class="xref page">Supporting Informal Parameters</a> for an example of how to do this.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_parameters_are_bi_directional"><a class="anchor" href="#_parameters_are_bi_directional"></a>Parameters Are Bi-Directional</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Parameters are not simply variables; each parameter represents a connection, or <em>binding</em>, between a component and a property of its container.
+When using the <code>prop:</code> binding prefix, the component can force changes <em>into</em> a property of its container, just by assigning a value to its own instance variable.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;t:layout xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd"&gt;
+    &lt;p&gt; Countdown:
+        &lt;t:count start="5" end="1" result="index"&gt;
+          ${index} ...
+        &lt;/t:count&gt;
+    &lt;/p&gt;
+&lt;/t:layout&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Because the Count component updates its result parameter (the <code>result</code> field), the index property of the containing component is updated. Inside the Count&#8217;s body, we output the current value of the index property, using the expansion <code>${index}</code>. The resulting output will look something like:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;p&gt; Countdown: 5 ... 4 ... 3 ... 2 ... 1 ... &lt;/p&gt;
+(Though the whitespace will be quite different.)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The relevant part is that components can read fixed values, or <em>live</em> properties of their container, and can <em>change</em> properties of their container as well.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_inherited_parameter_bindings"><a class="anchor" href="#_inherited_parameter_bindings"></a>Inherited Parameter Bindings</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A special prefix, <code>inherit:</code> is used to identify the name of a parameter of the containing component.
+If the parameter is bound in the containing component, then it will be bound to the same value in the embedded component.</p>
+</div>
+<div class="paragraph">
+<p>If the parameter is not bound in the containing component, then it will not be bound in the embedded component (and so, the embedded component may use a default binding).</p>
+</div>
+<div class="paragraph">
+<p>Inherited bindings are useful for complex components; they are often used when an inner component has a default value for a parameter, and the outer component wants to make it possible to override that default.</p>
+</div>
+<div class="listingblock">
+<div class="title">Index.tml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd"&gt;
+  &lt;body&gt;
+    &lt;div t:type="layout" t:menuTitle="literal:The Title"&gt;
+      ...
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Layout.tml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;t:container xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd"&gt;
+
+    &lt;div t:type="title" t:title="inherit:menuTitle"&gt;&lt;/div&gt;
+
+    &lt;t:body /&gt;
+
+&lt;/t:container&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Title.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package org.example.app.components;
+
+import org.apache.tapestry5.annotations.Parameter;
+
+public class Title {
+
+    @Parameter
+    private String title;
+
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_computed_parameter_binding_defaults"><a class="anchor" href="#_computed_parameter_binding_defaults"></a>Computed Parameter Binding Defaults</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In <em>rare</em> cases, you may want to compute the binding to be used as a parameter default.
+In this case, you will provide a <em>default binding method</em>, a method that takes no parameters.
+The returned value is used to bind the parameter.
+The return value may be a <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/Binding.html">Binding</a></code> instance, or it may be a simple value (which is more often the case).</p>
+</div>
+<div class="paragraph">
+<p>The method name is <code>default</code> plus the capitalized name of the parameter.</p>
+</div>
+<div class="paragraph">
+<p>Using this approach, the previous example may be rewritten as:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">  @Parameter
+  private String message;
+
+  @Parameter(required=true)
+  private int maxLength;
+
+  @Inject
+  private ComponentResources resources;
+
+  @Inject
+  private BindingSource bindingSource;
+
+  Binding defaultMessage()
+  {
+    return bindingSource.newBinding("default value", resources, "basicMessage");
+  }
+
+  public String getBasicMessage()
+  {
+    return String.format("Maximum field length is %d.", maxLength);
+  }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In this example, a property expression, "basicMessage", is used to access the message dynamically.</p>
+</div>
+<div class="paragraph">
+<p>Alternately, the previous example may be written even more succinctly as:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">  @Parameter
+  private String message;
+
+  @Parameter(required=true)
+  private int maxLength;
+
+  @Inject
+  private ComponentResources resources;
+
+  String defaultMessage()
+  {
+    return String.format("Maximum field length is %d.", maxLength);
+  }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This form is more like using the <code>literal:</code> binding prefix, except that the literal value is computed by the <code>defaultMessage()</code> method.</p>
+</div>
+<div class="paragraph">
+<p>Obviously, this is a lot more work than simply specifying a default value as part of the <code>@Parameter</code> annotation.
+In the few real cases where this is approach is used, the default binding method will usually deduce a proper binding, typically in terms of the component&#8217;s id.
+For example, the <code>TextField</code> component will deduce a value parameter that binds to a property of its container with the same name.</p>
+</div>
+<div class="paragraph">
+<p>A default binding method will <em>only</em> be invoked if the <code>@Parameter</code> annotation does not provide a default value.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_unbound_parameters"><a class="anchor" href="#_unbound_parameters"></a>Unbound Parameters</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If a parameter is not bound (and is optional), then the value may be read or <em>updated</em> at any time.</p>
+</div>
+<div class="paragraph">
+<p>Updates to unbound parameters cause no side effects.
+In the first example, the value parameter of the <code>Count</code> component is not bound, and this is perfectly valid.</p>
+</div>
+<div class="paragraph">
+<p>Note: updates to such fields are temporary; when the component <em>finishes rendering</em>, the field will revert to its default value.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_parameter_type_coercion"><a class="anchor" href="#_parameter_type_coercion"></a>Parameter Type Coercion</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Main Article: <a href="parameter-type-coercion.html" class="xref page">Parameter Type Coercion</a></p>
+</div>
+<div class="paragraph">
+<p>Tapestry includes a mechanism for coercing types automatically.
+Most often, this is used to convert literal strings into appropriate values, but in many cases, more complex conversions will occur.
+This mechanism is used for component parameters, such as when an outer component passes a literal string to an inner component that is expecting an integer.</p>
+</div>
+<div class="paragraph">
+<p>You can easily <a href="type-coercion.html" class="xref page">contribute new coercions</a> for your own purposes.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_parameter_names"><a class="anchor" href="#_parameter_names"></a>Parameter Names</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>By default, Tapestry converts from the field name to the parameter name, by stripping off leading <code>$</code> and <code>_</code> characters.</p>
+</div>
+<div class="paragraph">
+<p>This can be overridden using the <code>name()</code> attribute of the <code>@Parameter</code> annotation.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_determining_if_bound"><a class="anchor" href="#_determining_if_bound"></a>Determining if Bound</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In rare cases, you may want to take different behaviors based on whether a parameter is bound or not.
+This can be accomplished by querying the component&#8217;s resources, which can be <a href="injection.html" class="xref page">injected</a> into the component using the <code>@Inject</code> annotation:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class MyComponent
+{
+  @Parameter
+  private int myParam;
+
+  @Inject
+  private ComponentResources componentResources;
+
+  @BeginRender
+  void setup()
+  {
+      if (componentResources.isBound("myParam"))
+      {
+        ...
+      }
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The above sketch illustrates the approach.
+Because the parameter type is a primitive type, <code>int</code>, it is hard to distinguish between no binding, and binding explicitly to the value 0.</p>
+</div>
+<div class="paragraph">
+<p>The <code>@Inject</code> annotation will inject the <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/ComponentResources.html">ComponentResources</a></code> for the component.
+These resources are the linkage between the Java class you provide, and the infrastructure Tapestry builds around your class.
+In any case, once the resources are injected, they can be queried.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_publishing_parameters"><a class="anchor" href="#_publishing_parameters"></a>Publishing Parameters</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Often when creating new components from existing components, you want to expose some of the functionality of the embedded component, in the form of exposing parameters of the embedded components as parameters of the outer component.</p>
+</div>
+<div class="paragraph">
+<p>In Tapestry 5.0, you would define a parameter of the outer component, and use the <code>inherit:</code> binding prefix to connect the inner component&#8217;s parameter to the outer component&#8217;s parameter.
+This is somewhat clumsy, as it involves creating an otherwise unused field just for the parameter; in practice it also leads to duplication of the documentation of the parameter.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

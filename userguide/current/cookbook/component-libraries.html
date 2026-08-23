@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Component Libraries :: Apache Tapestry</title>
+    <meta name="generator" content="Antora 3.1.15">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="stylesheet" href="../../../_/css/tapestry.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../.."><img alt="Apache Tapestry Logo" src="../../../_/img/apache-tapestry-icon-dark.svg" width="60" />Apache Tapestry</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Documentation</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../../../main/getting-started.html">Getting Started</a>
+            <a class="navbar-item" href="../../../main/tutorial/">Tutorial</a>
+            <a class="navbar-item" href="../../../userguide/5.8/">User Guide</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="../../../main/community.html">Community</a>
+        <a class="navbar-item" href="../../../main/support.html">Support</a>
+        <a class="navbar-item" href="../../../main/developers.html">Developers</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Apache</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+            <a class="navbar-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
+            <a class="navbar-item" href="https://www.apache.org/licenses/">License</a>
+            <a class="navbar-item" href="https://www.apache.org/security/">Security</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="../../../main/download.html">Download</a>
+          </span>
+        </div>
+        <div class="navbar-brand">
+          <a href="https://www.apache.org/">
+          <img alt="The Apache Software Foundation" src="../../../_/img/asf_logo.svg" width="200" height="63" style="padding-top: 5px; padding-bottom: 5px; background-color: white">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="body">
+<div class="nav-container" data-component="userguide" data-version="5.8">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">User Guide</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Introduction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry Core</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basics</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../project-layout.html">Project Layout</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../runtime-exceptions.html">Runtime Exceptions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../class-reloading.html">Class Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../component-reference.html">Component Reference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../annotations.html">Annotations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Pages and Components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../component-classes.html">Component Classes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../component-templates.html">Component Templates</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../property-expressions.html">Property Expressions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../component-parameters.html">Component Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../parameter-type-coercion.html">Parameter Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../layout-component.html">Layout Component</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../component-mixins.html">Component Mixins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../page-navigation.html">Page Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../localization.html">Localization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Request/Response Rendering</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../page-life-cycle.html">Page Life Cycle</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../request-processing.html">Request Processing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../component-rendering.html">Component Rendering</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../component-events.html">Component Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../url-rewriting.html">URL Rewriting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../dom.html">Document Object Model (DOM)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../response-compression.html">Response Compression</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../security.html">Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../https.html">HTTPS / SSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../content-type-and-markup.html">Content Type and Markup</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Data Persistence</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../persistent-page-data.html">Persistent Page Data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../session-storage.html">Session Storage</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Interacting with components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../injection.html">Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../environmental-services.html">Environmental Services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript, AJAX, CSS &amp; Binary Data</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../client-side-javascript.html">Client-Side JavaScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../javascript-modules.html">Javascript Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../coffeescript.html">Coffeescript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../typescript.html">TypeScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ajax-and-zones.html">AJAX and Zones</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../css.html">Cascading Style Sheets (CSS)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../assets.html">Assets</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cors.html">CORS (Cross-Origin Resource Sharing) Support</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Working with Forms</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../forms-and-validation.html">Forms and Validation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../beaneditform-guide.html">BeanEditForm Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../uploading-files.html">Uploading Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../bean-validation.html">Bean Validation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Logging, Debugging &amp; Testing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../logging.html">Logging</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../unit-testing.html">Unit testing pages or components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../integration-testing.html">Integration Testing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../development-dashboard.html">Development Dashboard</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry IOC</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../ioc-overview.html">IoC Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../symbols.html">Symbols</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../type-coercion.html">Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../case-insensitivity.html">Case Insensitivity</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../autoloading-modules.html">Autoloading Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../chainbuilder-service.html">ChainBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipelinebuilder-service.html">PipelineBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../shadowbuilder-service.html">ShadowBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../strategybuilder-service.html">StrategyBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../defining-tapestry-ioc-services.html">Defining Tapestry IOC Services</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../ioc-modules.html">IoC Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../ioc-configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../object-providers.html">Object Providers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../service-serialization.html">Service Serialization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../starting-the-ioc-registry.html">Starting the IoC Registry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../aliases.html">Aliases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../injection-in-detail.html">Injection in Detail</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../ordering-by-constraints.html">Ordering by Constraints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../registry-startup.html">Registry Startup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../parallel-execution.html">Parallel Execution</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../logging-in-tapestry.html">Logging in Tapestry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../service-implementation-reloading.html">Service Implementation Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../service-advisors.html">Service Advisors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../service-decorators.html">Service Decorators</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jsr-330-standard-annotations.html">Using JSR 330 standard annotations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../operation-tracker.html">Operation Tracker</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Add-ons and Integrations</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Built-in</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../hibernate.html">Hibernate Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../jpa.html">JPA Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../integrating-with-spring-framework.html">Spring</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../third-party-modules.html">Third Party Modules</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Release Notes</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes-5.8.html">Tapestry 5.8</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes-5.7.html">Tapestry 5.7</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes-5.6.html">Tapestry 5.6</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes-5.5.html">Tapestry 5.5</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes-5.4.html">Tapestry 5.4</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes-5.3.html">Tapestry 5.3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes-5.2.html">Tapestry 5.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes-5.1.html">Tapestry 5.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes-5.0.html">Tapestry 5.0</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cookbook</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="default-parameter.html">Default Parameter</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="overriding-exception-reporting.html">Overriding Exception Reporting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="error-page-recipe.html">Error Page Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="supporting-informal-parameters.html">Supporting Informal Parameters</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="component-libraries.html">Component Libraries</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="switching-cases.html">Switching Cases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="enum-parameter-recipe.html">Enum Parameter Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="extending-the-if-component.html">Extending The If Component</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="meta-programming-page-content.html">Meta-Programming Page Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="ioc-cookbook.html">IoC Cookbook</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ioc-cookbook-basic-services-and-injection.html">IoC Cookbook - Basic Services and Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ioc-cookbook-overriding-ioc-services.html">IoC Cookbook - Overriding IoC Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ioc-cookbook-patterns.html">IoC Cookbook - Patterns</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ioc-cookbook-service-configurations.html">IoC Cookbook - Service Configurations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="using-select-with-a-list.html">Using Select With a List</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="performance-and-clustering.html">Performance and Clustering</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="google-app-engine.html">Google App Engine (GAE)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frequently Asked Questions (FAQ)</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../faq/general.html">General Questions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../faq/templating-and-markup.html">Templating and Markup FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../faq/ajax.html">AJAX FAQ</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">User Guide</span>
+    <span class="version">5.8</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../../main/about.html">Home</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">User Guide</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">5.8</a>
+        </li>
+        <li class="version">
+          <a href="../../5.7/index.html">5.7</a>
+        </li>
+        <li class="version">
+          <a href="../../5.6/index.html">5.6</a>
+        </li>
+        <li class="version">
+          <a href="../../5.5/index.html">5.5</a>
+        </li>
+        <li class="version">
+          <a href="../../5.4/index.html">5.4</a>
+        </li>
+        <li class="version">
+          <a href="../../5.3/index.html">5.3</a>
+        </li>
+        <li class="version">
+          <a href="../../5.2/index.html">5.2</a>
+        </li>
+        <li class="version">
+          <a href="../../5.1/index.html">5.1</a>
+        </li>
+        <li class="version">
+          <a href="../../5/index.html">5.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../main/about.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">User Guide</a></li>
+    <li>Cookbook</li>
+    <li><a href="component-libraries.html">Component Libraries</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">5.8</button>
+  <div class="version-menu">
+    <a class="version is-current" href="component-libraries.html">5.8</a>
+    <a class="version" href="../../5.7/cookbook/component-libraries.html">5.7</a>
+    <a class="version" href="../../5.6/cookbook/component-libraries.html">5.6</a>
+    <a class="version" href="../../5.5/cookbook/component-libraries.html">5.5</a>
+    <a class="version" href="../../5.4/cookbook/component-libraries.html">5.4</a>
+    <a class="version is-missing" href="../../5.3/index.html">5.3</a>
+    <a class="version is-missing" href="../../5.2/index.html">5.2</a>
+    <a class="version is-missing" href="../../5.1/index.html">5.1</a>
+    <a class="version is-missing" href="../../5/index.html">5.0</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Component Libraries</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This page has not yet been fully updated for Tapestry 5.4.
+Things are different and simpler in 5.4 than in previous releases.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_creating_component_libraries"><a class="anchor" href="#_creating_component_libraries"></a>Creating Component Libraries</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Nearly every Tapestry application includes a least a couple of custom components, specific to the application.
+What&#8217;s exciting about Tapestry is how easy it is to package components for reuse across many applications &#8230;&#8203; and the fact that applications using a component library need no special configuration.</p>
+</div>
+<div class="paragraph">
+<p>A Tapestry component library consists of components (and optionally mixins, pages and component base classes).
+In addition, a component library will have a module that can define new services (needed by the components) or configure other services present in Tapestry.
+Finally, components can be packaged with <em>assets</em>: resources such as images, stylesheets and JavaScript libraries that need to be provided to the client web browser.</p>
+</div>
+<div class="paragraph">
+<p>We&#8217;re going to create a somewhat insipid component that displays a large happy face icon.</p>
+</div>
+<div class="paragraph">
+<p>Tapestry doesn&#8217;t mandate that you use any build system, but we&#8217;ll assume for the moment that you are using Maven 2.
+In that case, you&#8217;ll have a pom.xml file something like the following:</p>
+</div>
+<div class="listingblock">
+<div class="title">pom.xml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;project&gt;
+  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+  &lt;groupId&gt;org.example&lt;/groupId&gt;
+  &lt;artifactId&gt;happylib&lt;/artifactId&gt;
+  &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+  &lt;packaging&gt;jar&lt;/packaging&gt;
+  &lt;name&gt;happylib Tapestry 5 Library&lt;/name&gt;
+
+  &lt;dependencies&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.apache.tapestry&lt;/groupId&gt;
+      &lt;artifactId&gt;tapestry-core&lt;/artifactId&gt;
+      &lt;version&gt;${tapestry-release-version}&lt;/version&gt;
+    &lt;/dependency&gt;
+
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.testng&lt;/groupId&gt;
+      &lt;artifactId&gt;testng&lt;/artifactId&gt;
+      &lt;version&gt;5.1&lt;/version&gt;
+      &lt;classifier&gt;jdk15&lt;/classifier&gt;
+      &lt;scope&gt;test&lt;/scope&gt;
+    &lt;/dependency&gt;
+  &lt;/dependencies&gt;
+
+  &lt;build&gt;
+    &lt;plugins&gt;
+      &lt;plugin&gt;
+        &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+        &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+        &lt;configuration&gt;
+          &lt;source&gt;1.5&lt;/source&gt;
+          &lt;target&gt;1.5&lt;/target&gt;
+          &lt;optimize&gt;true&lt;/optimize&gt;
+        &lt;/configuration&gt;
+      &lt;/plugin&gt;
+
+      &lt;plugin&gt;
+           &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+           &lt;artifactId&gt;maven-jar-plugin&lt;/artifactId&gt;
+           &lt;configuration&gt;
+           &lt;archive&gt;
+             &lt;manifestEntries&gt;
+               &lt;Tapestry-Module-Classes&gt;org.example.happylib.services.HappyModule&lt;/Tapestry-Module-Classes&gt;
+             &lt;/manifestEntries&gt;
+           &lt;/archive&gt;
+           &lt;/configuration&gt;
+       &lt;/plugin&gt;
+
+    &lt;/plugins&gt;
+  &lt;/build&gt;
+
+  &lt;repositories&gt;
+    &lt;repository&gt;
+      &lt;id&gt;codehaus.snapshots&lt;/id&gt;
+      &lt;url&gt;http://snapshots.repository.codehaus.org&lt;/url&gt;
+    &lt;/repository&gt;
+    &lt;repository&gt;
+      &lt;id&gt;OpenQA_Release&lt;/id&gt;
+      &lt;name&gt;OpenQA Release Repository&lt;/name&gt;
+      &lt;url&gt;http://archiva.openqa.org/repository/releases/&lt;/url&gt;
+    &lt;/repository&gt;
+  &lt;/repositories&gt;
+
+  &lt;properties&gt;
+    &lt;tapestry-release-version&gt;5.4-beta-28&lt;/tapestry-release-version&gt;
+  &lt;/properties&gt;
+&lt;/project&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You will need to modify the Tapestry release version number ("5.2.0" in the listing above) to reflect the current version of Tapestry when you create your component library.</p>
+</div>
+<div class="paragraph">
+<p>We&#8217;ll go into more detail about the relevant portions of this POM in the later sections.</p>
+</div>
+<div class="sect2">
+<h3 id="_step_1_choose_a_base_package_name"><a class="anchor" href="#_step_1_choose_a_base_package_name"></a>Step 1: Choose a base package name</h3>
+<div class="paragraph">
+<p>Just as with Tapestry applications, Tapestry component libraries should have a <em>unique</em> base package name.
+In this example, we&#8217;ll use <code>org.examples.happylib</code>.</p>
+</div>
+<div class="paragraph">
+<p>As with an application, we&#8217;ll follow the conventions: we&#8217;ll place the module for this library inside the services package, and place pages and components under their respective packages.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_step_2_create_your_pages_andor_components"><a class="anchor" href="#_step_2_create_your_pages_andor_components"></a>Step 2: Create your pages and/or components</h3>
+<div class="paragraph">
+<p>Our component is very simple:</p>
+</div>
+<div class="listingblock">
+<div class="title">HappyIcon.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package org.example.happylib.components;
+
+import org.apache.tapestry5.Asset;
+import org.apache.tapestry5.MarkupWriter;
+import org.apache.tapestry5.annotations.Path;
+import org.apache.tapestry5.ioc.annotations.Inject;
+
+public class HappyIcon
+{
+    @Inject
+    @Path("happy.jpg")
+    private Asset happyIcon;
+
+    boolean beginRender(MarkupWriter writer)
+    {
+        writer.element("img", "src", happyIcon);
+        writer.end();
+
+        return false;
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>HappyIcon appears inside the components sub-package.
+The happyIcon field is injected with the the Asset for the file <code>happy.jpg</code>.
+The path specified with the @Path annotation is relative to the <code>HappyIcon.class</code> file; it should be stored in the project under <code>src/main/resources/org/example/happylib/components</code>.</p>
+</div>
+<div class="paragraph">
+<p>Tapestry ensures that the <code>happy.jpg</code> asset can be accessed from the client web browser; the src attribute of the <code>&lt;img&gt;</code> tag will be a URL that directly accesses the image file here&#8217;s no need to unpackage the <code>happy.jpg</code> file.
+This works for any asset file stored under the library&#8217;s root package.</p>
+</div>
+<div class="paragraph">
+<p>This component renders out an <code>&lt;img&gt;</code> tag for the icon.</p>
+</div>
+<div class="paragraph">
+<p>Often, a component library will have many different components, or even pages.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_step_3_choose_a_virtual_folder_name"><a class="anchor" href="#_step_3_choose_a_virtual_folder_name"></a>Step 3: Choose a virtual folder name</h3>
+<div class="paragraph">
+<p>In Tapestry, components that have been packaged in a library are referenced using a virtual folder name.
+It&#8217;s effectively as if the application had a new root-level folder containing the components.</p>
+</div>
+<div class="paragraph">
+<p>In our example, we&#8217;ll use "happy" as the folder name.
+That means the application can include the HappyIcon component in the template using any of the following, which are all equivalent:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>&lt;t:happy.happyicon/&gt;</code></p>
+</li>
+<li>
+<p><code>&lt;t:happy.icon/&gt;</code></p>
+</li>
+<li>
+<p><code>&lt;img t:type="happy.happyicon"/&gt;</code></p>
+</li>
+<li>
+<p><code>&lt;img t:type="happy/icon"/&gt;</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Why "icon" vs. "happyicon"?
+Tapestry notices that the folder name, "happy" is a prefix or suffix of the class name ("HappyIcon") and creates an alias that strips off the prefix (or suffix).
+To Tapestry, they are completely identical: two different aliases for the same component class name.</p>
+</div>
+<div class="paragraph">
+<p>The above naming is somewhat clumsy, and can be improved by introducing an additional namespace into the template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;html xmlns:t="http://tapestry.apache.org/schema/http://tapestry.apache.org/schema/tapestry_5_4.xsd"
+  xmlns:h="tapestry-library:happy"&gt;
+
+  ...
+
+  &lt;h:icon/&gt;
+
+  ...
+
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The special namespace mapping for sets up namespace prefix "h:" to mean the same as "happy/".
+It then becomes possible to reference components within the happy virtual folder directly.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_step_4_configure_the_virtual_folder"><a class="anchor" href="#_step_4_configure_the_virtual_folder"></a>Step 4: Configure the virtual folder</h3>
+<div class="paragraph">
+<p>Tapestry needs to know where to search for your component class.
+This is accomplished in your library&#8217;s IoC module class, by making a <em>contribution</em> to the <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/services/ComponentClassResolver.html">ComponentClassResolver</a></code> service configuration.</p>
+</div>
+<div class="paragraph">
+<p>At application startup, Tapestry will read the library module along with all other modules and configure the <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/services/ComponentClassResolver.html">ComponentClassResolver</a></code> service using information in the module:</p>
+</div>
+<div class="listingblock">
+<div class="title">HappyModule.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package org.example.happylib.services;
+
+import org.apache.tapestry5.ioc.Configuration;
+import org.apache.tapestry5.services.LibraryMapping;
+
+public class HappyModule
+{
+    public static void contributeComponentClassResolver(Configuration&lt;LibraryMapping&gt; configuration)
+    {
+        configuration.add(new LibraryMapping("happy", "org.example.happylib"));
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/services/ComponentClassResolver.html">ComponentClassResolver</a></code> service is responsible for mapping libraries to packages; it takes as a contribution a collection of these LibraryMapping objects.
+Every module may make its own contribution to the <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/services/ComponentClassResolver.html">ComponentClassResolver</a></code> service, mapping its own package ("org.example.happylib") to its own folder ("happy").</p>
+</div>
+<div class="paragraph">
+<p>This module class is also where you would define new services that can be accessed by your components (or other parts of the application).</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>It is possible to add a mapping for "core", the core library for Tapestry components; all the built-in Tapestry components (<code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/corelib/components/TextField.html">TextField</a></code>, <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/corelib/components/BeanEditForm.html">BeanEditForm</a></code>, <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/corelib/components/Grid.html">Grid</a></code>, etc.) are actually in the core library.
+When Tapestry doesn&#8217;t find a component in your application, it next searches inside the "core" library.
+Contributing an additional package as "core" simply extends the number of packages searched for core components (it doesn&#8217;t replace Tapestry&#8217;s default package, org.apache.tapestry5.corelib).
+Adding to "core" is sometimes reasonable, if you ensure that there is virtually no chance of a naming conflict (via different modules contributing packages to core with conflicting class names).</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_step_5_configure_the_module_to_autoload"><a class="anchor" href="#_step_5_configure_the_module_to_autoload"></a>Step 5: Configure the module to autoload</h3>
+<div class="paragraph">
+<p>For Tapestry to load your module at application startup, it is necessary to put an entry in the JAR manifest.
+This is taken care of in the pom.xml above:</p>
+</div>
+<div class="listingblock">
+<div class="title">pom.xml (partial)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">      &lt;plugin&gt;
+           &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+           &lt;artifactId&gt;maven-jar-plugin&lt;/artifactId&gt;
+           &lt;configuration&gt;
+           &lt;archive&gt;
+             &lt;manifestEntries&gt;
+             &lt;Tapestry-Module-Classes&gt;org.example.happylib.services.HappyModule&lt;/Tapestry-Module-Classes&gt;
+             &lt;/manifestEntries&gt;
+           &lt;/archive&gt;
+           &lt;/configuration&gt;
+       &lt;/plugin&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_step_6_extending_client_access"><a class="anchor" href="#_step_6_extending_client_access"></a>Step 6: Extending Client Access</h3>
+<div class="paragraph">
+<p>As of Tapestry 5.2, a new step is needed: extending access for the assets.
+This is accomplished in your library&#8217;s module class, HappyModule:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public static void contributeRegexAuthorizer(Configuration&lt;String&gt; configuration)
+{
+    configuration.add("^org/example/happylib/.*\\.jpg$");
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This contribution uses a regular expression to identify that any resource on the classpath under the org/example/happylib folder with a jpg extension is allowed.
+If you had a mix of different image types, you could replace jpg with (jpg|gif|png).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_step_7_versioning_assets"><a class="anchor" href="#_step_7_versioning_assets"></a>Step 7: Versioning Assets</h3>
+<div class="paragraph">
+<p>Classpath assets, those packaged in JAR files (such as the happy.jpg asset) are retrieved by the client web browser using a URL that reflects the package name.
+Tapestry users a special virtual folder, /assets, under the context folder for this purpose.</p>
+</div>
+<div class="paragraph">
+<p>The image file here is exposed to the web browser via the URL <code>/happyapp/assets/org/example/happylib/components/happy.jpg</code> (this assumes that the application was deployed as happyapp.war).</p>
+</div>
+<div class="paragraph">
+<p>Tapestry uses a far-future expiration date for classpath assets; this allows browsers to aggressively cache the file, but in Tapestry 5.1 and earlier this causes a problem when a later version of the library changes the file.
+This is discussed in detail in <a href="http://developer.yahoo.com/performance/rules.html#expires">Yahoo&#8217;s Performance Best Practices</a>.</p>
+</div>
+<div class="paragraph">
+<p>To handle this problem in Tapestry 5.1 and earlier, you should map your library assets to a versioned folder.
+This can be accomplished using another contribution from the HappyModule, this time to the ClasspathAssetAliasManager service whose configuration maps a virtual folder underneath /assets to a package:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public static void contributeClasspathAssetAliasManager(MappedConfiguration&lt;String, String&gt; configuration)
+{
+    configuration.add("happylib/1.0", "org/example/happylib");
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>With this in place, and the library and applications rebuilt and redeployed, the URL for happy.jpg becomes <code>/happyapp/assets/happylib/1.0/components/happy.jpg</code>.
+This is shorter, but also incorporates a version number ("1.0") that can be changed in a later release.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="title">Added in 5.2</div>
+<div class="paragraph">
+<p>In version 5.2 and later, Tapestry automatically creates a mapping for assets inside your JAR.
+In the above example, the icon image will be exposed as /assets/application version/happy/components/happy.jpg (the application version number is incorporated into the URL).
+The "happy" portion is a virtual folder that maps to the library&#8217;s root package (as folder org/example/happylib on the Java classpath).
+The application version is a configurable value.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_conclusion"><a class="anchor" href="#_conclusion"></a>Conclusion</h3>
+<div class="paragraph">
+<p>That&#8217;s it! Autoloading plus the virtual folders for components and for assets takes care of all the issues related to components.
+Just build your JARs, setup the JAR Manifest, and drop them into your applications.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script src="../../../_/js/vendor/lunr.js"></script>
+<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
+<script async src="../../../search-index.js"></script>
+  </body>
+</html>

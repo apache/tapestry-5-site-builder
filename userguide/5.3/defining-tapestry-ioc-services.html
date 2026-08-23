@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Defining Tapestry IOC Services :: Apache Tapestry</title>
+    <meta name="generator" content="Antora 3.1.15">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/tapestry.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../.."><img alt="Apache Tapestry Logo" src="../../_/img/apache-tapestry-icon-dark.svg" width="60" />Apache Tapestry</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Documentation</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../../main/getting-started.html">Getting Started</a>
+            <a class="navbar-item" href="../../main/tutorial/">Tutorial</a>
+            <a class="navbar-item" href="../../userguide/5.8/">User Guide</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="../../main/community.html">Community</a>
+        <a class="navbar-item" href="../../main/support.html">Support</a>
+        <a class="navbar-item" href="../../main/developers.html">Developers</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Apache</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+            <a class="navbar-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
+            <a class="navbar-item" href="https://www.apache.org/licenses/">License</a>
+            <a class="navbar-item" href="https://www.apache.org/security/">Security</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="../../main/download.html">Download</a>
+          </span>
+        </div>
+        <div class="navbar-brand">
+          <a href="https://www.apache.org/">
+          <img alt="The Apache Software Foundation" src="../../_/img/asf_logo.svg" width="200" height="63" style="padding-top: 5px; padding-bottom: 5px; background-color: white">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="body">
+<div class="nav-container" data-component="userguide" data-version="5.3">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">User Guide</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Introduction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry Core</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basics</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="project-layout.html">Project Layout</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="runtime-exceptions.html">Runtime Exceptions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="class-reloading.html">Class Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-reference.html">Component Reference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="annotations.html">Annotations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Pages and Components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-classes.html">Component Classes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-templates.html">Component Templates</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="property-expressions.html">Property Expressions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-parameters.html">Component Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="parameter-type-coercion.html">Parameter Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="layout-component.html">Layout Component</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-mixins.html">Component Mixins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-navigation.html">Page Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="localization.html">Localization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Request/Response Rendering</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-life-cycle.html">Page Life Cycle</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="request-processing.html">Request Processing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-rendering.html">Component Rendering</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-events.html">Component Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="url-rewriting.html">URL Rewriting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dom.html">Document Object Model (DOM)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="response-compression.html">Response Compression</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="security.html">Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https.html">HTTPS / SSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="content-type-and-markup.html">Content Type and Markup</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Data Persistence</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="persistent-page-data.html">Persistent Page Data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="session-storage.html">Session Storage</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Interacting with components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="injection.html">Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="environmental-services.html">Environmental Services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript, AJAX, CSS &amp; Binary Data</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="client-side-javascript.html">Client-Side JavaScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ajax-and-zones.html">AJAX and Zones</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="css.html">Cascading Style Sheets (CSS)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="assets.html">Assets</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Working with Forms</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="forms-and-validation.html">Forms and Validation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="beaneditform-guide.html">BeanEditForm Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uploading-files.html">Uploading Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bean-validation.html">Bean Validation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Logging, Debugging &amp; Testing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="logging.html">Logging</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unit-testing.html">Unit testing pages or components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integration-testing.html">Integration Testing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="development-dashboard.html">Development Dashboard</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry IOC</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-overview.html">IoC Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="symbols.html">Symbols</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="type-coercion.html">Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="case-insensitivity.html">Case Insensitivity</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="autoloading-modules.html">Autoloading Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="chainbuilder-service.html">ChainBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pipelinebuilder-service.html">PipelineBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="shadowbuilder-service.html">ShadowBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="strategybuilder-service.html">StrategyBuilder Service</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="defining-tapestry-ioc-services.html">Defining Tapestry IOC Services</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-modules.html">IoC Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="object-providers.html">Object Providers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-serialization.html">Service Serialization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="starting-the-ioc-registry.html">Starting the IoC Registry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="aliases.html">Aliases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="injection-in-detail.html">Injection in Detail</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ordering-by-constraints.html">Ordering by Constraints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="registry-startup.html">Registry Startup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="parallel-execution.html">Parallel Execution</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="logging-in-tapestry.html">Logging in Tapestry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-implementation-reloading.html">Service Implementation Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-advisors.html">Service Advisors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-decorators.html">Service Decorators</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="using-jsr-330-standard-annotations.html">Using JSR 330 standard annotations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="operation-tracker.html">Operation Tracker</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Add-ons and Integrations</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Built-in</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="hibernate.html">Hibernate Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="jpa.html">JPA Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integrating-with-spring-framework.html">Spring</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="third-party-modules.html">Third Party Modules</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Release Notes</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.3.html">Tapestry 5.3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.2.html">Tapestry 5.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.1.html">Tapestry 5.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.0.html">Tapestry 5.0</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cookbook</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/default-parameter.html">Default Parameter</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/overriding-exception-reporting.html">Overriding Exception Reporting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/error-page-recipe.html">Error Page Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/supporting-informal-parameters.html">Supporting Informal Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/switching-cases.html">Switching Cases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/enum-parameter-recipe.html">Enum Parameter Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/extending-the-if-component.html">Extending The If Component</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/meta-programming-page-content.html">Meta-Programming Page Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="cookbook/ioc-cookbook.html">IoC Cookbook</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-basic-services-and-injection.html">IoC Cookbook - Basic Services and Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-overriding-ioc-services.html">IoC Cookbook - Overriding IoC Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-patterns.html">IoC Cookbook - Patterns</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-service-configurations.html">IoC Cookbook - Service Configurations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/using-select-with-a-list.html">Using Select With a List</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/performance-and-clustering.html">Performance and Clustering</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/google-app-engine.html">Google App Engine (GAE)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frequently Asked Questions (FAQ)</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/general.html">General Questions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/templating-and-markup.html">Templating and Markup FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/ajax.html">AJAX FAQ</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">User Guide</span>
+    <span class="version">5.3</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../main/about.html">Home</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../current/index.html">User Guide</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../current/index.html">5.8</a>
+        </li>
+        <li class="version">
+          <a href="../5.7/index.html">5.7</a>
+        </li>
+        <li class="version">
+          <a href="../5.6/index.html">5.6</a>
+        </li>
+        <li class="version">
+          <a href="../5.5/index.html">5.5</a>
+        </li>
+        <li class="version">
+          <a href="../5.4/index.html">5.4</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">5.3</a>
+        </li>
+        <li class="version">
+          <a href="../5.2/index.html">5.2</a>
+        </li>
+        <li class="version">
+          <a href="../5.1/index.html">5.1</a>
+        </li>
+        <li class="version">
+          <a href="../5/index.html">5.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../main/about.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">User Guide</a></li>
+    <li>Tapestry IOC</li>
+    <li><a href="defining-tapestry-ioc-services.html">Defining Tapestry IOC Services</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">5.3</button>
+  <div class="version-menu">
+    <a class="version" href="../current/defining-tapestry-ioc-services.html">5.8</a>
+    <a class="version" href="../5.7/defining-tapestry-ioc-services.html">5.7</a>
+    <a class="version" href="../5.6/defining-tapestry-ioc-services.html">5.6</a>
+    <a class="version" href="../5.5/defining-tapestry-ioc-services.html">5.5</a>
+    <a class="version" href="../5.4/defining-tapestry-ioc-services.html">5.4</a>
+    <a class="version is-current" href="defining-tapestry-ioc-services.html">5.3</a>
+    <a class="version" href="../5.2/defining-tapestry-ioc-services.html">5.2</a>
+    <a class="version" href="../5.1/defining-tapestry-ioc-services.html">5.1</a>
+    <a class="version" href="../5/defining-tapestry-ioc-services.html">5.0</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Defining Tapestry IOC Services</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Services consist of two main parts: a service interface and a service implementation.</p>
+</div>
+<div class="paragraph">
+<p>The service interface is how the service will be represented throughout the rest of the registry.
+Since what gets passed around is normally a proxy, you can&#8217;t expect to cast a service object down to the implementation class (you&#8217;ll see a ClassCastException instead).
+In other words, you should be careful to ensure that your service interface is complete, since Tapestry IoC effectively walls you off from back doors such as casts.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_service_life_cycle"><a class="anchor" href="#_service_life_cycle"></a>Service Life Cycle</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Every service has a very specific life cycle.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Defined: The service has a definition (from some module) but has not yet been referenced.</p>
+</li>
+<li>
+<p>Virtual: The service has been referenced, so a proxy for the class has been created.</p>
+</li>
+<li>
+<p>Realized: A method on the proxy has been invoked, so the service implementation has been instantiated, and any decorators applied.</p>
+</li>
+<li>
+<p>Shutdown: The entire Registry has been shut down and with it, all the proxies have been disabled.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When the Registry is first created, all modules are scanned and the definitions for all services are created.</p>
+</div>
+<div class="paragraph">
+<p>Services will be referenced by either accessing them using the Registry, or as dependencies of other realized services.</p>
+</div>
+<div class="paragraph">
+<p>Tapestry IoC waits until the last possible moment to <em>realize</em> the service: that&#8217;s defined as when a method of the service is invoked. Tapestry is <em>thread-safe</em>, so even in a heavily contested, highly threaded environment (such as a servlet container or application server) things <em>Just Work</em>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_service_builder_methods"><a class="anchor" href="#_service_builder_methods"></a>Service Builder Methods</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tapestry doesn&#8217;t know how to instantiate and configure your service; instead it relies on you to provide the code to do so, in a service builder method, a method whose name is (or starts with) "build":</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package org.example.myapp.services;
+
+public class MyAppModule
+{
+  public static Indexer build()
+  {
+    return new IndexerImpl();
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here the service interface is Indexer (presumably inside the org.example.myapp.services package, since there isn&#8217;t an import). Tapestry IoC doesn&#8217;t know about the IndexerImpl class (the service implementation of the Indexer service), but it does know about the build() method.</p>
+</div>
+<div class="paragraph">
+<p>That&#8217;s one of the great innovations of Tapestry IoC: we don&#8217;t try to encapsulate in XML or annotations all the different ways possible to create a service; those things are best expressed in Java code. For a simple case (as here), it would be hard for external configuration (again, in XML or Java annotations) to be shorter than "new IndexerImpl()".</p>
+</div>
+<div class="paragraph">
+<p><em>The above paragraph was written before Binding and Autobuilding were introduced.</em></p>
+</div>
+<div class="paragraph">
+<p>For more complex and realistic scenarios, such as injecting dependencies via the constructor, or doing more interest work (such as registering the newly created service for events published by some other service), the Java code is simply the most direct, flexible, extensible and readable approach.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_binding_and_autobuilding"><a class="anchor" href="#_binding_and_autobuilding"></a>Binding and Autobuilding</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tapestry IoC can also <em>autobuild</em> your service. Autobuilding is the preferred way to instantiate your services.</p>
+</div>
+<div class="paragraph">
+<p>Every module may have an optional, static <code>bind()</code> method which is passed a <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/ioc/ServiceBinder.html">ServiceBinder</a></code>.
+Services may be registered with the container by "binding" a service interface to a service implementation:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package org.example.myapp.services;
+
+import org.apache.tapestry5.ioc.ServiceBinder;
+
+public class MyAppModule
+{
+  public static void bind(ServiceBinder binder)
+  {
+    binder.bind(Indexer.class, IndexerImpl.class);
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can make repeated calls to <code>ServiceBinder.bind()</code>, to bind additional services.</p>
+</div>
+<div class="paragraph">
+<p>You might ask, "which is better, a builder method for each service, or a bind() method for the module?"
+For simple services, those that are just an instantiated instance with simple dependencies, binding is better than building.
+That covers at least 90% of all services, so bind away!</p>
+</div>
+<div class="paragraph">
+<p>There are many cases, however, where constructing a service is more than just instantiating a class.
+Often the new service will (for example) be registered as a listener with some other service.
+In other cases, the implementation of the service is generated at runtime.
+These are where the service builder methods are most useful.</p>
+</div>
+<div class="paragraph">
+<p>In terms of the evolution of the framework, service builder methods came first, and autobuilding was a later addition, inspired by the terseness of the <a href="http://code.google.com/p/google-guice/">Guice</a> IoC container.</p>
+</div>
+<div class="paragraph">
+<p>Following the convention over configuration principle, the autobuilding of services can be even less verbose.
+If a service interface is passed as a single argument to the bind() method, Tapestry will try to find an implementation in the same package whose name matches the name of the service interface followed by the suffix <code>Impl</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package org.example.myapp.services;
+
+import org.apache.tapestry5.ioc.ServiceBinder;
+
+public class MyAppModule
+{
+  public static void bind(ServiceBinder binder)
+  {
+    binder.bind(Indexer.class);
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_service_ids"><a class="anchor" href="#_service_ids"></a>Service Ids</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Every service will have a unique service id.
+When using a service builder method, the service id is the <em>simple name</em> of the service interface.
+This can be overridden by adding the <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/ioc/annotations/ServiceId.html">@ServiceId</a></code> annotation to the service builder method:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@ServiceId("FileSystemIndexer")
+public static Indexer buildIndexer(@InjectService("FileSystem") FileSystem fileSystem)
+{
+   ...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Another option is to add the service id to the method name, after "build", for example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public static Indexer buildFileSystemIndexer(@InjectService("FileSystem") FileSystem fileSystem)
+{
+   ...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here, the service id is "FileSystemIndexer" not "Indexer".</p>
+</div>
+<div class="paragraph">
+<p>For autobuilt services, the service id can be specified by placing the <code>@ServiceId</code> annotation directly on a service implementation class.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@ServiceId("FileSystemIndexer")
+public class IndexerImpl implements Indexer
+{
+    ...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When the service is bound, the value of the annotation is used as id:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">binder.bind(Indexer.class, IndexerImpl.class);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This id can be overriden again by calling the method <code>withId(String)</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">binder.bind(Indexer.class, IndexerImpl.class).withId("FileSystemIndexer");</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_injecting_dependencies"><a class="anchor" href="#_injecting_dependencies"></a>Injecting Dependencies</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>It&#8217;s pretty unlikely that your service will be able to operate in a total vacuum.
+It will have other dependencies.</p>
+</div>
+<div class="paragraph">
+<p>Dependencies are provided to a service in one of several ways:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>As parameters to the service builder method</p>
+</li>
+<li>
+<p>As parameters to the service implementation class' constructor (for autobuilt services)</p>
+</li>
+<li>
+<p>As parameters passed to the constructor of the service&#8217;s module class (to be cached inside instance variables)</p>
+</li>
+<li>
+<p>Directly into fields of the service implementation</p>
+</li>
+<li>
+<p>For example, let&#8217;s say the <code>Indexer</code> needs a <code>JobScheduler</code> to control when it executes, and a <code>FileSystem</code> to access files and store indexes.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public static Indexer build(JobScheduler scheduler, FileSystem fileSystem)
+{
+  IndexerImpl indexer = new IndexerImpl(fileSystem);
+
+  scheduler.scheduleDailyJob(indexer);
+
+  return indexer;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Tapestry assumes that parameters to builder methods are dependencies.
+In this example it is able to figure out what services to pass in based just on the type (later we&#8217;ll see how we can fine tune this with annotations, when the service type is not sufficient to identify a single <em>service</em>).</p>
+</div>
+<div class="paragraph">
+<p>This is an example of when you would want to use the service builder method, rather than just binding the service interface to the implementation class: because we want to do something extra, in this case, register the new indexer service with the scheduler.</p>
+</div>
+<div class="paragraph">
+<p>Note that we don&#8217;t invoke those service builder methods &#8230;&#8203; we just "advertise" (via naming convention or annotation) that we need the named services.
+Tapestry IoC will provide the necessary proxies and, when we start to invoke methods on those proxies, will ensure that the full service, including its interceptors and its dependencies, are ready to go.
+Again, this is done in a thread-safe manner.</p>
+</div>
+<div class="paragraph">
+<p>What happens if there is more than one service that implements the <code>JobScheduler</code> interface, or the <code>FileSystem</code> interface?
+You&#8217;ll see a runtime exception, because Tapestry is unable to resolve it down to a <em>single</em> service.
+At this point, it is necessary to <em>disambiguate</em> the link between the service interface and <em>one</em> service.
+One approach is to use the <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/ioc/annotations/InjectService.html">@InjectService</a></code> annotation:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public static Indexer build(
+    @InjectService("JobScheduler") JobScheduler scheduler,
+    @InjectService("FileSystem") FileSystem fileSystem)
+{
+    IndexerImpl indexer = new IndexerImpl(fileSystem);
+
+    scheduler.scheduleDailyJob(indexer);
+
+    return indexer;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you find yourself injecting the same dependencies into multiple service builder (or service decorator) methods, you can <a href="ioc-modules.html#_caching_services" class="xref page">cache dependency injections</a> in your module, by defining a constructor.
+This reduces duplication in your module.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_disambiguation_with_marker_annotations"><a class="anchor" href="#_disambiguation_with_marker_annotations"></a>Disambiguation with Marker Annotations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In the previous example we were faced with a problem: multiple versions of the <code>JobScheduler</code> service.
+They had the same service interface but unique service ids.
+If you try to inject based on type, the service to inject will be ambiguous.
+Tapestry will throw an exception (identifying the parameter type and the matching services that implement that type).</p>
+</div>
+<div class="paragraph">
+<p>The problem is that when injecting a <code>JobScheduler</code> into some other service we need to know which one to inject.
+Rather than using the service id, another approach is to use a <em>marker annotation</em>.</p>
+</div>
+<div class="paragraph">
+<p>You may optionally link a service implementation with a marker annotation.</p>
+</div>
+<div class="paragraph">
+<p>For example, maybe you have one <code>JobScheduler</code> implementation where the jobs are spread across a number of nodes in a cluster, and you have another <code>JobScheduler</code> where the jobs are all executed exclusively in the current process.</p>
+</div>
+<div class="paragraph">
+<p>We can associate those two <code>JobSchedulers</code> with two annotations.</p>
+</div>
+<div class="listingblock">
+<div class="title">Clustered.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Target(
+{ PARAMETER, FIELD })
+@Retention(RUNTIME)
+@Documented
+public @interface Clustered
+{
+
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">InProcess.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Target(
+{ PARAMETER, FIELD })
+@Retention(RUNTIME)
+@Documented
+public @interface InProcess
+{
+
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">MyModule.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class MyModule
+{
+  public static void bind(ServiceBinder binder)
+  {
+    binder.bind(JobScheduler.class, ClusteredJobSchedulerImpl.class).withId("ClusteredJobScheduler").withMarker(Clustered.class);
+    binder.bind(JobScheduler.class, SimpleJobSchedulerImpl.class).withId("InProcessJobScheduler").withMarker(InProcess.class);
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Notice that the marker annotations have no attributes. Further, we support markers on fields (for use in Tapestry components) as well as parameters.</p>
+</div>
+<div class="paragraph">
+<p>To get the right version of the service, you use one of the annotations:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class MyServiceImpl implements MyService
+{
+  private final JobScheduler jobScheduler;
+
+  public MyServiceImpl(@Clustered JobScheduler jobScheduler)
+  {
+    this.jobScheduler = jobScheduler;
+  }
+
+  ...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>@Clustered</code> annotation on the parameter is combined with the parameter type (<code>JobScheduler</code>) to find the exact service implementation.</p>
+</div>
+<div class="paragraph">
+<p>Why is this better than using the service id?
+It&#8217;s more refactoring-safe.
+Service ids can change, which can break your services.
+However, using an IDE to rename or move an annotation class or service interface will be able to update all the uses of the annotation or interface.</p>
+</div>
+<div class="paragraph">
+<p>With a service builder method, you use the <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/ioc/annotations/Marker.html">@Marker</a></code> annotation:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Marker(Clustered.class)
+public JobScheduler buildClusteredJobScheduler()
+{
+  return ...;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>@Marker</code> annotation may also be placed on an implementation class, which means that you may omit the call to <code>withMarker()</code> inside the <code>bind()</code> method.</p>
+</div>
+<div class="paragraph">
+<p>Finally, the point of injection may have multiple marker annotations; only services that are marked with all those markers will be considered for injection.
+Each marker annotation creates an increasingly narrow subset from the set of all possible services (compatible with the indicated dependency type).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_local_dependencies"><a class="anchor" href="#_local_dependencies"></a>Local Dependencies</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A special marker interface, <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/ioc/annotations/Local.html">@Local</a></code>, indicates a dependency that should only be resolved using services from within the same module.</p>
+</div>
+<div class="paragraph">
+<p><code>@Local</code> can also be combined with other marker annotations.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_injecting_dependencies_for_autobuilt_services"><a class="anchor" href="#_injecting_dependencies_for_autobuilt_services"></a>Injecting Dependencies for Autobuilt Services</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>With autobuilt services, there&#8217;s no service builder method in which to specify injections.</p>
+</div>
+<div class="paragraph">
+<p>Instead, the injections occur on constructor for the implementation class:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package org.example.myapp.services;
+
+import org.apache.tapestry5.ioc.annotations.InjectService;
+
+public class IndexerImpl implements Indexer
+{
+  private final FileSystem fileSystem;
+
+  public IndexerImpl(@InjectService("FileSystem") FileSystem fileSystem)
+  {
+    this.fileSystem = fileSystem;
+  }
+
+  ...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If the class has multiple constructors, the constructor with the <em>most</em> parameters will be invoked.
+Alternately, you may mark a single constructor with the Inject annotation, and Tapestry will use <em>that</em> constructor specifically, ignoring all other constructors.</p>
+</div>
+<div class="paragraph">
+<p>Note how we are using final fields for our dependencies; this is generally a Good Idea.
+These services will often execute inside a multi-threaded environment, such as a web application, and the use of final fields inside a constructor ensures that the fields will be properly published (meaning, "visible to other threads") in accordance with the Java Memory Model.</p>
+</div>
+<div class="paragraph">
+<p>Once thing that is not a good idea is to pass in another service, such as JobScheduler in the previous example, and pass <code>this</code> from a constructor:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package org.example.myapp.services;
+
+import org.apache.tapestry5.ioc.annotations.InjectService;
+
+public class IndexerImpl implements Indexer
+{
+  private final FileSystem fileSystem;
+
+  public IndexerImpl(@InjectService("FileSystem") FileSystem fileSystem,
+
+  @InjectService("JobScheduler") JobScheduler scheduler)
+  {
+    this.fileSystem = fileSystem;
+
+    scheduler.scheduleDailyJob(this); // Bad Idea
+  }
+
+  ...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Understanding why this is a bad idea involves a long detour into inner details of the Java Memory Model.
+The short form is that other threads may end up invoking methods on the IndexerImpl instance, and its fields (even though they are final, even though they appear to already have been set) may be uninitialized.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_field_injection"><a class="anchor" href="#_field_injection"></a>Field Injection</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>@Inject</code> and <code>@InjectService</code> annotations may be used on instance fields of a service implementation class, as an alternative to passing dependencies of the service implementation in via the constructor.</p>
+</div>
+<div class="paragraph">
+<p>Note that only dependencies are settable this way; if you want resources, including the service&#8217;s configuration, you must pass those through the constructor.
+You are free to mix and match, injecting partially with field injection and partially with constructor injection.</p>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+Injection via fields uses reflection to make the fields accessible.
+In addition, it may not be as thread-safe as using the constructor to assign to final fields.
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package org.example.myapp.services;
+
+import org.apache.tapestry5.ioc.annotations.InjectService;
+
+public class IndexerImpl implements Indexer
+{
+  @InjectService("FileSystem")
+  private FileSystem fileSystem;
+
+  ...
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_defining_service_scope"><a class="anchor" href="#_defining_service_scope"></a>Defining Service Scope</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Each service has a scope that controls when the service implementation is instantiated. There are two built in scopes: "singleton" and "perthread", but more can be added.</p>
+</div>
+<div class="paragraph">
+<p>Service scope is specified using the <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/ioc/annotations/Scope.html">@Scope</a></code> annotation, which is attached to a builder method, or to the service implementation class.
+When this annotation is not present, the default scope, "singleton" is used.</p>
+</div>
+<div class="sect2">
+<h3 id="_singleton"><a class="anchor" href="#_singleton"></a>singleton</h3>
+<div class="paragraph">
+<p>Most services use the default scope, "singleton".
+With this scope a proxy is created when the service is first referenced.
+By reference, we mean any situation in which the service is requested by name, such as using the <code>@InjectService</code> annotation on a service builder method, or by using the <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/ioc/Registry.html">Registry</a></code> API from outside the container.</p>
+</div>
+<div class="paragraph">
+<p>In any case, the service proxy will only create the service implementation when a method on the service interface is invoked.
+Until then, the service can be thought of as "virtual".
+As the first method is invoked, the service builder method is invoked, then any service decorations occur.
+This construction process, called "realization", occurs only once.</p>
+</div>
+<div class="paragraph">
+<p>You should be aware when writing services that your code must be thread safe; any service you define could be invoked simultaneously by multiple threads.
+This is rarely an issue in practice, since most services take input, use local variables, and invoke methods on other services, without making use of non-final instance variables.
+The few instance variables in a service implementation are usually references to other Tapestry IoC services.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_perthread"><a class="anchor" href="#_perthread"></a>perthread</h3>
+<div class="paragraph">
+<p>The perthread service scope exists primarily to help multi-threaded servlet applications, though it has other applications.</p>
+</div>
+<div class="paragraph">
+<p>With perthread, the service proxy will delegate to a local service instance that is associated with the current thread.
+Two different threads, invoking methods on the same proxy, will ultimately be invoking methods on two different service instances, each reserved to their own thread.</p>
+</div>
+<div class="paragraph">
+<p>This is useful when a service needs to keep request specific state, such as information extracted from the <code>HttpServletRequest</code> (in a web application).
+The default singleton model would not work in such a multithreaded environment.
+Using perthread on select services allows state to be isolated to those services.
+Because the dispatch occurs inside the proxy, you can treat the service as a global, like any other.</p>
+</div>
+<div class="paragraph">
+<p>You will see that your service builder method is invoked more than once.
+It is invoked in each thread where the perthread service is used.</p>
+</div>
+<div class="paragraph">
+<p>At the end of the request, the Registry&#8217;s <code>cleanupThread()</code> method is invoked; it will discard any perthread service implementations for the current thread.</p>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>A common technique in Tapestry IoC is to have a service builder method register a core service implementation as an event listener with some event hub service.
+With non-singleton objects, this can cause a number of problems; the event hub will hold a reference to the per-thread instance, even after that per-thread instance has been cleaned up (discarded by the inner proxy).
+Simply put, this is a pattern to avoid.
+For the most part, perthread services should be simple holders of data specific to a thread or a request, and should not have overly complex relationships with the other services in the registry.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_defining_the_scope_of_autobuilt_services"><a class="anchor" href="#_defining_the_scope_of_autobuilt_services"></a>Defining the scope of Autobuilt Services</h3>
+<div class="paragraph">
+<p>There are two options for defining the scope for an autobuilt service.</p>
+</div>
+<div class="paragraph">
+<p>The service implementation class may include the <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/ioc/annotations/Scope.html">@Scope</a></code> annotation.
+This is generally the preferred way to specify scope.</p>
+</div>
+<div class="paragraph">
+<p>In addition, it is possible to specify the scope when binding the service:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">bind(MyServiceInterface.class, MyServiceImpl.class).scope(ScopeConstants.PERTHREAD);</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_eager_loading_services"><a class="anchor" href="#_eager_loading_services"></a>Eager Loading Services</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Services are normally created only as needed (per the scope discussion above).</p>
+</div>
+<div class="paragraph">
+<p>This can be tweaked slightly; by adding the <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/ioc/annotations/EagerLoad.html">@EagerLoad</a></code> annotation to the service builder method, Tapestry will instantiate the service when the Registry is first created.</p>
+</div>
+<div class="paragraph">
+<p>This will cause the service builder method to be invoked, as well as any service decorator methods.</p>
+</div>
+<div class="paragraph">
+<p>This feature is used when a service manages a resource, such as a thread, that needs to be created as soon as the application starts up.
+Another common example is a service that listens for events produced by a second service; the first service may need to be created, and start listening, before any of its service methods are invoked (which would normally trigger the instantiation of the service).</p>
+</div>
+<div class="paragraph">
+<p>Many services may be annotated with <code>@EagerLoad</code>; the order in which services are created is not defined.</p>
+</div>
+<div class="paragraph">
+<p>With the perthread scope, the service builder method will not be invoked (this won&#8217;t happen until a service method is invoked), but the decorators for the service will be created.</p>
+</div>
+<div class="sect2">
+<h3 id="_eager_loading_autobuilt_services"><a class="anchor" href="#_eager_loading_autobuilt_services"></a>Eager Loading Autobuilt Services</h3>
+<div class="paragraph">
+<p>As with service scope, there are two options for indicating that an autobuilt service should be eagerly loaded.</p>
+</div>
+<div class="paragraph">
+<p>The service implementation class may include the <code>@EagerLoad</code> annotation.</p>
+</div>
+<div class="paragraph">
+<p>You may also specify eager loading explicitly when binding the service:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">bind(MyServiceInterface.class, MyServiceImpl.class).eagerLoad();</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_injecting_resources"><a class="anchor" href="#_injecting_resources"></a>Injecting Resources</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In addition to injecting services, Tapestry will key off of the parameter type to allow other things to be injected.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>java.lang.String</code>: unique id for the service</p>
+</li>
+<li>
+<p><a href="http://www.slf4j.org/api/org/slf4j/Logger.html">org.slf4j.Logger</a>: logger for the service</p>
+</li>
+<li>
+<p><code>java.lang.Class</code>: service interface implemented by the service to be constructed</p>
+</li>
+<li>
+<p><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/ioc/ServiceResources.html">ServiceResources</a></code>: access to other services</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>No annotation is needed for these cases.</p>
+</div>
+<div class="paragraph">
+<p>See also <a href="ioc-configuration.html" class="xref page">service configuration</a> for additional special cases of resources that can be injected.</p>
+</div>
+<div class="paragraph">
+<p>Note: resources may not be injected into fields, they are injectable only via method or constructor parameters.</p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public static Indexer build(String serviceId, Log serviceLog,
+     JobScheduler scheduler, FileSystem fileSystem)
+{
+  IndexerImpl indexer = new IndexerImpl(serviceLog, fileSystem);
+
+  scheduler.scheduleDailyJob(serviceId, indexer);
+
+  return indexer;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The order of parameters is completely irrelevant.
+They can come first or last or be interspersed however you like.</p>
+</div>
+<div class="paragraph">
+<p>Injecting in the <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/ioc/ServiceResources.html">ServiceResources</a></code> can be handy when you want to calculate the name of a service dependency on the fly.
+However, in the general case (where the id of service dependencies is known at build time), it is easier to use the <code>@InjectService</code> annotation.</p>
+</div>
+<div class="paragraph">
+<p>The Log&#8217;s name (used when configuring logging settings for the service) consists of the module class name and the service id seperated by a period, i.e. "org.example.myapp.MyModule.Indexer".</p>
+</div>
+<div class="paragraph">
+<p>Further, ServiceResources includes an <code>autobuild()</code> method that allows you to easily trigger the construction of a class, including dependencies.
+Thus the previous example could be rewritten as:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">  public static Indexer build(ServiceResources resources, JobScheduler jobScheduler)
+  {
+    IndexerImpl indexer = resources.autobuild(IndexerImpl.class);
+
+    scheduler.scheduleDailyJob(resources.getServiceId(), indexer);
+
+    return indexer;
+  }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This works the exact same way with autobuilt services, except that the parameters of the service implementation constructor are considered, rather than the parameters of the service builder method.</p>
+</div>
+<div class="paragraph">
+<p>The <code>@InjectService</code> annotation takes precedence over these resources.</p>
+</div>
+<div class="paragraph">
+<p>If the <code>@InjectService</code> annotation is not present, and the parameter type does not exactly match a resource type, then <a href="object-providers.html" class="xref page">object injection</a> occurs.
+Object injection will find the correct object to inject based on a number of (extensible) factors, including the parameter type and any additional annotations on the parameter.</p>
+</div>
+<div class="paragraph">
+<p>Every once and a while, you&#8217;ll have a conflict between a resource type and an object injection.
+For example, the following does not work as expected:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public static Indexer build(String serviceId, Log serviceLog,
+  JobScheduler scheduler, FileSystem fileSystem,
+  @Value("${index-alerts-email}")
+  String alertEmail)
+{
+  IndexerImpl indexer = new IndexerImpl(serviceLog, fileSystem, alertEmail);
+
+  scheduler.scheduleDailyJob(serviceId, indexer);
+
+  return indexer;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>It doesn&#8217;t work because type String always gets the service id, as a resource (as with the <code>serviceId</code> parameter).
+In order to get this to work, we need to turn off the resource injection for the <code>alertEmail</code> parameter.
+That&#8217;s what the <code>@Inject</code> annotation does:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public static Indexer build(String serviceId, Log serviceLog,
+  JobScheduler scheduler, FileSystem fileSystem,
+  @Inject @Value("${index-alerts-email}")
+  String alertEmail)
+{
+  IndexerImpl indexer = new IndexerImpl(serviceLog, fileSystem, alertEmail);
+
+  scheduler.scheduleDailyJob(serviceId, indexer);
+
+  return indexer;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here, the <code>alertEmail</code> parameter will receive the configured alerts email (see the <a href="symbols.html" class="xref page">symbols documentation</a> for more about this syntax) rather than the service id.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_binding_servicebuilders"><a class="anchor" href="#_binding_servicebuilders"></a>Binding ServiceBuilders</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Yet another option is available: instead of binding an interface to a implemention class, you can bind a service to a <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/ioc/ServiceBuilder.html">ServiceBuilder</a></code>, a callback used to create the service implementation.
+This is very useful in very rare circumstances.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_builtin_services"><a class="anchor" href="#_builtin_services"></a>Builtin Services</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A few services within the Tapestry IOC Module are "builtin"; there is no service builder method in the <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/ioc/services/TapestryIOCModule.html">TapestryIOCModule</a></code> class.</p>
+</div>
+<div class="paragraph">
+<p>Builtin services include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/ioc/services/ClassFactory.html">ClassFactory</a></code></p>
+</li>
+<li>
+<p><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/ioc/LoggerSource.html">LoggerSource</a></code></p>
+</li>
+<li>
+<p><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/ioc/services/RegistryShutdownHub.html">RegistryShutdownHub</a></code></p>
+</li>
+<li>
+<p><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/ioc/services/PerthreadManager.html">PerthreadManager</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The Service Id is identical the <em>simple name</em> of the class.</p>
+</div>
+<div class="paragraph">
+<p>Consult the JavaDoc for each of these services to identify under what circumstances you&#8217;ll need to use them.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mutually_dependent_services"><a class="anchor" href="#_mutually_dependent_services"></a>Mutually Dependent Services</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>One of the benefits of Tapestry IoC&#8217;s proxy-based approach to just-in-time instantiation is the automatic support for mutually dependent services.
+For example, suppose that the <code>Indexer</code> and the <code>FileSystem</code> needed to talk directly to each other.
+Normally, this would cause a "chicken-and-the-egg" problem: which one to create first?</p>
+</div>
+<div class="paragraph">
+<p>With Tapestry IoC, this is not even considered a special case:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public static Indexer buildIndexer(JobScheduler scheduler, FileSystem fileSystem)
+{
+  IndexerImpl indexer = new IndexerImpl(fileSystem);
+
+  scheduler.scheduleDailyJob(indexer);
+
+  return indexer;
+}
+
+public static FileSystem buildFileSystem(Indexer indexer)
+{
+  return new FileSystemImpl(indexer);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here, <code>Indexer</code> and <code>FileSystem</code> are mutually dependent.
+Eventually, one or the other of them will be created &#8230;&#8203; let&#8217;s say its <code>FileSystem</code>.
+The <code>buildFileSystem()</code> builder method will be invoked, and a proxy to <code>Indexer</code> will be passed in.
+Inside the <code>FileSystemImpl</code> constructor (or at some later date), a method of the <code>Indexer</code> service will be invoked, at which point, the <code>buildIndexer()</code> method is invoked.
+It still receives the proxy to the <code>FileSystem</code> service.</p>
+</div>
+<div class="paragraph">
+<p>If the order is reversed, such that <code>Indexer</code> is built before <code>FileSystem</code>, everything still works the same.</p>
+</div>
+<div class="paragraph">
+<p>This approach can be very powerful.
+For example, it can be used to break apart untestable monolithic code into two mutually dependent halves, each of which can be unit tested.</p>
+</div>
+<div class="paragraph">
+<p>The exception to this rule is a service that depends on itself <em>during construction</em>.
+This can occur when (indirectly, through other services) building the service tries to invoke a method on the service being built.
+This can happen when the service implementation&#8217;s constructor invoke methods on service dependencies passed into it, or when the service builder method itself does the same.
+This is actually a very rare case and difficult to illustrate.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

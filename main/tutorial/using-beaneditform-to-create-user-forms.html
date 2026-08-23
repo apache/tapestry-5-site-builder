@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Using BeanEditForm To Create User Forms :: Apache Tapestry</title>
+    <meta name="generator" content="Antora 3.1.15">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/tapestry.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../.."><img alt="Apache Tapestry Logo" src="../../_/img/apache-tapestry-icon-dark.svg" width="60" />Apache Tapestry</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Documentation</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../../main/getting-started.html">Getting Started</a>
+            <a class="navbar-item" href="../../main/tutorial/">Tutorial</a>
+            <a class="navbar-item" href="../../userguide/5.8/">User Guide</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="../../main/community.html">Community</a>
+        <a class="navbar-item" href="../../main/support.html">Support</a>
+        <a class="navbar-item" href="../../main/developers.html">Developers</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Apache</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+            <a class="navbar-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
+            <a class="navbar-item" href="https://www.apache.org/licenses/">License</a>
+            <a class="navbar-item" href="https://www.apache.org/security/">Security</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="../../main/download.html">Download</a>
+          </span>
+        </div>
+        <div class="navbar-brand">
+          <a href="https://www.apache.org/">
+          <img alt="The Apache Software Foundation" src="../../_/img/asf_logo.svg" width="200" height="63" style="padding-top: 5px; padding-bottom: 5px; background-color: white">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="body">
+<div class="nav-container" data-component="main" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../about.html">Home</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../about.html">About</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../principles.html">Principles</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Documentation</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tutorial</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="index.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="dependencies-tools-and-plugins.html">Dependencies, Tools and Plugins</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="creating-the-skeleton-application.html">Creating the Skeleton Application</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="exploring-the-project.html">Exploring the Project</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="implementing-the-hi-lo-guessing-game.html">Implementing the Hi-Lo Guessing Game</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="using-beaneditform-to-create-user-forms.html">Using BeanEditForm To Create User Forms</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="using-tapestry-with-hibernate.html">Using Tapestry With Hibernate</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../userguide.html">User Guide</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Home</span>
+    <span class="version"></span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../about.html">Home</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../userguide/current/index.html">User Guide</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../userguide/current/index.html">5.8</a>
+        </li>
+        <li class="version">
+          <a href="../../userguide/5.7/index.html">5.7</a>
+        </li>
+        <li class="version">
+          <a href="../../userguide/5.6/index.html">5.6</a>
+        </li>
+        <li class="version">
+          <a href="../../userguide/5.5/index.html">5.5</a>
+        </li>
+        <li class="version">
+          <a href="../../userguide/5.4/index.html">5.4</a>
+        </li>
+        <li class="version">
+          <a href="../../userguide/5.3/index.html">5.3</a>
+        </li>
+        <li class="version">
+          <a href="../../userguide/5.2/index.html">5.2</a>
+        </li>
+        <li class="version">
+          <a href="../../userguide/5.1/index.html">5.1</a>
+        </li>
+        <li class="version">
+          <a href="../../userguide/5/index.html">5.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../about.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../about.html">Home</a></li>
+    <li>Documentation</li>
+    <li>Tutorial</li>
+    <li><a href="using-beaneditform-to-create-user-forms.html">Using BeanEditForm To Create User Forms</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Using BeanEditForm To Create User Forms</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>In the previous chapters, we saw how Tapestry can handle simple links, even links that pass information in the URL.
+In this chapter, we&#8217;ll see how Tapestry can do the same, and quite a bit more, for HTML forms.</p>
+</div>
+<div class="paragraph">
+<p>Form support in Tapestry is deep and rich, more than can be covered in a single chapter.
+However, we can show the basics, including some very common development patterns.
+To get started, let&#8217;s create a simple address book application.</p>
+</div>
+<div class="paragraph">
+<p>We&#8217;ll start with the entity data, a simple object to store the information we&#8217;ll need.
+These classes go in an <code>entities</code> sub-package.
+Unlike the use of the <code>pages</code> sub-package (for page component classes), this is not enforced by Tapestry; it&#8217;s just a convention (but as we&#8217;ll see shortly, a handy one).</p>
+</div>
+<div class="paragraph">
+<p>Tapestry treats public fields as if they were JavaBeans properties; since the Address object is just "dumb data", there&#8217;s no need to get carried away writing getters and setters. Instead, we&#8217;ll define an entity that is all public fields:</p>
+</div>
+<div class="listingblock">
+<div class="title">src/main/java/com/example/tutorial/entities/Address.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package com.example.tutorial1.entities;
+
+import com.example.tutorial1.data.Honorific;
+
+public class Address
+{
+    public Honorific honorific;
+    public String firstName;
+    public String lastName;
+    public String street1;
+    public String street2;
+    public String city;
+    public String state;
+    public String zip;
+    public String email;
+    public String phone;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We also need to define the enum type, Honorific:</p>
+</div>
+<div class="listingblock">
+<div class="title">src/main/java/com/example/tutorial/data/Honorific.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package com.example.tutorial1.data;
+
+public enum Honorific
+{
+    MR, MRS, MISS, DR
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_address_pages"><a class="anchor" href="#_address_pages"></a>Address Pages</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We&#8217;re probably going to create a few pages related to addresses: pages for creating them, for editing them, for searching and listing them. We&#8217;ll create a sub-folder, address, to hold them. Let&#8217;s get started on the first of these pages, "address/Create" (that&#8217;s the real name, including the slash — we&#8217;ll see in a minute how that maps to classes and templates).</p>
+</div>
+<div class="paragraph">
+<p>First, we&#8217;ll update the Index.tml template, to create a link to the new page:</p>
+</div>
+<div class="listingblock">
+<div class="title">src/main/resources/com/example/tutorial/pages/Index.tml (partial)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;h1&gt;Address Book&lt;/h1&gt;
+
+&lt;ul&gt;
+    &lt;li&gt;&lt;t:pagelink page="address/create"&gt;Create new address&lt;/t:pagelink&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now we need the address/Create page; lets start with an empty shell, just to test our navigation.</p>
+</div>
+<div class="listingblock">
+<div class="title">src/main/resources/com/example/tutorial/pages/address/CreateAddress.tml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;html t:type="layout" title="Create New Address"
+    xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+
+    &lt;em&gt;coming soon ...&lt;/em&gt;
+
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Adapt as necessary for earlier versions than Tapestry 5.4, for <code>tapestry_5_3.xsd</code></td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Next, the corresponding class:</p>
+</div>
+<div class="listingblock">
+<div class="title">src/main/java/com/example/tutorial/pages/address/CreateAddress.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package com.example.tutorial1.pages.address;
+
+public class CreateAddress
+{
+
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>So &#8230;&#8203; why is the class named <code>CreateAddress</code> and not simply <code>Create</code>?
+Actually, we could have named it <code>Create"</code>, and the application would still work, but the longer <em>class</em> name is equally valid.
+Tapestry noticed the redundancy in the class name (<code>com.example.tutorial1.pages.<em>address</em>.Create<em>Address</em></code>) and just stripped out the redundant suffix.</p>
+</div>
+<div class="paragraph">
+<p>Tapestry actually creates a bunch of aliases for you pages; any of these aliases are valid and can appear in URLs or in the page parameter of PageLink.
+You can see the list in the console:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>[INFO] TapestryModule.ComponentClassResolver Available pages (12):
+              (blank): com.example.tutorial1.pages.Index
+   ComponentLibraries: org.apache.tapestry5.corelib.pages.ComponentLibraries
+             Error404: com.example.tutorial1.pages.Error404
+      ExceptionReport: org.apache.tapestry5.corelib.pages.ExceptionReport
+             GameOver: com.example.tutorial1.pages.GameOver
+                Guess: com.example.tutorial1.pages.Guess
+                Index: com.example.tutorial1.pages.Index
+          PageCatalog: org.apache.tapestry5.corelib.pages.PageCatalog
+PropertyDisplayBlocks: org.apache.tapestry5.corelib.pages.PropertyDisplayBlocks
+   PropertyEditBlocks: org.apache.tapestry5.corelib.pages.PropertyEditBlocks
+        ServiceStatus: org.apache.tapestry5.corelib.pages.ServiceStatus
+          T5Dashboard: org.apache.tapestry5.corelib.pages.T5Dashboard
+       address/Create: com.example.tutorial1.pages.address.CreateAddress
+address/CreateAddress: com.example.tutorial1.pages.address.CreateAddress</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Tapestry users the shortest alias when constructing URLs.</p>
+</div>
+<div class="paragraph">
+<p>Eventually, your application will probably have more entities: perhaps you&#8217;ll have a <code>user/Create</code> page and a <code>payment/Create</code> page and an <code>account/Create</code> page.
+You <em>could</em> have a bunch of different classes all named Create spread across a number of different packages.
+That&#8217;s legal Java, but it isn&#8217;t ideal.
+You may find yourself accidentally editing the Java code for creating an Account when you really want to be editing the code for creating a Payment.</p>
+</div>
+<div class="paragraph">
+<p>Tapestry is encouraging you to use a more descriptive name: <code>Create<em>Address</em></code>, not just <code>Create</code>, but it isn&#8217;t making you pay the cost (in terms of longer, uglier URLs).
+The URL to access the page will still be <code><a href="http://localhost:8080/tutorial1/address/create" class="bare">http://localhost:8080/tutorial1/address/create</a></code>.</p>
+</div>
+<div class="paragraph">
+<p>And remember, regardless of the name that Tapestry assigns to your page, the template file is named like the Java class itself: <code>CreateAddress.tml</code>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Index pages work in folders as well.
+A class named <code>com.example.tutorial1.pages.address.AddressIndex</code> would be given the name <code>address/Index</code>.
+However, Tapestry has special rules for pages named <code>Index</code> and the rendered URL would be <code><a href="http://localhost:8080/tutorial1/address/" class="bare">http://localhost:8080/tutorial1/address/</a></code>.
+In other words, you can place Index pages in any folder and Tapestry will build a short URL for that page &#8230;&#8203; and you don&#8217;t have to keep naming the classes <code>Index</code> (it&#8217;s confusing to have many classes with the same name, even across multiple packages); instead, you can name each index page after the package that contains it.
+Tapestry users a smart convention to keep it all straight and generate short, to the point URLs.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_using_the_beaneditform_component"><a class="anchor" href="#_using_the_beaneditform_component"></a>Using the BeanEditForm Component</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Time to start putting together the logic for this form.
+Tapestry has a specific component for client-side Forms: the <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/corelib/components/Form.html">Form</a></code> component, as well as components for form controls, such as <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/corelib/components/Checkbox.html">Checkbox</a></code> and <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/corelib/components/TextField.html">TextField</a></code>.
+We&#8217;ll cover those in a bit more detail later .. instead, we&#8217;re again going to let Tapestry do the heavy lifting for us, via the <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/corelib/components/BeanEditForm.html">BeanEditForm</a></code> component.</p>
+</div>
+<div class="paragraph">
+<p>Add the following to the <code>CreateAddress</code> template (replacing the "coming soon &#8230;&#8203;" message):</p>
+</div>
+<div class="listingblock">
+<div class="title">CreateAddress.tml (partial)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;t:beaneditform object="address"/&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And match that up with a property in the <code>CreateAddress</code> class:</p>
+</div>
+<div class="listingblock">
+<div class="title">CreateAddress.java (partial)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Property
+private Address address;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When you refresh the page, you may see a warning like the following at the top of the page:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/hmac-warning.png" alt="hmac warning"></span></p>
+</div>
+<div class="paragraph">
+<p>If you see that, it means you need to invent an HMAC passphrase for your app.
+Just edit your <code>AppModule.java</code> class (in your <code>services</code> package), adding a couple of lines to the <code>contributeApplicationDefaults</code> method like the following:</p>
+</div>
+<div class="listingblock">
+<div class="title">AppModule.java (partial)</div>
+<div class="content">
+<pre>// Set the HMAC pass phrase to secure object data serialized to client
+configuration.add(SymbolConstants.HMAC_PASSPHRASE, "");</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>but, instead of an empty string, insert a long, <strong>random string of characters</strong> (like a very long and complex password, at least 30 characters) that you keep private.</p>
+</div>
+<div class="paragraph">
+<p>After you do that, stop the app and restart it, and click on the Create new address link again, and you&#8217;ll see something like this:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/create-address-initial.png" alt="create address initial"></span></p>
+</div>
+<div class="paragraph">
+<p>Tapestry has done quite a bit of work here.
+It has created a form that includes a field for each property.
+Further, it has seen that the honorific property is an enumerated type, and presented that as a drop-down list.</p>
+</div>
+<div class="paragraph">
+<p>In addition, Tapestry has converted the property names (<code>city</code>, <code>email</code>, <code>firstName</code>) to user presentable labels ("City", "Email", "First Name").
+In fact, these are <code>&lt;label&gt;</code> elements, so clicking a label with the mouse will move the input cursor into the corresponding field.</p>
+</div>
+<div class="paragraph">
+<p>This is an awesome start; it&#8217;s a presentable interface, quite nice in fact for a few minute&#8217;s work.
+But it&#8217;s far from perfect; let&#8217;s get started with some customizations.</p>
+</div>
+<div class="sect2">
+<h3 id="_changing_field_order"><a class="anchor" href="#_changing_field_order"></a>Changing Field Order</h3>
+<div class="paragraph">
+<p>The <code>BeanEditForm</code> must guess at the right order to present the fields; for public fields, they end up in alphabetical order.
+For standard JavaBeans properties, the <code>BeanEditForm</code> default is in the order in which the getter methods are defined in the class (it uses line number information, if available).</p>
+</div>
+<div class="paragraph">
+<p>A better order for these fields is the order in which they are defined in the <code>Address</code> class:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>honorific</p>
+</li>
+<li>
+<p>firstName</p>
+</li>
+<li>
+<p>lastName</p>
+</li>
+<li>
+<p>street1</p>
+</li>
+<li>
+<p>street2</p>
+</li>
+<li>
+<p>city</p>
+</li>
+<li>
+<p>state</p>
+</li>
+<li>
+<p>zip</p>
+</li>
+<li>
+<p>email</p>
+</li>
+<li>
+<p>phone</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>We can accomplish this by using the <code>reorder</code> parameter of the <code>BeanEditForm</code> component, which is a comma separated list of property (or public field) names:</p>
+</div>
+<div class="listingblock">
+<div class="title">CreateAddress.tml (partial)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;t:beaneditform object="address"
+        reorder="honorific,firstName,lastName,street1,street2,city,state,zip,email,phone" /&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/create-address-reordered.png" alt="create address reordered"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_customizing_labels"><a class="anchor" href="#_customizing_labels"></a>Customizing labels</h3>
+<div class="paragraph">
+<p>Tapestry makes it pretty easy to customize the labels used on the fields.
+It&#8217;s just a matter of creating a <em>message catalog</em> for the page.</p>
+</div>
+<div class="paragraph">
+<p>In Tapestry, every page and component may have its own message catalog.
+This is a standard Java properties file, and it is named the same as the page or component class, with a <code>.properties</code> extension.
+A message catalog consists of a series of lines, each line is a message key and a message value separated with an equals sign.</p>
+</div>
+<div class="paragraph">
+<p>All it takes is to create a message entry with a particular name: the name of the property suffixed with <code>-label</code>.
+As elsewhere, Tapestry is forgiving of case.</p>
+</div>
+<div class="listingblock">
+<div class="title">src/main/resources/com/example/tutorial/pages/address/CreateAddress.properties</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">street1-label=Street 1
+street2-label=Street 2
+email-label=E-Mail
+zip-label=Zip Code
+phone-label=Phone Number</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since this is a <em>new</em> file (and not a change to an existing file), you may have to restart Jetty to force Tapestry to pick up the change.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/address-v3.png" alt="address v3"></span></p>
+</div>
+<div class="paragraph">
+<p>We can also customize the options in the drop down list.
+All we have to do is add some more entries to the message catalog matching the enum names to the desired labels.
+Update <code>CreateAddress.properties</code> and add:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">MR=Mr.
+MRS=Mrs.
+DR=Dr.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Notice that we don&#8217;t have to include an option for MISS, because that is converted to "Miss" anyway.
+You might just want to include it for sake of consistency &#8230;&#8203; the point is, each option label is searched for separately.</p>
+</div>
+<div class="paragraph">
+<p>Lastly, the default label on the submit button is "Create/Update" (BeanEditForm doesn&#8217;t know how it is being used).
+Let&#8217;s change that to "Create Address".</p>
+</div>
+<div class="paragraph">
+<p>That button is a component within the <code>BeanEditForm</code> component.
+It&#8217;s not a property, so we can&#8217;t just put a message into the message catalog, the way we can with the fields.
+Fortunately, the BeanEditForm component includes a parameter expressly for re-labeling the button.
+Simply change the <code>CreateAddress</code> component template:</p>
+</div>
+<div class="listingblock">
+<div class="title">CreateAddress.tml (partial)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;t:beaneditform submitlabel="Create Address" object="address"
+        reorder="honorific,firstName,lastName,street1,street2,city,state,zip,email,phone"/&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The default for the submitlabel parameter is "Create/Update", but here we&#8217;re overriding that default to a specific value.</p>
+</div>
+<div class="paragraph">
+<p>The final result shows the reformatting and relabelling:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/address-v5.png" alt="address v5"></span></p>
+</div>
+<div class="paragraph">
+<p>Before continuing on to validation, a side note about message catalogs.
+Message catalogs are not just for re-labeling fields and options; we&#8217;ll see in later chapters how message catalogs are used in the context of localization and internationalization.</p>
+</div>
+<div class="paragraph">
+<p>Instead of putting the label for the submit button directly inside the template, we&#8217;re going to provide a reference to the label; the actual label will go in the message catalog.</p>
+</div>
+<div class="paragraph">
+<p>In Tapestry, when binding a parameter, the value you provide may include a prefix.
+The prefix guides Tapestry in how to interpret the rest of the the parameter value &#8230;&#8203; is it the name of a property? The id of a component?
+A message key? Most parameters have a default prefix, usually <code>prop:</code>, that is used when you fail to provide one (this helps to make the templates as terse as possible).</p>
+</div>
+<div class="paragraph">
+<p>Here we want to reference a message from the catalog, so we use the <code>message:</code> prefix:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;t:beaneditform object="address" submitlabel="message:submit-label"
+    reorder="honorific,firstName,lastName,street1,street2,city,state,zip,email,phone" /&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And then we define the submit-label key in the message catalog:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">submit-label=Create Address</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the end, the exact same HTML is sent to the client, regardless of whether you include the label text directly in the template, or indirectly in the message catalog.
+In the long term, the latter approach will work better if you later chose to internationalize your application.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_adding_validation"><a class="anchor" href="#_adding_validation"></a>Adding Validation</h3>
+<div class="paragraph">
+<p>Before we worry about storing the Address object, we should make sure that the user provides reasonable values.
+For example, several of the fields should be required, and phone numbers and email address have specific formats.</p>
+</div>
+<div class="paragraph">
+<p>The <code>BeanEditForm</code> checks for a Tapestry-specific annotation, <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/beaneditor/Validate.html">@Validate</a></code>, on the field, the getter method, or the setter method of each property.</p>
+</div>
+<div class="paragraph">
+<p>Edit the <code>Address</code> entity, and update the <code>lastName</code>, <code>firstName</code>, <code>street1</code>, <code>city</code>, <code>state</code> and <code>zip</code> fields, adding a <code>@Validate</code> annotation to each:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Validate("required")
+public String firstName;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>What is that string, <code>required</code>?
+That&#8217;s how you specify the desired validation.
+It is a series of names that identify what type of validation is desired.
+A number of validators are built in, such as <code>required</code>, <code>minLength</code> and <code>maxLength</code>. As elsewhere, Tapestry is case insensitive.</p>
+</div>
+<div class="paragraph">
+<p>You can apply multiple validations, by separating the validator names with commas.
+Some validators can be configured (with an equals sign).
+Thus you might say <code>required,minLength=5</code> for a field that must be specified, and must be at least five characters long.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You can easily get confused when you make a change to an entity class, such as adding the <code>@Validate</code> annotation, and <em>not</em> see the result in the browser.
+Only component classes, and (most) classes in the Tapestry services layer, are live-reloaded.
+Data and entity objects are not reloaded, so this is one area where you need to stop and restart Jetty to see the change.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Restart the application, and refresh your browser, then hit the Create Address button.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/address-v6.png" alt="address v6"></span></p>
+</div>
+<div class="paragraph">
+<p>This is a shot just after hitting the Create Address button; all the fields have been validated and errors displayed.
+Each field in error has been highlighted in red and had an error message added.
+Further, the label for each of the fields has also been highlighted in red, to even more clearly identify what&#8217;s in error.
+The cursor has also been moved to the first field that&#8217;s in error.
+And <em>all</em> of this is taking place on the client side, without any communication with the application.</p>
+</div>
+<div class="paragraph">
+<p>Once all the errors are corrected, and the form does submit, all validations are performed on the server side as well (just in case the client has JavaScript disabled).</p>
+</div>
+<div class="paragraph">
+<p>So &#8230;&#8203; how about some more interesting validation than just "required or not".
+Tapestry has built in support for validating based on field length and several variations of field value, including regular expressions.
+Zip codes are pretty easy to express as a regular expression.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Validate("required,regexp=^\\d{5}(-\\d{4})?$")
+public String zip;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s give it a try; restart the application and enter an "abc" for the zip code.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/address-v7.png" alt="address v7"></span></p>
+</div>
+<div class="paragraph">
+<p>This is what you&#8217;ll see after typing "abc" and clicking the Create Address button.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Modern browsers will automatically validate a regexp field when the form is submitted, as shown above. Older browsers do not have that automatic support, but will still validate input, using the same decorations as for the required fields in the previous screenshot.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>In any case, that&#8217;s the right validation behavior, but it&#8217;s the wrong message. Your users are not going to know or care about regular expressions.</p>
+</div>
+<div class="paragraph">
+<p>Fortunately, it&#8217;s easy to customize validation messages.
+All we need to know is the name of the property ("zip") and the name of the validator ("regexp").
+We can then put an entry into the CreateAddress message catalog:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">zip-regexp-message=Zip Codes are five or nine digits.  Example: 02134 or 90125-1655.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Refresh the page and submit again:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/address-v8.png" alt="address v8"></span></p>
+</div>
+<div class="paragraph">
+<p>This trick isn&#8217;t limited to just the regexp validator, it works equally well with any validator.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s go one step further.
+Turns out, we can move the regexp pattern to the message catalog as well.
+If you only provide the name of the validator in the <code>@Validate</code> annotation, Tapestry will search the containing page&#8217;s message catalog of the constraint value, as well as the validation message.
+The constraint value for the regexp validator is the regular expression to match against.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Validate("required,regexp")
+public String zip;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now, just put the regular expression into the CreateAddress message catalog:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">zip-regexp=^\\d{5}(-\\d{4})?$
+zip-regexp-message=Zip Codes are five or nine digits.  Example: 02134 or 90125-1655.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>After a restart you&#8217;ll see the &#8230;&#8203; the same behavior.
+But when we start creating more complicated regular expressions, it&#8217;ll be much, much nicer to put them in the message catalog rather than inside the annotation value.
+And inside the message catalog, you can change and tweak the regular expressions without having to restart the application each time.</p>
+</div>
+<div class="paragraph">
+<p>We could go a bit further here, adding more regular expression validation for phone numbers and e-mail addresses.
+We&#8217;re also far from done in terms of further customizations of the <code>BeanEditForm</code> component.</p>
+</div>
+<div class="paragraph">
+<p>By now you are likely curious about what happens after the form submits successfully (without validation errors), so that&#8217;s what we&#8217;ll focus on next.</p>
+</div>
+<div class="paragraph">
+<p>Next: <a href="using-tapestry-with-hibernate.html" class="xref page">Using Tapestry With Hibernate</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

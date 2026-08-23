@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Component Reference :: Apache Tapestry</title>
+    <meta name="generator" content="Antora 3.1.15">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/tapestry.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../.."><img alt="Apache Tapestry Logo" src="../../_/img/apache-tapestry-icon-dark.svg" width="60" />Apache Tapestry</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Documentation</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../../main/getting-started.html">Getting Started</a>
+            <a class="navbar-item" href="../../main/tutorial/">Tutorial</a>
+            <a class="navbar-item" href="../../userguide/5.8/">User Guide</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="../../main/community.html">Community</a>
+        <a class="navbar-item" href="../../main/support.html">Support</a>
+        <a class="navbar-item" href="../../main/developers.html">Developers</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Apache</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+            <a class="navbar-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
+            <a class="navbar-item" href="https://www.apache.org/licenses/">License</a>
+            <a class="navbar-item" href="https://www.apache.org/security/">Security</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="../../main/download.html">Download</a>
+          </span>
+        </div>
+        <div class="navbar-brand">
+          <a href="https://www.apache.org/">
+          <img alt="The Apache Software Foundation" src="../../_/img/asf_logo.svg" width="200" height="63" style="padding-top: 5px; padding-bottom: 5px; background-color: white">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="body">
+<div class="nav-container" data-component="userguide" data-version="5.3">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">User Guide</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Introduction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry Core</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basics</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="project-layout.html">Project Layout</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="runtime-exceptions.html">Runtime Exceptions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="class-reloading.html">Class Reloading</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="component-reference.html">Component Reference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="annotations.html">Annotations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Pages and Components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-classes.html">Component Classes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-templates.html">Component Templates</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="property-expressions.html">Property Expressions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-parameters.html">Component Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="parameter-type-coercion.html">Parameter Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="layout-component.html">Layout Component</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-mixins.html">Component Mixins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-navigation.html">Page Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="localization.html">Localization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Request/Response Rendering</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-life-cycle.html">Page Life Cycle</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="request-processing.html">Request Processing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-rendering.html">Component Rendering</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-events.html">Component Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="url-rewriting.html">URL Rewriting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dom.html">Document Object Model (DOM)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="response-compression.html">Response Compression</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="security.html">Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https.html">HTTPS / SSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="content-type-and-markup.html">Content Type and Markup</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Data Persistence</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="persistent-page-data.html">Persistent Page Data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="session-storage.html">Session Storage</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Interacting with components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="injection.html">Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="environmental-services.html">Environmental Services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript, AJAX, CSS &amp; Binary Data</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="client-side-javascript.html">Client-Side JavaScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ajax-and-zones.html">AJAX and Zones</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="css.html">Cascading Style Sheets (CSS)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="assets.html">Assets</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Working with Forms</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="forms-and-validation.html">Forms and Validation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="beaneditform-guide.html">BeanEditForm Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uploading-files.html">Uploading Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bean-validation.html">Bean Validation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Logging, Debugging &amp; Testing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="logging.html">Logging</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unit-testing.html">Unit testing pages or components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integration-testing.html">Integration Testing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="development-dashboard.html">Development Dashboard</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry IOC</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-overview.html">IoC Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="symbols.html">Symbols</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="type-coercion.html">Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="case-insensitivity.html">Case Insensitivity</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="autoloading-modules.html">Autoloading Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="chainbuilder-service.html">ChainBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pipelinebuilder-service.html">PipelineBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="shadowbuilder-service.html">ShadowBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="strategybuilder-service.html">StrategyBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="defining-tapestry-ioc-services.html">Defining Tapestry IOC Services</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-modules.html">IoC Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="object-providers.html">Object Providers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-serialization.html">Service Serialization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="starting-the-ioc-registry.html">Starting the IoC Registry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="aliases.html">Aliases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="injection-in-detail.html">Injection in Detail</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ordering-by-constraints.html">Ordering by Constraints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="registry-startup.html">Registry Startup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="parallel-execution.html">Parallel Execution</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="logging-in-tapestry.html">Logging in Tapestry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-implementation-reloading.html">Service Implementation Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-advisors.html">Service Advisors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-decorators.html">Service Decorators</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="using-jsr-330-standard-annotations.html">Using JSR 330 standard annotations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="operation-tracker.html">Operation Tracker</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Add-ons and Integrations</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Built-in</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="hibernate.html">Hibernate Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="jpa.html">JPA Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integrating-with-spring-framework.html">Spring</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="third-party-modules.html">Third Party Modules</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Release Notes</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.3.html">Tapestry 5.3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.2.html">Tapestry 5.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.1.html">Tapestry 5.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.0.html">Tapestry 5.0</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cookbook</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/default-parameter.html">Default Parameter</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/overriding-exception-reporting.html">Overriding Exception Reporting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/error-page-recipe.html">Error Page Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/supporting-informal-parameters.html">Supporting Informal Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/switching-cases.html">Switching Cases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/enum-parameter-recipe.html">Enum Parameter Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/extending-the-if-component.html">Extending The If Component</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/meta-programming-page-content.html">Meta-Programming Page Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="cookbook/ioc-cookbook.html">IoC Cookbook</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-basic-services-and-injection.html">IoC Cookbook - Basic Services and Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-overriding-ioc-services.html">IoC Cookbook - Overriding IoC Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-patterns.html">IoC Cookbook - Patterns</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-service-configurations.html">IoC Cookbook - Service Configurations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/using-select-with-a-list.html">Using Select With a List</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/performance-and-clustering.html">Performance and Clustering</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/google-app-engine.html">Google App Engine (GAE)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frequently Asked Questions (FAQ)</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/general.html">General Questions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/templating-and-markup.html">Templating and Markup FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/ajax.html">AJAX FAQ</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">User Guide</span>
+    <span class="version">5.3</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../main/about.html">Home</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../current/index.html">User Guide</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../current/index.html">5.8</a>
+        </li>
+        <li class="version">
+          <a href="../5.7/index.html">5.7</a>
+        </li>
+        <li class="version">
+          <a href="../5.6/index.html">5.6</a>
+        </li>
+        <li class="version">
+          <a href="../5.5/index.html">5.5</a>
+        </li>
+        <li class="version">
+          <a href="../5.4/index.html">5.4</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">5.3</a>
+        </li>
+        <li class="version">
+          <a href="../5.2/index.html">5.2</a>
+        </li>
+        <li class="version">
+          <a href="../5.1/index.html">5.1</a>
+        </li>
+        <li class="version">
+          <a href="../5/index.html">5.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../main/about.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">User Guide</a></li>
+    <li>Tapestry Core</li>
+    <li>Basics</li>
+    <li><a href="component-reference.html">Component Reference</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">5.3</button>
+  <div class="version-menu">
+    <a class="version" href="../current/component-reference.html">5.8</a>
+    <a class="version" href="../5.7/component-reference.html">5.7</a>
+    <a class="version" href="../5.6/component-reference.html">5.6</a>
+    <a class="version" href="../5.5/component-reference.html">5.5</a>
+    <a class="version" href="../5.4/component-reference.html">5.4</a>
+    <a class="version is-current" href="component-reference.html">5.3</a>
+    <a class="version" href="../5.2/component-reference.html">5.2</a>
+    <a class="version" href="../5.1/component-reference.html">5.1</a>
+    <a class="version" href="../5/component-reference.html">5.0</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Component Reference</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tapestry includes more than 65 built-in components and mixins.
+In addition, there are hundreds of Tapestry components freely available from others.
+Of course, Tapestry makes it <a href="component-classes.html" class="xref page">trivially easy</a> to create your own custom components, so if you don&#8217;t see what you need, just develop them yourself.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tapestry_provided_components"><a class="anchor" href="#_tapestry_provided_components"></a>Tapestry-provided Components</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Most Tapestry-provided components are found in the <code>org.apache.tapestry5.corelib.components</code> package. Other components are included in the separate <code>org.apache.tapestry5.kaptcha.components</code> and <code>org.apache.tapestry5.upload.components</code> packages.</p>
+</div>
+<div class="sect2">
+<h3 id="_ajax_specific_components"><a class="anchor" href="#_ajax_specific_components"></a>AJAX-specific Components</h3>
+<div class="paragraph">
+<p>Main article: <a href="ajax-and-zones.html" class="xref page">AJAX and Zones</a></p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/AjaxFormLoop.html">AjaxFormLoop</a></code></dt>
+<dd>
+<p>A special form of the Loop component that adds Ajax support to handle adding new rows and removing existing rows dynamically.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/AddRowLink.html">AddRowLink</a></code>, <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/RemoveRowLink.html">RemoveRowLink</a></code></dt>
+<dd>
+<p>Used inside an AjaxFormLoop component to spur the addition or removal of a row.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/ProgressiveDisplay.html">ProgressiveDisplay</a></code></dt>
+<dd>
+<p>Used to implement the progressive enhancement web design strategy; the component renders itself with a simplified initial content (i.e., "loading &#8230;&#8203;") and an Ajax request then supplies the component&#8217;s true body.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/Zone.html">Zone</a></code></dt>
+<dd>
+<p>A region of a page marked for dynamic updating via Ajax or other client-side effects.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_bean_displaying_editing"><a class="anchor" href="#_bean_displaying_editing"></a>Bean Displaying &amp; Editing</h3>
+<div class="paragraph">
+<p>Main article: <a href="beaneditform-guide.html" class="xref page">BeanEditForm Guide</a></p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/BeanDisplay.html">BeanDisplay</a></code></dt>
+<dd>
+<p>Displays the properties of a bean, using an underlying BeanModel, as a <code>&lt;dl&gt;</code> element with <code>&lt;dt&gt;</code>/<code>&lt;dd&gt;</code> pairs.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/BeanEditForm.html">BeanEditForm</a></code></dt>
+<dd>
+<p>Creates an entire form for editing the properties of a particular bean.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/BeanEditor.html">BeanEditor</a></code></dt>
+<dd>
+<p>The central component of BeanEditForm, this generates a user interface for editing the properties of a bean.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/PropertyDisplay.html">PropertyDisplay</a></code></dt>
+<dd>
+<p>Outputs a single property value.
+Overrides for individual properties come from block parameters whose name matches the property id.
+This component is used by the <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/BeanDisplay.html">BeanDisplay</a></code> component.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/PropertyEditor.html">PropertyEditor</a></code></dt>
+<dd>
+<p>Used to edit a single property of a bean.
+This is used primarily by <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/BeanEditForm.html">BeanEditForm</a></code>.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_conditional_and_looping_components"><a class="anchor" href="#_conditional_and_looping_components"></a>Conditional and Looping Components</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="cookbook/switching-cases.html" class="xref page">Case</a></dt>
+<dd>
+<p>Not really a component, but a technique to emulate a "case" statement using a delegate.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/Delegate.html">Delegate</a></code></dt>
+<dd>
+<p>Does not do any rendering of its own, but will delegate to some other object that can do rendering.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/If.html">If</a></code></dt>
+<dd>
+<p>Conditionally renders its body. May render its tag and any informal parameters.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/Loop.html">Loop</a></code></dt>
+<dd>
+<p>Loops over a number of items (provided by its source parameter), rendering its body for each one.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/Unless.html">Unless</a></code></dt>
+<dd>
+<p>Inverse of the <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/If.html">If</a></code> component, renders its body if the condition is <code>false</code>.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_form_components"><a class="anchor" href="#_form_components"></a>Form Components</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/Checkbox.html">Checkbox</a></code></dt>
+<dd>
+<p>Renders a standard <code>&lt;input type="checkbox"&gt;</code> element</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/Checklist.html">Checklist</a></code></dt>
+<dd>
+<p>Renders a vertical list of <code>&lt;input type="checkbox"&gt;</code> elements.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/DateField.html">DateField</a></code></dt>
+<dd>
+<p>Collect a provided date from the user using a client-side JavaScript calendar.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/Form.html">Form</a></code></dt>
+<dd>
+<p>An HTML form, which will enclose other components to render out the various types of fields.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/FormFragment.html">FormFragment</a></code></dt>
+<dd>
+<p>A portion of a Form that may be selectively displayed.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/Hidden.html">Hidden</a></code></dt>
+<dd>
+<p>Used to record a page property as a value into the form.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/Label.html">Label</a></code></dt>
+<dd>
+<p>Generates a label element for a particular field.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/KaptchaField.html">KaptchaField</a></code></dt>
+<dd>
+<p>Part of a Captcha based authentication scheme; a KaptchaField is paired with a KaptchaImage to ensure that the user has provided the correct value.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/KaptchaImage.html">KaptchaImage</a></code></dt>
+<dd>
+<p>Part of a Captcha based authentication scheme; a KaptchaImage generates a new text image whenever it renders and can provide the previously rendred text subsequently (it is stored persistently in the session).</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/Palette.html">Palette</a></code></dt>
+<dd>
+<p>A multiple selection component.
+Generates a UI consisting of two select elements configured for multiple selection;
+the one on the left is the list of "available" elements, the one on the right is "selected".</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/PasswordField.html">PasswordField</a></code></dt>
+<dd>
+<p>A version of <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/TextField.html">TextField</a></code>, but rendered out as an <code>&lt;input type="password"&gt;</code> element.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/Radio.html">Radio</a></code></dt>
+<dd>
+<p>A radio button (i.e., <code>&lt;input type="radio"&gt;</code>).
+Radio buttons must operate within a <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/RadioContainer.html">RadioContainer</a></code> (normally, the <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/RadioGroup.html">RadioGroup</a></code> component).</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/RadioGroup.html">RadioGroup</a></code></dt>
+<dd>
+<p>Groups together a set of radio components that all affect the same property.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/Select.html">Select</a></code></dt>
+<dd>
+<p>Renders a <code>&lt;select&gt;</code> element for selecting an item from a list of values.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/SubmitNotifier.html">SubmitNotifier</a></code></dt>
+<dd>
+<p>A non visual component used to provide notifications to its container during a form submission.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/TextArea.html">TextArea</a></code></dt>
+<dd>
+<p>Renders a <code>&lt;textarea&gt;</code> element for editing multi-line text.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/TextField.html">TextField</a></code></dt>
+<dd>
+<p>Renders an <code>&lt;input type="text"&gt;</code> element to edit single-line text.</p>
+</dd>
+<dt class="hdlist1"><a href="uploading-files.html" class="xref page">Upload</a></dt>
+<dd>
+<p>A file upload component (i.e., <code>&lt;input type="file"&gt;</code>) based on <a href="https://commons.apache.org/proper/commons-fileupload/">Apache Commons FileUpload</a>.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_grids_tables_and_trees"><a class="anchor" href="#_grids_tables_and_trees"></a>Grids, Tables and Trees</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/Grid.html">Grid</a></code></dt>
+<dd>
+<p>Presents tabular data in a <code>&lt;table&gt;</code> element by iterating over a List or array.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/GridCell.html">GridCell</a></code></dt>
+<dd>
+<p>Part of <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/Grid.html">Grid</a></code>, renders the markup inside a single data cell.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/GridColumns.html">GridColumns</a></code></dt>
+<dd>
+<p>Part of <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/Grid.html">Grid</a></code>, renders out the column headers for the grid, including links (where appropriate) to control column sorting.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/GridPager.html">GridPager</a></code></dt>
+<dd>
+<p>Generates a series of links used to jump to a particular page index within the overall data set</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/GridRows.html">GridRows</a></code></dt>
+<dd>
+<p>Renders out a series of rows within the table.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/Tree.html">Tree</a></code></dt>
+<dd>
+<p>A component used to render a recursive tree structure, with expandable/collapsable/selectable nodes.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_links_and_buttons"><a class="anchor" href="#_links_and_buttons"></a>Links and Buttons</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/ActionLink.html">ActionLink</a></code></dt>
+<dd>
+<p>Triggers an action on the server with a subsequent full page refresh.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/EventLink.html">EventLink</a></code></dt>
+<dd>
+<p>Like <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/ActionLink.html">ActionLink</a></code> except that the event that it triggers is explicitly controlled, rather than always <code>action</code>, and the event is triggered in its container.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/LinkSubmit.html">LinkSubmit</a></code></dt>
+<dd>
+<p>Generates a client-side hyperlink that submits the enclosing form.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/Submit.html">Submit</a></code></dt>
+<dd>
+<p>Corresponds to <code>&lt;input type="submit"&gt;</code> or <code>&lt;input type="image"&gt;</code>, a client-side element that can force the enclosing form to submit.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/PageLink.html">PageLink</a></code></dt>
+<dd>
+<p>Generates a render request link to some other page in the application.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_output_and_messages"><a class="anchor" href="#_output_and_messages"></a>Output and Messages</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/Alerts.html">Alerts</a></code></dt>
+<dd>
+<p>Renders out an empty <code>&lt;div&gt;</code> element and provides JavaScript initialization to make the element the container for alerts.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/Dynamic.html">Dynamic</a></code></dt>
+<dd>
+<p>Allows a component to render itself differently at different times, by making use of an external template file.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/Error.html">Error</a></code></dt>
+<dd>
+<p>Presents validation errors of a single field.
+Must be enclosed by a <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/Form.html">Form</a></code> component.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/Errors.html">Errors</a></code></dt>
+<dd>
+<p>Standard validation error presenter.
+Must be enclosed by a <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/Form.html">Form</a></code> component.
+If errors are present, renders a <code>div</code> element around a banner message and around an unnumbered list of error messages.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/ExceptionDisplay.html">ExceptionDisplay</a></code></dt>
+<dd>
+<p>Integral part of the default <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/pages/ExceptionReport.html">ExceptionReport</a></code> page used to break apart and display the properties of the exception.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/Output.html">Output</a></code></dt>
+<dd>
+<p>A component for formatting output.
+If the component is represented in the template using an element, then the element (plus any informal parameters) will be output around the formatted value.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/OutputRaw.html">OutputRaw</a></code></dt>
+<dd>
+<p>Output raw markup to the client. Unlike an expansion, the output from OutputRaw is unfiltered, with any special characters or entities left exactly as is.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/TextOutput.html">TextOutput</a></code></dt>
+<dd>
+<p>Outputs paragraph oriented text, typically collected via a <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/TextArea.html">TextArea</a></code> component.
+The <code>TextArea</code> is split into lines, and each line it output inside its own <code>&lt;p&gt;</code> element.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_miscellaneous"><a class="anchor" href="#_miscellaneous"></a>Miscellaneous</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/Any.html">Any</a></code></dt>
+<dd>
+<p>Renders an arbitrary element including informal parameters.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/Doctype.html">Doctype</a></code></dt>
+<dd>
+<p>Overrides the DOCTYPE of the rendered document (via Document.dtd(String, String, String) which can be useful when different component templates that render to the same document disagree about what the correct DOCTYPE is.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/RenderObject.html">RenderObject</a></code></dt>
+<dd>
+<p>Renders out an object using the <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/service/ObjectRenderer.html">ObjectRenderer</a></code> service. Used primarily on the ExceptionReport page.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/Trigger.html">Trigger</a></code></dt>
+<dd>
+<p>Triggers an arbitrary event during rendering.
+This is often useful to add JavaScript to a page or a component (via calls to the JavaScriptSupport environmental).</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tapestry_provided_mixins"><a class="anchor" href="#_tapestry_provided_mixins"></a>Tapestry-provided Mixins</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Main article: <a href="component-mixins.html" class="xref page">Component Mixins</a></p>
+</div>
+<div class="paragraph">
+<p>Mixins allow you to add behaviors to existing components.
+The core mixins are found in the <code>org.apache.tapestry5.corelib.mixins</code> package.</p>
+</div>
+<div class="paragraph">
+<p>Tapestry includes the following mixins out-of-the-box.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/mixins/Autocomplete.html">Autocomplete</a></code></dt>
+<dd>
+<p>Modifies a text field to provide for auto-completion of text using values retrieved from the server as the user types. See <a href="ajax-and-zones.html#_autocomplete-mixin" class="xref page">instructions</a>.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/mixins/DiscardBody.html">DiscardBody</a></code></dt>
+<dd>
+<p>Discards a component&#8217;s body.
+Returns false from the <a href="component-rendering.html#_beforerenderbody" class="xref page">BeforeRenderBody</a> phase, which prevents the rendering of the body.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/mixins/FormFieldFocus.html">FormFieldFocus</a></code></dt>
+<dd>
+<p>instruments the outer Form on which component the focus should be activated.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/mixins/NotEmpty.html">NotEmpty</a></code></dt>
+<dd>
+<p>Attaches to any component that renders an element. At the end of the render, if the element is empty, then a non-breaking space (<code>&amp;nbsp;</code>) is injected into the element.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/mixins/RenderClientId.html">RenderClientId</a></code></dt>
+<dd>
+<p>Forces a client element to render its client id by ensuring that <code>getClientId()</code> is called.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/mixins/RenderDisabled.html">RenderDisabled</a></code></dt>
+<dd>
+<p>Renders a <code>disabled</code> attribute if the containing component is disabled.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/mixins/RenderInformals.html">RenderInformals</a></code></dt>
+<dd>
+<p>Renders out all informal parameters, at the end of the <a href="component-rendering.html#_beginrender" class="xref page">BeginRender</a> phase.
+This mixin can be used with components that render a single tag inside the <code>BeginRender</code> phase.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/mixins/RenderNotification.html">RenderNotification</a></code></dt>
+<dd>
+<p>Triggers component event notifications when the attached component enters its <a href="component-rendering.html#_beginrender" class="xref page">BeginRender</a> and <a href="component-rendering.html#_afterrender" class="xref page">AfterRender</a> render phases.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/mixins/TriggerFragment.html">TriggerFragment</a></code></dt>
+<dd>
+<p>When applied to a <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/Checkbox.html">Checkbox</a></code> or <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/Radio.html">Radio</a></code> component, links the input field and a <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/FormFragment.html">FormFragment</a></code>, making the field control the client-side visibility of the <code>FormFragment</code>.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/mixins/ZoneRefresh.html">ZoneRefresh</a></code></dt>
+<dd>
+<p>Periodically refreshes a <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/Zone.html">Zone</a></code> by triggering an event on the server using ajax requests.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tapestry_provided_pages"><a class="anchor" href="#_tapestry_provided_pages"></a>Tapestry-provided Pages</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tapestry provides several special pages that provide status information.
+Most of these are found in the <code>org.apache.tapestry5.corelib.pages</code> package.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/pages/ExceptionReport.html">ExceptionReport</a></code></dt>
+<dd>
+<p>Responsible for reporting runtime exceptions.
+This page is quite verbose and is usually overridden in a production application.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/pages/PageCatalog.html">PageCatalog</a></code></dt>
+<dd>
+<p>Lists out the currently loaded pages, with some statistics.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/pages/PropertyDisplayBlocks.html">PropertyDisplayBlocks</a></code></dt>
+<dd>
+<p>Contains blocks for displaying basic property types; the blocks are contributed to the <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/services/BeanBlockSource.html">BeanBlockSource</a></code> service.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/pages/PropertyEditBlocks.html">PropertyEditBlocks</a></code></dt>
+<dd>
+<p>A page that exists to contain blocks used to edit different types of properties.
+The blocks on this page are contributed into the <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/services/BeanBlockSource.html">BeanBlockSource</a></code> service configuration.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/pages/ServiceStatus.html">ServiceStatus</a></code></dt>
+<dd>
+<p>A page used to see the status of all services defined by the <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/ioc/Registry.html">Registry</a></code>.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_base_components"><a class="anchor" href="#_base_components"></a>Base Components</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The base components, in the <code>org.apache.tapestry5.corelib.base</code> package, are intended to be extended by other components rather than used directly in templates.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/base/AbstractComponentEventLink.html">AbstractComponentEventLink</a></code></dt>
+<dd>
+<p>Base class for link-generating components that are based on a component event request.
+Such events have an event context and may also update a <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/Zone.html">Zone</a></code>.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/base/AbstractConditional.html">AbstractConditional</a></code></dt>
+<dd>
+<p>Base class for <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/If.html">If</a></code> and <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/components/Unless.html">Unless</a></code>.
+Will render its body or the block from its else parameter.
+If it renders anything and it has an element name, then it renders the element and its informal parameters.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/base/AbstractFields.html">AbstractFields</a></code></dt>
+<dd>
+<p>Provides initialization of the <code>clientId</code> and <code>elementName</code> properties.
+In addition, adds the <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/mixins/RenderInformals.html">RenderInformals</a></code>, <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/mixins/RenderDisabled.html">RenderDisabled</a></code> and <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/mixins/DiscardBody.html">DiscardBody</a></code> mixins.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/base/AbstractLink.html">AbstractLink</a></code></dt>
+<dd>
+<p>Provides base utilities for classes that generate clickable links.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/base/AbstractPropertyOutput.html">AbstractPropertyOutput</a></code></dt>
+<dd>
+<p>Base class for components that output a property value using a <code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/beaneditor/PropertyModel.html">PropertyModel</a></code>.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/base/AbstractTextField.html">AbstractTextField</a></code></dt>
+<dd>
+<p>Abstract class for a variety of components that render some variation of a text field.
+Most of the hooks for user input validation are in this class.</p>
+</dd>
+<dt class="hdlist1"><code><a href="https://tapestry.apache.org/5.3.7/apidocs/org/apache/tapestry5/corelib/base/BaseMessages.html">BaseMessages</a></code></dt>
+<dd>
+<p>Base class for components that output messages.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

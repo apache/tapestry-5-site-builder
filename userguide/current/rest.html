@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>REST Support :: Apache Tapestry</title>
+    <meta name="generator" content="Antora 3.1.15">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/tapestry.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../.."><img alt="Apache Tapestry Logo" src="../../_/img/apache-tapestry-icon-dark.svg" width="60" />Apache Tapestry</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Documentation</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../../main/getting-started.html">Getting Started</a>
+            <a class="navbar-item" href="../../main/tutorial/">Tutorial</a>
+            <a class="navbar-item" href="../../userguide/5.8/">User Guide</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="../../main/community.html">Community</a>
+        <a class="navbar-item" href="../../main/support.html">Support</a>
+        <a class="navbar-item" href="../../main/developers.html">Developers</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Apache</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+            <a class="navbar-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
+            <a class="navbar-item" href="https://www.apache.org/licenses/">License</a>
+            <a class="navbar-item" href="https://www.apache.org/security/">Security</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="../../main/download.html">Download</a>
+          </span>
+        </div>
+        <div class="navbar-brand">
+          <a href="https://www.apache.org/">
+          <img alt="The Apache Software Foundation" src="../../_/img/asf_logo.svg" width="200" height="63" style="padding-top: 5px; padding-bottom: 5px; background-color: white">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="body">
+<div class="nav-container" data-component="userguide" data-version="5.8">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">User Guide</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Introduction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry Core</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basics</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="project-layout.html">Project Layout</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="runtime-exceptions.html">Runtime Exceptions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="class-reloading.html">Class Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-reference.html">Component Reference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="annotations.html">Annotations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Pages and Components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-classes.html">Component Classes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-templates.html">Component Templates</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="property-expressions.html">Property Expressions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-parameters.html">Component Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="parameter-type-coercion.html">Parameter Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="layout-component.html">Layout Component</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-mixins.html">Component Mixins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-navigation.html">Page Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="localization.html">Localization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Request/Response Rendering</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-life-cycle.html">Page Life Cycle</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="request-processing.html">Request Processing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-rendering.html">Component Rendering</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-events.html">Component Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="url-rewriting.html">URL Rewriting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dom.html">Document Object Model (DOM)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="response-compression.html">Response Compression</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="security.html">Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https.html">HTTPS / SSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="content-type-and-markup.html">Content Type and Markup</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Data Persistence</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="persistent-page-data.html">Persistent Page Data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="session-storage.html">Session Storage</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Interacting with components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="injection.html">Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="environmental-services.html">Environmental Services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript, AJAX, CSS &amp; Binary Data</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="client-side-javascript.html">Client-Side JavaScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="javascript-modules.html">Javascript Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="coffeescript.html">Coffeescript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="typescript.html">TypeScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ajax-and-zones.html">AJAX and Zones</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="css.html">Cascading Style Sheets (CSS)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="assets.html">Assets</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cors.html">CORS (Cross-Origin Resource Sharing) Support</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Working with Forms</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="forms-and-validation.html">Forms and Validation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="beaneditform-guide.html">BeanEditForm Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uploading-files.html">Uploading Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bean-validation.html">Bean Validation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Logging, Debugging &amp; Testing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="logging.html">Logging</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unit-testing.html">Unit testing pages or components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integration-testing.html">Integration Testing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="development-dashboard.html">Development Dashboard</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry IOC</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-overview.html">IoC Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="symbols.html">Symbols</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="type-coercion.html">Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="case-insensitivity.html">Case Insensitivity</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="autoloading-modules.html">Autoloading Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="chainbuilder-service.html">ChainBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pipelinebuilder-service.html">PipelineBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="shadowbuilder-service.html">ShadowBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="strategybuilder-service.html">StrategyBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="defining-tapestry-ioc-services.html">Defining Tapestry IOC Services</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-modules.html">IoC Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="object-providers.html">Object Providers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-serialization.html">Service Serialization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="starting-the-ioc-registry.html">Starting the IoC Registry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="aliases.html">Aliases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="injection-in-detail.html">Injection in Detail</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ordering-by-constraints.html">Ordering by Constraints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="registry-startup.html">Registry Startup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="parallel-execution.html">Parallel Execution</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="logging-in-tapestry.html">Logging in Tapestry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-implementation-reloading.html">Service Implementation Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-advisors.html">Service Advisors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-decorators.html">Service Decorators</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="using-jsr-330-standard-annotations.html">Using JSR 330 standard annotations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="operation-tracker.html">Operation Tracker</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Add-ons and Integrations</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Built-in</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="hibernate.html">Hibernate Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="jpa.html">JPA Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integrating-with-spring-framework.html">Spring</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="third-party-modules.html">Third Party Modules</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Release Notes</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.8.html">Tapestry 5.8</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.7.html">Tapestry 5.7</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.6.html">Tapestry 5.6</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.5.html">Tapestry 5.5</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.4.html">Tapestry 5.4</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.3.html">Tapestry 5.3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.2.html">Tapestry 5.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.1.html">Tapestry 5.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.0.html">Tapestry 5.0</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cookbook</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/default-parameter.html">Default Parameter</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/overriding-exception-reporting.html">Overriding Exception Reporting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/error-page-recipe.html">Error Page Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/supporting-informal-parameters.html">Supporting Informal Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/component-libraries.html">Component Libraries</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/switching-cases.html">Switching Cases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/enum-parameter-recipe.html">Enum Parameter Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/extending-the-if-component.html">Extending The If Component</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/meta-programming-page-content.html">Meta-Programming Page Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="cookbook/ioc-cookbook.html">IoC Cookbook</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-basic-services-and-injection.html">IoC Cookbook - Basic Services and Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-overriding-ioc-services.html">IoC Cookbook - Overriding IoC Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-patterns.html">IoC Cookbook - Patterns</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-service-configurations.html">IoC Cookbook - Service Configurations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/using-select-with-a-list.html">Using Select With a List</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/performance-and-clustering.html">Performance and Clustering</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/google-app-engine.html">Google App Engine (GAE)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frequently Asked Questions (FAQ)</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/general.html">General Questions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/templating-and-markup.html">Templating and Markup FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/ajax.html">AJAX FAQ</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">User Guide</span>
+    <span class="version">5.8</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../main/about.html">Home</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="index.html">User Guide</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">5.8</a>
+        </li>
+        <li class="version">
+          <a href="../5.7/index.html">5.7</a>
+        </li>
+        <li class="version">
+          <a href="../5.6/index.html">5.6</a>
+        </li>
+        <li class="version">
+          <a href="../5.5/index.html">5.5</a>
+        </li>
+        <li class="version">
+          <a href="../5.4/index.html">5.4</a>
+        </li>
+        <li class="version">
+          <a href="../5.3/index.html">5.3</a>
+        </li>
+        <li class="version">
+          <a href="../5.2/index.html">5.2</a>
+        </li>
+        <li class="version">
+          <a href="../5.1/index.html">5.1</a>
+        </li>
+        <li class="version">
+          <a href="../5/index.html">5.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../main/about.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">User Guide</a></li>
+    <li><a href="rest.html">REST Support</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">5.8</button>
+  <div class="version-menu">
+    <a class="version is-current" href="rest.html">5.8</a>
+    <a class="version is-missing" href="../5.7/index.html">5.7</a>
+    <a class="version is-missing" href="../5.6/index.html">5.6</a>
+    <a class="version is-missing" href="../5.5/index.html">5.5</a>
+    <a class="version is-missing" href="../5.4/index.html">5.4</a>
+    <a class="version is-missing" href="../5.3/index.html">5.3</a>
+    <a class="version is-missing" href="../5.2/index.html">5.2</a>
+    <a class="version is-missing" href="../5.1/index.html">5.1</a>
+    <a class="version is-missing" href="../5/index.html">5.0</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">REST Support</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Since version 5.8.0, Tapestry provides out-of-the-box support for writing Representational State Transfer (REST) endpoints as regular event handler methods in page classes.
+They work in the same way the activate event (i.e. <code>onActivate()</code> methods) work, including how event handler method parameters work.
+The <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/annotations/RequestBody.html">@RequestBody</a></code> annotation was created so event handler methods can access the request body.
+The <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/annotations/StaticActivationContextValue.html">@StaticActivationContextValue</a></code> annotation was created so you can write event handler methods that are only called when one or more parts of the URL path match given values.
+Both annotations are not REST-specific and can be used in any event handler method.
+A new subproject/JAR, <code>tapestry-rest-jackson</code>, automates the use of Jackson Databind to make JSON conversions. tapestry-Swagger/OpenAPI 3.0 descriptions are generated automatically and can be easily customized.
+A new subproject/JAR, <code>tapestry-openapi-viewer</code>, provides an out-of-the-box viewer for the generated OpenAPI description using Swagger UI.
+For a Tapestry REST support example project, check out <a href="https://github.com/thiagohp/tapestry-rest-example" class="bare">https://github.com/thiagohp/tapestry-rest-example</a>.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Tapestry&#8217;s REST support isn&#8217;t an implementation of JAX-RS, so they expect any of its concepts to work here. It&#8217;s REST implemented in a Tapestry way.</p>
+</li>
+<li>
+<p>REST endpoint event handler methods in components are ignored just like <code>onActivate()</code> is.</p>
+</li>
+</ol>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The following HTTP methods are supported:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">HTTP method</th>
+<th class="tableblock halign-left valign-top">Tapestry event name</th>
+<th class="tableblock halign-left valign-top"><code>EventConstants</code> constant name</th>
+<th class="tableblock halign-left valign-top">Event handler method name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GET</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">httpGet</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/EventConstants.html#HTTP_GET">EventConstants.HTTP_GET</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">onHttpGet</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">POST</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">httpPost</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/EventConstants.html#HTTP_POST">EventConstants.HTTP_POST</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">onHttpPost</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DELETE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">httpDelete</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/EventConstants.html#HTTP_DELETE">EventConstants.HTTP_DELETE</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">onHttpDelete</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PUT</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">httpPut</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/EventConstants.html#HTTP_PUT">EventConstants.HTTP_PUT</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">onHttpPut</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HEAD</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">httpHead</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/EventConstants.html#HTTP_HEAD">EventConstants.HTTP_HEAD</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">onHttpHead</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PATCH</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">httpPatch</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/EventConstants.html#HTTP_PATCH">EventConstants.HTTP_PATCH</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">onHttpPatch</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_writing_rest_endpoints"><a class="anchor" href="#_writing_rest_endpoints"></a>Writing REST endpoints</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Writing a REST endpoint in Tapestry is exactly the same as writing <code>onActivate()</code> method in a page class.
+Everything is the same: parameter handling, returned value processing, precedence rules, class inheritance, URLs, etc.
+If you know how to write <code>onActivate()</code> methods, you already know almost everything you need how to write a REST endpoint event handler.
+There are only 2 small differences between <code>onActivate()</code> and REST endpoint event handler methods:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>REST event handler methods are invoked after the <code>onActivate()</code>.</p>
+</li>
+<li>
+<p>The event name is different, according to the HTTP method to be handled.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>So, for example, if you want a REST endpoint with URL <code>/userendpoint/[id]</code>, supposing the <code>id</code> is a <code>Long</code>, handling the GET HTTP method, you can just write the following page class and event handler:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class UserEndpoint {
+
+    Object onHttpGet(Long id) {
+        // ...
+    }
+
+    // ...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The example above could also be written using the <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/annotations/OnEvent.html">@OnEvent</a></code> annotation and would work the same:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class UserEndpoint {
+
+    @OnEvent(EventConstants.HTTP_GET)
+    Object getById(Long id) { // or any other method name
+        // ...
+    }
+
+    // ...
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_reading_the_request_body_with_requestbody"><a class="anchor" href="#_reading_the_request_body_with_requestbody"></a>Reading the request body with @RequestBody</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Many times, specially with POST, PUT and PATCH requests, the data is sent through the request body.
+To get this data, the event handler method needs to add a parameter with the <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/annotations/RequestBody.html">@RequestBody</a></code> annotation.
+It has a single property, <code>allowEmpty</code>, with <code>false</code> as its default value, which defines whether an empty request body is empty. If not, an exception will be thrown.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@OnEvent(EventConstants.HTTP_PUT)
+Object save(@RequestBody User user) {
+    // ...
+}
+
+@OnEvent(EventConstants.HTTP_PUT)
+Object save(Long id, @RequestBody User user) {
+    // ...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following types are supported out-of-the-box:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>String</code></p>
+</li>
+<li>
+<p><code>Reader</code></p>
+</li>
+<li>
+<p><code>InputStream</code></p>
+</li>
+<li>
+<p><code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/json/JSONObject.html">JSONObject</a></code></p>
+</li>
+<li>
+<p><code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/json/JSONArray.html">JSONArray</a></code></p>
+</li>
+<li>
+<p>Primitive types and their wrapper types</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The actual conversion logic is implemented in the <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/http/services/HttpRequestBodyConverter.html">HttpRequestBodyConverter</a></code> service, which is defined is an ordered configuration of <code>HttpRequestBodyConverter</code> instances.
+The service calls all contributed instances until one of them returns a non-null value.
+If none of them returns a non-null value, it falls back to trying to find a coercion, direct or indirect, from <code>HttpServletRequest</code> to the desired type.</p>
+</div>
+<div class="paragraph">
+<p>Here&#8217;s one example of implementing an new <code>HttpRequestBodyConverter</code></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">/**
+ * Converts the body of HTTP requests to {@link User} instances. It delegates this task
+ * to {@link UserService#toObject(String)}.
+ */
+public class UserHttpRequestBodyConverter implements HttpRequestBodyConverter {
+
+    private final UserService userService;
+
+    public UserHttpRequestBodyConverter(UserService userService) {
+        super();
+        this.userService = userService;
+    }
+
+    @SuppressWarnings("unchecked")
+    @Override
+    public &lt;T&gt; T convert(HttpServletRequest request, Class&lt;T&gt; type) {
+        T value = null;
+        // Check whether this converter handles the given type
+        if (User.class.equals(type)) {
+            // Actual conversion logic
+            try {
+                value = (T) userService.toObject(IOUtils.toString(request.getReader()));
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        return value;
+    }
+
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then the code added to <code>AppModule</code> or any other Tapestry-IoC module class to have it used by <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/annotations/RequestBody.html">@RequestBody</a></code>:</p>
+</div>
+<div class="listingblock">
+<div class="title">AppModule.java (partial)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">    public static void contributeHttpRequestBodyConverter(
+            OrderedConfiguration&lt;HttpRequestBodyConverter&gt; configuration) {
+
+        configuration.addInstance("User", UserHttpRequestBodyConverter.class); // automatic instantiation and dependency injection
+	// or configuration.add("User", new UserHttpRequestBodyConverter(...));
+    }</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_answering_rest_requests"><a class="anchor" href="#_answering_rest_requests"></a>Answering REST requests</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Just like any other Tapestry event handler method, the returned value defines what gets to be sent to the user agent making the request.
+This logic is written in <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/services/ComponentEventResultProcessor.html">ComponentEventResultProcessor</a></code> implementations, usually but not necessarily one per return type/class, which are contributed to the <code>ComponentEventResultProcessor</code> service.
+These implementations can also set additional HTTP headers and set the HTTP status code.</p>
+</div>
+<div class="paragraph">
+<p>REST requests responses usually fall into 2 types: ones just returning HTTP status and and headers (for example, <code>HEAD</code> and <code>DELETE</code> requests) and ones returning that and also content (for example, <code>GET</code>, sometimes other methods too).</p>
+</div>
+<div class="sect2">
+<h3 id="_content_responses"><a class="anchor" href="#_content_responses"></a>Content responses</h3>
+<div class="paragraph">
+<p>For content responses, Tapestry has out-of-the-box support for <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/StreamResponse.html">StreamResponse</a></code> (mostly binary content),  <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/util/TextStreamResponse.html">TextStreamResponse</a></code> (simple text content), <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/json/JSONArray.html">JSONArray</a></code> (since Tapestry 5.8.0) and <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/json/JSONObject.html">JSONObject</a></code> (since 5.8.0).
+Here&#8217;s one example for adding support for a class, <code>User</code>, converting it to the JSON format:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">/**
+ * Handles {@link User} instances when they're returned by event handler methods.
+ * Heavily inspired by {@link JSONCollectionEventResultProcessor} from Tapestry itself.
+ */
+final public class UserComponentEventResultProcessor
+        implements ComponentEventResultProcessor&lt;User&gt; {
+
+    private final Response response;
+
+    private final ContentType contentType;
+
+    private final UserService userService;
+
+    public UserComponentEventResultProcessor(Response response,
+            @Symbol(TapestryHttpSymbolConstants.CHARSET) String outputEncoding,
+            UserService userService)    {
+        this.response = response;
+        this.userService = userService;
+        contentType = new ContentType(InternalConstants.JSON_MIME_TYPE).withCharset(outputEncoding);
+    }
+
+    public void processResultValue(User user) throws IOException
+    {
+        PrintWriter pw = response.getPrintWriter(contentType.toString());
+        pw.write(userService.toJsonString(user));
+        pw.close();
+        // You could also set extra HTTP headers or the status code here
+    }
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">AppModule.java (partial)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">    public void contributeComponentEventResultProcessor(
+            MappedConfiguration&lt;Class, ComponentEventResultProcessor&gt; configuration) {
+        configuration.addInstance(User.class, UserComponentEventResultProcessor.class);
+    }</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_non_content_responses"><a class="anchor" href="#_non_content_responses"></a>Non-content responses</h3>
+<div class="paragraph">
+<p>For responses without content, just HTTP status and headers, and also for simple String responses, Tapestry 5.8.0 introduced the <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/services/HttpStatus.html">HttpStatus</a></code> class.
+You can create instances of it by either using its utility static methods that match HTTP status names like <code>ok()</code>, <code>created()</code>, <code>accepted()</code>, <code>notFound()</code> and <code>forbidden()</code> or using one of its constructors.
+In both cases, you can customize the response further by using a fluent interface with methods for header-specific methods like <code>withLocation(url)</code> and <code>withContentLocation(url)</code> or the generic <code>withHttpHeader(String name, String value)</code>.
+Check the <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/services/HttpStatus.html">HttpStatus</a></code> JavaDoc for the full list of methods.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@OnEvent(EventConstants.HTTP_PUT)
+Object save(@RequestBody User user) {
+    userService.save(user);
+    return HttpStatus.created()
+            .withContentLocation("Some URL")
+            .withHttpHeader("X-Something", "X-Value");
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mappedentitymanager_service"><a class="anchor" href="#_mappedentitymanager_service"></a>MappedEntityManager service</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This is a service which provides a list of mapped entities.
+They&#8217;re usually classes which are mapped to other formats like JSON and XML and used to represent data received or sent to or from external processes, for example REST endpoints.
+Contributions are done by package and all classes inside the contributed ones are considered mapped entities.
+The <code>[root package].rest.entities</code> package is automatically contributed.</p>
+</div>
+<div class="paragraph">
+<p>This service is used by Tapestry code, including the OpenAPI description generator and <code>tapestry-rest-jackson</code>, to know which classes should be considered part of the webapp&#8217;s external APIs.</p>
+</div>
+<div class="paragraph">
+<p>Here&#8217;s an example contribution:</p>
+</div>
+<div class="listingblock">
+<div class="title">AppModule.java (partial)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public static void contributeMappedEntityManager(Configuration&lt;String&gt; configuration) {
+    configuration.add("com.example.rest.entities");
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_integration_with_jackson_databind_with_tapestry_rest_jackson"><a class="anchor" href="#_integration_with_jackson_databind_with_tapestry_rest_jackson"></a>Integration with Jackson Databind with tapestry-rest-jackson</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>JSON has been widely used as a data interchange format in REST endpoints, while Jackson Databind is maybe the mostly used Java library for JSON mapping.
+<code>tapestry-rest-jackson</code> automates the usage of Jackson Databind in Tapestry, defining an <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/jacksondatabind/services/ObjectMapperSource.html">ObjectMapperSource</a></code> service, contributing <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/services/ComponentEventResultProcessor.html">ComponentEventResultProcessor</a></code> and <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/services/HttpRequestBodyConverter.html">HttpRequestBodyConverter</a></code> implementations for all mapped entity classes (as defined by the <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/services/rest/MappedEntityManager.html">MappedEntityManager</a></code> service) and implementing the generation of JSON schemas for OpenAPI descriptions of mapped entity classes using <a href="https://victools.github.io/jsonschema-generator/">victools/jsonschema-generator</a>.</p>
+</div>
+<div class="paragraph">
+<p>The <code>ObjectMapperSource</code> service defines how <code>tapestry-rest-jackson</code> will get an <code>ObjectMapper</code> instance to use for a given entity class.
+It has an ordered configuration of <code>ObjectMapperSource</code>.
+It has a single method, <code>ObjectMapper get(Class&lt;?&gt; clasz)</code>.
+When it&#8217;s called, it goes through all the contributed instances calling the same method on them until one returns a non-<code>null</code> value.
+When a non-<code>null</code> value is returned, the service method returns it.
+If none is found, the fallback is always returning the same object returned by <code>new ObjectMapper()</code>.
+Any customizations to the <code>ObjectMapper</code> instance should be done as contributions to the <code>ObjectMapperSource</code> service.
+Here&#8217;s one example that defines which date format should be used for all entity classes:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">/**
+ * Example of customizing the Jackson Databinding's {@link ObjectMapper}, specifically the
+ * date format.
+ */
+public static void contributeObjectMapperSource(OrderedConfiguration&lt;ObjectMapperSource&gt; configuration) {
+    configuration.add("Custom", new CustomObjectMapperSource());
+}
+
+private static final class CustomObjectMapperSource implements ObjectMapperSource {
+
+    final private ObjectMapper mapper;
+
+    public CustomObjectMapperSource() {
+        mapper = new ObjectMapper(/* ... */);
+        mapper.setDateFormat(new SimpleDateFormat("yyyy/MM/dd hh:mm:ss"));
+        // Any other customizations go here.
+    }
+
+    @Override
+    public ObjectMapper get(Class&lt;?&gt; clasz) {
+        // You could check the class to provide class-specific ObjectMapper
+        // instances here, but this isn't the case for this example
+        return mapper;
+    }
+
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_automatic_generation_of_openapi_3_0_swagger_descriptions"><a class="anchor" href="#_automatic_generation_of_openapi_3_0_swagger_descriptions"></a>Automatic generation of OpenAPI 3.0 (Swagger) descriptions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tapestry provides an out-of-the-box OpenAPI 3.0 (Swagger) description generator driven by the REST endpoints event handlers (i.e. the ones handling the events listed in the table in the top of this page), configuration symbols and internationalization messages (i.e. app.properties).
+The description is in the JSON format.</p>
+</div>
+<div class="paragraph">
+<p>It&#8217;s disabled by default.
+It&#8217;s enabled by setting the <code>tapestry.publish-openapi-description</code> (<code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/SymbolConstants.html#PUBLISH_OPENAPI_DEFINITON">SymbolConstants.PUBLISH_OPENAPI_DEFINITON</a></code>) configuration symbol to true.
+If enabled, it will be available at the <code>/openapi.json</code> URL.
+This is configurable by using the <code>tapestry.openapi-description-path</code> (<code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/SymbolConstants.html#OPENAPI_DESCRIPTION_PATH">SymbolConstants.OPENAPI_DESCRIPTION_PATH</a></code>) configuration symbol.</p>
+</div>
+<div class="paragraph">
+<p>All the entity classes returned by <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/services/rest/MappedEntityManager.html#getEntities">MappedEntityManager.getEntities</a></code> are automatically added to the schemas section of the generated description.</p>
+</div>
+<div class="sect2">
+<h3 id="_customizing_names_summaries_and_descriptions_using_messages_and_configuration_symbols"><a class="anchor" href="#_customizing_names_summaries_and_descriptions_using_messages_and_configuration_symbols"></a>Customizing names, summaries and descriptions using messages and configuration symbols</h3>
+<div class="paragraph">
+<p>Summaries, names and descriptions and messages are taken from messages first, configuration symbol second, except for the OpenAPI version, which is only taken from the <code>tapestry.openapi-version</code> (<code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/SymbolConstants.html#OPENAPI_VERSION">SymbolConstants.OPENAPI_VERSION</a></code>) symbol and has a default value of 3.0.0. Given a message key, the corresponding configuration symbol is <code>tapestry.[message key]</code> format.</p>
+</div>
+<div class="paragraph">
+<p>HTTP method names are lowercased.</p>
+</div>
+<div class="paragraph">
+<p>When building a message key, if it&#8217;s based on a path, the starting slash is not removed. For example, the summary for the <code>/something</code> endpoint for the POST method is<br>
+<code>openapi./something.post.summary</code>.</p>
+</div>
+<div class="paragraph">
+<p>You can see which messages and symbols are being looked up by setting the debug level of the <code>org.apache.tapestry5.internal.services.rest.DefaultOpenApiDescriptionGenerator</code> class to <code>DEBUG</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_customizing_the_consumed_and_produced_mime_content_types_of_an_endpoint_with_restinfo"><a class="anchor" href="#_customizing_the_consumed_and_produced_mime_content_types_of_an_endpoint_with_restinfo"></a>Customizing the consumed and produced MIME content types of an endpoint with @RestInfo</h3>
+<div class="paragraph">
+<p>The <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/annotations/RestInfo.html">@RestInfo</a></code> annotation allows you to define, just for OpenAPI description generation purposes, what are the accepted MIME content types accepted by a REST endpoint event handler method, the produced types and what&#8217;s the actual returned value type of the method when its execution succeeds.
+Many REST event handler methods usually have a return type of <code>Object</code> so it can return an <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/services/HttpStatus.html">HttpStatus</a></code> instance of something goes wrong and a mapped entity class entity when the call is successful.</p>
+</div>
+<div class="paragraph">
+<p>Here&#8217;s one example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@RestInfo(produces = "text/plain", produces = "application/json", returnType = User.class)
+Object onHttpGet(@RequestBody Long id) {
+    User user = ...;
+	if (!notFound) {
+        return HttpStatus.notFound()
+    }
+    else {
+        return user;
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_further_customizations"><a class="anchor" href="#_further_customizations"></a>Further customizations</h3>
+<div class="paragraph">
+<p>The generated description can be further customized by implementing the <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/services/rest/OpenApiDescriptionGenerator.html">OpenApiDescriptionGenerator</a></code> interface and contributing it to the OpenApiDescriptionGenerator service.
+The <code>JSONObject generate(JSONObject documentation)</code> method will receive the generated description and it can be changed by using the <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/json/JSONObject.html">JSONObject</a></code> methods.
+The return value should be the same object received as a parameter.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tapestry_openapi_viewer"><a class="anchor" href="#_tapestry_openapi_viewer"></a>tapestry-openapi-viewer</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>tapestry-openapi-viewer</code> Tapestry subproject/JAR embeds the open source Swagger-UI OpenAPI/Swagger and makes it available at the <code>/openapiviewer</code> URL.
+No configuration is needed other than including the JAR in the classpath.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>
