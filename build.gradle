@@ -14,3 +14,13 @@ antora {
         'asciidoctor-kroki'     : '0.18.1'
     ]
 }
+
+tasks.register('copyStaticRootFiles', Copy) {
+    from('.htaccess')
+    into(layout.buildDirectory.dir('site'))
+    mustRunAfter('antora')
+}
+
+tasks.named('antora') {
+    finalizedBy('copyStaticRootFiles')
+}
