@@ -82,7 +82,6 @@ Redirect 301 /forms.html /userguide/current/forms-and-validation.html
 Redirect 301 /functional-flows.html /userguide/current/pipelinebuilder-service.html
 Redirect 301 /general-questions.html /userguide/current/faq/general.html
 Redirect 301 /getting-started.html /main/getting-started.html
-Redirect 301 /getting-started.html?enable_bottom_share_style=1&hybrid_event_param=HybridEventParams(enterMethod=message_markdown_url, localPage=chat, chatType=default_new, duration=0, isRichMediaPictureLink=false, mobMap={message_id=39408872617938434, previous_page=chat_list, is_immersive_background=0, chat_type=default_new, reply_id=39408872617936130, enter_method=, conversation_id=38415080137242626, enter_chat_method=, bot_id=7234781073513644036, current_page=chat}, extra=null)&use_xbridge3=true&loader_name=forest&need_sec_link=1&sec_link_scene=im&theme=light /main/getting-started.html
 Redirect 301 /google-app-engine.html /userguide/current/cookbook/google-app-engine.html
 Redirect 301 /hibernate-core-conf.html /userguide/current/hibernate.html
 Redirect 301 /hibernate-core.html /userguide/current/hibernate.html
