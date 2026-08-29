@@ -2,6 +2,12 @@ site:
   title: Apache Tapestry
   start_page: main::about.adoc
 
+# Antora caches the content repositories below and, by default, reuses that
+# cache on every later run. On a long-lived CI agent that means new branches
+# and new commits in tapestry-5-site are never seen. Always refetch.
+runtime:
+  fetch: true
+
 content:
   sources:
   - url: https://gitbox.apache.org/repos/asf/tapestry-5-site.git
