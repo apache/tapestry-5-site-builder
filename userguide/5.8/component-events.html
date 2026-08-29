@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Component Events :: Apache Tapestry</title>
+    <meta name="generator" content="Antora 3.1.15">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/tapestry.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../.."><img alt="Apache Tapestry Logo" src="../../_/img/apache-tapestry-icon-dark.svg" width="60" />Apache Tapestry</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Documentation</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../../main/getting-started.html">Getting Started</a>
+            <a class="navbar-item" href="../../main/tutorial/">Tutorial</a>
+            <a class="navbar-item" href="../../userguide/current/">User Guide</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="../../main/community.html">Community</a>
+        <a class="navbar-item" href="../../main/support.html">Support</a>
+        <a class="navbar-item" href="../../main/developers.html">Developers</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Apache</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+            <a class="navbar-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
+            <a class="navbar-item" href="https://www.apache.org/licenses/">License</a>
+            <a class="navbar-item" href="https://www.apache.org/security/">Security</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="../../main/download.html">Download</a>
+          </span>
+        </div>
+        <div class="navbar-brand">
+          <a href="https://www.apache.org/">
+          <img alt="The Apache Software Foundation" src="../../_/img/asf_logo.svg" width="200" height="63" style="padding-top: 5px; padding-bottom: 5px; background-color: white">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="body">
+<div class="nav-container" data-component="userguide" data-version="5.8">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">User Guide</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Introduction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry Core</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basics</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="project-layout.html">Project Layout</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="runtime-exceptions.html">Runtime Exceptions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="class-reloading.html">Class Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-reference.html">Component Reference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="annotations.html">Annotations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Pages and Components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-classes.html">Component Classes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-templates.html">Component Templates</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="property-expressions.html">Property Expressions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-parameters.html">Component Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="parameter-type-coercion.html">Parameter Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="layout-component.html">Layout Component</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-mixins.html">Component Mixins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-navigation.html">Page Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="localization.html">Localization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Request/Response Rendering</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-life-cycle.html">Page Life Cycle</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="request-processing.html">Request Processing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-rendering.html">Component Rendering</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="component-events.html">Component Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="url-rewriting.html">URL Rewriting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dom.html">Document Object Model (DOM)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="response-compression.html">Response Compression</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="security.html">Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https.html">HTTPS / SSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="content-type-and-markup.html">Content Type and Markup</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Data Persistence</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="persistent-page-data.html">Persistent Page Data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="session-storage.html">Session Storage</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Interacting with components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="injection.html">Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="environmental-services.html">Environmental Services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript, AJAX, CSS &amp; Binary Data</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="client-side-javascript.html">Client-Side JavaScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="javascript-modules.html">Javascript Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="coffeescript.html">Coffeescript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="typescript.html">TypeScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ajax-and-zones.html">AJAX and Zones</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="css.html">Cascading Style Sheets (CSS)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="assets.html">Assets</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cors.html">CORS (Cross-Origin Resource Sharing) Support</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Working with Forms</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="forms-and-validation.html">Forms and Validation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="beaneditform-guide.html">BeanEditForm Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uploading-files.html">Uploading Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bean-validation.html">Bean Validation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Logging, Debugging &amp; Testing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="logging.html">Logging</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unit-testing.html">Unit testing pages or components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integration-testing.html">Integration Testing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="development-dashboard.html">Development Dashboard</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry IOC</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-overview.html">IoC Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="symbols.html">Symbols</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="type-coercion.html">Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="case-insensitivity.html">Case Insensitivity</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="autoloading-modules.html">Autoloading Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="chainbuilder-service.html">ChainBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pipelinebuilder-service.html">PipelineBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="shadowbuilder-service.html">ShadowBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="strategybuilder-service.html">StrategyBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="defining-tapestry-ioc-services.html">Defining Tapestry IOC Services</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-modules.html">IoC Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="object-providers.html">Object Providers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-serialization.html">Service Serialization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="starting-the-ioc-registry.html">Starting the IoC Registry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="aliases.html">Aliases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="injection-in-detail.html">Injection in Detail</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ordering-by-constraints.html">Ordering by Constraints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="registry-startup.html">Registry Startup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="parallel-execution.html">Parallel Execution</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="logging-in-tapestry.html">Logging in Tapestry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-implementation-reloading.html">Service Implementation Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-advisors.html">Service Advisors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-decorators.html">Service Decorators</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="using-jsr-330-standard-annotations.html">Using JSR 330 standard annotations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="operation-tracker.html">Operation Tracker</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Add-ons and Integrations</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Built-in</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="hibernate.html">Hibernate Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="jpa.html">JPA Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integrating-with-spring-framework.html">Spring</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="third-party-modules.html">Third Party Modules</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Release Notes</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.8.html">Tapestry 5.8</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.7.html">Tapestry 5.7</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.6.html">Tapestry 5.6</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.5.html">Tapestry 5.5</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.4.html">Tapestry 5.4</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.3.html">Tapestry 5.3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.2.html">Tapestry 5.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.1.html">Tapestry 5.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.0.html">Tapestry 5.0</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cookbook</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/default-parameter.html">Default Parameter</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/overriding-exception-reporting.html">Overriding Exception Reporting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/error-page-recipe.html">Error Page Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/supporting-informal-parameters.html">Supporting Informal Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/component-libraries.html">Component Libraries</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/switching-cases.html">Switching Cases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/enum-parameter-recipe.html">Enum Parameter Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/extending-the-if-component.html">Extending The If Component</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/meta-programming-page-content.html">Meta-Programming Page Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="cookbook/ioc-cookbook.html">IoC Cookbook</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-basic-services-and-injection.html">IoC Cookbook - Basic Services and Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-overriding-ioc-services.html">IoC Cookbook - Overriding IoC Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-patterns.html">IoC Cookbook - Patterns</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-service-configurations.html">IoC Cookbook - Service Configurations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/using-select-with-a-list.html">Using Select With a List</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/performance-and-clustering.html">Performance and Clustering</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/google-app-engine.html">Google App Engine (GAE)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frequently Asked Questions (FAQ)</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/general.html">General Questions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/templating-and-markup.html">Templating and Markup FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/ajax.html">AJAX FAQ</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">User Guide</span>
+    <span class="version">5.8</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../main/about.html">Home</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../current/index.html">User Guide</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../current/index.html">5.9</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">5.8</a>
+        </li>
+        <li class="version">
+          <a href="../5.7/index.html">5.7</a>
+        </li>
+        <li class="version">
+          <a href="../5.6/index.html">5.6</a>
+        </li>
+        <li class="version">
+          <a href="../5.5/index.html">5.5</a>
+        </li>
+        <li class="version">
+          <a href="../5.4/index.html">5.4</a>
+        </li>
+        <li class="version">
+          <a href="../5.3/index.html">5.3</a>
+        </li>
+        <li class="version">
+          <a href="../5.2/index.html">5.2</a>
+        </li>
+        <li class="version">
+          <a href="../5.1/index.html">5.1</a>
+        </li>
+        <li class="version">
+          <a href="../5/index.html">5.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../main/about.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">User Guide</a></li>
+    <li>Tapestry Core</li>
+    <li>Request/Response Rendering</li>
+    <li><a href="component-events.html">Component Events</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">5.8</button>
+  <div class="version-menu">
+    <a class="version" href="../current/component-events.html">5.9</a>
+    <a class="version is-current" href="component-events.html">5.8</a>
+    <a class="version" href="../5.7/component-events.html">5.7</a>
+    <a class="version" href="../5.6/component-events.html">5.6</a>
+    <a class="version" href="../5.5/component-events.html">5.5</a>
+    <a class="version" href="../5.4/component-events.html">5.4</a>
+    <a class="version" href="../5.3/component-events.html">5.3</a>
+    <a class="version" href="../5.2/component-events.html">5.2</a>
+    <a class="version" href="../5.1/component-events.html">5.1</a>
+    <a class="version" href="../5/component-events.html">5.0</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Component Events</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Component events are Tapestry&#8217;s way of conveying a user&#8217;s interactions with the web page, such as clicking links and submitting forms, to designated methods in your page and component classes.
+When a component event is triggered, Tapestry calls the event handler method you&#8217;ve provided, if any, in the containing component&#8217;s class.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s look at a simple example.
+Here&#8217;s a portion of the template for a page (let&#8217;s call it "Review") that lists documents and lets a user click to edit any one of them.</p>
+</div>
+<div class="listingblock">
+<div class="title">Review.tml (partial)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;p&gt; Select document to edit: &lt;/p&gt;
+&lt;t:loop source="documents" value="document"&gt;
+    &lt;div&gt;
+        &lt;t:actionlink" t:id="edit" context="document.id"&gt; ${document.name} &lt;/t:actionlink&gt;
+    &lt;/div&gt;
+&lt;/t:loop&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Notice that <code>Review.tml</code> contains an <code><a href="https://tapestry.apache.org/5.8.7/apidocs/org/apache/tapestry5/corelib/components/ActionLink.html">ActionLink</a></code> component in a loop.
+For each rendering within the loop, the <code>ActionLink</code> component creates a component event request URL, with the event type set to "action".
+In this case, each URL might look like:</p>
+</div>
+<div class="paragraph">
+<p><code><a href="http://localhost:8080/review.edit/3" class="bare">http://localhost:8080/review.edit/3</a></code></p>
+</div>
+<div class="paragraph">
+<p>This URL identifies the <strong>page</strong> that contains the component (<code>review</code>), the Component id of the component within the page (<code>edit</code>), and the <strong>context</strong> value (<code>3</code>, the <code>id`</code> property of the document).
+<em>Additional context values, if any, are appended to the path.</em>
+(The URL may also contain the <strong>event name</strong>, unless, as here, it is "action".)</p>
+</div>
+<div class="paragraph">
+<p>There&#8217;s no direct mapping from URL to a piece of code.
+Instead, when the user clicks on the link, the ActionLink component triggers events.
+And then Tapestry ensures that the correct bits of code (your <a href="#_event_handler_methods">Event Handler Methods</a>, see below) get invoked for those events.</p>
+</div>
+<div class="paragraph">
+<p>This demonstrates a critical difference between Tapestry and a more traditional, action oriented framework.
+The URL doesn&#8217;t say what happens when the link is clicked, it identifies <em>which component is responsible</em> when the link is clicked.</p>
+</div>
+<div class="paragraph">
+<p>Often, a navigation request (originating with the user) will spawn a number of flow-of-control requests.
+For example, a form component may trigger an action event, which will then trigger notification events to announce when the form submission is about to be processed, and whether it was successful or not, and those event could be further handled by the page component.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_event_handler_methods"><a class="anchor" href="#_event_handler_methods"></a>Event Handler Methods</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When a component event occurs, Tapestry invokes any event handler methods that you have identified for that event.
+You can identify your event handler methods via a naming convention (see <a href="#_method_naming_convention">Method Naming Convention</a> below), or via the <code><a href="https://tapestry.apache.org/5.8.7/apidocs/org/apache/tapestry5/annotations/OnEvent.html">@OnEvent</a></code> annotation.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@OnEvent(component="edit")
+void editDocument(int docId)
+{
+    this.selectedId = docId;
+    // do something with the document here
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Tapestry does two things here:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Because of the annotation, it identifies method <code>editDocument()</code> as the method to invoke whenever the component whose ID is <code>edit</code> triggers an event.</p>
+</li>
+<li>
+<p>Because there is a method parameter, when the link is clicked the context value of the request is converted from a string to an integer and passed in as the method&#8217;s value parameter.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Tapestry will throw an exception if the component identified for the event handler method doesn&#8217;t exist in the containing component&#8217;s template.
+This helps prevent typos.
+However, this behavior can be overridden using the <code><a href="https://tapestry.apache.org/5.8.7/apidocs/org/apache/tapestry5/annotations/DisableStrictChecks.html">@DisableStrictChecks</a></code> annotation.
+In the above example, the <code>editDocument()</code> method will be invoked when any event occurs in in the <code>edit</code> component (and has at least one context value).</p>
+</div>
+<div class="paragraph">
+<p>For some components, more than one type of event can occur, in which case you will want to be more specific:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@OnEvent(value="action", component="edit")
+void editDocument(int docId)
+{
+    this.selectedId = docId;
+    // do something with the document here
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For the OnEvent annotation, the <code>value</code> attribute identifies the name of the event to match.
+We specified <code>action</code> because the <code><a href="https://tapestry.apache.org/5.8.7/apidocs/org/apache/tapestry5/corelib/components/ActionLink.html">ActionLink</a></code> component triggers the <code>action</code> event, as noted in the Component Events section of its javadocs.</p>
+</div>
+<div class="paragraph">
+<p>Alternatively, we can use the <code><a href="https://tapestry.apache.org/5.8.7/apidocs/org/apache/tapestry5/corelib/components/EventLink.html">EventLink</a></code> component, in which case the name of the event is determined by us – either through the <code>event</code> parameter or the element&#8217;s ID:</p>
+</div>
+<div class="listingblock">
+<div class="title">An EventLink that emits the "delete" event</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;t:eventlink event="delete" context="document.id"&gt;${document.name}&lt;/t:eventlink&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>which is equivalent to:</p>
+</div>
+<div class="listingblock">
+<div class="title">An EventLink that emits the "delete" event</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;a t:type="eventlink" t:id="delete" context="document.id"&gt;${document.name}&lt;/a&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that if you omit the component part of the <code>@OnEvent</code> annotation, then you&#8217;ll receive notifications from all contained components, possibly including nested components (due to event bubbling).</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You should usually specify exactly which component(s) you wish to receive events from.
+Using <code>@OnEvent</code> on a method and not specifying a specific component ID means that the method will be invoked for events from any component.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>To support testing, it&#8217;s a common practice to give event handler methods <code>package-private</code> visibility, as in the examples on this page, although technically they may have any visibility (even private).</p>
+</div>
+<div class="paragraph">
+<p>A single event handler method may receive notifications from many different components.</p>
+</div>
+<div class="paragraph">
+<p>As elsewhere, the comparison of event type and component ID is case-insensitive.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_method_naming_convention"><a class="anchor" href="#_method_naming_convention"></a>Method Naming Convention</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>As an alternative to the use of annotations, you may name your event handling methods following a certain convention, and Tapestry will find and invoke your methods just as if they were annotated.</p>
+</div>
+<div class="paragraph">
+<p>This style of event handler methods start with the prefix "on", followed by the name of the event.
+You may then continue by adding <code>From</code> and a capitalized component id (remember that Tapestry is case insensitive about event names and component IDs).
+So, for example, a method named <code>onValidateFromSave()</code> will be invoked whenever a <code>Validate</code> event is triggered by a component whose component ID is "save".</p>
+</div>
+<div class="paragraph">
+<p>The previous example may be rewritten as:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">void onActionFromEdit(int docId)
+{
+    this.selectedId = docId;
+    // do something with the document here
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Many people prefer the naming convention approach, reserving the annotation just for situations that don&#8217;t otherwise fit.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_method_return_values"><a class="anchor" href="#_method_return_values"></a>Method Return Values</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Main Article: <a href="page-navigation.html" class="xref page">Page Navigation</a></p>
+</div>
+<div class="paragraph">
+<p>For page navigation events (originating in components such as <code><a href="https://tapestry.apache.org/5.8.7/apidocs/org/apache/tapestry5/corelib/components/EventLink.html">EventLink</a></code>, <code><a href="https://tapestry.apache.org/5.8.7/apidocs/org/apache/tapestry5/corelib/components/ActionLink.html">ActionLink</a></code> and <code><a href="https://tapestry.apache.org/5.8.7/apidocs/org/apache/tapestry5/corelib/components/Form.html">Form</a></code>), the value returned from an event handler method determines how Tapestry will render a response.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Null: For no value, or null, the current page (the page containing the component) will render the response.</p>
+</li>
+<li>
+<p>Page: For the name of a page, or a page class or page instance, a render request URL will be constructed and sent to the client as a redirect to that page.</p>
+</li>
+<li>
+<p>URL: For a <code>java.net.URL</code>, a redirect will be sent to the client.</p>
+</li>
+<li>
+<p>Zone body: In the case of an Ajax request to update a zone, the component event handler will return the new zone body, typically via an injected component or block.</p>
+</li>
+<li>
+<p>HttpError: For an <code>HttpError</code>, an error response is sent to the client.</p>
+</li>
+<li>
+<p>Link: For a <code>Link</code>, a redirect is sent to the client.</p>
+</li>
+<li>
+<p>Stream: For a <code>StreamResponse</code>, a stream of data is sent to the client</p>
+</li>
+<li>
+<p>boolean: <code>true</code> prevents the event from bubbling up further; <code>false</code> lets it bubble up. See <a href="#event-bubbling">[event-bubbling]</a>, below.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>See <a href="page-navigation.html" class="xref page">Page Navigation</a> for more details.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_multiple_method_matches"><a class="anchor" href="#_multiple_method_matches"></a>Multiple Method Matches</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In some cases, there may be multiple event handler methods matching a single event.
+In that case, Tapestry invokes them in the following order:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Base class methods before sub-class methods.</p>
+</li>
+<li>
+<p>Matching methods within a class in alphabetical order.</p>
+</li>
+<li>
+<p>For a single method name with multiple overrides, by number of parameters, descending.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Of course, ordinarily would you <em>not</em> want to create more than one method to handle an event.</p>
+</div>
+<div class="paragraph">
+<p>When a sub-class overrides an event handler method of a base class, the event handler method is only invoked once, along with any other base class methods.
+The subclass can change the <em>implementation</em> of the base class method via an override, but can&#8217;t change the <em>timing</em> of when that method is invoked. See issue <a href="https://issues.apache.org/jira/browse/TAP5-51">TAP5-51</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_event_context"><a class="anchor" href="#_event_context"></a>Event Context</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The context values (the context parameter to the <code><a href="https://tapestry.apache.org/5.8.7/apidocs/org/apache/tapestry5/corelib/components/EventLink.html">EventLink</a></code> or <code><a href="https://tapestry.apache.org/5.8.7/apidocs/org/apache/tapestry5/corelib/components/ActionLink.html">ActionLink</a></code> component) can be any object.
+However, only a simple conversion to string occurs.
+(This is in contrast to Tapestry 4, which had an elaborate type mechanism with the odd name "DataSqueezer".)</p>
+</div>
+<div class="paragraph">
+<p>Again, whatever your value is (string, number, date), it is converted into a plain string.
+This results in a more readable URL.</p>
+</div>
+<div class="paragraph">
+<p>If you have multiple context values (by binding a list or array of objects to the context parameter of the <code>EventLink</code> or <code>ActionLink</code>),
+then each one, in order, will be added to the URL.</p>
+</div>
+<div class="paragraph">
+<p>When an event handler method is invoked, the strings are converted back into values, or even objects.
+A <code><a href="https://tapestry.apache.org/5.8.7/apidocs/org/apache/tapestry5/ValueEncoder.html">ValueEncoder</a></code> is used to convert between client-side strings and server-side objects.
+The <code><a href="https://tapestry.apache.org/5.8.7/apidocs/org/apache/tapestry5/services/ValueEncoderSource.html">ValueEncoderSource</a></code> service provides the necessary value encoders.</p>
+</div>
+<div class="paragraph">
+<p>As shown in the example above, most of the parameters passed to the event handler method are derived from the values provided in the event context.
+Each successive method parameter matches against a value provided in the event context (the context parameter of the <code>ActionLink</code> component; though many components have a similar context parameter).</p>
+</div>
+<div class="paragraph">
+<p>In many cases it is helpful to have direct access to the context (for example, to adapt to cases where there are a variable number of context values).
+The context values may be passed to an event handler method as parameter of the following types:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code><a href="https://tapestry.apache.org/5.8.7/apidocs/org/apache/tapestry5/EventContext.html">EventContext</a></code></p>
+</li>
+<li>
+<p><code>Object[]</code></p>
+</li>
+<li>
+<p><code>List&lt;Object&gt;</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The latter two should be avoided, they may be removed in a future release.
+In all of these cases, the <code>EventContext</code> parameter acts as a freebie; it doesn&#8217;t match against a context value as it represents <em>all</em> context values.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Object onActionFromEdit(EventContext context)
+{
+    if (context.getCount() &gt; 0) {
+        this.selectedId = context.get(0);
+        // do something with the document here
+    } else {
+        alertManager.warn("Please select a document.");
+        return null;
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_accessing_request_query_parameters"><a class="anchor" href="#_accessing_request_query_parameters"></a>Accessing Request Query Parameters</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A parameter may be annotated with the <code><a href="https://tapestry.apache.org/5.8.7/apidocs/org/apache/tapestry5/annotations/RequestParameter.html">@RequestParameter</a></code> annotation.
+This allows query parameters (<code>?name1=value1&amp;name2=value2</code>, etc) to be extracted from the request, converted to the correct type, and passed to the method.
+Again, this doesn&#8217;t count against the event context values.</p>
+</div>
+<div class="paragraph">
+<p>See the example in the Link Components FAQ.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_method_matching"><a class="anchor" href="#_method_matching"></a>Method Matching</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>An event handler method will only be invoked <em>if the context contains at least as many values as the method has parameters</em>.
+Methods with too many parameters will be silently skipped.</p>
+</div>
+<div class="paragraph">
+<p>Tapestry will silently skip over a method if there are insufficient values in the context to satisfy the number of parameters requested.</p>
+</div>
+<div class="paragraph">
+<p>EventContext parameters, and parameters annotated with <code><a href="https://tapestry.apache.org/5.8.7/apidocs/org/apache/tapestry5/annotations/RequestParameter.html">@RequestParameter</a></code>, do not count against this limit.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_method_ordering"><a class="anchor" href="#_method_ordering"></a>Method Ordering</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When multiple methods match within the same class, Tapestry will invoke them in ascending alphabetical order.
+When there are multiple overrides of the same method name, Tapestry invokes them in descending order by number of parameters.
+In general, these situations don&#8217;t happen &#8230;&#8203; in most cases, only a single method is required to handle a specific event form a specific component.</p>
+</div>
+<div class="paragraph">
+<p>An event handler method may return the value <code>true</code> to indicate that the event has been handled.
+This immediately stops the search for additional methods in the same class (or in base classes) or in containing components.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_event_bubbling"><a class="anchor" href="#_event_bubbling"></a>Event Bubbling</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The event will bubble up the component hierarchy, first to the containing component, then that component&#8217;s containing component or page, and so on, until it is aborted by an event handler method returning <code>true</code> or a non-<code>null</code> value.</p>
+</div>
+<div class="paragraph">
+<p>Returning a boolean value from an event handler method is special.
+Returning <code>true</code> will abort the event with no result; use this when the event is fully handled without a return value and no further event handlers (in the same component, or in containing components) should be invoked.</p>
+</div>
+<div class="paragraph">
+<p>Returning <code>false</code> is the same as returning null; event processing will continue to look for more event handlers, in the same component or its parent.</p>
+</div>
+<div class="paragraph">
+<p>When an event bubbles up from a component to its container, the origin of the event is changed to be the component.
+For example, a <code><a href="https://tapestry.apache.org/5.8.7/apidocs/org/apache/tapestry5/corelib/components/Form.html">Form</a></code> component inside a <code><a href="https://tapestry.apache.org/5.8.7/apidocs/org/apache/tapestry5/corelib/components/BeanEditForm.html">BeanEditForm</a></code> component may trigger a success event.
+The page containing the <code>BeanEditForm</code> may listen for that event, but it will be from the <code>BeanEditForm</code> component (which makes sense, because the id of the <code>Form</code> inside the <code>BeanEditForm</code> is part of the <code>BeanEditForm</code> 's implementation, not its public interface).</p>
+</div>
+<div class="paragraph">
+<p>If you want to handle events that have bubbled up from nested component, you&#8217;ll soon find that you don&#8217;t have easy access to the component ID of the firing component.
+In practical terms this means that you&#8217;ll want to trigger custom events for the events triggered by those nested components (see <a href="#_triggering_events">Triggering Events</a>, below), and use that custom event name in your event handler method.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_event_method_exceptions"><a class="anchor" href="#_event_method_exceptions"></a>Event Method Exceptions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Event methods are allowed to throw any exception (not just runtime exceptions).
+If an event method does throw an exception, Tapestry will catch the thrown exception and ultimately display the exception report page.</p>
+</div>
+<div class="paragraph">
+<p>In other words, there&#8217;s no need to do this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">void onActionFromRunQuery()
+{
+  try
+  {
+    dao.executeQuery();
+  }
+  catch (JDBCException ex)
+  {
+    throw new RuntimeException(ex);
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Instead, you may simply say:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">void onActionFromRunQuery() throws JDBCException
+{
+  dao.executeQuery();
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Your event handler method may even declare that it <code>throws Exception</code> if that is more convenient.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_intercepting_event_exceptions"><a class="anchor" href="#_intercepting_event_exceptions"></a>Intercepting Event Exceptions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When an event handler method throws an exception (checked or runtime), Tapestry gives the component and its containing page a chance to handle the exception, before continuing on to report the exception.</p>
+</div>
+<div class="paragraph">
+<p>Tapestry triggers a new event, of type <code>exception</code>, passing the thrown exception as the context.
+In fact, the exception is wrapped inside a <code><a href="https://tapestry.apache.org/5.8.7/apidocs/org/apache/tapestry5/runtime/ComponentEventException.html">ComponentEventException</a></code>, from which you may extract the event type and context.</p>
+</div>
+<div class="paragraph">
+<p>Thus:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Object onException(Throwable cause)
+{
+  message = cause.getMessage();
+
+  return this;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The return value of the exception event handler <em>replaces</em> the return value of original event handler method.
+For the typical case (an exception thrown by an <code>activate or `action</code> event), this will be a <a href="page-navigation.html" class="xref page">navigational response</a> such as a page instance or page name.</p>
+</div>
+<div class="paragraph">
+<p>This can be handy for handling cases where the data in the URL is incorrectly formatted.</p>
+</div>
+<div class="paragraph">
+<p>In the above example, the navigational response is the page itself.</p>
+</div>
+<div class="paragraph">
+<p>If there is no exception event handler, or the exception event handler returns null (or is <code>void</code>), then the exception will be passed to the <code><a href="https://tapestry.apache.org/5.8.7/apidocs/org/apache/tapestry5/services/RequestExceptionHandler.html">RequestExceptionHandler</a></code> service, which (in the default configuration) will render the exception page.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_triggering_events"><a class="anchor" href="#_triggering_events"></a>Triggering Events</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you want your own component to trigger events, just call the <code>triggerEvent</code> method of <code><a href="https://tapestry.apache.org/5.8.7/apidocs/org/apache/tapestry5/ComponentResources.html">ComponentResources</a></code> from within your component class.</p>
+</div>
+<div class="paragraph">
+<p>For example, the following triggers an <code>updateAll</code> event.
+A containing component can then respond to it, if desired, with an <code>onUpdateAll()</code> method in its own component class.</p>
+</div>
+<div class="listingblock">
+<div class="title">Your component class (partial)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Inject
+ComponentResources componentResources;
+ ...
+private void timeToUpdate() {
+    boolean wasHandled = componentResources.triggerEvent("updateAll", null, null);
+    if (wasHandled) {
+        ...
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The third parameter to <code>triggerEvent</code> is a <code><a href="https://tapestry.apache.org/5.8.7/apidocs/org/apache/tapestry5/ComponentEventCallback.html">ComponentEventCallback</a></code>, which you&#8217;ll only need to implement if you want to get the return value of the handler method.
+The return value of <code>triggerEvent</code> says if the event was handled or not.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

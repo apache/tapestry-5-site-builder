@@ -62,7 +62,7 @@
 </header>
 
 <div class="body">
-<div class="nav-container" data-component="userguide" data-version="5.8">
+<div class="nav-container" data-component="userguide" data-version="5.9">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -85,6 +85,9 @@
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Basics</span>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="jakarta-ee-migration.html">Jakarta EE Migration</a>
+  </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="project-layout.html">Project Layout</a>
   </li>
@@ -379,6 +382,9 @@
     <span class="nav-text">Release Notes</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.9.html">Tapestry 5.9</a>
+  </li>
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="release-notes-5.8.html">Tapestry 5.8</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -488,7 +494,7 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">User Guide</span>
-    <span class="version">5.8</span>
+    <span class="version">5.9</span>
   </div>
   <ul class="components">
     <li class="component">
@@ -498,7 +504,10 @@
       <div class="title"><a href="index.html">User Guide</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="index.html">5.8</a>
+          <a href="index.html">5.9</a>
+        </li>
+        <li class="version">
+          <a href="../5.8/index.html">5.8</a>
         </li>
         <li class="version">
           <a href="../5.7/index.html">5.7</a>
@@ -544,9 +553,10 @@
   </ul>
 </nav>
 <div class="page-versions">
-  <button class="version-menu-toggle" title="Show other versions of page">5.8</button>
+  <button class="version-menu-toggle" title="Show other versions of page">5.9</button>
   <div class="version-menu">
-    <a class="version is-current" href="configuration.html">5.8</a>
+    <a class="version is-current" href="configuration.html">5.9</a>
+    <a class="version" href="../5.8/configuration.html">5.8</a>
     <a class="version" href="../5.7/configuration.html">5.7</a>
     <a class="version" href="../5.6/configuration.html">5.6</a>
     <a class="version" href="../5.5/configuration.html">5.5</a>
@@ -585,10 +595,11 @@ Most of the configuration is boilerplate, nearly the same for all applications.<
 <div class="listingblock">
 <div class="title">web.xml (partial)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!DOCTYPE web-app
-      PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
-      "http://java.sun.com/dtd/web-app_2_3.dtd"&gt;
-&lt;web-app&gt;
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+         https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0"&gt;
     &lt;display-name&gt;My Tapestry Application&lt;/display-name&gt;
     &lt;context-param&gt;
         &lt;param-name&gt;tapestry.app-package&lt;/param-name&gt;
@@ -610,6 +621,20 @@ Most of the configuration is boilerplate, nearly the same for all applications.<
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
 <td>Or org.apache.tapestry5.<strong>http</strong>.TapestryFilter if you&#8217;re using tapestry-http without tapestry-core</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The descriptor above targets Jakarta EE 9, which is what Tapestry 5.9 is built on.
+If you are using the javax build, keep the <code>javaee</code> namespace (or the older DTD) and a <code>version</code> of 3.1 or below.
+See <a href="jakarta-ee-migration.html" class="xref page">Migrating to Jakarta EE</a> for the difference between the two builds.
+</td>
 </tr>
 </table>
 </div>

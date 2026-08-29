@@ -62,7 +62,7 @@
 </header>
 
 <div class="body">
-<div class="nav-container" data-component="userguide" data-version="5.8">
+<div class="nav-container" data-component="userguide" data-version="5.9">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -85,6 +85,9 @@
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Basics</span>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="jakarta-ee-migration.html">Jakarta EE Migration</a>
+  </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="project-layout.html">Project Layout</a>
   </li>
@@ -379,6 +382,9 @@
     <span class="nav-text">Release Notes</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.9.html">Tapestry 5.9</a>
+  </li>
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="release-notes-5.8.html">Tapestry 5.8</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -488,7 +494,7 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">User Guide</span>
-    <span class="version">5.8</span>
+    <span class="version">5.9</span>
   </div>
   <ul class="components">
     <li class="component">
@@ -498,7 +504,10 @@
       <div class="title"><a href="index.html">User Guide</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="index.html">5.8</a>
+          <a href="index.html">5.9</a>
+        </li>
+        <li class="version">
+          <a href="../5.8/index.html">5.8</a>
         </li>
         <li class="version">
           <a href="../5.7/index.html">5.7</a>
@@ -544,9 +553,10 @@
   </ul>
 </nav>
 <div class="page-versions">
-  <button class="version-menu-toggle" title="Show other versions of page">5.8</button>
+  <button class="version-menu-toggle" title="Show other versions of page">5.9</button>
   <div class="version-menu">
-    <a class="version is-current" href="jpa.html">5.8</a>
+    <a class="version is-current" href="jpa.html">5.9</a>
+    <a class="version" href="../5.8/jpa.html">5.8</a>
     <a class="version" href="../5.7/jpa.html">5.7</a>
     <a class="version" href="../5.6/jpa.html">5.6</a>
     <a class="version" href="../5.5/jpa.html">5.5</a>
@@ -598,9 +608,9 @@ If you&#8217;re using Maven, just add the <code>tapestry-jpa</code> dependency t
 <h2 id="_selecting_a_jpa_implementation"><a class="anchor" href="#_selecting_a_jpa_implementation"></a>Selecting a JPA Implementation</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The <code>tapestry-jpa</code> module includes a dependency on a JPA specification (API) from Geronimo but not an implementation.
-You&#8217;ll have to chose a JPA implementation, such as EclipseLink or Hibernate.
-The`tapestry-jpa` module assumes you&#8217;ll use EclipseLink.
+<p>The <code>tapestry-jpa</code> module depends on the Jakarta Persistence API (<code>jakarta.persistence:jakarta.persistence-api:3.0.0</code>) but not on an implementation.
+You&#8217;ll have to choose a JPA implementation, such as EclipseLink or Hibernate.
+The <code>tapestry-jpa</code> module assumes you&#8217;ll use EclipseLink.
 You just have to add the EclipseLink dependency:</p>
 </div>
 <div class="listingblock">
@@ -614,24 +624,22 @@ You just have to add the EclipseLink dependency:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Or, if you&#8217;d rather use Hibernate as your JPA implementation, you&#8217;ll want to exclude either the Gernonimo or Hibernate JPA specification JAR:</p>
+<p>Whichever implementation you pick, it has to be a Jakarta Persistence 3.0 build – EclipseLink 3.x or Hibernate 6.x – because a JPA 2.x implementation still expects <code>javax.persistence</code>.
+Tapestry&#8217;s own integration tests run against EclipseLink 3.0.4.</p>
 </div>
-<div class="listingblock">
-<div class="title">pom.xml (partial) for Hibernate</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependency&gt;
-    &lt;groupId&gt;org.hibernate&lt;/groupId&gt;
-    &lt;artifactId&gt;hibernate-entitymanager&lt;/artifactId&gt;
-    &lt;version&gt;${hibernate-version}&lt;/version&gt;
-    &lt;exclusions&gt;
-        &lt;exclusion&gt;
-            &lt;!-- omit Geronimo JPA spec to avoid conflict with Hibernate JPA spec --&gt;
-            &lt;groupId&gt;org.apache.geronimo.specs&lt;/groupId&gt;
-            &lt;artifactId&gt;geronimo-jpa_2.0_spec&lt;/artifactId&gt;
-        &lt;/exclusion&gt;
-    &lt;/exclusions&gt;
-&lt;/dependency&gt;</code></pre>
-</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+This applies to the Jakarta build of Tapestry 5.9.
+If you are using the javax build, stay on a JPA 2.x implementation.
+See <a href="jakarta-ee-migration.html" class="xref page">Migrating to Jakarta EE</a>.
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -640,19 +648,19 @@ You just have to add the EclipseLink dependency:</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The <code>persistence.xml</code> file is the standard configuration file in JPA used to define the persistence units.
-Tapestry reads this file to create the <code>javax.persistence.EntityManagerFactory</code>.
+Tapestry reads this file to create the <code>jakarta.persistence.EntityManagerFactory</code>.
 The following example demonstrates a <code>persistence.xml</code> file.</p>
 </div>
 <div class="listingblock">
 <div class="title">persistence.xml</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0"&gt;
+&lt;persistence xmlns="https://jakarta.ee/xml/ns/persistence" version="3.0"&gt;
    &lt;persistence-unit name="DemoUnit" transaction-type="RESOURCE_LOCAL"&gt;
        &lt;properties&gt;
-          &lt;property name="javax.persistence.jdbc.driver" value="org.h2.Driver" /&gt;
-          &lt;property name="javax.persistence.jdbc.url"    value="jdbc:h2:mem:test" /&gt;
-          &lt;property name="javax.persistence.jdbc.user"   value="sa" /&gt;
+          &lt;property name="jakarta.persistence.jdbc.driver" value="org.h2.Driver" /&gt;
+          &lt;property name="jakarta.persistence.jdbc.url"    value="jdbc:h2:mem:test" /&gt;
+          &lt;property name="jakarta.persistence.jdbc.user"   value="sa" /&gt;
           &lt;property name="eclipselink.ddl-generation"    value="create-tables"/&gt;
           &lt;property name="eclipselink.logging.level"     value="fine"/&gt;
       &lt;/properties&gt;
@@ -683,7 +691,7 @@ public static void provideFactoryDefaults(final MappedConfiguration&lt;String, S
 <div class="sectionbody">
 <div class="paragraph">
 <p>With Tapestry, configuring JPA can be much simpler than described by the JPA specification.
-Tapestry allows you to configure the <code>javax.persistence.EntityManagerFactory</code> programmatically, without writing any XML.
+Tapestry allows you to configure the <code>jakarta.persistence.EntityManagerFactory</code> programmatically, without writing any XML.
 For example, imagine that you want to use JDBC connections managed by the container and provided through JNDI.
 The resulting persistence descriptor might look like this:</p>
 </div>
@@ -691,8 +699,8 @@ The resulting persistence descriptor might look like this:</p>
 <div class="title">persistence.xml</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;persistence xmlns="http://java.sun.com/xml/ns/persistence"
-             version="2.0"&gt;
+&lt;persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             version="3.0"&gt;
    &lt;persistence-unit name="JTAUnit" transaction-type="RESOURCE_LOCAL"&gt;
       &lt;non-jta-data-source&gt;jdbc/JPATest&lt;/non-jta-data-source&gt;
       &lt;properties&gt;
@@ -729,7 +737,7 @@ public static void configurePersistenceUnitInfos(MappedConfiguration&lt;String,P
 This service is responsible for creating the <code>EntityManagerFactory</code> to be used to create <code>EntityManager</code>.
 When the service is initialized, it parses the <code>persistence.xml</code> file, if available.
 For any persistence unit defined in the XML descriptor a <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/jpa/TapestryPersistenceUnitInfo.html">TapestryPersistenceUnitInfo</a></code> object is created.
-The <code>TapestryPersistenceUnitInfo</code> interface is a mutable extension of the <code>javax.persistence.spi.PersistenceUnitInfo</code> interface (defined in the JPA specification) that allows you to configure a persistence unit programmatically.</p>
+The <code>TapestryPersistenceUnitInfo</code> interface is a mutable extension of the <code>jakarta.persistence.spi.PersistenceUnitInfo</code> interface (defined in the JPA specification) that allows you to configure a persistence unit programmatically.</p>
 </div>
 <div class="paragraph">
 <p>After parsing the persistence descriptor, the <code>EntityManagerSource</code> service applies its configuration to create further persistence units and/or update the existing ones.

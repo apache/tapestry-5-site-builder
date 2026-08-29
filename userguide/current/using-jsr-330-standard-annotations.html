@@ -62,7 +62,7 @@
 </header>
 
 <div class="body">
-<div class="nav-container" data-component="userguide" data-version="5.8">
+<div class="nav-container" data-component="userguide" data-version="5.9">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -85,6 +85,9 @@
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Basics</span>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="jakarta-ee-migration.html">Jakarta EE Migration</a>
+  </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="project-layout.html">Project Layout</a>
   </li>
@@ -379,6 +382,9 @@
     <span class="nav-text">Release Notes</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.9.html">Tapestry 5.9</a>
+  </li>
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="release-notes-5.8.html">Tapestry 5.8</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -488,7 +494,7 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">User Guide</span>
-    <span class="version">5.8</span>
+    <span class="version">5.9</span>
   </div>
   <ul class="components">
     <li class="component">
@@ -498,7 +504,10 @@
       <div class="title"><a href="index.html">User Guide</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="index.html">5.8</a>
+          <a href="index.html">5.9</a>
+        </li>
+        <li class="version">
+          <a href="../5.8/index.html">5.8</a>
         </li>
         <li class="version">
           <a href="../5.7/index.html">5.7</a>
@@ -543,9 +552,10 @@
   </ul>
 </nav>
 <div class="page-versions">
-  <button class="version-menu-toggle" title="Show other versions of page">5.8</button>
+  <button class="version-menu-toggle" title="Show other versions of page">5.9</button>
   <div class="version-menu">
-    <a class="version is-current" href="using-jsr-330-standard-annotations.html">5.8</a>
+    <a class="version is-current" href="using-jsr-330-standard-annotations.html">5.9</a>
+    <a class="version" href="../5.8/using-jsr-330-standard-annotations.html">5.8</a>
     <a class="version" href="../5.7/using-jsr-330-standard-annotations.html">5.7</a>
     <a class="version" href="../5.6/using-jsr-330-standard-annotations.html">5.6</a>
     <a class="version" href="../5.5/using-jsr-330-standard-annotations.html">5.5</a>
@@ -569,6 +579,21 @@
 <p>JSR-330 annotations can be used for injection in Tapestry 5.3 and later.
 The following table demonstrates that most of annotations in Tapestry IoC and JSR-330 are interchangeable. However, there are few differences in semantics.</p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Since 5.9 the annotations come from <code>jakarta.inject:jakarta.inject-api:2.0.1</code> rather than <code>javax.inject:javax.inject:1</code>.
+The annotation names are unchanged; only the package differs.
+If you are using the javax build of 5.9, read <code>javax.inject</code> wherever this page says <code>jakarta.inject</code>.
+See <a href="jakarta-ee-migration.html" class="xref page">Migrating to Jakarta EE</a>.
+</td>
+</tr>
+</table>
+</div>
 <table class="tableblock frame-all grid-all fit-content">
 <colgroup>
 <col>
@@ -577,7 +602,7 @@ The following table demonstrates that most of annotations in Tapestry IoC and JS
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">JSR-330 <code>javax.inject</code></th>
+<th class="tableblock halign-left valign-top">JSR-330 <code>jakarta.inject</code></th>
 <th class="tableblock halign-left valign-top">Tapestry <code>org.apache.tapestry5.ioc.annotations</code></th>
 <th class="tableblock halign-left valign-top">Comment</th>
 </tr>
@@ -654,8 +679,8 @@ For this purpose JSR-330 provides the <code>@Named</code> annotation which accom
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import javax.inject.Inject;
-import javax.inject.Named;
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import jakarta.inject.Inject;
+import jakarta.inject.Named;
 
 ...
 
@@ -749,14 +774,14 @@ The following example demonstrates that.</p>
    @Inject
    private Request request;
 
-   @javax.inject.Inject
+   @jakarta.inject.Inject
    private ComponentResources resources;
 
-   @javax.inject.Inject
+   @jakarta.inject.Inject
    @Named("FrenchGreeter")
    private Greeter greeter;
 
-   @javax.inject.Inject
+   @jakarta.inject.Inject
    @Symbol(SymbolConstants.PRODUCTION_MODE)
    private boolean productionMode;
 
@@ -793,7 +818,7 @@ In JSR-330 a qualifier annotation like <code>@French</code> in the example above
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
-@javax.inject.Qualifier
+@jakarta.inject.Qualifier
 public @interface French {
 }</code></pre>
 </div>

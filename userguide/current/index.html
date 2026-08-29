@@ -62,7 +62,7 @@
 </header>
 
 <div class="body">
-<div class="nav-container" data-component="userguide" data-version="5.8">
+<div class="nav-container" data-component="userguide" data-version="5.9">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -85,6 +85,9 @@
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Basics</span>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="jakarta-ee-migration.html">Jakarta EE Migration</a>
+  </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="project-layout.html">Project Layout</a>
   </li>
@@ -379,6 +382,9 @@
     <span class="nav-text">Release Notes</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.9.html">Tapestry 5.9</a>
+  </li>
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="release-notes-5.8.html">Tapestry 5.8</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -488,7 +494,7 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">User Guide</span>
-    <span class="version">5.8</span>
+    <span class="version">5.9</span>
   </div>
   <ul class="components">
     <li class="component">
@@ -498,7 +504,10 @@
       <div class="title"><a href="index.html">User Guide</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="index.html">5.8</a>
+          <a href="index.html">5.9</a>
+        </li>
+        <li class="version">
+          <a href="../5.8/index.html">5.8</a>
         </li>
         <li class="version">
           <a href="../5.7/index.html">5.7</a>
@@ -542,9 +551,10 @@
   </ul>
 </nav>
 <div class="page-versions">
-  <button class="version-menu-toggle" title="Show other versions of page">5.8</button>
+  <button class="version-menu-toggle" title="Show other versions of page">5.9</button>
   <div class="version-menu">
-    <a class="version is-current" href="index.html">5.8</a>
+    <a class="version is-current" href="index.html">5.9</a>
+    <a class="version" href="../5.8/index.html">5.8</a>
     <a class="version" href="../5.7/index.html">5.7</a>
     <a class="version" href="../5.6/index.html">5.6</a>
     <a class="version" href="../5.5/index.html">5.5</a>
@@ -565,7 +575,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Welcome to the User Guide for Tapestry 5.8. Hopefully it provides the information you are looking for. For additional sources of information, see the <a href="../../main/documentation.html" class="xref page">Documentation</a> overview.</p>
+<p>Welcome to the User Guide for Tapestry 5.9. Hopefully it provides the information you are looking for. For additional sources of information, see the <a href="../../main/documentation.html" class="xref page">Documentation</a> overview.</p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -635,7 +645,8 @@ Once you work in Tapestry there&#8217;s no going back!</p>
 <h2 id="_tapestry_as_a_java_servlet_filter"><a class="anchor" href="#_tapestry_as_a_java_servlet_filter"></a>Tapestry as a Java Servlet Filter</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Tapestry integrates with the Java Servlet API by implementing <a href="https://docs.oracle.com/javaee/7/api/javax/servlet/Filter.html">javax.servlet.Filter</a>.
+<p>Tapestry integrates with the Jakarta Servlet API by implementing <a href="https://jakarta.ee/specifications/servlet/5.0/apidocs/jakarta/servlet/filter">jakarta.servlet.Filter</a>.
+If you are using the javax build of Tapestry 5.9, it implements <code>javax.servlet.Filter</code> instead; see <a href="jakarta-ee-migration.html" class="xref page">Migrating to Jakarta EE</a>.
 Similar to servlets, filters are added to a web application in the deployment descriptor (<code>web.xml</code>).</p>
 </div>
 <div class="listingblock">

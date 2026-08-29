@@ -78,44 +78,41 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="principles.html">Principles</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <button class="nav-item-toggle"></button>
-    <span class="nav-text">Documentation</span>
-<ul class="nav-list">
-  <li class="nav-item is-current-page" data-depth="2">
+  <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link" href="getting-started.html">Getting Started</a>
   </li>
-  <li class="nav-item" data-depth="2">
+  <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Tutorial</span>
 <ul class="nav-list">
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="tutorial/index.html">Introduction</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="tutorial/dependencies-tools-and-plugins.html">Dependencies, Tools and Plugins</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="tutorial/creating-the-skeleton-application.html">Creating the Skeleton Application</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="tutorial/exploring-the-project.html">Exploring the Project</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="tutorial/implementing-the-hi-lo-guessing-game.html">Implementing the Hi-Lo Guessing Game</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="tutorial/using-beaneditform-to-create-user-forms.html">Using BeanEditForm To Create User Forms</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="tutorial/using-tapestry-with-hibernate.html">Using Tapestry With Hibernate</a>
   </li>
 </ul>
   </li>
-  <li class="nav-item" data-depth="2">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="userguide.html">User Guide</a>
   </li>
-</ul>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="documentation.html">Documentation</a>
   </li>
 </ul>
   </li>
@@ -135,7 +132,10 @@
       <div class="title"><a href="../userguide/current/index.html">User Guide</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../userguide/current/index.html">5.8</a>
+          <a href="../userguide/current/index.html">5.9</a>
+        </li>
+        <li class="version">
+          <a href="../userguide/5.8/index.html">5.8</a>
         </li>
         <li class="version">
           <a href="../userguide/5.7/index.html">5.7</a>
@@ -175,7 +175,6 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="about.html">Home</a></li>
-    <li>Documentation</li>
     <li><a href="getting-started.html">Getting Started</a></li>
   </ul>
 </nav>
@@ -232,8 +231,36 @@ Maven can use an archetype (a kind of project template) to create a bare-bones T
 <div class="paragraph">
 <p>(Alternatively, if you want to get an archetype for a not-yet-released version of Tapestry – most users don&#8217;t – you can use the staging URI, <a href="https://repository.apache.org/content/repositories/staging" class="bare">https://repository.apache.org/content/repositories/staging</a> ).</p>
 </div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
 <div class="paragraph">
-<p>Maven will prompt you for the archetype to create ("Tapestry 5 Quickstart Project") and the exact version number (e.g., "5.8.7").
+<p><strong>Check the generated <code>pom.xml</code> when using the 5.9.1 archetype.</strong></p>
+</div>
+<div class="paragraph">
+<p>Tapestry 5.9 ships in a Jakarta EE flavour (artifacts suffixed with <code>-jakarta</code>) and a javax flavour (unsuffixed artifacts), as explained on the <a href="download.html" class="xref page">Download</a> page.
+The generated project declares <code>jakarta.servlet-api</code> and the Jetty 11 plugin, which need the Jakarta flavour, but still names the unsuffixed Tapestry artifacts.
+Before running the project, change the Tapestry dependencies to their <code>-jakarta</code> names:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;artifactId&gt;tapestry-core-jakarta&lt;/artifactId&gt;
+&lt;artifactId&gt;tapestry-webresources-jakarta&lt;/artifactId&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Alternatively, keep the unsuffixed artifacts and replace <code>jakarta.servlet:jakarta.servlet-api</code> with <code>javax.servlet:javax.servlet-api</code> and the Jetty 11 plugin with Jetty 10, to build a javax project instead.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Maven will prompt you for the archetype to create ("Tapestry 5 Quickstart Project") and the exact version number (e.g., "5.9.1").
 It also asks you for a group id, an artifact id, and a version number. You can see this in the following transcript:</p>
 </div>
 <div class="listingblock">
@@ -266,7 +293,8 @@ Choose org.apache.tapestry:quickstart version:
 7: 5.6.4
 8: 5.7.3
 9: 5.8.7
-Choose a number: 9: 9
+10: 5.9.1
+Choose a number: 10: 10
 Define value for property 'groupId': : com.example
 Define value for property 'artifactId': : newapp
 Define value for property 'version':  1.0-SNAPSHOT: :
@@ -278,7 +306,7 @@ version: 1.0-SNAPSHOT
 package: com.example.newapp
  Y: : Y
 [INFO] ----------------------------------------------------------------------------
-[INFO] Using following parameters for creating project from Archetype: quickstart:5.8.6
+[INFO] Using following parameters for creating project from Archetype: quickstart:5.9.1
 [INFO] ----------------------------------------------------------------------------
 [INFO] Parameter: groupId, Value: com.example
 [INFO] Parameter: artifactId, Value: newapp
@@ -325,7 +353,7 @@ Application 'app' (version 1.0-SNAPSHOT-DEV) startup time: 329 ms to build IoC R
 /_  __/__ ____  ___ ___ / /_______ __  / __/
  / / / _ `/ _ \/ -_|_-&lt;/ __/ __/ // / /__ \
 /_/  \_,_/ .__/\__/___/\__/_/  \_, / /____/
-        /_/                   /___/  5.8.7 (development mode)
+        /_/                   /___/  5.9.1 (development mode)
 
 [INFO] Started SelectChannelConnector@0.0.0.0:8080
 [INFO] Started Jetty Server</pre>

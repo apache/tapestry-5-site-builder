@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Live Class and Template Reloading :: Apache Tapestry</title>
+    <meta name="generator" content="Antora 3.1.15">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/tapestry.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../.."><img alt="Apache Tapestry Logo" src="../../_/img/apache-tapestry-icon-dark.svg" width="60" />Apache Tapestry</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Documentation</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../../main/getting-started.html">Getting Started</a>
+            <a class="navbar-item" href="../../main/tutorial/">Tutorial</a>
+            <a class="navbar-item" href="../../userguide/current/">User Guide</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="../../main/community.html">Community</a>
+        <a class="navbar-item" href="../../main/support.html">Support</a>
+        <a class="navbar-item" href="../../main/developers.html">Developers</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Apache</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+            <a class="navbar-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
+            <a class="navbar-item" href="https://www.apache.org/licenses/">License</a>
+            <a class="navbar-item" href="https://www.apache.org/security/">Security</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="../../main/download.html">Download</a>
+          </span>
+        </div>
+        <div class="navbar-brand">
+          <a href="https://www.apache.org/">
+          <img alt="The Apache Software Foundation" src="../../_/img/asf_logo.svg" width="200" height="63" style="padding-top: 5px; padding-bottom: 5px; background-color: white">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="body">
+<div class="nav-container" data-component="userguide" data-version="5.8">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">User Guide</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Introduction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry Core</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basics</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="project-layout.html">Project Layout</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="runtime-exceptions.html">Runtime Exceptions</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="class-reloading.html">Class Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-reference.html">Component Reference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="annotations.html">Annotations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Pages and Components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-classes.html">Component Classes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-templates.html">Component Templates</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="property-expressions.html">Property Expressions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-parameters.html">Component Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="parameter-type-coercion.html">Parameter Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="layout-component.html">Layout Component</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-mixins.html">Component Mixins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-navigation.html">Page Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="localization.html">Localization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Request/Response Rendering</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-life-cycle.html">Page Life Cycle</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="request-processing.html">Request Processing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-rendering.html">Component Rendering</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-events.html">Component Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="url-rewriting.html">URL Rewriting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dom.html">Document Object Model (DOM)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="response-compression.html">Response Compression</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="security.html">Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https.html">HTTPS / SSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="content-type-and-markup.html">Content Type and Markup</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Data Persistence</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="persistent-page-data.html">Persistent Page Data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="session-storage.html">Session Storage</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Interacting with components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="injection.html">Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="environmental-services.html">Environmental Services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript, AJAX, CSS &amp; Binary Data</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="client-side-javascript.html">Client-Side JavaScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="javascript-modules.html">Javascript Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="coffeescript.html">Coffeescript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="typescript.html">TypeScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ajax-and-zones.html">AJAX and Zones</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="css.html">Cascading Style Sheets (CSS)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="assets.html">Assets</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cors.html">CORS (Cross-Origin Resource Sharing) Support</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Working with Forms</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="forms-and-validation.html">Forms and Validation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="beaneditform-guide.html">BeanEditForm Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uploading-files.html">Uploading Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bean-validation.html">Bean Validation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Logging, Debugging &amp; Testing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="logging.html">Logging</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unit-testing.html">Unit testing pages or components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integration-testing.html">Integration Testing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="development-dashboard.html">Development Dashboard</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry IOC</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-overview.html">IoC Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="symbols.html">Symbols</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="type-coercion.html">Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="case-insensitivity.html">Case Insensitivity</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="autoloading-modules.html">Autoloading Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="chainbuilder-service.html">ChainBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pipelinebuilder-service.html">PipelineBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="shadowbuilder-service.html">ShadowBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="strategybuilder-service.html">StrategyBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="defining-tapestry-ioc-services.html">Defining Tapestry IOC Services</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-modules.html">IoC Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="object-providers.html">Object Providers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-serialization.html">Service Serialization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="starting-the-ioc-registry.html">Starting the IoC Registry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="aliases.html">Aliases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="injection-in-detail.html">Injection in Detail</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ordering-by-constraints.html">Ordering by Constraints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="registry-startup.html">Registry Startup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="parallel-execution.html">Parallel Execution</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="logging-in-tapestry.html">Logging in Tapestry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-implementation-reloading.html">Service Implementation Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-advisors.html">Service Advisors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-decorators.html">Service Decorators</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="using-jsr-330-standard-annotations.html">Using JSR 330 standard annotations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="operation-tracker.html">Operation Tracker</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Add-ons and Integrations</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Built-in</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="hibernate.html">Hibernate Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="jpa.html">JPA Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integrating-with-spring-framework.html">Spring</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="third-party-modules.html">Third Party Modules</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Release Notes</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.8.html">Tapestry 5.8</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.7.html">Tapestry 5.7</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.6.html">Tapestry 5.6</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.5.html">Tapestry 5.5</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.4.html">Tapestry 5.4</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.3.html">Tapestry 5.3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.2.html">Tapestry 5.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.1.html">Tapestry 5.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.0.html">Tapestry 5.0</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cookbook</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/default-parameter.html">Default Parameter</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/overriding-exception-reporting.html">Overriding Exception Reporting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/error-page-recipe.html">Error Page Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/supporting-informal-parameters.html">Supporting Informal Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/component-libraries.html">Component Libraries</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/switching-cases.html">Switching Cases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/enum-parameter-recipe.html">Enum Parameter Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/extending-the-if-component.html">Extending The If Component</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/meta-programming-page-content.html">Meta-Programming Page Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="cookbook/ioc-cookbook.html">IoC Cookbook</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-basic-services-and-injection.html">IoC Cookbook - Basic Services and Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-overriding-ioc-services.html">IoC Cookbook - Overriding IoC Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-patterns.html">IoC Cookbook - Patterns</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-service-configurations.html">IoC Cookbook - Service Configurations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/using-select-with-a-list.html">Using Select With a List</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/performance-and-clustering.html">Performance and Clustering</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/google-app-engine.html">Google App Engine (GAE)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frequently Asked Questions (FAQ)</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/general.html">General Questions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/templating-and-markup.html">Templating and Markup FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/ajax.html">AJAX FAQ</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">User Guide</span>
+    <span class="version">5.8</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../main/about.html">Home</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../current/index.html">User Guide</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../current/index.html">5.9</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">5.8</a>
+        </li>
+        <li class="version">
+          <a href="../5.7/index.html">5.7</a>
+        </li>
+        <li class="version">
+          <a href="../5.6/index.html">5.6</a>
+        </li>
+        <li class="version">
+          <a href="../5.5/index.html">5.5</a>
+        </li>
+        <li class="version">
+          <a href="../5.4/index.html">5.4</a>
+        </li>
+        <li class="version">
+          <a href="../5.3/index.html">5.3</a>
+        </li>
+        <li class="version">
+          <a href="../5.2/index.html">5.2</a>
+        </li>
+        <li class="version">
+          <a href="../5.1/index.html">5.1</a>
+        </li>
+        <li class="version">
+          <a href="../5/index.html">5.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../main/about.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">User Guide</a></li>
+    <li>Tapestry Core</li>
+    <li>Basics</li>
+    <li><a href="class-reloading.html">Class Reloading</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">5.8</button>
+  <div class="version-menu">
+    <a class="version" href="../current/class-reloading.html">5.9</a>
+    <a class="version is-current" href="class-reloading.html">5.8</a>
+    <a class="version" href="../5.7/class-reloading.html">5.7</a>
+    <a class="version" href="../5.6/class-reloading.html">5.6</a>
+    <a class="version" href="../5.5/class-reloading.html">5.5</a>
+    <a class="version" href="../5.4/class-reloading.html">5.4</a>
+    <a class="version" href="../5.3/class-reloading.html">5.3</a>
+    <a class="version" href="../5.2/class-reloading.html">5.2</a>
+    <a class="version" href="../5.1/class-reloading.html">5.1</a>
+    <a class="version" href="../5/class-reloading.html">5.0</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Live Class and Template Reloading</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>One of the best features of Tapestry is automatic reloading of changed classes and templates.
+<em>Page and component</em> classes will automatically reload when changed.
+Likewise, changes to component templates and other related resources will also be picked up immediately.
+In addition, starting in version 5.2, your service classes will also be reloaded automatically after changes (if you&#8217;re using Tapestry IoC).
+Starting in version 5.8.3, you enable multiple classloader mode, which allows smarter page class invalidation.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Not necessarily all cached page instances are thrown away.
+Since Tapestry 5.8.3, Tapestry can be run in multiple classloaders mode.
+When it&#8217;s on, only the affected cached page instances are discarded and rebuilt instead of all of them.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_template_reloading"><a class="anchor" href="#_template_reloading"></a>Template Reloading</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When a template changes, all page instances (as well as the hierarchy of components below them) are discarded and reconstructed with the new template.
+However, classes are not reloaded in this case.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_class_reloading"><a class="anchor" href="#_class_reloading"></a>Class Reloading</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>On a change to <em>any</em> loaded class from inside a controlled package (or any sub-package of a controlled package), Tapestry will discard all page instances, and discard the class loader.</p>
+</div>
+<div class="paragraph">
+<p>Persistent field data on the pages will usually not be affected (as it is stored separately, usually in the session).
+This allows you to make fairly significant changes to a component class even while the application continues to run.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_packages_scanned"><a class="anchor" href="#_packages_scanned"></a>Packages Scanned</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Only certain classes are subject to reload.
+Reloading is based on package name; the packages that are reloaded are derived from the application <a href="configuration.html" class="xref page">Configuration</a>.</p>
+</div>
+<div class="paragraph">
+<p>If your root package is <code>org.example.myapp</code>, then only classes in the following packages (and their sub-packages) will be scanned for automatic reloads:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>org.example.myapp.pages</code></p>
+</li>
+<li>
+<p><code>org.example.myapp.components</code></p>
+</li>
+<li>
+<p><code>org.example.myapp.mixins</code></p>
+</li>
+<li>
+<p><code>org.example.myapp.base</code></p>
+</li>
+<li>
+<p><code>org.example.myapp.services</code> (Tapestry 5.2 and later, with restrictions)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Starting in Tapestry 5.2, live class reloading includes service implementation classes.
+There are some limitations to this.
+See <a href="service-implementation-reloading.html" class="xref page">Service Implementation Reloading</a> for more details.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_file_system_only"><a class="anchor" href="#_file_system_only"></a>File System Only</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Reloading of classes and other files applies only to files that are actually on the file system, and not files obtained from JAR files.
+This is perfect during development, where the files in question are in your local workspace.
+In a deployed application, you are somewhat subject to the implementation of your servlet container or application server.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_class_loader_issues"><a class="anchor" href="#_class_loader_issues"></a>Class Loader Issues</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tapestry uses an extra class loader to load page and component classes.</p>
+</div>
+<div class="paragraph">
+<p>When a change to an underlying Java class file is detected, Tapestry discards the class loader.</p>
+</div>
+<div class="paragraph">
+<p>You should be careful to not hold any references to Tapestry pages or components in other code, such as Tapestry IoC services.
+Holding such references can cause significant memory leaks, as they can prevent the class loader from being reclaimed by the garbage collector.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_classcastexceptions"><a class="anchor" href="#_classcastexceptions"></a>ClassCastExceptions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tapestry&#8217;s class loader architecture can sometimes cause a minor problem when you make use of a services layer without interfaces, or if that you pass component instances to objects that are not themselves components.</p>
+</div>
+<div class="paragraph">
+<p>In such cases you may see ClassCastException errors.
+This is because the same class name, say <code>org.example.myapp.pages.Start</code>, exists as two different class instances.
+One class instance is loaded by the web application&#8217;s default class loader.
+A second class instance has been loaded <em>and transformed</em> by Tapestry&#8217;s reloading class loader.</p>
+</div>
+<div class="paragraph">
+<p>Ordinary classes, such as Tapestry IoC Services, will be loaded by the default class loader and expect instances to be loaded by the same class loader (or a parent).</p>
+</div>
+<div class="paragraph">
+<p>The solution to this problem is to introduce an interface; the component class should implement the interface, and the service should expect an instance of the interface, rather than a specific type.</p>
+</div>
+<div class="paragraph">
+<p>It is important that the interface be loaded by the default class loader.
+It should not be in the pages or components package, but instead be in another package, such as services.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_handling_reloads_in_your_code"><a class="anchor" href="#_handling_reloads_in_your_code"></a>Handling Reloads in your Code</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>On occasion, you may need to know when invalidations occur, to clear your own cache.
+For example, if you have a binding that creates new classes, the way <code><a href="https://tapestry.apache.org/5.8.7/apidocs/org/apache/tapestry5/services/PropertyConduitSource.html">PropertyConduitSource</a></code> does, you need to discard any cached classes or instances when a change is detected in component classes.</p>
+</div>
+<div class="paragraph">
+<p>You do this by registering a listener with the correct <code><a href="https://tapestry.apache.org/5.8.7/apidocs/org/apache/tapestry5/internal/event/InvalidationEventHub.html">InvalidationEventHub</a></code> service.</p>
+</div>
+<div class="paragraph">
+<p>For example, your service may be in the business of creating new classes based on component classes, and keep a cache of those classes:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class MyServiceImpl implements MyService, InvalidationEventListener
+{
+    public final Map&lt;String,Class&gt; cache = new ConcurrentHashMap&lt;String,Class&gt;();
+
+    ...
+
+    public void objectWasInvalidated() { cache.clear(); }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here, the service implementation implements the <code>InvalidationEventListener</code> interface, as well as its service interface. The question is: how does it register for notifications?</p>
+</div>
+<div class="paragraph">
+<p>In your module, you will want to use a service builder method, such as:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public static MyService buildMyService(@Autobuild MyServiceImpl service, @ComponentClasses InvalidationEventHub hub)
+{
+    hub.addInvalidationListener(service);
+
+    return service;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This is the intent of service builder methods; to do more than just injecting dependencies.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_checking_for_updates"><a class="anchor" href="#_checking_for_updates"></a>Checking For Updates</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The built-in InvalidationEventHub services provide notifications of changes to component classes, to component templates, and to component message catalogs.
+If you wish to check some other resources (for example, files in a directory of the file system or rows in a database table), you should register as an <code><a href="https://tapestry.apache.org/5.8.7/apidocs/org/apache/tapestry5/internal/events/UpdateListener.html">UpdateListener</a></code> with the <code><a href="https://tapestry.apache.org/5.8.7/apidocs/org/apache/tapestry5/internal/services/UpdateListenerHub.html">UpdateListenerHub</a></code> service.</p>
+</div>
+<div class="paragraph">
+<p>Periodically (the frequency is configurable), `UpdateListener`s are notified that they should check for updates.
+Typically, `UpdateListener`s are also `InvalidationEventHub`s (or provide `InvalidationEventHub`s), so that other interested parties can be alerted when underlying data changes.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_troubleshooting_live_class_reloading"><a class="anchor" href="#_troubleshooting_live_class_reloading"></a>Troubleshooting Live Class Reloading</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_quick_checklist"><a class="anchor" href="#_quick_checklist"></a>Quick Checklist</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>"Production Mode" must be <code>false</code> (in Tapestry 5.3 and later)</p>
+</li>
+<li>
+<p>The class must be one that Tapestry instantiates (a page, component, or mixin class, or a Tapestry IOC service implementation that implements an interface)</p>
+</li>
+<li>
+<p>Turn on "Build Automatically" in your IDE, or remember to build manually.</p>
+</li>
+<li>
+<p>Turn off JVM hot code swapping, if your servlet container supports it.</p>
+</li>
+<li>
+<p>Eclipse: Uncheck the "derived" checkbox for the Target dir (in the Project Explorer view, right click on "target", select properties, uncheck "derived" on the Resource tab)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Some of these issues are described in more detail below.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_if_live_class_reloading_doesnt_work"><a class="anchor" href="#_if_live_class_reloading_doesnt_work"></a>If Live Class Reloading doesn&#8217;t work</h3>
+<div class="sect3">
+<h4 id="_production_mode"><a class="anchor" href="#_production_mode"></a>Production Mode</h4>
+<div class="paragraph">
+<p>Starting with Tapestry 5.3, Live Class Reloading only works when not in "Production Mode". Check your application module (usually <code>AppModule.java</code>) to be sure you have:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">configuration.add(SymbolConstants.PRODUCTION_MODE, "false");</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and that this isn&#8217;t being overridden to "true" on your application&#8217;s startup command line.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_build_path_issues"><a class="anchor" href="#_build_path_issues"></a>Build Path Issues</h4>
+<div class="paragraph">
+<p>Live Class Reloading can fail if your build path isn&#8217;t set correctly, and the exact configuration may differ between Maven plugin versions and Eclipse versions.
+The build process must be set to create classes in a folder which is in the servlet container&#8217;s classpath.</p>
+</div>
+<div class="paragraph">
+<p>Live Class Reloading won&#8217;t work correctly with vanilla Tomcat without some tweaks (see below).</p>
+</div>
+<div class="paragraph">
+<p>Non-Tapestry filters can interfere with LCR. Try disabling other filters in your web.xml file to see if that helps.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_building_automatically"><a class="anchor" href="#_building_automatically"></a>Building Automatically</h4>
+<div class="paragraph">
+<p>Although LCR allows you to see changes without restarting your app, you still need to "build" your project (to compile the Java source into byte code).
+Your IDE can be set to do this automatically every time you save a file. (In Eclipse, this is done using Project &gt; Build Automatically.)
+Alternatively, you can manually trigger a build after you save a file. (In Eclipse, this is done using Project &gt; Build, or by pressing Control-B.)</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_turn_off_jvm_hot_code_swapping_automatic_restarts"><a class="anchor" href="#_turn_off_jvm_hot_code_swapping_automatic_restarts"></a>Turn off JVM hot code swapping &amp; automatic restarts</h4>
+<div class="paragraph">
+<p>Many servlet containers, including Tomcat and Jetty, support various forms of hot code swapping and/or automatic restarts when file changes are detected.
+These are generally <strong>much slower</strong> than LCR and usually should be turned off with Tapestry applications.
+If you&#8217;re using RunJettyRun plugin for Eclipse, for example, edit your Run Configuration, and on the Jetty tab, click Show Advanced Options and uncheck the Enable Scanner checkbox.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_tomcat_specifics"><a class="anchor" href="#_tomcat_specifics"></a>Tomcat Specifics</h4>
+<div class="paragraph">
+<p>See <a href="https://www.tynamo.org/Developing+with+Tomcat+and+Eclipse/">these Tomcat-specific hints</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_if_live_class_reloading_works_but_is_slow"><a class="anchor" href="#_if_live_class_reloading_works_but_is_slow"></a>If Live Class Reloading works but is slow</h4>
+<div class="paragraph">
+<p>If LCR works for you but is slow (more than a second or two), consider the following.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Be sure your project source files (your workspace in Eclipse, for example), are on a local drive, NOT a network location.
+Network drives are always slower, and the file system scanning needed for LCR can add a noticable lag if I/O is slow.
+If you use Maven, be sure to put your local repository (e.g. <code>~/.m2/repository</code>) on a local drive for similar reasons.</p>
+</li>
+<li>
+<p>Java 7 and below: Since LCR adds classes to your PermGen space, you may be running low on PermGen memory (and may eventually get a <code>java.lang.OutOfMemoryError: PermGen space</code> error). Try increasing PermGen size with a JVM argument of something like <code>-XX:MaxPermSize=400m</code>. (PermGen settings are not relevant for Java 8 and above.)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_multiple_classloader_mode_smarter_page_class_invalidation"><a class="anchor" href="#_multiple_classloader_mode_smarter_page_class_invalidation"></a>Multiple Classloader Mode / Smarter Page Class Invalidation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Since Tapestry 5.8.3, you can run Tapestry in multiple classloader mode, which implements smarter page class invalidation in live class reloading.
+In addition, other caches are also invalidated in smarter way when something changes, avoiding throwing away everything. Multiple classloader mode isn&#8217;t available when production mode is on.</p>
+</div>
+<div class="paragraph">
+<p>To enable multiple classloader mode, you need to set <code>tapestry.multiple-classloaders</code> symbol to <code>true</code> and run the webapp with production mode disabled.
+With production mode on, <code>tapestry.multiple-classloaders</code> is ignored.</p>
+</div>
+<div class="paragraph">
+<p>When multiple classloaders are enabled, when a class in a controlled component, template, message properties file or asset is changed, Tapestry tries to invalidate as few cached objects as possible.
+This include page instances, processed templates, asset information, property bindings, etc.
+This is possible by 2 new internal features:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>A component dependency registry, which gathers and stores information about how component, page, mixin and base classes depend on each other. There are 3 kinds of dependencies: usage (i.e. a component or mixin used in a class), superclass (i.e. one class extending the other) and <code>@InjectPage</code> (i.e. one class injecting a page class using <code>@InjectPage</code>.</p>
+</li>
+<li>
+<p>The usage of multiple classloader instances, organized in a tree, instead of a single one. For example: if a component A is used in pages B and C, when B has its class changed, there&#8217;s no need to invalidate a cached instance of C since Tapestry knows there&#8217;s no dependency of B and C. On the other hand, if A is changed, both B and C instances need to be invalidated.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>You can find a graph of all known dependencies at a time by going to the <code>/t5dashboard/pagedependencygraph</code> URL of your webapp. You can view the dependencies for one specific page by going to <code>/t5dashboard/</code> and clicking the page&#8217;s Structure Info link. Here&#8217;s one partial example:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/page_dependency_graph.png" alt="Page dependency graph">
+</div>
+<div class="title">Figure 1. Page Dependency Graph (partial)</div>
+</div>
+<div class="sect2">
+<h3 id="_how_it_works"><a class="anchor" href="#_how_it_works"></a>How It Works</h3>
+<div class="paragraph">
+<p>First of all, when production mode is off and multiple classloaders mode is also off, Tapestry reacts to file (including classes in controlled packages, templates, message properties files and assets) changes in the same way as before and described above in this page: all cached information or objects about classes, templates, message properties files, assets, property bindings, etc is invalidated (i.e. thrown away).
+The internal services that track changes to these files notify all their listeners that they should invalidate their caches completely.</p>
+</div>
+<div class="paragraph">
+<p>When multiple classloaders mode is on, these internal services notify their listeners what changed, so they can invalidate just the objects or information that is actually affected by the changes.
+Sometimes this listeners notify the services that more stuff needs to be invalidated, for example, if one asset is changed and it&#8217;s associated with a class, the asset service notifies the listeners that that class needs to be invalidated.
+For example, the component dependency registry, when notified that a given class was invalidated, besides invalidating information about that class, it informs the service that it also needs to invalidates the classes that depend on the changed one. This process repeats until there&#8217;s no other class to be invalidated.</p>
+</div>
+<div class="paragraph">
+<p>Additional logging was added so all files found as changed result in log entries. Same for the invalidation chain described in the paragraph above.</p>
+</div>
+<div class="paragraph">
+<p>Now that it knows the class dependency graph, Tapestry needs to map that into a classloader tree, since each classloader instance can only have one parent.
+Internally, the framework has one class, PageClassLoaderContext (PCLC or context, for short), that stores all information about one classloader in the tree: the classloader itself, a name, the set of names of the classes beloging to it, the parent PCLC and children PCLCs.
+When a class is invalidated, the classes in the context are invalidated, then the context itself is invalidated, including its classloader, then the child contexts are recursively invalidated too.</p>
+</div>
+<div class="paragraph">
+<p>There are 2 special PCLC contexts: the root one, which is never invalidated, and the unknown one, where classes without dependency information go initially.</p>
+</div>
+<div class="paragraph">
+<p>The PCLC tree is created class by class, starting from pages and then on its dependencies on them in a recursive manner.
+For each class, if there&#8217;s no PCLC already containing it, Tapestry checks its dependency list. Its basic algorithm is this:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>If there are dependencies that belong to a PCLC yet, run the algorithm on it.</p>
+</li>
+<li>
+<p>All the PCLCs of dependencies are gathered.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>If there are no PCLCs found, a new one is created with that class and the root context is its parent.</p>
+</li>
+<li>
+<p>If there is exactly one PCLC found, a new one is created with that class and the found PCLC will be its parent.</p>
+</li>
+<li>
+<p>If more than one PCLC is found, these PCLCs are merged by creating a new one containing all the classes in the PCLCs.
+The old PCLCs are invalidated recursively and an event about its invalidation is sent to the listeners.
+One of them is <code>PageSource</code>, the service that manages, creates and caches page instances, so the merging of PCLCs can cause page invalidation, as keeping these instances could potentially cause `ClassCastException`s later due to class instances belonging to different versions of the same class.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_loading_storing_and_preloading_dependency_information"><a class="anchor" href="#_loading_storing_and_preloading_dependency_information"></a>Loading, Storing and Preloading Dependency Information</h3>
+<div class="paragraph">
+<p>When a page instance is finished building, it&#8217;s processed by the component dependency registry, which gathers the dependencies this page has, then the dependencies of its dependencies recursively.
+The registry doesn&#8217;t process classes it already has information.</p>
+</div>
+<div class="paragraph">
+<p>When starting up, Tapestry checks whether a file named <code>tapestryComponentDependencies.json</code> exists in the folder where the webapp is running.
+If it does, component dependency is loaded from it.</p>
+</div>
+<div class="paragraph">
+<p>The T5Dashboard page has 2 new buttons related to dependencies, <code>Store dependency information</code>, writes all the dependency information as known at that moment.</p>
+</div>
+<div class="paragraph">
+<p><code>Preload dependency information and page classloader contexts</code> goes through all known pages, gathers its dependencies, also doing the same for all the components used directly and indirectly by them, and the preloads page the page classloader contexts, thus avoiding context invalidations when page instances are created.
+Notice this process won&#8217;t work if any of the pages or their templates are invalid for any reason.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_caveats"><a class="anchor" href="#_caveats"></a>Caveats</h3>
+<div class="paragraph">
+<p>Unfortunately, it wasn&#8217;t possible to make the multiple classloader mode to work with all situations and code. Some known issues:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>On Java 9 and later, classes belonging to one classloader cannot call package-private methods of other classes even when both are in the same package.
+The solution is to change the method visibility to public.</p>
+</li>
+<li>
+<p>If you don&#8217;t have component dependency information already loaded for a given class, problems, usually in the form of a <code>ClassCastException</code> claiming an object of a given type cannot be assigned to a variable of the same type. The best way to deal with this is to use the T5Dashboard to write the component dependency information to a file and restart the webapp.
+In some cases, it helps to preload dependency information for all classes.</p>
+</li>
+<li>
+<p>If you start your webapp without component dependency information, page instances may be created and invalidated a few times even when they didn&#8217;t have any changes due to the page classloader context creation.
+The solution for this is the same one as the above.</p>
+</li>
+<li>
+<p>When one asset is imported into a class through <code>@Import</code>, the class and the asset are considered associated.
+When an asset is changed and it&#8217;s associated with at least one class, the classes associated with it, including pages, are invalidated.
+If an asset is changed and it&#8217;s not associated with any class, then multiple classloader mode works the same as single classloader one, invalidating everything.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

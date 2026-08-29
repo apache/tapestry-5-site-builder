@@ -62,7 +62,7 @@
 </header>
 
 <div class="body">
-<div class="nav-container" data-component="userguide" data-version="5.8">
+<div class="nav-container" data-component="userguide" data-version="5.9">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -85,6 +85,9 @@
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Basics</span>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="jakarta-ee-migration.html">Jakarta EE Migration</a>
+  </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="project-layout.html">Project Layout</a>
   </li>
@@ -379,6 +382,9 @@
     <span class="nav-text">Release Notes</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.9.html">Tapestry 5.9</a>
+  </li>
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="release-notes-5.8.html">Tapestry 5.8</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -488,7 +494,7 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">User Guide</span>
-    <span class="version">5.8</span>
+    <span class="version">5.9</span>
   </div>
   <ul class="components">
     <li class="component">
@@ -498,7 +504,10 @@
       <div class="title"><a href="index.html">User Guide</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="index.html">5.8</a>
+          <a href="index.html">5.9</a>
+        </li>
+        <li class="version">
+          <a href="../5.8/index.html">5.8</a>
         </li>
         <li class="version">
           <a href="../5.7/index.html">5.7</a>
@@ -544,9 +553,10 @@
   </ul>
 </nav>
 <div class="page-versions">
-  <button class="version-menu-toggle" title="Show other versions of page">5.8</button>
+  <button class="version-menu-toggle" title="Show other versions of page">5.9</button>
   <div class="version-menu">
-    <a class="version is-current" href="ajax-and-zones.html">5.8</a>
+    <a class="version is-current" href="ajax-and-zones.html">5.9</a>
+    <a class="version" href="../5.8/ajax-and-zones.html">5.8</a>
     <a class="version" href="../5.7/ajax-and-zones.html">5.7</a>
     <a class="version" href="../5.6/ajax-and-zones.html">5.6</a>
     <a class="version" href="../5.5/ajax-and-zones.html">5.5</a>
@@ -1107,6 +1117,28 @@ Given an HTML element, the search is performed in the following order until info
 <div class="paragraph">
 <p>If you&#8217;re trying to invoke a page class event handler, you can change line 5 above to element: <code>null</code>.
 You do need to explicitly set the element property, otherwise the ajax function will treat the first parameter, url, as an URL and not as an event name.</p>
+</div>
+<div class="sect2">
+<h3 id="_custom_request_headers"><a class="anchor" href="#_custom_request_headers"></a>Custom request headers</h3>
+<div class="paragraph">
+<p>Since Tapestry 5.9 (<a href="https://issues.apache.org/jira/browse/TAP5-2782">TAP5-2782</a>), the <code>options</code> parameter accepts a <code>headers</code> object whose key/value pairs are added to the request headers:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">require(["t5/core/ajax"], function (ajax) {
+    ajax('answer', {
+        element: null,
+        headers: {
+            "X-Tenant-Id": currentTenantId
+        },
+        success: function(response) { /* ... */ }
+    });
+});</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This is useful for passing correlation ids, tenant identifiers or tokens that a server-side filter reads from the request, without encoding them into the URL or the form data.</p>
+</div>
 </div>
 </div>
 </div>

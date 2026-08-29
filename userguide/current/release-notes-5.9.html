@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Tapestry 5.9 :: Apache Tapestry</title>
+    <meta name="generator" content="Antora 3.1.15">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/tapestry.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../.."><img alt="Apache Tapestry Logo" src="../../_/img/apache-tapestry-icon-dark.svg" width="60" />Apache Tapestry</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Documentation</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../../main/getting-started.html">Getting Started</a>
+            <a class="navbar-item" href="../../main/tutorial/">Tutorial</a>
+            <a class="navbar-item" href="../../userguide/current/">User Guide</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="../../main/community.html">Community</a>
+        <a class="navbar-item" href="../../main/support.html">Support</a>
+        <a class="navbar-item" href="../../main/developers.html">Developers</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Apache</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+            <a class="navbar-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
+            <a class="navbar-item" href="https://www.apache.org/licenses/">License</a>
+            <a class="navbar-item" href="https://www.apache.org/security/">Security</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="../../main/download.html">Download</a>
+          </span>
+        </div>
+        <div class="navbar-brand">
+          <a href="https://www.apache.org/">
+          <img alt="The Apache Software Foundation" src="../../_/img/asf_logo.svg" width="200" height="63" style="padding-top: 5px; padding-bottom: 5px; background-color: white">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="body">
+<div class="nav-container" data-component="userguide" data-version="5.9">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">User Guide</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Introduction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry Core</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basics</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="jakarta-ee-migration.html">Jakarta EE Migration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="project-layout.html">Project Layout</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="runtime-exceptions.html">Runtime Exceptions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="class-reloading.html">Class Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-reference.html">Component Reference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="annotations.html">Annotations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Pages and Components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-classes.html">Component Classes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-templates.html">Component Templates</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="property-expressions.html">Property Expressions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-parameters.html">Component Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="parameter-type-coercion.html">Parameter Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="layout-component.html">Layout Component</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-mixins.html">Component Mixins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-navigation.html">Page Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="localization.html">Localization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Request/Response Rendering</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-life-cycle.html">Page Life Cycle</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="request-processing.html">Request Processing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-rendering.html">Component Rendering</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-events.html">Component Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="url-rewriting.html">URL Rewriting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dom.html">Document Object Model (DOM)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="response-compression.html">Response Compression</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="security.html">Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="https.html">HTTPS / SSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="content-type-and-markup.html">Content Type and Markup</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Data Persistence</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="persistent-page-data.html">Persistent Page Data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="session-storage.html">Session Storage</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Interacting with components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="injection.html">Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="environmental-services.html">Environmental Services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript, AJAX, CSS &amp; Binary Data</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="client-side-javascript.html">Client-Side JavaScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="javascript-modules.html">Javascript Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="coffeescript.html">Coffeescript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="typescript.html">TypeScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ajax-and-zones.html">AJAX and Zones</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="css.html">Cascading Style Sheets (CSS)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="assets.html">Assets</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cors.html">CORS (Cross-Origin Resource Sharing) Support</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Working with Forms</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="forms-and-validation.html">Forms and Validation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="beaneditform-guide.html">BeanEditForm Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uploading-files.html">Uploading Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bean-validation.html">Bean Validation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Logging, Debugging &amp; Testing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="logging.html">Logging</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="unit-testing.html">Unit testing pages or components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integration-testing.html">Integration Testing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="development-dashboard.html">Development Dashboard</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry IOC</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-overview.html">IoC Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="symbols.html">Symbols</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="type-coercion.html">Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="case-insensitivity.html">Case Insensitivity</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="autoloading-modules.html">Autoloading Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="chainbuilder-service.html">ChainBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pipelinebuilder-service.html">PipelineBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="shadowbuilder-service.html">ShadowBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="strategybuilder-service.html">StrategyBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="defining-tapestry-ioc-services.html">Defining Tapestry IOC Services</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-modules.html">IoC Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ioc-configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="object-providers.html">Object Providers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-serialization.html">Service Serialization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="starting-the-ioc-registry.html">Starting the IoC Registry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="aliases.html">Aliases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="injection-in-detail.html">Injection in Detail</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ordering-by-constraints.html">Ordering by Constraints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="registry-startup.html">Registry Startup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="parallel-execution.html">Parallel Execution</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="logging-in-tapestry.html">Logging in Tapestry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-implementation-reloading.html">Service Implementation Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-advisors.html">Service Advisors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service-decorators.html">Service Decorators</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="using-jsr-330-standard-annotations.html">Using JSR 330 standard annotations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="operation-tracker.html">Operation Tracker</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Add-ons and Integrations</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Built-in</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="hibernate.html">Hibernate Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="jpa.html">JPA Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="integrating-with-spring-framework.html">Spring</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="third-party-modules.html">Third Party Modules</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Release Notes</span>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="release-notes-5.9.html">Tapestry 5.9</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.8.html">Tapestry 5.8</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.7.html">Tapestry 5.7</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.6.html">Tapestry 5.6</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.5.html">Tapestry 5.5</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.4.html">Tapestry 5.4</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.3.html">Tapestry 5.3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.2.html">Tapestry 5.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.1.html">Tapestry 5.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes-5.0.html">Tapestry 5.0</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cookbook</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/default-parameter.html">Default Parameter</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/overriding-exception-reporting.html">Overriding Exception Reporting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/error-page-recipe.html">Error Page Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/supporting-informal-parameters.html">Supporting Informal Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/component-libraries.html">Component Libraries</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/switching-cases.html">Switching Cases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/enum-parameter-recipe.html">Enum Parameter Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/extending-the-if-component.html">Extending The If Component</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/meta-programming-page-content.html">Meta-Programming Page Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="cookbook/ioc-cookbook.html">IoC Cookbook</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-basic-services-and-injection.html">IoC Cookbook - Basic Services and Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-overriding-ioc-services.html">IoC Cookbook - Overriding IoC Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-patterns.html">IoC Cookbook - Patterns</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cookbook/ioc-cookbook-service-configurations.html">IoC Cookbook - Service Configurations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/using-select-with-a-list.html">Using Select With a List</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/performance-and-clustering.html">Performance and Clustering</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cookbook/google-app-engine.html">Google App Engine (GAE)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frequently Asked Questions (FAQ)</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/general.html">General Questions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/templating-and-markup.html">Templating and Markup FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq/ajax.html">AJAX FAQ</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">User Guide</span>
+    <span class="version">5.9</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../main/about.html">Home</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="index.html">User Guide</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">5.9</a>
+        </li>
+        <li class="version">
+          <a href="../5.8/index.html">5.8</a>
+        </li>
+        <li class="version">
+          <a href="../5.7/index.html">5.7</a>
+        </li>
+        <li class="version">
+          <a href="../5.6/index.html">5.6</a>
+        </li>
+        <li class="version">
+          <a href="../5.5/index.html">5.5</a>
+        </li>
+        <li class="version">
+          <a href="../5.4/index.html">5.4</a>
+        </li>
+        <li class="version">
+          <a href="../5.3/index.html">5.3</a>
+        </li>
+        <li class="version">
+          <a href="../5.2/index.html">5.2</a>
+        </li>
+        <li class="version">
+          <a href="../5.1/index.html">5.1</a>
+        </li>
+        <li class="version">
+          <a href="../5/index.html">5.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../main/about.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">User Guide</a></li>
+    <li>Release Notes</li>
+    <li><a href="release-notes-5.9.html">Tapestry 5.9</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">5.9</button>
+  <div class="version-menu">
+    <a class="version is-current" href="release-notes-5.9.html">5.9</a>
+    <a class="version is-missing" href="../5.8/index.html">5.8</a>
+    <a class="version is-missing" href="../5.7/index.html">5.7</a>
+    <a class="version is-missing" href="../5.6/index.html">5.6</a>
+    <a class="version is-missing" href="../5.5/index.html">5.5</a>
+    <a class="version is-missing" href="../5.4/index.html">5.4</a>
+    <a class="version is-missing" href="../5.3/index.html">5.3</a>
+    <a class="version is-missing" href="../5.2/index.html">5.2</a>
+    <a class="version is-missing" href="../5.1/index.html">5.1</a>
+    <a class="version is-missing" href="../5/index.html">5.0</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Tapestry 5.9</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tapestry 5.9 moves the framework to Jakarta EE 9.
+Every module that touches the Servlet, Persistence, Validation or CDI APIs now compiles against the <code>jakarta.<strong></code> packages instead of <code>javax.</strong></code>.</p>
+</div>
+<div class="paragraph">
+<p>Because that is a breaking change for existing applications, 5.9 is released twice from two branches:
+the Jakarta build publishes artifacts with a <code>-jakarta</code> suffix, and the javax build keeps the historical, unsuffixed artifact names.
+Both carry the same version number and the same features.
+See <a href="jakarta-ee-migration.html" class="xref page">Migrating to Jakarta EE</a> for what this means for your project and how to move over.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tapestry_5_9_1"><a class="anchor" href="#_tapestry_5_9_1"></a>Tapestry 5.9.1</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tapestry 5.9.1 is a bugfix release and a drop-in replacement for Tapestry 5.9.0.</p>
+</div>
+<div class="sect2">
+<h3 id="_improvements_made"><a class="anchor" href="#_improvements_made"></a>Improvements Made</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-2814">TAP5-2814</a> - Upgrade ASM to 9.9</p>
+</li>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-2758">TAP5-2758</a> - Constructor/Builder injection should support <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/ioc/annotations/Symbol.html">@Symbol</a></code> for <code>List</code>/<code>Collection</code>/<code>Map</code> even without <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/ioc/annotations/Inject.html">@Inject</a></code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_bugs_fixed"><a class="anchor" href="#_bugs_fixed"></a>Bugs Fixed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-2813">TAP5-2813</a> - NPE when <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/annotations/Cached.html">@Cached</a></code> applied to method returning a generic type in multiple classloader mode</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tapestry_5_9_0"><a class="anchor" href="#_tapestry_5_9_0"></a>Tapestry 5.9.0</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tapestry 5.9.0 is a major release built on Jakarta EE 9.</p>
+</div>
+<div class="paragraph">
+<p>Highlights:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-2741">TAP5-2741</a> and <a href="https://issues.apache.org/jira/browse/TAP5-2788">TAP5-2788</a> - <strong>Jakarta EE 9 support.</strong>
+Tapestry now targets Jakarta Servlet 5.0, Jakarta Persistence 3.0, Jakarta Validation 3.0 and Jakarta Inject 2.0.
+The corresponding <code>javax.<strong></code> imports in your own code have to be changed to <code>jakarta.</strong></code>.</p>
+</li>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-2785">TAP5-2785</a> - <strong>Separate artifacts for the Jakarta and javax builds.</strong>
+The Jakarta build publishes <code>tapestry-core-jakarta</code>, <code>tapestry-ioc-jakarta</code> and so on, while the javax build keeps publishing <code>tapestry-core</code>, <code>tapestry-ioc</code> and so on.
+This lets both live side by side in Maven Central at the same version, so projects that cannot move to Jakarta yet can still pick up 5.9.</p>
+</li>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-2793">TAP5-2793</a> - <strong>New <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/corelib/components/Recursive.html">Recursive</a></code> component.</strong>
+A <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/corelib/components/Loop.html">Loop</a></code>-like component that renders its body recursively over parent/child data such as trees and menus, with <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/corelib/components/RecursiveBody.html">RecursiveBody</a></code> marking the insertion point for the children.
+Objects are adapted to the component through <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/commons/RecursiveValueProvider.html">RecursiveValueProvider</a></code> implementations.
+This was contributed by <a href="https://www.pubfactory.com">KGL PubFactory</a>.</p>
+</li>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-2799">TAP5-2799</a> - <strong>Session locking is now explicit.</strong>
+Reading from a <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/http/services/Session.html">Session</a></code> could lock up a thread.
+The fix introduces <code>Session.LockMode</code> (<code>NONE</code>, <code>READ</code>, <code>WRITE</code>) together with <code>getAttributeNames(LockMode)</code> and <code>getAttributeNames(String, LockMode)</code> overloads, so the lock a call acquires is now something you can control.
+See <a href="session-storage.html#_session_locking" class="xref page">Session Locking</a>.</p>
+</li>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-2782">TAP5-2782</a> - The client-side <code>t5/core/ajax</code> function accepts an <code>options.headers</code> object, so application code can add custom headers to Ajax requests.</p>
+</li>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-2789">TAP5-2789</a> - A migration tool was added to help rewrite Maven and Gradle builds onto the suffixed artifact names.</p>
+</li>
+<li>
+<p>A large round of dependency upgrades came with the Jakarta move, including Hibernate Validator 8, EclipseLink 3.0, Spring 6, Jetty 11 and Apache Commons FileUpload 2.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><code>tapestry-spring</code> now depends on Spring 6, which requires <strong>Java 17</strong>.
+The rest of Tapestry still builds for Java 8 bytecode and is tested on Java 11 and 17.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_new_features"><a class="anchor" href="#_new_features"></a>New Features</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-2793">TAP5-2793</a> - Create a component for rendering recursive data</p>
+</li>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-2789">TAP5-2789</a> - Create Maven configuration tool to assist with suffixed artifacts</p>
+</li>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-2785">TAP5-2785</a> - Change build so it generates separate artifacts for jakarta- and javax-based subprojects</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_improvements_made_2"><a class="anchor" href="#_improvements_made_2"></a>Improvements Made</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-2800">TAP5-2800</a> - Stylesheets not imported when <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/annotations/Import.html">@Import</a></code> also imports a library when in multiple classloader mode</p>
+</li>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-2796">TAP5-2796</a> - Upgrade some more dependencies: TestNG, EasyMock, commons-codec, ANTLR, HSQLDB, snakeyaml</p>
+</li>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-2795">TAP5-2795</a> - Upgrade commons-lang dependency to 3.17.0</p>
+</li>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-2788">TAP5-2788</a> - Further changes to upgrade to Jakarta EE</p>
+</li>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-2782">TAP5-2782</a> - <code>ajax.coffee</code> should support more options</p>
+</li>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-2780">TAP5-2780</a> - <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/json/JSONObject.html">JSONObject</a></code> does not conform to equals/hashCode contract</p>
+</li>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-2778">TAP5-2778</a> - JUnit upgrade to support Eclipse 2023-09+</p>
+</li>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-2777">TAP5-2777</a> - Update the closure compiler for better support of modern JavaScript</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_dependency_upgrades"><a class="anchor" href="#_dependency_upgrades"></a>Dependency Upgrades</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-2798">TAP5-2798</a> - Change selenium-java and selenium-leg-rc from api to testImplementation</p>
+</li>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-2771">TAP5-2771</a> - Upgrade to Spock 2.3</p>
+</li>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-2741">TAP5-2741</a> - Update to Jakarta EE 9</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_bugs_fixed_2"><a class="anchor" href="#_bugs_fixed_2"></a>Bugs Fixed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-2799">TAP5-2799</a> - Thread lockup when trying to read from a Session object</p>
+</li>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-2794">TAP5-2794</a> - Upgrade away from vulnerable commons-io and commons-fileupload dependencies</p>
+</li>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-2792">TAP5-2792</a> - POST with body throws exception</p>
+</li>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-2791">TAP5-2791</a> - CssCompressor for CSS files produces wrong minification for the <code>url()</code> function, at least with data URLs</p>
+</li>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-2790">TAP5-2790</a> - Palette with option groups within the <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/SelectModel.html">SelectModel</a></code> does not work properly</p>
+</li>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-2787">TAP5-2787</a> - Infinite loop in <code>PageSourceImpl</code> with multiple classloader mode on</p>
+</li>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-2786">TAP5-2786</a> - Attempt to override final method in subclass when in multiple classloader mode</p>
+</li>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-2783">TAP5-2783</a> - Hibernate module initialization fails when entities with compound ids exist</p>
+</li>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-2779">TAP5-2779</a> - Tapestry 5.8.3 to 5.8.7 issues caused by the multiple classloader feature</p>
+</li>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-2775">TAP5-2775</a> - <code>ClassNotFoundException</code> when in production mode and parameter type is array</p>
+</li>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-2773">TAP5-2773</a> - <code>NullPointerException</code> in 5.8.5 when in production mode and template extension points</p>
+</li>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-2772">TAP5-2772</a> - <code>ClassCastException</code> happening in some cases in production mode</p>
+</li>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-2770">TAP5-2770</a> - With multiple classloader mode on, <code>ClassCastException</code> when component and superclass both have <code><a href="https://tapestry.apache.org/current/apidocs/org/apache/tapestry5/annotations/Import.html">@Import</a></code></p>
+</li>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-2605">TAP5-2605</a> - JS minimizer regression bug in 5.5.0-beta-1</p>
+</li>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/TAP5-2563">TAP5-2563</a> - Session replication fails with <code>NotSerializableException</code> on Tapestry class</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

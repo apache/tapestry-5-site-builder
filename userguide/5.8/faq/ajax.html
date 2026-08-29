@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>AJAX FAQ :: Apache Tapestry</title>
+    <meta name="generator" content="Antora 3.1.15">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="stylesheet" href="../../../_/css/tapestry.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../.."><img alt="Apache Tapestry Logo" src="../../../_/img/apache-tapestry-icon-dark.svg" width="60" />Apache Tapestry</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Documentation</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../../../main/getting-started.html">Getting Started</a>
+            <a class="navbar-item" href="../../../main/tutorial/">Tutorial</a>
+            <a class="navbar-item" href="../../../userguide/current/">User Guide</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="../../../main/community.html">Community</a>
+        <a class="navbar-item" href="../../../main/support.html">Support</a>
+        <a class="navbar-item" href="../../../main/developers.html">Developers</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Apache</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+            <a class="navbar-item" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy</a>
+            <a class="navbar-item" href="https://www.apache.org/licenses/">License</a>
+            <a class="navbar-item" href="https://www.apache.org/security/">Security</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="../../../main/download.html">Download</a>
+          </span>
+        </div>
+        <div class="navbar-brand">
+          <a href="https://www.apache.org/">
+          <img alt="The Apache Software Foundation" src="../../../_/img/asf_logo.svg" width="200" height="63" style="padding-top: 5px; padding-bottom: 5px; background-color: white">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="body">
+<div class="nav-container" data-component="userguide" data-version="5.8">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">User Guide</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Introduction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry Core</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basics</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../project-layout.html">Project Layout</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../runtime-exceptions.html">Runtime Exceptions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../class-reloading.html">Class Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../component-reference.html">Component Reference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../annotations.html">Annotations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Pages and Components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../component-classes.html">Component Classes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../component-templates.html">Component Templates</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../property-expressions.html">Property Expressions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../component-parameters.html">Component Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../parameter-type-coercion.html">Parameter Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../layout-component.html">Layout Component</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../component-mixins.html">Component Mixins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../page-navigation.html">Page Navigation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../localization.html">Localization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Request/Response Rendering</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../page-life-cycle.html">Page Life Cycle</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../request-processing.html">Request Processing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../component-rendering.html">Component Rendering</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../component-events.html">Component Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../url-rewriting.html">URL Rewriting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../dom.html">Document Object Model (DOM)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../response-compression.html">Response Compression</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../security.html">Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../https.html">HTTPS / SSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../content-type-and-markup.html">Content Type and Markup</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Data Persistence</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../persistent-page-data.html">Persistent Page Data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../session-storage.html">Session Storage</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Interacting with components</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../injection.html">Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../environmental-services.html">Environmental Services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript, AJAX, CSS &amp; Binary Data</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../client-side-javascript.html">Client-Side JavaScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../javascript-modules.html">Javascript Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../coffeescript.html">Coffeescript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../typescript.html">TypeScript</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ajax-and-zones.html">AJAX and Zones</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../css.html">Cascading Style Sheets (CSS)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../assets.html">Assets</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cors.html">CORS (Cross-Origin Resource Sharing) Support</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Working with Forms</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../forms-and-validation.html">Forms and Validation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../beaneditform-guide.html">BeanEditForm Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../uploading-files.html">Uploading Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../bean-validation.html">Bean Validation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Logging, Debugging &amp; Testing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../logging.html">Logging</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../unit-testing.html">Unit testing pages or components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../integration-testing.html">Integration Testing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../development-dashboard.html">Development Dashboard</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tapestry IOC</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../ioc-overview.html">IoC Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../symbols.html">Symbols</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../type-coercion.html">Type Coercion</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../case-insensitivity.html">Case Insensitivity</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../autoloading-modules.html">Autoloading Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../chainbuilder-service.html">ChainBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipelinebuilder-service.html">PipelineBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../shadowbuilder-service.html">ShadowBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../strategybuilder-service.html">StrategyBuilder Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../defining-tapestry-ioc-services.html">Defining Tapestry IOC Services</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../ioc-modules.html">IoC Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../ioc-configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../object-providers.html">Object Providers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../service-serialization.html">Service Serialization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../starting-the-ioc-registry.html">Starting the IoC Registry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../aliases.html">Aliases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../injection-in-detail.html">Injection in Detail</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../ordering-by-constraints.html">Ordering by Constraints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../registry-startup.html">Registry Startup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../parallel-execution.html">Parallel Execution</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../logging-in-tapestry.html">Logging in Tapestry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../service-implementation-reloading.html">Service Implementation Reloading</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../service-advisors.html">Service Advisors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../service-decorators.html">Service Decorators</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jsr-330-standard-annotations.html">Using JSR 330 standard annotations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../operation-tracker.html">Operation Tracker</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Add-ons and Integrations</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Built-in</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../hibernate.html">Hibernate Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../jpa.html">JPA Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../integrating-with-spring-framework.html">Spring</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../third-party-modules.html">Third Party Modules</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Release Notes</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes-5.8.html">Tapestry 5.8</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes-5.7.html">Tapestry 5.7</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes-5.6.html">Tapestry 5.6</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes-5.5.html">Tapestry 5.5</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes-5.4.html">Tapestry 5.4</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes-5.3.html">Tapestry 5.3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes-5.2.html">Tapestry 5.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes-5.1.html">Tapestry 5.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes-5.0.html">Tapestry 5.0</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cookbook</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cookbook/default-parameter.html">Default Parameter</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cookbook/overriding-exception-reporting.html">Overriding Exception Reporting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cookbook/error-page-recipe.html">Error Page Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cookbook/supporting-informal-parameters.html">Supporting Informal Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cookbook/component-libraries.html">Component Libraries</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cookbook/switching-cases.html">Switching Cases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cookbook/enum-parameter-recipe.html">Enum Parameter Recipe</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cookbook/extending-the-if-component.html">Extending The If Component</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cookbook/meta-programming-page-content.html">Meta-Programming Page Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../cookbook/ioc-cookbook.html">IoC Cookbook</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cookbook/ioc-cookbook-basic-services-and-injection.html">IoC Cookbook - Basic Services and Injection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cookbook/ioc-cookbook-overriding-ioc-services.html">IoC Cookbook - Overriding IoC Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cookbook/ioc-cookbook-patterns.html">IoC Cookbook - Patterns</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cookbook/ioc-cookbook-service-configurations.html">IoC Cookbook - Service Configurations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cookbook/using-select-with-a-list.html">Using Select With a List</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cookbook/performance-and-clustering.html">Performance and Clustering</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cookbook/google-app-engine.html">Google App Engine (GAE)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Frequently Asked Questions (FAQ)</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="general.html">General Questions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="templating-and-markup.html">Templating and Markup FAQ</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="ajax.html">AJAX FAQ</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">User Guide</span>
+    <span class="version">5.8</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../../main/about.html">Home</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../../current/index.html">User Guide</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../current/index.html">5.9</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">5.8</a>
+        </li>
+        <li class="version">
+          <a href="../../5.7/index.html">5.7</a>
+        </li>
+        <li class="version">
+          <a href="../../5.6/index.html">5.6</a>
+        </li>
+        <li class="version">
+          <a href="../../5.5/index.html">5.5</a>
+        </li>
+        <li class="version">
+          <a href="../../5.4/index.html">5.4</a>
+        </li>
+        <li class="version">
+          <a href="../../5.3/index.html">5.3</a>
+        </li>
+        <li class="version">
+          <a href="../../5.2/index.html">5.2</a>
+        </li>
+        <li class="version">
+          <a href="../../5.1/index.html">5.1</a>
+        </li>
+        <li class="version">
+          <a href="../../5/index.html">5.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../main/about.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">User Guide</a></li>
+    <li>Frequently Asked Questions (FAQ)</li>
+    <li><a href="ajax.html">AJAX FAQ</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">5.8</button>
+  <div class="version-menu">
+    <a class="version" href="../../current/faq/ajax.html">5.9</a>
+    <a class="version is-current" href="ajax.html">5.8</a>
+    <a class="version" href="../../5.7/faq/ajax.html">5.7</a>
+    <a class="version" href="../../5.6/faq/ajax.html">5.6</a>
+    <a class="version" href="../../5.5/faq/ajax.html">5.5</a>
+    <a class="version" href="../../5.4/faq/ajax.html">5.4</a>
+    <a class="version" href="../../5.3/faq/ajax.html">5.3</a>
+    <a class="version" href="../../5.2/faq/ajax.html">5.2</a>
+    <a class="version is-missing" href="../../5.1/index.html">5.1</a>
+    <a class="version is-missing" href="../../5/index.html">5.0</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">AJAX FAQ</h1>
+<div class="sect1">
+<h2 id="_do_i_have_to_specify_both_id_and_tid_for_zone_components"><a class="anchor" href="#_do_i_have_to_specify_both_id_and_tid_for_zone_components"></a>Do I have to specify both <code>id</code> and <code>t:id</code> for <code>Zone</code> components?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The examples for the <code><a href="https://tapestry.apache.org/5.8.7/apidocs/org/apache/tapestry5/corelib/components/Zone.html">Zone</a></code> component consistently specify both <code>id</code> and <code>t:id</code> and this is probably a good idea.</p>
+</div>
+<div class="paragraph">
+<p>Generally speaking, if you don&#8217;t specify the client-side id (the <code>id</code> attribute), it will be the same as the Tapestry component id (<code>t:id</code>).</p>
+</div>
+<div class="paragraph">
+<p>However, there are any number of exceptions to this rule.
+The <code>Zone</code> may be rendering inside a <code><a href="https://tapestry.apache.org/5.8.7/apidocs/org/apache/tapestry5/corelib/components/Loop.html">Loop</a></code> (in which case, each rendering will have a unique client side id).
+The <code>Zone</code> may be rendering as part of a partial page render, in which case, a random unique id is inserted into the id. There are other examples where Tapestry component ids in nested components may also clash.</p>
+</div>
+<div class="paragraph">
+<p>The point is, to be sure, specify the exact client id. This will be the value for the <code>zone</code> parameter of the triggering component (such as a <code><a href="https://tapestry.apache.org/5.8.7/apidocs/org/apache/tapestry5/corelib/components/Form.html">Form</a></code>, <code><a href="https://tapestry.apache.org/5.8.7/apidocs/org/apache/tapestry5/corelib/components/PageLink.html">PageLink</a></code>, <code><a href="https://tapestry.apache.org/5.8.7/apidocs/org/apache/tapestry5/corelib/components/ActionLink.html">ActionLink</a></code>, etc.).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_how_do_i_update_the_content_of_a_zone_from_an_event_handler_method"><a class="anchor" href="#_how_do_i_update_the_content_of_a_zone_from_an_event_handler_method"></a>How do I update the content of a <code>Zone</code> from an event handler method?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When a client-side link or form triggers an update, the return value from the event handler method is used to construct a partial page response.
+This partial page response includes markup content that is used to update the <code>Zone</code>'s client-side <code>&lt;div&gt;</code> element.</p>
+</div>
+<div class="paragraph">
+<p>Where does that content come from?
+You inject it into your page.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;t:zone id="search" t:id="searchZone"&gt;
+  &lt;t:form t:id="searchForm" zone="searchZone"&gt;
+    &lt;t:textfield t:id="query" size="20"/&gt;
+    &lt;input type="submit" value="Search"/&gt;
+  &lt;/t:form&gt;
+&lt;/t:zone&gt;
+
+&lt;t:block id="searchResults"&gt;
+  &lt;ul&gt;
+    &lt;li t:type="loop" source="searchHits" value="searchHit"&gt;${searchHit}&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/t:block&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Inject
+private Block searchResults;
+
+Object onSuccessFromSearchForm()
+{
+  searchHits = searchService.performSearch(query);
+
+  return searchResults;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>So, when the search form is submitted, the resulting search hits are collected.
+In the same request, the <code>searchResults</code> block is rendered, package, and sent to the client.
+The form inside the client-side Zone <code>&lt;div&gt;</code> is replaced with the list of hits.</p>
+</div>
+<div class="paragraph">
+<p>In many cases, you just want to re-render the <code>Zone</code> itself, to display updated content.
+In that case, you don&#8217;t need a separate <code>&lt;t:block&gt;</code>, instead you can use <code><a href="https://tapestry.apache.org/5.8.7/apidocs/org/apache/tapestry5/annotations/InjectComponent.html">@InjectComponent</a></code> to inject the <code>Zone</code> object itself, and return the <code>Zone</code>'s body:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@InjectComponent
+private Zone statusZone;
+
+Object onActionFromUpdateStatus()
+{
+  return statusZone.getBody();
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_how_to_i_update_multiple_zones_in_a_single_event_handler"><a class="anchor" href="#_how_to_i_update_multiple_zones_in_a_single_event_handler"></a>How to I update multiple zones in a single event handler?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To do this, you must know, on the server, the client ids of each <code>Zone</code>.
+That&#8217;s one of the reasons that you will generally set the <code>Zone</code>'s client id (via the Zone&#8217;s <code>id</code> parameter), rather than let Tapestry assign a client id for you.</p>
+</div>
+<div class="paragraph">
+<p>From the event handler method, instead of returning a Block or a Component, return a multi-zone update:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Inject
+private Block searchResults;
+
+@Inject
+private Block statusBlock;
+
+@Inject
+private AjaxResponseRenderer ajaxResponseRenderer;
+
+void onSuccessFromSearchForm()
+{
+  searchHits = searchService.performSearch(query);
+
+  message = String.format("Found %,d matching documents", searchHits.size());
+
+  ajaxResponseRenderer.addRender("results", searchResults).addRender("status", statusBlock);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code><a href="https://tapestry.apache.org/5.8.7/apidocs/org/apache/tapestry5/services/ajax/AjaxResponseRenderer.html">AjaxResponseRenderer</a></code> adds other useful commands as well.
+It also has the advantage that a simple return value can be returned to render content for the <code>Zone</code> that triggered the request.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_whats_that_weird_number_in_the_middle_of_the_client_ids_after_a_zone_is_updated"><a class="anchor" href="#_whats_that_weird_number_in_the_middle_of_the_client_ids_after_a_zone_is_updated"></a>What&#8217;s that weird number in the middle of the client ids after a Zone is updated?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You might start with markup in your template for a component such as a <code><a href="https://tapestry.apache.org/5.8.7/apidocs/org/apache/tapestry5/corelib/components/TextField.html">TextField</a></code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;t:textfield t:id="firstName"/&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When the component initially renders as part of a full page render, you get a sensible bit of markup:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;input id="firstName" name="firstName" type="text"&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>But when the form is inside a Zone and rendered as part of a zone update, the ids get weird:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;input id="firstName_12a820cc40e" name="firstName" type="text"&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>What&#8217;s happening here is that Tapestry is working to prevent unwanted id clashes as part of the page update.
+In an HTML document, each <code>id</code> is expected to be unique. Most JavaScript is keyed off of the <code>id</code> field, for instance.</p>
+</div>
+<div class="paragraph">
+<p>In a full page render, components don&#8217;t just use their component id (<code>t:id</code>) as their client id.
+Instead they use the JavaScriptSupport environmental to allocate a unique id.
+When there&#8217;s no loops or conflicts, the client id matches the component id.</p>
+</div>
+<div class="paragraph">
+<p>When the component is inside a loop, a suffix is appended: <code>firstName</code>, <code>firstName_0</code>, <code>firstName_1</code>, etc.</p>
+</div>
+<div class="paragraph">
+<p>When the component is rendered as part of an Ajax partial page update, the rules are different.
+Since Tapestry doesn&#8217;t know what content has been rendered onto the page previously, it can&#8217;t use its normal tricks to ensure that ids are unique.</p>
+</div>
+<div class="paragraph">
+<p>Instead, Tapestry creates a random-ish unique id suffix, such as <code>12a820cc40e</code> in the example.
+This suffix is appended to all allocated ids to ensure that they do not conflict with previously rendered ids.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_why_do_i_sometimes_get_the_exception_the_rendered_content_did_not_include_any_elements_that_allow_for_the_positioning_of_the_hidden_form_fields_element_when_rendering_an_empty_zone"><a class="anchor" href="#_why_do_i_sometimes_get_the_exception_the_rendered_content_did_not_include_any_elements_that_allow_for_the_positioning_of_the_hidden_form_fields_element_when_rendering_an_empty_zone"></a>Why do I sometimes get the exception "The rendered content did not include any elements that allow for the positioning of the hidden form field&#8217;s element." when rendering an empty Zone?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>As part of Tapestry&#8217;s form processing, it must write a hidden <code>&lt;input&gt;</code> element with information needed when the form is submitted.
+Since the content of a <code>Zone</code> may be changed or removed, a hidden field is created just for the <code>Zone</code>, separate from the rest of the enclosing form.</p>
+</div>
+<div class="paragraph">
+<p>At the same time, Tapestry wants to position the <code>&lt;input&gt;</code> field in a valid location, and HTML defines some constraints for that.
+An input field must appear inside a <code>&lt;p&gt;</code> or <code>&lt;div&gt;</code> element.
+If your Zone is initially empty, there&#8217;s no place to put the hidden element, and Tapestry will complain.</p>
+</div>
+<div class="paragraph">
+<p>The solution is simple: just add a <code>&lt;div&gt;</code> element to the body of the zone.
+This ensures that there&#8217;s a place for the hidden input field.
+An empty <code>&lt;div&gt;</code> element (even one containing a hidden form field) will not affect page layout.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script src="../../../_/js/vendor/lunr.js"></script>
+<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
+<script async src="../../../search-index.js"></script>
+  </body>
+</html>

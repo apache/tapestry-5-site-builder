@@ -79,43 +79,40 @@
     <a class="nav-link" href="principles.html">Principles</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <button class="nav-item-toggle"></button>
-    <span class="nav-text">Documentation</span>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="getting-started.html">Getting Started</a>
   </li>
-  <li class="nav-item" data-depth="2">
+  <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Tutorial</span>
 <ul class="nav-list">
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="tutorial/index.html">Introduction</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="tutorial/dependencies-tools-and-plugins.html">Dependencies, Tools and Plugins</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="tutorial/creating-the-skeleton-application.html">Creating the Skeleton Application</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="tutorial/exploring-the-project.html">Exploring the Project</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="tutorial/implementing-the-hi-lo-guessing-game.html">Implementing the Hi-Lo Guessing Game</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="tutorial/using-beaneditform-to-create-user-forms.html">Using BeanEditForm To Create User Forms</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="tutorial/using-tapestry-with-hibernate.html">Using Tapestry With Hibernate</a>
   </li>
 </ul>
   </li>
-  <li class="nav-item" data-depth="2">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="userguide.html">User Guide</a>
   </li>
-</ul>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="documentation.html">Documentation</a>
   </li>
 </ul>
   </li>
@@ -135,7 +132,10 @@
       <div class="title"><a href="../userguide/current/index.html">User Guide</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../userguide/current/index.html">5.8</a>
+          <a href="../userguide/current/index.html">5.9</a>
+        </li>
+        <li class="version">
+          <a href="../userguide/5.8/index.html">5.8</a>
         </li>
         <li class="version">
           <a href="../userguide/5.7/index.html">5.7</a>
@@ -199,20 +199,69 @@
 <p>The easiest way is to download Tapestry and its dependencies from the <a href="https://repo1.maven.org/maven2/">Maven Central Repository</a>, leveraging a build tool such as <a href="https://maven.apache.org/">Apache Maven</a>, <a href="https://www.gradle.org/">Gradle</a> etc.
 Just declare a dependency on Tapestry (see below for sample dependency declararions) and let the build tool take care of downloading the necessary files to your local machine.</p>
 </div>
+<div class="sect2">
+<h3 id="_jakarta_ee_or_javax"><a class="anchor" href="#_jakarta_ee_or_javax"></a>Jakarta EE or javax?</h3>
+<div class="paragraph">
+<p>Since 5.9, Tapestry is published in two flavours from the same source, at the same version number:</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Flavour</th>
+<th class="tableblock halign-left valign-top">Servlet API</th>
+<th class="tableblock halign-left valign-top">Artifact ids</th>
+<th class="tableblock halign-left valign-top">Containers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Jakarta</strong> (recommended for new projects)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jakarta.servlet</code> 5.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">suffixed with <code>-jakarta</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tomcat 10+, Jetty 11+</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>javax</strong> (for existing applications)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>javax.servlet</code> 3.0+</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">unchanged</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tomcat 9, Jetty 9-10</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Both contain the same features and fixes.
+Pick the one that matches your servlet container, and don&#8217;t mix the two.
+See the <a href="../userguide/current/jakarta-ee-migration.html" class="xref page">Jakarta EE migration guide</a> for the full list of affected artifacts and what to change in your code.</p>
+</div>
 <div class="listingblock">
 <div class="title">Maven: Dependency on Tapestry to be added to your <code>pom.xml</code></div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependency&gt;
   &lt;groupId&gt;org.apache.tapestry&lt;/groupId&gt;
-  &lt;artifactId&gt;tapestry-core&lt;/artifactId&gt;
-  &lt;version&gt;5.8.7&lt;/version&gt;
+  &lt;artifactId&gt;tapestry-core-jakarta&lt;/artifactId&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+  &lt;version&gt;5.9.1&lt;/version&gt;
 &lt;/dependency&gt;</code></pre>
 </div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Use <code>tapestry-core</code> instead for the javax flavour.</td>
+</tr>
+</table>
 </div>
 <div class="listingblock">
 <div class="title">Gradle: Dependency on Tapestry to be added to your <code>build.gradle</code></div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation 'org.apache.tapestry:tapestry-core:5.8.7'</code></pre>
+<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation 'org.apache.tapestry:tapestry-core-jakarta:5.9.1'</code></pre>
+</div>
 </div>
 </div>
 </div>
@@ -224,7 +273,7 @@ Just declare a dependency on Tapestry (see below for sample dependency declarari
 <p>Binaries, source code, and Javadocs are also available as a zip archive from the <a href="https://downloads.apache.org/tapestry/">Apache Distribuction Directory</a> (current and more recent releases) and from the <a href="https://archive.apache.org/dist/tapestry/">Apache Archive Site</a> (older releases).</p>
 </div>
 <div class="paragraph">
-<p>Here are the direct links to the latest release, Tapestry 5.8.7:</p>
+<p>Here are the direct links to the latest release, Tapestry 5.9.1:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -234,18 +283,18 @@ Just declare a dependency on Tapestry (see below for sample dependency declarari
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Binaries</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://downloads.apache.org/tapestry/apache-tapestry-5.8.7-bin.zip">zip</a>
-( <a href="https://downloads.apache.org/tapestry/apache-tapestry-5.8.7-bin.zip.asc">asc</a>, <a href="https://downloads.apache.org/tapestry/apache-tapestry-5.8.7-bin.zip.sha256">sha256</a> )</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://downloads.apache.org/tapestry/apache-tapestry-5.9.1-bin.zip">zip</a>
+( <a href="https://downloads.apache.org/tapestry/apache-tapestry-5.9.1-bin.zip.asc">asc</a>, <a href="https://downloads.apache.org/tapestry/apache-tapestry-5.9.1-bin.zip.sha256">sha256</a> )</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Source</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://downloads.apache.org/tapestry/apache-tapestry-5.8.7-sources.zip">zip</a>
-( <a href="https://downloads.apache.org/tapestry/apache-tapestry-5.8.7-sources.zip.asc">asc</a>, <a href="https://downloads.apache.org/tapestry/apache-tapestry-5.8.7-sources.zip.sha256">sha256</a> )</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://downloads.apache.org/tapestry/apache-tapestry-5.9.1-sources.zip">zip</a>
+( <a href="https://downloads.apache.org/tapestry/apache-tapestry-5.9.1-sources.zip.asc">asc</a>, <a href="https://downloads.apache.org/tapestry/apache-tapestry-5.9.1-sources.zip.sha256">sha256</a> )</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Javadoc</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://downloads.apache.org/tapestry/apache-tapestry-5.8.7-apidocs.zip">zip</a>
-( <a href="https://downloads.apache.org/tapestry/apache-tapestry-5.8.7-apidocs.zip.asc">asc</a> )</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://downloads.apache.org/tapestry/apache-tapestry-5.9.1-apidocs.zip">zip</a>
+( <a href="https://downloads.apache.org/tapestry/apache-tapestry-5.9.1-apidocs.zip.asc">asc</a> )</p></td>
 </tr>
 </tbody>
 </table>
