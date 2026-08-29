@@ -1,0 +1,41 @@
+# Local preview playbook.
+#
+# Same as antora-playbook.yml, but reads the site content from a sibling
+# checkout of tapestry-5-site instead of fetching it from gitbox. Use it to
+# preview branches before pushing them:
+#
+#   ./gradlew antora -PlocalPlaybook
+#
+# Antora reads the *committed* branches of that checkout, not the working
+# tree, so commit your changes before building.
+#
+# The lunr search extension is left out on purpose: it is slow and adds
+# nothing to a local preview.
+
+site:
+  title: Apache Tapestry
+  start_page: main::about.adoc
+
+content:
+  sources:
+  - url: ../tapestry-5-site
+    branches: [main, 5.*]
+
+output:
+  dir: ./build/site
+  clean: true
+
+urls:
+  latest_version_segment: current
+
+asciidoc:
+  extensions:
+  - asciidoctor-kroki
+  - ./lib/issue-processor
+  - ./lib/javadoc-processor
+
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
+  supplemental_files: ./supplemental-ui

@@ -23,4 +23,10 @@ tasks.register('copyStaticRootFiles', Copy) {
 
 tasks.named('antora') {
     finalizedBy('copyStaticRootFiles')
+
+    // ./gradlew antora -PlocalPlaybook  builds from a sibling tapestry-5-site
+    // checkout instead of fetching the content from gitbox.
+    if (project.hasProperty('localPlaybook')) {
+        playbook = 'antora-playbook-local.yml'
+    }
 }
