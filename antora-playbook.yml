@@ -37,6 +37,7 @@ ui:
 
 antora:
   extensions:
+  - require: ./lib/static-files-extension
   - require: '@antora/lunr-extension'
     index_latest_only: true
     index_by_heading: true
